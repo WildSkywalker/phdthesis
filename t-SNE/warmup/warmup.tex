@@ -146,6 +146,18 @@ With all these being said, we will first start by giving our general low dimensi
 \begin{align}
     \iint_{(0,\infty)^2} k(x,x') dxdx' > \infty
 \end{align}
+We will kick off this warmup by listing all the important lemmas and results in order, and prove our own versions when the need arises. The final goal is to prove a same set of results as in \cite{auffinger-tsne} with the $y$ kernel replaced.
+Recall that
+\begin{align}
+    F_{\rho, \mu}(x,\sigma) = &- \int \frac{\norm{x-x'}^2}{2\sigma^2} \frac{\exp(-\norm{x-x'}^2/2\sigma^2)}{\int \exp(-\norm{x-x'}^2/2\sigma^2)d\mu(x')}d\mu(x') \nonumber \\
+    &- \log \left(\int \exp(-\norm{x-x'}^2/2\sigma^2\right) +\log \rho.
+\end{align}
+\begin{proposition}
+    If $\mu$ has a $C^1$ density $f$ such that both $f$ and $\norm{\nabla f}$ are bounded, then the equation $F_{\rho, \mu}(x,\sigma)=0$ has a unique solution $\sigma^*_{\rho,\mu}(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. Moreover, $x \mapsto \sigma^*_{\rho,\mu}(x)$ is smooth.
+\end{proposition}
+\begin{proof}
+    This proposition is about the kernel of $x$. The proof stays unchanged from \cite{auffinger-tsne}.
+\end{proof}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
