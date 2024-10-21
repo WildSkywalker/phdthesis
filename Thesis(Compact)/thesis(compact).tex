@@ -1,0 +1,1055 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+
+
+
+\numberwithin{equation}{section}
+
+
+
+\begin{document}
+
+
+\title{The Local Optima Problems of Spin Glass Models}
+\maketitle
+
+% \tableofcontents
+
+This is the compact version of my Ph.D thesis. i.e., only the problems and the essential stuff, for better and clearer communication with Tuca.
+\section{Introduction and Setup}
+\gy{Note here we are not normalizing the Hamiltonian because we don't need to. Just like in \cite{SK_optimal}, by the construction of each $Z$, the coefficient in front of the Hamiltonian doesn't matter if we want to ask what is the probability of each $Z$ greater than zero. Also, the coefficient of 2 is correct in the computation, and it agrees with the original result in \cite{SK_optimal} when we let the number of flip $m$ to be 1.}
+Given a graph $G$ with vertex set $[N]=\{1,2,\cdots,n\}$ and edge set $E = (i,j)$ where $i,j$ adjacent. Let $W = (W_{i,j})_{N\times N}$ be a symmetric matrix with zero diagonal such that $(W_{i,j})_{1 \leq i < j \leq n}$ are independent standard normal random variables. Consider the Hamiltonian $H:\{-1,+1\}^n \to \mathbb{R}$ of spin glass defined on $G$:
+\begin{align}
+    H(\sigma) = \sum_{(i,j) \in E} \sigma_i \sigma_j W_{ij}.
+\end{align}
+A fixed $\sigma = (\sigma_i)^n_{i=1} \in \{-1,+1\}^n$ is called a configuration. \\ \\
+We are interested in the local optimality of a configuration. We say a configuration  $\sigma$ is optimal, if the Hamiltonian will be equal or larger when we flip any single coordinate of $\sigma$. To put it precisely, define $\sigma^{(i)}$ such that $\sigma^{(i)}_j = -\sigma_j$ for $i= j$ and $\sigma^{(i)}_j = \sigma_j$ otherwise. $\sigma$ is called a local optimal if $H(\sigma^{(i)}) \geq H(\sigma)$ for any $i$. \\ \\
+We want to replicate the similar process conducted in \cite{SK_optimal} and compute the asymptotic probability of local optima. Given $i \in [N]$, consider
+\begin{align}
+    Z_i(\sigma) := \frac{H(\sigma^{(i)})-H(\sigma)}{2}, i\in [N].
+\end{align}
+Clearly, $\sigma$ is local optimal if all $Z_i$ are non-negative. We want to compute the covariance matrix $C_{i,j}$ of the random vector
+\begin{align}
+    Z = (Z_1,Z_2,\cdots,Z_n)^{T}.
+\end{align}
+A quick computation shows that $C_{ii} = \text{deg}(i)+1$, $C_{ij}=1$ for $(i,j) \in E$ and $C_{ij}=0$ for $(i,j) \notin E$. Note that the covariance matrix does not depend on the specific choice of $\sigma$. In turn, the probability of local optimality
+\begin{align} \label{lo_prob}
+    &\p(\sigma \text{ is local optimal}) = \p(Z_i \geq 0 \text{ for each } i \in [n]) \nonumber \\
+    =& \frac{1}{(2\pi)^{N/2}\det(C)^{1/2}}\int_{[0,\infty)^N} \exp\left(\frac{-x^{T}C^{-1}x}{2}\right)dx.
+\end{align}
+Therefore, the probability itself does not depend on the choice of $\sigma$, but only depend on the covariance matrix, which in turn only depends on the graph itself.
+
+% \section{Setup}
+% Let $d$-regular tree be defined as a tree graph such that all vertices have degree $d$ except the leaves. Consider $d$-regular tree with $N$ vertices and let $W = (W_{i,j})_{N\times N}$ be a symmetric matrix with zero diagonal such that $(W_{i,j})_{1 \leq i < j \leq n}$ are independent standard normal random variables. Moreover, denote the vertices in the $d$-regular tree with elements in set $[N]=\{1,2,\cdots,N\}$. The spin glass on $d-regular$ tree is defined by a random Hamiltonian $H:\{-1,+1\}^n \to \mathbb{R}$. For a configuration $\sigma = (\sigma_i)^n_{i=1} \in \{-1,+1\}^n$, we can define $H(\sigma)$ as
+% \begin{align}
+%     H(\sigma) := \sum_{\substack{i,j \in [N]  \\ i \backsim j }} \sigma_i \sigma_j W_{ij},
+% \end{align}
+% where $i \backsim j$ means vertex $i$ is connected to vertex $j$ in the tree. \\ \\
+% We want to replicate the similar process conducted in \cite{SK_optimal} and compute the asymptotic probability of local optima. However, $d$ regular tree can be very messy as the number of generations of offpsrings originated from each point can be different. To resolve this issue, we divide the project into two parts. First, we call a $d$-regular tree \textit{nice} if the graph distance from the root to each leaf is equal, i.e., the graph's "layers" are complete, with $k$-th layer having $n^k$ points. We try to repeat the process on a nice $d$-regular tree. Then, we show that computation with only nice tress will suffice. \gy{I had this conversation with Si during the summer while I walked her dog. I do not think this step is immediate or trivial. Maybe I missed something.}
+% \section{Covariance Structure of the Nice Tree}
+% Consider the nice $d$-regular tree $T$ with $n+1$ "layers". That is, the distance from the root to each leaf is $n$. In this case, $T$ has $N = 1 + d + \cdots + d^n$ vertices. Given $i \in [N]$, let $\sigma^{(i)}$ be defined as in \cite{SK_optimal}, consider
+% \begin{align}
+%     Z_i(\sigma) := \frac{H(\sigma^{(i)})-H(\sigma)}{2}, i\in [N].
+% \end{align}
+% We want to compute the covariance matrix $C_{i,j}$ of the random vector
+% \begin{align}
+%     Z = (Z_1,Z_2,\cdots,Z_n)^{T}.
+% \end{align}
+% Unlike the SK model, not all $Z_i$ have the same shape. Denote $a(i)$ the ancestor of vertex $i$ (except the root) and $D(i)$ the set of offsprings of $i$. There are three types of points:\\
+% (1). The root $i=1$. In this case, flipping the root only affects the $d$ offsprings of it. We have
+% \begin{align}
+%     Z_1 = -\sum_{j=2}^{d+1} \sigma_1 \sigma_j W_{1j},
+% \end{align}
+% and immediately, $C_{1,1} = d$.
+% (2). The $d^n$ leaves. In this case, only the ancestor of the chosen leaf gets affected. We have for $N-d^n < i \leq N$,
+% \begin{align}
+%     Z_i = -\sigma_i \sigma_{a(i)} W_{i,a(i)}, C_{i,i} = d+1.
+% \end{align}
+% (3). Every other point in between. In this case, both the ancestor and the offsprings get affected. We have
+% \begin{align}
+%     Z_i = -\sigma_i \sigma_{a(i)} W_{i,a(i)} - \sum_{j \in D(i)} \sigma_i \sigma_j W_{ij}, C_{i,i} = 1.
+% \end{align}
+% \gy{ask Tuca about the labeling problem.}
+\section{Covariance Structure}
+Instead of flipping one coordinate, what will happen if we flip $m$ coordinates? 
+\subsection{2-flip Covariance Structure}
+We start with the simple case and aim to compute the covariance matrix. Let $\sigma^{(a,b)}$ be the configuration with $a$th and $b$th coordinates flipped. We can in turn define 
+\begin{align}
+    Z_{a,b}=\frac{H(\sigma^{(a,b)})-H(\sigma)}{2}
+\end{align}
+and so forth for $m$-flip. In 2-flip case, the covariance matrix has dimension ${N \choose 2}$. Let $(s_1,s_2)$ and $(t_1,t_2)$ be two pairs of coordinates flipped. We divide our computation into several cases.
+
+\textbf{Same Flip ($s_1 = t_1=a, s_2 = t_2=b$)} In this case, we have
+\begin{align}
+    Z_{a,b} = \underbrace{- \sum_{j \neq a, j \neq b} \sigma_a \sigma_j W_{a,j}}_\text{I} - \underbrace{\sum_{j \neq a, j \neq b} \sigma_j \sigma_b W_{j,b}}_\text{II}
+\end{align}
+First, note that each summation index cannot either be $a$ or $b$ because not only the diagonal term is not affected, the term $\sigma_{a}\sigma_{b}W_{a,b}$ is also not affected as both coordinates are flipped. Given that and when we are computing covariance, the cross term consist of part I and part II will vanish because of index restriction. Moreover, the covariance of I and itself is obviously $N-2$. We have in this case,
+\begin{align}
+    \e(Z_{a,b}^2) = 2(N-2).
+\end{align}
+\textbf{One Coordinate Overlap} Now suppose $s_1=t_1=a$ and $s_2,t_2$ are distinct and not taking value $a$. We compute
+\begin{align}
+    &Z_{a,s_2} = \underbrace{- \sum_{j \neq a, j \neq s_2} \sigma_a \sigma_j W_{a,j}}_\text{I} - \underbrace{\sum_{j \neq a, j \neq s_2} \sigma_j \sigma_{s_2} W_{j,s_2}}_\text{II} \\
+    &Z_{a,t_2} = \underbrace{- \sum_{j \neq a, j \neq t_2} \sigma_a \sigma_j W_{a,j}}_\text{III} - \underbrace{\sum_{j \neq a, j \neq t_2} \sigma_j \sigma_{t_2} W_{j,t_2}}_\text{IV}
+\end{align}
+By index restriction we know that $\e(\text{I} \cdot \text{IV}) = \e(\text{II} \cdot \text{III}) = 0$. And $\e(\text{II} \cdot \text{IV}) = 1$ because the only pair of configuration that appears in both summation is $\sigma_{t_2} \sigma_{s_2} W_{t_2,s_2}$. Hence, we have
+\begin{align}
+    \e(Z_{a,s_2} \cdot Z_{a,t_2}) =& \e\left(\sum_{j \neq a, j \neq s_2} \sigma_a \sigma_j W_{a,j} \cdot \sum_{j \neq a, j \neq t_2} \sigma_a \sigma_j W_{a,j}\right) + 1 \nonumber \\
+    =& (N-3) + 1 = N - 2.
+\end{align}
+\textbf{No Coordinate Overlap} The last case is that $s_1,s_2,t_1,t_2$ are all distinct, we first write
+\begin{align}
+    &Z_{s_1,s_2} = \underbrace{- \sum_{j \neq s_1, j \neq s_2} \sigma_{s_1} \sigma_j W_{s_1,j}}_\text{I} - \underbrace{\sum_{j \neq s_1, j \neq s_2} \sigma_j \sigma_{s_2} W_{j,s_2}}_\text{II} \\
+    &Z_{t_1,t_2} = \underbrace{- \sum_{j \neq t_1, j \neq t_2} \sigma_{t_1} \sigma_j W_{t_1,j}}_\text{III} - \underbrace{\sum_{j \neq t_1, j \neq t_2} \sigma_j \sigma_{t_2} W_{j,t_2}}_\text{IV}
+\end{align}
+In this case all four cross terms appeared in the computation will be the same, so we only need to compute one. It is easy to see that $\e(\text{I} \cdot \text{III}) = 1$ as the only term appears in both I and III is $\sigma_{s_1} \sigma{t_1} W_{s_1,t_1}$. Hence, we obtain
+\begin{align}
+    \e(Z_{s_1,s_2} \cdot Z_{t_1,t_2}) = 4.
+\end{align}
+\subsection{General Formula for $Z$}
+Of course the computation of 2-flip is not enough for us to get the overall picture of the general covariance structure. However, it would be beneficial to obtain a general and explicit formula for $Z$, which will help us tackle the big final problem in the long run.
+Let us consider the upper triangular matrix generated by the product of all $\sigma_i$, $1 \leq i \leq N$, excluding the diagonal. The Hamiltonian of the SK model is the summation of the elements (times the corresponding i.i.d. Gaussian. We omit the Gaussians for conciseness.) in this matrix.
+\begin{equation}
+    \left(\begin{array}{cccc}
+      0  & \sigma_1 \sigma_2  & \cdots & \sigma_1 \sigma_N \\
+      0  & 0  & \sigma_2 \sigma_3 & \sigma_2 \sigma_N \\
+      \vdots  & \vdots   & \vdots & \vdots \\
+      0  & \cdots   & 0  & \vdots \\
+      0  &  \cdots  & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+When we flip a coordinate, say $s_1$-th coordinate, part of the products get a minus sign, we mark those entries as below:
+\begin{equation}
+    \left(\begin{array}{ccccccc}
+      0     &\sigma_1 \sigma_2  &\cdots            &\cdots &\y -\sigma_1 \sigma_{s_1}       & \cdots   & \sigma_1 \sigma_N \\
+      0     &0                  &\sigma_2 \sigma_3 &\cdots &\y -\sigma_2 \sigma_{s_1} & \cdots & \sigma_2 \sigma_N \\
+      \vdots&\vdots             &\vdots            &\vdots &\y \vdots               & \vdots & \vdots\\
+      0     &\cdots             &\cdots            &0      &\y -\sigma_{s_1} \sigma_{s_1+1}& \y \cdots & \y -\sigma_{s_1} \sigma_{N} \\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      0     & 0                 &\cdots            &\cdots & \cdots & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+To make life easier, we can create a symmetric matrix from this upper triangular matrix and the flipped entries will just be the $s_1$-th row.
+\begin{equation}
+    \left(\begin{array}{ccccccc}
+      0     &\sigma_1 \sigma_2  &\cdots            &\cdots & -\sigma_1 \sigma_{s_1}       & \cdots   & \sigma_1 \sigma_N \\
+      \sigma_2 \sigma_1      &0                  &\sigma_2 \sigma_3 &\cdots & -\sigma_2 \sigma_{s_1} & \cdots & \sigma_2 \sigma_N \\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots               & \vdots & \vdots\\
+      \y -\sigma_{s_1} \sigma_1 & \y \cdots        &\y \cdots &\y0 &\y -\sigma_{s_1} \sigma_{s_1+1}& \y \cdots & \y -\sigma_{s_1} \sigma_{N} \\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      \cdots&\cdots             &\cdots            &\cdots & \cdots & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+When we flip another coordinate, say $s_2$, the $s_2$-th column of the highlighted row gets skipped because obviously flipping both $\sigma$ is the same as not flipping. We mark the skipped entry as red. (We can see diagonal as skipped for consistency and intuition.)
+\begin{equation}
+    \left(\begin{array}{ccccccccc}
+      0     &\sigma_1 \sigma_2  &\cdots             & -\sigma_1 \sigma_{s_2} &\cdots &\cdots& \sigma_1 \sigma_{s_1}       & \cdots   & \sigma_1 \sigma_N \\
+      \sigma_2 \sigma_1     &0                  &\sigma_2 \sigma_3 &\cdots & \cdots &\cdots& \sigma_2 \sigma_{s_1} & \cdots & \sigma_2 \sigma_N \\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots &\cdots &\vdots               & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots&\cdots& \vdots & \vdots & \vdots\\
+      \y -\sigma_{s_1} \sigma_1 & \y \cdots        &\y \cdots &\x \sigma_1 \sigma_{s_2} &\y \cdots&\x 0 &\y -\sigma_{s_1} \sigma_{s_1+1}& \y \cdots & \y -\sigma_{s_1} \sigma_{N} \\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots&\cdots& \vdots & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots&\cdots& \vdots & \vdots & \vdots\\
+      \cdots&\cdots             &\cdots            &\cdots &\cdots&\cdots& \cdots & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+Then in the formula of $Z$, the summation corresponding to the flipped $s_1$-th coordinate will be the summation of the $s_1$-th row without the $s_2$-th and $s_1$-th term, which includes the zero diagonal. More generally, if we flip $m$ coordinates ${s_1,s_2,\cdots,s_m}$, the summation corresponding to the flipped $s_1$-th coordinate be the summation of the $s_1$-th row without the terms indexed by ${s_1,s_2,\cdots,s_m}$. This means
+\begin{align} \label{general_z}
+    Z_{s_1,s_2,\cdots,s_m} &= \frac{H(\sigma^{(s_1,s_2,\cdots,s_m)})-H(\sigma)}{2} \nonumber \\
+    &= -\sum_{i \in \{1,2,\cdots,m\}} \sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j}.
+\end{align}
+\subsection{3-flip Covariance Structure}
+With the establishment of (\ref{general_z}) we can carry out the computation of 3-flip more easily. Suppose the $s_1,s_2$ and $s_3$-th coordinates are flipped. We can write
+\begin{align}
+    Z_{s_1,s_2,s_3} = \underbrace{- \sum_{j \neq s_1,s_2,s_3} \sigma_{s_1} \sigma_j W_{s_1,j}}_\text{I} \underbrace{- \sum_{j \neq s_1,s_2,s_3} \sigma_{s_2} \sigma_j W_{s_2,j}}_\text{II} \underbrace{- \sum_{j \neq s_1,s_2,s_3} \sigma_{s_3} \sigma_j W_{s_3,j}}_\text{III}.
+\end{align}
+Now let $t_1,t_2,t_3$ be another set of flipped coordinates and then
+\begin{align}
+    Z_{t_1,t_2,t_3} = \underbrace{- \sum_{j \neq t_1,t_2,t_3} \sigma_{t_1} \sigma_j W_{t_1,j}}_\text{IV} \underbrace{- \sum_{j \neq t_1,t_2,t_3} \sigma_{t_2} \sigma_j W_{t_2,j}}_\text{V} \underbrace{- \sum_{j \neq t_1,t_2,t_3} \sigma_{t_3} \sigma_j W_{t_3,j}}_\text{VI}.
+\end{align}
+Again we can compute the covariance structure by dividing the computation into several cases based on how many coordinates are the same.\\
+\textbf{All Coordinates Match} In this case we have $s_i = t_i$, $i=1,2,3$. We can easily get
+\begin{align}
+    \e(Z_{s_1,s_2,s_3}^2) = 3(N-3).
+\end{align}
+This now shows a pattern we can use for $m$-flip!\\
+\textbf{Two Coordinates Match} In this case we let $s_1 = t_1 =a$, $s_2 = t_2 =b$, and all other coordinates are distinct and different from $a,b$. For convenience, we rewrite
+\begin{align}
+    &Z_{a,b,s_3} = \underbrace{- \sum_{j \neq a,b,s_3} \sigma_{a} \sigma_j W_{a,j}}_\text{I} \underbrace{- \sum_{j \neq a,b,s_3} \sigma_{b} \sigma_j W_{b,j}}_\text{II} \underbrace{- \sum_{j \neq a,b,s_3} \sigma_{s_3} \sigma_j W_{s_3,j}}_\text{III}, \\
+    &Z_{a,b,t_3} = \underbrace{- \sum_{j \neq a,b,t_3} \sigma_{a} \sigma_j W_{a,j}}_\text{IV} \underbrace{- \sum_{j \neq a,b,t_3} \sigma_{b} \sigma_j W_{b,j}}_\text{V} \underbrace{- \sum_{j \neq a,b,t_3} \sigma_{t_3} \sigma_j W_{t_3,j}}_\text{VI}.
+\end{align}
+Among all the cross terms, $\e(\text{I} \cdot \text{V})=\e(\text{I} \cdot \text{VI}) = \e(\text{II} \cdot \text{IV}) = \e(\text{II} \cdot \text{VI}) = \e(\text{III} \cdot \text{IV}) = \e(\text{III} \cdot \text{V}) = 0$ because of index restrictions. For the rest terms, we have $\e(\text{I} \cdot \text{IV}) = \e(\text{II} \cdot \text{V}) = N-4$, $\e(\text{III} \cdot \text{VI}) = 1$. Summing everything together yields us
+\begin{align}
+    \e(Z_{a,b,s_3} \cdot Z_{a,b,t_3}) = 2(N-4)+1.
+\end{align}
+Another good pattern we can use.\\
+\textbf{One Coordinate Matches} In this case we let $s_1 = t_1 =a$, and all other coordinates are distinct and different from $a$. Similar as the last case we write
+\begin{align}
+    &Z_{a,s_2,s_3} = \underbrace{- \sum_{j \neq a,s_2,s_3} \sigma_{a} \sigma_j W_{a,j}}_\text{I} \underbrace{- \sum_{j \neq a,s_2,s_3} \sigma_{s_2} \sigma_j W_{s_2,j}}_\text{II} \underbrace{- \sum_{j \neq a,s_2,s_3} \sigma_{s_3} \sigma_j W_{s_3,j}}_\text{III}, \\
+    &Z_{a,t_2,t_3} = \underbrace{- \sum_{j \neq a,t_2,t_3} \sigma_{a} \sigma_j W_{a,j}}_\text{IV} \underbrace{- \sum_{j \neq a,t_2,t_3} \sigma_{t_2} \sigma_j W_{t_2,j}}_\text{V} \underbrace{- \sum_{j \neq a,t_2,t_3} \sigma_{t_3} \sigma_j W_{t_3,j}}_\text{VI}.
+\end{align}
+Simple computation gives us $\e(\text{I} \cdot \text{V})=\e(\text{I} \cdot \text{VI}) = \e(\text{II} \cdot \text{IV})  = \e(\text{III} \cdot \text{IV}) = 0$, $\e(\text{II} \cdot \text{V}) =\e(\text{II} \cdot \text{VI})= \e(\text{III} \cdot \text{V}) = \e(\text{III} \cdot \text{VI}) = 1$, $\e(\text{I} \cdot \text{IV}) = N-5$. Therefore, we have the covariance
+\begin{align}
+    \e(Z_{a,s_2,s_3} \cdot Z_{a,t_2,t_3}) = N-1.
+\end{align}
+\textbf{No Coordinates Match} All coordinates are distinct. This is the easiest case. Each cross term has covariance 1, and we have 9 in total, thus
+\begin{align}
+    \e(Z_{s_1,s_2,s_3} \cdot Z_{t_1,t_2,t_3}) = 9.
+\end{align}
+\subsection{m-flip Covariance Structure}
+The previous computation has shown some good patterns that inspire us to get the covariance structure of m-flip. Let $s_1, \cdots, s_m$ and $t_1, \cdots, t_m$ be two sets of flipped coordinates. Recall (\ref{general_z}), we have the formulas for the corresponding $Z$:
+\begin{align}
+    Z_{s_1,s_2,\cdots,s_m} &= -\sum_{i \in \{1,2,\cdots,m\}} \sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j}. \\
+    Z_{t_1,t_2,\cdots,t_m} &= -\sum_{i \in \{1,2,\cdots,m\}} \sum_{j \neq t_1,t_2,\cdots,t_m} \sigma_{t_i} \sigma_j W_{t_i,j}.
+\end{align}
+We divide the computation into $m+1$ cases, where each case $\{s_i\}_{i \leq m}$ and $\{t_i\}_{i \leq m}$ have $l$ number of same coordinates, $l = 0, \cdots, m$. 
+
+\textbf{Case $l = 0$ (All coordinates Different)} In this case $\{s_i\}_{i \leq m}$ and $\{t_i\}_{i \leq m}$ are all distinct. Consider any cross term appeared in the summation
+\begin{align}
+    \sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j} \cdot \sum_{p \neq t_1,t_2,\cdots,t_m} \sigma_{t_k} \sigma_p W_{t_k,p}.
+\end{align}
+$\sigma_{s_i} \sigma_j W_{s_i,j} \cdot \sigma_{t_k} \sigma_p W_{t_k,p}$ is only non-vanishing under expectation if $j = t_k$ and $p = s_i$. This is possible because all $s_i$ and $t_i$ are distinct. We have
+\begin{align}
+    \e \left(\sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j} \cdot \sum_{p \neq t_1,t_2,\cdots,t_m} \sigma_{t_k} \sigma_p W_{t_k,p}\right) = 1.
+\end{align}
+There are $m^2$ such cross terms, and we arrive at
+\begin{align}
+    \e(Z_{s_1,s_2,\cdots,s_m} \cdot Z_{t_1,t_2,\cdots,t_m}) = m^2.
+\end{align}
+\textbf{Case $1\leq l \leq m$ ($l$ Same Coordinates)} Without loss of generality, assume $s_i=t_i=a_i$ for $i = 1, \cdots, l$. We divide the formula of $Z$ into two parts.
+\begin{align}
+        Z_{s_1,s_2,\cdots,s_m} &= \underbrace{-\sum_{i \in \{1,\cdots,l\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,s_m} \sigma_{a_i} \sigma_j W_{a_i,j}}_\text{I} \underbrace{-\sum_{i \in \{l+1,\cdots,m\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j}}_\text{II}. \\
+        Z_{t_1,t_2,\cdots,t_m} &= \underbrace{-\sum_{i \in \{1,\cdots,l\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,t_m} \sigma_{a_i} \sigma_j W_{a_i,j}}_\text{III} \underbrace{-\sum_{i \in \{l+1,\cdots,m\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,t_m} \sigma_{t_i} \sigma_j W_{t_i,j}}_\text{IV}.
+\end{align}
+Next we consider the cross terms based on which group the components come from.
+
+For cross terms from group I and group III, there are multiple non-vanishing products (under expectation). We have $\e \left((\sigma_{a_i} \sigma_j W_{a_i,j})^2 \right) = 1$ for $j \neq a_1,\cdots,a_l,\cdots,s_m, t_{l+1}, \cdots t_m$. There are $N - l - 2(m-l)$ such products, which means $\e(\text{I} \cdot \text{III}) = N -2m +l$.
+
+For cross terms from group I and group IV, all products vanish under expectation. Indeed, consider $\sigma_{a_i} \sigma_j W_{a_i,j} \cdot \sigma_{t_k} \sigma_p W_{t_k,p}$. For this product to have non-vanishing expectation, we must have $p = a_i$ and $j = t_k$. This is not possible because $p \neq a_i$ by the index restrictions.
+
+Cross terms from group II and group III also vanish for the same reason just above.
+
+For cross terms from group II and group IV, each cross term has expectation 1. This can be obtained using a similar argument as the one in the case where all coordinates are different.
+
+Finally, there are $l$ cross terms from group I and group III, and there are $(m-l)^2$ cross terms from group II and group IV. Summing everything together gives us
+\begin{align} \label{covar_entry}
+    \e(Z_{s_1,s_2,\cdots,s_m} \cdot Z_{t_1,t_2,\cdots,t_m}) = l(N-2m+l) + (m-l)^2.
+\end{align}
+
+With such information in mind. We are able to know exactly what the covariance matrix looks like. The covariance matrix is a $\binom{N}{m}$-by-$\binom{N}{m}$ matrix. For any fixed set of flipped coordinates $(s_1,\cdots,s_m)$, there are $\binom{m}{l}\binom{N-m}{m-l}$ number of coordinates that share $l$ same coordinates with it PER ROW. (And the counts $\binom{m}{l}\binom{N-m}{m-l}$ sum up to $\binom{N}{m}$ by Vandermonde's identity, quick sanity check.) Let $C$ be the covariance matrix of $Z$'s. $C$ satisfies the following:
+
+1. $C$'s diagonal entries are all $m(N-m)$. \gy{For 1-flip we have $N-1$. Sanity Check passed.}
+
+2. Given an arbitrary indexing of all sets of $m$-flip coordinates, there are $\binom{m}{l}\binom{N-m}{m-l}$ number of entries with value $l(N-2m+l) + (m-l)^2$ each row, $0 \leq l \leq m-1$.
+\subsection{Solving for the Matrix Inverse} \label{m-flip roadblock}
+Now we have a clear idea about the covariance matrix, we proceed to investigate its inverse because the inverse appears in (\ref{lo_prob}). Note that the covariance matrix of $m$-flip has dimension $\binom{N}{m}$-by-$\binom{N}{m}$ because each row(column) is indexed by the $m$-subset of $[N] :=\{1,2,\cdots,N\}$. In this section we use $\{a_1,\cdots, a_m\}$ to denote the row and column of our matrices for a clearer demonstration.
+
+By the first look, the covariance matrix is a total monster. It is already hard to write down the matrix for $m>1$, making the computation of its inverse seem almost impossible. Surprisingly, the way the matrix is constructed gives it a lot of special properties that we can make use of. We start with our motivation. Consider the inner product of one row and one column (or two rows because of symmetry), say row $\{a_1,\cdots, a_m\}=:\bar{A}$ and row $\{b_1,\cdots, b_m\}=:\bar{B}$. Let $\{c_1,\cdots, c_m\}$ be the column index that we sum over. We know from previous section that the entry of the covariance matrix $C$ depends solely on the cardinality of the intersection between the row and column index sets. Denote
+\begin{align}
+    \bar{A} \bigcap \{c_1,\cdots, c_m\} = \bar{A}(c_1,\cdots,c_m),\quad \bar{B} \bigcap \{c_1,\cdots, c_m\} = \bar{B}(c_1,\cdots,c_m),
+\end{align}
+and $f(l)= l(N-2m+l)+(m-l)^2$ the value of the entry from (\ref{covar_entry}). We have the inner product of row $\bar{A}$ and $\bar{B}$ to be
+\begin{align}
+    \sum_{\{c_1,\cdots, c_m\} \subset [N]}f(\bar{A}(c_1,\cdots,c_m))f(\bar{B}(c_1,\cdots,c_m)).
+\end{align}
+Let $\bar{D} = \bar{A} \cap \bar{B}$, $q = |\bar{A} \cap \bar{B}|$, and write $\bar{A} = \bar{D} \cup \bar{A'}, \bar{B} = \bar{D} \cup \bar{B'}$. Then let $\bar{C'} = \bar{C} \cap \bar{D}$ and $C_{A'} = \bar{C} \cap \bar{A'}$, $C_{B'} = \bar{C} \cap \bar{B'}$. We have $\bar{A'} \cap \bar{B'} =\emptyset$ and
+\begin{align}
+    f(\bar{A}(c_1,\cdots,c_m))f(\bar{B}(c_1,\cdots,c_m)) = f(|\bar{C'}|+|C_{A'}|)f(|\bar{C'}|+|C_{B'}|), \quad 1 \leq |\bar{C'}| \leq q.
+\end{align}
+For each $\bar{C'}$ with $|\bar{C'}|=s \leq q$ fixed, we write $|C_{A'}| = t_1$ and $|C_{B'}| = t_2$, $t_1+t_2 \leq m-q$. Since $\bar{A'} \cap \bar{B'} =\emptyset$, there are
+\begin{align} \label{inverse_formula_1}
+    \binom{m-s}{t_1}\binom{m-s}{t_2}\binom{N-s-t_1-t_2}{m-s-t_1-t_2} =: h_{m,t_1,t_2}(s)
+\end{align}
+terms with value
+\begin{align}
+    f(s+t_1)f(s+t_2).
+\end{align}
+Moreover, there are $\binom{q}{s}$ number of sets $\bar{C'}$ with $|\bar{C'}|=s \leq q$. We have the inner product to be
+\begin{align} \label{inverse_formula_2}
+    &\sum_{s = 0}^q \binom{q}{s} \sum_{t_1+t_2 \leq m-q}\binom{m-s}{t_1}\binom{m-s}{t_2}\binom{N-2m+s}{m-s-t_1-t_2}f(s+t_1)f(s+t_2).
+\end{align}
+The above expression depends ONLY on $q$ for $m$ fixed. This means the inner product of two rows will be the same for all row pairs $\bar{A}$ and $\bar{B}$ if their intersection has the same size. Such phenomenon let us wonder if the inverse matrix has the same pattern as the original matrix. By same pattern we mean if original matrix has a row of the form $x,y,z,\cdots$, the inverse's same row has form $x',y',z', \cdots$. In such scenario, the other row of will just be a permutation of the selected row and the inverse matrix will, like the original one, only have $m+1$ distinct values.
+
+Good news is such statement is true, and we can prove it. For rigorousness, let us first define the formal notion of "having" the same pattern.
+
+\begin{definition}
+    A matrix $A$ is said to have the same pattern as $B$ if there is an injective map $g$ that maps the values in $A$ to that of $B$, and matrix $B$ satisfies
+    \begin{align}
+        B_{ij} = g(A_{ij}), \forall i,j.
+    \end{align}
+\end{definition}
+
+Now comes the theorem.
+
+\begin{theorem}
+    Let $C$ be the covariance matrix of the $m$-flip local optima. $C$ is indexed by $m$-subsets of $[N]$ and has dimension $\binom{N}{m}$-by-$\binom{N}{m}$. Specifically, if $|\{a_1,\cdots, a_m\} \cap \{b_1,\cdots, b_m\}| = l$, then
+    \begin{align}
+        C_{\{a_1,\cdots, a_m\},\{b_1,\cdots, b_m\}} = l(N-2m+l)+(m-l)^2 \equiv f(l).
+    \end{align}
+    The inverse of $C$ has the same pattern as $C$ itself.
+\end{theorem}
+\begin{proof}
+    Suppose we have an injective map
+    \begin{align}
+        f(l) \mapsto g(l), \quad 0 \leq m
+    \end{align}
+    that maps the pattern of $C$ to a matrix $M$. We will first establish the equations that all $g(l)$ satisfies for $M$ to be $C^{-1}$, and show the system of equation has a unique solution. We will use the same index of entries of $C$ on $M$. First, the entries of $M$ only depends on the size of intersection between row and column index sets. Then by the same deduction we used to derive (\ref{inverse_formula_1}) and (\ref{inverse_formula_2}), $g(l)$ satisfies the following equation(s):
+    \begin{align} \label{inverse_equation_sys}
+        \sum_{s=1}^{q} \binom{q}{s} \sum_{s_1+t_1 \leq m-q} h_{m,t_1,t_2}(s) g(s+t_1) f(s+t_2) = \mathbbm{1}(q=m).
+    \end{align}
+    The above equations are equivalent to the statement that $CM = MC = \text{Id}$ because our construction allows us to group the inner product of rows and columns together. There are $m+1$ equations with $m+1$ variables with all coefficients of $g(l)$ nonzero, $0 \leq l \leq m$. Suppose the equation has no solution. That means if we let the last equation (the one with $q = m$) of (\ref{inverse_equation_sys}) to be zero, the following system
+    \begin{align}
+        \sum_{s=1}^{q} \binom{q}{s} \sum_{s_1+t_1 \leq m-q} h_{m,t_1,t_2}(s) g(s+t_1) f(s+t_2) = 0
+    \end{align}
+    has nonzero solutions. That is to say there is a nonzero matrix $M$ such that $CM=0$. However, $C$ is a covariance matrix and $C$ is invertible, which gives us a contradiction. Therefore, (\ref{inverse_equation_sys}) must have solutions. Finally, since the solution of (\ref{inverse_equation_sys}) consists of the entry of $C^{-1}$, the solution must be unique. This finishes the proof.
+\end{proof}
+We conclude this section by computing the inverse of 2-flip covariance matrix as an example.
+\begin{example}
+For 2-flips, we have $f(0) = 4$, $f(1) = N-2$, $f(2) = 2(N-2)$. The 3 values of the inverse satisfies
+\begin{align}
+    &\binom{N-4}{2}g(0)f(0) + 4g(1)f(1) + 2(N-4)g(0)f(1) + 2(N-4)g(1)f(0) + g(0)f(2) + g(2)f(0)=0, \nonumber \\
+    &\binom{N-3}{2}g(0)f(0) + g(1)f(1) + (N-3)(g(1)f(1)+g(0)f(1)+g(1)f(0)) + g(1)f(2) + g(2)f(1) = 0, \nonumber \\
+    &\binom{N-2}{2}g(0)f(0) + 2(N-2)g(1)f(1) + g(2)f(2) = 1.
+\end{align}
+Plug in the values of $f(l)$ and the equations become
+\begin{align}
+    &(N^2-7N+13)g(0)+(3N-10)g(1)+g(2) = 0, \nonumber \\
+    &(3N^2-10N+30)g(0) + (N^2+2N-12)g(1) + (N-2) g(2) = 0, \nonumber \\
+    &2(N-2)((N-3)g(0)+(N-2)g(1)+g(2)) = 1. 
+\end{align}
+The solutions are
+\begin{align}
+    &g(0) = \frac{N^2-9N+16}{N^3-19N^2+68N-32}, \nonumber \\
+    &g(1) = \frac{-N^3+12N^2-37N+56}{2N^3-38N^2+136N-64}, \nonumber \\
+    &g(2) = \frac{N^4-14N^3+47N^2-80N}{2N^3-38N^2+136N-64}.
+\end{align}
+\end{example}
+% Suppose we are dealing with Hamiltonian of $N$ summands and $m$-flips. The covariance matrix will be a $\binom{N}{m}$-by-$\binom{N}{m}$ symmetric matrix, with the rows and columns indexed by subsets containing $m$ positive integers selected from $\{1,2,\cdots,N\}$.
+
+% This subset indicates that the corresponding $Z$ is generated by flipping the coordinates indexed by the numbers in the subset. Given two set of flipped coordinates $(s_1,\cdots,s_m)$ and $(t_1,\cdots,t_m)$, the corresponding covariance only depends on $N$, $m$ and the number of elements in $\{s_i\}_{i \leq m} \cap \{t_i\}_{i \leq m}$, namely the number of same entries (without order) in both set of coordinates. 
+
+% In particular, if $|\{s_i\}_{i \leq m} \cap \{t_i\}_{i \leq m}| = l$, the covariance is $l(N-2m+l) + (m-l)^2$.
+
+% Now here is the problem, Given $N$ and $m$, we are able to construct a covariance matrix $C$. Since the order of random variables do not affect the joint distribution, we can arrange the order of subsets as we wish. The goal, is to find a good arrangement such that we can compute $C^{-1}$, or $x^T C^{-1} x$ for $x \in \mathbb{R}^{\binom{N}{m}}$. Or, if this process does not work, we want to find a good way to estimate (\ref{lo_prob}).
+
+% For numerical observations, when $N$ is even, the inverse $C^{-1}$ has the exact same pattern as the original covariance matrix $C$. That means, if $C$ has 3 distinct values $a,b,c$ for its entries and one of its row has a pattern of $a, b, b, c, c, c,\cdots$, $C^{-1}$ will also have 3 distinct values $a', b' c'$ and the corresponding row will have the same pattern $a', b', b', c', c', c',\cdots$. This is true for the entire matrix. I wonder if we can make good use of this observation.
+
+\section{Dealing with the Integral}
+\gy{This section is under major renovation.}
+\subsection{Setup and Preparation}
+We try to make a breakthrough by doing the baby case where $m=2$. By the computation of previous section, there are 3 distinctive values for entries in the covariance matrix $C$:
+
+1. $2(N-2)$ for diagonal entries. There are $\frac{N(N-1)}{2}$ such entries because $C$ is of dimension $\frac{N(N-1)}{2} \times \frac{N(N-1)}{2}$.
+
+2. $N-2$ for entries corresponding to one overlapping flipped coordinate. There are $2(N-2)$ such entries per row.
+
+3. 4 for entries corresponding to no overlapping flipped coordinates. There are $\frac{(N-2)(N-3)}{2}$ such entries per row.
+
+For $N$ large, the number of coordinates with no overlapping will be significantly larger than the ones with 1 overlapping. Inspired by this, we can write
+\begin{align} \label{approx_mat_def}
+    C &:= A + B \nonumber \\
+      &:= 4((N-4)/2\text{Id}_{\frac{N(N-1)}{2}} + \mathbbm{1}_{\frac{N(N-1)}{2}}\mathbbm{1}^T_{\frac{N(N-1)}{2}}) + B.
+\end{align}
+Here, $\text{Id}$ is the identity matrix and $\mathbbm{1}$ is the column vector with all 1 entries. The subscript indicates their dimensions. $B$ is a matrix with zero diagonal and for each row of $B$, there are $2(N-2)$ entries with value $N-6$ and 0 everywhere else. Intuitively $A$ is a nice matrix that is similar to $C$ and $B$ is the difference. Since the zero entries in $B$ are dominantly more than nonzero entries, we hope to do the computation with $A$ instead of $C$, and prove that $B$ has zero impact on the computation result asymptotically.
+We now replicate the computation in \cite{SK_optimal} using $A$. 
+
+Since $\mathbbm{1}_{\frac{N(N-1)}{2}}\mathbbm{1}^T_{\frac{N(N-1)}{2}}$ is a matrix with all 1 entries, it has eigenvalue 0 with multiplicity $\frac{N(N-1)}{2} - 1$ and eigenvalue $\frac{N(N-1)}{2}$ with multiplicity 1. In turn, $A$ has eigenvalue $2(N-4)$ and $\frac{4N(N-1)}{2} + 2(N-4)$ with the same multiplicity, respectively. We can compute the determinant
+\begin{align}
+    \det(A) = 4^{\frac{N(N-1)}{2}}(N-2)(N+2) (N-4)^{\frac{(N+1)(N-2)}{2}}.
+\end{align}
+For the inverse of $A$, recall Sherman-Morrison formula: if $M$ is an $n$-by-$n$ invertible matrix and $u,v$ are $n$-dimensional column vectors, then $M+uv^T$ is invertible iff $1+v^TM^{-1}u$. In this case,
+\begin{align} \label{sher_mor_formula}
+    (M+uv^T)^{-1} = M^{-1} - \frac{M^{-1}uv^TM^{-1}}{1+v^TM^{-1}u}.
+\end{align}
+Let $M = (N/2-2)\text{Id}_{\frac{N(N-1)}{2}}$ and $u=v=\mathbbm{1}_{\frac{N(N-1)}{2}}$, we can compute
+\begin{align} \label{babyinverse}
+    A^{-1} = \frac{1}{2(N-4)} \left( \text{Id}_{\frac{N(N-1)}{2}} - \frac{2}{(N-2)(N+2)} \mathbbm{1}_{\frac{N(N-1)}{2}}\mathbbm{1}^T_{\frac{N(N-1)}{2}}\right).
+\end{align}
+Now we compute the integration in (\ref{lo_prob}) with $C$ replaced by $A$, which yields
+\begin{align} \label{babyinte}
+    &\frac{1}{(2 \pi)^{\frac{N(N-1)}{4}}det(A)^{1/2}}\int_{[0,\infty)^{\frac{N(N-1)}{2}}} \exp\left(\frac{-x^TA^{-1}x}{2}\right)dx \nonumber \\
+    =&\frac{1}{(2 \pi)^{\frac{N(N-1)}{4}}2^{\frac{N(N-1)}{2}}\left((N-2)(N+2)\right)^{1/2} (N-4)^{\frac{(N+1)(N-2)}{4}}} \nonumber \\
+    & \quad \cdot \int_{[0,\infty)^{\frac{N(N-1)}{2}}} \exp \left( \frac{-\norm{x}_2^2}{4(N-4)}+\frac{\norm{x}_1^2}{2(N-4)(N-2)(N+2)}\right)dx.
+\end{align}
+Note that we can rewrite the integral above as an expectation of a multivariate Gaussian. To do that we substitute $x$ with $x/(2(N-4))^{1/2}$ (Note that $x$ has dimension $\frac{N(N-1)}{2}$). After a quick and straightforward computation, (\ref{babyinte}) can be rewritten as
+\begin{align} \label{babyexpect}
+    2^{-\frac{N(N-1)}{2}}\left( \frac{2(N-4)}{(N-2)(N+2)}\right)^{1/2} \e \left[ \exp\left(\frac{\norm{W}^2_1}{(N-2)(N+2)}\right)\right],
+\end{align}
+where $W$ is a multivariate Gaussian with dimension $N(N-1)/2$ and i.i.d $N(0,1)$ entries.
+\gy{Ask Tuca about the proof of Lemma 1 in \cite{SK_optimal} The proof relies on a book with a lot of buildups towards the final result. Ask if there is any quick reference I can use to prove the inequality myself.}
+\subsection{Overview of the Integral} \label{2flip_overview}
+The first step is to get a quick outlook of what the result might be. We replicate the trick in \cite{SK_optimal}. On exponential scale, one might expect that
+\begin{align}
+    &\e \left[ \exp \left(\frac{\norm{W}^2_1}{(N-2)(N+2)}\right)\right] \approx \e \left[ \exp \left(\frac{\norm{W}^2_1}{N(N-1)}\right) \right] \nonumber \\
+    =& \e \left[ \exp \left(\frac{N(N-1)}{4}\frac{\norm{W}^2_1}{N^2(N-1)^2/4}\right)\right] \nonumber \\
+    =& \e \left[ \exp \left(\frac{N(N-1)}{2} f(X_n)\right)\right],
+\end{align}
+where $f(x) = x^2/2$ and $X_n = \norm{W}_1/(N(N-1)/2)$ is the average of $N(N-1)/2$ i.i.d random variables of average $\sqrt{2/\pi}$ and light tails. $X_n$ satisfies LDP with a rate function $\mu^\ast(x)$. Though we cannot directly apply Varadhan's Lemma due to lack of conditions, we can foresee that
+\begin{align}
+    \lim_{N \to \infty} \frac{1}{N^2} \log \e \left[ \exp \left(\frac{\norm{W}^2_1}{(N-1)^2}\right) \right] = \sup_x \left(\frac{x^2}{2}-\mu^\ast(x)\right).
+\end{align}
+The result is similar to that of the 1-flip case in the original paper except that the coefficient in front of $x^2$ is changed from $1/4$ to $1/2$. This will cause some problems later on, and we will see why.
+\subsection{Rate Functions and Technical Deduction}
+\gy{To Tuca: This spart is mainly for myself. Since the results are almost the same as the original paper (plus some more from the books it cited), you can safely skip this section. However, I did read every single reference related to the proofs in the section and I understood everything through and through.}
+We use this section to compute results regarding the large deviation of the random variable $\norm{W}_1$, where $W$ is an $N(N-1)/2$ multivariate Gaussian with standard i.i.d. entry. The first lemma we need is identical to that in \cite{SK_optimal}, so we state it here without a proof.
+\begin{lemma} \label{simple_lemma}
+    Let $N(0,1)$ be a standard normal Gaussian. For all $\lambda > 0$,
+    \begin{align}
+        \e(e^{\lambda|N(0,1)|}) = e^{\lambda^2/2+\phi(\lambda)}.
+    \end{align}
+    Here, $\phi(\lambda) := \log(2\Phi(\lambda)) \equiv \log(2\p(N(0,1)\leq \lambda))$.
+\end{lemma}
+The next step is to compute the large deviation rate function of $\norm{W}_1$, which is given by the Fenchel-L\'egendre transform of $\log \e(e^{\lambda|N(0,1)|})$:
+\begin{align}
+    \mu^*(x) := \sup_{\lambda \leq 0} \lambda x - \log \e(e^{\lambda|N(0,1)|}).
+\end{align}
+The next couple of lemmas aim to discuss some properties of $\mu^*(x)$.
+\begin{lemma} \label{calculus_lemma}
+    For each $x \geq \sqrt{2/\pi}$, there exists a unique $\lambda = \lambda_*(x) \geq 0$ such that
+    \begin{align}
+        \lambda + \phi'(\lambda) = x.
+    \end{align}
+    Defining:
+    \begin{align}
+        x \geq \sqrt{\frac{2}{\pi}} \mapsto \mu^*(x) := \lambda_*(x)x- \frac{\lambda_*(x)^2}{2} - \phi(\lambda_*(x)),
+    \end{align}
+    we have that, for each $x$ in the above range, $\mu^*(x)$ is the global maximum of
+    \begin{align}
+        \lambda \geq 0 \mapsto \lambda x -\frac{\lambda^2}{2} - \phi(\lambda),
+    \end{align}
+    which is uniquely achieved at $\lambda = \lambda_*(x).$ We also have the following inequalities.
+    1.  Strict concavity. For each $\lambda \geq 0$, $x \geq \sqrt{2/\pi}$,
+    \begin{align} \label{mu_concavity}
+        \mu^*(x) - (\lambda x - \log \e(e^{\lambda|N(0,1)|})) \in \left[\frac{(\lambda-\lambda_*(x))^2}{40},\frac{(\lambda-\lambda_*(x))^2}{2}\right].
+    \end{align}
+    2. Derivative bounds for $\lambda_*$:
+    \begin{align}
+        1 < \lambda'_*(x) \leq 20.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Take derivative on the both sides of (\ref{simple_lemma}) and we have
+    \begin{align} \label{phi_formula}
+        \frac{d}{d\lambda} \e(e^{\lambda|N(0,1)|}) = \lambda + \phi'(\lambda).
+    \end{align}
+    The "nice" Gaussian allows us to interchange the differentiation and the expectation in (\ref{phi_formula}). In particular, we have for $\lambda = 0$,
+    \begin{align}
+        \phi'(0) = \e (|N(0,1|) = \frac{2}{\pi}.
+    \end{align}
+    One vital part of the proof is to get a good numerical estimation of the quantity $\phi''(\lambda)$. Towards this mini-goal, notice that by definition we have $\phi = \log(2\Phi)$. Let $f$ be the probability density function of a Gaussian, and we have $\Phi' = f = (2 \pi)^{-1/2}e^{-\lambda^2/2}$. Simple calculus tells us that
+    \begin{align} \label{phi_doubleprime_esti}
+        \phi''(\lambda) = \frac{f'(\lambda)}{\Phi(\lambda)} - \frac{f(\lambda)^2}{\Phi(\lambda)^2} = -\frac{f(\lambda)}{\Phi(\lambda)}\left(\lambda+\frac{f(\lambda)}{\Phi(\lambda)}\right).
+    \end{align}
+    For $\lambda \geq 1$, because $\Phi \in [1/2,1]$ for $\lambda \geq 0$, we have estimation
+    \begin{align}
+        \frac{f(\lambda)}{\Phi(\lambda)}\left(\lambda+\frac{f(\lambda)}{\Phi(\lambda)}\right) \leq 2\lambda f(\lambda)+2f(\lambda)^2.
+    \end{align}
+    $2f(\lambda)^2$ is obviously decreasing on $[1,\infty]$ and $(\lambda f(\lambda))' = (1-\lambda)f(\lambda)\leq 0$ is also decreasing. We know that
+    \begin{align}
+        \frac{f(\lambda)}{\Phi(\lambda)}\left(\lambda+\frac{f(\lambda)}{\Phi(\lambda)}\right) \leq \frac{f(1)}{\Phi(1)}\left(1+\frac{f(1)}{\Phi(1)}\right) < 0.95.
+    \end{align}
+    For $\lambda \in [0,1]$, we can use numerical method(software computation) and get 
+    \begin{align}
+        -0.95 \leq \phi''(\lambda) < 0.
+    \end{align}
+    Upon this point we have finished the numerical estimation of $\phi''(\lambda)$.
+    This means for all $\lambda \geq 0$,
+    \begin{align} \label{phi_deriv_range}
+        \frac{d}{d\lambda}(\lambda + \phi'(\lambda)) \in [0.05,1).
+    \end{align}
+    $\lambda + \phi'(\lambda)$ is an increasing function in $\lambda$. It takes value $\sqrt{2/\pi}$ at 0 and tends to $\infty$ as $\lambda \to \infty$ as its derivative has a positive lower bound. By its strict monotonicity, for all $x \geq \sqrt{2/\pi}$, there is a unique $\lambda = \lambda_*(x)$ that satisfies $\lambda_*(x) + \phi'(\lambda_*(x)) = x$. We have the obvious special case $\lambda_*(\sqrt{2/\pi})=0$. Next we use the implicit function theorem to claim that $\lambda_*$ is smooth over $[\sqrt{2/\pi},\infty)$. Set
+    \begin{align}
+        F(x,\lambda) = x - \lambda - \phi'(\lambda).
+    \end{align}
+        By (\ref{phi_deriv_range}) we have the partial derivative of $F$ respect to $\lambda$, $F_{\lambda} = -1 - \phi''(\lambda) \neq 0$. We can then apply the implicit function theorem and get that $F(x,\lambda) = 0$ is equivalent to $\lambda = \lambda_*(x)$ and is smooth over $[\sqrt{2/\pi},\infty)$ for some function $\lambda_*(x)$. Next up, we take derivative with respect to $x$ on both sides of the equation
+        \begin{align}
+            \lambda_* + \phi'(\lambda_*) = x,
+        \end{align}
+        which yields
+        \begin{align} \label{fixing_lemma_helper1}
+            \lambda_*'+\phi''(\lambda_*) \lambda_*' = \lambda_*'(1+\phi''(\lambda_*)) = \lambda_*'\left(\frac{d}{d \lambda}(\lambda + \phi'(\lambda))|_{\lambda = \lambda_*(x)}\right) = 1.
+        \end{align}
+        This means that we can get the range of $\lambda_*'(x)$ from (\ref{phi_deriv_range}):
+        \begin{align}
+            \lambda_*'(x) = \frac{1}{\frac{d}{d \lambda}(\lambda + \phi'(\lambda))|_{\lambda = \lambda_*(x)}} \in (1,20].
+        \end{align}
+        This finishes the proof of the second inequality in the lemma.
+        Now we return to the map defined in the lemma. Recall the map
+        \begin{align}
+            \lambda \geq 0 \mapsto \lambda x -\frac{\lambda^2}{2} - \phi(\lambda).
+        \end{align}
+        From the deduction we have above it is easy to see that $\lambda_*(x)$ is the unique critical point of the map and the second derivative at $\lambda_*(x)$ belongs to $(-1,-1/20]$, indicating that $\lambda_*(x)$ is the global maximum of the map, proving the main statement of the lemma. We are left to prove the first inequality. Recall again from (\ref{phi_formula}) that
+        \begin{align}
+            \lambda x -\frac{\lambda^2}{2} - \phi(\lambda) = \lambda x  - \log \e(e^{\lambda |N(0,1)|}).
+        \end{align}
+        We proceed to apply the second-order Taylor expansion of the expression $\lambda x  - \log \e(e^{\lambda |N(0,1)|})$ around its critical point $\lambda_*(x)$:
+        \begin{align}
+            \lambda x  - \log \e(e^{\lambda |N(0,1)|}) =& \mu^*(x) + \frac{d}{d \lambda} (\lambda x  - \log \e(e^{\lambda |N(0,1)|}))|_{\lambda = \lambda_*(x)} \nonumber  \\
+            &+ \frac{1}{2}\frac{d^2}{d \lambda^2} (\lambda x  - \log \e(e^{\lambda |N(0,1)|}))|_{\lambda = \tilde{\lambda}}(\lambda - \lambda_*(x))^2,
+        \end{align}
+        where $\tilde{\lambda}$ sits between $\lambda$ and $\lambda_*(x)$. Finally, since we expand around the critical point, the first derivative in the Taylor expansion vanishes. Moreover, by our previous estimation the second derivative is between $[-1/20,-1)$. Plug in and we prove the first inequality in the lemma. The whole proof is finished.
+\end{proof}
+Next up we will state and prove a useful lemma related to the lower bound in LDP. The result comes from theorem A.2.1 in \cite{Prob_Method_Book}.
+\begin{lemma} \label{lowerbdd_lemma}
+    Let $X$ be a random variable. Define $g_a(\lambda) = \e(e^{\lambda X}) e^{-\lambda a}$. For any $a,u,\lambda,\epsilon$ with $u,\lambda,\epsilon,\lambda-\epsilon$ all positive,
+    \begin{align}
+        \p(X>a-u) \geq e^{-\lambda u}(g_a(\lambda)-e^{-\epsilon u}(g_a(\lambda+\epsilon)+g_a(\lambda-\epsilon))).
+    \end{align}
+\end{lemma}
+As the readers might notice, the expression of $g_a$ comes from Chernoff bound, and it is indeed the starting point of our proof.
+\begin{proof}
+    We start by a simple event $X \geq a+u$. For any $u$ and $\epsilon$ positive, we have the following equivalent expression
+    \begin{align}
+        \lambda X \leq (\lambda+\epsilon)X - \epsilon a - \epsilon u.
+    \end{align}
+    Take exponential on both side and then take expectation under the event $X \geq a+u$(which adds an indicator function on the left-hand side), we obtain
+    \begin{align} \label{Chernoff_lowerbdd_1}
+        \e(e^{\lambda X} \mathbbm{1}(X \geq a+u)) \leq \e(e^{(\lambda+\epsilon)X})e^{- \epsilon a}e^{- \epsilon u}.
+    \end{align}
+    Using the same trick with the event $X \geq a-u$, we have its equivalent expression
+    \begin{align}
+        \lambda X \leq (\lambda-\epsilon)X + \epsilon a - \epsilon u,
+    \end{align}
+    and the following inequality
+    \begin{align} \label{Chernoff_lowerbdd_2}
+        \e(e^{\lambda X} \mathbbm{1}(X \geq a-u)) \leq \e(e^{(\lambda-\epsilon)X})e^{ \epsilon a}e^{- \epsilon u}.
+    \end{align}
+    Using both (\ref{Chernoff_lowerbdd_1}) and (\ref{Chernoff_lowerbdd_2}). We get
+    \begin{align} \label{Chernoff_lowerbdd_3}
+        &\e(e^{\lambda X} \mathbbm{1}(|X-a|<u)) = \e(e^{\lambda X}) - \e(e^{\lambda X} \mathbbm{1}(X \geq a+u)) - \e(e^{\lambda X} \mathbbm{1}(X \geq a-u)) \nonumber \\
+        \geq & \e(e^{\lambda X}) - e^{-\epsilon u}(\e(e^{(\lambda+\epsilon)X})e^{- \epsilon a}+\e(e^{(\lambda-\epsilon)X})e^{ \epsilon a}).
+    \end{align}
+    For the next steps, notice that when $|X-a|<u$, $e^{\lambda X} \leq e^{\lambda u} e^{\lambda a}$, giving us the opportunity to remove the $X$ from the expectation in (\ref{Chernoff_lowerbdd_3}):
+    \begin{align}
+        e^{\lambda u} e^{\lambda a} \p(|X-a|<u) = \e(e^{\lambda u} e^{\lambda a}\mathbbm{1}(|X-a|<u)) \geq \e(e^{\lambda X} \mathbbm{1}(|X-a|<u)),
+    \end{align}
+    which in turn gives us
+    \begin{align}
+        \p(|X-a|<u) \geq &e^{-\lambda u} e^{-\lambda a} (\e(e^{\lambda X}) - e^{-\epsilon u}(\e(e^{(\lambda+\epsilon)X})e^{- \epsilon a}+\e(e^{(\lambda-\epsilon)X})e^{ \epsilon a})) \nonumber \\
+        =&e^{-\lambda u}(g_a(\lambda)-e^{-\epsilon u}(g_a(\lambda+\epsilon)+g_a(\lambda-\epsilon))).
+    \end{align}
+    We merely use the definition of $g_a(\lambda)$ in the last step. The proof is now finished.
+
+\end{proof}
+\gy{The appendix of \cite{Prob_Method_Book} is very well written. Return and finish the rest of it later.}
+The previous lemmas are tools to give us more accurate estimation about the large deviation bounds of the multivariate Gaussian variables appeared in the process. The next lemma focuses particularly on the rate function.
+\begin{lemma} \label{ldp_lemma}
+    Let $W = (W_1, \dots, W_n)$ be a vector of $n$ i.i.d. standard normal variables. Let $x \geq \sqrt{2/\pi}$, Define $\mu^*(x)$ as in lemma \ref{calculus_lemma}. Then for all $n \geq 1$,
+    \begin{align}
+        \frac{1}{n} \log \p(\norm{W}_1 \geq nx) = -\mu^*(x) -r_n(x),
+    \end{align}
+    where
+    \begin{align}
+        0 \leq r_n(x) \leq \kappa \left(\frac{x - \sqrt{2/\pi}}{\sqrt{n}}+\frac{1}{n}\right)
+    \end{align}
+    for some universal $\kappa >0$ that is independent of $x \geq \sqrt{2/\pi}$ and $n \geq 1$.
+\end{lemma}
+\begin{proof}
+    We use the Chernoff bound for the upper bound. For $\lambda \geq 0$, we have 
+    \begin{align}
+        \p(\norm{W}_1 \geq nx) =\p(e^{\lambda \norm{W}_1} \geq e^{nx})\leq \e(e^{\lambda \norm{W}_1})e^{-x \lambda n}.
+    \end{align}
+    Taking logarithm on both sides and multiply by $1/n$ we arrive at
+    \begin{align}
+        &\frac{1}{n}\log \p(\norm{W}_1 \geq nx) =  \frac{1}{n} \log \p(\sum_i |W_i| \geq nx) \nonumber \\
+        = & \frac{1}{n} \log \p(e^{\lambda \sum_i |W_i|} \geq e^{n\lambda x})
+        \leq \log  (\e(e^{\lambda |N|})) -\lambda x.
+    \end{align}
+    Here $N$ is a standard normal Gaussian. Since $\lambda$ is arbitrary, we can add infimum to the right side of the last inequality. Lemma \ref{calculus_lemma} tells us that the infimum equals to precisely $-\mu^*(x)$. Hence,
+    \begin{align}
+        \frac{1}{n}\log \p(\norm{W}_1 \geq nx) \leq -\mu^*(x).
+    \end{align}
+    Like most probability theorems, the upper bound is usually the easy part. Now we turn to the lower bound, and this is where lemma \ref{lowerbdd_lemma} comes into play. Using the notation of lemma \ref{lowerbdd_lemma}, we set $X = \norm{W}_1$, $\lambda = \lambda_*(a/n)$. First we compute that
+    \begin{align}
+        g_a (\lambda) = \exp(-n \mu_a (\lambda)), \quad \mu_a(\lambda) := \lambda a/n - \log \e (e^{\lambda |N|}).
+    \end{align}
+    The expression of $\mu_a$ takes the same form as the expression in (\ref{mu_concavity}) by letting $x = a/n$. Since we also set $\lambda = \lambda_*(a/n)$ we immediately get $g_a(\lambda_*(a/n)) = e^{-n\mu^*(a/n)}$. To use lemma \ref{lowerbdd_lemma} we also need the evaluations at $\mu^*(a/n)+\epsilon$ and $\mu^*(a/n)-\epsilon$. (\ref{mu_concavity}) gives us a good bound:
+    \begin{align}
+        \mu^*(a/n) - ((\lambda \pm \epsilon)(a/n)-\log\e (e^{(\lambda \pm \epsilon) |N|})) \leq \epsilon^2/2.
+    \end{align}
+    Combining with the definition of $g_a$, and we obtain
+    \begin{align} \label{ga_drift_bound}
+        \frac{g_a(\lambda_*(a/n)+\epsilon)}{g_a(\lambda_*(a/n))} \leq e^{n\epsilon^2/2}, \quad \frac{g_a(\lambda_*(a/n)-\epsilon)}{g_a(\lambda_*(a/n))} \leq e^{n\epsilon^2/2}.
+    \end{align}
+    Plugging $g_a(\lambda_*(a/n)) = e^{-n\mu^*(a/n)}$ and (\ref{ga_drift_bound}) into the statement of lemma \ref{lowerbdd_lemma} yields
+    \begin{align} \label{ratefun_lowerbdd1}
+        &\p(\norm{W}_1 \geq a-u)  \nonumber \\
+        \geq &e^{-\lambda_*(a/n) u} g_a(\lambda_*(a/n))\left(1-e^{-\epsilon u}\left(\frac{g_a(\lambda_*(a/n)+\epsilon)}{g_a(\lambda_*(a/n))}+\frac{g_a(\lambda_*(a/n)-\epsilon)}{g_a(\lambda_*(a/n))}\right)\right) \nonumber \\
+        \geq &e^{-\lambda_*(a/n) u} e^{-n\mu^*(a/n)}\left(1-2e^{-\epsilon u + \epsilon^2 n/2}\right).
+    \end{align}
+    Then we pick our constants to our favor. Choose $\epsilon = \sqrt{2/n}$, $u = \sqrt{2n}$ and $a =nx+\sqrt{n} = n(x+\epsilon)$, (\ref{ratefun_lowerbdd1}) becomes
+    \begin{align} \label{ratefun_lowerbdd2}
+        \p(\norm{W}_1 \geq nx) \geq e^{-\lambda_*(x+\epsilon)\sqrt{2n}}e^{-n \mu^*(x+\epsilon)}\left(1 - \frac{2}{e}\right).
+    \end{align}
+    In the final steps, recall that we require $x \geq \sqrt{2/\pi}$ and $\lambda_*' \in (1,20]$. Using first order Taylor expansion around $\sqrt{2/\pi}$, we have
+    \begin{align} \label{lambda_star_esti}
+        -\lambda_*(x+\epsilon)\sqrt{2n} \leq 20(x+\epsilon-\sqrt{2/\pi}) \sqrt{2n},
+    \end{align}
+    as $\lambda_*(\sqrt{2/\pi)} = 0$ and the first in the expansion vanishes. We then deploy the same trick for $\mu^*(x+\epsilon)$. Recall again from the expression of $\mu^*$ in lemma \ref{calculus_lemma}. A quick computation gives us $\mu'^* = \lambda_*$. Apply the first order Taylor expansion around $x$, and we get
+    \begin{align}
+        \mu^*(x+\epsilon) \leq \mu^*(x) + \mu^*(x)'\epsilon = \mu^*(x) + \lambda_*(x) \epsilon.
+    \end{align}
+    Using Taylor expansion again on the $\lambda_*(x)$ around $\sqrt{2/\pi}-\epsilon$ as well as (\ref{lambda_star_esti}), the previous inequality can further be bounded as
+    \begin{align} \label{mu_star_esti}
+        \mu^*(x+\epsilon) \leq  \mu^*(x) + \lambda_*(x) \epsilon \leq \mu^*(x) +20\epsilon(x+\epsilon-\sqrt{2/\pi}).
+    \end{align}
+    Notice that $\epsilon = \sqrt{2/n}$ tends to zero. Put (\ref{ratefun_lowerbdd2}), (\ref{lambda_star_esti}), and (\ref{mu_star_esti}) together, we can conclude
+    \begin{align}
+        \p(\norm{W}_1 \geq nx) \geq e^{-n \mu^*(x)} e^{-n(20(x+\epsilon-\sqrt{2/\pi})+20\epsilon(x+\epsilon-\sqrt{2/\pi}))}\left(1 - \frac{2}{e}\right).
+    \end{align}
+    The part after $e^{-n \mu^*(x)}$ is the $r_n(x)$ in the statement of the lemma, and it is easy to see it satisfies the desired condition. The proof is thus finished.
+\end{proof}
+\subsection{Computation of the Integral}
+Now the preparation is complete, and we are ready to tackle the integral. Let us recap from section \ref{2flip_overview} that we are mainly dealing with the integral
+\begin{align}
+    \e \left[ \exp \left(\frac{\norm{W}^2_1}{(N-2)(N+3)}\right)\right] \approx \e \left[ \exp \left(\frac{\norm{W}^2_1}{N(N-1)}\right) \right].
+\end{align}
+First, let $Y$ be any positive random variable with smooth density $l$, $h$ be any smooth function, $s$ be a positive, arbitrary constant. We can manipulate the expectation of $h(Y)\mathbbm{1}(Y \leq s)$ using integration by parts like follows:
+\begin{align} \label{ibp_formula}
+    &\e(h(Y)\mathbbm{1}(Y \leq s)) = \int_{0}^{s} h(x)d\p(Y < x) \nonumber \\
+    =& h(x)\p(Y\leq x)|_{0}^{s} - \int_{0}^{s} h'(x)\p(Y < x)dx \nonumber \\
+    =&  h(x)\p(Y\leq x)|_{0}^{s}- \int_{0}^{s} h'(x)(1- \p(Y\geq x))dx \nonumber \\
+    =& h(x)\p(Y\leq x)|_{0}^{s} - h(x)|_{0}^{s} + \int_{0}^{s} h'(x)\p(Y\geq x)dx \nonumber \\
+    =& h(s) \p(Y\leq s) -h(s) +h(0) + \int_{0}^{s} h'(x)\p(Y\geq x)dx.
+\end{align}
+\gy{
+    This is where the original paper is wrong. For this comment we are using the notations from the paper. Please see lemma 3 in \cite{SK_optimal}. Define $\phi_{c,n}(x) = e^{cnx^2/2}$, we can write
+    \begin{align} \label{ibp_integral}
+        &\e \left[ \exp \left(\frac{c\norm{N}^2_1}{2n}\right) \mathbbm{1}(\norm{N}_1 \leq an) \right] = \e \left[ \phi_{c,n} \left(\frac{\norm{N}_1}{n}\right) \mathbbm{1}\left(\frac{\norm{N}_1}{n} \leq a \right) \right] \nonumber \\
+        =&\phi_{c,n}(a)\p\left(\frac{\norm{N}_1}{n} \leq a\right) - \phi_{c,n}(a) + \phi_{c,n}(0) + \int_{0}^{a} \phi'_{c,n}(x) \p\left(\frac{\norm{N}_1}{n} \geq x\right) dx \nonumber  \\
+        =&-\phi_{c,n}(a) \p\left(\frac{\norm{N}_1}{n} > a\right) + 1 + \int_{0}^{a} \phi'_{c,n}(x) \p\left(\frac{\norm{N}_1}{n} \geq x\right) dx.
+    \end{align}
+    The author used the truncation $\norm{N}_1 \leq an$, but that does not mean $\p\left(\frac{\norm{N}_1}{n} \leq a\right) = 1$. We have extra terms in the integration that we need to deal with. Fortunately, this term cancels with the term in the other truncated integral, as it should be, because the final integral will obviously stay the same no matter where we truncate. And good news is that it doesn't impact the core of the estimation.
+}
+
+If $Y$ satisfies LDP, we can have some solid estimation about the integral because we know a lot about the probability $\p(Y\geq x)$. That is also the reason we spent a lot of effort in the previous section. Below are the lemma regarding the LDP of a multivariate Gaussian.
+\begin{lemma} \label{ldp_lemma_2}
+    For $x \geq \sqrt{2/\pi}$, define $\mu^*(x)$ as in lemma \ref{calculus_lemma}. Let $W = (W_1,\dots,W_n)$ be a vector of i.i.d. standard normal Gaussian. (In the actual computation $W$ will have a different dimension depending on our the number of flips $m$.) Then
+    \begin{align}
+        \p(\norm{W}_1 \geq nx) = e^{-(\mu^*(x) +r_n(x))n},
+    \end{align}
+    where
+    \begin{align}
+        0 \leq r_n(x) \leq \kappa \left(\frac{x - \sqrt{2/\pi}}{\sqrt{n}}+\frac{1}{n}\right)
+    \end{align}
+    for some universal $\kappa >0$ that is independent of $x$ and $n \geq 1$. Moreover, $\mu^*$ is smooth and $\mu^*(\sqrt{2/\pi}) = 0$.
+\end{lemma}
+\begin{proof}
+    The proof is immediate by lemma \ref{simple_lemma}, \ref{calculus_lemma} and \ref{ldp_lemma}.
+\end{proof}
+With that being said, we can begin to truncate the integral. In particular, we want to get good bounds on the following two expectations:
+\begin{align}
+    \left[ \exp \left(\frac{c\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \leq aN(N-1)/2\right)\right], \left[ \exp \left(\frac{c\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \geq bN(N-1)/2\right)\right].
+\end{align}
+For the former integral, let 
+\begin{align} \label{phicn_def}
+    \phi_{c,N}(x) = \exp\left(\frac{cx^2N(N-1)}{4}\right).
+\end{align}
+By our deduction in (\ref{ibp_integral}), we have
+\begin{align}
+    &\left[ \exp \left(\frac{c\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \leq aN(N-1)/2\right)\right] \nonumber \\
+    =&-\phi_{c,N}(a)\p\left(\frac{\norm{W}_1}{N(N-1)/2} \geq a\right) + 1 + \int_{0}^{a} \phi_{c,N}'(x) \p\left(\frac{\norm{W}_1}{N(N-1)/2} \geq x\right)dx.
+\end{align}
+The first term of the expression is the missing term in lemma 3 of \cite{SK_optimal}. Therefore, we need to tweak the approach to make it work. 
+    Define
+    \begin{align} \label{rc_def}
+        R_c(x) = \frac{1}{2}cx^2 - \mu^*(x),
+    \end{align}
+and let $r_n(x)$ be the same function from lemma \ref{ldp_lemma}. Here are our own versions of the lemma.
+\begin{lemma} \label{trunc_lemma_1}
+For $b \geq \sqrt{2/ \pi}$ and $c \geq 0$,
+    \begin{align}
+        \left[ \exp \left(\frac{c\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \geq bN(N-1)/2\right)\right] &= \exp\left(\frac{N(N-1)}{2}(R_c(b)-r_{N(N-1)/2}(b))\right) \nonumber \\
+        + \frac{CN(N-1)}{2}\int_{b}^{\infty}x \exp &\left(\frac{N(N-1)}{2}(R_c(x)-r_{N(N-1)/2}(x))\right)dx.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    By (\ref{rc_def}), (\ref{phicn_def}), lemma \ref{ldp_lemma_2}, and our deduction in (\ref{ibp_formula}), we can quickly conclude that
+    \begin{align}
+        &\left[ \exp \left(\frac{c\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \geq bN(N-1)/2\right)\right] \nonumber \\
+        =& \exp\left(\frac{N(N-1)}{2}(cb^2/2-\mu^*(b)-r_{N(N-1)/2}(b))\right) + \int_{b}^{\infty} \phi_{c,N}'(x) \p\left(\frac{\norm{W}_1}{N(N-1)/2} \geq x\right)dx \nonumber \\
+        =& \exp\left(\frac{N(N-1)}{2}(R_c(b)-r_{N(N-1)/2}(b))\right)  \nonumber \\
+        & \quad \quad \quad \quad+\frac{CN(N-1)}{2}\int_{b}^{\infty}x \exp\left(\frac{N(N-1)}{2}(R_c(x)-r_{N(N-1)/2}(x))\right)dx, \nonumber
+    \end{align}
+    as desired.
+\end{proof}
+Then we have the lemma regarding the other truncated integral.
+\begin{lemma} \label{trunc_lemma_2}
+    For $a \geq \sqrt{2/ \pi}$ and $c \geq 0$,
+    \begin{align}
+        &\left[ \exp \left(\frac{c\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \leq aN(N-1)/2\right)\right] \nonumber \\
+        =& -\exp\left(\frac{N(N-1)}{2}(R_c(a)-r_{N(N-1)/2}(a))\right) + \text{\normalfont (I)} + \text{\normalfont (II)},
+    \end{align}
+    where
+    \begin{align}
+        1 \leq (I) \leq \exp\left(\frac{N(N-1)}{2}R_c(\sqrt{2/ \pi})\right),
+    \end{align}
+    and
+    \begin{align}
+        \text{\normalfont (II)} = \frac{CN(N-1)}{2}\int_{\sqrt{2/\pi}}^{a}x \exp\left(\frac{N(N-1)}{2}(R_c(x)-r_{N(N-1)/2}(x))\right)dx.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Again we reply on our deduction in (\ref{ibp_formula}). In particular,
+    \begin{align}
+        &\left[ \exp \left(\frac{c\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \leq aN(N-1)/2\right)\right]  \nonumber \\
+        =& -\exp\left(\frac{N(N-1)}{2}(ca^2/2-\mu^*(a)-r_{N(N-1)/2}(a))\right) \nonumber \\
+        &\quad \quad \quad \quad \quad \quad \quad \quad \quad+1+ \int_{0}^{a} \phi_{c,N}'(x) \p\left(\frac{\norm{W}_1}{N(N-1)/2} \geq x \right)dx \nonumber \\
+        =& -\exp\left(\frac{N(N-1)}{2}(R_c(a)-r_{N(N-1)/2}(a))\right) + 1 + \int_{0}^{a} \phi_{c,N}'(x) \p\left(\frac{\norm{W}_1}{N(N-1)/2} \geq x \right)dx.
+        % =& -\exp\left(\frac{N(N-1)}{2}(R_c(a)-r_{N(N-1)/2}(a))\right) \nonumber \\
+        % &\quad \quad \quad \quad+ \frac{CN(N-1)}{2}\int_{0}^{a}x \exp\left(\frac{N(N-1)}{2}(R_c(x)-r_{N(N-1)/2}(x))\right)dx. \nonumber
+    \end{align}
+    We then make the truncation pivoting at $\sqrt{2/\pi}$:
+    \begin{align}
+        \text{\normalfont (I)} =& 1 + \int_{0}^{\sqrt{2/\pi}} \phi_{c,N}'(x) \p\left(\frac{\norm{W}_1}{N(N-1)/2} \geq x \right)dx, \\
+        \text{\normalfont (II)} =& \int_{\sqrt{2/\pi}}^a \phi_{c,N}'(x) \p\left(\frac{\norm{W}_1}{N(N-1)/2} \geq x \right)dx \nonumber \\
+        =&\frac{CN(N-1)}{2}\int_{\sqrt{2/\pi}}^{a}x \exp\left(\frac{N(N-1)}{2}(R_c(x)-r_{N(N-1)/2}(x))\right)dx.
+    \end{align}
+    The statement regarding (II) has thus been proved. Moreover, the lower bound of (I) is obviously true because the integrand is non-negative. We are left to prove the upper bound of (I), which can be easily achieved by upper-bounding the probability in the integrand with 1:
+    \begin{align}
+        \text{\normalfont (I)} \leq 1+ \int_{0}^{\sqrt{2/\pi}} \phi_{c,N}'(x) dx = 1 + \phi_{c,N}(x) |_{0}^{\sqrt{2/\pi}} = \exp\left(\frac{N(N-1)}{2}R_c(\sqrt{2/ \pi})\right),
+    \end{align}
+    because $\mu^*(2/ \pi) = 0$ and we can add $\mu^*(\sqrt{2/ \pi})$ at the end of the computation. This finishes the whole proof.
+\end{proof}
+Note that the function $R_c(x)$ and $r_n(x)$ appears a lot in our results. Since we already know that $r_n(x) \to 0$ as $n \to \infty$, we need to know more about $R_c(x)$ in order to reach our goal.
+\begin{lemma} \label{rc_lemma}
+    Let $x \geq \sqrt{2/\pi}$. Define $R_c(x)$ and $\mu^*(x)$ same as in lemma \ref{calculus_lemma}. For any $c \in (0,1)$, there exists a unique $x = \nu_c^* > \sqrt{2/\pi}$ that maximizes $R_c(x)$ over $x \geq \sqrt{2/\pi}$. Let $\alpha_c^* = R_c(\nu_c^*)$ denote the value of the maximum, for any $x \geq \sqrt{2/\pi}$, there exists $\theta_c(x) \in (c-1)/2, 10]$ with:
+    \begin{align}
+        R_c(x) - \alpha_c^* = - \theta_c(x)(x - \nu_c^*)^2.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Since $R(x)$ is just $-\mu^*(x)$ plus a quadratic term, the proof of lemma is relatively simple by applying the properties we already discovered in lemma \ref{calculus_lemma} several times. First we claim that $R(x)$ is strictly concave, this can be easily shown by recalling $\mu'^*(x) = \lambda_*(x)$:
+    \begin{align} \label{bigrprime_esti}
+        R_c''(x) = c - \lambda'_*(x) \in [-20+c,-1+c), \forall x \geq \sqrt{2/ \pi},
+    \end{align}
+    by the range of $\lambda'_*(x)$ we proved in lemma \ref{calculus_lemma}. Then we proceed to claim that $R_c(x)$ is maximized at some $x = \nu_c^* > \sqrt{2/ \pi}$. Towards this end, notice that
+    \begin{align}
+        R'(\sqrt{2/ \pi}) = c\sqrt{2/ \pi} - \lambda_*(\sqrt{2/ \pi}) = c\sqrt{2/ \pi} > 0
+    \end{align}
+    because $\lambda_*(\sqrt{2/ \pi})= 0$. \gy{The original paper has two typos here.} Meanwhile, $R''(x)<-1+c$ for all $x \geq \sqrt{2/ \pi}$, there exists some $\nu_c* > \sqrt{2/ \pi}$ such that $R'(\nu_c*) = 0$. By the monotonicity and negativity of $R''(x)$, such $\nu_c^*$ is unique. Finally, let
+    \begin{align}
+        \alpha_c^* := R(\nu_c^*) = \min_{x \geq \sqrt{2/ \pi}} R_c(x).
+    \end{align}
+    For $x \geq \sqrt{2/ \pi}$, we apply Taylor expansion around $\nu_c^*$ and get
+    \begin{align}
+        &R_c(x) = \alpha_c^* + R_c'(\nu_c^*)(x-\nu_c^*) + \frac{R_c''(\nu_c^*+t(x-\nu_c^*))}{2}(x-\nu_c^*)^2 \nonumber \\
+        =&\alpha_c^* + \frac{R_c''(\nu_c^*+t(x-\nu_c^*))}{2}(x-\nu_c^*)^2,
+    \end{align}
+    for some $0 \leq t \leq 1$. By (\ref{bigrprime_esti}), the coefficient of $(x-\nu_c^*)^2$ is apparently between $[-10,(c-1)/2)$ and can serve as our natural choice of $-\theta_c(x)$. The lemma is thus proved.
+\end{proof}
+
+Now we almost have all the tools ready to prove the main statement. Towards this end, we let $c_k = 1 - 1/k$. $R_k := R_{c_k}$, $\nu_{c_k} =: \nu_k$, $\alpha^*_{c_k} =: \alpha^*_k$ and $\theta_k = \theta_{c_k}$ defined same as in lemma \ref{rc_lemma}. Obviously $c_k \to 1$ and since $R_1''(x) = 1- \lambda_*''(x) <0$, $R_1$ is strictly concave. Moreover, we have by definition of $\mu^*$ and $\lambda_*(x)$ in lemma \ref{calculus_lemma},
+\begin{align}
+    R_1(x) = \frac{x^2}{2} - \mu^*(x) = \frac{1}{2}(x-\lambda_*(x))^2 + \phi(\lambda_*(x)) = \frac{1}{2}\phi'(\lambda_*(x))^2 + \phi(\lambda_*(x)),
+\end{align}
+which is monotone increasing in $\lambda_*(x)$. Because $\lambda_*(x)$ is monotone increasing for $x \geq \sqrt{2/\pi}$ (we proved in lemma \ref{calculus_lemma} that $\lambda_*(x)' > 1$), the above formula is also increasing in $x$ for $x$ large enough, and it satisfies
+\begin{align}
+    \lim_{x \to \infty} \frac{1}{2}\phi'(\lambda_*(x))^2 + \phi(\lambda_*(x)) = \log 2 
+\end{align}
+Finally, by implicit function theorem, $\nu_c^*$ and $\alpha_c^*$ are continuous in $c$. Thus, the following limits exist and satisfy
+\begin{align}
+    \lim_{k \to \infty} \nu^*_k = \infty, \quad \lim_{k \to \infty} \alpha^*_k = \log 2.
+\end{align}
+The goal is to show that
+\begin{align}
+    \e \left[ \exp \left(\frac{\norm{W}^2_1}{N(N-1)}\right) \right] = \exp\left(\frac{N(N-1)}{2} \alpha^* \pm o(N^2) \right).
+\end{align}
+We achieve that by examining all the truncation parts we created earlier. We can now state the main theorem and prove it.
+\begin{theorem} \label{baby_theorem}
+    Let the matrix $A$ be defined as in (\ref{approx_mat_def}), then
+    \begin{align}
+        \lim_{N \to \infty}\frac{1}{N(N-1)/2} \log \frac{1}{(2\pi)^{N(N-1)/2}\det(A)^{1/2}}\int_{[0,\infty)^{N(N-1)/2}} \exp\left(\frac{-x^{T}A^{-1}x}{2}\right)dx = 0.
+    \end{align}
+\end{theorem}
+\begin{proof}
+Denote
+\begin{align}
+    s_k(t)=\exp\left(-\frac{N(N-1)}{2}\alpha_k^* \right)\exp\left(\frac{N(N-1)}{2}(R_k(t)-r_{N(N-1)/2}(t))\right).
+\end{align}
+$s_k(t)$ appears in both lemma \ref{trunc_lemma_1} and lemma \ref{trunc_lemma_2} with opposite signs. At the end of the day we will let $a=b=\nu^*_k$ and let $k \to \infty$. During this process the term will cancel out. We can leave this term in the estimation without trying to bound it.
+
+First, by lemma \ref{trunc_lemma_1} and \ref{rc_lemma}, we have
+\begin{align}
+    &\exp\left(-\frac{N(N-1)}{2} \alpha_k^* \right)\e\left[ \exp \left(\frac{c_k\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \geq \nu^*_k N(N-1)/2\right)\right] \nonumber \\
+    =&s_k(t) + \frac{c_kN(N-1)}{2}\int_{\nu^*_k}^{\infty}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^* -r_{N(N-1)/2}(x))\right)dx \nonumber \\
+    \geq& s_k(t) + \frac{c_kN(N-1)}{2} \exp(-O(N))\int_{\nu^*_k}^{\infty}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^*)\right)dx \nonumber \\ 
+    =& s_k(t) + \frac{c_kN(N-1)}{2}\exp(-O(N))\int_{\nu^*_k}^{\infty}x \exp \left(-\frac{N(N-1)}{2}(\theta_k(x-\nu^*_k)^2)\right)dx \nonumber \\
+    =& s_k(t) + \frac{c_kN(N-1)}{2}\exp(-O(N))\int_{\nu^*_k}^{\infty}x \exp \left(-\frac{N(N-1)}{2}(10(x-\nu^*_k)^2)\right)dx. \nonumber \\
+    \geq& s_k(t) + \frac{c_kN(N-1)}{2}\exp(-O(N))\int_{\nu^*_k}^{\infty}x \exp \left(-10(x-\nu^*_k)^2 \right)dx. \nonumber \\
+    =&s_k(t) + \exp(-o(N^2)).
+\end{align}
+This gives the lower bound of the first truncated integral. For the upper bound, we compute
+\begin{align}
+    &\exp\left(-\frac{N(N-1)}{2} \alpha_k^* \right)\e\left[ \exp \left(\frac{c_k\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \geq \nu^*_k N(N-1)/2\right)\right] \nonumber \\
+    =&s_k(t) + \frac{c_kN(N-1)}{2}\int_{\nu^*_k}^{\infty}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^* -r_{N(N-1)/2}(x))\right)dx \nonumber \\
+    \leq& s_k(t) + \frac{c_kN(N-1)}{2}\int_{\nu^*_k}^{\infty}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^*)\right)dx \nonumber \\
+    \leq& s_k(t) + \frac{c_kN(N-1)}{2}\int_{\nu^*_k}^{\infty}x \exp \left(\frac{N(N-1)}{2}\left(\frac{c_k-1}{2}(x-\nu^*_k)^2\right)\right)dx \nonumber \\
+    =&s_k(t) + \frac{c_kN(N-1)}{2} \sqrt{\frac{\pi}{2(c_k-1)}} + \frac{c_k}{c_k-1} \nonumber \\
+    =&s_k(t) + \exp(o(N^2)),
+\end{align}
+as long as we do not let $k$ increase exponentially fast. (Let $k=N$ would be fine.)
+
+Then we turn to the other truncated integral. By lemma \ref{trunc_lemma_2} and \ref{rc_lemma}, we have the following lower bound
+\begin{align}
+    &\exp\left(-\frac{N(N-1)}{2} \alpha_k^* \right)\e\left[ \exp \left(\frac{c_k\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \leq \nu^*_k N(N-1)/2\right)\right] \nonumber \\
+    =&-s_k(t) + \frac{c_kN(N-1)}{2}\int_{0}^{\nu^*_k}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^* -r_{N(N-1)/2}(x))\right)dx \nonumber \\
+    =&-s_k(t) + \frac{c_kN(N-1)}{2}\exp(-O(N))\int_{0}^{\nu^*_k}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^*)\right)dx \nonumber \\
+    \geq& -s_k(t) + \frac{c_kN(N-1)}{2}\exp(-O(N)) \int_{0}^{\nu^*_k}x \exp \left(-\frac{N(N-1)}{2}(10(x-\nu_k^*)^2)\right)dx \nonumber \\
+    \geq& -s_k(t) + \exp(-o(N^2)).
+\end{align}
+Regarding the upper bound, we have
+\begin{align}
+    &\exp\left(-\frac{N(N-1)}{2} \alpha_k^* \right)\e\left[ \exp \left(\frac{c_k\norm{W}^2_1}{N(N-1)}\right) \mathbbm{1}\left(\norm{W}_1 \leq \nu^*_k N(N-1)/2\right)\right] \nonumber \\
+    =&-s_k(t) + \frac{c_kN(N-1)}{2}\int_{0}^{\nu^*_k}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^* -r_{N(N-1)/2}(x))\right)dx \nonumber \\
+    \leq& -s_k(t) + \frac{c_kN(N-1)}{2}\int_{0}^{\nu^*_k}x \exp \left(\frac{N(N-1)}{2}(R_k(x)-\alpha_k^*)\right)dx \nonumber \\
+    \leq& -s_k(t) + \frac{c_kN(N-1)}{2}\int_{0}^{\nu^*_k}x dx \nonumber \\
+    \leq& -s_k(t) + \exp(o(N^2)).
+\end{align}
+Combine everything together gives us the limit about
+\begin{align}
+    \e\left[ \exp \left(\frac{c_k\norm{W}^2_1}{N(N-1)}\right)\right].
+\end{align}
+Since $c_k$ is monotone increasing and so is the expectation itself, and $c_k \to 1$, we have the theorem proved by applying the monotone convergence theorem.
+\end{proof}
+\section{Problems for $m \geq 2$}
+As we can see from the previous section and early on in section \ref{2flip_overview}, coefficient from scaling does play a role when we try to compute the integration induced by the probability. We will explore more of this aspect in this section. We begin by computing the inverse of the approximated covariance matrix. In general, consider an $n$-by-$n$ matrix of the following form:
+\begin{align}
+    A = M\text{Id}_n + K\mathbbm{1}_{n}\mathbbm{1}^T_{n} = K\left(\frac{M}{K}\text{Id}_n+\mathbbm{1}_{n}\mathbbm{1}^T_{n}\right).
+\end{align}
+Applying the Sherman-Morrison formula and we have
+\begin{align}
+    A^{-1} = \frac{1}{M}\left(\text{Id}_n-\frac{K}{M+nK}\mathbbm{1}_{n}\mathbbm{1}^T_{n}\right).
+\end{align}
+For $m$-flip we have $M = m(N-2m)$, $K = m^2$ and $n = \binom{N}{m}$. Plug into the previous equation, and we get
+\begin{align}
+    A^{-1} = \frac{1}{m(N-am)}\left(\text{Id}_{\binom{N}{m}} - \frac{m^2m!}{m^2N(N-1)\cdots(N-m+1)+m(N-2m)m!}\mathbbm{1}_{\binom{N}{m}}\mathbbm{1}^T_{\binom{N}{m}}\right).
+\end{align}
+The integration that represents the probability of local optima in (\ref{lo_prob}) will have the following form
+\begin{align}
+    2^{-\binom{N}{m}}C_N\e \left[\exp\left(\frac{\norm{W}_1^2}{2(N/m-2)+2\binom{N}{m}}\right)\right],
+\end{align}
+where $C_N$ is an unimportant number that will vanish when we take logarithm and divided by the dimension $\binom{N}{m}$. Notice that
+\begin{align}
+    &\e \left[\exp\left(\frac{\norm{W}_1^2}{2(N/m-2)+2\binom{N}{m}}\right)\right] \approx \e \left[\exp\left(\frac{\norm{W}_1^2}{2\binom{N}{m}}\right)\right]\nonumber \\
+    =&\e \left[\exp\left(\frac{1}{2}\frac{\norm{W}_1^2}{\binom{N}{m}^2}\binom{N}{m}\right)\right] = \e \left[\exp \left(\binom{N}{m}f(W_{\binom{N}{m}})\right)\right]
+\end{align}
+where $f(x) = x^2/2$. When $m=1$, is that $\binom{N}{1} = N$ and the diagonal term $M = N-2$ have the same degree as polynomials of $N$. In the original case, $f(x)$ is changed to $x^2/4$, and it is easy to prove $x^2/4 - \mu^*(x)$ has a unique supremum.
+
+The discussion above also shows that the method of solving the case (if it is solvable) will be the same for all $m \geq 2$.
+\section{Dealing with the Drift}
+\gy{This section is temporarily for clarifying the problem for Tuca.} Now we need to deal with the fact that we are not directly using the covariance matrix $C$. Rather, we have $C=A+B$ and $A$ is the matrix we did the computation with. Now let us review what we know about $C$ and $B$. For keeping the things simple we only consider $m=2$ for the time being.
+
+Recall that there are 3 distinctive values for entries in the covariance matrix $C$:
+
+1. $2(N-2)$ for diagonal entries, one per row. There are $\frac{N(N-1)}{2}$ such entries because $C$ is of dimension $\frac{N(N-1)}{2} \times \frac{N(N-1)}{2}$.
+
+2. $N-2$ for entries corresponding to one overlapping flipped coordinate. There are $2(N-2)$ such entries per row.
+
+3. 4 for entries corresponding to no overlapping flipped coordinates. There are $\frac{(N-2)(N-3)}{2}$ such entries per row.
+
+As we can see, for each row there are equal numbers of entries for the 3 values above. There are dominantly more entries with value 4. ($O(N^2)$ numbers) The matrix $A$ is defined as 
+\begin{align}
+   A = 4((N-4)/2\text{Id}_{\frac{N(N-1)}{2}} + \mathbbm{1}_{\frac{N(N-1)}{2}}\mathbbm{1}^T_{\frac{N(N-1)}{2}}).
+\end{align}
+Which means $A$ is the matrix constructed by us ignoring the $N-2$ entries (the entries corresponding to 1 coordinate overlapping.) Naturally the matrix $B$ satisfies the following
+
+1. $B$ is symmetric with dimension 
+
+2. In each row, there are $2(N-2)$ number of nonzero entries, with value $N-6$.
+
+In \cite{MillerMatrix} there is a theorem that might be of use for our cases
+\begin{theorem}
+    Let $G$ and $G+H$ be non-singular matrices and let $H$ have positive rank $r$. Let $H = E_1 + \cdots +E_r$ where each $E_k$ has rank one and $C_{k+1} = G + E_1 + \cdots +E_k$ is nonsingular for $k = 1, \cdots, r$. Then if $C_1 = G$,
+    \begin{align}
+        C_{k+1}^{-1} =  C_{k}^{-1} - v_kC_{k}^{-1}E_kC_{k}^{-1}, \quad k = 1, \cdots, r
+    \end{align}
+    where
+    \begin{align}
+        v_k = \frac{1}{1+ \text{\normalfont tr} C_{k}^{-1}E_k}.
+    \end{align}
+    Moreover,
+    \begin{align} \label{det_recur}
+        \det(G+H) = \frac{1}{v_1\cdots v_r}\det(C_1).
+    \end{align}
+\end{theorem}
+Obviously for us to use this theorem, we let $G=A$ and $H=B$. $E_k$ would be the $k$-th row of $B$. We now use this result to prove that our computation doesn't change if we replace our matrix $A$ with the real covariance matrix $C$.
+
+Since we are dealing with a lot of subscripts, we denote $G(i,j)$ the $(i,j)$ entry of the matrix $G$ for the ease of reading. Let $h = N(N-1)/2$. Now note that $E_k$ only has one nonzero row, the $k$th row, and only have $2(N-2)$ nonzero entries of value $N-6$. Let us take a closer look at where these entries are located. We know that the rows and columns of the covariance matrix are indexed by 2-combinations. Let the $k$th row be indexed by the 2-tuple $(a,b)$, meaning the row is corresponding to the flip of coordinates $a$ and $b$. Then the nonzero entries of the row are indexed by columns corresponding to 2-combinations that contains $a$ or $b$ but not both. Such fact is crucial later when we bound our quadratic forms. Now let $S$ denote the index of the nonzero columns of $E_k$, we have
+\begin{align} \label{mat_recur_1}
+    E_kC_k^{-1}(i,j) =& \mathbbm{1}(i=k) \mathbbm{1}(j \in S)\sum_{l=1}^{h}E_k(i,l)C_k^{-1}(l,j) \nonumber \\
+    =& \mathbbm{1}(i=k) (N-2) \sum_{l \in S} C_k^{-1}(l,j).
+\end{align}
+The summation only has $2(N-2) = O(N)$ terms, and the product only has the $2(N-2)$ nonzero entries in $k$th row nonzero (zero everywhere else). Moreover, since by construction $j \notin S$, we have $C_k^{-1}(j,j), \forall j \leq h$ never contributes to the summation. We then proceed to compute that
+\begin{align} \label{mat_recur_2}
+    C_k^{-1}E_kC_k^{-1}(i,j) =& \mathbbm{1}(j \in S)C_k^{-1}(i,k)[E_kC_k^{-1}(k,j)].
+\end{align}
+Recall from (\ref{babyinverse}) that except the diagonal, all other entries of $A^{-1} \equiv C_1$ is of scale $O(N^{-3})$. By (\ref{mat_recur_1}) and (\ref{mat_recur_2}), we know that $C_1^{-1}E_1C_1^{-1}(i,j) = O(N^{-4})$, because the diagonal term of $C_1$ never contributes to the summation in (\ref{mat_recur_1}) and the summation only has $O(N)$ terms. Also, a quick computation tells us that $v_1 = O(1)$, meaning the increment in the recursion relation satisfies $v_1C_k^{-1}E_kC_k^{-1}(i,j) = O(N^{-4})$. Again by the coefficient in (\ref{babyinverse}) We can write
+\begin{align} \label{mat_drift}
+    C_2^{-1}(i,j) = C_1^{-1}(i,j)+ \mathbbm{1}(j \in S) O(N^{-4}) = \frac{1}{N^3} + \mathbbm{1}(j \in S)O(N^{-4}).
+\end{align}
+This means each row will only get modified $O(N)$ times during throughout the recursion. Repeating this process and we can inductively get
+\begin{align}
+    C^{-1}(i,j) = C_h^{-1}(i,j) = \frac{1}{N^3} + O(N^{-4}).
+\end{align}
+Moreover, we also have by (\ref{det_recur}) that
+\begin{align} \label{det_drift}
+    det(C^{-1}) = det(A^{-1})O(1).
+\end{align}
+Finally, we put (\ref{lo_prob}), (\ref{babyinverse}), (\ref{babyexpect}), (\ref{babyinte}), (\ref{mat_drift}), and (\ref{det_drift}) together and obtain
+\begin{align}
+    &\p(\sigma \text{ is 2-flip local optimal}) \nonumber \\
+    =& \frac{1}{(2\pi)^{h/2}\det(C)^{1/2}}\int_{[0,\infty)^h} \exp\left(\frac{-x^{T}C^{-1}x}{2}\right)dx \nonumber \\
+    =& \frac{1}{(2\pi)^{h/2}\det(A)^{1/2}O(1)} \exp\left(\frac{-x^{T}A^{-1}x}{2} + O(N^{-4})\sum_{i,j}x_ix_j\right)dx \nonumber \\
+    =& O(1) 2^{-\frac{N(N-1)}{2}}\left( \frac{2(N-4)}{(N-2)(N+2)}\right)^{1/2} \e \left[ \exp\left(\frac{(1+O(N^{-1}))\norm{W}^2_1}{(N-2)(N+2)}\right)\right]
+\end{align}
+It is clear that the probability of 2-flip local optimal will have the same result in theorem \ref{baby_theorem}. We have the following result.
+\begin{theorem}
+    \begin{align}
+        \lim_{N \to \infty}\frac{1}{N(N-1)/2} \log \p(\sigma \text{ \normalfont is 2-flip local optimal}) = 0.
+    \end{align}
+\end{theorem}
+Such result can be easily extended to the $m$-flip case. For arbitrary $m$-flip, the matrix $C-A$ also has most entries zero and its nonzero entries being $O(N)$. We can use the exactly same approach and finally get the following theorem we have been dreaming for so long:
+\begin{theorem}
+    Let $m \geq 2$, and $N$ be the dimension of the Hamiltonian, then
+    \begin{align}
+        \lim_{N \to \infty}\binom{N}{m}^{-1} \log \p(\sigma \text{ \normalfont is m-flip local optimal}) = 0.
+    \end{align}
+\end{theorem}
+\begin{thebibliography}{99}
+
+\bibitem{SK_optimal}
+L.A. Berry, L. Devroye, G. Lugosi, R.I. Oliveira. \textit{Local optima of the Sherrington-Kirkpatrick Hamiltonian}. Journal of Mathematical Physics. Volume 60, Issue 4. (2019).
+
+\bibitem{Montanari} M. Mezard, A Montanari. \textit{Information, Physics, and Computation}. Oxford Graduate Texts. Oxford University Press. (2009).
+
+\bibitem{AEoI} N. Bleistein, R.A. Handelsman. \textit{Asymptotic Expansion of Integrals}. Dover Publication Inc. (1975).
+
+\bibitem{MillerMatrix} K. S. Miller. \textit{On the Inverse of the Sum of Matrices}. Mathematics Magazine, Mar 1981, Vol. 54, No. 2, pp. 67-72. Taylor \& Francis, Ltd. on behalf of the Mathematical Association of America. (1981).
+
+\bibitem{Prob_Method_Book}
+N. Alon, J.H. Spencer. \textit{The Probabilistic Method. 4th Edition} Wily, New York. (2016).
+\end{thebibliography}
+\end{document}

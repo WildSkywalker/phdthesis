@@ -1,0 +1,23 @@
+\babel@toc {english}{}
+\contentsline {subsection}{\numberline {0.1}Change Logs}{2}{subsection.0.1}%
+\contentsline {section}{\numberline {1}Spin Glass, A Short History}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}What is Spin Glass?}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Parisi and His Predictions}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Volume I: Tools of the Trade}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Motivation and Laplace's Method}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Short Review of Large Deviation Principle(LDP)}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Road to Varadhan's Lemma}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Varadhan's Lemma and Its Proof}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Laplace Transform and Watson's Lemma}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Kernels of Exponential Type}{8}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Volume II: The Problems}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introduction and Setup}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Extend the Results}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Computation for $d$-regular graph}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}The Problem of $m$-Flips}{10}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}2-flip Covariance Structure}{11}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}General Formula for $Z$}{12}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}3-flip Covariance Structure}{13}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}m-flip Covariance Structure}{14}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.5}The Trouble of Matrix Inverse: An Overview}{15}{subsubsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.5}The Problem of Edward-Anderson Model}{16}{subsection.3.5}%

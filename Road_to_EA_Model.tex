@@ -1,0 +1,697 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+
+
+
+\numberwithin{equation}{section}
+
+
+
+\begin{document}
+
+
+\title{The Local Optima Problems of Spin Glass Models}
+\maketitle
+
+\tableofcontents
+
+\subsection{Change Logs}
+This subsection is used to track the progress of the notes. Hopefully one day it will become a PhD thesis.
+
+\textbf{Pre Summer 2023}: Varadhan's Lemma and introductory stuff.
+
+\textbf{Sept 20, 2023}: Added section for 2 and 3 flip computation, and the general formula of $Z$.
+
+\textbf{Sept 23, 2023}: Covariance structure of $m$-flip finished.
+
+\textbf{Sept 25, 2023}: Added a detailed proof of Watson's Lemma in Volume I. Also added a short section after $m$-flip covariance structure about computing the matrix inverse.
+
+\textbf{Oct 2, 2023}: Removed the section of the possible solution. That one does not work.
+
+\textbf{Oct 12, 2023}: Man I am stuck.
+
+\textbf{Oct 20, 2023}: Added a section of the overview about the matrix inverse problem so Tuca can be on the same page easier.
+
+\textbf{Oct 25, 2023}: Some minor updates. Added an explanation why the normalization of Hamiltonian is not needed.
+
+\textbf{Oct 28, 2023}: Took a minor break for resume polishing and job search.
+
+\section{Spin Glass, A Short History}
+\gy{For the sake of the thesis, it will be necessary (and fun) to add a good historical background. I read some in Montanari but I guess I should wait until I have a more thorough understanding of the problem.}
+\subsection{What is Spin Glass?}
+\subsection{Parisi and His Predictions}
+\section{Volume I: Tools of the Trade}
+
+\subsection{Motivation and Laplace's Method}
+In statistical physics, we often encounter integrals with the following form:
+\begin{align}
+    \int \exp(nf_n(x))d\mu,
+\end{align}
+where $f_n$ is a class of functions. \gy{This actually is the topic of chapter 5 in Bleistein \& Handelsman. Write this chapter later for a proper introduction.}
+
+\subsection{Short Review of Large Deviation Principle(LDP)}
+Most readers's first encounter with LDP is probably Cramer's LDP, where the statement addresses the exponentially small probability of deviation in Law of Large Numbers:
+\begin{theorem}
+    Let $(X_i)_{i \leq n}$ be a sequence of i.i.d. random variables, with finite logarithmic moment generating function, i.e. $\Lambda(t) = \log \e(\exp (tX_1)) < \infty$. Then the Legendre transform of $\Lambda$:
+    \begin{align} \label{cramer_rate}
+        \Lambda^{\ast} (x):= \sup_{t \in \mathbb{R}}(tx - \Lambda(t))
+    \end{align}
+    satisfies
+    \begin{align} \label{cramer_ldp}
+        \lim_{n \to \infty} \frac{1}{n} \log \left(\p \left(\frac{1}{n}\sum_{i=1}^n X_i \geq x\right)\right) = -\Lambda^{\ast}(x).
+    \end{align}
+\end{theorem}
+For this theorem alone, we can see Cramer's LDP as an extension of LLN because the strong law of large number tells us the mean of the sum will converge to the expectation, but it does not tell us how "fast" is the convergence, or more precisely, how fast the probability shrinks for the mean to take values other than the expectation. The LDP answers that problem and the answer is exact. In fact, Large Deviation itself is a very useful tool with deep insights and will lead us to the results we want to discuss in this note.
+
+First things first, let us re-define the general LDP using the language of probability measures. All things happen in $(\X,\B)$ where $\X$ is a complete regular Hausdorff space equipped with $\sigma$-algebra $\B$. To avoid unnecessary trouble, we always assume $\B \supseteq \B_{\X}$, the Borel $\sigma$-field of $\X$. We will define the concept of rate function first, which corresponds to $\Lambda^{\ast}$ in the previous theorem. Rate function is used to measure the speed of deviation probability.
+\begin{definition}
+    A rate function $I$ is a lower semi-continuous mapping $I: \X \to [0,\infty]$ such that for all $\alpha \in [0,\infty)$, the level set $\Psi_I(\alpha) := \{x: I(x) \leq \alpha\}$ is a closed subset of $\X$. A good rate function is a rate function such that all level sets are compact. The effective domain of $I$, denoted $\D_I$, is the set of points in $\X$ of finite rate. We refer $\D_I$ as the domain of $I$ when there is no confusion.
+\end{definition}
+For example, $\Lambda^*$ defined in ($\ref{cramer_rate}$) is a rate function, and it measures how fast the deviation probability shrinks as the number of i.i.d. random variables tends to infinity.
+
+We then rephrase the definition of LDP in terms of general class of probability measures. In this notes, the infimum of a function over a n empty set is interpreted as $\infty$.
+\begin{definition}
+    A class of probability measures satisfies LDP with a rate function $I$ if for all $\Gamma \in \B$,
+    \begin{align} \label{ldp_bound}
+        - \inf_{x \in \Gamma^o} I(x) \leq \liminf \epsilon \log \mu_{\epsilon}(\Gamma) \leq \limsup \epsilon \log \mu_{\epsilon}(\Gamma) \leq - \inf_{x \in \bar{\Gamma}} I(x).
+    \end{align}
+\end{definition}
+To rephrase the Cramer LDP in ($\ref{cramer_ldp}$), we let $\epsilon = \frac{1}{n}$, $\mu_{\epsilon} \equiv \mu_n \equiv \mu_{M_n}$, where $M_n=\frac{1}{n}\sum_{i=1}^n X_i$ and $\mu_{M_n}$ is the probability measure induced by $M_n$. This way we know that the Cramer LDP is the statement that fits into a larger scheme.
+\subsection{Road to Varadhan's Lemma}
+We denote this section to some useful results that will be used later on. First comes the contraction principle. The contraction principle allows us to take a LDP we already established, a continuous function $f$, and produce a new LDP with the rate function being the composition of the original rate function and the inverse of $f$.
+\begin{theorem}[Contraction Principle]
+    
+\end{theorem}
+\subsection{Varadhan's Lemma and Its Proof}
+\gy{Can add an alternative proof that uses the contraction principle to prove the Varadhan's Lemma.}
+We are now ready to discuss Varadhan's Lemma. Assume $\{Z_{\epsilon}\}$ is a family of random variables taking values in the regular topological space $\X$ and $\{\mu_{\epsilon}\}$ is the corresponding family of random variables.
+\begin{theorem}
+    Suppose $\{\mu_{\epsilon}\}$ satisfies the LDP with a good rate function $I: \X \to [0,\infty]$, and $\phi: \X \to \mathbb{R}$ is any continuous function. Assume further either the tail condition
+    \begin{align} \label{vara_tail_cond}
+        \lim_{M \to \infty} \limsup_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}\right) = -\infty,
+    \end{align}
+    or the following moment condition for some $\gamma >1$,
+    \begin{align} \label{vara_moment_cond}
+        \limsup_{\epsilon \to 0}\epsilon \log \e \left(e^{\phi(\gamma Z_{\epsilon})/\epsilon}\right) < \infty.
+    \end{align}
+    Then
+    \begin{align}
+        \lim_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\right) = \sup_{x \in \X}(\phi(x)-I(x)).
+    \end{align}
+\end{theorem}
+\begin{proof}
+    We divide the proof into several steps to give a better overview of the logic flows.
+
+    \textbf{Step 1: The moment condition(\ref{vara_moment_cond}) implies the tail condition(\ref{vara_tail_cond}). }
+    This way we reduce the number of theorems we need to prove to one. The form of two conditions remind us to use truncation(Honestly, try truncation if you get stuck, and it will work more often than not.). For $\epsilon >0$, introduce $X_{\epsilon}:= \exp ((\phi(Z_{\epsilon})-M)/\epsilon)$ and $\gamma >1$ be the constant given in ($\ref{vara_moment_cond}$). Note that we have the obvious inequality
+    \begin{align}
+        \e(X_{\epsilon} \mathbbm{1}_{\{X_{\epsilon} \geq 1\}}) \leq \e(X_{\epsilon}^{\gamma} \mathbbm{1}_{\{X_{\epsilon} \geq 1\}}) \leq \e((X_{\epsilon})^{\gamma}).
+    \end{align}
+    By the construction of $X_{\epsilon}$, the above inequality means
+    \begin{align}
+        e^{-M/\epsilon} \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) \leq e^{-\gamma M/\epsilon} \e(e^{\gamma\phi(Z_{\epsilon})/\epsilon}).
+    \end{align}
+    Take logarithm and multiply both side by $\epsilon$, and we have
+    \begin{align}
+        -M + \epsilon \log \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) \leq -\gamma M + \epsilon \e(e^{\gamma\phi(Z_{\epsilon})/\epsilon}).
+    \end{align}
+    Rearrange the constant and take $\limsup$ make us arrive at
+    \begin{align} \label{vara_mom_tail_inequ}
+        \limsup_{\epsilon \to 0}  \epsilon &\log \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) + (\gamma - 1)M \nonumber \\
+        &\leq  \limsup_{\epsilon \to 0} \epsilon \e(e^{\gamma\phi(Z_{\epsilon})/\epsilon}).
+    \end{align}
+    Now assume the moment condition in $(\ref{vara_moment_cond})$ holds, and we get the right side of $(\ref{vara_mom_tail_inequ})$ to be finite, which implies
+    \begin{align}
+        \limsup_{\epsilon \to 0}  \epsilon &\log \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) + (\gamma - 1)M  < \infty.
+    \end{align}
+    Recall that $\gamma > 1$ and in turn $\gamma - 1 >0$ and the fact that $M$ is arbitrary. Taking $M$ to infinity gives us the tail condition in ($\ref{vara_tail_cond}$). After the first step, we will prove the Varadhan's lemma assuming the tail condition.
+
+    \textbf{Step 2: Prove the lower bound in the statement.} i.e.,
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\right) \geq \sup_{x \in \X}(\phi(x)-I(x)).
+    \end{align}
+
+    This part is relatively easy as it actually holds without assuming the tail conditions. Recall that $\phi$ is lower semi-continuous, there exists a neighborhood $G$ of $x$ such that $\inf_{y \in G} \phi(y) \geq \phi(x) - \delta$. By restricting the area of integration to $G$, we have an easy inequality: for any fixed $\epsilon > 0$, taking expectation respect to the probability measure of $Z_{\epsilon}$, we obtain
+    \begin{align}
+        \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{Z_{\epsilon}\in G\}}) \geq \inf_{y \in G}e^{\phi(y)/\epsilon}\e (\mathbbm{1}_{\{Z_{\epsilon}\in G\}}) = \inf_{y \in G}e^{\phi(y)/\epsilon} \mu_{\epsilon}(G).
+    \end{align}
+    Add $\epsilon$ on both sides. Then taking liminf on the inequality with respect to $\epsilon$ then gives us
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{Z_{\epsilon}\in G\}}) \geq \inf_{y \in G} \phi(y) + \liminf_{\epsilon \to 0} \epsilon \log \mu_{\epsilon}(G).
+    \end{align}
+    LHS is obviously not getting larger when we get rid of the indication function as the exponential function is always positive. Thus, we have the estimation of the lower bound
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}) \geq \inf_{y \in G} \phi(y) + \liminf_{\epsilon \to 0} \epsilon \log \mu_{\epsilon}(G).
+    \end{align}
+    Recall the definition of LDP in $(\ref{ldp_bound})$, we have
+    \begin{align} \label{ldp_lower_last_step}
+        \inf_{y \in G} \phi(y) + \liminf_{\epsilon \to 0} \epsilon \log \mu_{\epsilon}(G) \geq&  \inf_{y \in G} \phi(y) - \inf_{y \in G} I(y) \quad(\text{By lower semi-continuity}) \nonumber \\
+        \geq& \phi(x) -\delta - \inf_{y \in G} I(y).
+    \end{align}
+    Recall that the rate function $I$ is also lower semi-continuous, and for any $x$ fixed, the following holds
+    \begin{align}
+        \sup_{G \ni x}\inf_{y \in G} I(y) = I(x).
+    \end{align} 
+    In turn, we know that
+    \begin{align}
+        - \inf_{y \in G} I(y) \geq -I(x).
+    \end{align}
+    Combine the last inequality with $(\ref{ldp_lower_last_step})$, and we finally have
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}) \geq \phi(x) - I(x) -\delta.
+    \end{align}
+    Since the choice of $x$ is arbitrary, we can conclude that
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}) \geq \sup_{x \in \X}(\phi(x) - I(x)).
+    \end{align}
+    This finishes the proof of the lower bound in the Varadhan's Lemma.
+
+    \textbf{Step 3: Prove the Upper bound in the statement.} i.e.,
+    \begin{align}
+            \limsup_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\right) \leq \sup_{x \in \X}(\phi(x)-I(x)).
+    \end{align}
+    We will only use the tail condition in this part. Since we assume the moment condition, step 1 above ensures that we can take tail condition as granted. In this step, we will finally use the definition of a good rate function, that its sublevel set being compact. We will also use truncation to extend the result from bounded $\phi$ to the general case.
+
+    For a standard truncation technique, we assume the function $\phi$ is bounded, namely $\phi(x) \leq M < \infty$ for some $M$. We will simply have the indicator function in ($\ref{vara_tail_cond}$) vanish as we take the limit. The tail condition holds trivially. Fix  $\alpha < \infty$ and $\delta > 0$, and let $\Phi_I(\alpha) = \{x:I(x)\leq \alpha\}$ be the compact sub-sublevel set of the good rate function $I$. Recall from the assumptions that $I$ is lower semi-continuous, $\phi$ is upper semi-continuous and $\X$ is a regular topological space. For every $x \in \Phi_I(\alpha)$, there exists a neighborhood $A_x$ of $x$ such that
+    \begin{align} \label{vara_sublevel_inequ}
+        \inf_{y \in \olsi{A_x}} I(y) \geq I(x) - \delta, \quad \sup_{y \in \olsi{A_x}} \phi(y) \geq I(x) + \delta.
+    \end{align}
+    \textit{Now we use the compactness of $\Phi_I(\alpha)$.} Obviously, if we take the union over all $x$ in  $\Phi_I(\alpha)$, we have an open cover $\bigcup_{x \in \Phi_I(\alpha)} A_x$. Then, there exists a finite subcover $\bigcup_{i=1}^N A_{x_i}$ for some positive integer $N$. This allows us to give a relatively simple upper bound for the expectation $\e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\right)$:
+    \begin{align} \label{vara_cover_inequ}
+        &\e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\right) = \e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\mathbbm{1}
+        \left(Z_{\epsilon} \in \bigcup_{i \leq N} A_{x_i}\right)\right) + \e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\mathbbm{1}
+        \left(Z_{\epsilon} \in \bigcup_{i \leq N} A_{x_i}\right)^c\right) \nonumber  \\
+        \leq& \e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\mathbbm{1}
+        \left(Z_{\epsilon} \in \bigcup_{i \leq N} A_{x_i}\right)\right) + e^{M/\epsilon} \mu_{\epsilon}\left(\bigcup_{i \leq N} A_{x_i}\right)^c \quad \text{(Boundedness of $\phi$)}\nonumber \\
+        \leq& \sum_{i \leq N} \e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\mathbbm{1}
+        \left(Z_{\epsilon} \in A_{x_i}\right)\right) + e^{M/\epsilon} \mu_{\epsilon}\left(\bigcup_{i \leq N} A_{x_i}\right)^c \nonumber \\
+        \leq& \sum_{i \leq N} e^{\phi(x_i)+\delta}\mu_{\epsilon}
+        \left(\olsi{A_{x_i}}\right) + e^{M/\epsilon} \mu_{\epsilon}\left(\bigcup_{i \leq N} A_{x_i}\right)^c. \quad \text{(By inequality in $(\ref{vara_sublevel_inequ})$)}
+    \end{align}
+    Next, we recall the general definition of LDP, as described in ($\ref{ldp_bound}$). Apply the inequality to each $A_{x_i}$, and we obtain
+    \begin{align}
+        \limsup_{\epsilon \to 0} \epsilon \mu_{\epsilon}\left(\olsi{A_{x_i}}\right) \leq -\inf_{y \in \olsi{A_{x_i}}} I(y).
+    \end{align}
+    In the same way, since $\left(\bigcup_{i \leq N} A_{x_i}\right)^c \subset \Phi_I(\alpha)^c$, we also have
+    \begin{align}
+        \limsup_{\epsilon \to 0} \mu_{\epsilon}\left(\bigcup_{i \leq N} A_{x_i}\right)^c \leq -\inf_{y \in \left(\bigcup_{i \leq N} A_{x_i}\right)^c} I(y).
+    \end{align}
+    Combine the previous two inequalities with ($\ref{vara_cover_inequ}$), we arrive at
+    \begin{align} \label{vara_upbdd_final_step}
+        &\limsup_{\epsilon \to 0} \epsilon \log \e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\right) \nonumber \\
+        \leq& \max \left\{\max_{i \leq N} \left\{\phi(x_i)+\delta - \inf_{y \in \olsi{A_{x_i}}} I(y)\right\}, M - \inf_{y \in \left(\bigcup_{i  N} A_{x_i}\right)^c} I(y) \right\}  \nonumber \\
+        \leq& \max \left\{\max_{i \leq N} \left\{\phi(x_i)- I(x_i) + 2\delta \right\}, M - \alpha \right\}  \quad (\text{By ($\ref{vara_sublevel_inequ}$)})\nonumber \\
+        \leq& \max \left\{\sup_{x \in \X} \left\{\phi(x)- I(x) \right\}, M - \alpha \right\} + 2\delta.
+    \end{align}
+    The upper bound of Varadhan's Lemma can be achieved by letting $\delta \to 0$ and $\alpha \to \infty$ in $(\ref{vara_upbdd_final_step})$.
+    Now we only need to get rid of the boundedness of $\phi$. This is easy and standard by setting $\phi_M(x) = \phi(x) \wedge M \leq \phi(x).$ In turn,
+    \begin{align}
+        &\limsup_{\epsilon \to 0} \epsilon \log \e\left(e^{\phi(Z_{\epsilon}/\epsilon)}\right) 
+        \nonumber \\
+        \leq& \sup_{x \in \X}(\phi(x)-I(x))\vee \limsup_{\epsilon \to 0} \epsilon\e \left(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}\right)
+    \end{align}
+    The second component will tend to $-\infty$ by the tail condition ($\ref{vara_tail_cond}$), thus completing the proof as we let $M \to \infty$.
+\end{proof}
+
+\subsection{Laplace Transform and Watson's Lemma}
+We introduce another set of tools that tackle the integrals with the form of
+\begin{align} \label{int_laplace}
+    I(\lambda) = \int exp(-\lambda \phi(t))f(t)dt.
+\end{align}
+We will start with Watson's lemma and gradually build from there.
+\begin{theorem}[Watson's Lemma]
+    Let $f(t)$ be locally integrable function on $(0,\infty)$ (integrable on all closed interval $[a,b] \subset (0,\infty)$) and $f(t) < \infty$ for $t$ finite. Moreover, assume $f(t) = O(e^{at})$for some real number $a$ and as $t \to 0^+$,
+    \begin{align}
+        f(t) \backsim \sum_0^{\infty} c_m t^{a_m},
+    \end{align}
+    where $-1 < a_m \to \infty$ monotonically. Then as $\lambda \to \infty$,
+    \begin{align}
+        I(\lambda) \backsim \sum_0^{\infty} \int_0^{\infty} \exp(-\lambda t) t^{a_m} dt =  \sum_0^{\infty} \frac{c_m \Gamma(a_m+1)}{\lambda^{a_m+1}}.
+    \end{align}
+    $I$ is defined in (\ref{int_laplace}).
+\end{theorem}
+\begin{proof}
+    We prove this lemma using truncation.
+    \begin{align}
+        I(\lambda) =& \int_0^R \exp(-\lambda t) f(t) dt + \int_R^{\infty} \exp(-\lambda t) f(t) dt \nonumber \\
+        \equiv& I_1(\lambda) + I_2(\lambda).
+    \end{align}
+    Since it is given that $f(t) = O(e^{at})$, there exists a positive number $k$ such that
+    \begin{align}
+        |f(t)| \leq k e^{at}.
+    \end{align}
+    Plug this inequality into $I_2$ and we get
+    \begin{align} \label{int_laplace_tail}
+        I_2(\lambda) \leq& \int_R^{\infty} \exp(-\lambda t) |f(t)| dt \leq \frac{k}{\lambda - a} \exp(-(\lambda-a)R) \nonumber \\
+        =& o(\exp(-\lambda R)).
+    \end{align}
+    This way we know $I_2$ decays exponentially. For the estimation of $I_1$, we have, by the asymptotic expansion of $f$ given, 
+    \begin{align}
+        f(t) = \sum_{m=0}^{N} c_m t^{a_m} + \rho_N(t), \quad \rho_N(t) = O(t^{a_N+1}), \text{ as } t\to 0^+.
+    \end{align}
+    Combine this expression with $I_1$ and we obtain
+    \begin{align} \label{int_laplace_head}
+        I_1(\lambda) = \sum_0^N c_m \int_0^R t^{a_m} \exp(-\lambda t) dt  + \int_0^R \rho_N \exp(-\lambda t) dt.
+    \end{align}
+    Recall the definition of Gamma function:
+    \begin{align}
+        \Gamma(t) := \int_0^{\infty} t^{z-1}e^{-t} dt.
+    \end{align}
+    Along with (\ref{int_laplace_tail}), the summand in the first part of (\ref{int_laplace_head}) can be modified as
+    \begin{align} \label{int_laplace_gamma}
+        \int_0^R t^{a_m} \exp(-\lambda t) dt =& \lambda^ {-(1+a_m)}\int_0^\infty (\lambda t)^{(a_m+1)-1} \exp(-\lambda t) d \lambda t - \int_R^{\infty} t^{a_m} \exp(-\lambda t) dt \nonumber \\
+        =& \frac{\Gamma(1+a_m)}{\lambda^{1+a_m}} + O(\exp{-\lambda R}).
+    \end{align}
+    Combine everything together, and we have the following estimation of $I$:
+    \begin{align} \label{int_laplace_withrho}
+        I(\lambda) = \sum_0^N c_m \frac{\Gamma(1+a_m)}{\lambda^{1+a_m}} + \int_0^R \rho_N \exp(-\lambda t) dt + O(\exp(-\lambda R)).
+    \end{align}
+    Finally, we want to get a good estimation of $\rho_N(t)$. Recall that $\rho_N(t) = O(t^{a_N+1}), \text{ as } t\to 0^+$. Moreover, since $f$ is locally absolutely integrable, $\rho_N$ is bounded on $[0,R]$. \gy{Because it is part of $f$'s formula and the formula has finite summand. Should I add more explanation why it is bounded?} There exists a constant $k$ such that $|\rho_N(t)| \leq kt^{a_N+1}, \forall t \in [0,R]$. Using the similar computation in (\ref{int_laplace_gamma}), we have the following inequality:
+    \begin{align} \label{int_laplace_rho}
+        \left | \int_0^R \rho_N \exp(-\lambda t) dt \right | \leq k_N \int_0^{\infty} t^{a_N+1} \exp(-\lambda t) dt = \frac{k_N \Gamma(a_{N+1}+1)}{\lambda^{a_{N+1}+1}} = O(\lambda^{-(a_{N+1}+1)}).
+    \end{align}
+    (\ref{int_laplace_withrho}) and (\ref{int_laplace_rho}) together give us
+    \begin{align}
+        I(\lambda) =& \sum_0^N c_m \frac{\Gamma(1+a_m)}{\lambda^{1+a_m}} + O(\lambda^{-(a_{N+1}+1)}) + O(\exp(-\lambda R)) \nonumber \\
+        =& \sum_0^N c_m \frac{\Gamma(1+a_m)}{\lambda^{1+a_m}} + O(\lambda^{-(a_{N+1}+1)})
+    \end{align}
+    because the second big $O$ has faster decay and can be absorbed into the first one. This finishes the proof.
+\end{proof}
+\subsection{Kernels of Exponential Type}
+\section{Volume II: The Problems}
+\subsection{Introduction and Setup}
+\gy{Note here we are not normalizing the Hamiltonian because we don't need to. Just like in \cite{SK_optimal}, by the construction of each $Z$, the coefficient in front of the Hamiltonian doesn't matter if we want to ask what is the probability of each $Z$ greater than zero. Also, the coefficient of 2 is correct in the computation, and it agrees with the original result in \cite{SK_optimal} when we let the number of flip $m$ to be 1.}
+Given a graph $G$ with vertex set $[N]=\{1,2,\cdots,n\}$ and edge set $E = (i,j)$ where $i,j$ adjacent. Let $W = (W_{i,j})_{N\times N}$ be a symmetric matrix with zero diagonal such that $(W_{i,j})_{1 \leq i < j \leq n}$ are independent standard normal random variables. Consider the Hamiltonian $H:\{-1,+1\}^n \to \mathbb{R}$ of spin glass defined on $G$:
+\begin{align}
+    H(\sigma) = \sum_{(i,j) \in E} \sigma_i \sigma_j W_{ij}.
+\end{align}
+A fixed $\sigma = (\sigma_i)^n_{i=1} \in \{-1,+1\}^n$ is called a configuration. \\ \\
+We are interested in the local optimality of a configuration. We say a configuration  $\sigma$ is optimal, if the Hamiltonian will be equal or larger when we flip any single coordinate of $\sigma$. To put it precisely, define $\sigma^{(i)}$ such that $\sigma^{(i)}_j = -\sigma_j$ for $i= j$ and $\sigma^{(i)}_j = \sigma_j$ otherwise. $\sigma$ is called a local optimal if $H(\sigma^{(i)}) \geq H(\sigma)$ for any $i$. \\ \\
+We want to replicate the similar process conducted in \cite{SK_optimal} and compute the asymptotic probability of local optima. Given $i \in [N]$, consider
+\begin{align}
+    Z_i(\sigma) := \frac{H(\sigma^{(i)})-H(\sigma)}{2}, i\in [N].
+\end{align}
+Clearly, $\sigma$ is local optimal if all $Z_i$ are non-negative. We want to compute the covariance matrix $C_{i,j}$ of the random vector
+\begin{align}
+    Z = (Z_1,Z_2,\cdots,Z_n)^{T}.
+\end{align}
+A quick computation shows that $C_{ii} = \text{deg}(i)+1$, $C_{ij}=1$ for $(i,j) \in E$ and $C_{ij}=0$ for $(i,j) \notin E$. Note that the covariance matrix does not depend on the specific choice of $\sigma$. In turn, the probability of local optimality
+\begin{align} \label{lo_prob}
+    &\p(\sigma \text{ is local optimal}) = \p(Z_i \geq 0 \text{ for each } i \in [n]) \nonumber \\
+    =& \frac{1}{(2\pi)^{N/2}\det(C)^{1/2}}\int_{[0,\infty)^N} \exp\left(\frac{-x^{T}C^{-1}x}{2}\right)dx.
+\end{align}
+Therefore, the probability itself does not depend on the choice of $\sigma$, but only depend on the covariance matrix, which in turn only depends on the graph itself.
+
+% \section{Setup}
+% Let $d$-regular tree be defined as a tree graph such that all vertices have degree $d$ except the leaves. Consider $d$-regular tree with $N$ vertices and let $W = (W_{i,j})_{N\times N}$ be a symmetric matrix with zero diagonal such that $(W_{i,j})_{1 \leq i < j \leq n}$ are independent standard normal random variables. Moreover, denote the vertices in the $d$-regular tree with elements in set $[N]=\{1,2,\cdots,N\}$. The spin glass on $d-regular$ tree is defined by a random Hamiltonian $H:\{-1,+1\}^n \to \mathbb{R}$. For a configuration $\sigma = (\sigma_i)^n_{i=1} \in \{-1,+1\}^n$, we can define $H(\sigma)$ as
+% \begin{align}
+%     H(\sigma) := \sum_{\substack{i,j \in [N]  \\ i \backsim j }} \sigma_i \sigma_j W_{ij},
+% \end{align}
+% where $i \backsim j$ means vertex $i$ is connected to vertex $j$ in the tree. \\ \\
+% We want to replicate the similar process conducted in \cite{SK_optimal} and compute the asymptotic probability of local optima. However, $d$ regular tree can be very messy as the number of generations of offpsrings originated from each point can be different. To resolve this issue, we divide the project into two parts. First, we call a $d$-regular tree \textit{nice} if the graph distance from the root to each leaf is equal, i.e., the graph's "layers" are complete, with $k$-th layer having $n^k$ points. We try to repeat the process on a nice $d$-regular tree. Then, we show that computation with only nice tress will suffice. \gy{I had this conversation with Si during the summer while I walked her dog. I do not think this step is immediate or trivial. Maybe I missed something.}
+% \section{Covariance Structure of the Nice Tree}
+% Consider the nice $d$-regular tree $T$ with $n+1$ "layers". That is, the distance from the root to each leaf is $n$. In this case, $T$ has $N = 1 + d + \cdots + d^n$ vertices. Given $i \in [N]$, let $\sigma^{(i)}$ be defined as in \cite{SK_optimal}, consider
+% \begin{align}
+%     Z_i(\sigma) := \frac{H(\sigma^{(i)})-H(\sigma)}{2}, i\in [N].
+% \end{align}
+% We want to compute the covariance matrix $C_{i,j}$ of the random vector
+% \begin{align}
+%     Z = (Z_1,Z_2,\cdots,Z_n)^{T}.
+% \end{align}
+% Unlike the SK model, not all $Z_i$ have the same shape. Denote $a(i)$ the ancestor of vertex $i$ (except the root) and $D(i)$ the set of offsprings of $i$. There are three types of points:\\
+% (1). The root $i=1$. In this case, flipping the root only affects the $d$ offsprings of it. We have
+% \begin{align}
+%     Z_1 = -\sum_{j=2}^{d+1} \sigma_1 \sigma_j W_{1j},
+% \end{align}
+% and immediately, $C_{1,1} = d$.
+% (2). The $d^n$ leaves. In this case, only the ancestor of the chosen leaf gets affected. We have for $N-d^n < i \leq N$,
+% \begin{align}
+%     Z_i = -\sigma_i \sigma_{a(i)} W_{i,a(i)}, C_{i,i} = d+1.
+% \end{align}
+% (3). Every other point in between. In this case, both the ancestor and the offsprings get affected. We have
+% \begin{align}
+%     Z_i = -\sigma_i \sigma_{a(i)} W_{i,a(i)} - \sum_{j \in D(i)} \sigma_i \sigma_j W_{ij}, C_{i,i} = 1.
+% \end{align}
+% \gy{ask Tuca about the labeling problem.}
+\subsection{Extend the Results}
+Thanks to the expression in $(\ref{lo_prob})$, we have a general expression for local optima probability for any spin glass models. Naturally, we will want to see if the same computation can be done for other models, like the famous Edward-Anderson Model, where the graph associated was the $d$-dimensional hypercube. On the other hand, we are also interested in expanding the topological landscape of the local-optima: by flipping more than one coordinate. The original local optima problem can be seen as insights to the energy landscape of the specific spin glass model we are investigating. Tinkering with more than one coordinates at a time may yield interesting results, especially when the number of flipped coordinates $m$ diverges with the total number of points $N$.
+
+However, the two routes in front of us are both HIGHLY nontrivial. Though we are happy to see that the probability of local optimality does not depend on our choice of configuration $\sigma$, but the covariance matrix $C$ varies from model to model, and with the number of flips. The result in \cite{SK_optimal} depends completely on the fact the inverse of covariance matrix $C$ of the SK model can be explicitly computed. Change the setting, and we need to start over from $(\ref{lo_prob})$ completely. And it is well known that one should never expect that the inverses of matrices can be obtained easily, or, which is extremely sad to say, remotely obtainable.
+
+However, not all hope has been lost. We can construct matrices by their inverses then use them to approximate certain models' covariance matrices. This will serve as our starting point, as discussed in the section below.
+\subsection{Computation for \texorpdfstring{$d$}--regular graph}
+We want to compute the asymptotic probability of local optimality of $d-regular$ graphs with $n$ vertices. A $d$-regular graph is a graph such that all vertex has a fixed degree $d$. The direct computation of the inverse of the covariance matrix $C$ can be difficult. Therefore, we need to take a detour.
+
+For $v \in \mathbb{R}^N$ we set $m(v) = \frac{1}{N} \sum_{i=1}^N v_i$. For $\alpha \in [-d,d]$. Introduce $C_d^{\alpha} \in M_N(\mathbb{R})$ to be such that:
+\begin{align} \label{cda_construction}
+    \begin{cases}
+    C_d^{\alpha}1&=(2d)1 \\
+    C_d^{\alpha}v&=(d+a)v, \text{ for } m(v)=0,
+    \end{cases}  
+\end{align}
+where we use 1 in matrix multiplication as vectors will all entries 1 and compatible dimensions. We first attempt to estimate the asymptotics of the following integral:
+\begin{align} \label{cda_integral}
+    \p_{N,d,\alpha} = \frac{1}{(2\pi)^{N/2}}\int_{[0,\infty)^N} \exp\left(\frac{-x^{T}(C_d^{\alpha})^{-1}x}{2}\right)dx.
+\end{align}
+Multiply $(C_d^{\alpha})^{-1}$ on both sides of (\ref{cda_construction}) and we have
+\begin{align} \label{cda_inverse}
+    \begin{cases}
+    (C_d^{\alpha})^{-1}1&=(2d)^{-1}1 \\
+    (C_d^{\alpha})^{-1}v&=(d+a)^{-1}v, \text{ for } m(v)=0.
+    \end{cases}  
+\end{align}
+Therefore, by writing $x = m(x)1+(x-m(x))$ and \ref{cda_inverse},
+\begin{align}
+    &-x^{T}(C_d^{\alpha})^{-1}x = -x^{T}\left((C_d^{\alpha})^{-1}(m(x)1+(x-m(x)))\right) \nonumber \\
+    =&-x^{T}\left(\frac{1}{2d}\frac{m(x)}{N}1+\frac{1}{d+\alpha}\left(x-\frac{m(x)}{N}1\right)\right) \nonumber \\
+    =&-x^T(d+\alpha)^{-1}x-x^T1(1/2d-1/(d+\alpha))1^Tx.
+\end{align}
+With the above being said, (\ref{cda_integral}) becomes a much more friendly integral to deal with:
+\begin{align}
+    \p_{N,d,\alpha}=\frac{1}{(2\pi)^{N/2}}\int_{[0,\infty)^N} \exp\left(\frac{-x^T(d+\alpha)^{-1}x}{2}-\frac{x^T1(1/2d-1/(d+\alpha))1^Tx}{2} \right) dx.
+\end{align}
+We are now in a good shape to use Varadhan's Lemma to compute the asymptotics. In fact, the following holds
+\begin{theorem}
+    Let $I_t(x)$ be the rate function of the Half-Gaussian random variable. For any $\alpha \in [-d,d]$,
+    \begin{align}
+        \lim_{N \to \infty} \log(\p_{N,d,\alpha}) = \sup_{x \geq (2/\pi)^{1/2}} \left(\left(\frac{1}{2}+\frac{\alpha}{2d}\right)\frac{x^2}{2}-I_t(x) - \log(2) + \frac{1}{2}\log(d+\alpha)\right)
+    \end{align}
+\end{theorem}
+\begin{proof}
+    asdasdasd
+\end{proof}
+\subsection{The Problem of \texorpdfstring{$m$}--Flips}
+Instead of flipping one coordinate, what will happen if we flip $m$ coordinates? 
+\subsubsection{2-flip Covariance Structure}
+We start with the simple case and aim to compute the covariance matrix. Let $\sigma^{(a,b)}$ be the configuration with $a$th and $b$th coordinates flipped. We can in turn define 
+\begin{align}
+    Z_{a,b}=\frac{H(\sigma^{(a,b)})-H(\sigma)}{2}
+\end{align}
+and so forth for $m$-flip. In 2-flip case, the covariance matrix has dimension ${N \choose 2}$. Let $(s_1,s_2)$ and $(t_1,t_2)$ be two pairs of coordinates flipped. We divide our computation into several cases.
+\textbf{Same Flip ($s_1 = t_1=a, s_2 = t_2=b$)} In this case, we have
+\begin{align}
+    Z_{a,b} = \underbrace{- \sum_{j \neq a, j \neq b} \sigma_a \sigma_j W_{a,j}}_\text{I} - \underbrace{\sum_{j \neq a, j \neq b} \sigma_j \sigma_b W_{j,b}}_\text{II}
+\end{align}
+First, note that each summation index cannot either be $a$ or $b$ because not only the diagonal term is not affected, the term $\sigma_{a}\sigma_{b}W_{a,b}$ is also not affected as both coordinates are flipped. Given that and when we are computing covariance, the cross term consist of part I and part II will vanish because of index restriction. Moreover, the covariance of I and itself is obviously $N-2$. We have in this case,
+\begin{align}
+    \e(Z_{a,b}^2) = 2(N-2).
+\end{align}
+\textbf{One Coordinate Overlap} Now suppose $s_1=t_1=a$ and $s_2,t_2$ are distinct and not taking value $a$. We compute
+\begin{align}
+    &Z_{a,s_2} = \underbrace{- \sum_{j \neq a, j \neq s_2} \sigma_a \sigma_j W_{a,j}}_\text{I} - \underbrace{\sum_{j \neq a, j \neq s_2} \sigma_j \sigma_{s_2} W_{j,s_2}}_\text{II} \\
+    &Z_{a,t_2} = \underbrace{- \sum_{j \neq a, j \neq t_2} \sigma_a \sigma_j W_{a,j}}_\text{III} - \underbrace{\sum_{j \neq a, j \neq t_2} \sigma_j \sigma_{t_2} W_{j,t_2}}_\text{IV}
+\end{align}
+By index restriction we know that $\e(\text{I} \cdot \text{IV}) = \e(\text{II} \cdot \text{III}) = 0$. And $\e(\text{II} \cdot \text{IV}) = 1$ because the only pair of configuration that appears in both summation is $\sigma_{t_2} \sigma_{s_2} W_{t_2,s_2}$. Hence, we have
+\begin{align}
+    \e(Z_{a,s_2} \cdot Z_{a,t_2}) =& \e\left(\sum_{j \neq a, j \neq s_2} \sigma_a \sigma_j W_{a,j} \cdot \sum_{j \neq a, j \neq t_2} \sigma_a \sigma_j W_{a,j}\right) + 1 \nonumber \\
+    =& (N-3) + 1 = N - 2.
+\end{align}
+\textbf{No Coordinate Overlap} The last case is that $s_1,s_2,t_1,t_2$ are all distinct, we first write
+\begin{align}
+    &Z_{s_1,s_2} = \underbrace{- \sum_{j \neq s_1, j \neq s_2} \sigma_{s_1} \sigma_j W_{s_1,j}}_\text{I} - \underbrace{\sum_{j \neq as_1, j \neq s_2} \sigma_j \sigma_{s_2} W_{j,s_2}}_\text{II} \\
+    &Z_{t_1,t_2} = \underbrace{- \sum_{j \neq t_1, j \neq t_2} \sigma_{t_1} \sigma_j W_{t_1,j}}_\text{III} - \underbrace{\sum_{j \neq t_1, j \neq t_2} \sigma_j \sigma_{t_2} W_{j,t_2}}_\text{IV}
+\end{align}
+In this case all four cross terms appeared in the computation will be the same, so we only need to compute one. It is easy to see that $\e(\text{I} \cdot \text{III}) = 1$ as the only term appears in both I and III is $\sigma_{s_1} \sigma{t_1} W_{s_1,t_1}$. Hence, we obtain
+\begin{align}
+    \e(Z_{s_1,s_2} \cdot Z_{t_1,t_2}) = 4.
+\end{align}
+\subsubsection{General Formula for $Z$}
+Of course the computation of 2-flip is not enough for us to get the overall picture of the general covariance structure. However, it would be beneficial to obtain a general and explicit formula for $Z$, which will help us tackle the big final problem in the long run.
+Let us consider the upper triangular matrix generated by the product of all $\sigma_i$, $1 \leq i \leq N$, excluding the diagonal. The Hamiltonian of the SK model is the summation of the elements (times the corresponding i.i.d. Gaussian. We omit the Gaussians for conciseness.) in this matrix.
+\begin{equation}
+    \left(\begin{array}{cccc}
+      0  & \sigma_1 \sigma_2  & \cdots & \sigma_1 \sigma_N \\
+      0  & 0  & \sigma_2 \sigma_3 & \sigma_2 \sigma_N \\
+      \vdots  & \vdots   & \vdots & \vdots \\
+      0  & \cdots   & 0  & \vdots \\
+      0  &  \cdots  & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+When we flip a coordinate, say $s_1$-th coordinate, part of the products get a minus sign, we mark those entries as below:
+\begin{equation}
+    \left(\begin{array}{ccccccc}
+      0     &\sigma_1 \sigma_2  &\cdots            &\cdots &\y -\sigma_1 \sigma_{s_1}       & \cdots   & \sigma_1 \sigma_N \\
+      0     &0                  &\sigma_2 \sigma_3 &\cdots &\y -\sigma_2 \sigma_{s_1} & \cdots & \sigma_2 \sigma_N \\
+      \vdots&\vdots             &\vdots            &\vdots &\y \vdots               & \vdots & \vdots\\
+      0     &\cdots             &\cdots            &0      &\y -\sigma_{s_1} \sigma_{s_1+1}& \y \cdots & \y -\sigma_{s_1} \sigma_{N} \\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      0     & 0                 &\cdots            &\cdots & \cdots & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+To make life easier, we can create a symmetric matrix from this upper triangular matrix and the flipped entries will just be the $s_1$-th row.
+\begin{equation}
+    \left(\begin{array}{ccccccc}
+      0     &\sigma_1 \sigma_2  &\cdots            &\cdots & -\sigma_1 \sigma_{s_1}       & \cdots   & \sigma_1 \sigma_N \\
+      \sigma_2 \sigma_1      &0                  &\sigma_2 \sigma_3 &\cdots & -\sigma_2 \sigma_{s_1} & \cdots & \sigma_2 \sigma_N \\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots               & \vdots & \vdots\\
+      \y -\sigma_{s_1} \sigma_1 & \y \cdots        &\y \cdots &\y0 &\y -\sigma_{s_1} \sigma_{s_1+1}& \y \cdots & \y -\sigma_{s_1} \sigma_{N} \\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots & \vdots & \vdots & \vdots\\
+      \cdots&\cdots             &\cdots            &\cdots & \cdots & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+When we flip another coordinate, say $s_2$, the $s_2$-th column of the highlighted row gets skipped because obviously flipping both $\sigma$ is the same as not flipping. We mark the skipped entry as red. (We can see diagonal as skipped for consistency and intuition.)
+\begin{equation}
+    \left(\begin{array}{ccccccccc}
+      0     &\sigma_1 \sigma_2  &\cdots             & -\sigma_1 \sigma_{s_2} &\cdots &\cdots& \sigma_1 \sigma_{s_1}       & \cdots   & \sigma_1 \sigma_N \\
+      \sigma_2 \sigma_1     &0                  &\sigma_2 \sigma_3 &\cdots & \cdots &\cdots& \sigma_2 \sigma_{s_1} & \cdots & \sigma_2 \sigma_N \\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots &\cdots &\vdots               & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots&\cdots& \vdots & \vdots & \vdots\\
+      \y -\sigma_{s_1} \sigma_1 & \y \cdots        &\y \cdots &\x \sigma_1 \sigma_{s_2} &\y \cdots&\x 0 &\y -\sigma_{s_1} \sigma_{s_1+1}& \y \cdots & \y -\sigma_{s_1} \sigma_{N} \\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots&\cdots& \vdots & \vdots & \vdots\\
+      \vdots&\vdots             &\vdots            &\vdots &\cdots&\cdots& \vdots & \vdots & \vdots\\
+      \cdots&\cdots             &\cdots            &\cdots &\cdots&\cdots& \cdots & \cdots &  0\\
+    \end{array}\right)
+\end{equation}
+Then in the formula of $Z$, the summation corresponding to the flipped $s_1$-th coordinate will be the summation of the $s_1$-th row without the $s_2$-th and $s_1$-th term, which includes the zero diagonal. More generally, if we flip $m$ coordinates ${s_1,s_2,\cdots,s_m}$, the summation corresponding to the flipped $s_1$-th coordinate be the summation of the $s_1$-th row without the terms indexed by ${s_1,s_2,\cdots,s_m}$. This means
+\begin{align} \label{general_z}
+    Z_{s_1,s_2,\cdots,s_m} &= \frac{H(\sigma^{(s_1,s_2,\cdots,s_m)})-H(\sigma)}{2} \nonumber \\
+    &= -\sum_{i \in \{1,2,\cdots,m\}} \sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j}.
+\end{align}
+\subsubsection{3-flip Covariance Structure}
+With the establishment of (\ref{general_z}) we can carry out the computation of 3-flip more easily. Suppose the $s_1,s_2$ and $s_3$-th coordinates are flipped. We can write
+\begin{align}
+    Z_{s_1,s_2,s_3} = \underbrace{- \sum_{j \neq s_1,s_2,s_3} \sigma_{s_1} \sigma_j W_{s_1,j}}_\text{I} \underbrace{- \sum_{j \neq s_1,s_2,s_3} \sigma_{s_2} \sigma_j W_{s_2,j}}_\text{II} \underbrace{- \sum_{j \neq s_1,s_2,s_3} \sigma_{s_3} \sigma_j W_{s_3,j}}_\text{III}.
+\end{align}
+Now let $t_1,t_2,t_3$ be another set of flipped coordinates and then
+\begin{align}
+    Z_{t_1,t_2,t_3} = \underbrace{- \sum_{j \neq t_1,t_2,t_3} \sigma_{t_1} \sigma_j W_{t_1,j}}_\text{IV} \underbrace{- \sum_{j \neq t_1,t_2,t_3} \sigma_{t_2} \sigma_j W_{t_2,j}}_\text{V} \underbrace{- \sum_{j \neq t_1,t_2,t_3} \sigma_{t_3} \sigma_j W_{t_3,j}}_\text{VI}.
+\end{align}
+Again we can compute the covariance structure by dividing the computation into several cases based on how many coordinates are the same.\\
+\textbf{All Coordinates Match} In this case we have $s_i = t_i$, $i=1,2,3$. We can easily get
+\begin{align}
+    \e(Z_{s_1,s_2,s_3}^2) = 3(N-3).
+\end{align}
+This now shows a pattern we can use for $m$-flip!\\
+\textbf{Two Coordinates Match} In this case we let $s_1 = t_1 =a$, $s_2 = t_2 =b$, and all other coordinates are distinct and different from $a,b$. For convenience, we rewrite
+\begin{align}
+    &Z_{a,b,s_3} = \underbrace{- \sum_{j \neq a,b,s_3} \sigma_{a} \sigma_j W_{a,j}}_\text{I} \underbrace{- \sum_{j \neq a,b,s_3} \sigma_{b} \sigma_j W_{b,j}}_\text{II} \underbrace{- \sum_{j \neq a,b,s_3} \sigma_{s_3} \sigma_j W_{s_3,j}}_\text{III}, \\
+    &Z_{a,b,t_3} = \underbrace{- \sum_{j \neq a,b,t_3} \sigma_{a} \sigma_j W_{a,j}}_\text{IV} \underbrace{- \sum_{j \neq a,b,t_3} \sigma_{b} \sigma_j W_{b,j}}_\text{V} \underbrace{- \sum_{j \neq a,b,t_3} \sigma_{t_3} \sigma_j W_{t_3,j}}_\text{VI}.
+\end{align}
+Among all the cross terms, $\e(\text{I} \cdot \text{V})=\e(\text{I} \cdot \text{VI}) = \e(\text{II} \cdot \text{IV}) = \e(\text{II} \cdot \text{VI}) = \e(\text{III} \cdot \text{IV}) = \e(\text{III} \cdot \text{V}) = 0$ because of index restrictions. For the rest terms, we have $\e(\text{I} \cdot \text{IV}) = \e(\text{II} \cdot \text{V}) = N-4$, $\e(\text{III} \cdot \text{VI}) = 1$. Summing everything together yields us
+\begin{align}
+    \e(Z_{a,b,s_3} \cdot Z_{a,b,t_3}) = 2(N-4)+1.
+\end{align}
+Another good pattern we can use.\\
+\textbf{One Coordinate Matches} In this case we let $s_1 = t_1 =a$, and all other coordinates are distinct and different from $a$. Similar as the last case we write
+\begin{align}
+    &Z_{a,s_2,s_3} = \underbrace{- \sum_{j \neq a,s_2,s_3} \sigma_{a} \sigma_j W_{a,j}}_\text{I} \underbrace{- \sum_{j \neq a,s_2,s_3} \sigma_{s_2} \sigma_j W_{s_2,j}}_\text{II} \underbrace{- \sum_{j \neq a,s_2,s_3} \sigma_{s_3} \sigma_j W_{s_3,j}}_\text{III}, \\
+    &Z_{a,t_2,t_3} = \underbrace{- \sum_{j \neq a,t_2,t_3} \sigma_{a} \sigma_j W_{a,j}}_\text{IV} \underbrace{- \sum_{j \neq a,t_2,t_3} \sigma_{t_2} \sigma_j W_{t_2,j}}_\text{V} \underbrace{- \sum_{j \neq a,t_2,t_3} \sigma_{t_3} \sigma_j W_{t_3,j}}_\text{VI}.
+\end{align}
+Simple computation gives us $\e(\text{I} \cdot \text{V})=\e(\text{I} \cdot \text{VI}) = \e(\text{II} \cdot \text{IV})  = \e(\text{III} \cdot \text{IV}) = 0$, $\e(\text{II} \cdot \text{V}) =\e(\text{II} \cdot \text{VI})= \e(\text{III} \cdot \text{V}) = \e(\text{III} \cdot \text{VI}) = 1$, $\e(\text{I} \cdot \text{IV}) = N-5$. Therefore, we have the covariance
+\begin{align}
+    \e(Z_{a,s_2,s_3} \cdot Z_{a,t_2,t_3}) = N-1.
+\end{align}
+\textbf{No Coordinates Match} All coordinates are distinct. This is the easiest case. Each cross term has covariance 1, and we have 9 in total, thus
+\begin{align}
+    \e(Z_{s_1,s_2,s_3} \cdot Z_{t_1,t_2,t_3}) = 9.
+\end{align}
+\subsubsection{m-flip Covariance Structure}
+The previous computation has shown some good patterns that inspire us to get the covariance structure of m-flip. Let $s_1, \cdots, s_m$ and $t_1, \cdots, t_m$ be two sets of flipped coordinates. Recall (\ref{general_z}), we have the formulas for the corresponding $Z$:
+\begin{align}
+    Z_{s_1,s_2,\cdots,s_m} &= -\sum_{i \in \{1,2,\cdots,m\}} \sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j}. \\
+    Z_{t_1,t_2,\cdots,t_m} &= -\sum_{i \in \{1,2,\cdots,m\}} \sum_{j \neq t_1,t_2,\cdots,t_m} \sigma_{t_i} \sigma_j W_{t_i,j}.
+\end{align}
+We divide the computation into $m+1$ cases, where each case $\{s_i\}_{i \leq m}$ and $\{t_i\}_{i \leq m}$ have $l$ number of same coordinates, $l = 0, \cdots, m$. 
+
+\textbf{Case $l = 0$ (All coordinates Different)} In this case $\{s_i\}_{i \leq m}$ and $\{t_i\}_{i \leq m}$ are all distinct. Consider any cross term appeared in the summation
+\begin{align}
+    \sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j} \cdot \sum_{p \neq t_1,t_2,\cdots,t_m} \sigma_{t_k} \sigma_p W_{t_k,p}.
+\end{align}
+$\sigma_{s_i} \sigma_j W_{s_i,j} \cdot \sigma_{t_k} \sigma_p W_{t_k,p}$ is only non-vanishing under expectation if $j = t_k$ and $p = s_i$. This is possible because all $s_i$ and $t_i$ are distinct. We have
+\begin{align}
+    \e \left(\sum_{j \neq s_1,s_2,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j} \cdot \sum_{p \neq t_1,t_2,\cdots,t_m} \sigma_{t_k} \sigma_p W_{t_k,p}\right) = 1.
+\end{align}
+There are $m^2$ such cross terms, and we arrive at
+\begin{align}
+    \e(Z_{s_1,s_2,\cdots,s_m} \cdot Z_{t_1,t_2,\cdots,t_m}) = m^2.
+\end{align}
+\textbf{Case $1\leq l \leq m$ ($l$ Same Coordinates)} Without loss of generality, assume $s_i=t_i=a_i$ for $i = 1, \cdots, l$. We divide the formula of $Z$ into two parts.
+\begin{align}
+        Z_{s_1,s_2,\cdots,s_m} &= \underbrace{-\sum_{i \in \{1,\cdots,l\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,s_m} \sigma_{a_i} \sigma_j W_{a_i,j}}_\text{I} \underbrace{-\sum_{i \in \{l+1,\cdots,m\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,s_m} \sigma_{s_i} \sigma_j W_{s_i,j}}_\text{II}. \\
+        Z_{t_1,t_2,\cdots,t_m} &= \underbrace{-\sum_{i \in \{1,\cdots,l\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,t_m} \sigma_{a_i} \sigma_j W_{a_i,j}}_\text{III} \underbrace{-\sum_{i \in \{l+1,\cdots,m\}} \sum_{j \neq a_1,\cdots,a_l,\cdots,t_m} \sigma_{t_i} \sigma_j W_{t_i,j}}_\text{IV}.
+\end{align}
+Next we consider the cross terms based on which group the components come from.
+
+For cross terms from group I and group III, there are multiple non-vanishing products (under expectation). We have $\e \left((\sigma_{a_i} \sigma_j W_{a_i,j})^2 \right) = 1$ for $j \neq a_1,\cdots,a_l,\cdots,s_m, t_{l+1}, \cdots t_m$. There are $N - l - 2(m-l)$ such products, which means $\e(\text{I} \cdot \text{III}) = N -2m +l$.
+
+For cross terms from group I and group IV, all products vanish under expectation. Indeed, consider $\sigma_{a_i} \sigma_j W_{a_i,j} \cdot \sigma_{t_k} \sigma_p W_{t_k,p}$. For this product to have non-vanishing expectation, we must have $p = a_i$ and $j = t_k$. This is not possible because $p \neq a_i$ by the index restrictions.
+
+Cross terms from group II and group III also vanish for the same reason just above.
+
+For cross terms from group II and group IV, each cross term has expectation 1. This can be obtained using a similar argument as the one in the case where all coordinates are different.
+
+Finally, there are $l^2$ cross terms from group I and group III, and there are $(m-l)^2$ cross terms from group II and group IV. Summing everything together gives us
+\begin{align}
+    \e(Z_{s_1,s_2,\cdots,s_m} \cdot Z_{t_1,t_2,\cdots,t_m}) = l^2(N-2m+l) + (m-l)^2.
+\end{align}
+
+With such information in mind. We are able to know exactly what the covariance matrix looks like. The covariance matrix is a $\binom{N}{m}$-by-$\binom{N}{m}$ matrix. For any fixed set of flipped coordinates $(s_1,\cdots,s_m)$, there are $\binom{m}{l}\binom{N-m}{m-l}$ number of coordinates that share $l$ same coordinates with it. (And the counts $\binom{m}{l}\binom{N-m}{m-l}$ sum up to $\binom{N}{m}$ by Vandermonde's identity, quick sanity check.) Let $C$ be the covariance matrix of $Z$'s. $C$ satisfies the following:
+
+1. $C$'s diagonal entries are all $m^2(N-m)$. \gy{For 1-flip we have $N-1$. Sanity Check passed.}
+
+2. Given an arbitrary indexing of all sets of $m$-flip coordinates, there are $\binom{m}{l}\binom{N-m}{m-l}$ number of entries with value $l^2(N-2m+l) + (m-l)^2$ each row, $0 \leq l \leq m-1$.
+\subsubsection{The Trouble of Matrix Inverse: An Overview}
+This section is dedicated to provide a self-contained and intuitive description of the matrix inverse problem that emerges from the grand scheme. This way Tuca can help with the problem without reading through all the previous text.
+
+Suppose we are dealing with Hamiltonian of $N$ summands and $m$-flips. The covariance matrix will be a $\binom{N}{m}$-by-$\binom{N}{m}$ symmetric matrix, with the rows and columns indexed by subsets containing $m$ positive integers selected from $\{1,2,\cdots,N\}$. 
+
+This subset indicates that the corresponding $Z$ is generated by flipping the coordinates indexed by the numbers in the subset. Given two set of flipped coordinates $(s_1,\cdots,s_m)$ and $(t_1,\cdots,t_m)$, the corresponding covariance only depends on $N$, $m$ and the number of elements in $\{s_i\}_{i \leq m} \cap \{t_i\}_{i \leq m}$, namely the number of same entries (without order) in both set of coordinates. 
+
+In particular, if $|\{s_i\}_{i \leq m} \cap \{t_i\}_{i \leq m}| = l$, the covariance is $l^2(N-2m+l) + (m-l)^2$.
+
+Now here is the problem, Given $N$ and $m$, we are able to construct a covariance matrix $C$. Since the order of random variables do not affect the joint distribution, we can arrange the order of subsets as we wish. The goal, is to find a good arrangement such that we can compute $C^{-1}$, or $x^T C^{-1} x$ for $x \in \mathbb{R}^{\binom{N}{m}}$.
+\subsection{The Problem of Edward-Anderson Model}
+I wish there is some magic that automatically finishes this section then I get my degree tomorrow. And plus I can probably gain some fame just by solving this one.
+\begin{thebibliography}{99}
+
+\bibitem{SK_optimal}
+L.A. Berry, L. Devroye, G. Lugosi, R.I. Oliveira. \textit{Local optima of the Sherrington-Kirkpatrick Hamiltonian}. Journal of Mathematical Physics. Volume 60, Issue 4, (2019).
+
+\bibitem{Montanari} M. Mezard, A Montanari. \textit{Information, Physics, and Computation}. Oxford Graduate Texts. Oxford University Press. (2009).
+
+\bibitem{AEoI} N. Bleistein, R.A. Handelsman. \textit{Asymptotic Expansion of Integrals}. Dover Publication Inc. (1975).
+
+\bibitem{MillerMatrix} K. S. Miller. \textit{On the Inverse of the Sum of Matrices}. Mathematics Magazine, Mar 1981, Vol. 54, No. 2, pp. 67-72. Taylor \& Francis, Ltd. on behalf of the Mathematical Association of America. (1981).
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,164 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+
+
+\begin{document}
+In this short document we try to give a self-contained introduction to the problem. We are interested in the asymptotics of the following integral
+\begin{align} \label{target}
+    \frac{1}{n}\log \int_{[0,\infty)^n} \exp \left(-x^T M_n x/2\right)dx.
+\end{align}
+Here, $M_n$ is an $n$-by-$n$ symmetric, positive-definite matrix with equal diagonal entries. Moreover, in the expansion of quadratic form $x^T M_n x$, each $x_i$ appears exactly same number of times in cross terms besides diagonal terms for all $n$. For example, if $n=4$, then $x_1x_2+x_3x_4$ and $x_1x_3+x_2x_4$ are quadratic forms that satisfy the condition.
+
+
+$M_n$ has some additional properties that might aid us in the computation. We will then give a brief description of the overall scheme of the problem, why do we care about this integral, and what additional properties does the matrix $M_n$ have. 
+
+
+The original problem starts with the familiar SK model $H:\{-1,+1\}^N \to \mathbb{R}$:
+\begin{align}
+    H(\sigma) := \sum_{1 \leq i < j \leq N} \sigma_i \sigma_j W_{ij},
+\end{align}
+where $W = (W_{i,j})_{N\times N}$ is a symmetric matrix with zero diagonal such that $(W_{i,j})_{1 \leq i < j \leq N}$ are independent standard normal Gaussians. (We omit the normalization factor because it won't matter.) The energy landscape problem of spin glass models has been a vital topic of probability and statistics. In our case, we are particularly interested in the ``potential energy well" of the model, a.k.a. the local optimum. For a configuration $\sigma$, we are at a local optimum if flipping any coordinates will cause the energy $H$ to increase. Intuitive speaking, the energy increases whenever we take a single step away from the original configuration $\sigma$. The ``potential energy well" has radius one.
+
+Clearly, the difference between the original energy and the energy after taking 1 step is a Gaussian random variable. For any $N$, there are $N$ possible steps we can take. The configuration is a local optimum if and only all the differences are greater than zero. This gives us $N$ Gaussian variables. Turns out that the covariance matrix depends only on $N$ and its inverse can be written as an expression of $\norm{x}_1$ and $\norm{x}_2$. The probability of the 1-step local optimum's can and has already been computed. This is the integral in (\ref{target}). $M$ is the inverse of the covariance matrix. The integral is missing the determinant of the covariance matrix in its denominator, but that has been taken care of.
+
+To generalize the result, we want to compute the radius $m$ local optimum for any fixed positive integer $m$. Instead of taking one step, now we are allowed to take $m$ steps. We get a $\binom{N}{m}$-by-$\binom{N}{m}$ covariance matrix and that makes the computation of (\ref{target}) much more difficult (we have $n = \binom{N}{m}$). The good news is that we can compute the inverse of the covariance matrix, a.k.a. the matrix $M_n$. Since $M_n$ has dimension $\binom{N}{m}$-by-$\binom{N}{m}$, which corresponds to the $m$ coordinates we flip (or the $m$ steps we take), its row and column can be indexed by subsets of $[N]:= \{1,2,\cdots,N\}$ with cardinality $m$. (Such indexing also has combinatorical meaning by our discussion.)
+
+We have already shown that both the covariance matrix $C_n$ and its inverse $M_n$ (the matrix in the integral) satisfy the following:
+
+Let $S$ and $T$ be two given $m$-subsets of $[N]$, $|S \cap T|=l$. The entry at row $S$ and column $T$ only depend on $m$(given and fixed), $N$, and $l$.
+
+Since $0 \leq l \leq m$, $M_n$ only has at most $m+1$ distinct values for its entries. In its quadratic form, every $x_i$ participates equally. We try to make a breakthrough by computing the case where $m=2$. Let $\{a,b\}$ and $\{c,d\}$ be two 2-subsets of $[N]$. $\{a,b\} \cap \{c,d\} = l$ and $l$ can only be 0,1 or 2. ($l=2$ corresponds to the diagonal terms.) $n = \binom{N}{2}$ and for $N$ very large, the matrix $M_n$ asymptotically satisfies the following:
+
+1. For $N$ very large, $M_n$'s diagonal terms are asymptotically equal to $\frac{1}{4}$.
+
+2. If $\{a,b\} \cap \{c,d\} = 1$, the entry at row $\{a,b\}$ and column $\{c,d\}$ is equal to $-\frac{1}{4N}$.
+
+3. If $\{a,b\} \cap \{c,d\} = 0$, the entry at row $\{a,b\}$ and column $\{c,d\}$ is equal to $\frac{1}{2N^2}$.
+
+(\ref{target}) can thus be rewritten as:
+\begin{align}
+    \binom{N}{2}^{-1}\log \int_{[0,\infty)^{\binom{N}{2}}} \exp \left(-x^T M_n x/2\right)dx.
+\end{align}
+It would be of great help that we can get a large deviation principle established for the exponential quadratic form. So far we are not sure what kind tools can be used to compute such integral. The quadratic form is not the sum of i.i.d. random variables and not a stationary process. Most tools we have for large deviations are not applicable here, making this integral the biggest roadblock of the problem.
+\end{document}

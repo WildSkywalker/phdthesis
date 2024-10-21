@@ -1,0 +1,173 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+
+
+
+\begin{document}
+
+Hello Tuca. This is a short document that describes the current state of the problem. What I have checked to be true, and what I am currently stuck on. Hope this can give you some useful details that you can use to give me some guidance, while minimizing your hassle and reading time.
+
+\subsection*{What we already know}
+1. We know the covariance structure of the $m$-flip. To be more precise, if we denote $S$ the index set of flipped coordinates and $|S|= m$, and $Z_S$ the different between the original Hamiltonian and the Hamiltonian evaluated at the flipped coordinates, then the covariance of $Z_S$ and $Z_{S'}$ depends on solely the number of shared indices of $S$ and $S'$, a.k.a. $|S \bigcap S'| =: l$. Moreover,
+\begin{align}
+    \e(Z_S Z_{S'}) = l(N-2m+l)+(m-l)^2.
+\end{align}
+
+2. Let $W_n$ be a multivariate Gaussian with $n$ i.i.d. standard normal entry. We know every well about the rate function of $\norm{W_n}_1$. Let the rate function be $\mu^*(x)$. We have that $x^2/2 - \mu^*(x)\to \log 2$ for $x$ large, as well as some other properties. For example, the function $x^2/a - \mu^*(x)$ for $a \geq 2$ is strictly concave. If $a > 2$, it has a unique global maximum at some $x \geq \sqrt{2/\pi}$.
+
+3.  We know how to deal with the following expectation
+\begin{align} \label{target_expectation}
+    \e \left[ \exp \left(\frac{\norm{X_n}_1^2}{an}\right)\right] = \e \left[ \exp \left(n \cdot \left(\frac{\norm{X_n}_1}{n}\right)^2 \cdot a^{-1}\right)\right],
+\end{align}
+where $a$ is a constant. If $a>2$, then we then there exists some $\alpha^* < \log 2$ such that
+\begin{align}
+    \lim_{n \to \infty} \frac{1}{n} \log \e \left[ \exp \left(\frac{\norm{X_n}_1^2}{an}\right)\right] = \sup_x (x^2/a - \mu^*(x)) = \alpha^*.
+\end{align}
+If $a=2$, then $\alpha^*= \log 2$ and if $a > 2$, the above limit diverges. This result comes from the property of the rate function $\mu^*(x)$ (that it behaves almost like $x^2/2$) and us computing the integral using truncation.
+
+4. We know that the covariance matrix can be written as $C = A+B$, where $A$ has the same diagonal entries as $C$ and entry value $m^2$ everywhere else. $B = C - A$ has most entries zero and equal number of non-zero entries per row. We know how to compute the inverse of $A$. We also have a recursion formula that theoretically gives us $C^{-1}$ in terms of $A^{-1}$ and $B$, but not in a short explicit form. We have some preliminary knowledge about the difference between entries of $A$ and $C$ thanks to the recursion formula.
+
+\subsection*{The Current State of the Problems}
+
+Our current roadmap is to guess that the asymptotics of the $m$-flip local optima (circle, not the disk) can be computed by replacing $C$ with $A$. However, after doing so, we get the expectation in (\ref{target_expectation}) with $a = 2$ and $n = \binom{N}{m}$. Since there would also be a $2^{-\binom{N}{m}}$ in the expression of the probability, we have
+\begin{align}
+    \lim_{n \to \infty} \frac{1}{n} \log (\text{\normalfont our guessed approximation}) = \log 2 - \log 2 = 0. 
+\end{align}
+So far the computation of the (guessed) integral is confirmed to be correct, because it matches well with the prediction of Varadhan's lemma and the original paper. Also, the properties of $\norm{X_n}_1$'s LDP has now been thoroughly studied. There are currently two possibilities.
+
+Possibility a: Our guess that we can replace $C$ with $A$ while computing the probability is correct, then we have a surprising theorem stating that the $m$-flip local optima does not satisfy a LDP. This will conclude this project, giving us a relatively disappointing result, but it is what it is.
+
+Possibility b: Our guess is wrong, and replacing $C$ with $A$ will cause the result to be off. That is likely. Though my preliminary computation suggested that replacing $C$ with $A$ does not change the result, I could be wrong because when I did my computation I firmly believed that our conjecture was correct. It is now worth our effort to look closely at the computation again and see what could be a loose end.
+
+So here are the things on my to-do list and where I would like your help.
+
+Task 1: Redo the estimation of the matrix inverse as well as the quadratic form, see what could go wrong. I believe that our guess could be wrong because the proposition that $m$-flip does not satisfy a LDP is very counter-intuitive.
+
+Where I need help for task 1: With the matrix recursion bear in our mind, what can we do to derive a closed formula of the quadratic form $x^TC^{-1}x$. That computation becomes much more difficult if our guess is wrong because now we are required to give an explicit formula. What tools/theorems can I potentially miss? If the recursion formula I found is useful, how should I use it well?
+
+Task 2: If Task 1 is complete and our guess is wrong, how can we get the result for the disk from results for the circle? So far the FKG inequality doesn't help much. In our context it only shows that the probability of m-optima on the disk is smaller than the smallest probability which is trivial. A lower bound is yet to be obtained. I will try to find some other ways based on our previous discussion.
+
+Where I need help for task 2: If task 1 is completed, and I am having trouble with task 2. I would like some extra hint regarding the handling of the giant block matrix corresponding to the disk probability.
+
+
+\end{document}

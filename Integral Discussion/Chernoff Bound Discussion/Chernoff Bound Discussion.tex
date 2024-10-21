@@ -1,0 +1,183 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+
+
+\begin{document}
+Hello Tuca, this is a short supplement document regarding our attempt on the asymptotic analysis of the following integral. We have talked about this integral before and it looks that we are lacking proper tools to tackle it. Therefore this time we are taking more steps back to discuss the first baby step of the integral: using the Chernoff bound to get a candidate of large deviation bound.
+
+Let us start by reviewing the integral we want to study:
+\begin{align} \label{target}
+    \frac{1}{n}\log \int_{[0,\infty)^n} \exp \left(-x^T M_n x/2\right)dx.
+\end{align}
+Here $n = \binom{N}{2}$. The matrix $M_n$ has row and column indexed by 2-subsets of $[N]$. Moreover, $M_n$ satisfies the following properties:
+
+1. For $N$ very large, $M_n$'s diagonal terms are asymptotically equal to $\frac{1}{4}$.
+
+2. If $\{a,b\} \cap \{c,d\} = 1$, the entry at row $\{a,b\}$ and column $\{c,d\}$ is equal to $-\frac{1}{4N}$.
+
+3. If $\{a,b\} \cap \{c,d\} = 0$, the entry at row $\{a,b\}$ and column $\{c,d\}$ is equal to $\frac{1}{2N^2}$.
+
+(\ref{target}) can thus be rewritten as:
+\begin{align}
+    \binom{N}{2}^{-1}\log \int_{[0,\infty)^{\binom{N}{2}}} \exp \left(-x^T M_n x/2\right)dx.
+\end{align}
+The number of indices with empty intersection(the third property of $M_n$) is roughly $N$ times the number of those corresponds to the second property. However, the coefficients in front of entries in the second property are $O(N)$ times larger. Therefore, we should expect both types of entries will have equal level of impact in the computation of the integral.
+
+\begin{remark}
+    Before proceeding, we want to remark that it is very likely the upper bound provided by the Chernoff bound will work. As we know that Chernoff bound works when the rare event happens if all the random variables get really big. That is why it works well with i.i.d. sums. In our case, though we do not have something nearly as nice as i.i.d. sum, we do have an expression that every single Gaussian is participating EQUALLY. That is why there is hope in this traditional approach.
+\end{remark}
+
+
+Now we write the integral as an expectation.
+\begin{align} \label{target_comp}
+    &\int_{[0,\infty)^n} \exp \left(-x^T M_n x/2\right)dx \nonumber \\
+    =&\int_{[0,\infty)^n} \exp \left(-\frac{1}{2}x^T M'_n x\right) \exp\left(-\frac{\norm{x}_2^2}{8}\right)dx \nonumber \\
+    =&2^{-n}\int_{[0,\infty)^n} \exp \left(-2y^T M'_n y\right) \exp\left(-\frac{\norm{y}_2^2}{2}\right)dy \nonumber \\
+    =&2^{-n}\left(\frac{\pi}{2}\right)^{n/2} \e \left( \exp \left(-2G^T M'_n G\right) \right),
+\end{align}
+where
+\begin{align}
+    M'_n = M_n - \frac{1}{4} \text{Id}_n,
+\end{align}
+and $G$ is a vector consists of i.i.d. standard half Gaussians. Next up, we want to directly compute the rate function of $-G^T M'_n G$. If we manage to do so and it has a rate function $\mu_*(v)$, we can use truncation to get results similar to that from Varadhan's lemma. Indeed, we write the expectation in (\ref{target_comp}) as (my normalization scale could be wrong)
+\begin{align}
+    &\e \left( \exp \left(-2G^T M'_n G\right) \right) = \e \left( \exp \left(n \cdot 2\frac{-G^T M'_n G}{n}\right) \right) \nonumber \\
+    \equiv& \e \left( \exp \left(n \cdot f(-G^T M'_n G)\right) \right).
+\end{align}
+We may expect a result like
+\begin{align}
+    \lim_{n \to \infty} \frac{1}{n} \log \e \left( \exp \left(-2G^T M'_n G\right) \right) = \sup_{v}\{2v - \mu_*(v)\}.
+\end{align}
+
+Notice that in the original paper, $f(x)=x^2/2$ as the quadratic form $-2G^T M'_n G$ was originally the square of i.i.d. sums. The first step we want to make is to compute the Chernoff bound of $-2G^T M'_n G$. Recall that Chernoff bound gives us that for random variable $X$
+\begin{align}
+    \p(X \geq a) = \p(e^{tX} \geq e^{ta}) \leq \e(e^{tX})e^{-ta}.
+\end{align}
+Therefore the first step we want to make is to compute
+\begin{align}
+    \e \left(\exp(-2tG^T M'_n G)\right)
+\end{align}
+with all the notations introduced above.
+\end{document}
+

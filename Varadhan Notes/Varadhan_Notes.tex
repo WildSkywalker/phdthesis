@@ -1,0 +1,255 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+\setlength{\parskip}{\baselineskip}
+\setlength{\parindent}{0pt}
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+
+
+
+\numberwithin{equation}{section}
+
+\begin{document}
+\title{From Large Deviation to Varadhan's Lemma}
+\maketitle
+\section{Motivation and Laplace's Method}
+In statistical physics, we often encounter integrals with the following form:
+\begin{align}
+    \int \exp(nf_n(x))d\mu,
+\end{align}
+where $f_n$ is a class of functions. Intuitively speaking
+\section{Short Review of Large Deviation Principle(LDP)}
+Most readers's first encounter with LDP is probably Cramer's LDP, where the statement addresses the exponentially small probability of deviation in Law of Large Numbers:
+\begin{theorem}
+    Let $(X_i)_{i \leq n}$ be a sequence of i.i.d. random variables, with finite logarithmic moment generating function, i.e. $\Lambda(t) = \log \e(\exp (tX_1)) < \infty$. Then the Legendre transform of $\Lambda$:
+    \begin{align} \label{cramer_rate}
+        \Lambda^{\ast} (x):= \sup_{t \in \mathbb{R}}(tx - \Lambda(t))
+    \end{align}
+    satisfies
+    \begin{align} \label{cramer_ldp}
+        \lim_{n \to \infty} \frac{1}{n} \log \left(\p \left(\frac{1}{n}\sum_{i=1}^n X_i \geq x\right)\right) = -\Lambda^{\ast}(x).
+    \end{align}
+\end{theorem}
+For this theorem alone, we can see Cramer's LDP as an extension of LLN because the strong law of large number tells us the mean of the sum will converge to the expectation but it does not tell us how "fast" is the convergence, or more precisely, how fast the probability shrinks for the mean to take values other than the expecation. The LDP answers that problem and the answer is exact. In fact, Large Deviation itself is a very useful tool with deep insights and will lead us to the results we want to discuss in this note.
+
+First things first, let us re-define the general LDP using the language of probability measures. All things happen in $(\X,\B)$ where $\X$ is a complete regular Hausdorff space equipped with $\sigma$-algebra $\B$. To avoid unnecessary trouble, we always assume $\B \supseteq \B_{\X}$, the borel $\sigma$-field of $\X$. We will definite the concept of rate function first, which corresponds to $\Lambda^{\ast}$ in the previous theorem. Rate function is used to measure the speed of deviation probability.
+\begin{definition}
+    A rate function $I$ is a lower semicontinuous mapping $I: \X \to [0,\infty]$ such that for all $\alpha \in [0,\infty)$, the level set $\Psi_I(\alpha) := \{x: I(x) \leq \alpha\}$ is a closed subset of $\X$. A good rate function is a rate function such that all level sets are compact. The effective domain of $I$, denoted $\D_I$, is the set of points in $\X$ of finite rate. We refer $\D_I$ as the domain of $I$ when there is no confusion.
+\end{definition}
+For example, $\Lambda^*$ defined in ($\ref{cramer_rate}$) is a rate function, and it measures how fast the deviation probability shrinks as the number of i.i.d. random variables tends to infinity.
+
+We then rephrase the definition of LDP in terms of general class of probability measures. In this notes, the infimum of a function over a n empty set is interpreted as $\infty$.
+\begin{definition}
+    A class of probability measures satisfies LDP with a rate function $I$ if for all $\Gamma \in \B$,
+    \begin{align} \label{ldp_bound}
+        - \inf_{x \in \Gamma^o} I(x) \leq \liminf \epsilon \log \mu_{\epsilon}(\Gamma) \leq \limsup \epsilon \log \mu_{\epsilon}(\Gamma) \leq - \inf_{x \in \bar{\Gamma}} I(x).
+    \end{align}
+\end{definition}
+To rephrase the Cramer LDP in ($\ref{cramer_ldp}$), we let $\epsilon = \frac{1}{n}$, $\mu_{\epsilon} \equiv \mu_n \equiv \mu_{M_n}$, where $M_n=\frac{1}{n}\sum_{i=1}^n X_i$ and $\mu_{M_n}$ is the probability measure induced by $M_n$. This way we know that the Cramer LDP is the statement that fits into a larger scheme.
+\section{Road to Varadhan's Lemma}
+We denote this section to some useful retulst that will be used later on. First comes the contraction principle. The contraction principle allows us to take a LDP we already established, a continuous function $f$, and produce a new LDP with the rate function being the composition of the original rate function and the inverse of $f$.
+\begin{theorem}[Contraction Principle]
+    
+\end{theorem}
+\section{Varadhan's Lemma and Its Proof}
+\gy{I remember that contraction principle can be used to prove the Varadhan's Lemma but I cannot remember nor figure out the detailed way of doing so. Yikes.}
+We are now ready to discuss Varadhan's Lemma. Assume $\{Z_{\epsilon}\}$ is a family of random variables taking values in the regular topological space $\X$ and $\{\mu_{\epsilon}\}$ is the corresponding family of random varaibles.
+\begin{theorem}
+    Suppose $\{\mu_{\epsilon}\}$ satisfies the LDP with a good rate function $I: \X \to [0,\infty]$, and $\phi: \X \to \mathbb{R}$ is any continuous funciton. Assume further either the tail condition
+    \begin{align} \label{vara_tail_cond}
+        \lim_{M \to \infty} \limsup_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}\right) = -\infty,
+    \end{align}
+    or the following moment condition for some $\gamma >1$,
+    \begin{align} \label{vara_moment_cond}
+        \limsup_{\epsilon \to 0}\epsilon \log \e \left(e^{\phi(\gamma Z_{\epsilon})/\epsilon}\right) < \infty.
+    \end{align}
+    Then
+    \begin{align}
+        \lim_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\right) = \sup_{x \in \X}(\phi(x)-I(x)).
+    \end{align}
+\end{theorem}
+\begin{proof}
+    We divide the proof into several steps to give a better overview of the logic flows.
+
+    \textbf{Step 1: The moment condition(\ref{vara_moment_cond}) implies the tail condition(\ref{vara_tail_cond}). }
+    This way we reduce the number of theorems we need to prove to one. The form of two conditions remind us to use truncation(Honestly, try truncation if you get stuck and it will work more often than not.). For $\epsilon >0$, introduce $X_{\epsilon}:= \exp ((\phi(Z_{\epsilon})-M)/\epsilon)$ and $\gamma >1$ be the constant given in ($\ref{vara_moment_cond}$). Note that we have the obvious inequality
+    \begin{align}
+        \e(X_{\epsilon} \mathbbm{1}_{\{X_{\epsilon} \geq 1\}}) \leq \e(X_{\epsilon}^{\gamma} \mathbbm{1}_{\{X_{\epsilon} \geq 1\}}) \leq \e((X_{\epsilon})^{\gamma}).
+    \end{align}
+    By the construction of $X_{\epsilon}$, the above inequality means
+    \begin{align}
+        e^{-M/\epsilon} \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) \leq e^{-\gamma M/\epsilon} \e(e^{\gamma\phi(Z_{\epsilon})/\epsilon}).
+    \end{align}
+    Take logarithm and multiply both side by $\epsilon$ and we have
+    \begin{align}
+        -M + \epsilon \log \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) \leq -\gamma M + \epsilon \e(e^{\gamma\phi(Z_{\epsilon})/\epsilon}).
+    \end{align}
+    Rearrange the constant and take $\limsup$ make us arrive at
+    \begin{align} \label{vara_mom_tail_inequ}
+        \limsup_{\epsilon \to 0}  \epsilon &\log \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) + (\gamma - 1)M \nonumber \\
+        &\leq  \limsup_{\epsilon \to 0} \epsilon \e(e^{\gamma\phi(Z_{\epsilon})/\epsilon}).
+    \end{align}
+    Now assume the moment condition in $(\ref{vara_moment_cond})$ holds and we get the right side of $(\ref{vara_mom_tail_inequ})$ to be finite, which implies
+    \begin{align}
+        \limsup_{\epsilon \to 0}  \epsilon &\log \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{\phi(Z_{\epsilon}) \geq M\}}) + (\gamma - 1)M  < \infty.
+    \end{align}
+    Recall that $\gamma > 1$ and in turn $\gamma - 1 >0$ and the fact that $M$ is arbitary. Taking $M$ to inifnity gives us the tail condition in ($\ref{vara_tail_cond}$). After the first step, we will prove the Varadhan's lemma assuming the tail condition.
+
+    \textbf{Step 2: Prove the lower bound in the statement.} i.e.,
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\right) \geq \sup_{x \in \X}(\phi(x)-I(x)).
+    \end{align}
+
+    This part is relatively easy as it actually holds without assuming the tail conditions. Recall that $\phi$ is lower-semicontinuous, there exists a neighborhood $G$ of $x$ such that $\inf_{y \in G} \phi(y) \geq \phi(x) - \delta$. By restricting the area of integration to $G$, we have an easy inequality: for any fixed $\epsilon > 0$, taking expecation respect to the probability measure of $Z_{\epsilon}$, we obtain
+    \begin{align}
+        \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{Z_{\epsilon}\in G\}}) \geq \inf_{y \in G}e^{\phi(y)/\epsilon}\e (\mathbbm{1}_{\{Z_{\epsilon}\in G\}}) = \inf_{y \in G}e^{\phi(y)/\epsilon} \mu_{\epsilon}(G).
+    \end{align}
+    Add $\epsilon$ on both sides. Then taking liminf on the inequality with respect to $\epsilon$ then gives us
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}\mathbbm{1}_{\{Z_{\epsilon}\in G\}}) \geq \inf_{y \in G} \phi(y) + \liminf_{\epsilon \to 0} \epsilon \log \mu_{\epsilon}(G).
+    \end{align}
+    LHS is obviously not getting larger when we get rid of the indication function as the exponential function is always positive. Thus we have the estimation of the lower bound
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}) \geq \inf_{y \in G} \phi(y) + \liminf_{\epsilon \to 0} \epsilon \log \mu_{\epsilon}(G).
+    \end{align}
+    Recall the definition of LDP in $(\ref{ldp_bound})$, we have
+    \begin{align} \label{ldp_lower_last_step}
+        \inf_{y \in G} \phi(y) + \liminf_{\epsilon \to 0} \epsilon \log \mu_{\epsilon}(G) \geq&  \inf_{y \in G} \phi(y) - \inf_{y \in G} I(y) \quad(\text{By lower-semicontinuity}) \nonumber \\
+        \geq& \phi(x) -\delta - \inf_{y \in G} I(y).
+    \end{align}
+    Recall that the rate function $I$ is also lower-semicontinuous, and for any $x$ fixed, the following holds
+    \begin{align}
+        \sup_{G \ni x}\inf_{y \in G} I(y) = I(x).
+    \end{align} 
+    In turn we know that
+    \begin{align}
+        - \inf_{y \in G} I(y) \geq -I(x).
+    \end{align}
+    Combine the last inequality with $(\ref{ldp_lower_last_step})$ and we finally have
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}) \geq \phi(x) - I(x) -\delta.
+    \end{align}
+    Since the choice of $x$ is arbitary, we can conclude that
+    \begin{align}
+        \liminf_{\epsilon \to 0} \epsilon \e(e^{\phi(Z_{\epsilon})/\epsilon}) \geq \sup_{x \in \X}(\phi(x) - I(x)).
+    \end{align}
+    This finishes the proof of the lower bound in the Varadhan's Lemma.
+
+    \textbf{Step 3: Prove the Upper bound in the statement.} i.e.,
+    \begin{align}
+            \limsup_{\epsilon \to 0} \epsilon \log \e \left(e^{\phi(Z_{\epsilon})/\epsilon}\right) \leq \sup_{x \in \X}(\phi(x)-I(x)).
+    \end{align}
+\end{proof}
+
+\section{Implication and Extension}
+\begin{thebibliography}{99}
+
+\end{thebibliography}
+\end{document}

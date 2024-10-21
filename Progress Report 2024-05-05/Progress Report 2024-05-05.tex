@@ -1,0 +1,163 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+
+
+\begin{document}
+Hello Tuca,
+
+Hope all is well. This is a short document that briefly summarize my effort since our last discussion. Recall that we want to find a way to compute the asymptotics of the 2-flip case. The integral can be expressed as follows:
+\begin{align} \label{target}
+    \binom{N}{2}^{-1}\log \int_{[0,\infty)^{\binom{N}{2}}} \exp \left(x^T M x\right)dx.
+\end{align}
+Here, $M$ is the inverse of the covariance matrix $C$. $a_N, b_N, c_N$ are coefficients with limits. In addition we have
+\begin{align} 
+    M = a_N\cdot Id + b_N \mathbbm{1}^T\mathbbm{1} + c_NM',
+\end{align}
+where $M'$ satisfies that the entry at row $\{a,b\}$ and column $\{c,d\}$ is 1 if $\{a,b\} \cap \{c,d\} = 1$ and 0 otherwise. We have
+\begin{align}
+    x^TMx = a_N\norm{x}_2^2 + b_N \norm{x}_1^2 + c_Nx^TM'x.
+\end{align}
+Last time, we discussed two possible routes. 
+
+The first route is to diagonalize $M$. This route does not work. Originally we thought if the $i$th eigenvector contains negative entries, then the $i$ integration interval becomes $(-\infty,\infty)$, changing from $[0,\infty)$. This is wrong. We(I) made a naive mistake. Intuitively speaking, since change of coordinate matrix is unitary, it rotates the quadrant, rather than "stretching" it. Therefore, the new integration area will have a lot of nasty restrictions, rather than being the half or whole real line for each dimension.
+
+The second route is to try to borrow some results from the paper by Bryc-Dembo. That route seems to have problems as well. The paper is basically computing the LDP of an arbitrary stationary Gaussian process and the rate function depends on the spectral measure (which only exists if the process is stationary). Throughout the paper there are multiple key steps that are only true for stationary processes. The rest of the paper deals with transformations of LDPs, but being stationary is at the core of everything.
+
+If we look back at our problem, we want to the rate function of $\langle X, M'X \rangle$. Then the integral in (\ref{target}) can be handled by simply applying the contraction principle. (The $L$-2 norm can be used to write the integration as an expectation). However, it is hard to compute the rate function of $\langle X, M'X \rangle$, and we don't know if it is possible. The matrix $M'$ is changing in dimensions and the whole setup is not stationary by any means. (Or to my knowledge.)
+
+Some key takeaways and questions:
+
+
+1. For case $m=2$, is it possible to derive a LDP for $\langle X, M'X \rangle$? If so, can this method be extended to any fixed positive integer $m$?
+
+2. I did read the paper carefully, but I doubt I have mastered its technique. Lots of proofs have multiple external references and I indeed were struggling to keep up. Are there any specific sections that I should revisit?
+
+3. Are there any other method we can try?
+
+4. This is a question regarding the difference between disk and circle optimum. Let LC-$m$ be the event that a configuration is radius $m$ local optimum. Can we prove
+\begin{align}
+    \p(\text{LC-2} | \text{LC-1}) \geq \p(LC2)
+\end{align}
+using a probabilistic argument? If so then by Bayesian formula we get $ \p(\text{LC-2})\p(\text{LC-1}) \leq \p(\text{LC-2} \cap \text{LC-1}) \leq \p(\text{LC-2})$. Then the 2-disk optimum follows the same LDP as the radius-2 local optimum because the speed(dimension of the matrix) of LC-2 is much larger than that of LC-1. This looks intuitively true, but I don't know how to proceed.
+\end{document}

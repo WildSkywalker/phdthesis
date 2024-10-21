@@ -1,0 +1,36 @@
+\begin{thebibliography}{5}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+
+\bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
+Antonio Auffinger and Daniel Fletcher.
+\newblock Equilibrium distributions for t-distributed stochastic neighbour
+  embedding, 2023, 2304.03727.
+\newblock URL \url{https://arxiv.org/abs/2304.03727}.
+
+\bibitem[Ravuri and Lawrence(2024)]{ravuri-lawrence}
+Aditya Ravuri and Neil~D. Lawrence.
+\newblock Towards one model for classical dimensionality reduction: A
+  probabilistic perspective on umap and t-sne, 2024, 2405.17412.
+\newblock URL \url{https://arxiv.org/abs/2405.17412}.
+
+\bibitem[Poličar and Zupan(2024)]{zupan-tsne}
+Pavlin~G. Poličar and Blaž Zupan.
+\newblock Visualizing high-dimensional temporal data using direction-aware
+  t-sne, 2024, 2403.19040.
+\newblock URL \url{https://arxiv.org/abs/2403.19040}.
+
+\bibitem[van~der Maaten and Hinton(2008)]{key}
+Laurens van~der Maaten and Geoffrey Hinton.
+\newblock Visualizing data using t-sne.
+\newblock {\em Journal of Machine Learning Research}, 9\penalty0 (2579-2605),
+  2008.
+
+\bibitem[Boucheron et~al.(2013)Boucheron, Lugosi, and Massart]{concentration}
+Stéphane Boucheron, Gábor Lugosi, and Pascal Massart.
+\newblock {\em Concentration Inequalities: A Nonasymptotic Theory of
+  Independence}.
+\newblock Oxford University Press, 2013.
+
+\end{thebibliography}

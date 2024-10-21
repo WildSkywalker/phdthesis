@@ -1,0 +1,38 @@
+\begin{thebibliography}{1}
+
+\bibitem{GoodMat_Paper}
+Amanda Burcrof.
+\newblock Johnson schemes and certain matrices with integral eigenvalues.
+\newblock {\em University of Michigan, Tech}, 2017.
+
+\bibitem{SK_optimal}
+G.~Lugosi L.~A-Berry, L.~Devroye.
+\newblock Local optima of the sherrington-kirkpatrick hamiltonian.
+\newblock {\em Journal of Mathematical Physics}, 60(4), 2019.
+
+\bibitem{Montanari}
+A~Montanari M.~Mezard.
+\newblock {\em Information, Physics, and Computation}.
+\newblock Oxford University Press, 2009.
+
+\bibitem{MillerMatrix}
+K.~S. Miller.
+\newblock On the inverse of the sum of matrices.
+\newblock {\em Mathematics Magazine}, 54(2):67--72, 1981.
+
+\bibitem{Prob_Method_Book}
+J.H.~Spencer N.~Alon.
+\newblock {\em The Probabilistic Method. 4th Edition}.
+\newblock Wily, 2016.
+
+\bibitem{AEoI}
+R.A.~Handelsman N.~Bleistein.
+\newblock {\em Asymptotic Expansion of Integrals}.
+\newblock Dover Publication Inc., 1975.
+
+\bibitem{GaussianLDP}
+Amir~Dembo Wlodzimierz~Bryc.
+\newblock Large deviations for quadratic functionals of gaussian process.
+\newblock {\em Journal of Theoretical Probability}, 10(2), 1997.
+
+\end{thebibliography}
