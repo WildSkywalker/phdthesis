@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex warmup"] 1729563672.43744 "warmup.aux" "warmup.bbl" "warmup" 1730054427.71814 0
+["bibtex warmup"] 1730070844.1918 "warmup.aux" "warmup.bbl" "warmup" 1730073875.20775 0
   "./citation.bib" 1720916335 1641 495b33c67fb0e11bcc3c3b719eff8e08 ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "warmup.aux" 1730054427 862 d6ac74951875e090664a21518dedd271 "pdflatex"
+  "warmup.aux" 1730073874 862 dd93feff06dff1540793e4d758029c54 "pdflatex"
   (generated)
   "warmup.bbl"
   "warmup.blg"
   (rewritten before read)
-["pdflatex"] 1730054426.31794 "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" "warmup.pdf" "warmup" 1730054427.71927 0
+["pdflatex"] 1730073873.57728 "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" "warmup.pdf" "warmup" 1730073875.20885 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1719449060 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626411455 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626411456 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -42,6 +42,7 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -184,11 +185,11 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718356376 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" 1730054425 6097 3fe5dfc57f3794f714d852fa43f14828 ""
-  "warmup.aux" 1730054427 862 d6ac74951875e090664a21518dedd271 "pdflatex"
-  "warmup.bbl" 1729563672 1481 45bf58d6f40a54a454ec484e59f1f615 "bibtex warmup"
-  "warmup.out" 1730054427 68 0b6ae8b177627cfe48304b455e59e92c "pdflatex"
-  "warmup.tex" 1730054425 6097 3fe5dfc57f3794f714d852fa43f14828 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" 1730073873 7020 eac8db59987afd82cf4cf83af4554ab8 ""
+  "warmup.aux" 1730073874 862 dd93feff06dff1540793e4d758029c54 "pdflatex"
+  "warmup.bbl" 1730070844 1481 45bf58d6f40a54a454ec484e59f1f615 "bibtex warmup"
+  "warmup.out" 1730073874 68 0b6ae8b177627cfe48304b455e59e92c "pdflatex"
+  "warmup.tex" 1730073873 7020 eac8db59987afd82cf4cf83af4554ab8 ""
   (generated)
   "warmup.aux"
   "warmup.log"

@@ -160,7 +160,18 @@ Recall that
 \begin{proof}
     This proposition is about the kernel of $x$. The proof stays unchanged from \cite{auffinger-tsne}.
 \end{proof}
-testing changes for git commit
+\begin{lemma}
+    Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
+    1. $\mu$ is sub-Gaussian; \\
+    2. $h(x,x',\sigma)$ and $\nabla_x h(x,x',\sigma)$ are bounded for al $x,x'$ and all $\delta \in K_n$;\\
+    3. $h(x,x',\sigma) \to 0$ as $\norm{x-x'}/\sigma \to \infty$.\\
+    Let $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Let $\mu_n = (1/n)\sum_i \delta_{X_i}$. Then for any $\epsilon > 0$ with probability at least $1 - e^{-c\epsilon^2n}$ we have
+    \begin{align}
+        \sup_{\sigma \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
+    \end{align}
+    Recall that $X$ or the corresponding probability measure $\mu$ is called sub-Gaussian if $\p(X>t) \leq 2 \exp(-Ct^2)$ for some positive constant $C$.
+\end{lemma}
+
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
