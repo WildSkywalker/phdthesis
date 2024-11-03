@@ -160,6 +160,7 @@ Recall that
 \begin{proof}
     This proposition is about the kernel of $x$. The proof stays unchanged from \cite{auffinger-tsne}.
 \end{proof}
+The next couple of lemmas are general results in section 3 of \cite{auffinger-tsne}. We will omit the proof because they are not directly discussing the quantities in the t-sne algorithm.
 \begin{lemma}
     Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
     1. $\mu$ is sub-Gaussian; \\
@@ -171,7 +172,29 @@ Recall that
     \end{align}
     Recall that $X$ or the corresponding probability measure $\mu$ is called sub-Gaussian if $\p(X>t) \leq 2 \exp(-Ct^2)$ for some positive constant $C$.
 \end{lemma}
-
+\begin{lemma} \label{Gaussian_lemma}
+    Let $\nu$ be sub-Gaussian with second moment equal to 1 and suppose $X \in \mathbb{R}^d$ has i.i.d. entries drawn from $\nu$. Then there exists constant $C, c_1$ such that
+    \begin{align}
+        \p(\norm{X} \geq \sqrt{d} + t) \leq Ce^{-c_1t^2}.
+    \end{align}
+\end{lemma}
+Define
+\begin{align}
+    f_{\sigma}(x,x') = \exp(-\norm{x-x}^2/2\sigma^2), \quad g_{\sigma} = \frac{\norm{x-x}^2}{2\sigma^2} \exp(-\norm{x-x'}^2/2\sigma^2).
+\end{align}
+The next two lemmas use similar techniques to prove.
+\begin{lemma}
+    Let $c_1$ be the decay constant in lemma \ref{Gaussian_lemma} and let $\delta >0$. Then almost surely in $X_1,\dots,X_n$,
+    \begin{align}
+        \sup_{\substack{\sigma \in [\delta, \sqrt{n}] \\ i = 1,\dots,n}}\left|\frac{\int g_{\sigma}(X_i,x')d\mu_n(x')}{\int f_{\sigma}(X_i,x')d\mu_n (x')} - \frac{\int g_{\sigma}(X_i,x')d\mu(x')}{\int f_{\sigma}(X_i,x')d\mu (x')}\right| = O(n^{8/c_1 \delta^2 -1/2}\sqrt{\log n}).
+    \end{align}
+\end{lemma}
+\begin{lemma}
+    Let $c_1$ be the decay constant in lemma $\ref{Gaussian_lemma}$ and let $\delta>0$ be such that $c_1\delta^2>8$. Then almost surely in $X_1,\dots,X_n$,
+    \begin{align}
+        \sup_{\substack{\sigma \in [\delta, \sqrt{n}] \\ i = 1,\dots,n}} \left|\log \left(\int f_{\sigma}(X_i,x')d\mu_n (x')\right) - \log \left(\int f_{\sigma}(X_i,x')d\mu (x')\right)\right| = O(n^{4/c_1\delta^2 -1/2}\sqrt{\log n})
+    \end{align}
+\end{lemma}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
