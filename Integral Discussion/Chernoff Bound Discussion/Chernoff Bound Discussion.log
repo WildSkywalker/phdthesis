@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  6 AUG 2024 21:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  2 NOV 2024 22:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/NU Staff/Thesis/Integral Discussion/Chernoff Bound Discussion/Chernoff Bound Discussion.tex"
-(e:/NU Staff/Thesis/Integral Discussion/Chernoff Bound Discussion/Chernoff Bound Discussion.tex
+**"e:/NU Staff/Thesis - GIT/Integral Discussion/Chernoff Bound Discussion/Chernoff Bound Discussion.tex"
+(e:/NU Staff/Thesis - GIT/Integral Discussion/Chernoff Bound Discussion/Chernoff Bound Discussion.tex
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
 (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -577,12 +577,12 @@ Package rerunfilecheck Info: File `"Chernoff Bound Discussion".out' has not chan
  ) 
 Here is how much of TeX's memory you used:
  21894 strings out of 473919
- 407842 string characters out of 5726953
+ 407896 string characters out of 5726953
  1949908 words of memory out of 5000000
  44373 multiletter control sequences out of 15000+600000
  561779 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,87p,632b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,87p,638b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "Chernoff Bound Discussion.pdf" (2 pages, 146343 bytes).
 PDF statistics:
