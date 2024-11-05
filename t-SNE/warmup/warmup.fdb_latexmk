@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex warmup"] 1730704617.48021 "warmup.aux" "warmup.bbl" "warmup" 1730704619.31478 0
+["bibtex warmup"] 1730779316.29246 "warmup.aux" "warmup.bbl" "warmup" 1730779318.15175 0
   "./citation.bib" 1720912735 1641 495b33c67fb0e11bcc3c3b719eff8e08 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "warmup.aux" 1730704618 935 fbbe0fc1ca448653642b10b20327ee24 "pdflatex"
+  "warmup.aux" 1730779317 1006 54d975a680285a284b319a3642a862a3 "pdflatex"
   (generated)
   "warmup.bbl"
   "warmup.blg"
   (rewritten before read)
-["pdflatex"] 1730704617.92169 "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" "warmup.pdf" "warmup" 1730704619.31586 0
+["pdflatex"] 1730779316.6642 "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" "warmup.pdf" "warmup" 1730779318.15285 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1719445460 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626407855 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -185,11 +185,11 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" 1730703676 8700 4c790ce3084f03b4fd72f758fc18a9d2 ""
-  "warmup.aux" 1730704618 935 fbbe0fc1ca448653642b10b20327ee24 "pdflatex"
-  "warmup.bbl" 1730704617 1481 45bf58d6f40a54a454ec484e59f1f615 "bibtex warmup"
-  "warmup.out" 1730704618 68 0b6ae8b177627cfe48304b455e59e92c "pdflatex"
-  "warmup.tex" 1730703676 8700 4c790ce3084f03b4fd72f758fc18a9d2 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" 1730779314 9019 478bcaf24725a12c2ec1c15b8a756578 ""
+  "warmup.aux" 1730779317 1006 54d975a680285a284b319a3642a862a3 "pdflatex"
+  "warmup.bbl" 1730779316 1481 45bf58d6f40a54a454ec484e59f1f615 "bibtex warmup"
+  "warmup.out" 1730779317 68 0b6ae8b177627cfe48304b455e59e92c "pdflatex"
+  "warmup.tex" 1730779314 9019 478bcaf24725a12c2ec1c15b8a756578 ""
   (generated)
   "warmup.aux"
   "warmup.log"

@@ -125,9 +125,10 @@
 \newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
 
 
-% To print out the paper version, please comment out the next two lines.
+% To print out the paper version, please comment out the next three lines.
+\definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
 \pagecolor{black}
-\color{white}
+\color{dimmedwhite}
 
 \numberwithin{equation}{section}
 
@@ -189,13 +190,16 @@ The next two lemmas use similar techniques to prove.
         \sup_{\substack{\sigma \in [\delta, \sqrt{n}] \\ i = 1,\dots,n}}\left|\frac{\int g_{\sigma}(X_i,x')d\mu_n(x')}{\int f_{\sigma}(X_i,x')d\mu_n (x')} - \frac{\int g_{\sigma}(X_i,x')d\mu(x')}{\int f_{\sigma}(X_i,x')d\mu (x')}\right| = O(n^{8/c_1 \delta^2 -1/2}\sqrt{\log n}).
     \end{align}
 \end{lemma}
-\begin{lemma}
+\begin{lemma}\label{pair_lemma_2}
     Let $c_1$ be the decay constant in lemma $\ref{Gaussian_lemma}$ and let $\delta>0$ be such that $c_1\delta^2>8$. Then almost surely in $X_1,\dots,X_n$,
     \begin{align}
         \sup_{\substack{\sigma \in [\delta, \sqrt{n}] \\ i = 1,\dots,n}} \left|\log \left(\int f_{\sigma}(X_i,x')d\mu_n (x')\right) - \log \left(\int f_{\sigma}(X_i,x')d\mu (x')\right)\right| = O(n^{4/c_1\delta^2 -1/2}\sqrt{\log n})
     \end{align}
 \end{lemma}
-testing on wsl
+For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first lemma. We will provide the second for the sake of exercise.
+\begin{proof}[Proof of \ref{pair_lemma_2}]
+    I will just randomly type some words to see how this works.
+\end{proof}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
