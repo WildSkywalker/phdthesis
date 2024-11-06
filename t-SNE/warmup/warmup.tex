@@ -37,7 +37,6 @@
     % bookmarks=true,
 }
 
-
 \font\tencmmib=cmmib10 \skewchar\tencmmib '60
 \newfam\cmmibfam
 \textfont\cmmibfam=\tencmmib
@@ -161,8 +160,20 @@ Recall that
 \begin{proof}
     This proposition is about the kernel of $x$. The proof stays unchanged from \cite{auffinger-tsne}.
 \end{proof}
-The next couple of lemmas are general results in section 3 of \cite{auffinger-tsne}. We will omit the proof because they are not directly discussing the quantities in the t-sne algorithm.
-\begin{lemma}
+The next couple of lemmas are general results in section 3 of \cite{auffinger-tsne}. We will omit the proof because they are not directly discussing the quantities in the t-sne algorithm.  Recall that $X$ or the corresponding probability measure $\mu$ is called sub-Gaussian if $\p(X>t) \leq 2 \exp(-Ct^2)$ for some positive constant $C$.
+\begin{lemma} \label{Gaussian_lemma}
+    Let $\nu$ be sub-Gaussian with second moment equal to 1 and suppose $X \in \mathbb{R}^d$ has i.i.d. entries drawn from $\nu$. Then there exists constant $C, c_1$ such that
+    \begin{align}
+        \p(\norm{X} \geq \sqrt{d} + t) \leq Ce^{-c_1t^2}.
+    \end{align}
+\end{lemma}
+\begin{lemma} \label{max_iid_lemma}
+Let $\mu$ be sub-Gaussian and $c_1$ be the constant from lemma \ref{Gaussian_lemma}. Let $X_1, \dots, X_n \in \mathbb{R}^d$ have i.i.d. entries drawn from $\mu$. Then there exists a constant $C$ such that
+\begin{align}
+    \p \left (\max_{i=1,\dots,n}\norm{X_i} \geq \sqrt{\frac{\log n}{c_1}}+\sqrt{d}+t \right ) \leq Ce^{-c_1t^2}.
+\end{align}
+\end{lemma}
+\begin{lemma} \label{approx_lemma}
     Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
     1. $\mu$ is sub-Gaussian; \\
     2. $h(x,x',\sigma)$ and $\nabla_x h(x,x',\sigma)$ are bounded for al $x,x'$ and all $\delta \in K_n$;\\
@@ -170,13 +181,6 @@ The next couple of lemmas are general results in section 3 of \cite{auffinger-ts
     Let $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Let $\mu_n = (1/n)\sum_i \delta_{X_i}$. Then for any $\epsilon > 0$ with probability at least $1 - e^{-c\epsilon^2n}$ we have
     \begin{align}
         \sup_{\sigma \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
-    \end{align}
-    Recall that $X$ or the corresponding probability measure $\mu$ is called sub-Gaussian if $\p(X>t) \leq 2 \exp(-Ct^2)$ for some positive constant $C$.
-\end{lemma}
-\begin{lemma} \label{Gaussian_lemma}
-    Let $\nu$ be sub-Gaussian with second moment equal to 1 and suppose $X \in \mathbb{R}^d$ has i.i.d. entries drawn from $\nu$. Then there exists constant $C, c_1$ such that
-    \begin{align}
-        \p(\norm{X} \geq \sqrt{d} + t) \leq Ce^{-c_1t^2}.
     \end{align}
 \end{lemma}
 Define
@@ -197,8 +201,78 @@ The next two lemmas use similar techniques to prove.
     \end{align}
 \end{lemma}
 For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first lemma. We will provide the second for the sake of exercise.
-\begin{proof}[Proof of \ref{pair_lemma_2}]
-    I will just randomly type some words to see how this works.
+\begin{proof}[Proof of lemma \ref{pair_lemma_2}]
+    First, notice that for arbitrary $x>0$, the following elementary inequality holds:
+    \begin{align}
+        \log(x) \leq x-1.
+    \end{align}
+    Therefore, the lemma can be proved if we are able to show that
+    \begin{align}
+        \left|\frac{\int f_{\sigma}(X_i,x')d\mu_n (x')}{\int f_{\sigma}(X_i,x')d\mu (x')} - 1 \right| =& \left|\frac{\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')}{\int f_{\sigma}(X_i,x')d\mu (x')} \right|\nonumber \\
+        =& O(n^{4/c_1\delta^2 -1/2}\sqrt{\log n}).
+    \end{align}
+    We can achieve that by bounding the numerator and the denominator of the previous formula. On one hand, consider set
+    \begin{align}
+        E_1' = \left \{ \max_{i=1,\dots,n}\norm{X_i} \geq \sqrt{\alpha+\frac{1}{c_1}} \sqrt{\log n}+\sqrt{d}\right \}
+    \end{align}
+    Setting $t = \sqrt{\alpha \log n}$ in lemma \ref{max_iid_lemma}, we have $\p(E_1') \leq Cn^{-c_1\alpha}$. To absorb the $\sqrt{d}$ term, we can find $\epsilon_n \to 0$ such that
+    \begin{align}
+        E_1 = \left \{ \max_{i=1,\dots,n}\norm{X_i} \geq \sqrt{\alpha+\frac{1}{c_1}+\epsilon_n} \sqrt{\log n}\right \}
+    \end{align}
+    with $\p(E_1) \leq Cn^{-c_1\alpha}$.
+    Because the maximum of norm of each $X_i$ is restricted, on $E_1^c$ we have for all $i,j$, that
+    \begin{align}
+        \norm{X_i-X_j}^2 \leq 4 \left(\alpha + \frac{1}{c_1} +\epsilon_n\right) \log n =:4\gamma \log n.
+    \end{align}
+    Then for $\sigma \in [\delta, \sqrt{n}]$, on $E_1^c$ for all $i$ we have
+    \begin{align}
+        \int f_{\sigma}(X_i,x')d\mu(x') \geq (1-Cn^{-c_1\alpha})\exp \left(-\frac{2\gamma \log n}{\delta^2}\right) \geq \frac{1}{2} \exp \left(-\frac{2\gamma \log n}{\delta^2}\right) =\frac{1}{2}n^{-2\gamma/\delta^2}.
+    \end{align} \label{log_esti_1}
+    This helps us bound the denominator. On the other hand, by lemma \ref{approx_lemma}, we are able to find set $E_2$ with $\p(E_2) \leq e^{-c\epsilon^2 n}$, such that, on $E^c_2$,
+    \begin{align} \label{log_esti_2}
+        \sup_{\substack{\sigma \in [\delta,\sqrt{n}] \\ i = 1,\dots,n}} \left|\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')\right| \leq \epsilon + O\left(\frac{\sqrt{\log n}}{\sqrt{n}}\right).
+    \end{align}
+    Therefore, we can combine (\ref{log_esti_1}) and (\ref{log_esti_2}) and conclude that on $E_1^c \cap E_2^c$,
+    \begin{align}
+        \left|\frac{\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')}{\int f_{\sigma}(X_i,x')d\mu (x')} \right| \leq C\epsilon n^{2\gamma/\delta^2}+O(\sqrt{\log n} \cdot n^{-1/2 + 2\gamma/\delta^2}).
+    \end{align}
+    In order for the RHS to converge to zero, we need
+    \begin{align}
+        \epsilon n^{2\gamma/\delta^2} \to 0, \quad 1/2 - 2\gamma/\delta^2 > 0.
+    \end{align}
+    Moreover, we have $\p(E_1 \cup E_2) \leq Cn^{-c_1\alpha} + e^{-c \epsilon^2 n}$. Set $\epsilon = n^{-\eta}$ for some $\eta >0$. In order to get almost sure convergence using Borel-Cantelli, we also need
+    \begin{align}
+        c_1 \alpha>1, \quad 1-2\eta>0.
+    \end{align}
+    Hence for the entire lemma to work we need the following four inequalities to hold:
+    \begin{align}
+        \frac{2\gamma}{\delta^2}-\eta<0, \quad \frac{2\gamma}{\delta^2}-1/2<0, \quad c_1 \alpha>1, \quad 1-2\eta>0.
+    \end{align}
+    The last inequality implies that $\eta<1/2$ so the first inequality implies the second. Now, recall that
+    \begin{align}
+        \gamma := \alpha + \frac{1}{c_1} +\epsilon_n.
+    \end{align}
+    The collection of inequalities is equivalent to 
+    \begin{align} \label{inequ_collection}
+        2\left(\alpha + \frac{1}{c_1} +\epsilon_n\right)<\eta \delta^2, \quad c_1 \alpha>1, 0<\eta<1/2.
+    \end{align}
+    Here, we are free to choose $\alpha$ and $\eta$, but $c_1$ and $\delta$ are fixed. Now let
+    \begin{align}
+        \alpha = \frac{1}{c_1}+\epsilon, \quad \eta = \frac{1}{2} - \epsilon.
+    \end{align}
+    Then the second and third inequalities in (\ref{inequ_collection}) are satisfied. The first is equivalent to
+    \begin{align}
+        \frac{4}{c_1 \delta^2}+\epsilon<\frac{1}{2}-\epsilon
+    \end{align}
+    as $\epsilon_n \to 0$ as $n \to \infty$. In addition, since $\epsilon$ is arbitrary, we have again, equivalently,
+    \begin{align}
+        \frac{4}{c_1 \delta^2} - \frac{1}{2}<0.
+    \end{align}
+    When this is satisfied, we have:
+    \begin{align}
+        \sup_{\substack{\sigma \in [\delta,\sqrt{n}] \\ i = 1,\dots,n}} \left|\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')\right| =O(n^{4/c_1\delta^2 -1/2}\sqrt{\log n}).
+    \end{align}
+    The proof is thus finished.
 \end{proof}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
