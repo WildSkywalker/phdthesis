@@ -225,9 +225,9 @@ For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first l
         \norm{X_i-X_j}^2 \leq 4 \left(\alpha + \frac{1}{c_1} +\epsilon_n\right) \log n =:4\gamma \log n.
     \end{align}
     Then for $\sigma \in [\delta, \sqrt{n}]$, on $E_1^c$ for all $i$ we have
-    \begin{align}
+    \begin{align} \label{log_esti_1}
         \int f_{\sigma}(X_i,x')d\mu(x') \geq (1-Cn^{-c_1\alpha})\exp \left(-\frac{2\gamma \log n}{\delta^2}\right) \geq \frac{1}{2} \exp \left(-\frac{2\gamma \log n}{\delta^2}\right) =\frac{1}{2}n^{-2\gamma/\delta^2}.
-    \end{align} \label{log_esti_1}
+    \end{align} 
     This helps us bound the denominator. On the other hand, by lemma \ref{approx_lemma}, we are able to find set $E_2$ with $\p(E_2) \leq e^{-c\epsilon^2 n}$, such that, on $E^c_2$,
     \begin{align} \label{log_esti_2}
         \sup_{\substack{\sigma \in [\delta,\sqrt{n}] \\ i = 1,\dots,n}} \left|\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')\right| \leq \epsilon + O\left(\frac{\sqrt{\log n}}{\sqrt{n}}\right).
