@@ -274,6 +274,42 @@ For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first l
     \end{align}
     The proof is thus finished.
 \end{proof}
+Then combining the previous result we have an important convergence:
+\begin{proposition}
+    The $\mu$ be sub-Gaussian and $c_1$ be the constant from lemma \ref{Gaussian_lemma}. Let $X_1,\dots, X_n$ be i.i.d. random variables with probability measure $\mu$ and $\mu_n = \frac{1}{n} \sum \delta_{X_i}$ be the empirical measure. Let $\delta>0$ be a constant such that $c_1 \delta^2>16$. Then, there exists $\epsilon>0$, such that almost surely in $X_1,\dots,X_n$:
+    \begin{align}
+        \sup_{\substack{\sigma \in [\delta,\sqrt{n}]\\i=1,\dots,n}}|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)| = O(n^{-\epsilon}).
+    \end{align} 
+\end{proposition}
+Let us summarize the important results upon this point, which will be used later:
+
+There exists $\gamma = 2/c_1 +\epsilon$ such that the following holds almost surely
+
+(1)$\max_{i=1,\dots,n}\norm{X_i} \leq \sqrt{\gamma \log n}$;
+
+(2)$\max_{i,j}\norm{X_i-X_j}^2 \leq 4 \gamma \log n$;
+
+(3)For $\sigma\in [\delta,\sqrt{n}]$,
+\begin{align}
+    \int \exp(-\norm{X_i-x'}^2/2\sigma^2)d\mu_n(x),\int \exp(-\norm{X_i-x'}^2/2\sigma^2)d\mu(x') \geq Cn^{-2\gamma/\sigma^2}.
+\end{align}
+Next couple of lemmas in \cite{auffinger-tsne} are about lower about on $\sigma^*_{\rho,\mu}$. Recall that $\sigma^*_{\rho,\mu}$ is the unique solution of the equation $F_{\rho,\mu}(x,\sigma^*_{\rho,\mu})=0$. For simplicity of notation, we write $\sigma^*(x) = \sigma^*_{\rho,\mu}(x)$ and $\sigma^*_n(x) = \sigma^*_{\rho,\mu_n}(x)$.
+\begin{lemma}
+    If $\mu$ satisfies the condition in lemma 1 of \cite{auffinger-tsne}, then $\sigma^*(x)$ and $\sigma^*_n(x)$ are uniformly bounded from below in both $i$ and $n$ almost surely.
+\end{lemma}
+\begin{proposition}
+    Suppose $\mu$ has compact support and $C^1$ density. Then almost surely, as $n \to \infty$,
+    \begin{align}
+        \sup_{i=1,\dots,n}|\sigma_n^*(X_i)-\sigma^*(X_i)| \to 0.
+    \end{align}
+\end{proposition}
+\begin{proof}
+    By \cite{auffinger-tsne}, we can quickly reach to the stage where
+    \begin{align}
+        |\sigma_n^*(x)-\sigma^*(x)| = O(|F_{\mu_n}(x,\sigma_n^*(x))-F_{\mu}(x,\sigma_n^*(x))|) \to 0.
+    \end{align}
+    Moreover, we know that $\mu$ has compact support and $x \mapsto \sigma^*(x)$ is smooth, $\sigma^*(X_i)$ is bounded above and below, meaning that  $\sigma_n^*(X_i)$ is bounded uniformly from above and below as well. This completes the proof in the original paper.
+\end{proof}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
