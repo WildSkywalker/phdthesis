@@ -105,6 +105,7 @@
 \newtheorem{claim}{\bf Claim}
 \newtheorem{definition}{\bf Definition}
 \newtheorem{theorem}{\bf Theorem}
+\newtheorem*{theorem*}{Theorem}
 \newtheorem{corollary}{\bf Corollary}
 \newtheorem{remark}{\bf Remark}
 \newtheorem{example}{\bf Example}
@@ -294,10 +295,10 @@ There exists $\gamma = 2/c_1 +\epsilon$ such that the following holds almost sur
     \int \exp(-\norm{X_i-x'}^2/2\sigma^2)d\mu_n(x),\int \exp(-\norm{X_i-x'}^2/2\sigma^2)d\mu(x') \geq Cn^{-2\gamma/\sigma^2}.
 \end{align}
 Next couple of lemmas in \cite{auffinger-tsne} are about lower about on $\sigma^*_{\rho,\mu}$. Recall that $\sigma^*_{\rho,\mu}$ is the unique solution of the equation $F_{\rho,\mu}(x,\sigma^*_{\rho,\mu})=0$. For simplicity of notation, we write $\sigma^*(x) = \sigma^*_{\rho,\mu}(x)$ and $\sigma^*_n(x) = \sigma^*_{\rho,\mu_n}(x)$.
-\begin{lemma}
+\begin{lemma} \label{sigma_lower_bdd_lemma}
     If $\mu$ satisfies the condition in lemma 1 of \cite{auffinger-tsne}, then $\sigma^*(x)$ and $\sigma^*_n(x)$ are uniformly bounded from below in both $i$ and $n$ almost surely.
 \end{lemma}
-\begin{proposition}
+\begin{proposition} \label{sigma_diff_prop}
     Suppose $\mu$ has compact support and $C^1$ density. Then almost surely, as $n \to \infty$,
     \begin{align}
         \sup_{i=1,\dots,n}|\sigma_n^*(X_i)-\sigma^*(X_i)| \to 0.
@@ -310,6 +311,60 @@ Next couple of lemmas in \cite{auffinger-tsne} are about lower about on $\sigma^
     \end{align}
     Moreover, we know that $\mu$ has compact support and $x \mapsto \sigma^*(x)$ is smooth, $\sigma^*(X_i)$ is bounded above and below, meaning that  $\sigma_n^*(X_i)$ is bounded uniformly from above and below as well. This completes the proof in the original paper.
 \end{proof}
+
+\section{More Lemmas}
+Starting this section we are gradually approaching our point of work. We need to list a few more lemmas before that. To make notations cleaner, \cite{auffinger-tsne} introduced some abbreviation in section 4.2. We will use all of them by default.
+\begin{lemma}
+    Any sequence in $\tilde{\mathcal{P}}_X$ is tight.
+\end{lemma}
+Recall Prokhorov's theorem:
+\begin{theorem*}[Prokhorov's Theorem]
+    If $\mu_n$ is a tight sequence of measures in Euclidean space. There exists a subsequence $\mu_{n_k}$ and a measure $\mu$ such that $\mu_{n_k}$ converges to $\mu$ weakly.
+\end{theorem*}
+We immediately get the following lemma:
+\begin{lemma}
+    There exits $\mu^*$ such that
+    \begin{align}
+        I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)
+    \end{align}
+\end{lemma}
+Recall that $I_{\rho}(\mu)$ is the continuous version of $L_{n,\rho}(X,Y)$. It only depends on the measure $\mu$ and the perplexity constant $\rho$. We have not reached the part that requires we have a common perplexity, but from now on we should pay close attention as it is one of the core setup of the original paper.
+\begin{lemma}
+    As $n \to \infty$, for some $\epsilon>0$, we have
+    \begin{align}
+        |f_n(X_i,X_j)-f(X_i,X_j)| = O(n^{-\epsilon}).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    There are typos in the original proof so we prove this lemmas again despite it being very easy and elementary. We compute directly
+    \begin{align}
+        &|f_n(x,x')-f(x,x')| = |\exp(-\norm{x-x}^2/2\sigma_n(x)^2)-\exp(-\norm{x-x}^2/2\sigma(x)^2)| \nonumber \\
+        =&\left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)-1\right| \cdot \exp(-\norm{x-x'}^2/2\sigma(x)^2) \nonumber \\
+        \leq& \left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)-1\right|.
+    \end{align}
+    Recall that the sum of two sub-Gaussian random variables is still sub-Gaussian. If $\mu_X$ is sub-Gaussian, let $C$ be the constant of decay for $X_i-X_j$ and we have
+    \begin{align}
+        \p(|X_i-X_j|^2 \geq \log n) \leq 2 \exp(-\log n /C^2) = 2 \exp\left(\frac{1}{c^2}\right) \cdot \frac{1}{n} \to 0.
+    \end{align}
+    This means $|X_i-X_j|^2 = O(\log n)$ almost surely. On the other hand, if $\mu_X$ has compact support then $|X_i-X_j|$ will be bounded, even easier. Moreover, since $\sigma_n$ and $\sigma$ are both uniformly bounded below by lemma (\ref{sigma_lower_bdd_lemma}), by setting $x=X_i$ and $x'=X_j$ we get
+    \begin{align}
+        &\left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)\right| \nonumber \\
+        \leq& \frac{1}{\sigma_n(x) \sigma(x)}\left(\frac{1}{\sigma_n(x)} + \frac{1}{\sigma(x)}\right)|\sigma_n(x)-\sigma(x)|\norm{x-x'}^2 \nonumber \\
+        =&O(|\sigma_n(x)-\sigma(x)|\norm{x-x'}^2) \nonumber \\
+        =&O(|\sigma_n(x)-\sigma(x)|)O(\log n) \nonumber \\
+        =&O(n^{-\epsilon})O(\log n) \nonumber \\
+        =&O(n^{-\epsilon}),
+    \end{align}
+    by proposition (\ref{sigma_diff_prop}). This finishes the proof.
+\end{proof}
+One thing we should highlight here is that we are abusing the notation of $\sigma$ and $\sigma_n$. They are defined as the unique solution to $F=0$. However, the definition of $\sigma_i$ is not abused and we will later see why such abuse makes sense.
+\begin{lemma}
+    If $c_1 \delta >32$, then there exists $\epsilon>0$ such that as $n \to \infty$, we have
+    \begin{align}
+        \sup_{i,j}|p'_n(X_i,X_j)-p'(X_i,X_j)| &= O(n^{-\epsilon}), \nonumber \\
+        \sup_{i,j}|p_n(X_i,X_j)-p(X_i,X_j)| &= O(n^{-\epsilon}).
+    \end{align}
+\end{lemma}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
