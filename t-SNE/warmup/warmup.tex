@@ -134,10 +134,15 @@
 
 
 \begin{document}
-\title{t-SNE Project Warmup Exercise}
+\title{t-SNE Problem Boot Camp}
 \maketitle
 \section{Setup}
-This document is dedicated to the reconstruction of \cite{auffinger-tsne} with low-dimension kernel $g$ replaced by a more general kernel. This would serve as a great way to understand the material and help with the completion of the original project. For the sake of simplicity, we will use the exact same notation as in \cite{auffinger-tsne} and skip all the definitions. Recall in \cite{auffinger-tsne}, $g$ is defined as 
+This document is dedicated to the reconstruction of \cite{auffinger-tsne} with
+low-dimension kernel $g$ replaced by a more general kernel. This would serve as
+a great way to understand the material and help with the completion of the
+original project. For the sake of simplicity, we will use the exact same
+notation as in \cite{auffinger-tsne} and skip all the definitions. Recall in
+\cite{auffinger-tsne}, $g$ is defined as
 \begin{align}
     g(y,y') = \frac{1}{1+\norm{y-y'}^2}
 \end{align}
@@ -147,13 +152,13 @@ With all these being said, we will first start by giving our general low dimensi
 
 2. $k$ satisfies
 \begin{align}
-    \iint_{(0,\infty)^2} k(x,x') dxdx' > \infty
+    \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty
 \end{align}
 We will kick off this warmup by listing all the important lemmas and results in order, and prove our own versions when the need arises. The final goal is to prove a same set of results as in \cite{auffinger-tsne} with the $y$ kernel replaced.
 Recall that
 \begin{align}
-    F_{\rho, \mu}(x,\sigma) = &- \int \frac{\norm{x-x'}^2}{2\sigma^2} \frac{\exp(-\norm{x-x'}^2/2\sigma^2)}{\int \exp(-\norm{x-x'}^2/2\sigma^2)d\mu(x')}d\mu(x') \nonumber \\
-    &- \log \left(\int \exp(-\norm{x-x'}^2/2\sigma^2)\right) +\log \rho.
+    F_{\rho, \mu}(x,\sigma) = & - \int \frac{\norm{x-x'}^2}{2\sigma^2} \frac{\exp(-\norm{x-x'}^2/2\sigma^2)}{\int \exp(-\norm{x-x'}^2/2\sigma^2)d\mu(x')}d\mu(x') \nonumber \\
+                              & - \log \left(\int \exp(-\norm{x-x'}^2/2\sigma^2)\right) +\log \rho.
 \end{align}
 \begin{proposition}
     If $\mu$ has a $C^1$ density $f$ such that both $f$ and $\norm{\nabla f}$ are bounded, then the equation $F_{\rho, \mu}(x,\sigma)=0$ has a unique solution $\sigma^*_{\rho,\mu}(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. Moreover, $x \mapsto \sigma^*_{\rho,\mu}(x)$ is smooth.
@@ -169,10 +174,10 @@ The next couple of lemmas are general results in section 3 of \cite{auffinger-ts
     \end{align}
 \end{lemma}
 \begin{lemma} \label{max_iid_lemma}
-Let $\mu$ be sub-Gaussian and $c_1$ be the constant from lemma \ref{Gaussian_lemma}. Let $X_1, \dots, X_n \in \mathbb{R}^d$ have i.i.d. entries drawn from $\mu$. Then there exists a constant $C$ such that
-\begin{align}
-    \p \left (\max_{i=1,\dots,n}\norm{X_i} \geq \sqrt{\frac{\log n}{c_1}}+\sqrt{d}+t \right ) \leq Ce^{-c_1t^2}.
-\end{align}
+    Let $\mu$ be sub-Gaussian and $c_1$ be the constant from lemma \ref{Gaussian_lemma}. Let $X_1, \dots, X_n \in \mathbb{R}^d$ have i.i.d. entries drawn from $\mu$. Then there exists a constant $C$ such that
+    \begin{align}
+        \p \left (\max_{i=1,\dots,n}\norm{X_i} \geq \sqrt{\frac{\log n}{c_1}}+\sqrt{d}+t \right ) \leq Ce^{-c_1t^2}.
+    \end{align}
 \end{lemma}
 \begin{lemma} \label{approx_lemma}
     Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
@@ -209,8 +214,8 @@ For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first l
     \end{align}
     Therefore, the lemma can be proved if we are able to show that
     \begin{align}
-        \left|\frac{\int f_{\sigma}(X_i,x')d\mu_n (x')}{\int f_{\sigma}(X_i,x')d\mu (x')} - 1 \right| =& \left|\frac{\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')}{\int f_{\sigma}(X_i,x')d\mu (x')} \right|\nonumber \\
-        =& O(n^{4/c_1\delta^2 -1/2}\sqrt{\log n}).
+        \left|\frac{\int f_{\sigma}(X_i,x')d\mu_n (x')}{\int f_{\sigma}(X_i,x')d\mu (x')} - 1 \right| = & \left|\frac{\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')}{\int f_{\sigma}(X_i,x')d\mu (x')} \right|\nonumber \\
+        =                                                                                               & O(n^{4/c_1\delta^2 -1/2}\sqrt{\log n}).
     \end{align}
     We can achieve that by bounding the numerator and the denominator of the previous formula. On one hand, consider set
     \begin{align}
@@ -228,7 +233,7 @@ For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first l
     Then for $\sigma \in [\delta, \sqrt{n}]$, on $E_1^c$ for all $i$ we have
     \begin{align} \label{log_esti_1}
         \int f_{\sigma}(X_i,x')d\mu(x') \geq (1-Cn^{-c_1\alpha})\exp \left(-\frac{2\gamma \log n}{\delta^2}\right) \geq \frac{1}{2} \exp \left(-\frac{2\gamma \log n}{\delta^2}\right) =\frac{1}{2}n^{-2\gamma/\delta^2}.
-    \end{align} 
+    \end{align}
     This helps us bound the denominator. On the other hand, by lemma \ref{approx_lemma}, we are able to find set $E_2$ with $\p(E_2) \leq e^{-c\epsilon^2 n}$, such that, on $E^c_2$,
     \begin{align} \label{log_esti_2}
         \sup_{\substack{\sigma \in [\delta,\sqrt{n}] \\ i = 1,\dots,n}} \left|\int f_{\sigma}(X_i,x')d\mu_n (x')-\int f_{\sigma}(X_i,x')d\mu (x')\right| \leq \epsilon + O\left(\frac{\sqrt{\log n}}{\sqrt{n}}\right).
@@ -253,7 +258,7 @@ For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first l
     \begin{align}
         \gamma := \alpha + \frac{1}{c_1} +\epsilon_n.
     \end{align}
-    The collection of inequalities is equivalent to 
+    The collection of inequalities is equivalent to
     \begin{align} \label{inequ_collection}
         2\left(\alpha + \frac{1}{c_1} +\epsilon_n\right)<\eta \delta^2, \quad c_1 \alpha>1, 0<\eta<1/2.
     \end{align}
@@ -279,12 +284,13 @@ Then combining the previous result we have an important convergence:
 \begin{proposition}
     The $\mu$ be sub-Gaussian and $c_1$ be the constant from lemma \ref{Gaussian_lemma}. Let $X_1,\dots, X_n$ be i.i.d. random variables with probability measure $\mu$ and $\mu_n = \frac{1}{n} \sum \delta_{X_i}$ be the empirical measure. Let $\delta>0$ be a constant such that $c_1 \delta^2>16$. Then, there exists $\epsilon>0$, such that almost surely in $X_1,\dots,X_n$:
     \begin{align}
-        \sup_{\substack{\sigma \in [\delta,\sqrt{n}]\\i=1,\dots,n}}|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)| = O(n^{-\epsilon}).
-    \end{align} 
+        \sup_{\substack{\sigma \in [\delta,\sqrt{n}] \\i=1,\dots,n}}|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)| = O(n^{-\epsilon}).
+    \end{align}
 \end{proposition}
 Let us summarize the important results upon this point, which will be used later:
 
-There exists $\gamma = 2/c_1 +\epsilon$ such that the following holds almost surely
+There exists $\gamma = 2/c_1 +\epsilon$ such that the following holds almost
+surely
 
 (1)$\max_{i=1,\dots,n}\norm{X_i} \leq \sqrt{\gamma \log n}$;
 
@@ -313,7 +319,10 @@ Next couple of lemmas in \cite{auffinger-tsne} are about lower about on $\sigma^
 \end{proof}
 
 \section{More Lemmas}
-Starting this section we are gradually approaching our point of work. We need to list a few more lemmas before that. To make notations cleaner, \cite{auffinger-tsne} introduced some abbreviation in section 4.2. We will use all of them by default.
+Starting this section we are gradually approaching our point of work. We need
+to list a few more lemmas before that. To make notations cleaner,
+\cite{auffinger-tsne} introduced some abbreviation in section 4.2. We will use
+all of them by default.
 \begin{lemma}
     Any sequence in $\tilde{\mathcal{P}}_X$ is tight.
 \end{lemma}
@@ -338,9 +347,9 @@ Recall that $I_{\rho}(\mu)$ is the continuous version of $L_{n,\rho}(X,Y)$. It o
 \begin{proof}
     There are typos in the original proof so we prove this lemmas again despite it being very easy and elementary. We compute directly
     \begin{align}
-        &|f_n(x,x')-f(x,x')| = |\exp(-\norm{x-x}^2/2\sigma_n(x)^2)-\exp(-\norm{x-x}^2/2\sigma(x)^2)| \nonumber \\
-        =&\left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)-1\right| \cdot \exp(-\norm{x-x'}^2/2\sigma(x)^2) \nonumber \\
-        \leq& \left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)-1\right|.
+             & |f_n(x,x')-f(x,x')| = |\exp(-\norm{x-x}^2/2\sigma_n(x)^2)-\exp(-\norm{x-x}^2/2\sigma(x)^2)| \nonumber                                                          \\
+        =    & \left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)-1\right| \cdot \exp(-\norm{x-x'}^2/2\sigma(x)^2) \nonumber \\
+        \leq & \left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)-1\right|.
     \end{align}
     Recall that the sum of two sub-Gaussian random variables is still sub-Gaussian. If $\mu_X$ is sub-Gaussian, let $C$ be the constant of decay for $X_i-X_j$ and we have
     \begin{align}
@@ -348,12 +357,12 @@ Recall that $I_{\rho}(\mu)$ is the continuous version of $L_{n,\rho}(X,Y)$. It o
     \end{align}
     This means $|X_i-X_j|^2 = O(\log n)$ almost surely. On the other hand, if $\mu_X$ has compact support then $|X_i-X_j|$ will be bounded, even easier. Moreover, since $\sigma_n$ and $\sigma$ are both uniformly bounded below by lemma (\ref{sigma_lower_bdd_lemma}), by setting $x=X_i$ and $x'=X_j$ we get
     \begin{align}
-        &\left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)\right| \nonumber \\
-        \leq& \frac{1}{\sigma_n(x) \sigma(x)}\left(\frac{1}{\sigma_n(x)} + \frac{1}{\sigma(x)}\right)|\sigma_n(x)-\sigma(x)|\norm{x-x'}^2 \nonumber \\
-        =&O(|\sigma_n(x)-\sigma(x)|\norm{x-x'}^2) \nonumber \\
-        =&O(|\sigma_n(x)-\sigma(x)|)O(\log n) \nonumber \\
-        =&O(n^{-\epsilon})O(\log n) \nonumber \\
-        =&O(n^{-\epsilon}),
+             & \left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)\right| \nonumber                  \\
+        \leq & \frac{1}{\sigma_n(x) \sigma(x)}\left(\frac{1}{\sigma_n(x)} + \frac{1}{\sigma(x)}\right)|\sigma_n(x)-\sigma(x)|\norm{x-x'}^2 \nonumber \\
+        =    & O(|\sigma_n(x)-\sigma(x)|\norm{x-x'}^2) \nonumber                                                                                     \\
+        =    & O(|\sigma_n(x)-\sigma(x)|)O(\log n) \nonumber                                                                                         \\
+        =    & O(n^{-\epsilon})O(\log n) \nonumber                                                                                                   \\
+        =    & O(n^{-\epsilon}),
     \end{align}
     by proposition (\ref{sigma_diff_prop}). This finishes the proof.
 \end{proof}
@@ -361,13 +370,41 @@ One thing we should highlight here is that we are abusing the notation of $\sigm
 \begin{lemma}
     If $c_1 \delta >32$, then there exists $\epsilon>0$ such that as $n \to \infty$, we have
     \begin{align}
-        \sup_{i,j}|p'_n(X_i,X_j)-p'(X_i,X_j)| &= O(n^{-\epsilon}), \nonumber \\
-        \sup_{i,j}|p_n(X_i,X_j)-p(X_i,X_j)| &= O(n^{-\epsilon}).
+        \sup_{i,j}|p'_n(X_i,X_j)-p'(X_i,X_j)| & = O(n^{-\epsilon}), \nonumber \\
+        \sup_{i,j}|p_n(X_i,X_j)-p(X_i,X_j)|   & = O(n^{-\epsilon}).
     \end{align}
 \end{lemma}
-\bibliographystyle{hunsrtnat}
-\nocite{*}
-\bibliography{citation}
-
+\begin{proof}[Supplementary Proof]
+    The overall methodology of the original proof in \cite{auffinger-tsne} is natural and clear. However, it can still be slightly confusing as it is missing the actual values we assign to $\epsilon$. In the original paper, we can take, for some constant $k>0$, that
+    \begin{align}
+        n^{-\epsilon} = n^{8/c_1\delta^2 -1/2} (\log n)^k.
+    \end{align}
+    This comes from the detailed computations in the original proof and the quantity above is the slowest decaying speed, the 'worst case scenario' given all the conditions. Plug this into the computations and everything is clear. The proof uses a little bit extra than just the bounds in section 3.1.
+\end{proof}
+\begin{lemma}
+    If $c_1\delta>40$, then there exists $\epsilon>0$ such that as $n \to \infty$, we have
+    \begin{align}
+        \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)| = O(n^{-\epsilon}).
+    \end{align}
+\end{lemma}
+\begin{lemma}
+    If $c_1\delta^2>8$, then as $n \to \infty$ we have
+    \begin{align}
+        \sum_j p_{j|i} \log p_{j|i} + \log (\rho n) = o(1).
+    \end{align}
+\end{lemma}
+\section{The Actual Computation}
+From this point onward, we are starting to have lemmas and results related to
+the output kernel $y$ and this is where the trail begins. Along the way we will
+see if there is a need to add more conditions to $y$ and if we do, every time
+we add more constraints we will reiterate the entire settings for $y$ for
+clarity.
+\begin{lemma}
+    There exists a set of points $y^*(X)$ such that
+    \begin{align}
+        \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y) = L_{n,\rho}(X,y^*).
+    \end{align}
+\end{lemma}
+\bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}
