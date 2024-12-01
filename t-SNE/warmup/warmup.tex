@@ -381,7 +381,7 @@ One thing we should highlight here is that we are abusing the notation of $\sigm
     \end{align}
     This comes from the detailed computations in the original proof and the quantity above is the slowest decaying speed, the 'worst case scenario' given all the conditions. Plug this into the computations and everything is clear. The proof uses a little bit extra than just the bounds in section 3.1.
 \end{proof}
-\begin{lemma}
+\begin{lemma} \label{integrand_lemma}
     If $c_1\delta>40$, then there exists $\epsilon>0$ such that as $n \to \infty$, we have
     \begin{align}
         \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)| = O(n^{-\epsilon}).
@@ -459,11 +459,33 @@ $g$: $g(y,y') = k (\norm{y-y'})$ such that:
     \end{align}
     because the second summation is just the sum of all probability mass. Now we have the $2 \log n$ term and we are left to deal with the first summation. Inspired by the proofs in \cite{auffinger-tsne}, we begin by showing that the diagonal terms do not matter in our estimation. consider
     \begin{align}
-          & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p(x,x) p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber              \\
+          & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber              \\
         = & - \frac{1}{n^2}\sum_{t=1}^{n}p'_n(X_t,X_t) \nonumber                                                                                             \\
         = & - \frac{1}{n^2}\sum_{t=1}^{n} \frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\log\left(\frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\right).
     \end{align}
     If we refer to the proof of lemma 14 in \cite{auffinger-tsne}, we can see that the difference of diagonal term vanishes and it does not depend on the specific $X_i$. Therefore in our proof, when we sum over all the $X_i$ and normalize by dividing $n^2$, we reach the exact same conclusion. The diagonal term is $O(n^{4/c_1\delta^2 -1}\log n)$ which is $o(1)$ depending on our choice of $c_1$.
+
+    Then we apply lemma \ref{integrand_lemma} and since $d \mu_n \times d \mu_n$ is a probability measure, we have
+    \begin{align}
+        \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') +o(1),
+    \end{align}
+    which immediately implies
+    \begin{align} \label{entropy_esti}
+        \sum_{i \neq j}p_{ij} \log{ij} = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') -2 \log n + o(1).
+    \end{align}
+    The proof will be finished if we are able to replace the measure in the last integral with $d \mu$. We verify that
+    \begin{align}
+        h(x,x',\sigma) :=  p(x,x')\log p(x,x')
+    \end{align}
+    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ is sub-Gaussian by construction. Then is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. and $p \to 0$ as $\norm{x-x}/\sigma \to \infty$, it is obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}/\sigma \to \infty$. The rest of the conditions are also very easily to prove. We can finally conclude that 
+    \begin{align}
+        \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') + o(1).
+    \end{align}
+    Combine this estimation with (\ref{entropy_esti}) and we can conclude
+    \begin{align}
+        \sum_{i \neq j}p_{ij} \log{ij} = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') - 2\log n + o(1).
+    \end{align}
+    The proof is thus finished.
 \end{proof}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
