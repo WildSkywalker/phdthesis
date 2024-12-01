@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  29 NOV 2024 00:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  1 DEC 2024 00:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,19 +583,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [2]
 
 [3]
-Overfull \hbox (1.76758pt too wide) in paragraph at lines 285--286
-[][]\OT1/cmr/bx/n/10 Proposition 2. []\OT1/cmr/m/it/10 The $\OML/cmm/m/it/10 ^^V$ \OT1/cmr/m/it/10 be sub-Gaussian and $\OML/cmm/m/it/10 c[]$ \OT1/cmr/m/it/10 be the con-stant from lemma [][]1[][]. Let $\OML/cmm/m/it/10 X[]; [] ; X[]$
- []
-
-
 
 [4]
 
 [5]
 
-[6] (warmup.bbl)
+[6]
 
-[7] (warmup.aux)
+[7] (warmup.bbl)
+
+[8] (warmup.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -604,17 +601,17 @@ Package rerunfilecheck Info: File `warmup.out' has not changed.
 (rerunfilecheck)             Checksum: 1DB93B595B05282981727D9A8884EB38;328.
  ) 
 Here is how much of TeX's memory you used:
- 22423 strings out of 473919
- 414440 string characters out of 5726953
+ 22435 strings out of 473919
+ 414576 string characters out of 5726953
  1949908 words of memory out of 5000000
  44818 multiletter control sequences out of 15000+600000
  567990 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,14n,87p,583b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,14n,87p,583b,597s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on warmup.pdf (7 pages, 254259 bytes).
+Output written on warmup.pdf (8 pages, 266607 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

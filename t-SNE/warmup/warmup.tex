@@ -148,11 +148,11 @@ notation as in \cite{auffinger-tsne} and skip all the definitions. Recall in
 \end{align}
 With all these being said, we will first start by giving our general low dimension kernel $g$ some general assumptions, and modify it as we move on. We first require that $g(y,y') = k (\norm{y-y'})$ such that:
 
-1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing.
+1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded.
 
 2. $k$ satisfies
 \begin{align}
-    \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty
+    \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
 \end{align}
 We will kick off this warmup by listing all the important lemmas and results in order, and prove our own versions when the need arises. The final goal is to prove a same set of results as in \cite{auffinger-tsne} with the $y$ kernel replaced.
 Recall that
@@ -282,7 +282,7 @@ For this pair of lemmas, \cite{auffinger-tsne} provides the proof to the first l
 \end{proof}
 Then combining the previous result we have an important convergence:
 \begin{proposition}
-    The $\mu$ be sub-Gaussian and $c_1$ be the constant from lemma \ref{Gaussian_lemma}. Let $X_1,\dots, X_n$ be i.i.d. random variables with probability measure $\mu$ and $\mu_n = \frac{1}{n} \sum \delta_{X_i}$ be the empirical measure. Let $\delta>0$ be a constant such that $c_1 \delta^2>16$. Then, there exists $\epsilon>0$, such that almost surely in $X_1,\dots,X_n$:
+    Let $\mu$ be sub-Gaussian and $c_1$ be the constant from lemma \ref{Gaussian_lemma}. $X_1,\dots, X_n$ are i.i.d. random variables with probability measure $\mu$ and $\mu_n = \frac{1}{n} \sum \delta_{X_i}$ is the empirical measure. Additionally, set $\delta>0$ to be a constant such that $c_1 \delta^2>16$. Then, there exists $\epsilon>0$, such that almost surely in $X_1,\dots,X_n$:
     \begin{align}
         \sup_{\substack{\sigma \in [\delta,\sqrt{n}] \\i=1,\dots,n}}|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)| = O(n^{-\epsilon}).
     \end{align}
@@ -393,18 +393,78 @@ One thing we should highlight here is that we are abusing the notation of $\sigm
         \sum_j p_{j|i} \log p_{j|i} + \log (\rho n) = o(1).
     \end{align}
 \end{lemma}
+\gy{TODO: Ask Tuca about the last step of the proof in \cite{auffinger-tsne}.}
 \section{The Actual Computation}
 From this point onward, we are starting to have lemmas and results related to
-the output kernel $y$ and this is where the trail begins. Along the way we will
-see if there is a need to add more conditions to $y$ and if we do, every time
-we add more constraints we will reiterate the entire settings for $y$ for
-clarity.
+the output kernel $g$ and this is where the trail begins. Along the way we will
+see if there is a need to add more conditions to $g$ and if we do, every time
+we add more constraints we will reiterate the entire settings for $g$ for
+clarity. To refresh our memory, here is the initial assumptions we have for
+$g$: $g(y,y') = k (\norm{y-y'})$ such that:
+
+1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded.
+
+2. $k$ satisfies
+\begin{align}
+    \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
+\end{align}
+
 \begin{lemma}
     There exists a set of points $y^*(X)$ such that
     \begin{align}
         \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y) = L_{n,\rho}(X,y^*).
     \end{align}
 \end{lemma}
+\gy{TODO: Ask Tuca about the $1/n^2$ in the original proof. The scaling seems to not play a role in the proof.}
+\begin{proof}
+    Fortunately, the first proof is almost identical to the original one. Let $k \in \{1,\cdots, n\}$. We are going to show that
+    \begin{align}
+        \lim_{|y_k| \to \infty} L_{n,\rho}(X,y) = \infty.
+    \end{align}
+    By definition, $L$ is the relative entropy and
+    \begin{align}
+        L_{n,\rho}(X,y) = \sum_{i \neq j} p_{ij}\log \left(\frac{p_{ij}}{q_{ij}}\right) = \sum_{i \neq j} p_{ij}\log p_{ij} - \sum_{i \neq j} p_{ij}\log q_{ij}.
+    \end{align}
+    For $n$ given and fixed, it suffices to show that
+    \begin{align}
+        \sum_{i \neq j} p_{ij}\log (q_{ij}) = \sum_{i \neq j} p_{ij}\log \left(\frac{g(y_i,y_j)}{\sum_{m \neq l}g(y_m,y_l)}\right) \to -\infty.
+    \end{align}
+    Recall that $g(y,y')$ is bounded. We have
+    \begin{align}
+             & -\sum_{i \neq j} p_{ij} log \left(\sum_{m \neq l}g(y_m,y_l) \right) = -\log \left(\sum_{m \neq l}g(y_m,y_l) \right) \nonumber \\
+        \leq & -\sum_{i \neq j} p_{ij} log \left(\sum_{m\neq k, l \neq k, m \neq l}g(y_m,y_l) \right) < \infty.
+    \end{align}
+    On the other hand, we have $g(y_i,y_k) = k (\norm{y_i-y_k}) \to 0$ as $|y_k| \to \infty$ because $\norm{y_i-y_k} \to \infty$ and $k$ satisfies
+    \begin{align}
+        \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
+    \end{align}
+    This means
+    \begin{align}
+        \lim_{|y_k| \to \infty}\sum_{i \neq j} p_{ij} \log (g(y_i,y_j)) \to -\infty.
+    \end{align}
+    Hence, the minimum of the $L_{n,\rho}(X,y)$ is achieved on a bounded set, the lemma follows by the continuity of $L_{n,\rho}(X,y)$.
+\end{proof}
+\begin{lemma}
+    As $n \to \infty$, we have
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x')d\mu d\mu - 2 \log n + o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    The original paper does provide a detailed proof, so it is our turn to exercise. First recall that $p_{ij} = p_n(X_i,X_j)/n^2$. Therefore we have
+    \begin{align}
+          & \sum_{i \neq j}p_{ij} \log{ij} = \sum \frac{1}{n^2}p_n(X_i,X_j)\log\left(\frac{1}{n^2}p_n(X_i,X_j)\right) \nonumber           \\
+        = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n\sum_{i \neq j} \frac{1}{n^2} p_n(X_i,X_j) \nonumber \\
+        = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n,
+    \end{align}
+    because the second summation is just the sum of all probability mass. Now we have the $2 \log n$ term and we are left to deal with the first summation. Inspired by the proofs in \cite{auffinger-tsne}, we begin by showing that the diagonal terms do not matter in our estimation. consider
+    \begin{align}
+          & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p(x,x) p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber              \\
+        = & - \frac{1}{n^2}\sum_{t=1}^{n}p'_n(X_t,X_t) \nonumber                                                                                             \\
+        = & - \frac{1}{n^2}\sum_{t=1}^{n} \frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\log\left(\frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\right).
+    \end{align}
+    If we refer to the proof of lemma 14 in \cite{auffinger-tsne}, we can see that the difference of diagonal term vanishes and it does not depend on the specific $X_i$. Therefore in our proof, when we sum over all the $X_i$ and normalize by dividing $n^2$, we reach the exact same conclusion. The diagonal term is $O(n^{4/c_1\delta^2 -1}\log n)$ which is $o(1)$ depending on our choice of $c_1$.
+\end{proof}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}
