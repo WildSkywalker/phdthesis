@@ -136,13 +136,25 @@
 \begin{document}
 \title{t-SNE Problem Boot Camp}
 \maketitle
+\tableofcontents
+\section{Summary and Overview}
+This section is used to summarize the main idea and process of the paper. This
+is a good process for learning and it would be beneficial to check with Tuca
+whether the understanding of the big picture is correct. Later in this section
+we will highlight the main difference between this document and the original
+paper should the readers are looking for the lemmas associated with the general
+output kernel.
+\subsection*{Difference from the Original Paper}
+\section{Progress and Roadmap for Ph.D Thesis}
+This section is used to lay out the plan for next steps and how we could finish
+the Ph.D thesis on time.
 \section{Setup}
-This document is dedicated to the reconstruction of \cite{auffinger-tsne} with
-low-dimension kernel $g$ replaced by a more general kernel. This would serve as
-a great way to understand the material and help with the completion of the
-original project. For the sake of simplicity, we will use the exact same
-notation as in \cite{auffinger-tsne} and skip all the definitions. Recall in
-\cite{auffinger-tsne}, $g$ is defined as
+Here goes the real math. Recall that this document is dedicated to the
+reconstruction of \cite{auffinger-tsne} with low-dimension kernel $g$ replaced
+by a more general kernel. This would serve as a great way to understand the
+material and help with the completion of the original project. For the sake of
+simplicity, we will use the exact same notation as in \cite{auffinger-tsne} and
+skip all the definitions. Recall in \cite{auffinger-tsne}, $g$ is defined as
 \begin{align}
     g(y,y') = \frac{1}{1+\norm{y-y'}^2}
 \end{align}
@@ -367,7 +379,7 @@ Recall that $I_{\rho}(\mu)$ is the continuous version of $L_{n,\rho}(X,Y)$. It o
     by proposition (\ref{sigma_diff_prop}). This finishes the proof.
 \end{proof}
 One thing we should highlight here is that we are abusing the notation of $\sigma$ and $\sigma_n$. They are defined as the unique solution to $F=0$. However, the definition of $\sigma_i$ is not abused and we will later see why such abuse makes sense.
-\begin{lemma}
+\begin{lemma} \label{integrand_lemma_2}
     If $c_1 \delta >32$, then there exists $\epsilon>0$ such that as $n \to \infty$, we have
     \begin{align}
         \sup_{i,j}|p'_n(X_i,X_j)-p'(X_i,X_j)| & = O(n^{-\epsilon}), \nonumber \\
@@ -444,13 +456,14 @@ $g$: $g(y,y') = k (\norm{y-y'})$ such that:
     \end{align}
     Hence, the minimum of the $L_{n,\rho}(X,y)$ is achieved on a bounded set, the lemma follows by the continuity of $L_{n,\rho}(X,y)$.
 \end{proof}
-\begin{lemma}
+\begin{lemma} \label{entropy_lemma_1}
     As $n \to \infty$, we have
     \begin{align}
         \sum_{i \neq j} p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x')d\mu d\mu - 2 \log n + o(1).
     \end{align}
 \end{lemma}
 \begin{proof}
+    \gy{TODO: In the proof we did not use lemma 7 of the original paper. Ask Tuca what did I miss.}
     The original paper does provide a detailed proof, so it is our turn to exercise. First recall that $p_{ij} = p_n(X_i,X_j)/n^2$. Therefore we have
     \begin{align}
           & \sum_{i \neq j}p_{ij} \log{ij} = \sum \frac{1}{n^2}p_n(X_i,X_j)\log\left(\frac{1}{n^2}p_n(X_i,X_j)\right) \nonumber           \\
@@ -459,13 +472,14 @@ $g$: $g(y,y') = k (\norm{y-y'})$ such that:
     \end{align}
     because the second summation is just the sum of all probability mass. Now we have the $2 \log n$ term and we are left to deal with the first summation. Inspired by the proofs in \cite{auffinger-tsne}, we begin by showing that the diagonal terms do not matter in our estimation. consider
     \begin{align}
-          & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber              \\
+          & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber                     \\
         = & - \frac{1}{n^2}\sum_{t=1}^{n}p'_n(X_t,X_t) \nonumber                                                                                             \\
         = & - \frac{1}{n^2}\sum_{t=1}^{n} \frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\log\left(\frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\right).
     \end{align}
     If we refer to the proof of lemma 14 in \cite{auffinger-tsne}, we can see that the difference of diagonal term vanishes and it does not depend on the specific $X_i$. Therefore in our proof, when we sum over all the $X_i$ and normalize by dividing $n^2$, we reach the exact same conclusion. The diagonal term is $O(n^{4/c_1\delta^2 -1}\log n)$ which is $o(1)$ depending on our choice of $c_1$.
 
-    Then we apply lemma \ref{integrand_lemma} and since $d \mu_n \times d \mu_n$ is a probability measure, we have
+    Then we apply lemma \ref{integrand_lemma} and since $d \mu_n \times d \mu_n$ is
+    a probability measure, we have
     \begin{align}
         \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') +o(1),
     \end{align}
@@ -477,15 +491,83 @@ $g$: $g(y,y') = k (\norm{y-y'})$ such that:
     \begin{align}
         h(x,x',\sigma) :=  p(x,x')\log p(x,x')
     \end{align}
-    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ is sub-Gaussian by construction. Then is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. and $p \to 0$ as $\norm{x-x}/\sigma \to \infty$, it is obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}/\sigma \to \infty$. The rest of the conditions are also very easily to prove. We can finally conclude that 
+    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ is sub-Gaussian by construction. Then is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. Thus $p \to 0$ as $\norm{x-x}/\sigma \to \infty$. It is also obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}/\sigma \to \infty$. The rest of the conditions are also very easily to prove. We can finally conclude that
     \begin{align}
         \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') + o(1).
     \end{align}
     Combine this estimation with (\ref{entropy_esti}) and we can conclude
     \begin{align}
-        \sum_{i \neq j}p_{ij} \log{ij} = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') - 2\log n + o(1).
+        \sum_{i \neq j}p_{ij} \log{ij} = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') - 2\log n + o(1),
     \end{align}
-    The proof is thus finished.
+    as desired.
+\end{proof}
+\subsection*{Partial Derivative of the Relative Entropy}
+Before we move on, we would like to take a small deviation and compute the
+partial derivative of the relative entropy. This is important because it will
+impact the property of the set $\tilde{\mathcal{P}}_X$.
+\begin{lemma} \label{derivative_lemma}
+    Let $X \in (\mathbb{R}^d)^n$ and $Y = (y_1,\dots,y_n)\in (\mathbb{R}^s)^n$ be the input and output of the t-SNE algorithm, then we have
+    \begin{align}
+        \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    By definition,
+    \begin{align}
+          & L_{n, \rho}(X,Y) = \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_ij}\right) \nonumber \\
+        = & \sum_{i \neq j} p_{ij} \log p_{ij} - \sum_{i \neq j} p_{ij} \log q_{ij}.
+    \end{align}
+    The first summation does not depend on $y_i$ and will vanish when taking the partial derivative. Moreover, we can further breakdown the second summation:
+    \begin{align}
+          & - \sum_{i \neq j} p_{ij} \log q_{ij} = - \sum_{i \neq j} p_{ij} \log g(y_i,y_j) + \sum_{i \neq j} p_{ij} \log \left(\sum_{k \neq l} g(y_k,y_l) \right)\nonumber \\
+        = & - \sum_{i \neq j} p_{ij} \log g(y_i,y_j) + \log \left(\sum_{k \neq l} g(y_k,y_l)\right).
+    \end{align}
+    Taking derivative of the last expression and note that only terms that contain $y_i$ remains. This means
+    \begin{align}
+        \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = & \sum_{j \neq i, j = 1}^n \left(-p_{ij}\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} + \frac{1}{\sum_{k \neq l} g(y_k,y_l)} \frac{\partial}{\partial y_i} g(y_i,y_j)\right) \nonumber                            \\
+        =                                                & \sum_{j \neq i, j = 1}^n \left(-p_{ij}\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} + \frac{g(y_i,y_j)}{\sum_{k \neq l} g(y_k,y_l)} \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}\right) \nonumber \\
+        =                                                & -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}.
+    \end{align}
+\end{proof}
+We can easily do a sanity test by letting $g(y_i,y_j) = (1+\norm{y_i-y_j}^2)^{-1}$ and get formula (A.1) in \cite{auffinger-tsne}.
+\subsection*{Back to the Main Arena}
+The derivative in lemma \ref{derivative_lemma} explains why
+$\tilde{\mathcal{{P}}}_X$ has that specific form. We are gradually marching
+towards the end. Onto the next lemma we go:
+\begin{lemma}
+    The following holds:
+    \begin{align}
+        \liminf_{n \to \infty}\sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) \geq \iint p(x,x')\log \frac{p(x,x')}{q(y,y')} d\mu d\mu.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Good news, the proof of this lemma also requires minimal details of the output kernel and is just a simple application of the Fatou's lemma. Like in lemma \ref{derivative_lemma}, we first break down the summation:
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \sum_{i \neq j} p_{ij} \log p_{ij} - \sum_{i \neq j} p_{ij} \log q_{ij}.
+    \end{align}
+    The convergence of the first summation has been proved in lemma \ref{entropy_lemma_1}. We just need to deal with the second summation. Note that we now have
+    \begin{align}
+        \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}
+    \end{align}
+    if $y_i$ is involved. By the definition of $q_{ij}$, we have
+    \begin{align} \label{entropy_esti_2}
+          & -\sum_{i \neq j}p_{ij} \log(q_{ij}) \nonumber                                                                                             \\
+        = & \frac{1}{n^2}\sum_{i \neq j} p_n(X_i,X_j) \log g(y_i,y_j) + \log \left(\frac{1}{n^2}\sum_{i \neq j} g(y_i,y_j)\right) +2 \log n \nonumber \\
+        = & \iint p_n(x,x')g(y,y')d\mu_n d\mu_n + \log \left(\iint g(y,y')d\mu_n d\mu_n - \frac{1}{n}\right)+2\log n.
+    \end{align}
+    By Fatou's lemma and lemma \ref{integrand_lemma_2}, we have
+    \begin{align} \label{fatou_esti_1}
+        \liminf_{n \to \infty} p_n(x,x')\log g(y,y') d\mu_n d\mu_n \geq  \iint p(x,x')\log g(y,y') d\mu d\mu.
+    \end{align}
+    Similarly, using Fatou lemma again and we have
+    \begin{align} \label{fatou_esti_2}
+        \liminf_{n \to \infty} \iint g(y,y') d\mu_n d\mu_n - \frac{1}{n} \geq \iint g(y,y')d\mu d\mu.
+    \end{align}
+    The $1/n$ is the duplicated diagonal term in the empirical measure and will obviously vanish as we take $n \to \infty$. Moreover, because of our assumption on the kernel $g$, the integrals on the RHS of the last two inequalities converge. In addition, since $\log$ is a continuous and increasing function, (\ref{fatou_esti_2}) implies
+    \begin{align} \label{fatou_esti_3}
+        \liminf_{n \to \infty} \log \left(\iint g(y,y') d\mu_n d\mu_n - \frac{1}{n}\right) \geq \log \left(\iint g(y,y')d\mu d\mu \right).
+    \end{align}
+    The proof is finished by combining (\ref{entropy_esti_2}), (\ref{fatou_esti_1}), (\ref{fatou_esti_3}) and lemma \ref{entropy_lemma_1}. The $2 \log n$ cancelled out because of (\ref{entropy_esti}).
 \end{proof}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
