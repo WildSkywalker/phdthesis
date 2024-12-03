@@ -343,7 +343,7 @@ Recall Prokhorov's theorem:
     If $\mu_n$ is a tight sequence of measures in Euclidean space. There exists a subsequence $\mu_{n_k}$ and a measure $\mu$ such that $\mu_{n_k}$ converges to $\mu$ weakly.
 \end{theorem*}
 We immediately get the following lemma:
-\begin{lemma}
+\begin{lemma} \label{mu_star_lemma}
     There exits $\mu^*$ such that
     \begin{align}
         I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)
@@ -364,10 +364,10 @@ Recall that $I_{\rho}(\mu)$ is the continuous version of $L_{n,\rho}(X,Y)$. It o
         \leq & \left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)-1\right|.
     \end{align}
     Recall that the sum of two sub-Gaussian random variables is still sub-Gaussian. If $\mu_X$ is sub-Gaussian, let $C$ be the constant of decay for $X_i-X_j$ and we have
-    \begin{align}
-        \p(|X_i-X_j|^2 \geq \log n) \leq 2 \exp(-\log n /C^2) = 2 \exp\left(\frac{1}{c^2}\right) \cdot \frac{1}{n} \to 0.
+    \begin{align} \label{distance_esti}
+        \p(\norm{X_i-X_j}^2 \geq \log n) \leq 2 \exp(-\log n /C^2) = 2 \exp\left(\frac{1}{c^2}\right) \cdot \frac{1}{n} \to 0.
     \end{align}
-    This means $|X_i-X_j|^2 = O(\log n)$ almost surely. On the other hand, if $\mu_X$ has compact support then $|X_i-X_j|$ will be bounded, even easier. Moreover, since $\sigma_n$ and $\sigma$ are both uniformly bounded below by lemma (\ref{sigma_lower_bdd_lemma}), by setting $x=X_i$ and $x'=X_j$ we get
+    This means $\norm{X_i-X_j}^2 = O(\log n)$ almost surely. On the other hand, if $\mu_X$ has compact support then $\norm{X_i-X_j}$ will be bounded, even easier. Moreover, since $\sigma_n$ and $\sigma$ are both uniformly bounded below by lemma (\ref{sigma_lower_bdd_lemma}), by setting $x=X_i$ and $x'=X_j$ we get
     \begin{align}
              & \left| \exp \left(\frac{|\sigma_n(x)^2-\sigma(x)^2|\norm{x-x}^2}{2\sigma_n(x)^2 \sigma(x)^2}\right)\right| \nonumber                  \\
         \leq & \frac{1}{\sigma_n(x) \sigma(x)}\left(\frac{1}{\sigma_n(x)} + \frac{1}{\sigma(x)}\right)|\sigma_n(x)-\sigma(x)|\norm{x-x'}^2 \nonumber \\
@@ -569,6 +569,132 @@ towards the end. Onto the next lemma we go:
     \end{align}
     The proof is finished by combining (\ref{entropy_esti_2}), (\ref{fatou_esti_1}), (\ref{fatou_esti_3}) and lemma \ref{entropy_lemma_1}. The $2 \log n$ cancelled out because of (\ref{entropy_esti}).
 \end{proof}
+In the original paper, this is the point where we finish proving the lower bound of the main theorem. However, we need to postpone such triumph later as we need a later lemma to reconstruct the results in the appendix of \cite{auffinger-tsne}. For convenience, define
+\begin{align}
+    q_n(y,y') = \frac{g(y,y')}{\iint g(y,y')d \mu_n(y) d \mu_n (y') - \frac{1}{n}}.
+\end{align}
+By lemma \ref{mu_star_lemma} there exists $mu^*$ such that $I(\mu^*) = \inf_{\mu}I_{\rho}(\mu)$. Let $(X_1,Y_1), \dots, (X_n,Y_n)$ be i.i.d. random variables drawn from $\mu^*$ and $\mu_n = \frac{1}{n} \sum_{i=1}^n \delta_{(X_i,Y_i)}$ their empirical measure. $\mu_n$ converges to $\mu^*$ weakly.
+\begin{lemma}
+    As $\n \to \infty$, we have
+    \begin{align}
+        \sum_{i \neq j} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \iint p_n(x,x') \log \left(\frac{p_n(x,x')}{q_n(y,y')}\right) d\mu_n d\mu_n + o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    We begin with the familiar computation
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = & \frac{1}{n^2}\sum_{i \neq j}p_n(X_i,X_j) \log \left(\frac{p_n(X_i,X_j)}{q_n(X_i,X_j)}\right) \nonumber          \\
+        =                                                                & \iint p_n(x,x') \log \left(\frac{p_n(X_i,X_j)}{q_n(X_i,X_j)}\right) d \mu_n d \mu_n + \text{\normalfont Err}_n,
+    \end{align}
+    where
+    \begin{align}
+          & \text{\normalfont Err}_n \nonumber  \\
+        = & -\frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\left(\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\right)-\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right)\right) \nonumber \\
+        = & -\frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\right) \nonumber                                                                               \\
+          & \qquad \qquad \qquad + \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right).
+    \end{align}
+   \gy{Ask Tuca about the errors in the original paper.} By (\ref{distance_esti}), we know that $\norm{X_i - X_j} \leq \log n$ almost surely as $n \to \infty$. This means $f_n(X_i,X_k) \geq 1/n + \exp(-2\sigma_n)$ almost surely. Using this fact it is easy to see that the first summation in the error term is $o(1)$ and we can write
+   \begin{align}
+        \text{\normalfont Err}_n = o(1) + \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right).
+   \end{align}
+   For the second term, it is already clear that
+   \begin{align}
+    \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)} = o(1).
+   \end{align}
+   On the other hand, we have by Fatou's lemma:
+   \begin{align}
+        \liminf_{n \to \infty}\frac{1}{n^2} \sum_{k \neq l}g(Y_k,Y_l) = \liminf_{n \to \infty} \iint g(y,y') d\mu_n d\mu_n - \frac{1}{n} \geq \iint g(y,y') d\mu^* d\mu^* < \infty,
+   \end{align}
+   by our assumption on the output kernel $g$. We can see that the second term in $\text{\normalfont Err}_n$ is also $o(1)$, which immediately implies $\text{\normalfont Err}_n = o(1)$ and completes the proof.
+\end{proof}
+The next lemma is needed to closing up the lower bound part of the main theorem.
+\begin{lemma}
+    As $n \to \infty$, we have
+    \begin{align}
+        \iint g(y,y')d\mu_n(y) d\mu_n(y) - \frac{1}{n} = \iint g(y,y')d\mu^* d\mu^* + o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    In this proof we will be adding some minor constraints to $g(y,y')$ to make the proof work. Since $\mu_n \to \mu$ weakly, it is tight by Prokhorov's theorem. For arbitrary $\epsilon >0$, there exists a compact set $K$ such that for all $n$, $\mu^*(K^c),\mu_n(K^c) \leq \epsilon$. \gy{TODO: Ask Tuca about the typo in the original paper.} Since $g(y,y')$ is bounded, there exists a constant $C$ such that
+    \begin{align}
+        &\left|\iint g(y,y')d\mu_n(y) d\mu_n(y) - \iint g(y,y')d\mu^* d\mu^*\right| \nonumber \\
+        =&\left|\iint g(y,y') \mathbbm{1}_{K \times K}(d\mu_n d\mu_n - d\mu^* d\mu^*)\right| + C\epsilon.
+    \end{align}
+    Define
+    \begin{align}
+        G_n(y) = \int g(y,y') \mathbbm{1}_K d\mu_n(y'), \qquad G(y) = \int g(y,y') \mathbbm{1}_K d\mu^*(y').
+    \end{align}
+    We now require the kernel $g$ to have continuous and bounded derivative, and we have the following claims:
+    \begin{claim} \label{claim_1}
+    $G_n(y)$ is uniformly equicontinuous on $k$.
+    \end{claim}
+    \begin{proof}[Proof of Claim]
+        Recall that by our assumptions $g(y,y') = k(\norm{y-y'})$. We get
+        \begin{align}
+           &|G_n(y)-G_n(\tilde{y})| = \left|\int k(\norm{y-y'}) - k(\norm{\tilde{y}-y'}) \mathbbm{1}_K d\mu_n(y')\right| \nonumber \\
+           \leq& \int \norm{y-\tilde{y}}\left|\frac{k(\norm{y-y'}) - k(\norm{\tilde{y}-y'})}{\norm{(y-y')-(\tilde{y}-y')}} \right|\mathbbm{1}_K d\mu_n(y') \nonumber \\
+           =&O(\norm{y-\tilde{y}}).
+        \end{align}
+        by mean value theorem and the additional assumption we just added.
+    \end{proof}
+    \begin{claim} \label{claim_2}
+        We have $\sup_{y \in K}|G_n(y)-G(y)|=o(1)$.
+    \end{claim}
+    \begin{proof}[Proof of Claim]
+        Since $K$ is compact, it suffices to show that for each $y \in K$, there exists $\delta>0$ such that
+        \begin{align}
+            \sup_{\tilde{y}\in B(y,\delta)} |G_n(\tilde{y})-G(\tilde{y})| \leq \epsilon.
+        \end{align}
+        \gy{TODO: Ask Tuca how exactly compactness plays a role in the proof. Using the finite subcover of all the balls?}
+       Towards this end, by triangular inequality,
+       \begin{align}
+        |G_n(\tilde{y})-G(\tilde{y})| \leq |G_n(\tilde{y})-G_n(y)|+|G_n(y)-G(y)|+|G(y)-G(\tilde{y})|.
+       \end{align}
+       By the previous claim, the first term on the RHS vanishes because of equicontinuity. The second term vanishes because of weak convergence and the boundedness of the integrand $g(y,y')$. Finally, the last term vanishes because we can prove the equicontinuity of $G$ using a similar argument like the claim \ref{claim_1}.
+    \end{proof}
+    By claim \ref{claim_2} we have
+    \begin{align}
+        \iint g(y,y') \mathbbm{1}_{K \times K} d\mu_n d\mu_n = \iint g(y,y') \mathbbm{1}_{K \times K} d\mu^* d\mu_n +o(1) = \int G(y) \mathbbm{1}_K d\mu_n(y)+o(1).
+    \end{align}
+    Since $G$ is bounded and continuous by our assumptions on the kernel $g(y,y')$, using weak convergence of $\mu_n$ and we have
+    \begin{align}
+        \int G(y) \mathbbm{1}_K d\mu_n(y) = \int G(y) \mathbbm{1}_K d\mu^*n(y) + o(1) = \iint g(y,y')d\mu^* d\mu^* + o(1),
+    \end{align}
+    as desired.
+\end{proof}
+For clarify, we reiterate our assumptions:
+The output kernel satisfies $g(y,y') = k (\norm{y-y'})$ such that:
+
+1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded.
+
+2. $k$ satisfies
+\begin{align}
+    \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
+\end{align}
+
+3. $k$ has continuous and bounded derivative.
+
+We are near the end, a couple of more lemmas to go!
+\begin{lemma}
+    If $\mu^*$ has compact support in $Y$, then
+    \begin{align}
+        \iint p_n(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p_n(x,x') \log(g(y,y')) d\mu^* d\mu^* +o(1).
+    \end{align}
+\end{lemma}
+\begin{lemma}
+    If $\mu^*$ has compact support in $Y$, then
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \iint p(x,x') \log\left(\frac{p(x,x')}{q(y,y')}\right) d\mu^* d\mu^* +o(1)
+    \end{align}
+\end{lemma}
+\begin{proposition}
+    If $\mu^*$ has compact support in $Y$, then 
+    \begin{align}
+        \limsup_{n \to \infty} \inf_{Y \in (\mathbb{R}^s)^n} L_{n,\rho}(X,Y) \leq I_{\rho}(\mu^*).
+    \end{align}
+\end{proposition}
+\section{Finishing up the Lower Bound}
+\section{Proof of the Main Theorems}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}

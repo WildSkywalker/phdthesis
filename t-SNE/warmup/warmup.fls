@@ -305,6 +305,12 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm10.tfm
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm7.tfm
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm5.tfm
 INPUT .\warmup.bbl
 INPUT .\warmup.bbl
 INPUT warmup.bbl
@@ -312,6 +318,8 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tf
 INPUT warmup.aux
 INPUT .\warmup.out
 INPUT .\warmup.out
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\bbm\dpi600\bbm10.pk
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\bbm\dpi600\bbm10.pk
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
