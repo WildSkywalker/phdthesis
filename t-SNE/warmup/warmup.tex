@@ -421,7 +421,7 @@ $g$: $g(y,y') = k (\norm{y-y'})$ such that:
     \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
 \end{align}
 
-\begin{lemma}
+\begin{lemma} \label{lower_bound_lemma_1}
     There exists a set of points $y^*(X)$ such that
     \begin{align}
         \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y) = L_{n,\rho}(X,y^*).
@@ -523,7 +523,7 @@ impact the property of the set $\tilde{\mathcal{P}}_X$.
         = & - \sum_{i \neq j} p_{ij} \log g(y_i,y_j) + \log \left(\sum_{k \neq l} g(y_k,y_l)\right).
     \end{align}
     Taking derivative of the last expression and note that only terms that contain $y_i$ remains. This means
-    \begin{align}
+    \begin{align} \label{L_derivative}
         \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = & \sum_{j \neq i, j = 1}^n \left(-p_{ij}\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} + \frac{1}{\sum_{k \neq l} g(y_k,y_l)} \frac{\partial}{\partial y_i} g(y_i,y_j)\right) \nonumber                            \\
         =                                                & \sum_{j \neq i, j = 1}^n \left(-p_{ij}\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} + \frac{g(y_i,y_j)}{\sum_{k \neq l} g(y_k,y_l)} \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}\right) \nonumber \\
         =                                                & -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}.
@@ -534,7 +534,7 @@ We can easily do a sanity test by letting $g(y_i,y_j) = (1+\norm{y_i-y_j}^2)^{-1
 The derivative in lemma \ref{derivative_lemma} explains why
 $\tilde{\mathcal{{P}}}_X$ has that specific form. We are gradually marching
 towards the end. Onto the next lemma we go:
-\begin{lemma}
+\begin{lemma} \label{lower_bound_lemma_2}
     The following holds:
     \begin{align}
         \liminf_{n \to \infty}\sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) \geq \iint p(x,x')\log \frac{p(x,x')}{q(y,y')} d\mu d\mu.
@@ -574,7 +574,7 @@ In the original paper, this is the point where we finish proving the lower bound
     q_n(y,y') = \frac{g(y,y')}{\iint g(y,y')d \mu_n(y) d \mu_n (y') - \frac{1}{n}}.
 \end{align}
 By lemma \ref{mu_star_lemma} there exists $mu^*$ such that $I(\mu^*) = \inf_{\mu}I_{\rho}(\mu)$. Let $(X_1,Y_1), \dots, (X_n,Y_n)$ be i.i.d. random variables drawn from $\mu^*$ and $\mu_n = \frac{1}{n} \sum_{i=1}^n \delta_{(X_i,Y_i)}$ their empirical measure. $\mu_n$ converges to $\mu^*$ weakly.
-\begin{lemma}
+\begin{lemma} \label{int_approx_lemma_2}
     As $\n \to \infty$, we have
     \begin{align}
         \sum_{i \neq j} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \iint p_n(x,x') \log \left(\frac{p_n(x,x')}{q_n(y,y')}\right) d\mu_n d\mu_n + o(1).
@@ -608,7 +608,7 @@ By lemma \ref{mu_star_lemma} there exists $mu^*$ such that $I(\mu^*) = \inf_{\mu
    by our assumption on the output kernel $g$. We can see that the second term in $\text{\normalfont Err}_n$ is also $o(1)$, which immediately implies $\text{\normalfont Err}_n = o(1)$ and completes the proof.
 \end{proof}
 The next lemma is needed to closing up the lower bound part of the main theorem.
-\begin{lemma}
+\begin{lemma} \label{output_kernel_int_lemma}
     As $n \to \infty$, we have
     \begin{align}
         \iint g(y,y')d\mu_n(y) d\mu_n(y) - \frac{1}{n} = \iint g(y,y')d\mu^* d\mu^* + o(1).
@@ -681,12 +681,28 @@ We are near the end, a couple of more lemmas to go!
         \iint p_n(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p_n(x,x') \log(g(y,y')) d\mu^* d\mu^* +o(1).
     \end{align}
 \end{lemma}
+\gy{TODO: Ask Tuca what does he mean by 'having compact support in $Y$'. $Y$ is the output data we are trying to compute, not a space.}
+\begin{proof}
+    It seems that the compactness is used to ensure the upper bound of $\norm{y-y'}$ such that $g(y,y')$ does not decay to zero. In that case, by lemma \ref{integrand_lemma_2}, we can replace the $p_n$ in the integral by $p$:
+    \begin{align}
+        \iint p_n(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p(x,x') \log(g(y,y')) d\mu_n d\mu_n + o(1).
+    \end{align}
+    Mimicing the proof of lemma \ref{entropy_lemma_1} we can show that
+    \begin{align}
+        \iint p(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p(x,x') \log(g(y,y')) d\mu^* d\mu^* + o(1).
+    \end{align}
+    This finishes the proof.
+\end{proof}
 \begin{lemma}
     If $\mu^*$ has compact support in $Y$, then
     \begin{align}
         \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \iint p(x,x') \log\left(\frac{p(x,x')}{q(y,y')}\right) d\mu^* d\mu^* +o(1)
     \end{align}
 \end{lemma}
+\begin{proof}
+    This lemma can be proved by combining the last 3 lemmas and lemma \ref{entropy_lemma_1}.
+\end{proof}
+Using the previous lemma and we can immediately get \gy{TODO: I maybe stupid but I need to ask Tuca about this.}
 \begin{proposition}
     If $\mu^*$ has compact support in $Y$, then 
     \begin{align}
@@ -694,7 +710,87 @@ We are near the end, a couple of more lemmas to go!
     \end{align}
 \end{proposition}
 \section{Finishing up the Lower Bound}
+Now with lemma \ref{output_kernel_int_lemma} proved, we are able to tackle the lemmas in the appendix and prove our own versions of them. Recall that $\mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}$ is the empirical measure of both the input and output. We just ignore the first or the second part based on the integration variable because it is a probability measure. Let $Y = Y^* = (Y_1,\dots,Y_n)$ be a minimizer of $L$. Recall from (\ref{L_derivative}) that
+\begin{align}
+    \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} = 0.
+\end{align}
+\begin{lemma} \label{appendix_lemma}
+    Suppose that $\mu_X$ has either compact support and a $C^1$ density $f(x)$ or $\mu_X$ has sub-Gaussian tails. Then for $\mu$-a.e. $x$ and $y$ we have
+    \begin{align}
+        \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = 0.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Let $\alpha(x,y)$ be a test function. It suffices to show that
+    \begin{align}
+        \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = 0.
+    \end{align}
+    Recalling the definition of $p_n$ and $q_n$, we see from (\ref{L_derivative}) that for all $i$,
+    \begin{align}
+        \frac{1}{n^2}\sum_{j=1,j \neq i}^n (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0.
+    \end{align}
+    Mutiply by $\alpha(X_i,Y_i)$ for each $i$ and the both sides are still zero. Afterwards, take summation in $i$ and we get
+    \begin{align}
+        &\iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
+        =&\frac{1}{n^2}\sum_{1 \leq i,j \leq n} (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0
+    \end{align}
+    if we require $k'(0) = 0$.
+    By lemma \ref{integrand_lemma_2} and lemma \ref{output_kernel_int_lemma}, we have
+    \begin{align}
+        p_n(X_i,X_j)-q_n(Y_i,Y_j) = p(X_i,X_j)-q(Y_i,Y_j) + o(1).
+    \end{align}
+    Since both $\alpha$ and $\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}$ are bounded based on our assumptions, we have
+    \begin{align}
+        &\iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
+        =&\iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n + o(1).
+    \end{align}
+    By lemma \ref{appendix_lemma_1} and lemma \ref{appendix_lemma_2} below we have
+    \begin{align}
+        &\iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
+        =&\iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1).
+    \end{align}
+    Since $\alpha$ is an arbitrary function,
+    \begin{align}
+        \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = 0.
+    \end{align}
+\end{proof}
+\begin{lemma} \label{appendix_lemma_1}
+    The following holds as $n \to \infty$:
+    \begin{align}
+        \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
+    \end{align}
+\end{lemma}
+This lemma can be proved by mimicing lemma \ref{entropy_lemma_1}
+\begin{lemma} \label{appendix_lemma_2}
+    The following holds as $n \to \infty$:
+    \begin{align}
+        \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
+    \end{align}
+\end{lemma}
+This lemma can be proved by mimicing lemma \ref{int_approx_lemma_2}. Now let us go back to lemma \ref{lower_bound_lemma_1}. Let $y^*$ be given in the lemma and define
+\begin{align}
+ \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
+\end{align}
+We can easily show that $mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. Then, using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}, we have the following important proposition:
+\begin{lemma} \label{lower_bound_lemma_main}
+    There exists a sub-sequence $n(k)$ such that
+    \begin{align}
+        \liminf_{k \to \infty} \inf_{Y \in (\mathbb{R}^s)^{n(k)}} L_{n(k),\rho}(X,Y) \geq I_{\rho}(\mu).
+    \end{align}
+\end{lemma}
 \section{Proof of the Main Theorems}
+We now state the main theorems and prove it.
+\begin{theorem} \label{main_theorem_1}
+    \gy{TODO: Ask Tuca about the sub-Gaussian tails.}
+    Assume $\mu_X$ has $C^1$ density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be independent, identically distributed random variables with common distribution $\mu_X$. Then for any $\rho \in (0,1)$,
+    \begin{align}
+        \lim_{n \to \infty} \inf_Y L_{n,\rho}(X,Y) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu).
+    \end{align}
+    Moreover, there exists a measure $\mu^*$ and a sub-sequence $n_k$ such that $\mu_{n_k}$ converges weakly to $\mu^*$ and $I_{\rho}(\mu^*) =\inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$
+\end{theorem}
+\begin{theorem} \label{main_theorem_2}
+    Under the same assumptions of theorem \ref{main_theorem_1}, $\mu^*$ has compact support.
+\end{theorem}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}
