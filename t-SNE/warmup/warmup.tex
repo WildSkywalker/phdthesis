@@ -571,8 +571,9 @@ towards the end. Onto the next lemma we go:
 \end{proof}
 In the original paper, this is the point where we finish proving the lower bound of the main theorem. However, we need to postpone such triumph later as we need a later lemma to reconstruct the results in the appendix of \cite{auffinger-tsne}. For convenience, define
 \begin{align}
-    q_n(y,y') = \frac{g(y,y')}{\iint g(y,y')d \mu_n(y) d \mu_n (y') - \frac{1}{n}}.
+    q_n(y,y') = \frac{g(y,y')}{\iint g(y,y')d \mu_n(y) d \mu_n (y') - \frac{1}{n}k(0)}.
 \end{align}
+Here $k(0) = g(y,y)$ is the value of the output kernel when both inputs are equal. Since multiplying a constant to $g$ does not change anything, we can just treat $k(0)=1$ for convenience as everything is normalized.
 By lemma \ref{mu_star_lemma} there exists $mu^*$ such that $I(\mu^*) = \inf_{\mu}I_{\rho}(\mu)$. Let $(X_1,Y_1), \dots, (X_n,Y_n)$ be i.i.d. random variables drawn from $\mu^*$ and $\mu_n = \frac{1}{n} \sum_{i=1}^n \delta_{(X_i,Y_i)}$ their empirical measure. $\mu_n$ converges to $\mu^*$ weakly.
 \begin{lemma} \label{int_approx_lemma_2}
     As $\n \to \infty$, we have
@@ -624,7 +625,7 @@ The next lemma is needed to closing up the lower bound part of the main theorem.
     \begin{align}
         G_n(y) = \int g(y,y') \mathbbm{1}_K d\mu_n(y'), \qquad G(y) = \int g(y,y') \mathbbm{1}_K d\mu^*(y').
     \end{align}
-    We now require the kernel $g$ to have continuous and bounded derivative, and we have the following claims:
+    We now require the kernel $g$ to have bounded derivative, and we have the following claims:
     \begin{claim} \label{claim_1}
     $G_n(y)$ is uniformly equicontinuous on $k$.
     \end{claim}
@@ -672,7 +673,7 @@ The output kernel satisfies $g(y,y') = k (\norm{y-y'})$ such that:
     \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
 \end{align}
 
-3. $k$ has continuous and bounded derivative.
+3. $k$ has bounded derivative.
 
 We are near the end, a couple of more lemmas to go!
 \begin{lemma}
@@ -703,7 +704,7 @@ We are near the end, a couple of more lemmas to go!
     This lemma can be proved by combining the last 3 lemmas and lemma \ref{entropy_lemma_1}.
 \end{proof}
 Using the previous lemma and we can immediately get \gy{TODO: I maybe stupid but I need to ask Tuca about this.}
-\begin{proposition}
+\begin{proposition} \label{upper_bound_prop}
     If $\mu^*$ has compact support in $Y$, then 
     \begin{align}
         \limsup_{n \to \infty} \inf_{Y \in (\mathbb{R}^s)^n} L_{n,\rho}(X,Y) \leq I_{\rho}(\mu^*).
@@ -754,6 +755,19 @@ Now with lemma \ref{output_kernel_int_lemma} proved, we are able to tackle the l
         \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = 0.
     \end{align}
 \end{proof}
+Let us know update the assumptions we have on $g(y,y')$:
+The output kernel satisfies $g(y,y') = k (\norm{y-y'})$ such that:
+
+1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded.
+
+2. $k$ satisfies
+\begin{align}
+    \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
+\end{align}
+
+3. $k$ has bounded derivative.
+
+4. $k'(0) = 0$.
 \begin{lemma} \label{appendix_lemma_1}
     The following holds as $n \to \infty$:
     \begin{align}
@@ -772,12 +786,12 @@ This lemma can be proved by mimicing lemma \ref{int_approx_lemma_2}. Now let us 
  \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
 \end{align}
 We can easily show that $mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. Then, using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}, we have the following important proposition:
-\begin{lemma} \label{lower_bound_lemma_main}
+\begin{proposition} \label{lower_bound_prop}
     There exists a sub-sequence $n(k)$ such that
     \begin{align}
         \liminf_{k \to \infty} \inf_{Y \in (\mathbb{R}^s)^{n(k)}} L_{n(k),\rho}(X,Y) \geq I_{\rho}(\mu).
     \end{align}
-\end{lemma}
+\end{proposition}
 \section{Proof of the Main Theorems}
 We now state the main theorems and prove it.
 \begin{theorem} \label{main_theorem_1}
@@ -788,9 +802,95 @@ We now state the main theorems and prove it.
     \end{align}
     Moreover, there exists a measure $\mu^*$ and a sub-sequence $n_k$ such that $\mu_{n_k}$ converges weakly to $\mu^*$ and $I_{\rho}(\mu^*) =\inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$
 \end{theorem}
+\begin{proof}\
+    Write
+    \begin{align}
+        d_{n,\rho}(X) = \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y).
+    \end{align}
+    By proposition \ref{upper_bound_prop}, \ref{lower_bound_prop} and the fact that $\mu^* = \argmin_{\mu in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$, there exists $\mu \in \tilde{\mathcal{P}}_X$ and a subsequence $n(k)$ such that
+    \begin{align}
+        I_{\rho}(\mu^*) \geq \limsup_{n \to \infty} d_{n,\rho}(X) \geq \limsup_{n \to \infty} d_{n(k),\rho}(X) \geq I_{\rho}(\mu) \geq I_{\rho}(\mu^*).
+    \end{align}
+    Therefore the limit
+    \begin{align}
+        \lim_{n \to \infty} d_{n(k),\rho}(X) = I_{\rho}(\mu) = I_{\rho}(\mu^*)
+    \end{align}
+    holds when we look at the sub-sequence $n(k)$ with the emprical measure $\mu$ converging to $\mu$ weakly. For the general limit, we can repeat the reasoning above by looking at any convergent sub-sequences of $d_{n,\rho}(X)$. We are able to find a sub-sequence inside each convergent sub-sequence and they all converges to $I_{\rho}(\mu^*)$. Therefore each convergent sub-sequence of $d_{n,\rho}(X)$ has the same limit and the theorem is proved.
+\end{proof}
 \begin{theorem} \label{main_theorem_2}
     Under the same assumptions of theorem \ref{main_theorem_1}, $\mu^*$ has compact support.
 \end{theorem}
+We need another lemma before proving this theorem.
+\begin{lemma} \label{home_stretch_lemma}
+    For every $\mu \in \tilde{\mathcal{P}}_X$, there exists a function $h_{\mu}(x)$ that does depend on $y$ such that \gy{I think $h_{\mu}$ does NOT depend on $y$ as its partial derivative with respect to $y$ is zero by the deduction below? Ask Tuca if it is a typo.}
+    \begin{align}
+        \int p(x,x') \log(1+\norm{y-y'})d\mu = h_{\mu(x)} - \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}.
+    \end{align}
+    Moreover, if $\mu_X$ has compact support, then $h_{\mu}$ is continuous on $\mu_X$.
+\end{lemma}
+\begin{proof}
+    Recall from (\ref{derivative_lemma}), we have
+    \begin{align}
+        0 =& \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') \nonumber \\ 
+        =&\int p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d \mu -  \frac{\int \frac{\partial}{\partial y}g(y,y')d\mu}{\iint g(y,y')d\mu d\mu} \nonumber \\
+        =& \nabla_y \left(\int p(x,x') \log (g(y,y')^{-1}) d \mu -  \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}\right).
+    \end{align}
+    This means that there exists $h_{\mu}: \mathbb{R}^d \to \mathbb{R}$ such that
+    \begin{align}
+        h_{\mu(x)} = \int p(x,x') \log(g(y,y')^{-1})d\mu + \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}.
+    \end{align}
+    Since $h_{\mu(x)}$ does not change with $y$, it suffices to show that $\int p(x,x') \log(g(y,y')^{-1})d\mu$ is continuous in $x$. Let $\epsilon>0$ and suppose $x_n \to x$. Since $p$ is continuous, and $\mu_X$ has compact support, we have for some constant $C$,
+    \begin{align}
+        \iint \log(g(y,y')^{-1})d\mu d\mu \leq C \int p(x,x') \log(g(y,y')^{-1})d\mu < \infty.
+    \end{align}
+    In particular, for almost every $y$, $\int \log(g(y,y')^{-1})d\mu < \infty$. Since $p(x,x')$ is continuous and $\mu_X$ has compact support, $p(x,x')$ is uniformly continuous. Specifically, there exists $\delta = \delta(y,\mu)$ such that if $\norm{x_n-x} \leq \delta$,
+    \begin{align}
+        \sup_x |p_n(x,x')-p(x,x')| \leq \frac{\epsilon}{\log(g(y,y')^{-1})d\mu}.
+    \end{align}
+    This means
+    \begin{align}
+        \left|\int(p_n(x,x')-p(x,x')) \log(g(y,y')^{-1})d \mu\right| < \epsilon,
+    \end{align}
+    which is the definition of continuity. The proof is finished.
+\end{proof}
+\begin{proof}[Proof of Theorem \ref{main_theorem_2}]
+    We prove by contradiction. Define $D_n = \{\norm{y} \geq n\}$. If $\mu^*$ does not have compact support in $Y$ then $\mu(D_n)>0$ for all $n$. By lemma \ref{home_stretch_lemma}, there exists continuous $h(x)$ such that
+    \begin{align}
+        \int p(x,x') \log(g(y,y')^{-1})d\mu^* = h(x) -  \frac{\int g(y,y')d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
+    \end{align}
+    Mutliply both sides by $\mathbbm{1}_{D_n(x,y)}/\mu^*(D_n)$ and integrate with respect to the other variable:
+    \begin{align}
+        &\iint p(x,x') \log(g(y,y')^{-1}) \frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* d\mu^* \nonumber \\
+        &\qquad \qquad \qquad= \int h(x)\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* -  \frac{\iint g(y,y')\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)} d\mu^* d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
+    \end{align}
+    Since $h$ is continuous and $\mu_X$ has compact support, the first term of the RHS is bounded uniformly in $n$. Moreover, $g(y,y')$  is bounded so the second term is also bounded uniformly in $n$. It follows that the LHS is bounded in uniformly in $n$. With this being said, because $p(x,x')>0$ and $\mu_X$ has compact support, there exists a constant $c$ such that $p(x,x') \geq c$ for all $x,x'$ in the support of $\mu_X$. 
+    
+    Meanwhile, since the output kernel $g(y,y') = k(\norm{x-x'})$ is integrable, it has a decaying tail and there exists $C(n)$ such that $C(n) \to \infty$ and if $\norm{x-x'} \geq n/2$, $g(y,y')^{-1}=k(\norm{x-x'})^{-1} \geq log (1+C(n))$. We compute
+    \begin{align}
+        &\frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} d\mu^* d\mu^* \nonumber \\
+        \geq& \frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y-y'} \geq n/2}d\mu^* d\mu^* \nonumber \\
+        \geq& c \frac{\log(1+C(n))}{\mu^*(D_n)} \iint \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y'} \leq n/2}d\mu^* d\mu^* \nonumber \\
+        =& c\log(1+C(n)) \mu^*(\norm{Y'}\leq n/2).
+    \end{align}
+    Clearly,
+    \begin{align}
+        \lim_{n \to \infty} c\log(1+C(n)) \mu^*(\norm{Y'}\leq n/2) = \infty.
+    \end{align}
+    This contradicts with the boundedness. We must have that $\mu^*(D_n)=0$ for $n$ sufficiently large. That is, $\mu^*(\norm{Y} \geq n)=0$, so $\mu^*$ has compact support in $Y$.
+\end{proof}
+In the end, we have the following assumptions on the output kernel for everything to hold:
+The output kernel satisfies $g(y,y') = k (\norm{y-y'})$ such that:
+
+1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded.
+
+2. $k$ satisfies
+\begin{align}
+    \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
+\end{align}
+
+3. $k$ has bounded derivative.
+
+4. $k'(0) = 0$.
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}
