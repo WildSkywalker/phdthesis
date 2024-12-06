@@ -144,10 +144,82 @@ whether the understanding of the big picture is correct. Later in this section
 we will highlight the main difference between this document and the original
 paper should the readers are looking for the lemmas associated with the general
 output kernel.
+
+From the first look the original paper \cite{auffinger-tsne} is daunting and
+painful to read because there are many definitions, one built upon each other.
+THerefore tracking the computation in such settings can be exhausting. However,
+after going through the entire thing one can find the underlying logic of the
+paper very simple and natural. The ultimate goal is to prove the convergence of
+$L_{n,\rho}(X,Y)$. More specifically, how can we cannot this quantity to its
+continuous version, with the empirical measure replaced with the limiting
+measure and the summand replaced with a continuous integrand. We cannot just do
+it at once, so we need to do it one at a time, and lower bound/upper bound
+separately.
 \subsection*{Difference from the Original Paper}
+Most of work starts after section \ref{section_actual_computation}. Before
+that, some proofs are provided either because the original paper omitted them
+or the original paper had minor mistakes. The key difference between the
+original kernel and this notes is to write down
+\begin{align}
+    \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}.
+\end{align}
+This actually gives us a clearer idea why the set $\tilde{\mathcal{P}}$ takes its form in the original paper. Also we require the general kernel to have bounded derivative because that is essential for equicontinuity in lemma \ref{output_kernel_int_lemma}. After realizing the key differences the rest of the proofs will come natural.
 \section{Progress and Roadmap for Ph.D Thesis}
 This section is used to lay out the plan for next steps and how we could finish
-the Ph.D thesis on time.
+the Ph.D thesis on time. At this point, I have a very good understanding of the
+paper and from the computations in this notes, we know that the generalization
+of the output kernel does NOT interfere with the input kernel. Therefore, this
+notes serve more than just a warmup or an exercise for us to get familiarize
+with the paper, but also an important of the final results we want to prove.
+Though not very difficult, having results with both the input and output kernel
+generalized will give us a much nicer overall package.
+
+THe other thing that make this project optimistic is that the estimation after
+section 4 in the original paper mostly depend on the bound we derive in section
+3. More precisely, the limits in lemma 6 and 7 of \cite{auffinger-tsne} are the
+slowest limits we will ever get in this paper. Afterwards all analysis will be
+done in a higher level. This is huge. If we can reach lemma 6 and lemma 7 then
+we know that the battle is mostly won. At the end of day, we have a content
+rich paper where the first half deals with the input kernel and the second half
+deals with the output kernel. Again, the overall package looks good.
+
+Moreover, this is a data science problem. My other two publications are also in
+data science, just with more applications. One is about Bayesian learning and
+variational auto encoder, also a dimension reduction technique like t-SNE. The
+other one is about learning Markov random fields and k-cnf, also a
+probabilistic algorithm. Both are published in top tier conferences and we have
+a theme. Choosing t-SNE as the main project increase the weight of the other
+two publications because we have a theme. This is a major advantage compared to
+choosing a statistical physics problem, but I do admit that statistical physics
+sounds cool.
+
+Finally about the future plans, here are the difficulties I envisioned and what
+I plan to do.
+
+1. The most difficult part could just well be the first part of the paper, the existence and the uniqueness of $\sigma^*$. In \cite{auffinger-tsne} the proofs is tailored by the specific form of Gaussian kernels so we might potentially need a brand new proof.
+
+2. The good news is, as long as we can establish the existence of $\sigma^*$ we don't need the nuances in the proofs for the rest of the problem. We might as well treat it as a separate, small problem to tackle. Moreover, since it is the beginning of the problems it requires minimal prior knowledge, just calculus and dedication. I can ask Tuca to go through the computation with me and ask him for advices.
+
+3. After that there are two routes we can pursue. The first is to compute directly with a generalized kernel. We can write $f(x,x')=e^{w(x,x')}$ because the exponential function is a bijection on $\mathbb{R}^+$. This way we can get cleaner notation and get rid of logarithm as much as possible. This is the most straightforward and brutal force method. If we can reach lemma 7 in \cite{auffinger-tsne} we win.
+
+The other route is the first prove that if a kernel satisfies everything, any
+kernels that decay faster will also satisfy everything. I asked about this and
+Tuca firmly believed it is true because it looks way too natural to not be
+true. If we can do that easily, we then work with a specific kernel and iterate
+on our choice of specific kernel. Going through this route will potentially be
+faster, but the result may not be good enough for a thesis.
+
+Either case, here are my tentative timeline.
+
+1. Meet with Tuca again in one week, preferably Monday after he came back from Baltimore. During this week I will explore the existence and the uniqueness of $\sigma^*$. I will prepare very detailed notes documenting my effort so when I see Tuca again and if I am having trouble, we can do some computation together.
+
+2. I plan to finish the proof of existence and uniqueness before Christmas, then we can focus on the last part of this project. We will go down both routes and hopefully I will have the problem done in January. Again, we ONLY need to reach lemma 7 so the background is simple enough for Tuca to help and step in. This is very different from the statistical physics problem where it requires too much information Tuca is not familiar with. Plus, come on, Tuca wrote the original paper.
+
+3. After the results are finished, I will put together a carefully reviewed draft for Tuca to review. I will go through it with Tuca and make sure everything is correct.
+
+4. If the results are correct and do not need major repair, I will put together the first draft of the thesis. Tuca may suggest what I have is not enough and needs more. That is OK but a draft is a draft. He and I will discuss and we can also ask opinions from the committee. The goal this time is to make sure the draft I have is well polished so it will not waste any more of my time.
+
+5. If more needs to be done, calm down and discuss with Tuca. If I reach this step, I have solid results with me so the situation is night and day different from before. Tuca will understand and he will help.
 \section{Setup}
 Here goes the real math. Recall that this document is dedicated to the
 reconstruction of \cite{auffinger-tsne} with low-dimension kernel $g$ replaced
@@ -406,7 +478,7 @@ One thing we should highlight here is that we are abusing the notation of $\sigm
     \end{align}
 \end{lemma}
 \gy{TODO: Ask Tuca about the last step of the proof in \cite{auffinger-tsne}.}
-\section{The Actual Computation}
+\section{The Actual Computation} \label{section_actual_computation}
 From this point onward, we are starting to have lemmas and results related to
 the output kernel $g$ and this is where the trail begins. Along the way we will
 see if there is a need to add more conditions to $g$ and if we do, every time
@@ -589,24 +661,24 @@ By lemma \ref{mu_star_lemma} there exists $mu^*$ such that $I(\mu^*) = \inf_{\mu
     \end{align}
     where
     \begin{align}
-          & \text{\normalfont Err}_n \nonumber  \\
+          & \text{\normalfont Err}_n \nonumber                                                                                                                                                                                                   \\
         = & -\frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\left(\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\right)-\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right)\right) \nonumber \\
         = & -\frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\right) \nonumber                                                                               \\
           & \qquad \qquad \qquad + \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right).
     \end{align}
-   \gy{Ask Tuca about the errors in the original paper.} By (\ref{distance_esti}), we know that $\norm{X_i - X_j} \leq \log n$ almost surely as $n \to \infty$. This means $f_n(X_i,X_k) \geq 1/n + \exp(-2\sigma_n)$ almost surely. Using this fact it is easy to see that the first summation in the error term is $o(1)$ and we can write
-   \begin{align}
+    \gy{Ask Tuca about the errors in the original paper.} By (\ref{distance_esti}), we know that $\norm{X_i - X_j} \leq \log n$ almost surely as $n \to \infty$. This means $f_n(X_i,X_k) \geq 1/n + \exp(-2\sigma_n)$ almost surely. Using this fact it is easy to see that the first summation in the error term is $o(1)$ and we can write
+    \begin{align}
         \text{\normalfont Err}_n = o(1) + \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right).
-   \end{align}
-   For the second term, it is already clear that
-   \begin{align}
-    \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)} = o(1).
-   \end{align}
-   On the other hand, we have by Fatou's lemma:
-   \begin{align}
+    \end{align}
+    For the second term, it is already clear that
+    \begin{align}
+        \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)} = o(1).
+    \end{align}
+    On the other hand, we have by Fatou's lemma:
+    \begin{align}
         \liminf_{n \to \infty}\frac{1}{n^2} \sum_{k \neq l}g(Y_k,Y_l) = \liminf_{n \to \infty} \iint g(y,y') d\mu_n d\mu_n - \frac{1}{n} \geq \iint g(y,y') d\mu^* d\mu^* < \infty,
-   \end{align}
-   by our assumption on the output kernel $g$. We can see that the second term in $\text{\normalfont Err}_n$ is also $o(1)$, which immediately implies $\text{\normalfont Err}_n = o(1)$ and completes the proof.
+    \end{align}
+    by our assumption on the output kernel $g$. We can see that the second term in $\text{\normalfont Err}_n$ is also $o(1)$, which immediately implies $\text{\normalfont Err}_n = o(1)$ and completes the proof.
 \end{proof}
 The next lemma is needed to closing up the lower bound part of the main theorem.
 \begin{lemma} \label{output_kernel_int_lemma}
@@ -618,8 +690,8 @@ The next lemma is needed to closing up the lower bound part of the main theorem.
 \begin{proof}
     In this proof we will be adding some minor constraints to $g(y,y')$ to make the proof work. Since $\mu_n \to \mu$ weakly, it is tight by Prokhorov's theorem. For arbitrary $\epsilon >0$, there exists a compact set $K$ such that for all $n$, $\mu^*(K^c),\mu_n(K^c) \leq \epsilon$. \gy{TODO: Ask Tuca about the typo in the original paper.} Since $g(y,y')$ is bounded, there exists a constant $C$ such that
     \begin{align}
-        &\left|\iint g(y,y')d\mu_n(y) d\mu_n(y) - \iint g(y,y')d\mu^* d\mu^*\right| \nonumber \\
-        =&\left|\iint g(y,y') \mathbbm{1}_{K \times K}(d\mu_n d\mu_n - d\mu^* d\mu^*)\right| + C\epsilon.
+          & \left|\iint g(y,y')d\mu_n(y) d\mu_n(y) - \iint g(y,y')d\mu^* d\mu^*\right| \nonumber            \\
+        = & \left|\iint g(y,y') \mathbbm{1}_{K \times K}(d\mu_n d\mu_n - d\mu^* d\mu^*)\right| + C\epsilon.
     \end{align}
     Define
     \begin{align}
@@ -627,14 +699,14 @@ The next lemma is needed to closing up the lower bound part of the main theorem.
     \end{align}
     We now require the kernel $g$ to have bounded derivative, and we have the following claims:
     \begin{claim} \label{claim_1}
-    $G_n(y)$ is uniformly equicontinuous on $k$.
+        $G_n(y)$ is uniformly equicontinuous on $k$.
     \end{claim}
     \begin{proof}[Proof of Claim]
         Recall that by our assumptions $g(y,y') = k(\norm{y-y'})$. We get
         \begin{align}
-           &|G_n(y)-G_n(\tilde{y})| = \left|\int k(\norm{y-y'}) - k(\norm{\tilde{y}-y'}) \mathbbm{1}_K d\mu_n(y')\right| \nonumber \\
-           \leq& \int \norm{y-\tilde{y}}\left|\frac{k(\norm{y-y'}) - k(\norm{\tilde{y}-y'})}{\norm{(y-y')-(\tilde{y}-y')}} \right|\mathbbm{1}_K d\mu_n(y') \nonumber \\
-           =&O(\norm{y-\tilde{y}}).
+                 & |G_n(y)-G_n(\tilde{y})| = \left|\int k(\norm{y-y'}) - k(\norm{\tilde{y}-y'}) \mathbbm{1}_K d\mu_n(y')\right| \nonumber                              \\
+            \leq & \int \norm{y-\tilde{y}}\left|\frac{k(\norm{y-y'}) - k(\norm{\tilde{y}-y'})}{\norm{(y-y')-(\tilde{y}-y')}} \right|\mathbbm{1}_K d\mu_n(y') \nonumber \\
+            =    & O(\norm{y-\tilde{y}}).
         \end{align}
         by mean value theorem and the additional assumption we just added.
     \end{proof}
@@ -647,11 +719,11 @@ The next lemma is needed to closing up the lower bound part of the main theorem.
             \sup_{\tilde{y}\in B(y,\delta)} |G_n(\tilde{y})-G(\tilde{y})| \leq \epsilon.
         \end{align}
         \gy{TODO: Ask Tuca how exactly compactness plays a role in the proof. Using the finite subcover of all the balls?}
-       Towards this end, by triangular inequality,
-       \begin{align}
-        |G_n(\tilde{y})-G(\tilde{y})| \leq |G_n(\tilde{y})-G_n(y)|+|G_n(y)-G(y)|+|G(y)-G(\tilde{y})|.
-       \end{align}
-       By the previous claim, the first term on the RHS vanishes because of equicontinuity. The second term vanishes because of weak convergence and the boundedness of the integrand $g(y,y')$. Finally, the last term vanishes because we can prove the equicontinuity of $G$ using a similar argument like the claim \ref{claim_1}.
+        Towards this end, by triangular inequality,
+        \begin{align}
+            |G_n(\tilde{y})-G(\tilde{y})| \leq |G_n(\tilde{y})-G_n(y)|+|G_n(y)-G(y)|+|G(y)-G(\tilde{y})|.
+        \end{align}
+        By the previous claim, the first term on the RHS vanishes because of equicontinuity. The second term vanishes because of weak convergence and the boundedness of the integrand $g(y,y')$. Finally, the last term vanishes because we can prove the equicontinuity of $G$ using a similar argument like the claim \ref{claim_1}.
     \end{proof}
     By claim \ref{claim_2} we have
     \begin{align}
@@ -705,13 +777,18 @@ We are near the end, a couple of more lemmas to go!
 \end{proof}
 Using the previous lemma and we can immediately get \gy{TODO: I maybe stupid but I need to ask Tuca about this.}
 \begin{proposition} \label{upper_bound_prop}
-    If $\mu^*$ has compact support in $Y$, then 
+    If $\mu^*$ has compact support in $Y$, then
     \begin{align}
         \limsup_{n \to \infty} \inf_{Y \in (\mathbb{R}^s)^n} L_{n,\rho}(X,Y) \leq I_{\rho}(\mu^*).
     \end{align}
 \end{proposition}
 \section{Finishing up the Lower Bound}
-Now with lemma \ref{output_kernel_int_lemma} proved, we are able to tackle the lemmas in the appendix and prove our own versions of them. Recall that $\mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}$ is the empirical measure of both the input and output. We just ignore the first or the second part based on the integration variable because it is a probability measure. Let $Y = Y^* = (Y_1,\dots,Y_n)$ be a minimizer of $L$. Recall from (\ref{L_derivative}) that
+Now with lemma \ref{output_kernel_int_lemma} proved, we are able to tackle the
+lemmas in the appendix and prove our own versions of them. Recall that $\mu_n =
+    \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}$ is the empirical measure of both the
+input and output. We just ignore the first or the second part based on the
+integration variable because it is a probability measure. Let $Y = Y^* =
+    (Y_1,\dots,Y_n)$ be a minimizer of $L$. Recall from (\ref{L_derivative}) that
 \begin{align}
     \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} = 0.
 \end{align}
@@ -732,8 +809,8 @@ Now with lemma \ref{output_kernel_int_lemma} proved, we are able to tackle the l
     \end{align}
     Mutiply by $\alpha(X_i,Y_i)$ for each $i$ and the both sides are still zero. Afterwards, take summation in $i$ and we get
     \begin{align}
-        &\iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
-        =&\frac{1}{n^2}\sum_{1 \leq i,j \leq n} (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0
+          & \iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber                \\
+        = & \frac{1}{n^2}\sum_{1 \leq i,j \leq n} (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0
     \end{align}
     if we require $k'(0) = 0$.
     By lemma \ref{integrand_lemma_2} and lemma \ref{output_kernel_int_lemma}, we have
@@ -742,13 +819,13 @@ Now with lemma \ref{output_kernel_int_lemma} proved, we are able to tackle the l
     \end{align}
     Since both $\alpha$ and $\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}$ are bounded based on our assumptions, we have
     \begin{align}
-        &\iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
-        =&\iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n + o(1).
+          & \iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
+        = & \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n + o(1).
     \end{align}
     By lemma \ref{appendix_lemma_1} and lemma \ref{appendix_lemma_2} below we have
     \begin{align}
-        &\iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
-        =&\iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1).
+          & \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
+        = & \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1).
     \end{align}
     Since $\alpha$ is an arbitrary function,
     \begin{align}
@@ -783,7 +860,7 @@ This lemma can be proved by mimicing lemma \ref{entropy_lemma_1}
 \end{lemma}
 This lemma can be proved by mimicing lemma \ref{int_approx_lemma_2}. Now let us go back to lemma \ref{lower_bound_lemma_1}. Let $y^*$ be given in the lemma and define
 \begin{align}
- \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
+    \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
 \end{align}
 We can easily show that $mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. Then, using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}, we have the following important proposition:
 \begin{proposition} \label{lower_bound_prop}
@@ -831,9 +908,9 @@ We need another lemma before proving this theorem.
 \begin{proof}
     Recall from (\ref{derivative_lemma}), we have
     \begin{align}
-        0 =& \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') \nonumber \\ 
-        =&\int p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d \mu -  \frac{\int \frac{\partial}{\partial y}g(y,y')d\mu}{\iint g(y,y')d\mu d\mu} \nonumber \\
-        =& \nabla_y \left(\int p(x,x') \log (g(y,y')^{-1}) d \mu -  \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}\right).
+        0 = & \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') \nonumber                                                               \\
+        =   & \int p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d \mu -  \frac{\int \frac{\partial}{\partial y}g(y,y')d\mu}{\iint g(y,y')d\mu d\mu} \nonumber \\
+        =   & \nabla_y \left(\int p(x,x') \log (g(y,y')^{-1}) d \mu -  \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}\right).
     \end{align}
     This means that there exists $h_{\mu}: \mathbb{R}^d \to \mathbb{R}$ such that
     \begin{align}
@@ -860,17 +937,20 @@ We need another lemma before proving this theorem.
     \end{align}
     Mutliply both sides by $\mathbbm{1}_{D_n(x,y)}/\mu^*(D_n)$ and integrate with respect to the other variable:
     \begin{align}
-        &\iint p(x,x') \log(g(y,y')^{-1}) \frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* d\mu^* \nonumber \\
-        &\qquad \qquad \qquad= \int h(x)\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* -  \frac{\iint g(y,y')\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)} d\mu^* d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
+         & \iint p(x,x') \log(g(y,y')^{-1}) \frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* d\mu^* \nonumber                                                                                          \\
+         & \qquad \qquad \qquad= \int h(x)\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* -  \frac{\iint g(y,y')\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)} d\mu^* d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
     \end{align}
-    Since $h$ is continuous and $\mu_X$ has compact support, the first term of the RHS is bounded uniformly in $n$. Moreover, $g(y,y')$  is bounded so the second term is also bounded uniformly in $n$. It follows that the LHS is bounded in uniformly in $n$. With this being said, because $p(x,x')>0$ and $\mu_X$ has compact support, there exists a constant $c$ such that $p(x,x') \geq c$ for all $x,x'$ in the support of $\mu_X$. 
-    
-    Meanwhile, since the output kernel $g(y,y') = k(\norm{x-x'})$ is integrable, it has a decaying tail and there exists $C(n)$ such that $C(n) \to \infty$ and if $\norm{x-x'} \geq n/2$, $g(y,y')^{-1}=k(\norm{x-x'})^{-1} \geq log (1+C(n))$. We compute
+    Since $h$ is continuous and $\mu_X$ has compact support, the first term of the RHS is bounded uniformly in $n$. Moreover, $g(y,y')$  is bounded so the second term is also bounded uniformly in $n$. It follows that the LHS is bounded in uniformly in $n$. With this being said, because $p(x,x')>0$ and $\mu_X$ has compact support, there exists a constant $c$ such that $p(x,x') \geq c$ for all $x,x'$ in the support of $\mu_X$.
+
+    Meanwhile, since the output kernel $g(y,y') = k(\norm{x-x'})$ is integrable, it
+    has a decaying tail and there exists $C(n)$ such that $C(n) \to \infty$ and if
+    $\norm{x-x'} \geq n/2$, $g(y,y')^{-1}=k(\norm{x-x'})^{-1} \geq log (1+C(n))$.
+    We compute
     \begin{align}
-        &\frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} d\mu^* d\mu^* \nonumber \\
-        \geq& \frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y-y'} \geq n/2}d\mu^* d\mu^* \nonumber \\
-        \geq& c \frac{\log(1+C(n))}{\mu^*(D_n)} \iint \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y'} \leq n/2}d\mu^* d\mu^* \nonumber \\
-        =& c\log(1+C(n)) \mu^*(\norm{Y'}\leq n/2).
+             & \frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} d\mu^* d\mu^* \nonumber                                   \\
+        \geq & \frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y-y'} \geq n/2}d\mu^* d\mu^* \nonumber \\
+        \geq & c \frac{\log(1+C(n))}{\mu^*(D_n)} \iint \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y'} \leq n/2}d\mu^* d\mu^* \nonumber                 \\
+        =    & c\log(1+C(n)) \mu^*(\norm{Y'}\leq n/2).
     \end{align}
     Clearly,
     \begin{align}
