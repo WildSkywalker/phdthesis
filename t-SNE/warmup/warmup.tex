@@ -170,11 +170,11 @@ the Ph.D thesis on time. At this point, I have a very good understanding of the
 paper and from the computations in this notes, we know that the generalization
 of the output kernel does NOT interfere with the input kernel. Therefore, this
 notes serve more than just a warmup or an exercise for us to get familiarize
-with the paper, but also an important of the final results we want to prove.
+with the paper, but also an important part of the final results we want to prove.
 Though not very difficult, having results with both the input and output kernel
 generalized will give us a much nicer overall package.
 
-THe other thing that make this project optimistic is that the estimation after
+The other thing that make this project optimistic is that the estimation after
 section 4 in the original paper mostly depend on the bound we derive in section
 3. More precisely, the limits in lemma 6 and 7 of \cite{auffinger-tsne} are the
 slowest limits we will ever get in this paper. Afterwards all analysis will be
@@ -189,7 +189,7 @@ variational auto encoder, also a dimension reduction technique like t-SNE. The
 other one is about learning Markov random fields and k-cnf, also a
 probabilistic algorithm. Both are published in top tier conferences and we have
 a theme. Choosing t-SNE as the main project increase the weight of the other
-two publications because we have a theme. This is a major advantage compared to
+two publications because of that. This is a major advantage compared to
 choosing a statistical physics problem, but I do admit that statistical physics
 sounds cool.
 
@@ -760,7 +760,7 @@ We are near the end, a couple of more lemmas to go!
     \begin{align}
         \iint p_n(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p(x,x') \log(g(y,y')) d\mu_n d\mu_n + o(1).
     \end{align}
-    Mimicing the proof of lemma \ref{entropy_lemma_1} we can show that
+    mimicking the proof of lemma \ref{entropy_lemma_1} we can show that
     \begin{align}
         \iint p(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p(x,x') \log(g(y,y')) d\mu^* d\mu^* + o(1).
     \end{align}
@@ -807,7 +807,7 @@ integration variable because it is a probability measure. Let $Y = Y^* =
     \begin{align}
         \frac{1}{n^2}\sum_{j=1,j \neq i}^n (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0.
     \end{align}
-    Mutiply by $\alpha(X_i,Y_i)$ for each $i$ and the both sides are still zero. Afterwards, take summation in $i$ and we get
+    Multiply by $\alpha(X_i,Y_i)$ for each $i$ and the both sides are still zero. Afterwards, take summation in $i$ and we get
     \begin{align}
           & \iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber                \\
         = & \frac{1}{n^2}\sum_{1 \leq i,j \leq n} (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0
@@ -851,14 +851,14 @@ The output kernel satisfies $g(y,y') = k (\norm{y-y'})$ such that:
         \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
     \end{align}
 \end{lemma}
-This lemma can be proved by mimicing lemma \ref{entropy_lemma_1}
+This lemma can be proved by mimicking lemma \ref{entropy_lemma_1}
 \begin{lemma} \label{appendix_lemma_2}
     The following holds as $n \to \infty$:
     \begin{align}
         \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
     \end{align}
 \end{lemma}
-This lemma can be proved by mimicing lemma \ref{int_approx_lemma_2}. Now let us go back to lemma \ref{lower_bound_lemma_1}. Let $y^*$ be given in the lemma and define
+This lemma can be proved by mimicking lemma \ref{int_approx_lemma_2}. Now let us go back to lemma \ref{lower_bound_lemma_1}. Let $y^*$ be given in the lemma and define
 \begin{align}
     \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
 \end{align}
@@ -892,7 +892,7 @@ We now state the main theorems and prove it.
     \begin{align}
         \lim_{n \to \infty} d_{n(k),\rho}(X) = I_{\rho}(\mu) = I_{\rho}(\mu^*)
     \end{align}
-    holds when we look at the sub-sequence $n(k)$ with the emprical measure $\mu$ converging to $\mu$ weakly. For the general limit, we can repeat the reasoning above by looking at any convergent sub-sequences of $d_{n,\rho}(X)$. We are able to find a sub-sequence inside each convergent sub-sequence and they all converges to $I_{\rho}(\mu^*)$. Therefore each convergent sub-sequence of $d_{n,\rho}(X)$ has the same limit and the theorem is proved.
+    holds when we look at the sub-sequence $n(k)$ with the empirical measure $\mu$ converging to $\mu$ weakly. For the general limit, we can repeat the reasoning above by looking at any convergent sub-sequences of $d_{n,\rho}(X)$. We are able to find a sub-sequence inside each convergent sub-sequence and they all converges to $I_{\rho}(\mu^*)$. Therefore each convergent sub-sequence of $d_{n,\rho}(X)$ has the same limit and the theorem is proved.
 \end{proof}
 \begin{theorem} \label{main_theorem_2}
     Under the same assumptions of theorem \ref{main_theorem_1}, $\mu^*$ has compact support.
@@ -935,7 +935,7 @@ We need another lemma before proving this theorem.
     \begin{align}
         \int p(x,x') \log(g(y,y')^{-1})d\mu^* = h(x) -  \frac{\int g(y,y')d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
     \end{align}
-    Mutliply both sides by $\mathbbm{1}_{D_n(x,y)}/\mu^*(D_n)$ and integrate with respect to the other variable:
+    Multiply both sides by $\mathbbm{1}_{D_n(x,y)}/\mu^*(D_n)$ and integrate with respect to the other variable:
     \begin{align}
          & \iint p(x,x') \log(g(y,y')^{-1}) \frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* d\mu^* \nonumber                                                                                          \\
          & \qquad \qquad \qquad= \int h(x)\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* -  \frac{\iint g(y,y')\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)} d\mu^* d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
