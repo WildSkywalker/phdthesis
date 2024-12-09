@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\babel@toc {english}{}\relax 
 \contentsline {subsection}{\numberline {0.1}Change Logs}{2}{subsection.0.1}%
 \contentsline {section}{\numberline {1}Spin Glass, A Short History}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}What is Spin Glass?}{2}{subsection.1.1}%

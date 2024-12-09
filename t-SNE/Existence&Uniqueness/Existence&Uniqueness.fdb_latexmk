@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex t-sne"] 1721164402.51236 "t-sne.aux" "t-sne.bbl" "t-sne" 1733699906.70393 0
-  "./citation.bib" 1720912735 1641 495b33c67fb0e11bcc3c3b719eff8e08 ""
+["bibtex Existence&Uniqueness"] 1733710520.85003 "Existence&Uniqueness.aux" "Existence&Uniqueness.bbl" "Existence&Uniqueness" 1733712374.19184 0
+  "./citation.bib" 1733700928 1894 6b1c5882c043b00de17d3df3ecb35a36 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne.aux" 1733699905 1350 f885c232135ff1c9e37f3155e401f0a8 "pdflatex"
+  "Existence&Uniqueness.aux" 1733712373 1148 240ba7dd95e4dc973d73a1bf62a96cca "pdflatex"
   (generated)
-  "t-sne.bbl"
-  "t-sne.blg"
+  "Existence&Uniqueness.bbl"
+  "Existence&Uniqueness.blg"
   (rewritten before read)
-["pdflatex"] 1733699905.16836 "e:/NU Staff/Thesis - GIT/t-SNE/t-sne.tex" "t-sne.pdf" "t-sne" 1733699906.70504 0
+["pdflatex"] 1733712372.75183 "e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex" "Existence&Uniqueness.pdf" "Existence&Uniqueness" 1733712374.19312 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1732768762 121619 28cafe8888aecb5d9688fed740e82db1 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626407855 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -21,7 +21,6 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233951854 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
-  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmcsc10.tfm" 1136765053 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -38,11 +37,10 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti10.tfm" 1136765053 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt10.tfm" 1136765053 768 1321e9409b4137d6fb428ac9dc956269 ""
-  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247593066 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247593066 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247593067 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247593067 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247593067 37912 07513ec114ac737ab54cea0152f4424b ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247593067 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247593067 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247593067 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247593067 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -54,7 +52,6 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247593067 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247593067 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247593073 34694 870c211f62cb72718a00e353f14f254d ""
-  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1247593073 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty" 1717307290 146636 4294fd269d590134a51170dff4c2a04c ""
@@ -186,14 +183,14 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/t-sne.tex" 1728517389 13664 294d3bb8512bc4ee01064cef8d0d7d4c ""
-  "t-sne.aux" 1733699905 1350 f885c232135ff1c9e37f3155e401f0a8 "pdflatex"
-  "t-sne.bbl" 1721160802 1481 45bf58d6f40a54a454ec484e59f1f615 "bibtex t-sne"
-  "t-sne.out" 1733699905 505 b409af81f1cc447dd6433d4da60e4af1 "pdflatex"
-  "t-sne.tex" 1728517389 13664 294d3bb8512bc4ee01064cef8d0d7d4c ""
+  "Existence&Uniqueness.aux" 1733712373 1148 240ba7dd95e4dc973d73a1bf62a96cca "pdflatex"
+  "Existence&Uniqueness.bbl" 1733710521 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex Existence&Uniqueness"
+  "Existence&Uniqueness.out" 1733712373 592 356e4a9d25f6e9f7f8026a04678a822c "pdflatex"
+  "Existence&Uniqueness.tex" 1733712372 9484 ec1ccb717c39a476a68c75f33170562a ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex" 1733712372 9484 ec1ccb717c39a476a68c75f33170562a ""
   (generated)
-  "t-sne.aux"
-  "t-sne.log"
-  "t-sne.out"
-  "t-sne.pdf"
+  "Existence&Uniqueness.aux"
+  "Existence&Uniqueness.log"
+  "Existence&Uniqueness.out"
+  "Existence&Uniqueness.pdf"
   (rewritten before read)

@@ -1,0 +1,221 @@
+\documentclass[10pt]{article}
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage[numbers]{natbib}
+%\usepackage{vector}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    citecolor=red,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{condition}{\bf Condition}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+% To print out the paper version, please comment out the next three lines.
+\definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
+\pagecolor{black}
+\color{dimmedwhite}
+
+
+\numberwithin{equation}{section}
+
+
+
+\begin{document}
+
+\title{Second Entry to the Generalized \texorpdfstring{$t$}{Lg}-SNE Problem}
+\maketitle
+
+\section{Current State of the Problem}
+For the big picture, we aim to establish the convergence theorems for the
+$t$-SNE algorithm with generalized input and output kernels. For convenience,
+if not specified or otherwise explicitly defined, all notations are the same as
+in \cite{auffinger-tsne}. At the currently state, we have shown that the
+relative entropy $t$-SNE with generalized kernel $g$ converges and can be
+computed if $g$ satisfies the following:
+
+$g(y,y') \equiv k (\norm{y-y'})$ such that:
+
+1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded.
+
+2. $g$ satisfies
+\begin{align}
+    \iint_{(0,\infty)^2} g(x,x') dxdx' < \infty.
+\end{align}
+
+3. $k$ has bounded derivative.
+
+4. $k'(0) = 0$.
+
+More importantly, the good news is that the proofs concerned with generalized
+output kernel does not interfere with the input kernel. This significantly
+reduces the complexity and potential roadblocks for us to continue working on
+the generalized input kernel.
+
+There are two main steps before we can complete the project. On one hand, we
+need to give a specific form to the generalized input kernel, then prove the
+existence and uniqueness of $\sigma^*$, because without the constraint on
+perplexity, $t$-SNE will fail. On the other hand, we need to prove the bounds
+for approximation and produce similar results like those in
+\cite{auffinger-tsne}. This document is dedicated to the former, and serves as
+the second main step in this project, hence the name.
+\section{The Generalized Input Kernel}
+The most important question that sets the foundation of the problem is, what
+does the output kernel look like, given two data points $x$, $x'$ and parameter
+$\sigma$. We can start by assuming that the input kernel only depends on
+$\norm{x-x'}$ because $t$-SNE is about the relationship of data points to each
+other. Then, we may further assume that the input kernel is the function of
+$\sigma \norm{x-x'}$, as $\sigma$ is used to control the scaling of distance
+between two data points in the original version. This way we can control the
+entropy of the induced probability distributions, and it is also the very
+reason we introduce the concept of perplexity. Finally, because the input
+kernel is about the probability mass and should always be positive, we can
+write it as $\exp(\cdot)$ because the exponential function is a bijection. In
+particular, we write the input kernel as
+\begin{align}
+    f_{\sigma}(x,x') = \exp(-w(\sigma^2\norm{x-x'}^2)),
+\end{align}
+where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is a monotone increasing function. Such expression has several advantages:
+
+1. Since the exponential function is a bijection, we do not lose much generality at all except for how $\sigma$ interact with the output.
+
+2. The form is in direct comparison with the original kernel. As we dive deeper into the computation we can have clear insights about the constraints we need for the input kernel.
+
+3. The exponential function will cancel out the logarithm in the formula of entropy, greatly simplifying the computation and giving us convenience.
+
+4. The form looks natural and aligns with the original concept and motivation of entropy and perplexity.
+
+With the above being said, we can starting adding assumptions to the input
+kernel. The most immediate and obvious requirements we can impose will be
+\begin{align}
+    \lim_{t \to \infty} w(t) = \infty, \qquad \int_0^{\infty} \exp(-w(t)) dt =: Z < \infty.
+\end{align}
+These two are the bare minimum for this problem because apparently we want the normalizing quantity to be finite and $w$ must increase to infinity for a decaying tail. Taking $w(t) = t/2$ and we have the original kernel back. We will start with these basic settings and gradually add more requirements as we proceed through the problem. Also, since the input kernel serves as the weight/probability mass, it is always normalized and we can assume $w(0) = 0$ without loss of generality.
+\section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}
+We will try to replicate the results in section 2 of \cite{auffinger-tsne}. Recall that
+\begin{align}
+      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                \\
+    = & \int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} \log\left(\frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
+    = & -\int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                                                                                          \\
+      & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right)  + \log \rho.
+\end{align}
+We want to show that $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
+\bibliographystyle{hunsrtnat}
+\nocite{*}
+\bibliography{citation}
+
+\end{document}

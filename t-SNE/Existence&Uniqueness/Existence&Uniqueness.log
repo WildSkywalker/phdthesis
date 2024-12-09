@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  8 DEC 2024 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  8 DEC 2024 20:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/NU Staff/Thesis - GIT/t-SNE/t-sne.tex"
-(e:/NU Staff/Thesis - GIT/t-SNE/t-sne.tex
+**"e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex"
+(e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
 (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -512,27 +512,27 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 38.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count331
 \l__pdf_internal_box=\box68
-) (t-sne.aux)
-\openout1 = `t-sne.aux'.
+) (Existence&Uniqueness.aux)
+\openout1 = `Existence&Uniqueness.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count332
@@ -558,52 +558,50 @@ Package grfext Info: Graphics extension search list:
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 134.
- (t-sne.out) (t-sne.out)
+Package hyperref Info: Link coloring ON on input line 138.
+ (Existence&Uniqueness.out) (Existence&Uniqueness.out)
 \@outlinefile=\write4
-\openout4 = `t-sne.out'.
+\openout4 = `Existence&Uniqueness.out'.
 
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 139.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 142.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 139.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 142.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 139.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 142.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 [1
 
-{C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Existence&Uniqueness.bbl
 
-[2]
+[2])
 
-[3] (t-sne.bbl)
-
-[4] (t-sne.aux)
+[3] (Existence&Uniqueness.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
-Package rerunfilecheck Info: File `t-sne.out' has not changed.
-(rerunfilecheck)             Checksum: B409AF81F1CC447DD6433D4DA60E4AF1;505.
+Package rerunfilecheck Info: File `Existence&Uniqueness.out' has not changed.
+(rerunfilecheck)             Checksum: 356E4A9D25F6E9F7F8026A04678A822C;592.
  ) 
 Here is how much of TeX's memory you used:
- 22378 strings out of 473919
- 413810 string characters out of 5726953
- 1948908 words of memory out of 5000000
- 44807 multiletter control sequences out of 15000+600000
- 567990 words of font info for 77 fonts, out of 8000000 for 9000
+ 22354 strings out of 473919
+ 413838 string characters out of 5726953
+ 1940908 words of memory out of 5000000
+ 44805 multiletter control sequences out of 15000+600000
+ 570506 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,87p,785b,596s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on t-sne.pdf (4 pages, 234352 bytes).
+ 84i,11n,87p,611b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Existence&Uniqueness.pdf (3 pages, 189386 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

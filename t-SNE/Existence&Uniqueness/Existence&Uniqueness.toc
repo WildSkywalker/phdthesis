@@ -1,0 +1,4 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Current State of the Problem}{1}{section.1}%
+\contentsline {section}{\numberline {2}The Generalized Kernel}{2}{section.2}%
+\contentsline {section}{\numberline {3}Existence and Uniqueness of $\sigma ^*$}{2}{section.3}%
