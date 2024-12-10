@@ -260,14 +260,32 @@ Omit $d\mu(x')$ in the integration and we have
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber \\
     =&-\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} + 
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber \\
-    =&2\sigma\left(\int \frac{w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}\right)
+    =&2\sigma\left(\int \frac{w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}\right).
 \end{align}
-To show that $\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \geq 0$, we just need to show
-\begin{align}
+We are able to move differentiation inside the integral because of dominant convergence theorem. To show that $\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \geq 0$, we just need to show
+\begin{align} \label{monotone_inequ}
    \int w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot).
 \end{align}
-\gy{This is the part I am having trouble. For the original kernel the RHS becomes square and we get monotonicity immediately by using Cauchy Schwatz. Now this looks different and I think it does not take much to prove it. Or the extra assumption we need to impose on $w$ for this to hold would be mild. But I am indeed stuck.}
+To tackle this inequality, we need the following lemma:
+\begin{lemma}[Theorem 7,\cite{liu2000inequ}]
+    Let $f(x),g(x),h(x)$ be continuous functions on $[a,b]$ such that
+    \begin{align} \label{miracle_condition}
+        \left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right) \geq 0.
+    \end{align}
+    Then the inequality
+    \begin{align} \label{miracle_inequ}
+        \frac{\int_a^b f(x)dx}{\int_a^b h(x)dx} \geq \frac{\int_a^b f(x)g(x)dx}{\int_a^b h(x)g(x)dx}
+    \end{align}
+    holds. If (\ref{miracle_condition}) reverses, then (\ref{miracle_inequ}) reverses.
+\end{lemma}
+The lemma can easily be extended to integral over $\mathbb{R}$ if every integral converges, which is our case. For each $x,y,x' \in \mathbb{R}$ if the equality
+\begin{align} \label{monotone_condition}
+    (w'(\sigma^2\norm{x-x'}^2)-w'(\sigma^2\norm{y-x'}^2))\left(\frac{1}{w(\sigma^2\norm{y-x'}^2)}-\frac{1}{w(\sigma^2\norm{x-x'}^2)}\right) \geq 0
+\end{align}
+holds, then by letting $f(x) = exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, (\ref{monotone_inequ}) holds. \gy{It seems that by (\ref{monotone_condition}), w has to be a convex function. But we don't have to put $\norm{x-x'}^2$ inside $w$, so there is room for improvement.}
 \subsection*{Wrap Up}
+We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by \ref{big_F_lowerbound_final} $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma) = \infty$. Moreover, since $F_{\rho,\mu}(x,\sigma)$ is monotone increasing in $\sigma$, we can conclude there exists a unique $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
+\gy{TODO: Improve the power of $\norm{x-x'}$ inside $w$.}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
