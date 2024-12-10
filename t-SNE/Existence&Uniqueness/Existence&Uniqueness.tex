@@ -209,7 +209,7 @@ These two are the bare minimum for this problem because apparently we want the n
 We will try to replicate the results in section 2 of \cite{auffinger-tsne}. Recall that
 \begin{align} \label{big_F_formula}
       & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                \\
-    = & \int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} \log\left(\frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
+    = & -                                      \int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} \log\left(\frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
     = & -\int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                                                                                          \\
       & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right)  + \log \rho.
 \end{align}
@@ -228,7 +228,7 @@ Consider
       & \int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x') = \int \exp(-w(\sigma^2\norm{x-x'}^2)) f(x')dx' \nonumber \\
     = & \left(\frac{Z}{\sigma}\right)^d\int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{(Z/\sigma)^d} f(x')dx'.
 \end{align}
-Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. \gy{I discussed with several people doing analysis and I am positive that this is all we need for the integrand to converge to Dirac Delta. Correct me if I am wrong.} Along with the fact $f$ is bounded, there exists some $\epsilon(\sigma) \to 0$ as $\sigma\to \infty$ and a constant $C>0$, that
+Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. This can be easily proved using truncation.\gy{I discussed with several people doing analysis and I am positive that this is all we need for the integrand to converge to Dirac Delta. Correct me if I am wrong.} Along with the fact $f$ is bounded, there exists some $\epsilon(\sigma) \to 0$ as $\sigma\to \infty$ and a constant $C>0$, that
 \begin{align} \label{big_f_lowerbound_1}
     -\log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right) = & -d \log\left(\frac{Z}{\sigma}\right) - \log f(x)+ \epsilon(\delta) \nonumber \\
     \geq                                                              & C\log \sigma - \log f(x).
@@ -250,6 +250,23 @@ Combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbo
     F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
 \end{align}
 \subsection*{Monotonicity}
+We take derivative of $F_{\rho,\mu}(x,\sigma)$ with respect to $\sigma$ using (\ref{big_F_formula}). To make the computation clearer, we use simplified notation in the first several steps:
+\begin{align}
+    w = w(\sigma^2\norm{x-x'}^2); \quad \exp(\cdot) = \exp(-w(\sigma^2\norm{x-x'}^2)).
+\end{align}
+Omit $d\mu(x')$ in the integration and we have
+\begin{align}
+    &\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) =-\int \frac{w'\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} + 
+    \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber \\
+    =&-\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} + 
+    \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber \\
+    =&2\sigma\left(\int \frac{w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}\right)
+\end{align}
+To show that $\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \geq 0$, we just need to show
+\begin{align}
+   \int w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot).
+\end{align}
+\gy{This is the part I am having trouble. For the original kernel the RHS becomes square and we get monotonicity immediately by using Cauchy Schwatz. Now this looks different and I think it does not take much to prove it. Or the extra assumption we need to impose on $w$ for this to hold would be mild. But I am indeed stuck.}
 \subsection*{Wrap Up}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
