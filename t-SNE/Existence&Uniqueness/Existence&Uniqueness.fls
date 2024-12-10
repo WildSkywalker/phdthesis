@@ -310,6 +310,8 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tf
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT .\Existence&Uniqueness.bbl
 INPUT .\Existence&Uniqueness.bbl
 INPUT Existence&Uniqueness.bbl
@@ -318,6 +320,8 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tf
 INPUT Existence&Uniqueness.aux
 INPUT .\Existence&Uniqueness.out
 INPUT .\Existence&Uniqueness.out
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb

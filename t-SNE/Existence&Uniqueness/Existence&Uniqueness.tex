@@ -207,13 +207,50 @@ kernel. The most immediate and obvious requirements we can impose will be
 These two are the bare minimum for this problem because apparently we want the normalizing quantity to be finite and $w$ must increase to infinity for a decaying tail. Taking $w(t) = t/2$ and we have the original kernel back. We will start with these basic settings and gradually add more requirements as we proceed through the problem. Also, since the input kernel serves as the weight/probability mass, it is always normalized and we can assume $w(0) = 0$ without loss of generality.
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}
 We will try to replicate the results in section 2 of \cite{auffinger-tsne}. Recall that
-\begin{align}
+\begin{align} \label{big_F_formula}
       & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                \\
     = & \int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} \log\left(\frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
     = & -\int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                                                                                          \\
       & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right)  + \log \rho.
 \end{align}
-We want to show that $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
+We want to show that $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. First off, we have $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$. We will divide the estimation into two parts:
+\subsection*{Lower Bound}
+Let $x$ be in the support of $\mu$ so we have $f(x)>0$. In this section we aim
+to establish a lower bound of $F_{\rho,\mu}(x,\sigma)$ that goes to infinity as
+we increase $\sigma$. Since $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log
+    \rho <0$, this will prove the existence of $\sigma^*$. Assume $\mu$ has $C^1$
+density $f$ and $f$,$\norm{\nabla f}$ are bounded. Recall
+\begin{align}
+    Z:=\int_0^{\infty} \exp(-w(t)) dt<\infty.
+\end{align}
+Consider
+\begin{align}
+      & \int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x') = \int \exp(-w(\sigma^2\norm{x-x'}^2)) f(x')dx' \nonumber \\
+    = & \left(\frac{Z}{\sigma}\right)^d\int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{(Z/\sigma)^d} f(x')dx'.
+\end{align}
+Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. \gy{I discussed with several people doing analysis and I am positive that this is all we need for the integrand to converge to Dirac Delta. Correct me if I am wrong.} Along with the fact $f$ is bounded, there exists some $\epsilon(\sigma) \to 0$ as $\sigma\to \infty$ and a constant $C>0$, that
+\begin{align} \label{big_f_lowerbound_1}
+    -\log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right) = & -d \log\left(\frac{Z}{\sigma}\right) - \log f(x)+ \epsilon(\delta) \nonumber \\
+    \geq                                                              & C\log \sigma - \log f(x).
+\end{align}
+Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$. Let $T$ be the unique positive real number with $\log(T) = T/2$. Then for each $t>T$, we have $\log(t)-t \leq t/2$. This means
+\begin{align} \label{big_F_lowerbound_2}
+         & \int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                \\
+    \leq & M \int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2))f(x') dx'} f(x')dx' \nonumber              \\
+    \leq & M \int_{w \leq T} \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2))f(x') d(x')} f(x')dx' \nonumber \\
+         & \qquad \qquad \qquad +  M\int_{w > T} \frac{\exp(-w(\sigma^2\norm{x-x'}^2)/2)}{\int \exp(-w(\sigma^2\norm{x-x'}^2))f(x') d\mu(x')} dx' \nonumber     \\
+    \leq & M'(x) + \left(\frac{Z'}{Z}\right)^d \frac{1}{f(x)} \equiv M''(x) < \infty
+\end{align}
+for some constant $M'(x)>0$ if we assume
+\begin{align}
+    Z': = \int \exp(-w(t)/2)dt < \infty.
+\end{align}
+Combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and we get
+\begin{align} \label{big_F_lowerbound_final}
+    F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
+\end{align}
+\subsection*{Monotonicity}
+\subsection*{Wrap Up}
 \bibliographystyle{hunsrtnat}
 \nocite{*}
 \bibliography{citation}
