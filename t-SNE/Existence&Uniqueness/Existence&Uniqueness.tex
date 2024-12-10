@@ -208,9 +208,9 @@ These two are the bare minimum for this problem because apparently we want the n
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}
 We will try to replicate the results in section 2 of \cite{auffinger-tsne}. Recall that
 \begin{align} \label{big_F_formula}
-      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                \\
+      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                                       \\
     = & -                                      \int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} \log\left(\frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
-    = & -\int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                                                                                          \\
+    = & -\int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                                                                                                                                 \\
       & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right)  + \log \rho.
 \end{align}
 We want to show that $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. First off, we have $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$. We will divide the estimation into two parts:
@@ -250,21 +250,23 @@ Combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbo
     F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
 \end{align}
 \subsection*{Monotonicity}
-We take derivative of $F_{\rho,\mu}(x,\sigma)$ with respect to $\sigma$ using (\ref{big_F_formula}). To make the computation clearer, we use simplified notation in the first several steps:
+We take derivative of $F_{\rho,\mu}(x,\sigma)$ with respect to $\sigma$ using
+(\ref{big_F_formula}). To make the computation clearer, we use simplified
+notation in the first several steps:
 \begin{align}
     w = w(\sigma^2\norm{x-x'}^2); \quad \exp(\cdot) = \exp(-w(\sigma^2\norm{x-x'}^2)).
 \end{align}
 Omit $d\mu(x')$ in the integration and we have
 \begin{align}
-    &\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) =-\int \frac{w'\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} + 
-    \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber \\
-    =&-\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} + 
-    \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber \\
-    =&2\sigma\left(\int \frac{w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}\right).
+      & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) =-\int \frac{w'\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
+    \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber                                                \\
+    = & -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
+    \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber                                            \\
+    = & 2\sigma\left(\int \frac{w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}\right).
 \end{align}
 We are able to move differentiation inside the integral because of dominant convergence theorem. To show that $\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \geq 0$, we just need to show
 \begin{align} \label{monotone_inequ}
-   \int w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot).
+    \int w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot).
 \end{align}
 To tackle this inequality, we need the following lemma:
 \begin{lemma}[Theorem 7,\cite{liu2000inequ}]
@@ -284,10 +286,12 @@ The lemma can easily be extended to integral over $\mathbb{R}$ if every integral
 \end{align}
 holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, (\ref{monotone_inequ}) holds. \gy{It seems that by (\ref{monotone_condition}), w has to be a convex function. But we don't have to put $\norm{x-x'}^2$ inside $w$, so there is room for improvement.}
 \subsection*{Wrap Up}
-We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by \ref{big_F_lowerbound_final} $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma) = \infty$. Moreover, since $F_{\rho,\mu}(x,\sigma)$ is monotone increasing in $\sigma$, we can conclude there exists a unique $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
+We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
+\ref{big_F_lowerbound_final} $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma) =
+    \infty$. Moreover, since $F_{\rho,\mu}(x,\sigma)$ is monotone increasing in
+$\sigma$, we can conclude there exists a unique $\sigma^* =
+    \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
 \gy{TODO: Improve the power of $\norm{x-x'}$ inside $w$.}
-\bibliographystyle{hunsrtnat}
-\nocite{*}
-\bibliography{citation}
+\bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}
