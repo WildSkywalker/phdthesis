@@ -282,7 +282,7 @@ The lemma can easily be extended to integral over $\mathbb{R}$ if every integral
 \begin{align} \label{monotone_condition}
     (w'(\sigma^2\norm{x-x'}^2)-w'(\sigma^2\norm{y-x'}^2))\left(\frac{1}{w(\sigma^2\norm{y-x'}^2)}-\frac{1}{w(\sigma^2\norm{x-x'}^2)}\right) \geq 0
 \end{align}
-holds, then by letting $f(x) = exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, (\ref{monotone_inequ}) holds. \gy{It seems that by (\ref{monotone_condition}), w has to be a convex function. But we don't have to put $\norm{x-x'}^2$ inside $w$, so there is room for improvement.}
+holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, (\ref{monotone_inequ}) holds. \gy{It seems that by (\ref{monotone_condition}), w has to be a convex function. But we don't have to put $\norm{x-x'}^2$ inside $w$, so there is room for improvement.}
 \subsection*{Wrap Up}
 We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by \ref{big_F_lowerbound_final} $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma) = \infty$. Moreover, since $F_{\rho,\mu}(x,\sigma)$ is monotone increasing in $\sigma$, we can conclude there exists a unique $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
 \gy{TODO: Improve the power of $\norm{x-x'}$ inside $w$.}
