@@ -126,9 +126,9 @@
 \newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
 
 % To print out the paper version, please comment out the next three lines.
-\definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
-\pagecolor{black}
-\color{dimmedwhite}
+% \definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
+% \pagecolor{black}
+% \color{dimmedwhite}
 
 
 \numberwithin{equation}{section}
@@ -176,20 +176,24 @@ the second main step in this project, hence the name.
 \section{The Generalized Input Kernel}
 The most important question that sets the foundation of the problem is, what
 does the output kernel look like, given two data points $x$, $x'$ and parameter
-$\sigma$. We can start by assuming that the input kernel only depends on
+$\sigma_i$. We can start by assuming that the input kernel only depends on
 $\norm{x-x'}$ because $t$-SNE is about the relationship of data points to each
 other. Then, we may further assume that the input kernel is the function of
-$\sigma \norm{x-x'}$, as $\sigma$ is used to control the scaling of distance
+$\sigma \norm{x-x'}^{\theta}$ for some fixed $\theta >0$, as $\sigma$ is used to control the scaling of distance
 between two data points in the original version. This way we can control the
 entropy of the induced probability distributions, and it is also the very
 reason we introduce the concept of perplexity. Finally, because the input
 kernel is about the probability mass and should always be positive, we can
-write it as $\exp(\cdot)$ because the exponential function is a bijection. In
+write it as $\exp(\cdot)$ as the exponential function is a bijection. In
 particular, we write the input kernel as
 \begin{align}
-    f_{\sigma}(x,x') = \exp(-w(\sigma^2\norm{x-x'}^2)),
+    p_{j|i} = \frac{\exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))}{\sum_{k \neq i}\exp(-w(\sigma_i\norm{x_k-x_i}^{\theta}))},
 \end{align}
-where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is a monotone increasing function. Such expression has several advantages:
+where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is a monotone increasing function and $\theta > 0$ is a fixed constant. Naturally, the continuous version of the kernel would be
+\begin{align}
+    f_{\psi}(x,x') = \exp(-w(\psi(x)\norm{x-x'}^{\theta})),
+\end{align}
+for some function $\psi: \mathbb{R}^d \to \mathbb{R}^+$. Such expression has several advantages:
 
 1. Since the exponential function is a bijection, we do not lose much generality at all except for how $\sigma$ interact with the output.
 
@@ -202,16 +206,16 @@ where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is a monotone increasing functio
 With the above being said, we can starting adding assumptions to the input
 kernel. The most immediate and obvious requirements we can impose will be
 \begin{align}
-    \lim_{t \to \infty} w(t) = \infty, \qquad \int_0^{\infty} \exp(-w(t)) dt =: Z < \infty.
+    \lim_{t \to \infty} w(t) = \infty, \qquad \int_0^{\infty} \exp(-w(t^{\theta})) dt =: Z < \infty.
 \end{align}
-These two are the bare minimum for this problem because apparently we want the normalizing quantity to be finite and $w$ must increase to infinity for a decaying tail. Taking $w(t) = t/2$ and we have the original kernel back. We will start with these basic settings and gradually add more requirements as we proceed through the problem. Also, since the input kernel serves as the weight/probability mass, it is always normalized and we can assume $w(0) = 0$ without loss of generality.
+These two are the bare minimum for this problem because apparently we want the normalizing quantity to be finite and $w$ must increase to infinity for a decaying tail. Taking $w(t) = t/2$, $\theta = 2$ and we have the original kernel back. We will start with these basic settings and gradually add more requirements as we proceed through the problem. Also, since the input kernel serves as the weight/probability mass, it is always normalized and we can assume $w(0) = 0$ without loss of generality.
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}
 We will try to replicate the results in section 2 of \cite{auffinger-tsne}. Recall that
 \begin{align} \label{big_F_formula}
       & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                                       \\
-    = & -                                      \int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} \log\left(\frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
-    = & -\int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                                                                                                                                 \\
-      & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right)  + \log \rho.
+    = & -                                      \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
+    = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                                                                 \\
+      & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right)  + \log \rho.
 \end{align}
 We want to show that $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. First off, we have $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$. We will divide the estimation into two parts:
 \subsection*{Lower Bound}
@@ -221,30 +225,32 @@ we increase $\sigma$. Since $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log
     \rho <0$, this will prove the existence of $\sigma^*$. Assume $\mu$ has $C^1$
 density $f$ and $f$,$\norm{\nabla f}$ are bounded. Recall
 \begin{align}
-    Z:=\int_0^{\infty} \exp(-w(t)) dt<\infty.
+    Z:=\int_0^{\infty} \exp(-w(t^{\theta})) dt<\infty.
 \end{align}
 Consider
 \begin{align}
-      & \int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x') = \int \exp(-w(\sigma^2\norm{x-x'}^2)) f(x')dx' \nonumber \\
-    = & \left(\frac{Z}{\sigma}\right)^d\int \frac{\exp(-w(\sigma^2\norm{x-x'}^2))}{(Z/\sigma)^d} f(x')dx'.
+      & \int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x') = \int \exp(-w(\sigma\norm{x-x'}^{\theta})) f(x')dx' \nonumber \\
+    = & \left(\frac{Z}{\sigma^{1/\theta}}\right)^d\int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{(Z/\sigma^{1/\theta})^d} f(x')dx'.
 \end{align}
 Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. This can be easily proved using truncation.\gy{I discussed with several people doing analysis and I am positive that this is all we need for the integrand to converge to Dirac Delta. Correct me if I am wrong.} Along with the fact $f$ is bounded, there exists some $\epsilon(\sigma) \to 0$ as $\sigma\to \infty$ and a constant $C>0$, that
 \begin{align} \label{big_f_lowerbound_1}
-    -\log \left(\int \exp(-w(\sigma^2\norm{x-x'}^2))d\mu(x')\right) = & -d \log\left(\frac{Z}{\sigma}\right) - \log f(x)+ \epsilon(\delta) \nonumber \\
+    -\log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right) = & -d \log\left(\frac{Z}{\sigma^{1/\theta}}\right) - \log f(x)+ \epsilon(\sigma) \nonumber \\
     \geq                                                              & C\log \sigma - \log f(x).
 \end{align}
-Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$. Let $T$ be the unique positive real number with $\log(T) = T/2$. Then for each $t>T$, we have $\log(t)-t \leq t/2$. This means
+Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$. 
 \begin{align} \label{big_F_lowerbound_2}
-         & \int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2)) d\mu(x')} d\mu(x') \nonumber                \\
-    \leq & M \int \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2))f(x') dx'} f(x')dx' \nonumber              \\
-    \leq & M \int_{w \leq T} \frac{w(\sigma^2\norm{x-x'}^2)\exp(-w(\sigma^2\norm{x-x'}^2))}{\int \exp(-w(\sigma^2\norm{x-x'}^2))f(x') d(x')} f(x')dx' \nonumber \\
-         & \qquad \qquad \qquad +  M\int_{w > T} \frac{\exp(-w(\sigma^2\norm{x-x'}^2)/2)}{\int \exp(-w(\sigma^2\norm{x-x'}^2))f(x') d\mu(x')} dx' \nonumber     \\
-    \leq & M'(x) + \left(\frac{Z'}{Z}\right)^d \frac{1}{f(x)} \equiv M''(x) < \infty
+    & \int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                \\
+\leq & M \frac{\int w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))dx'}{\int \exp(-w(\sigma\norm{x-x'}^{\theta}))f(x') dx'} \nonumber              \\
+=& M \frac{\sigma^{-d/\theta}\int w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})\exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta}))d\sigma^{1/\theta}(x-x')}{ \int \exp(-w(\norm{(x-x')}^{\theta}))f(x') dx'} \nonumber              \\
+=& M \frac{\sigma^{-d/\theta}\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{ \int \exp(-w(\norm{(x-x')}^{\theta}))f(x') dx'} \nonumber              \\
+=& M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z^d \int \exp(-w(\norm{(x-x')}^{\theta}))f(x') dx'} \nonumber \\
+\to& \frac{M}{Z^d f(x)} \int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt < \infty
 \end{align}
-for some constant $M'(x)>0$ if we assume
+if we assume
 \begin{align}
-    Z': = \int \exp(-w(t)/2)dt < \infty.
+    \int w(t^{\theta})\exp(-w(t^{\theta}))dt < \infty.
 \end{align}
+\gy{Can we get rid of $\theta$ in the integral? If so that would be nice. However, that should not interfere with the rest of the problem because $\theta$ is given and fixed.}
 Combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and we get
 \begin{align} \label{big_F_lowerbound_final}
     F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
@@ -254,19 +260,19 @@ We take derivative of $F_{\rho,\mu}(x,\sigma)$ with respect to $\sigma$ using
 (\ref{big_F_formula}). To make the computation clearer, we use simplified
 notation in the first several steps:
 \begin{align}
-    w = w(\sigma^2\norm{x-x'}^2); \quad \exp(\cdot) = \exp(-w(\sigma^2\norm{x-x'}^2)).
+    w = w(\sigma\norm{x-x'}^{\theta}); \quad \exp(\cdot) = \exp(-w(\sigma\norm{x-x'}^{\theta})).
 \end{align}
-Omit $d\mu(x')$ in the integration and we have
+Omit $d\mu(x')$ in the integration for cleaner writing, and we have
 \begin{align}
       & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) =-\int \frac{w'\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber                                                \\
     = & -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber                                            \\
-    = & 2\sigma\left(\int \frac{w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}\right).
+    = & \int \frac{w\cdot w' \cdot \norm{x-x'}^{\theta} \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^{\theta} \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}.
 \end{align}
 We are able to move differentiation inside the integral because of dominant convergence theorem. To show that $\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \geq 0$, we just need to show
 \begin{align} \label{monotone_inequ}
-    \int w\cdot w' \cdot \norm{x-x}^2 \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x}^2 \exp(\cdot).
+    \int w\cdot w' \cdot \norm{x-x'}^2 \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^2 \exp(\cdot).
 \end{align}
 To tackle this inequality, we need the following lemma:
 \begin{lemma}[Theorem 7,\cite{liu2000inequ}]
@@ -280,18 +286,70 @@ To tackle this inequality, we need the following lemma:
     \end{align}
     holds. If (\ref{miracle_condition}) reverses, then (\ref{miracle_inequ}) reverses.
 \end{lemma}
-The lemma can easily be extended to integral over $\mathbb{R}$ if every integral converges, which is our case. For each $x,y,x' \in \mathbb{R}$ if the equality
+The lemma can easily be extended to integral over $\mathbb{R}$ if every integral converges, which is our case. 
+\begin{lemma} \label{miracle_lemma_ext}
+    Let $f(x),g(x),h(x)$ be continuous functions $\mathbb{R}^d \to \mathbb{R}^+$ such that for all $x,y \in \mathbb{R}^d$
+    \begin{align} \label{miracle_condition_ext}
+        \left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right) \geq 0.
+    \end{align}
+    Assume all integrals converge. Then the inequality
+    \begin{align} \label{miracle_inequ_ext}
+        \frac{\int_{\mathbb{R}^d} f(x)dx}{\int_{\mathbb{R}^d} h(x)dx} \geq \frac{\int_{\mathbb{R}^d} f(x)g(x)dx}{\int_{\mathbb{R}^d} h(x)g(x)dx}
+    \end{align}
+    holds. If (\ref{miracle_condition_ext}) reverses, then (\ref{miracle_inequ_ext}) reverses.
+\end{lemma}
+\begin{proof}
+    The proof of this lemma would similar to that in \cite{liu2000inequ}. It suffices to show that
+    \begin{align}
+        \int_{\mathbb{R}^d} f(x)dx \int_{\mathbb{R}^d} h(x)g(x)dx \geq \int_{\mathbb{R}^d} h(x)dx \int_{\mathbb{R}^d} f(x)g(x)dx.
+    \end{align}
+    The above inequality is equivalent to
+    \begin{align}
+        \int_{\mathbb{R}^d} f(x)dx \int_{\mathbb{R}^d} h(y)g(y)dy \geq \int_{\mathbb{R}^d} h(x)dx \int_{\mathbb{R}^d} f(y)g(y)dy.
+    \end{align}
+    That means we need to show
+    \begin{align}
+        \mathcal{G}:=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(y)(f(x)h(y)-f(y)h(x))dxdy \geq 0.
+    \end{align}
+    Swap $x$ and $y$ in the formula of $\mathcal{G}$ we have an equivalent expression:
+    \begin{align}
+        \mathcal{G}=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(x)(f(y)h(x)-f(x)h(y))dxdy.
+    \end{align}
+    Therefore
+    \begin{align}
+        2\mathcal{G} =& \int_{\mathbb{R}^d} \int_{\mathbb{R}^d} (g(x)-g(y))(f(y)h(x)-f(x)h(y))dxdy \nonumber \\
+        =&\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} h(x)h(y)\left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right)dxdy \geq 0
+    \end{align}
+    by the hypothesis of the lemma. This finishes the proof.
+\end{proof}
+For each $x,y,x' \in \mathbb{R}$ if the equality
 \begin{align} \label{monotone_condition}
-    (w'(\sigma^2\norm{x-x'}^2)-w'(\sigma^2\norm{y-x'}^2))\left(\frac{1}{w(\sigma^2\norm{y-x'}^2)}-\frac{1}{w(\sigma^2\norm{x-x'}^2)}\right) \geq 0
+    (w'(\sigma\norm{x-x'}^{\theta})-w'(\sigma\norm{y-x'}^{\theta}))\left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
 \end{align}
-holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, (\ref{monotone_inequ}) holds. \gy{It seems that by (\ref{monotone_condition}), w has to be a convex function. But we don't have to put $\norm{x-x'}^2$ inside $w$, so there is room for improvement.}
+holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, we have (\ref{monotone_inequ}) by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. We can assume $\sigma\norm{x-x'}^{\theta}$ is greater than $\sigma\norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{x-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we must also have $w'(\sigma\norm{x-x'}^{\theta})\geq w'(\sigma\norm{x-x'}^{\theta})$. This means $w$ has to be a convex function.
 \subsection*{Wrap Up}
 We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
-\ref{big_F_lowerbound_final} $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma) =
+(\ref{big_F_lowerbound_final}) $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma) =
     \infty$. Moreover, since $F_{\rho,\mu}(x,\sigma)$ is monotone increasing in
 $\sigma$, we can conclude there exists a unique $\sigma^* =
     \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
-\gy{TODO: Improve the power of $\norm{x-x'}$ inside $w$.}
+\section{Conclusion}
+In this document we have given a specific form to the general kernel and proved the existence and uniquess of $\sigma_{\rho,\mu}^*(x)$. Let us summarize:
+
+The generalized $t$-SNE has the following kernel
+\begin{align}
+    p_{j|i} = \frac{\exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))}{\sum_{k \neq i}\exp(-w(\sigma_i\norm{x_k-x_i}^{\theta}))}.
+\end{align}
+Here $\sigma_i$ is used to control entropy and $\theta>0$ is a fixed constant. The range of $\theta$ is remained to be determined in the next part of the problem. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) $w:\mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a function that satisfies:
+
+1. $w$ is monotone increasing with $\lim_{t \to \infty} w(t) = \infty$.
+
+2. $w$ is a convex function.
+
+3. The following two integrals converge:
+\begin{align}
+    \int \exp(-w(t^{\theta}))dt < \infty, \qquad \int w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty.
+\end{align}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}
