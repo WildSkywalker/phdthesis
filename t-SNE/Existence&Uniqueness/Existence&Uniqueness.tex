@@ -126,9 +126,9 @@
 \newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
 
 % To print out the paper version, please comment out the next three lines.
-% \definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
-% \pagecolor{black}
-% \color{dimmedwhite}
+\definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
+\pagecolor{black}
+\color{dimmedwhite}
 
 
 \numberwithin{equation}{section}
@@ -292,33 +292,33 @@ The lemma can easily be extended to integral over $\mathbb{R}$ if every integral
     \begin{align} \label{miracle_condition_ext}
         \left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right) \geq 0.
     \end{align}
-    Assume all integrals converge. Then the inequality
+    Let $\mu$ be an arbitrary Lebesgue measure and assume all integrals converge. Then the inequality
     \begin{align} \label{miracle_inequ_ext}
-        \frac{\int_{\mathbb{R}^d} f(x)dx}{\int_{\mathbb{R}^d} h(x)dx} \geq \frac{\int_{\mathbb{R}^d} f(x)g(x)dx}{\int_{\mathbb{R}^d} h(x)g(x)dx}
+        \frac{\int_{\mathbb{R}^d} f(x)d\mu}{\int_{\mathbb{R}^d} h(x)d\mu} \geq \frac{\int_{\mathbb{R}^d} f(x)g(x)d\mu}{\int_{\mathbb{R}^d} h(x)g(x)d\mu}
     \end{align}
     holds. If (\ref{miracle_condition_ext}) reverses, then (\ref{miracle_inequ_ext}) reverses.
 \end{lemma}
 \begin{proof}
     The proof of this lemma would similar to that in \cite{liu2000inequ}. It suffices to show that
     \begin{align}
-        \int_{\mathbb{R}^d} f(x)dx \int_{\mathbb{R}^d} h(x)g(x)dx \geq \int_{\mathbb{R}^d} h(x)dx \int_{\mathbb{R}^d} f(x)g(x)dx.
+        \int_{\mathbb{R}^d} f(x)d\mu \int_{\mathbb{R}^d} h(x)g(x)d\mu \geq \int_{\mathbb{R}^d} h(x)d\mu \int_{\mathbb{R}^d} f(x)g(x)d\mu.
     \end{align}
     The above inequality is equivalent to
     \begin{align}
-        \int_{\mathbb{R}^d} f(x)dx \int_{\mathbb{R}^d} h(y)g(y)dy \geq \int_{\mathbb{R}^d} h(x)dx \int_{\mathbb{R}^d} f(y)g(y)dy.
+        \int_{\mathbb{R}^d} f(x)d\mu(x) \int_{\mathbb{R}^d} h(y)g(y)d\mu(y) \geq \int_{\mathbb{R}^d} h(x)d\mu(x) \int_{\mathbb{R}^d} f(y)g(y)d\mu(y).
     \end{align}
     That means we need to show
     \begin{align}
-        \mathcal{G}:=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(y)(f(x)h(y)-f(y)h(x))dxdy \geq 0.
+        \mathcal{G}:=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(y)(f(x)h(y)-f(y)h(x))d\mu(x)d\mu(y) \geq 0.
     \end{align}
     Swap $x$ and $y$ in the formula of $\mathcal{G}$ we have an equivalent expression:
     \begin{align}
-        \mathcal{G}=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(x)(f(y)h(x)-f(x)h(y))dxdy.
+        \mathcal{G}=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(x)(f(y)h(x)-f(x)h(y))d\mu(x)d\mu(y).
     \end{align}
     Therefore
     \begin{align}
-        2\mathcal{G} =& \int_{\mathbb{R}^d} \int_{\mathbb{R}^d} (g(x)-g(y))(f(y)h(x)-f(x)h(y))dxdy \nonumber \\
-        =&\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} h(x)h(y)\left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right)dxdy \geq 0
+        2\mathcal{G} =& \int_{\mathbb{R}^d} \int_{\mathbb{R}^d} (g(x)-g(y))(f(y)h(x)-f(x)h(y))d\mu(x)d\mu(y) \nonumber \\
+        =&\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} h(x)h(y)\left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right)d\mu(x)d\mu(y) \geq 0
     \end{align}
     by the hypothesis of the lemma. This finishes the proof.
 \end{proof}
