@@ -126,9 +126,9 @@
 \newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
 
 % To print out the paper version, please comment out the next three lines.
-\definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
-\pagecolor{black}
-\color{dimmedwhite}
+% \definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
+% \pagecolor{black}
+% \color{dimmedwhite}
 
 
 \numberwithin{equation}{section}
@@ -206,7 +206,7 @@ for some function $\psi: \mathbb{R}^d \to \mathbb{R}^+$. Such expression has sev
 With the above being said, we can starting adding assumptions to the input
 kernel. The most immediate and obvious requirements we can impose will be
 \begin{align}
-    \lim_{t \to \infty} w(t) = \infty, \qquad \int_0^{\infty} \exp(-w(t^{\theta})) dt =: Z < \infty.
+    \lim_{t \to \infty} w(t) = \infty, \qquad \int_0^{\infty} \exp(-w(t^{\theta})) dt < \infty.
 \end{align}
 These two are the bare minimum for this problem because apparently we want the normalizing quantity to be finite and $w$ must increase to infinity for a decaying tail. Taking $w(t) = t/2$, $\theta = 2$ and we have the original kernel back. We will start with these basic settings and gradually add more requirements as we proceed through the problem. Also, since the input kernel serves as the weight/probability mass, it is always normalized and we can assume $w(0) = 0$ without loss of generality.
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}
@@ -225,29 +225,42 @@ we increase $\sigma$. Since $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log
     \rho <0$, this will prove the existence of $\sigma^*$. Assume $\mu$ has $C^1$
 density $f$ and $f$,$\norm{\nabla f}$ are bounded. Recall
 \begin{align}
-    Z:=\int_0^{\infty} \exp(-w(t^{\theta})) dt<\infty.
+    \int_0^{\infty} \exp(-w(t^{\theta})) dt<\infty.
 \end{align}
+For any integrable function $h$ on $\mathbb{R}_{\geq 0}$, we have
+\begin{align}
+    &\int_{\mathbb{R^d}} h(\norm{x}) dx = \int_{\mathbb{S}^{d-1}} \int_0^{\infty} h(r) dr d\nu=S_{d-1} \int_0^{\infty} h(r) dr,
+\end{align}
+where $\mathbb{S}^{d-1}$ is the $d-1$-dimensional sphere. $d\mu$ is the corresponding measure and $S_{d-1}$ is the volume. Therefore it is necessary that we assume
+\begin{align}
+    \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta})) dt<\infty,
+\end{align}
+and denote
+\begin{align}
+    Z_d :=\int_{\mathbb{R}^d}\exp(-w(\norm{\tau}^{\theta})) d \tau = S_{d-1} \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta})) dt.
+\end{align}
+
 Consider
 \begin{align}
       & \int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x') = \int \exp(-w(\sigma\norm{x-x'}^{\theta})) f(x')dx' \nonumber              \\
-    = & \left(\frac{Z}{\sigma^{1/\theta}}\right)^d\int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{(Z/\sigma^{1/\theta})^d} f(x')dx'.
+    = &  Z_d \sigma^{-d/\theta}\int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx'.
 \end{align}
 Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. This is easy to prove but for the sake of paranoia, I will still do it. Notice that
 \begin{align}
            & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{(Z/\sigma^{1/\theta})^d} f(x')dx' \nonumber                  \\
-    =      & \frac{1}{Z^d} \int \exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
-    \equiv & \frac{1}{Z^d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau.
+    =      & \frac{1}{Z_d} \int \exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
+    \equiv & \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau.
 \end{align}
 Since $f$ is bounded, $\exp(-w(\norm{\tau}^{\theta})) \sup f$ is integrable. By dominant convergence theorem we have
 \begin{align}
-      & \lim_{\sigma \to \infty} \frac{1}{Z^d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
-    = & \frac{1}{Z^d} \int \lim_{\sigma \to \infty} \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
-    = & f(x) \frac{1}{Z^d} \int \exp(-w(\norm{\tau}^{\theta})) d\tau \nonumber                                                  \\
+      & \lim_{\sigma \to \infty} \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
+    = & \frac{1}{Z_d} \int \lim_{\sigma \to \infty} \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
+    = & f(x) \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) d\tau \nonumber                                                  \\
     = & f(x).
 \end{align}
 There exists some $\epsilon(\sigma) \to 0$ as $\sigma\to \infty$ and a constant $C>0$, that
 \begin{align} \label{big_f_lowerbound_1}
-    -\log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right) = & -d \log\left(\frac{Z}{\sigma^{1/\theta}}\right) - \log f(x)+ \epsilon(\sigma) \nonumber \\
+    -\log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right) = & -\log\left(Z_d \sigma^{-d/\theta}\right) - \log f(x)+ \epsilon(\sigma) \nonumber \\
     \geq                                                                   & C\log \sigma - \log f(x).
 \end{align}
 Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$.
@@ -255,15 +268,14 @@ Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$.
          & \int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                           \\
     \leq & M \frac{\int w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))dx'}{\int \exp(-w(\sigma\norm{x-x'}^{\theta}))f(x') dx'} \nonumber                                                               \\
     =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})\exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta}))d\sigma^{1/\theta}(x-x')}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber \\
-    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                   \\
-    % =    & M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z^d \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                                  \\
-    \to  & \frac{M}{Z^d f(x)} \int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt < \infty
+    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                   \\
+    % =    & M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z_d \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                                  \\
+    \to  & \frac{M}{Z_d f(x)} \int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau < \infty
 \end{align}
 if we assume
 \begin{align}
-    \int w(t^{\theta})\exp(-w(t^{\theta}))dt < \infty.
+    \int_0^{\infty} t^{d-1}w(t^{\theta})\exp(-w(t^{\theta}))dt < \infty.
 \end{align}
-\gy{Can we get rid of $\theta$ in the integral? If so that would be nice. However, that should not interfere with the rest of the problem because $\theta$ is given and fixed.}
 Combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and we get
 \begin{align} \label{big_F_lowerbound_final}
     F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
@@ -339,7 +351,7 @@ For each $x,y,x' \in \mathbb{R}$ if the equality
 \begin{align} \label{monotone_condition}
     (w'(\sigma\norm{x-x'}^{\theta})-w'(\sigma\norm{y-x'}^{\theta}))\left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
 \end{align}
-holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, we have (\ref{monotone_inequ}) by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. We can assume $\sigma\norm{x-x'}^{\theta}$ is greater than $\sigma\norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{x-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we must also have $w'(\sigma\norm{x-x'}^{\theta})\geq w'(\sigma\norm{x-x'}^{\theta})$. This means $w$ has to be a convex function.
+holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, we have (\ref{monotone_inequ}) by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. We can assume $\sigma\norm{x-x'}^{\theta}$ is greater than $\sigma\norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we must also have $w'(\sigma\norm{x-x'}^{\theta})\geq w'(\sigma\norm{y-x'}^{\theta})$. This means $w$ has to be a convex function.
 \subsection*{Wrap Up}
 We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
 (\ref{big_F_lowerbound_final}) $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma)
@@ -356,13 +368,13 @@ The generalized $t$-SNE has the following kernel
 \end{align}
 Here $\sigma_i$ is used to control entropy and $\theta>0$ is a fixed constant. The range of $\theta$ is remained to be determined in the next part of the problem. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) $w:\mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a function that satisfies:
 
-1. $w$ is monotone increasing with $\lim_{t \to \infty} w(t) = \infty$.
+1. $w$ is monotone increasing with $\lim_{t \to \infty} w(t) = \infty$;
 
-2. $w$ is a convex function.
+2. $w$ is a convex function;
 
 3. The following two integrals converge:
 \begin{align}
-    \int \exp(-w(t^{\theta}))dt < \infty, \qquad \int w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty.
+    \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta}))dt < \infty, \qquad \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty.
 \end{align}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
