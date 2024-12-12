@@ -127,8 +127,8 @@
 
 % To print out the paper version, please comment out the next three lines.
 \definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
-\pagecolor{black}
-\color{dimmedwhite}
+\pagecolor{dimmedwhite}
+% \color{dimmedwhite}
 
 
 \numberwithin{equation}{section}
@@ -247,7 +247,7 @@ Consider
 \end{align}
 Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. This is easy to prove but for the sake of paranoia, I will still do it. Notice that
 \begin{align}
-           & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{(Z/\sigma^{1/\theta})^d} f(x')dx' \nonumber                  \\
+           & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx' \nonumber                  \\
     =      & \frac{1}{Z_d} \int \exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
     \equiv & \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau.
 \end{align}
@@ -351,7 +351,7 @@ For each $x,y,x' \in \mathbb{R}$ if the equality
 \begin{align} \label{monotone_condition}
     (w'(\sigma\norm{x-x'}^{\theta})-w'(\sigma\norm{y-x'}^{\theta}))\left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
 \end{align}
-holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x}^2$, we have (\ref{monotone_inequ}) by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. We can assume $\sigma\norm{x-x'}^{\theta}$ is greater than $\sigma\norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we must also have $w'(\sigma\norm{x-x'}^{\theta})\geq w'(\sigma\norm{y-x'}^{\theta})$. This means $w$ has to be a convex function.
+holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^2$, we have (\ref{monotone_inequ}) by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. We can assume $\sigma\norm{x-x'}^{\theta} > \sigma\norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we must also have $w'(\sigma\norm{x-x'}^{\theta})\geq w'(\sigma\norm{y-x'}^{\theta})$. This means $w$ has to be a convex function.
 \subsection*{Wrap Up}
 We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
 (\ref{big_F_lowerbound_final}) $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma)
