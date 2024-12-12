@@ -254,9 +254,9 @@ Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$.
 \begin{align} \label{big_F_lowerbound_2}
          & \int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                           \\
     \leq & M \frac{\int w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))dx'}{\int \exp(-w(\sigma\norm{x-x'}^{\theta}))f(x') dx'} \nonumber                                                               \\
-    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})\exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta}))d\sigma^{1/\theta}(x-x')}{ \int \exp(-w(\norm{(x-x')}^{\theta}))f(x') dx'} \nonumber \\
-    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{ \int \exp(-w(\norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                   \\
-    =    & M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z^d \int \exp(-w(\norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                                  \\
+    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})\exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta}))d\sigma^{1/\theta}(x-x')}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber \\
+    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                   \\
+    % =    & M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z^d \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                                  \\
     \to  & \frac{M}{Z^d f(x)} \int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt < \infty
 \end{align}
 if we assume
