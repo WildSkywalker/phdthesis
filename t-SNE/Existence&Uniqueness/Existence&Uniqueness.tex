@@ -285,11 +285,12 @@ We take derivative of $F_{\rho,\mu}(x,\sigma)$ with respect to $\sigma$ using
 (\ref{big_F_formula}). To make the computation clearer, we use simplified
 notation in the first several steps:
 \begin{align}
-    w = w(\sigma\norm{x-x'}^{\theta}); \quad \exp(\cdot) = \exp(-w(\sigma\norm{x-x'}^{\theta})).
+    w = w(\sigma\norm{x-x'}^{\theta}), \quad w'=w'(\sigma\norm{x-x'}^{\theta}), \quad \exp(\cdot) = \exp(-w(\sigma\norm{x-x'}^{\theta})).
 \end{align}
 Omit $d\mu(x')$ in the integration for cleaner writing, and we have
 \begin{align}
-      & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) =-\int \frac{w'\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
+      & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \nonumber \\
+      =&-\int \frac{w'\norm{x-x'}^{\theta}\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber                                            \\
     = & -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber                                        \\
