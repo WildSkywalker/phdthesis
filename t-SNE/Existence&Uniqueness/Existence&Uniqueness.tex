@@ -27,13 +27,17 @@
 \usepackage[numbers]{natbib}
 %\usepackage{vector}
 
+\definecolor{gblue}{RGB}{66,133,244}
+\definecolor{gred}{RGB}{234, 67, 53}
+\definecolor{ggreen}{RGB}{52, 168, 83}
+\definecolor{gyellow}{RGB}{251, 188, 5}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
+    linkcolor=gblue,
+    filecolor=gyellow,      
+    urlcolor=ggreen,
     pdftitle={Sharelatex Example},
-    citecolor=red,
+    citecolor=gred,
     % bookmarks=true,
 }
 
@@ -96,7 +100,7 @@
 \newcommand{\g}{\Gamma}
 \newcommand{\de}{\delta}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
 \newcommand{\olsi}[1]{\,\overline{\!{#1}}}
 \newcommand\y{\cellcolor{blue!20}}
 \newcommand\x{\cellcolor{red!20}}
@@ -106,7 +110,7 @@
 \newtheorem{claim}{\bf Claim}
 \newtheorem{definition}{\bf Definition}
 \newtheorem{theorem}{\bf Theorem}
-\newtheorem*{theorem*}{Theorem}
+\newtheorem*{theorem*}{\bf Theorem}
 \newtheorem{corollary}{\bf Corollary}
 \newtheorem{remark}{\bf Remark}
 \newtheorem{example}{\bf Example}
@@ -154,7 +158,7 @@ $g(y,y') \equiv k (\norm{y-y'})$ such that:
 
 2. $g$ satisfies
 \begin{align}
-    \iint_{(0,\infty)^2} g(x,x') dxdx' < \infty.
+    \iint_{(0,\infty)^2} g(y,y') dy dy' < \infty.
 \end{align}
 
 3. $k$ has bounded derivative.
@@ -189,7 +193,7 @@ function is a bijection. In particular, we write the input kernel as
 \begin{align}
     p_{j|i} = \frac{\exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))}{\sum_{k \neq i}\exp(-w(\sigma_i\norm{x_k-x_i}^{\theta}))},
 \end{align}
-where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is a monotone increasing function and $\theta > 0$ is a fixed constant. Naturally, the continuous version of the kernel would be
+where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a monotone increasing function and $\theta > 0$ is a fixed constant. Naturally, the continuous version of the kernel would be
 \begin{align}
     f_{\psi}(x,x') = \exp(-w(\psi(x)\norm{x-x'}^{\theta})),
 \end{align}
@@ -289,8 +293,8 @@ notation in the first several steps:
 \end{align}
 Omit $d\mu(x')$ in the integration for cleaner writing, and we have
 \begin{align}
-      & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \nonumber \\
-      =&-\int \frac{w'\norm{x-x'}^{\theta}\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
+      & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                    \\
+    = & -\int \frac{w'\norm{x-x'}^{\theta}\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber                                            \\
     = & -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
     \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber                                        \\
@@ -298,7 +302,7 @@ Omit $d\mu(x')$ in the integration for cleaner writing, and we have
 \end{align}
 We are able to move differentiation inside the integral because of dominant convergence theorem. To show that $\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \geq 0$, we just need to show
 \begin{align} \label{monotone_inequ}
-    \int w\cdot w' \cdot \norm{x-x'}^2 \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^2 \exp(\cdot).
+    \int w\cdot w' \cdot \norm{x-x'}^{\theta} \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^{\theta} \exp(\cdot).
 \end{align}
 To tackle this inequality, we need the following lemma:
 \begin{lemma}[Theorem 7,\cite{liu2000inequ}]
@@ -367,7 +371,7 @@ The generalized $t$-SNE has the following kernel
 \begin{align}
     p_{j|i} = \frac{\exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))}{\sum_{k \neq i}\exp(-w(\sigma_i\norm{x_k-x_i}^{\theta}))}.
 \end{align}
-Here $\sigma_i$ is used to control entropy and $\theta>0$ is a fixed constant. The range of $\theta$ is remained to be determined in the next part of the problem. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) $w:\mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a function that satisfies:
+Here $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. The range of $\theta$ is remained to be determined in the next part of the problem. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) $w:\mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a function that satisfies:
 
 1. $w$ is monotone increasing with $\lim_{t \to \infty} w(t) = \infty$;
 
