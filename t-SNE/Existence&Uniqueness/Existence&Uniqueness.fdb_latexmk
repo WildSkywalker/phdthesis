@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Existence&Uniqueness"] 1733976937.28762 "Existence&Uniqueness.aux" "Existence&Uniqueness.bbl" "Existence&Uniqueness" 1733976939.17869 0
+["bibtex Existence&Uniqueness"] 1734037288.6111 "Existence&Uniqueness.aux" "Existence&Uniqueness.bbl" "Existence&Uniqueness" 1734108551.81691 0
   "./citation.bib" 1733815186 2196 9cdb3ee3bbe89ce9d2ac74793a5fffc6 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "Existence&Uniqueness.aux" 1733976938 2183 28c04cc3439c9201d30f6c0f460de9dd "pdflatex"
+  "Existence&Uniqueness.aux" 1734108550 2187 42abea1dcbed39cbf871a696f5189c20 "pdflatex"
   (generated)
   "Existence&Uniqueness.bbl"
   "Existence&Uniqueness.blg"
   (rewritten before read)
-["pdflatex"] 1733976937.66106 "e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex" "Existence&Uniqueness.pdf" "Existence&Uniqueness" 1733976939.17977 0
+["pdflatex"] 1734108550.21297 "e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex" "Existence&Uniqueness.pdf" "Existence&Uniqueness" 1734108551.81801 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1732768762 121619 28cafe8888aecb5d9688fed740e82db1 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626407855 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -51,6 +51,7 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1247593067 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247593067 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247593066 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247593066 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247593067 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247593067 31099 342ef5a582aacbd3346f3cf4579679fa ""
@@ -187,11 +188,11 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "Existence&Uniqueness.aux" 1733976938 2183 28c04cc3439c9201d30f6c0f460de9dd "pdflatex"
-  "Existence&Uniqueness.bbl" 1733976937 1909 a774b20764ae6ff4745617fb38190f7e "bibtex Existence&Uniqueness"
-  "Existence&Uniqueness.out" 1733976938 685 b4a0f166bb0976d1016e0d42890723b7 "pdflatex"
-  "Existence&Uniqueness.tex" 1733976935 21239 200c52644573b722b8d4208a8ce559ec ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex" 1733976935 21239 200c52644573b722b8d4208a8ce559ec ""
+  "Existence&Uniqueness.aux" 1734108550 2187 42abea1dcbed39cbf871a696f5189c20 "pdflatex"
+  "Existence&Uniqueness.bbl" 1734037288 1909 a774b20764ae6ff4745617fb38190f7e "bibtex Existence&Uniqueness"
+  "Existence&Uniqueness.out" 1734108550 685 b4a0f166bb0976d1016e0d42890723b7 "pdflatex"
+  "Existence&Uniqueness.tex" 1734108549 21796 58a4fd772baab4ca0ef15600068ed6f0 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/Existence&Uniqueness/Existence&Uniqueness.tex" 1734108549 21796 58a4fd772baab4ca0ef15600068ed6f0 ""
   (generated)
   "Existence&Uniqueness.aux"
   "Existence&Uniqueness.log"

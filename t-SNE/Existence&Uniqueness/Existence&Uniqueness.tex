@@ -127,8 +127,8 @@
 
 % To print out the paper version, please comment out the next three lines.
 \definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
-\pagecolor{dimmedwhite}
-% \color{dimmedwhite}
+\pagecolor{black}
+\color{dimmedwhite}
 
 
 \numberwithin{equation}{section}
@@ -229,9 +229,9 @@ density $f$ and $f$,$\norm{\nabla f}$ are bounded. Recall
 \end{align}
 For any integrable function $h$ on $\mathbb{R}_{\geq 0}$, we have
 \begin{align}
-    &\int_{\mathbb{R^d}} h(\norm{x}) dx = \int_{\mathbb{S}^{d-1}} \int_0^{\infty} h(r) dr d\nu=S_{d-1} \int_0^{\infty} h(r) dr,
+     & \int_{\mathbb{R}^d} h(\norm{x}) dx = \int_{\mathbb{S}^{d-1}} \int_0^{\infty} r^{d-1}h(r) dr d\nu=S_{d-1} \int_0^{\infty} h(r) dr,
 \end{align}
-where $\mathbb{S}^{d-1}$ is the $d-1$-dimensional sphere. $d\mu$ is the corresponding measure and $S_{d-1}$ is the volume. Therefore it is necessary that we assume
+where $\mathbb{S}^{d-1}$ is the $d-1$-dimensional sphere, $d\nu$ the corresponding measure, and $S_{d-1}$ the volume of the sphere. Therefore it is necessary that we assume
 \begin{align}
     \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta})) dt<\infty,
 \end{align}
@@ -242,16 +242,16 @@ and denote
 
 Consider
 \begin{align}
-      & \int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x') = \int \exp(-w(\sigma\norm{x-x'}^{\theta})) f(x')dx' \nonumber              \\
-    = &  Z_d \sigma^{-d/\theta}\int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx'.
+      & \int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x') = \int \exp(-w(\sigma\norm{x-x'}^{\theta})) f(x')dx' \nonumber \\
+    = & Z_d \sigma^{-d/\theta}\int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx'.
 \end{align}
 Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. This is easy to prove but for the sake of paranoia, I will still do it. Notice that
 \begin{align}
-           & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx' \nonumber                  \\
+           & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx' \nonumber                   \\
     =      & \frac{1}{Z_d} \int \exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
     \equiv & \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau.
 \end{align}
-Since $f$ is bounded, $\exp(-w(\norm{\tau}^{\theta})) \sup f$ is integrable. By dominant convergence theorem we have
+Since $f$ is bounded, $\exp(-w(\norm{\tau}^{\theta})) \sup f$ is integrable. By dominant convergence theorem and the continuity of $f$, we have
 \begin{align}
       & \lim_{\sigma \to \infty} \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
     = & \frac{1}{Z_d} \int \lim_{\sigma \to \infty} \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
@@ -265,10 +265,10 @@ There exists some $\epsilon(\sigma) \to 0$ as $\sigma\to \infty$ and a constant 
 \end{align}
 Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$.
 \begin{align} \label{big_F_lowerbound_2}
-         & \int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                           \\
-    \leq & M \frac{\int w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))dx'}{\int \exp(-w(\sigma\norm{x-x'}^{\theta}))f(x') dx'} \nonumber                                                               \\
+         & \int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                  \\
+    \leq & M \frac{\int w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))dx'}{\int \exp(-w(\sigma\norm{x-x'}^{\theta}))f(x') dx'} \nonumber                                                                      \\
     =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})\exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta}))d\sigma^{1/\theta}(x-x')}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber \\
-    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                   \\
+    =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                          \\
     % =    & M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z_d \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                                  \\
     \to  & \frac{M}{Z_d f(x)} \int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau < \infty
 \end{align}
@@ -349,9 +349,9 @@ The lemma can easily be extended to integral over $\mathbb{R}$ if every integral
 \end{proof}
 For each $x,y,x' \in \mathbb{R}$ if the equality
 \begin{align} \label{monotone_condition}
-    (w'(\sigma\norm{x-x'}^{\theta})-w'(\sigma\norm{y-x'}^{\theta}))\left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
+    (w(\sigma\norm{x-x'}^{\theta})'-w(\sigma\norm{y-x'}^{\theta})')\left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
 \end{align}
-holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^2$, we have (\ref{monotone_inequ}) by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. We can assume $\sigma\norm{x-x'}^{\theta} > \sigma\norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we must also have $w'(\sigma\norm{x-x'}^{\theta})\geq w'(\sigma\norm{y-x'}^{\theta})$. This means $w$ has to be a convex function.
+holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta} = w(\sigma\norm{x-x'}^{\theta})'$, we have (\ref{monotone_inequ}) by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. We can assume $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we must also have $w(\sigma\norm{x-x'}^{\theta})'\geq w(\sigma\norm{y-x'}^{\theta})'$. This means $w$ has to be a convex function.
 \subsection*{Wrap Up}
 We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
 (\ref{big_F_lowerbound_final}) $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma)
@@ -360,7 +360,7 @@ $\sigma$, we can conclude there exists a unique $\sigma^* =
     \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
 \section{Conclusion}
 In this document we have given a specific form to the general kernel and proved
-the existence and uniquess of $\sigma_{\rho,\mu}^*(x)$. Let us summarize:
+the existence and uniqueness of $\sigma_{\rho,\mu}^*(x)$. Let us summarize:
 
 The generalized $t$-SNE has the following kernel
 \begin{align}
