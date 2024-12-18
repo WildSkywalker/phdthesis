@@ -358,6 +358,26 @@ For each $x,y,x' \in \mathbb{R}$ if the equality
 &\qquad \qquad \qquad \qquad \qquad \qquad \cdot \left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
 \end{align}
 holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta}$, we have (\ref{monotone_inequ}) to be true by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. Let $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we can assume that $w$ is a convex function. This way, $w'(\sigma\norm{x-x'}^{\theta})\geq w'(\sigma\norm{y-x'}^{\theta})$ and it follows that $g(x) \geq g(y)$.
+
+\begin{remark}
+    $w$ being convex is stronger than we actually need. We choose that because it is concise and "not too strong". To make things even more general, note that when we assume $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ WLOG, we want
+    \begin{align}
+        w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta} \geq 0.
+    \end{align}
+    Since $\sigma >0$, the above inequality is equivalent to
+    \begin{align} \label{generalized_condition_inequ}
+        w'(\sigma\norm{x-x'}^{\theta})\sigma \norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta}) \sigma \norm{y-x'}^{\theta} \geq 0.
+    \end{align}
+    Let $\tilde{w}(x) = x w'(x)$. Based on (\ref{generalized_condition_inequ}), $\tilde{w}$ should satisfies for all $a,b\geq 0$, $a>b$, that
+    \begin{align}
+        \frac{aw'(a) - bw'(b)}{a-b} = w'(c) + cw''(c) \geq 0
+    \end{align}
+    for some $c \in [b,a]$ by mean value theorem. Since $a,b$ are arbitrary, the most generalized condition we can impose on $w$ is
+    \begin{align} \label{generalized_condition}
+        w'(x)+xw''(x) \geq 0,
+    \end{align}
+    for each $x \geq 0$. This is less concise but more general. We will see if we can carry this condition through the next phase of the paper. That is, if assuming $w$ being convex will greatly simplify the proofs of subsequent lemmas. If not, we can change the convex condition to (\ref{generalized_condition}) so this paper can apply to a wider variety of kernels.
+\end{remark}
 \subsection*{Wrap Up}
 We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
 (\ref{big_F_lowerbound_final}) $\lim_{\sigma \to \infty}F_{\rho,\mu}(x,\sigma)
@@ -376,7 +396,7 @@ Here $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a
 
 1. $w$ is monotone increasing with $\lim_{t \to \infty} w(t) = \infty$;
 
-2. $w$ is a convex function;
+2. $w$ is a convex function (we can have a more generalized condition as in (\ref{generalized_condition}));
 
 3. The following two integrals converge:
 \begin{align}
