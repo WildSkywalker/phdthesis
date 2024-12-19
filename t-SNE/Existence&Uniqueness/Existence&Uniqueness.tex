@@ -193,9 +193,13 @@ and should always be positive, we can write it as $\exp(\cdot)$ as the
 exponential function is a bijection. In particular, we write the input kernel
 as
 \begin{align}
+    \exp(-w(\sigma_i\norm{x_j-x_i}^{\theta})),
+\end{align}
+where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a monotone increasing function and $\theta > 0$ is a fixed constant. In turn, the induced probability mass will be
+\begin{align}
     p_{j|i} = \frac{\exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))}{\sum_{k \neq i}\exp(-w(\sigma_i\norm{x_k-x_i}^{\theta}))},
 \end{align}
-where $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a monotone increasing function and $\theta > 0$ is a fixed constant. Naturally, the continuous version of the kernel would be
+Naturally, the continuous version of the kernel would be
 \begin{align}
     f_{\psi}(x,x') = \exp(-w(\psi(x)\norm{x-x'}^{\theta})),
 \end{align}
