@@ -165,31 +165,33 @@ $g(y,y') \equiv k (\norm{y-y'})$ such that:
 
 4. $k'(0) = 0$.
 
-More importantly, the good news is that the proofs concerned with generalized
-output kernel does not interfere with the input kernel. This significantly
+More importantly, the good news is that the proofs related to the generalized
+output kernel does not interfere with those of input kernel. This significantly
 reduces the complexity and potential roadblocks for us to continue working on
 the generalized input kernel.
 
 There are two main steps before we can complete the project. On one hand, we
-need to give a specific form to the generalized input kernel, then prove the
-existence and uniqueness of $\sigma^*$, because without the constraint on
-perplexity, $t$-SNE will fail. On the other hand, we need to prove the bounds
-for approximation and produce similar results like those in
-\cite{auffinger-tsne}. This document is dedicated to the former, and serves as
-the second main step in this project, hence the name.
+need to give a specific form to the generalized input kernel, and prove the
+existence and uniqueness of $\sigma^*$. Without the constraint on perplexity,
+$t$-SNE will fail. On the other hand, we need to prove the bounds for
+approximation and produce similar results like those in \cite{auffinger-tsne}.
+This document is dedicated to the former, and serves as the second main step in
+this project, hence the name.
 \section{The Generalized Input Kernel}
 The most important question that sets the foundation of the problem is, what
 does the output kernel look like, given two data points $x$, $x'$ and parameter
-$\sigma_i$. We can start by assuming that the input kernel only depends on
-$\norm{x-x'}$ because $t$-SNE is about the relationship of data points to each
-other. Then, we may further assume that the input kernel is the function of
-$\sigma \norm{x-x'}^{\theta}$ for some fixed $\theta >0$, as $\sigma$ is used
-to control the scaling of distance between two data points in the original
-version. This way we can control the entropy of the induced probability
-distributions, and it is also the very reason we introduce the concept of
-perplexity. Finally, because the input kernel is about the probability mass and
-should always be positive, we can write it as $\exp(\cdot)$ as the exponential
-function is a bijection. In particular, we write the input kernel as
+$\sigma_i$. We can start by assuming that the input kernel only depends on the
+distance between inputs, i.e., $\norm{x-x'}$ because $t$-SNE is not about the
+absolute coordinates, but rather the relations between data points. Then, we
+may further assume that the input kernel is a function of $\sigma
+    \norm{x-x'}^{\theta}$ for some fixed $\theta >0$, as $\sigma$ is used to
+control the scaling of distance between two data points in the original
+algorithm. This way we can control the entropy of the induced probability
+distributions, and it also aligns with the very reason we introduce the concept
+of perplexity. Finally, because the input kernel is about the probability mass
+and should always be positive, we can write it as $\exp(\cdot)$ as the
+exponential function is a bijection. In particular, we write the input kernel
+as
 \begin{align}
     p_{j|i} = \frac{\exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))}{\sum_{k \neq i}\exp(-w(\sigma_i\norm{x_k-x_i}^{\theta}))},
 \end{align}
@@ -201,9 +203,9 @@ for some function $\psi: \mathbb{R}^d \to \mathbb{R}^+$. Such expression has sev
 
 1. Since the exponential function is a bijection, we do not lose much generality at all except for how $\sigma$ interact with the output.
 
-2. The form is in direct comparison with the original kernel. As we dive deeper into the computation we can have clear insights about the constraints we need for the input kernel.
+2. The form is in direct comparison with the original kernel. As we dive deeper into the computation we can have clearer insights about the constraints we need for the input kernel.
 
-3. The exponential function will cancel out the logarithm in the formula of entropy, greatly simplifying the computation and giving us convenience.
+3. The exponential function will cancel out the logarithm in the formula of entropy, greatly simplifying the computation.
 
 4. The form looks natural and aligns with the original concept and motivation of entropy and perplexity.
 
@@ -216,30 +218,29 @@ These two are the bare minimum for this problem because apparently we want the n
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}
 We will try to replicate the results in section 2 of \cite{auffinger-tsne}. Recall that
 \begin{align} \label{big_F_formula}
-      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                                                           \\
-    = & -                                      \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
-    = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                                                                      \\
+      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                    \\
+    = & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
+    = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                               \\
       & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right)  + \log \rho.
 \end{align}
-We want to show that $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. First off, we have $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$. We will divide the estimation into two parts:
+We want to show that $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^* = \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. First off, we have $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$. We will then divide the estimation into two steps. In the first step, we will prove that $F_{\rho,\mu}(x,\sigma)$ has a lower bound that increases to $\infty$ as we let $\sigma \to \infty$. In the second step, we explore and prove the monotonicity of $F_{\rho,\mu}(x,\sigma)$. Combine both steps and we have the existence and uniqueness of $\sigma^*$ by intermediate value theorem.
 \subsection*{Lower Bound}
 Let $x$ be in the support of $\mu$ so we have $f(x)>0$. In this section we aim
 to establish a lower bound of $F_{\rho,\mu}(x,\sigma)$ that goes to infinity as
-we increase $\sigma$. Since $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log
-    \rho <0$, this will prove the existence of $\sigma^*$. Assume $\mu$ has $C^1$
-density $f$ and $f$,$\norm{\nabla f}$ are bounded. Recall
+we increase $\sigma$. Assume $\mu$ has $C^1$ density $f$ and both
+$f$,$\norm{\nabla f}$ are bounded. Recall
 \begin{align}
     \int_0^{\infty} \exp(-w(t^{\theta})) dt<\infty.
 \end{align}
 For any integrable function $h$ on $\mathbb{R}_{\geq 0}$, we have
 \begin{align}
-     & \int_{\mathbb{R}^d} h(\norm{x}) dx = \int_{\mathbb{S}^{d-1}} \int_0^{\infty} r^{d-1}h(r) dr d\nu=S_{d-1} \int_0^{\infty} h(r) dr,
+     & \int_{\mathbb{R}^d} h(\norm{x}) dx = \int_{\mathbb{S}^{d-1}} \int_0^{\infty} r^{d-1}h(r) dr d\nu=S_{d-1} \int_0^{\infty} r^{d-1}h(r) dr,
 \end{align}
-where $\mathbb{S}^{d-1}$ is the $d-1$-dimensional sphere, $d\nu$ the corresponding measure, and $S_{d-1}$ the volume of the sphere. Therefore it is necessary that we assume
+where $\mathbb{S}^{d-1}$ is the $(d-1)$-dimensional sphere, $d\nu$ the corresponding surface measure, and $S_{d-1}$ the volume of the sphere. Therefore it is necessary that we assume
 \begin{align}
-    \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta})) dt<\infty,
+    \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta})) dt<\infty.
 \end{align}
-and denote
+Denote
 \begin{align}
     Z_d :=\int_{\mathbb{R}^d}\exp(-w(\norm{\tau}^{\theta})) d \tau = S_{d-1} \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta})) dt.
 \end{align}
@@ -249,10 +250,10 @@ Consider
       & \int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x') = \int \exp(-w(\sigma\norm{x-x'}^{\theta})) f(x')dx' \nonumber \\
     = & Z_d \sigma^{-d/\theta}\int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx'.
 \end{align}
-Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. This is easy to prove but for the sake of paranoia, I will still do it. Notice that
+Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. To prove this statement, notice that
 \begin{align}
-           & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx' \nonumber                   \\
-    =      & \frac{1}{Z_d} \int \exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
+           & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx' \nonumber                                          \\
+    =      & \frac{1}{Z_d} \int \exp\left(-w \left(\norm{\sigma^{1/\theta}(x-x')}^{\theta}\right)\right) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
     \equiv & \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau.
 \end{align}
 Since $f$ is bounded, $\exp(-w(\norm{\tau}^{\theta})) \sup f$ is integrable. By dominant convergence theorem and the continuity of $f$, we have
@@ -280,14 +281,14 @@ if we assume
 \begin{align}
     \int_0^{\infty} t^{d-1}w(t^{\theta})\exp(-w(t^{\theta}))dt < \infty.
 \end{align}
-Combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and we get
+As the bound in (\ref{big_F_lowerbound_2}) does not depend on $\sigma$, we can combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and deduce that
 \begin{align} \label{big_F_lowerbound_final}
     F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
 \end{align}
 \subsection*{Monotonicity}
-We take derivative of $F_{\rho,\mu}(x,\sigma)$ with respect to $\sigma$ using
-(\ref{big_F_formula}). To make the computation clearer, we use simplified
-notation in the first several steps:
+To prove monotonicity, we take derivative of $F_{\rho,\mu}(x,\sigma)$ with
+respect to $\sigma$ using (\ref{big_F_formula}). The following simplified
+notations will be used in the first several steps:
 \begin{align}
     w = w(\sigma\norm{x-x'}^{\theta}), \quad w'=w'(\sigma\norm{x-x'}^{\theta}), \quad \exp(\cdot) = \exp(-w(\sigma\norm{x-x'}^{\theta})).
 \end{align}
@@ -316,20 +317,20 @@ To tackle this inequality, we need the following lemma:
     \end{align}
     holds. If (\ref{miracle_condition}) reverses, then (\ref{miracle_inequ}) reverses.
 \end{lemma}
-This lemma can easily be extended to general Lebesgue integral over $\mathbb{R}^d$ if every integral converges, which is our case.
+This lemma can easily be extended to general Lebesgue integrals over $\mathbb{R}^d$ if every integral converges, which is our case.
 \begin{lemma} \label{miracle_lemma_ext}
     Let $f(x),g(x),h(x)$ be continuous functions $\mathbb{R}^d \to \mathbb{R}^+$ such that for all $x,y \in \mathbb{R}^d$
     \begin{align} \label{miracle_condition_ext}
         \left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right) \geq 0.
     \end{align}
-    Let $\mu$ be an arbitrary Lebesgue measure and assume all integrals converge. Then the inequality
+    Let $\mu$ be an arbitrary Lebesgue measure and assume all integrals in this lemma converge. Then the inequality
     \begin{align} \label{miracle_inequ_ext}
         \frac{\int_{\mathbb{R}^d} f(x)d\mu}{\int_{\mathbb{R}^d} h(x)d\mu} \geq \frac{\int_{\mathbb{R}^d} f(x)g(x)d\mu}{\int_{\mathbb{R}^d} h(x)g(x)d\mu}
     \end{align}
     holds. If (\ref{miracle_condition_ext}) reverses, then (\ref{miracle_inequ_ext}) reverses.
 \end{lemma}
 \begin{proof}
-    The proof of this lemma would similar to that in \cite{liu2000inequ}. It suffices to show that
+    The proof of this lemma is similar to the one in \cite{liu2000inequ}. It suffices to show that
     \begin{align}
         \int_{\mathbb{R}^d} f(x)d\mu \int_{\mathbb{R}^d} h(x)g(x)d\mu \geq \int_{\mathbb{R}^d} h(x)d\mu \int_{\mathbb{R}^d} f(x)g(x)d\mu.
     \end{align}
@@ -341,11 +342,11 @@ This lemma can easily be extended to general Lebesgue integral over $\mathbb{R}^
     \begin{align}
         \mathcal{G}:=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(y)(f(x)h(y)-f(y)h(x))d\mu(x)d\mu(y) \geq 0.
     \end{align}
-    Swap $x$ and $y$ in the formula of $\mathcal{G}$ we have an equivalent expression:
+    Swap $x$ and $y$ in the formula of $\mathcal{G}$ and we have an equivalent expression:
     \begin{align}
         \mathcal{G}=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(x)(f(y)h(x)-f(x)h(y))d\mu(x)d\mu(y).
     \end{align}
-    Therefore
+    Adding the last two formulas together yields
     \begin{align}
         2\mathcal{G} = & \int_{\mathbb{R}^d} \int_{\mathbb{R}^d} (g(x)-g(y))(f(y)h(x)-f(x)h(y))d\mu(x)d\mu(y) \nonumber                                              \\
         =              & \int_{\mathbb{R}^d} \int_{\mathbb{R}^d} h(x)h(y)\left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right)d\mu(x)d\mu(y) \geq 0
@@ -354,8 +355,8 @@ This lemma can easily be extended to general Lebesgue integral over $\mathbb{R}^
 \end{proof}
 For each $x,y,x' \in \mathbb{R}$ if the equality
 \begin{align} \label{monotone_condition}
-    &(w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta}) \nonumber \\
-&\qquad \qquad \qquad \qquad \qquad \qquad \cdot \left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
+     & (w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta}) \nonumber                                   \\
+     & \qquad \qquad \qquad \qquad \qquad \qquad \cdot \left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
 \end{align}
 holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta}$, we have (\ref{monotone_inequ}) to be true by lemma \ref{miracle_lemma_ext}. Let us take a closer look at the condition. Let $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we want
 \begin{align}
@@ -365,15 +366,15 @@ Since $\sigma >0$, the above inequality is equivalent to
 \begin{align} \label{generalized_condition_inequ}
     w'(\sigma\norm{x-x'}^{\theta})\sigma \norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta}) \sigma \norm{y-x'}^{\theta} \geq 0.
 \end{align}
-Let $\tilde{w}(x) = x w'(x)$. Based on (\ref{generalized_condition_inequ}), $\tilde{w}$ should satisfies for all $a,b\geq 0$, $a>b$, that
+Let $\tilde{w}(x) = x w'(x)$. Based on (\ref{generalized_condition_inequ}) and mean value theorem, $\tilde{w}$ should satisfy for all $a,b\geq 0$, $a>b$, that
 \begin{align}
     \frac{aw'(a) - bw'(b)}{a-b} = w'(c) + cw''(c) \geq 0
 \end{align}
-for some $c \in [b,a]$ by mean value theorem. Because $a,b$ are arbitrary, the most generalized condition we can impose on $w$ is for any $x \geq 0$,
+for some $c \in [b,a]$. Because $a,b$ are arbitrary, the most generalized condition we can impose on $w$ is for any $x \geq 0$,
 \begin{align} \label{generalized_condition}
     w'(x)+xw''(x) \geq 0.
 \end{align}
-On the other hand, restricting $w$ to be convex and (\ref{generalized_condition_inequ}) will obviously be true. In comparison, (\ref{generalized_condition}) is a less concise condition. We will see if we can carry this condition through the next phase of the paper. If the proofs for subsequent lemmas become extremely complicated because of condition in (\ref{generalized_condition}), we can always restrict $w$ to be convex later.
+On the other hand, restricting $w$ to be convex and (\ref{generalized_condition_inequ}) will obviously be true. In comparison, (\ref{generalized_condition}) is a less concise condition. We will see if we can carry this condition through the next phase of the paper. If the proofs for subsequent lemmas become too complicated because of condition in (\ref{generalized_condition}), we can always restrict $w$ further to be convex.
 
 \subsection*{Wrap Up}
 We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
@@ -382,8 +383,9 @@ We know that $\lim_{\sigma \to 0}F_{\rho,\mu}(x,\sigma) = \log \rho <0$ and by
 $\sigma$, we can conclude there exists a unique $\sigma^* =
     \sigma_{\rho,\mu}^*(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$.
 \section{Conclusion}
-In this document we have given a specific form to the general kernel and proved
-the existence and uniqueness of $\sigma_{\rho,\mu}^*(x)$. Let us summarize:
+In this document we have given a specific form to the general kernel. We also
+proved the existence and uniqueness of $\sigma_{\rho,\mu}^*(x)$. Let us
+summarize:
 
 The generalized $t$-SNE has the following kernel
 \begin{align}
@@ -391,9 +393,9 @@ The generalized $t$-SNE has the following kernel
 \end{align}
 Here $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. The range of $\theta$ is remained to be determined in the next part of the problem. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) $w:\mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ is a function that satisfies:
 
-1. $w$ is monotone increasing with $\lim_{t \to \infty} w(t) = \infty$;
+1. $w'(t)>0$ for all $t \geq 0$ with $\lim_{t \to \infty} w(t) = \infty$;
 
-2. $w'(x)+xw''(x) \geq 0$ for all $x \geq 0$;
+2. $w'(t)+xw''(t) \geq 0$ for all $t \geq 0$;
 
 3. The following two integrals converge:
 \begin{align}
