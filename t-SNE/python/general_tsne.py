@@ -1,3 +1,5 @@
+# Modified based on https://github.com/jakepenzak/blog-posts/tree/main/t-SNE%20from%20Scratch%20(ft.%20NumPy)
+
 import numpy as np
 import warnings
 
