@@ -1,5 +1,5 @@
 \section*{Overview}
-We propose VarFA, a variational inference factor analysis framework that extends existing factor analysis models for educational data mining to efficiently output uncertainty estimation in the model's estimated factors. Such uncertainty information is useful, for example, for an adaptive testing scenario, where additional tests can be administered if the model is not quite certain about a students' skill level estimation. Traditional Bayesian inference methods that produce such uncertainty information are computationally expensive and do not scale to large data sets. VarFA utilizes variational inference which makes it possible to efficiently perform Bayesian inference even on very large data sets. We use the sparse factor analysis model as a case study and demonstrate the efficacy of VarFA on both synthetic and real data sets. VarFA is also very general and can be applied to a wide array of factor analysis models. Code and instructions to reproduce results in this paper are available from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
+We propose VarFA, a variational inference factor analysis framework that extends existing factor analysis models for educational data mining to efficiently output uncertainty estimation in the model's estimated factors. Such uncertainty information is useful, for example, for an adaptive testing scenario, where additional tests can be administered if the model is not quite certain about a students' skill level estimation. Traditional Bayesian inference methods that produce such uncertainty information are computationally expensive and do not scale to large data sets. VarFA utilizes variational inference which makes it possible to efficiently perform Bayesian inference even on very large data sets. We use the sparse factor analysis model as a case study and demonstrate the efficacy of VarFA on both synthetic and real data sets. VarFA is also very general and can be applied to a wide array of factor analysis models. Code and instructions to reproduce results in this chapter are available from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
 \section{Introduction}
 \label{sec:intro}
 % f\jack{TODOs: 1) add references 2) unify terminology (KC, concept), (methods, frameworks), (estimate, estimation) \st{3) check table and figure captions} 4) remove all red comments 5) check math notation and refine presentation 6) refine intro and abstract 7) refine the rest of the paper 8) clean code and upload it alone with data to google drive; add link to paper}
@@ -31,7 +31,7 @@ widely adopted and investigated for practical EDM tasks. Moreover, there is
 evidence that simple FA models could even outperform DNN models for student
 modeling in terms of predicting students' answers~\cite{irt-best}. Because of
 FA models' competitive performance and its elegant mathematical form, we focus
-on FA-based student models in this paper.
+on FA-based student models in this chapter.
 
 Most of the aforementioned FA models compute a single point estimate of skill
 levels for each student. Often, however, it is not enough to obtain mere point
@@ -124,13 +124,13 @@ inference for FA models with no compromise on performance.
 % \ml{this is a good summary but you gotta have a compelling argument on why we use SPARFA and not other factor models. I'd motivate with the sparsity and nonnegativity constraints; they are hard to deal with since you can't put Gaussian priors on them. although it doesn't look like you actually calculated uncertainty on item factors :D}
 % \jack{I worked around this by not mention sparfa here; sparfa case study is mentioned in experiment section} \ml{ok, that's good}
 
-The remainder of this paper is organized as follows.
+The remainder of this chapter is organized as follows.
 Section~\ref{sec:related-work} introduces the problem setup in FA and reviews
 the important FA models and their inference methods, in particular Bayesian
 inference. Section~\ref{sec:method} explains our VarFA framework in detail.
 Section~\ref{sec:experiments} presents extensive experimental results that
 substantiate the claimed advantages of our framework.
-Section~\ref{sec:conclusion} concludes this paper and discusses possible
+Section~\ref{sec:conclusion} concludes this chapter and discusses possible
 extensions to VarFA.
 
 \section{Background and Related Work}
@@ -224,7 +224,7 @@ can simply use a Gaussian or categorical distribution for the observed data and
 change the Sigmoid activation $\sigmoid(\cdot)$ to some other activation
 functions accordingly. In this way, we still retain the general FA model in
 Eq.~\ref{eq:sparfa}. We will use this canonical form to facilitate discussions
-in the rest of this paper.
+in the rest of this chapter.
 
 \subsection{Inference Methods for FA Models}
 \label{sec:FA-inference}
@@ -241,7 +241,7 @@ $\theta = \{\rvm_1, ...,\rvm_Q, \mu_1,...,\mu_Q\}$ and $\psi = \emptyset$.
 Further, let the subscripts for these partitions indicate the corresponding
 latent factors in FA; i.e., for SPARFA, $\theta_i = [\rvm_i, \mu_i]$ and $\nu_i
     = \rvc_i$. Since $\psi$ summarizes known factors, we will omit it from the
-mathematical expositions in the remainder of the paper.
+mathematical expositions in the remainder of the chapter.
 
 The inference objective in FA is then to obtain a good estimate of the unknown
 factors, represented by $\theta$ and $\nu$, with respect to some loss function
@@ -261,7 +261,7 @@ Recall that $\Omega_{\rm obs}$ indicates which student $i$ has provided an answe
 
 \subsubsection{Maximum A Posteriori Estimation}
 \label{sec:bayes}
-The second way is through maximum a posteriori (MAP) estimation through Bayesian inference. This is the focus of our paper. Recall that we wish to obtain not only a point estimate but also credible interval, which MAP allows while MLE does not.
+The second way is through maximum a posteriori (MAP) estimation through Bayesian inference. This is the focus of this chapter. Recall that we wish to obtain not only a point estimate but also credible interval, which MAP allows while MLE does not.
 
 Bayesian inference methods treat the unknown parameters $\nu$ and $\theta$ as
 random variables drawn from some distribution. We are thus interested in
@@ -272,7 +272,7 @@ Bayes rule, we have that
     p(\nu | \mY, \theta) & = \frac{p(\mY, \nu, \theta)}{p(\mY)} \label{eq: bayes-rule-1}                                                                         \\
                          & = \frac{p(\mY | \nu, \theta)\,p(\nu)\,p(\theta)}{\iint p(\mY | \nu, \theta)\,p(\nu)\,p(\theta) d\nu d\theta}. \label{eq:bayes-rule-2}
 \end{align}
-We can similarly derive the posterior for the other unknown factor $\theta$, although in this paper we focus on Bayesian inference for the unknown student skill level parameter $\nu$.
+We can similarly derive the posterior for the other unknown factor $\theta$, although in this chapter we focus on Bayesian inference for the unknown student skill level parameter $\nu$.
 In Eq.~\ref{eq: bayes-rule-1} to Eq.~\ref{eq:bayes-rule-2} we have applied standard Bayes rule. Note that, because $\psi$ contains known factors and thus does not enter the Bayes rule equation, we have omitted it from the above equations. Once we estimate the posterior distribution for $\nu$ from data, we can obtain both point estimates and credible intervals by respectively taking the mean and the standard deviation of the posterior distributions. A number of prior works have proposed to use Bayesian inference for factor analysis, mostly developed for the IRT model~\cite{fox2001bayesian,mislevy1986bayes}. More recently, Bayesian methods are developed for more complex models. For example,~\cite{lan14a} proposed SPARFA-B, a specialized MCMC algorithm that accounts for SPARFA's sparsity and nonnegativity assumptions.
 
 % \ml{a short version of this should appear in the intro, like telling people these things are done via MCMC, which is sampling}

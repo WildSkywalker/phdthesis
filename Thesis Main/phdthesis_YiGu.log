@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  20 DEC 2024 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  20 DEC 2024 10:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1324,17 +1324,17 @@ Underfull \vbox (badness 1253) has occurred while \output is active []
 
 
 [86]
-<sim_acc.png, id=2099, 566.115pt x 349.305pt>
+<sim_acc.png, id=2098, 566.115pt x 349.305pt>
 File: sim_acc.png Graphic file (type png)
 <use sim_acc.png>
 Package pdftex.def Info: sim_acc.png  used on input line 457.
 (pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
-<sim_auc.png, id=2101, 566.115pt x 349.305pt>
+<sim_auc.png, id=2100, 566.115pt x 349.305pt>
 File: sim_auc.png Graphic file (type png)
 <use sim_auc.png>
 Package pdftex.def Info: sim_auc.png  used on input line 459.
 (pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
-<sim_f1.png, id=2102, 566.115pt x 349.305pt>
+<sim_f1.png, id=2101, 566.115pt x 349.305pt>
 File: sim_f1.png Graphic file (type png)
 <use sim_f1.png>
 Package pdftex.def Info: sim_f1.png  used on input line 461.
@@ -1352,7 +1352,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [89]
-<sim_time.png, id=2153, 565.11125pt x 349.305pt>
+<sim_time.png, id=2152, 565.11125pt x 349.305pt>
 File: sim_time.png Graphic file (type png)
 <use sim_time.png>
 Package pdftex.def Info: sim_time.png  used on input line 556.
@@ -1370,17 +1370,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [91]
-<violin3.png, id=2179, 493.845pt x 349.305pt>
+<violin3.png, id=2178, 493.845pt x 349.305pt>
 File: violin3.png Graphic file (type png)
 <use violin3.png>
 Package pdftex.def Info: violin3.png  used on input line 701.
 (pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
-<violin4.png, id=2180, 493.845pt x 349.305pt>
+<violin4.png, id=2179, 493.845pt x 349.305pt>
 File: violin4.png Graphic file (type png)
 <use violin4.png>
 Package pdftex.def Info: violin4.png  used on input line 707.
 (pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
-<violin7.png, id=2181, 493.845pt x 349.305pt>
+<violin7.png, id=2180, 493.845pt x 349.305pt>
 File: violin7.png Graphic file (type png)
 <use violin7.png>
 Package pdftex.def Info: violin7.png  used on input line 713.
@@ -1415,7 +1415,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [97]
 
 [98]
-<student_skill.png, id=2270, 638.385pt x 277.035pt>
+<student_skill.png, id=2269, 638.385pt x 277.035pt>
 File: student_skill.png Graphic file (type png)
 <use student_skill.png>
 Package pdftex.def Info: student_skill.png  used on input line 904.
@@ -1532,9 +1532,9 @@ Here is how much of TeX's memory you used:
  1302 hyphenation exceptions out of 8191
  90i,20n,93p,1272b,1223s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (111 pages, 1776713 bytes).
+Output written on phdthesis_YiGu.pdf (111 pages, 1776558 bytes).
 PDF statistics:
- 2588 PDF objects out of 2984 (max. 8388607)
+ 2587 PDF objects out of 2984 (max. 8388607)
  483 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

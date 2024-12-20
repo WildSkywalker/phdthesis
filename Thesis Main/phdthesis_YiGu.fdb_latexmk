@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex phdthesis_YiGu"] 1734712178.45468 "phdthesis_YiGu.aux" "phdthesis_YiGu.bbl" "phdthesis_YiGu" 1734712377.58876 0
+["bibtex phdthesis_YiGu"] 1734712178.45468 "phdthesis_YiGu.aux" "phdthesis_YiGu.bbl" "phdthesis_YiGu" 1734713470.80259 0
   "./citation.bib" 1734710034 51828 469d7fd08129be9378232cec8060af13 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "phdthesis_YiGu.aux" 1734712376 73586 5378eaaad73a96bb42fb07c5b5097eec "pdflatex"
+  "phdthesis_YiGu.aux" 1734713469 73586 5378eaaad73a96bb42fb07c5b5097eec "pdflatex"
   (generated)
   "phdthesis_YiGu.bbl"
   "phdthesis_YiGu.blg"
   (rewritten before read)
-["pdflatex"] 1734712374.64756 "e:/NU Staff/Thesis - GIT/Thesis Main/phdthesis_YiGu.tex" "phdthesis_YiGu.pdf" "phdthesis_YiGu" 1734712377.59002 0
+["pdflatex"] 1734713468.01634 "e:/NU Staff/Thesis - GIT/Thesis Main/phdthesis_YiGu.tex" "phdthesis_YiGu.pdf" "phdthesis_YiGu" 1734713470.80381 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1734667430 123217 5bb6a6e872be35031b793b9f7e94989a ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1734631925 14064 638ab2dae9257e64ecc39448a1ff9cd5 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcti1200.pk" 1734709129 17172 ed5c8aadf80c98920e85c1f1131a176f ""
@@ -232,7 +232,7 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "chap2.tex" 1734671960 120961 187fb8945d170bc87e7765c23b93cb2d ""
-  "chap3.tex" 1734711897 79880 920f18a78b6894231c1b4bc3efa6e605 ""
+  "chap3.tex" 1734713467 79897 b8b1e4f11419a41d961a488a1af2e1be ""
   "e:/NU Staff/Thesis - GIT/Thesis Main/phdthesis_YiGu.tex" 1734712373 8416 d898fc47f30a116ed3f7c075c87063a9 ""
   "exp/randkcnf_5_1000_1000_0001.uniform.pdf" 1734668668 18027 696f4e0fbf810ff43d821993e4522359 ""
   "exp/randkcnf_5_1000_1000_0001.weighted.pdf" 1734668668 18056 0cd00d9bd2bb9cab577c6889187bb40a ""
@@ -251,13 +251,13 @@
   "exp/vehicle.time.pdf" 1734668668 103534 9a7a0ccffa758ebacd17ba66cfe1534a ""
   "figs/learn-pipeline-crop.pdf" 1734668668 357502 b93391cf9310dc8332cb0a6264bfba3d ""
   "nuthesis.cls" 1734645347 14471 884f93a8fe4dff9cefca250fe5aec94a ""
-  "phdthesis_YiGu.aux" 1734712376 73586 5378eaaad73a96bb42fb07c5b5097eec "pdflatex"
+  "phdthesis_YiGu.aux" 1734713469 73586 5378eaaad73a96bb42fb07c5b5097eec "pdflatex"
   "phdthesis_YiGu.bbl" 1734712178 45965 2a5b225ca2615c43c6adb3f2f452fe4a "bibtex phdthesis_YiGu"
-  "phdthesis_YiGu.lof" 1734712376 4002 5be67ee788dc573f397d97286dc0dfc8 "pdflatex"
-  "phdthesis_YiGu.lot" 1734712376 2609 7abb6259cb4d01ec58ebf92e70c854dc "pdflatex"
-  "phdthesis_YiGu.out" 1734712376 6361 27df6e1891c36888268c3aba810af797 "pdflatex"
+  "phdthesis_YiGu.lof" 1734713469 4002 5be67ee788dc573f397d97286dc0dfc8 "pdflatex"
+  "phdthesis_YiGu.lot" 1734713469 2609 7abb6259cb4d01ec58ebf92e70c854dc "pdflatex"
+  "phdthesis_YiGu.out" 1734713469 6361 27df6e1891c36888268c3aba810af797 "pdflatex"
   "phdthesis_YiGu.tex" 1734712373 8416 d898fc47f30a116ed3f7c075c87063a9 ""
-  "phdthesis_YiGu.toc" 1734712376 11498 bbea4c65934565149d66223a4d8f6eca "pdflatex"
+  "phdthesis_YiGu.toc" 1734713469 11498 bbea4c65934565149d66223a4d8f6eca "pdflatex"
   "sim_acc.png" 1597434307 29937 324ee9faaf680ed5363d6322ba8da009 ""
   "sim_auc.png" 1597434307 28082 c9b01c7d4353160ebf9894434e8cf22b ""
   "sim_f1.png" 1597434307 26491 dc8f7521f66efeddaa202a1fc19bacfe ""
