@@ -5,7 +5,7 @@
 \contentsline {chapter}{\tocchapter {Chapter}{}{Table of Contents}}{6}{section*.6}%
 \contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{8}{section*.7}%
 \contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{9}{section*.8}%
-\contentsline {chapter}{\tocchapter {Chapter}{1}{Convergence of $t$-Distributed Stochastic Neighbor Embedding with Generalized Kernels}}{11}{chapter.1}%
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Convergence of t-Distributed Stochastic Neighbor Embedding with Generalized Input and Output Kernels}}{11}{chapter.1}%
 \contentsline {section}{\tocsection {}{1.1}{First section of chapter 1}}{11}{section.1.1}%
 \contentsline {section}{\tocsection {}{1.2}{Another section}}{11}{section.1.2}%
 \contentsline {chapter}{\tocchapter {Chapter}{2}{Learning Markov Random Fields for Combinatorial Structures via Sampling through Lov´asz Local Lemma}}{12}{chapter.2}%
