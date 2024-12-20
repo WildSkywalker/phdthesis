@@ -1,4 +1,4 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{154}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -421,6 +421,504 @@ Johannes~Klaus Fichte, Markus Hecher, and Markus Zisser.
 \newblock An improved gpu-based {SAT} model counter.
 \newblock In {\em {CP}}, pages 491--509, 2019.
 
+\bibitem[VanLehn(1988)]{vanlehn1988student}
+Kurt VanLehn.
+\newblock Student modeling.
+\newblock {\em Foundations of Intelligent Tutoring Systems}, 55:\penalty0 78,
+  1988.
+
+\bibitem[Chrysafiadi and Virvou(2013)]{chrysafiadi2013student}
+Konstantina Chrysafiadi and Maria Virvou.
+\newblock Student modeling approaches: A literature review for the last decade.
+\newblock {\em Expert Systems with Applications}, 40\penalty0 (11):\penalty0
+  4715--4729, 2013.
+
+\bibitem[Shute and Psotka(1994)]{shute1994intelligent}
+Valerie~J Shute and Joseph Psotka.
+\newblock Intelligent tutoring systems: Past, present, and future., 1994.
+
+\bibitem[Graf and Kinshuk(2012)]{pls1}
+Sabine Graf and Kinshuk.
+\newblock {\em Personalized Learning Systems}, pages 2594--2596.
+\newblock Springer US, Boston, MA, 2012.
+\newblock ISBN 978-1-4419-1428-6.
+\newblock URL \url{https://doi.org/10.1007/978-1-4419-1428-6_152}.
+
+\bibitem[Anderson et~al.(1995)Anderson, Corbett, Koedinger, and
+  Pelletier]{anderson1995cognitive}
+John~R Anderson, Albert~T Corbett, Kenneth~R Koedinger, and Ray Pelletier.
+\newblock Cognitive tutors: Lessons learned.
+\newblock {\em Journal of the {L}earning Sciences}, 4\penalty0 (2):\penalty0
+  167--207, 1995.
+
+\bibitem[Nye et~al.(2014)Nye, Graesser, and Hu]{nye2014autotutor}
+Benjamin~D Nye, Arthur~C Graesser, and Xiangen Hu.
+\newblock Autotutor and family: A review of 17 years of natural language
+  tutoring.
+\newblock {\em International Journal of Artificial Intelligence in Education},
+  24\penalty0 (4):\penalty0 427--469, 2014.
+
+\bibitem[Heffernan and Heffernan(2014{\natexlab{a}})]{heffernan2014assistments}
+Neil~T Heffernan and Cristina~Lindquist Heffernan.
+\newblock The assistments ecosystem: Building a platform that brings scientists
+  and teachers together for minimally invasive research on human learning and
+  teaching.
+\newblock {\em International Journal of Artificial Intelligence in Education},
+  24\penalty0 (4):\penalty0 470--497, 2014{\natexlab{a}}.
+
+\bibitem[Rafferty et~al.(2015)Rafferty, LaMar, and
+  Griffiths]{rafferty2015inferring}
+Anna~N Rafferty, Michelle~M LaMar, and Thomas~L Griffiths.
+\newblock Inferring learners' knowledge from their actions.
+\newblock {\em Cognitive Science}, 39\penalty0 (3):\penalty0 584--618, 2015.
+
+\bibitem[Romero and Ventura(2010)]{romero2010educational}
+Crist{\'o}bal Romero and Sebasti{\'a}n Ventura.
+\newblock Educational data mining: a review of the state of the art.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics}, 40\penalty0
+  (6):\penalty0 601--618, 2010.
+
+\bibitem[Baker and Yacef(2009)]{baker2009state}
+Ryan~SJD Baker and Kalina Yacef.
+\newblock The state of educational data mining in 2009: A review and future
+  visions.
+\newblock {\em Journal of Educational Data Mining}, 1\penalty0 (1):\penalty0
+  3--17, 2009.
+
+\bibitem[Merceron and Yacef(2005)]{merceron2005educational}
+Agathe Merceron and Kalina Yacef.
+\newblock Educational data mining: a case study.
+\newblock In {\em Proc. {A}rtificial {I}ntelligence in {E}ducation}, pages
+  467--474, 2005.
+
+\bibitem[van~der Linden and Hambleton(2013)]{irt}
+Wim~J van~der Linden and Ronald~K Hambleton.
+\newblock {\em Handbook of modern item response theory}.
+\newblock Springer {S}cience \& {B}usiness {M}edia, 2013.
+
+\bibitem[Ackerman(1994)]{mirt}
+Terry~A Ackerman.
+\newblock Using multidimensional item response theory to understand what items
+  and tests are measuring.
+\newblock {\em Applied {M}easurement in {E}ducation}, 7\penalty0 (4):\penalty0
+  255--278, 1994.
+
+\bibitem[Cen et~al.(2006)Cen, Koedinger, and Junker]{LFA}
+Hao Cen, Kenneth Koedinger, and Brian Junker.
+\newblock Learning factors analysis -- a general method for cognitive model
+  evaluation and improvement.
+\newblock In Mitsuru Ikeda, Kevin~D. Ashley, and Tak-Wai Chan, editors, {\em
+  Proc. {I}ntelligent {T}utoring {S}ystems}, pages 164--175, 2006.
+\newblock ISBN 978-3-540-35160-3.
+
+\bibitem[Pavlik et~al.(2009)Pavlik, Cen, and Koedinger]{PFA}
+Philip~I. Pavlik, Hao Cen, and Kenneth~R. Koedinger.
+\newblock Performance factors analysis --a new alternative to knowledge
+  tracing.
+\newblock In {\em Proc. {A}rtificial {I}ntelligence in {E}ducation}, page
+  531–538, NLD, 2009. IOS Press.
+\newblock ISBN 9781607500285.
+
+\bibitem[Lindsey et~al.(2014)Lindsey, Shroyer, Pashler, and
+  Mozer]{lindsey2014improving}
+Robert~V Lindsey, Jeffery~D Shroyer, Harold Pashler, and Michael~C Mozer.
+\newblock Improving students’ long-term knowledge retention through
+  personalized review.
+\newblock {\em Psychological Science}, 25\penalty0 (3):\penalty0 639--647,
+  2014.
+
+\bibitem[Mozer and Lindsey(2016)]{mozer2016predicting}
+Michael~C Mozer and Robert~V Lindsey.
+\newblock Predicting and improving memory retention: Psychological theory
+  matters in the big data era.
+\newblock In {\em Big Data in Cognitive Science}, pages 43--73. Psychology
+  Press, 2016.
+
+\bibitem[Choffin et~al.(2019)Choffin, Popineau, Bourda, and Vie]{das3h}
+Beno{\^\i}t Choffin, Fabrice Popineau, Yolaine Bourda, and Jill-J{\^e}nn Vie.
+\newblock Das3h: Modeling student learning and forgetting for optimally
+  scheduling distributed practice of skills.
+\newblock In {\em Proc. Educational Data Mining}, 2019.
+
+\bibitem[Vie and Kashima(2019)]{vie2019knowledge}
+Jill-J{\^e}nn Vie and Hisashi Kashima.
+\newblock Knowledge tracing machines: Factorization machines for knowledge
+  tracing.
+\newblock In {\em Proc. AAAI Conference on Artificial Intelligence}, volume~33,
+  pages 750--757, 2019.
+
+\bibitem[Piech et~al.(2015)Piech, Bassen, Huang, Ganguli, Sahami, Guibas, and
+  Sohl-Dickstein]{DKT}
+Chris Piech, Jonathan Bassen, Jonathan Huang, Surya Ganguli, Mehran Sahami,
+  Leonidas~J Guibas, and Jascha Sohl-Dickstein.
+\newblock Deep knowledge tracing.
+\newblock In {\em Proc. {A}dvances in {N}eural {I}nformation {P}rocessing
+  Systems}, pages 505--513. Curran Associates, Inc., 2015.
+
+\bibitem[Zhang et~al.(2017)Zhang, Shi, King, and Yeung]{zhang2017dynamic}
+Jiani Zhang, Xingjian Shi, Irwin King, and Dit-Yan Yeung.
+\newblock Dynamic key-value memory networks for knowledge tracing.
+\newblock In {\em Proc. International Conference on World Wide Web}, pages
+  765--774, 2017.
+
+\bibitem[Minn et~al.(2018)Minn, Yu, Desmarais, Zhu, and Vie]{minn2018deep}
+Sein Minn, Yi~Yu, Michel~C Desmarais, Feida Zhu, and Jill-J{\^e}nn Vie.
+\newblock Deep knowledge tracing and dynamic student classification for
+  knowledge tracing.
+\newblock In {\em Proc. IEEE International Conference on Data Mining}, pages
+  1182--1187. IEEE, 2018.
+
+\bibitem[Wilson et~al.(2016)Wilson, Karklin, Han, and Ekanadham]{irt-best}
+Kevin~H Wilson, Yan Karklin, Bojian Han, and Chaitanya Ekanadham.
+\newblock Back to the basics: Bayesian extensions of irt outperform neural
+  networks for proficiency estimation.
+\newblock In {\em Proc. Educational Data Mining}, 2016.
+
+\bibitem[Chang et~al.(2009)Chang, Ying, et~al.]{chang2009nonlinear}
+Hua-Hua Chang, Zhiliang Ying, et~al.
+\newblock Nonlinear sequential designs for logistic item response theory models
+  with applications to computerized adaptive tests.
+\newblock {\em The Annals of Statistics}, 37\penalty0 (3):\penalty0 1466--1488,
+  2009.
+
+\bibitem[Yan et~al.(2016)Yan, Von~Davier, and Lewis]{yan2016computerized}
+Duanli Yan, Alina~A Von~Davier, and Charles Lewis.
+\newblock {\em Computerized multistage testing: Theory and applications}.
+\newblock CRC Press, 2016.
+
+\bibitem[Gelman et~al.(2013)Gelman, Carlin, Stern, Dunson, Vehtari, and
+  Rubin]{gelman2013bayesian}
+Andrew Gelman, John~B Carlin, Hal~S Stern, David~B Dunson, Aki Vehtari, and
+  Donald~B Rubin.
+\newblock {\em Bayesian data analysis}.
+\newblock Chapman and Hall/CRC, 2013.
+
+\bibitem[Gilks et~al.(1995)Gilks, Richardson, and
+  Spiegelhalter]{gilks1995markov}
+Walter~R Gilks, Sylvia Richardson, and David Spiegelhalter.
+\newblock {\em Markov chain Monte Carlo in practice}.
+\newblock Chapman and Hall/CRC, 1995.
+
+\bibitem[Lan et~al.(2014)Lan, Waters, Studer, and Baraniuk]{lan14a}
+Andrew~S. Lan, Andrew~E. Waters, Christoph Studer, and Richard~G. Baraniuk.
+\newblock Sparse factor analysis for learning and content analytics.
+\newblock {\em Journal of {M}achine {L}earning {R}esearch}, 15:\penalty0
+  1959--2008, 2014.
+
+\bibitem[Fox(2010)]{fox2010bayesian}
+Jean-Paul Fox.
+\newblock {\em Bayesian item response modeling: Theory and applications}.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem[Pardos et~al.(2010)Pardos, Heffernan, Anderson, Heffernan, and
+  Schools]{pardos2010using}
+Zachary~A Pardos, Neil~T Heffernan, Brigham Anderson, Cristina~L Heffernan, and
+  Worcester~Public Schools.
+\newblock Using fine-grained skill models to fit student performance with
+  bayesian networks.
+\newblock {\em Handbook of Dducational Data Mining}, 417, 2010.
+
+\bibitem[Merkle(2011)]{merkle2011comparison}
+Edgar~C Merkle.
+\newblock A comparison of imputation methods for bayesian factor analysis
+  models.
+\newblock {\em Journal of Educational and Behavioral Statistics}, 36\penalty0
+  (2):\penalty0 257--276, 2011.
+
+\bibitem[Driscoll(1994)]{driscoll1994psychology}
+Marcy~Perkins Driscoll.
+\newblock {\em Psychology of learning for instruction.}
+\newblock Allyn \& Bacon, 1994.
+
+\bibitem[Tatsuoka(1983)]{qmatrix}
+Kikumi~K. Tatsuoka.
+\newblock Rule space: An approach for dealing with misconceptions based on item
+  response theory.
+\newblock {\em Journal of Educational Measurement}, 20\penalty0 (4):\penalty0
+  345--354, 1983.
+\newblock ISSN 00220655, 17453984.
+\newblock URL \url{http://www.jstor.org/stable/1434951}.
+
+\bibitem[Chi et~al.(2011)Chi, Koedinger, Gordon, Jordon, and
+  VanLahn]{chi2011instructional}
+Min Chi, Kenneth~R Koedinger, Geoffrey~J Gordon, Pamela Jordon, and Kurt
+  VanLahn.
+\newblock Instructional factors analysis: A cognitive model for multiple
+  instructional interventions.
+\newblock {\em Educational Data Mining}, 2011.
+
+\bibitem[Fox and Glas(2001)]{fox2001bayesian}
+Jean-Paul Fox and Cees~AW Glas.
+\newblock Bayesian estimation of a multilevel irt model using gibbs sampling.
+\newblock {\em Psychometrika}, 66\penalty0 (2):\penalty0 271--288, 2001.
+
+\bibitem[Mislevy(1986)]{mislevy1986bayes}
+Robert~J Mislevy.
+\newblock Bayes modal estimation in item response models.
+\newblock {\em Psychometrika}, 51\penalty0 (2):\penalty0 177--195, 1986.
+
+\bibitem[Bishop(2006)]{bishop2006pattern}
+Christopher~M Bishop.
+\newblock {\em Pattern recognition and machine learning}.
+\newblock springer, 2006.
+
+\bibitem[MacKay and Mac~Kay(2003)]{mackay2003information}
+David~JC MacKay and David~JC Mac~Kay.
+\newblock {\em Information theory, inference and learning algorithms}.
+\newblock Cambridge University Press, 2003.
+
+\bibitem[Jensen et~al.(1906)]{jensen1906fonctions}
+Johan Ludwig William~Valdemar Jensen et~al.
+\newblock Sur les fonctions convexes et les in{\'e}galit{\'e}s entre les
+  valeurs moyennes.
+\newblock {\em Acta {M}athematica}, 30:\penalty0 175--193, 1906.
+
+\bibitem[Rezende et~al.(2014)Rezende, Mohamed, and
+  Wierstra]{rezende2014stochastic}
+Danilo~Jimenez Rezende, Shakir Mohamed, and Daan Wierstra.
+\newblock Stochastic backpropagation and approximate inference in deep
+  generative models.
+\newblock In {\em Proc. {I}nternational {C}onference on {M}achine {L}earning},
+  ICML’14, page II–1278–II–1286. JMLR.org, 2014.
+
+\bibitem[Zhao et~al.(2019)Zhao, Song, and Ermon]{infovae}
+Shengjia Zhao, Jiaming Song, and Stefano Ermon.
+\newblock Infovae: Balancing learning and inference in variational
+  autoencoders.
+\newblock In {\em Proc. {AAAI} {C}onference on {A}rtificial {I}ntelligence},
+  volume~33, pages 5885--5892, Feb. 2019.
+
+\bibitem[Mathieu et~al.(2019)Mathieu, Rainforth, Siddharth, and Teh]{dd}
+Emile Mathieu, Tom Rainforth, N~Siddharth, and Yee~Whye Teh.
+\newblock Disentangling disentanglement in variational autoencoders.
+\newblock In {\em Proc. {I}nternational {C}onference on {M}achine {L}earning},
+  pages 4402--4412, Jun 2019.
+
+\bibitem[Siddharth et~al.(2017)Siddharth, Paige, Van~de Meent, Desmaison,
+  Goodman, Kohli, Wood, and Torr]{siddharth2017learning}
+Narayanaswamy Siddharth, Brooks Paige, Jan-Willem Van~de Meent, Alban
+  Desmaison, Noah Goodman, Pushmeet Kohli, Frank Wood, and Philip Torr.
+\newblock Learning disentangled representations with semi-supervised deep
+  generative models.
+\newblock In {\em Proc. {A}dvances in {N}eural {I}nformation {P}rocessing
+  Systems}, pages 5925--5935, Dec. 2017.
+
+\bibitem[Creager et~al.(2019)Creager, Madras, Jacobsen, Weis, Swersky, Pitassi,
+  and Zemel]{fairvae}
+Elliot Creager, David Madras, Joern-Henrik Jacobsen, Marissa Weis, Kevin
+  Swersky, Toniann Pitassi, and Richard Zemel.
+\newblock Flexibly fair representation learning by disentanglement.
+\newblock In Kamalika Chaudhuri and Ruslan Salakhutdinov, editors, {\em
+  Proceedings of the 36th International Conference on Machine Learning},
+  volume~97 of {\em Proc. {M}achine {L}earning {R}esearch}, pages 1436--1445,
+  Long Beach, California, USA, 09--15 Jun 2019. PMLR.
+
+\bibitem[Chen et~al.(2018)Chen, Li, Grosse, and Duvenaud]{betatcvae}
+Tian~Qi Chen, Xuechen Li, Roger~B Grosse, and David~K Duvenaud.
+\newblock Isolating sources of disentanglement in variational autoencoders.
+\newblock In {\em Proc. {A}dvances in {N}eural {I}nformation {P}rocessing
+  Systems}, pages 2610--2620, 2018.
+
+\bibitem[Higgins et~al.(2017)Higgins, Matthey, Pal, Burgess, Glorot, Botvinick,
+  Mohamed, and Lerchner]{betavae}
+Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot,
+  Matthew Botvinick, Shakir Mohamed, and Alexander Lerchner.
+\newblock beta-vae: Learning basic visual concepts with a constrained
+  variational framework.
+\newblock In {\em Proc. {I}nternational {C}onference on {L}earning
+  {R}epresentations}, 2017.
+
+\bibitem[Kim and Mnih(2018)]{factorvae}
+Hyunjik Kim and Andriy Mnih.
+\newblock Disentangling by factorising.
+\newblock In {\em Proc. {I}nternational {C}onference on {M}achine {L}earning},
+  volume~80, pages 2649--2658, 2018.
+
+\bibitem[Kingma et~al.(2019)Kingma, Welling, et~al.]{kingma2019introduction}
+Diederik~P Kingma, Max Welling, et~al.
+\newblock An introduction to variational autoencoders.
+\newblock {\em Foundations and {T}rends{\textregistered} in {M}achine
+  {L}earning}, 12\penalty0 (4):\penalty0 307--392, 2019.
+
+\bibitem[Abadi et~al.(2015)]{tensorflow2015-whitepaper}
+Mart\'{\i}n Abadi et~al.
+\newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems,
+  2015.
+\newblock URL \url{https://www.tensorflow.org/}.
+\newblock Software available from \url{tensorflow.org}.
+
+\bibitem[Paszke et~al.(2019)]{NEURIPS2019_9015}
+Adam Paszke et~al.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock In H.~Wallach, H.~Larochelle, A.~Beygelzimer, F.~d\textquotesingle
+  Alch\'{e}-Buc, E.~Fox, and R.~Garnett, editors, {\em Proc. Advances in Neural
+  Information Processing Systems}, pages 8024--8035. Curran Associates, Inc.,
+  2019.
+\newblock URL
+  \url{http://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library.pdf}.
+
+\bibitem[Liang et~al.(2018)Liang, Krishnan, Hoffman, and
+  Jebara]{liang2018variational}
+Dawen Liang, Rahul~G Krishnan, Matthew~D Hoffman, and Tony Jebara.
+\newblock Variational autoencoders for collaborative filtering.
+\newblock In {\em Proc. International Conference on World Wide Web}, pages
+  689--698, 2018.
+
+\bibitem[Salakhutdinov et~al.(2007)Salakhutdinov, Mnih, and
+  Hinton]{salakhutdinov2007restricted}
+Ruslan Salakhutdinov, Andriy Mnih, and Geoffrey Hinton.
+\newblock Restricted boltzmann machines for collaborative filtering.
+\newblock In {\em Proc. International Conference on Machine Learning}, pages
+  791--798, 2007.
+
+\bibitem[Sedhain et~al.(2015)Sedhain, Menon, Sanner, and
+  Xie]{sedhain2015autorec}
+Suvash Sedhain, Aditya~Krishna Menon, Scott Sanner, and Lexing Xie.
+\newblock Autorec: Autoencoders meet collaborative filtering.
+\newblock In {\em Proc. International Conference on World Wide Web}, pages
+  111--112, 2015.
+
+\bibitem[Nazabal et~al.(2018)Nazabal, Olmos, Ghahramani, and
+  Valera]{nazabal2018handling}
+Alfredo Nazabal, Pablo~M Olmos, Zoubin Ghahramani, and Isabel Valera.
+\newblock Handling incomplete heterogeneous data using vaes.
+\newblock {\em arXiv preprint arXiv:1807.03653}, 2018.
+
+\bibitem[Ma et~al.(2019)Ma, Tschiatschek, Palla, Hern{\'a}ndez-Lobato, Nowozin,
+  and Zhang]{ma2018eddi}
+Chao Ma, Sebastian Tschiatschek, Konstantina Palla, Jos{\'e}~Miguel
+  Hern{\'a}ndez-Lobato, Sebastian Nowozin, and Cheng Zhang.
+\newblock Eddi: Efficient dynamic discovery of high-value information with
+  partial vae.
+\newblock In {\em Proc. International Conference on Machine Learning}, 2019.
+
+\bibitem[Gong et~al.(2019)Gong, Tschiatschek, Turner, Nowozin, and
+  Hern{\'a}ndez-Lobato]{gong2019icebreaker}
+Wenbo Gong, Sebastian Tschiatschek, Richard Turner, Sebastian Nowozin, and
+  Jos{\'e}~Miguel Hern{\'a}ndez-Lobato.
+\newblock Icebreaker: Element-wise active information acquisition with bayesian
+  deep latent gaussian model.
+\newblock In {\em Proc. Advances in Neural Information Processing Systems},
+  2019.
+
+\bibitem[Ma et~al.(2018)Ma, Gong, Hern{\'a}ndez-Lobato, Koenigstein, Nowozin,
+  and Zhang]{ma2018partial}
+Chao Ma, Wenbo Gong, Jos{\'e}~Miguel Hern{\'a}ndez-Lobato, Noam Koenigstein,
+  Sebastian Nowozin, and Cheng Zhang.
+\newblock Partial vae for hybrid recommender system.
+\newblock In {\em Proc. NeurIPS Workshop on Bayesian Deep Learning}, 2018.
+
+\bibitem[Ghahramani and Beal(2000)]{ghahramani2000variational}
+Zoubin Ghahramani and Matthew~J Beal.
+\newblock Variational inference for bayesian mixtures of factor analysers.
+\newblock In {\em Proc. Advances in Neural Information Processing Systems},
+  pages 449--455, 2000.
+
+\bibitem[Zhao and Philip(2009)]{zhao2009note}
+Jian-hua Zhao and LH~Philip.
+\newblock A note on variational bayesian factor analysis.
+\newblock {\em Neural Networks}, 22\penalty0 (7):\penalty0 988--997, 2009.
+
+\bibitem[Wu et~al.(2020)Wu, Davis, Domingue, Piech, and
+  Goodman]{wu2020variational}
+Mike Wu, Richard~L Davis, Benjamin~W Domingue, Chris Piech, and Noah Goodman.
+\newblock Variational item response theory: Fast, accurate, and expressive.
+\newblock {\em arXiv preprint arXiv:2002.00276}, 2020.
+
+\bibitem[Kingma and Ba(2015)]{kingma2014adam}
+Diederik~P Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock In {\em Proc. {I}nternational {C}onference on {L}earning
+  {R}epresentations}, 2015.
+
+\bibitem[Hastie et~al.(2009)Hastie, Tibshirani, and
+  Friedman]{hastie2009elements}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock {\em The elements of statistical learning: data mining, inference,
+  and prediction}.
+\newblock Springer Science \& Business Media, 2009.
+
+\bibitem[Heffernan and Heffernan(2014{\natexlab{b}})]{assistment}
+Neil~T. Heffernan and Cristina Heffernan.
+\newblock The assistments ecosystem: Building a platform that brings scientists
+  and teachers together for minimally invasive research on human learning and
+  teaching.
+\newblock {\em International {J}ournal of {A}rtificial {I}ntelligence in
+  {E}ducation}, 24:\penalty0 470--497, 2014{\natexlab{b}}.
+
+\bibitem[Stamper et~al.(2010{\natexlab{a}})Stamper, Niculescu-Mizil, Ritter,
+  Gordon, and Koedinger]{Algebra}
+J.~Stamper, A.~Niculescu-Mizil, S.~Ritter, G.J. Gordon, and K.R. Koedinger.
+\newblock Algebra i 2006-2007.
+\newblock {\em Development data set from {KDD} Cup 2010 {E}ducational {D}ata
+  {M}ining {C}hallenge}, 2010{\natexlab{a}}.
+
+\bibitem[Stamper et~al.(2010{\natexlab{b}})Stamper, Niculescu-Mizil, Ritter,
+  Gordon, and Koedinger]{bridge}
+J.~Stamper, A.~Niculescu-Mizil, S.~Ritter, G.J. Gordon, and K.R. Koedinger.
+\newblock Bridge to algebra 2006-2007.
+\newblock {\em Development data set from {KDD} {C}up 2010 {E}ducational {D}ata
+  {M}ining {C}hallenge}, 2010{\natexlab{b}}.
+
+\bibitem[Stamper and Pardos(2016)]{Stamper2016The2K}
+John~C. Stamper and Zachary~A. Pardos.
+\newblock The 2010 kdd cup competition dataset: Engaging the machine learning
+  community in predictive learning analytics.
+\newblock In {\em Journal of Learning Analytics}, 2016.
+
+\bibitem[Ishwaran et~al.(2005)Ishwaran, Rao, et~al.]{ishwaran2005spike}
+Hemant Ishwaran, J~Sunil Rao, et~al.
+\newblock Spike and slab variable selection: frequentist and bayesian
+  strategies.
+\newblock {\em The Annals of Statistics}, 33\penalty0 (2):\penalty0 730--773,
+  2005.
+
+\bibitem[Titsias and L{\'a}zaro-Gredilla(2011)]{titsias2011spike}
+Michalis~K Titsias and Miguel L{\'a}zaro-Gredilla.
+\newblock Spike and slab variational inference for multi-task and multiple
+  kernel learning.
+\newblock In {\em Proc. Advances in neural information processing systems},
+  pages 2339--2347, 2011.
+
+\bibitem[Tonolini et~al.(2019)Tonolini, Jensen, and
+  Murray-Smith]{enlighten191553}
+Francesco Tonolini, Bjorn~Sand Jensen, and Roderick Murray-Smith.
+\newblock Variational sparse coding, July 2019.
+\newblock URL \url{http://eprints.gla.ac.uk/191553/}.
+
+\bibitem[Zhang et~al.(2020)Zhang, Li, Zhang, Chen, and
+  Wilson]{zhang2020csgmcmc}
+Ruqi Zhang, Chunyuan Li, Jianyi Zhang, Changyou Chen, and Andrew~Gordon Wilson.
+\newblock Cyclical stochastic gradient mcmc for bayesian deep learning.
+\newblock {\em Proc. International Conference on Learning Representations},
+  2020.
+
+\bibitem[Ma et~al.(2015)Ma, Chen, and Fox]{ma2015complete}
+Yi-An Ma, Tianqi Chen, and Emily Fox.
+\newblock A complete recipe for stochastic gradient mcmc.
+\newblock In {\em Proc. Advances in Neural Information Processing Systems},
+  pages 2917--2925, 2015.
+
+\bibitem[Song et~al.(2017)Song, Zhao, and Ermon]{song2017nice}
+Jiaming Song, Shengjia Zhao, and Stefano Ermon.
+\newblock A-nice-mc: Adversarial training for mcmc.
+\newblock In {\em Proc. Advances in Neural Information Processing Systems},
+  pages 5140--5150, 2017.
+
+\bibitem[De~Freitas et~al.(2001)De~Freitas, H{\o}jen-S{\o}rensen, Jordan, and
+  Russell]{de2001variational}
+Nando De~Freitas, Pedro H{\o}jen-S{\o}rensen, Michael~I Jordan, and Stuart
+  Russell.
+\newblock Variational mcmc.
+\newblock In {\em Proc. conference on Uncertainty in Artificial Intelligence},
+  pages 120--127. Morgan Kaufmann Publishers Inc., 2001.
+
+\bibitem[Habib and Barber(2019)]{habib2018auxiliary}
+Raza Habib and David Barber.
+\newblock Auxiliary variational mcmc.
+\newblock {\em Proc. International Conference on Learning Representations},
+  2019.
+
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
 \newblock Equilibrium distributions for t-distributed stochastic neighbour
@@ -466,5 +964,33 @@ Wenjun Liu, Quoc Ngo, and Vu~Huy.
 Nan Jiang, Yi~Gu, and Yexiang Xue.
 \newblock Learning markov random fields for combinatorial structures with
   sampling through lov\'asz local lemma, 2022.
+
+\bibitem[Yang et~al.(2019)Yang, Studer, Baker, Hefferenan, and Lan]{lan-loop}
+T.~Yang, C.~Studer, R.~Baker, N.~Hefferenan, and A.~S. Lan.
+\newblock Active learning for student affect detection.
+\newblock In {\em Proc. Educational Data Mining}, 2019.
+
+\bibitem[Aist et~al.(2002)Aist, Kort, Reilly, Mostow, and
+  Picard]{aist2002experimentally}
+Gregory Aist, Barry Kort, Rob Reilly, Jack Mostow, and Rosalind Picard.
+\newblock Experimentally augmenting an intelligent tutoring system with
+  human-supplied capabilities: adding human-provided emotional scaffolding to
+  an automated reading tutor that listens.
+\newblock In {\em Proc. IEEE International Conference on Multimodal
+  Interfaces}, pages 483--490. IEEE, 2002.
+
+\bibitem[Rezende and Mohamed(2015)]{nf}
+Danilo~Jimenez Rezende and Shakir Mohamed.
+\newblock Variational inference with normalizing flows.
+\newblock In {\em Proc. International Conference on Machine Learning - Volume},
+  ICML’15, page 1530–1538. JMLR.org, 2015.
+
+\bibitem[Kingma et~al.(2016)Kingma, Salimans, Jozefowicz, Chen, Sutskever, and
+  Welling]{kingma2016improved}
+Durk~P Kingma, Tim Salimans, Rafal Jozefowicz, Xi~Chen, Ilya Sutskever, and Max
+  Welling.
+\newblock Improved variational inference with inverse autoregressive flow.
+\newblock In {\em Proc. Advances in Neural Information Processing Systems},
+  pages 4743--4751, 2016.
 
 \end{thebibliography}

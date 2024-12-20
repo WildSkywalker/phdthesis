@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  19 DEC 2024 23:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  20 DEC 2024 10:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -248,26 +248,60 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks31
 \c@algorithm=\count295
+) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen157
+\lightrulewidth=\dimen158
+\cmidrulewidth=\dimen159
+\belowrulesep=\dimen160
+\belowbottomsep=\dimen161
+\aboverulesep=\dimen162
+\abovetopsep=\dimen163
+\cmidrulesep=\dimen164
+\cmidrulekern=\dimen165
+\defaultaddspace=\dimen166
+\@cmidla=\count296
+\@cmidlb=\count297
+\@aboverulesep=\dimen167
+\@belowrulesep=\dimen168
+\@thisruleclass=\count298
+\@lastruleclass=\count299
+\@thisrulewidth=\dimen169
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
 Package: algpseudocode 
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count296
-\c@ALG@rem=\count297
-\c@ALG@nested=\count298
+\c@ALG@line=\count300
+\c@ALG@rem=\count301
+\c@ALG@nested=\count302
 \ALG@tlm=\skip60
 \ALG@thistlm=\skip61
-\c@ALG@Lnr=\count299
-\c@ALG@blocknr=\count300
-\c@ALG@storecount=\count301
-\c@ALG@tmpcounter=\count302
+\c@ALG@Lnr=\count303
+\c@ALG@blocknr=\count304
+\c@ALG@storecount=\count305
+\c@ALG@tmpcounter=\count306
 \ALG@tmplength=\skip62
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -280,20 +314,20 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen157
-\captionmargin=\dimen158
-\caption@leftmargin=\dimen159
-\caption@rightmargin=\dimen160
-\caption@width=\dimen161
-\caption@indent=\dimen162
-\caption@parindent=\dimen163
-\caption@hangindent=\dimen164
+\caption@tempdima=\dimen170
+\captionmargin=\dimen171
+\caption@leftmargin=\dimen172
+\caption@rightmargin=\dimen173
+\caption@width=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
 Package caption Info: AMS or SMF document class detected.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-ams-smf.sto
 File: caption-ams-smf.sto 2020/08/22 v2.0 Adaption of the caption package to the AMS and SMF document classes (AR)
 ))
-\c@caption@flags=\count303
-\c@continuedfloat=\count304
+\c@caption@flags=\count307
+\c@continuedfloat=\count308
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
@@ -301,14 +335,14 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip63
 \bibsep=\skip64
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count305
+\c@NAT@ctr=\count309
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2024-05-27 L3 programming layer (loader) 
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
+\l__color_backend_stack_int=\count310
 \l__pdf_internal_box=\box57
 ))
 Package: xparse 2024-05-08 L3 Experimental document command parser
@@ -323,14 +357,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen165
-\Gin@req@width=\dimen166
-) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
-Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
-LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
-(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
-(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+\Gin@req@height=\dimen178
+\Gin@req@width=\dimen179
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -354,12 +382,12 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@posthook=\toks33
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2024/06/02 v24.6 The Babel package
-\babel@savecnt=\count307
-\U@D=\dimen167
+\babel@savecnt=\count311
+\U@D=\dimen180
 \l@unhyphenated=\language79
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count308
+\bbl@dirlevel=\count312
 
 *************************************
 * Local config file bblopts.cfg used
@@ -380,18 +408,18 @@ Package babel Info: Importing font and identification data for english
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip65
-\enit@outerparindent=\dimen168
+\enit@outerparindent=\dimen181
 \enit@toks=\toks34
 \enit@inbox=\box58
-\enit@count@id=\count309
-\enitdp@description=\count310
+\enit@count@id=\count313
+\enitdp@description=\count314
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/05/26 v1.0h Color table columns (DPC)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
-\col@sep=\dimen169
+\col@sep=\dimen182
 \ar@mcellbox=\box59
-\extrarowheight=\dimen170
+\extrarowheight=\dimen183
 \NC@list=\toks35
 \extratabsurround=\skip66
 \backup@length=\skip67
@@ -399,11 +427,11 @@ Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
 )
 \everycr=\toks36
 \minrowclearance=\skip68
-\rownum=\count311
+\rownum=\count315
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks37
-\pgfutil@tempdima=\dimen171
-\pgfutil@tempdimb=\dimen172
+\pgfutil@tempdima=\dimen184
+\pgfutil@tempdimb=\dimen185
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box61
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -418,26 +446,26 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks40
 ))
-\pgf@x=\dimen173
-\pgf@y=\dimen174
-\pgf@xa=\dimen175
-\pgf@ya=\dimen176
-\pgf@xb=\dimen177
-\pgf@yb=\dimen178
-\pgf@xc=\dimen179
-\pgf@yc=\dimen180
-\pgf@xd=\dimen181
-\pgf@yd=\dimen182
+\pgf@x=\dimen186
+\pgf@y=\dimen187
+\pgf@xa=\dimen188
+\pgf@ya=\dimen189
+\pgf@xb=\dimen190
+\pgf@yb=\dimen191
+\pgf@xc=\dimen192
+\pgf@yc=\dimen193
+\pgf@xd=\dimen194
+\pgf@yd=\dimen195
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count312
-\c@pgf@countb=\count313
-\c@pgf@countc=\count314
-\c@pgf@countd=\count315
+\c@pgf@counta=\count316
+\c@pgf@countb=\count317
+\c@pgf@countc=\count318
+\c@pgf@countd=\count319
 \t@pgf@toka=\toks41
 \t@pgf@tokb=\toks42
 \t@pgf@tokc=\toks43
-\pgf@sys@id@count=\count316
+\pgf@sys@id@count=\count320
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -448,59 +476,59 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count317
-\pgfsyssoftpath@bigbuffer@items=\count318
+\pgfsyssoftpath@smallbuffer@items=\count321
+\pgfsyssoftpath@bigbuffer@items=\count322
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen183
-\pgfmath@count=\count319
+\pgfmath@dimen=\dimen196
+\pgfmath@count=\count323
 \pgfmath@box=\box62
 \pgfmath@toks=\toks44
 \pgfmath@stack@operand=\toks45
 \pgfmath@stack@operation=\toks46
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count320
+\c@pgfmathroundto@lastzeros=\count324
 )) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen184
-\pgf@picmaxx=\dimen185
-\pgf@picminy=\dimen186
-\pgf@picmaxy=\dimen187
-\pgf@pathminx=\dimen188
-\pgf@pathmaxx=\dimen189
-\pgf@pathminy=\dimen190
-\pgf@pathmaxy=\dimen191
-\pgf@xx=\dimen192
-\pgf@xy=\dimen193
-\pgf@yx=\dimen194
-\pgf@yy=\dimen195
-\pgf@zx=\dimen196
-\pgf@zy=\dimen197
+\pgf@picminx=\dimen197
+\pgf@picmaxx=\dimen198
+\pgf@picminy=\dimen199
+\pgf@picmaxy=\dimen256
+\pgf@pathminx=\dimen257
+\pgf@pathmaxx=\dimen258
+\pgf@pathminy=\dimen259
+\pgf@pathmaxy=\dimen260
+\pgf@xx=\dimen261
+\pgf@xy=\dimen262
+\pgf@yx=\dimen263
+\pgf@yy=\dimen264
+\pgf@zx=\dimen265
+\pgf@zy=\dimen266
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen198
-\pgf@path@lasty=\dimen199
+\pgf@path@lastx=\dimen267
+\pgf@path@lasty=\dimen268
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen256
-\pgf@shorten@start@additional=\dimen257
+\pgf@shorten@end@additional=\dimen269
+\pgf@shorten@start@additional=\dimen270
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box63
 \pgf@hbox=\box64
 \pgf@layerbox@main=\box65
-\pgf@picture@serial@count=\count321
+\pgf@picture@serial@count=\count325
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen258
+\pgflinewidth=\dimen271
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen259
-\pgf@pt@y=\dimen260
-\pgf@pt@temp=\dimen261
+\pgf@pt@x=\dimen272
+\pgf@pt@y=\dimen273
+\pgf@pt@temp=\dimen274
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -509,12 +537,12 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen262
+\pgfarrowsep=\dimen275
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen263
-\pgf@sys@shading@range@num=\count322
-\pgf@shadingcount=\count323
+\pgf@max=\dimen276
+\pgf@sys@shading@range@num=\count326
+\pgf@shadingcount=\count327
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
@@ -535,215 +563,222 @@ File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen264
-\pgf@nodesepend=\dimen265
+\pgf@nodesepstart=\dimen277
+\pgf@nodesepend=\dimen278
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen266
-\pgffor@skip=\dimen267
+\pgffor@iter=\dimen279
+\pgffor@skip=\dimen280
 \pgffor@stack=\toks47
 \pgffor@toks=\toks48
 )) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count324
-\pgfplotmarksize=\dimen268
+\pgf@plot@mark@count=\count328
+\pgfplotmarksize=\dimen281
 )
-\tikz@lastx=\dimen269
-\tikz@lasty=\dimen270
-\tikz@lastxsaved=\dimen271
-\tikz@lastysaved=\dimen272
-\tikz@lastmovetox=\dimen273
-\tikz@lastmovetoy=\dimen274
-\tikzleveldistance=\dimen275
-\tikzsiblingdistance=\dimen276
+\tikz@lastx=\dimen282
+\tikz@lasty=\dimen283
+\tikz@lastxsaved=\dimen284
+\tikz@lastysaved=\dimen285
+\tikz@lastmovetox=\dimen286
+\tikz@lastmovetoy=\dimen287
+\tikzleveldistance=\dimen288
+\tikzsiblingdistance=\dimen289
 \tikz@figbox=\box68
 \tikz@figbox@bg=\box69
 \tikz@tempbox=\box70
 \tikz@tempbox@bg=\box71
-\tikztreelevel=\count325
-\tikznumberofchildren=\count326
-\tikznumberofcurrentchild=\count327
-\tikz@fig@count=\count328
+\tikztreelevel=\count329
+\tikznumberofchildren=\count330
+\tikznumberofcurrentchild=\count331
+\tikz@fig@count=\count332
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count329
-\pgfmatrixcurrentcolumn=\count330
-\pgf@matrix@numberofcolumns=\count331
+\pgfmatrixcurrentrow=\count333
+\pgfmatrixcurrentcolumn=\count334
+\pgf@matrix@numberofcolumns=\count335
 )
-\tikz@expandcount=\count332
+\tikz@expandcount=\count336
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip69
-\multirow@cntb=\count333
+\multirow@cntb=\count337
 \multirow@dima=\skip70
-\bigstrutjot=\dimen277
+\bigstrutjot=\dimen290
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/nicematrix\nicematrix.sty (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
 Package: l3keys2e 2024-05-08 LaTeX2e option processing using LaTeX3 keys
 )
 Package: nicematrix 2024/11/18 v7.0 Enhanced arrays with the help of PGF/TikZ
-\g__nicematrix_env_int=\count334
-\g__nicematrix_NiceMatrixBlock_int=\count335
-\g__nicematrix_notes_caption_int=\count336
-\l__nicematrix_columns_width_dim=\dimen278
-\l__nicematrix_col_width_dim=\dimen279
-\g__nicematrix_row_total_int=\count337
-\g__nicematrix_col_total_int=\count338
-\g__nicematrix_last_row_node_int=\count339
-\l__nicematrix_key_nb_rows_int=\count340
-\g__nicematrix_blocks_wd_dim=\dimen280
-\g__nicematrix_blocks_ht_dim=\dimen281
-\g__nicematrix_blocks_dp_dim=\dimen282
-\l__nicematrix_width_dim=\dimen283
-\l__nicematrix_tabular_width_dim=\dimen284
-\l__nicematrix_rule_width_dim=\dimen285
-\l__nicematrix_old_iRow_int=\count341
-\l__nicematrix_old_jCol_int=\count342
-\g__nicematrix_total_X_weight_int=\count343
-\l__nicematrix_X_columns_dim=\dimen286
-\l__nicematrix_x_initial_dim=\dimen287
-\l__nicematrix_y_initial_dim=\dimen288
-\l__nicematrix_x_final_dim=\dimen289
-\l__nicematrix_y_final_dim=\dimen290
-\l__nicematrix_tmpc_dim=\dimen291
-\l__nicematrix_tmpd_dim=\dimen292
-\l__nicematrix_tmpe_dim=\dimen293
-\l__nicematrix_tmpf_dim=\dimen294
-\g__nicematrix_dp_row_zero_dim=\dimen295
-\g__nicematrix_ht_row_zero_dim=\dimen296
-\g__nicematrix_ht_row_one_dim=\dimen297
-\g__nicematrix_dp_ante_last_row_dim=\dimen298
-\g__nicematrix_ht_last_row_dim=\dimen299
-\g__nicematrix_dp_last_row_dim=\dimen300
-\g__nicematrix_width_last_col_dim=\dimen301
-\g__nicematrix_width_first_col_dim=\dimen302
-\l__nicematrix_row_min_int=\count344
-\l__nicematrix_row_max_int=\count345
-\l__nicematrix_col_min_int=\count346
-\l__nicematrix_col_max_int=\count347
-\l__nicematrix_start_int=\count348
-\l__nicematrix_end_int=\count349
-\l__nicematrix_local_start_int=\count350
-\l__nicematrix_local_end_int=\count351
-\g__nicematrix_static_num_of_col_int=\count352
-\l__nicematrix_rounded_corners_dim=\dimen303
-\l__nicematrix_tab_rounded_corners_dim=\dimen304
-\l__nicematrix_offset_dim=\dimen305
-\l__nicematrix_line_width_dim=\dimen306
-\g__nicematrix_block_box_int=\count353
-\l__nicematrix_submatrix_extra_height_dim=\dimen307
-\l__nicematrix_submatrix_left_xshift_dim=\dimen308
-\l__nicematrix_submatrix_right_xshift_dim=\dimen309
-\l__nicematrix_first_row_int=\count354
-\l__nicematrix_first_col_int=\count355
-\l__nicematrix_last_row_int=\count356
-\l__nicematrix_last_col_int=\count357
-\c@tabularnote=\count358
-\g__nicematrix_tabularnote_int=\count359
-\c@nicematrix_draft=\count360
-\l__nicematrix_cell_space_top_limit_dim=\dimen310
-\l__nicematrix_cell_space_bottom_limit_dim=\dimen311
-\l__nicematrix_xdots_inter_dim=\dimen312
-\l__nicematrix_xdots_shorten_start_dim=\dimen313
-\l__nicematrix_xdots_shorten_end_dim=\dimen314
-\l__nicematrix_xdots_radius_dim=\dimen315
-\l__nicematrix_notes_above_space_dim=\dimen316
-\l__nicematrix_left_margin_dim=\dimen317
-\l__nicematrix_right_margin_dim=\dimen318
-\l__nicematrix_extra_left_margin_dim=\dimen319
-\l__nicematrix_extra_right_margin_dim=\dimen320
-\c__nicematrix_max_l_dim=\dimen321
-\l__nicematrix_position_int=\count361
-\l__nicematrix_multiplicity_int=\count362
-\l__nicematrix_brace_yshift_dim=\dimen322
+\g__nicematrix_env_int=\count338
+\g__nicematrix_NiceMatrixBlock_int=\count339
+\g__nicematrix_notes_caption_int=\count340
+\l__nicematrix_columns_width_dim=\dimen291
+\l__nicematrix_col_width_dim=\dimen292
+\g__nicematrix_row_total_int=\count341
+\g__nicematrix_col_total_int=\count342
+\g__nicematrix_last_row_node_int=\count343
+\l__nicematrix_key_nb_rows_int=\count344
+\g__nicematrix_blocks_wd_dim=\dimen293
+\g__nicematrix_blocks_ht_dim=\dimen294
+\g__nicematrix_blocks_dp_dim=\dimen295
+\l__nicematrix_width_dim=\dimen296
+\l__nicematrix_tabular_width_dim=\dimen297
+\l__nicematrix_rule_width_dim=\dimen298
+\l__nicematrix_old_iRow_int=\count345
+\l__nicematrix_old_jCol_int=\count346
+\g__nicematrix_total_X_weight_int=\count347
+\l__nicematrix_X_columns_dim=\dimen299
+\l__nicematrix_x_initial_dim=\dimen300
+\l__nicematrix_y_initial_dim=\dimen301
+\l__nicematrix_x_final_dim=\dimen302
+\l__nicematrix_y_final_dim=\dimen303
+\l__nicematrix_tmpc_dim=\dimen304
+\l__nicematrix_tmpd_dim=\dimen305
+\l__nicematrix_tmpe_dim=\dimen306
+\l__nicematrix_tmpf_dim=\dimen307
+\g__nicematrix_dp_row_zero_dim=\dimen308
+\g__nicematrix_ht_row_zero_dim=\dimen309
+\g__nicematrix_ht_row_one_dim=\dimen310
+\g__nicematrix_dp_ante_last_row_dim=\dimen311
+\g__nicematrix_ht_last_row_dim=\dimen312
+\g__nicematrix_dp_last_row_dim=\dimen313
+\g__nicematrix_width_last_col_dim=\dimen314
+\g__nicematrix_width_first_col_dim=\dimen315
+\l__nicematrix_row_min_int=\count348
+\l__nicematrix_row_max_int=\count349
+\l__nicematrix_col_min_int=\count350
+\l__nicematrix_col_max_int=\count351
+\l__nicematrix_start_int=\count352
+\l__nicematrix_end_int=\count353
+\l__nicematrix_local_start_int=\count354
+\l__nicematrix_local_end_int=\count355
+\g__nicematrix_static_num_of_col_int=\count356
+\l__nicematrix_rounded_corners_dim=\dimen316
+\l__nicematrix_tab_rounded_corners_dim=\dimen317
+\l__nicematrix_offset_dim=\dimen318
+\l__nicematrix_line_width_dim=\dimen319
+\g__nicematrix_block_box_int=\count357
+\l__nicematrix_submatrix_extra_height_dim=\dimen320
+\l__nicematrix_submatrix_left_xshift_dim=\dimen321
+\l__nicematrix_submatrix_right_xshift_dim=\dimen322
+\l__nicematrix_first_row_int=\count358
+\l__nicematrix_first_col_int=\count359
+\l__nicematrix_last_row_int=\count360
+\l__nicematrix_last_col_int=\count361
+\c@tabularnote=\count362
+\g__nicematrix_tabularnote_int=\count363
+\c@nicematrix_draft=\count364
+\l__nicematrix_cell_space_top_limit_dim=\dimen323
+\l__nicematrix_cell_space_bottom_limit_dim=\dimen324
+\l__nicematrix_xdots_inter_dim=\dimen325
+\l__nicematrix_xdots_shorten_start_dim=\dimen326
+\l__nicematrix_xdots_shorten_end_dim=\dimen327
+\l__nicematrix_xdots_radius_dim=\dimen328
+\l__nicematrix_notes_above_space_dim=\dimen329
+\l__nicematrix_left_margin_dim=\dimen330
+\l__nicematrix_right_margin_dim=\dimen331
+\l__nicematrix_extra_left_margin_dim=\dimen332
+\l__nicematrix_extra_right_margin_dim=\dimen333
+\c__nicematrix_max_l_dim=\dimen334
+\l__nicematrix_position_int=\count365
+\l__nicematrix_multiplicity_int=\count366
+\l__nicematrix_brace_yshift_dim=\dimen335
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/bold-extra\bold-extra.sty
 Package: bold-extra 2001/11/13 v0.1 Use fonts from cm/mf-extra/bold
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/silence\silence.sty
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error messages
-\sl@Save=\count363
-\sl@StateNumber=\count364
-\sl@MessageCount=\count365
-\sl@Casualties=\count366
+\sl@Save=\count367
+\sl@StateNumber=\count368
+\sl@MessageCount=\count369
+\sl@Casualties=\count370
 \sl@Filter=\toks49
 \sl@Message=\toks50
 \sl@UnexpandedMessage=\toks51
 \sl@Mess@ge=\toks52
-\sl@WarningCount=\count367
-\sl@WarningNumber=\count368
-\sl@WarningCasualties=\count369
+\sl@WarningCount=\count371
+\sl@WarningNumber=\count372
+\sl@WarningCasualties=\count373
 \sl@TempBOW=\toks53
 \sl@BankOfWarnings=\toks54
 LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count370
-\sl@ErrorNumber=\count371
-\sl@ErrorCasualties=\count372
+\sl@ErrorCount=\count374
+\sl@ErrorNumber=\count375
+\sl@ErrorCasualties=\count376
 \sl@TempBOE=\toks55
 \sl@BankOfErrors=\toks56
 LaTeX Info: Redefining \GenericError on input line 601.
+) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count377
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count378
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 43.
-\c@condition=\count373
-\c@lemma=\count374
-\c@claim=\count375
-\c@definition=\count376
-\c@theorem=\count377
-\c@corollary=\count378
-\c@remark=\count379
-\c@example=\count380
-\c@exercise=\count381
-\c@proposition=\count382
-\c@question=\count383
+Package hyperref Info: Option `colorlinks' set `true' on input line 46.
+\c@condition=\count379
+\c@lemma=\count380
+\c@claim=\count381
+\c@definition=\count382
+\c@theorem=\count383
+\c@corollary=\count384
+\c@remark=\count385
+\c@example=\count386
+\c@exercise=\count387
+\c@proposition=\count388
+\c@prop=\count389
+\c@question=\count390
  (phdthesis_YiGu.aux)
 \openout1 = `phdthesis_YiGu.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 120.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 120.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package hyperref Info: Link coloring ON on input line 105.
+Package hyperref Info: Link coloring ON on input line 120.
  (phdthesis_YiGu.out) (phdthesis_YiGu.out)
 \@outlinefile=\write4
 \openout4 = `phdthesis_YiGu.out'.
 
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count384
-\scratchdimen=\dimen323
+\scratchcounter=\count391
+\scratchdimen=\dimen336
 \scratchbox=\box72
-\nofMPsegments=\count385
-\nofMParguments=\count386
+\nofMPsegments=\count392
+\nofMParguments=\count393
 \everyMPshowfont=\toks57
-\MPscratchCnt=\count387
-\MPscratchDim=\dimen324
-\MPnumerator=\count388
-\makeMPintoPDFobject=\count389
+\MPscratchCnt=\count394
+\MPscratchDim=\dimen337
+\MPnumerator=\count395
+\makeMPintoPDFobject=\count396
 \everyMPtoPDFconversion=\toks58
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -753,13 +788,13 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\c__nicematrix_shift_Ldots_last_row_dim=\dimen325
-\c__nicematrix_shift_exterior_Vdots_dim=\dimen326
-\c__nicematrix_innersep_middle_dim=\dimen327
-\c@tabularnotesi=\count390
-\enitdp@tabularnotes=\count391
-\c@tabularnotes*i=\count392
-\enitdp@tabularnotes*=\count393
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen338
+\c__nicematrix_shift_exterior_Vdots_dim=\dimen339
+\c__nicematrix_innersep_middle_dim=\dimen340
+\c@tabularnotesi=\count397
+\enitdp@tabularnotes=\count398
+\c@tabularnotes*i=\count399
+\enitdp@tabularnotes*=\count400
 
 
 [1
@@ -815,35 +850,42 @@ Underfull \vbox (badness 2384) has occurred while \output is active []
 
 [7]
 List of Tables
-(phdthesis_YiGu.lot)
-\tf@lot=\write6
-\openout6 = `phdthesis_YiGu.lot'.
-
-
+(phdthesis_YiGu.lot
 
 [8
 
 
 
-]
+])
+\tf@lot=\write6
+\openout6 = `phdthesis_YiGu.lot'.
+
+
+
+[9]
 List of Figures
 (phdthesis_YiGu.lof
 
-[9
+[10
 
 
 
-])
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[11])
 \tf@lof=\write7
 \openout7 = `phdthesis_YiGu.lof'.
 
 
 
-[10]
+[12]
 Chapter 1
 
 
-[11
+[13
 
 
 ]
@@ -853,7 +895,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[12
+[14
 
 
 ]
@@ -861,22 +903,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[14]
-
 [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -889,43 +921,53 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[21]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 310.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[20]
+[22]
 
-[21]
+[23]
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <12> not available
 (Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 359.
 
 
-[22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [25]
-Underfull \vbox (badness 3954) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [26]
 
 [27]
+Underfull \vbox (badness 3954) has occurred while \output is active []
+
+
 
 [28]
 
 [29]
+
+[30]
+
+[31]
 Package epstopdf Info: Source file: <exp/sampling.randkcnf.uniform.time.eps>
 (epstopdf)                    date: 2024-12-19 22:24:28
 (epstopdf)                    size: 279777 bytes
@@ -935,12 +977,12 @@ Package epstopdf Info: Source file: <exp/sampling.randkcnf.uniform.time.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf exp/sampling.randkcnf.uniform.time.eps>
 (epstopdf)             \includegraphics on input line 704.
 Package epstopdf Info: Output file is already uptodate.
-<exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf, id=647, 236.885pt x 223.83624pt>
+<exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf, id=713, 236.885pt x 223.83624pt>
 File: exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf>
 Package pdftex.def Info: exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf  used on input line 704.
 (pdftex.def)             Requested size: 223.10008pt x 210.81595pt.
-<exp/sampling.randkcnf.valid.pdf, id=648, 247.38046pt x 226.19882pt>
+<exp/sampling.randkcnf.valid.pdf, id=714, 247.38046pt x 226.19882pt>
 File: exp/sampling.randkcnf.valid.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.valid.pdf>
 Package pdftex.def Info: exp/sampling.randkcnf.valid.pdf  used on input line 705.
@@ -948,39 +990,39 @@ Package pdftex.def Info: exp/sampling.randkcnf.valid.pdf  used on input line 705
 
 
 pdfTeX warning: pdflatex (file ./exp/sampling.randkcnf.weighted-crop.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<exp/sampling.randkcnf.weighted-crop.pdf, id=649, 275.0275pt x 231.86626pt>
+<exp/sampling.randkcnf.weighted-crop.pdf, id=715, 275.0275pt x 231.86626pt>
 File: exp/sampling.randkcnf.weighted-crop.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.weighted-crop.pdf>
 Package pdftex.def Info: exp/sampling.randkcnf.weighted-crop.pdf  used on input line 713.
 (pdftex.def)             Requested size: 241.30908pt x 203.445pt.
-<exp/valid.randkcnf.weighted.pdf, id=650, 265.89696pt x 104.34848pt>
+<exp/valid.randkcnf.weighted.pdf, id=716, 265.89696pt x 104.34848pt>
 File: exp/valid.randkcnf.weighted.pdf Graphic file (type pdf)
 <use exp/valid.randkcnf.weighted.pdf>
 Package pdftex.def Info: exp/valid.randkcnf.weighted.pdf  used on input line 717.
 (pdftex.def)             Requested size: 211.85336pt x 83.14133pt.
-<exp/resample.randkcnf.weighted.pdf, id=651, 240.03473pt x 142.94302pt>
+<exp/resample.randkcnf.weighted.pdf, id=717, 240.03473pt x 142.94302pt>
 File: exp/resample.randkcnf.weighted.pdf Graphic file (type pdf)
 <use exp/resample.randkcnf.weighted.pdf>
 Package pdftex.def Info: exp/resample.randkcnf.weighted.pdf  used on input line 718.
 (pdftex.def)             Requested size: 190.45284pt x 113.41667pt.
 
 
-[30]
+[32]
 
-[31 <./exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf> <./exp/sampling.randkcnf.valid.pdf> <./exp/sampling.randkcnf.weighted-crop.pdf> <./exp/valid.randkcnf.weighted.pdf> <./exp/resample.randkcnf.weighted.pdf>]
+[33 <./exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf> <./exp/sampling.randkcnf.valid.pdf> <./exp/sampling.randkcnf.weighted-crop.pdf> <./exp/valid.randkcnf.weighted.pdf> <./exp/resample.randkcnf.weighted.pdf>]
 Underfull \vbox (badness 1253) has occurred while \output is active []
 
 
 
-[32]
+[34]
 
-[33]
-<exp/vehicle.resamples.pdf, id=871, 295.34734pt x 197.7789pt>
+[35]
+<exp/vehicle.resamples.pdf, id=936, 295.34734pt x 197.7789pt>
 File: exp/vehicle.resamples.pdf Graphic file (type pdf)
 <use exp/vehicle.resamples.pdf>
 Package pdftex.def Info: exp/vehicle.resamples.pdf  used on input line 823.
 (pdftex.def)             Requested size: 225.37187pt x 150.9201pt.
-<exp/vehicle.time.pdf, id=872, 294.8221pt x 199.11227pt>
+<exp/vehicle.time.pdf, id=937, 294.8221pt x 199.11227pt>
 File: exp/vehicle.time.pdf Graphic file (type pdf)
 <use exp/vehicle.time.pdf>
 Package pdftex.def Info: exp/vehicle.time.pdf  used on input line 824.
@@ -990,58 +1032,30 @@ Underfull \vbox (badness 1342) has occurred while \output is active []
 
 
 
-[34]
-
-[35 <./exp/vehicle.resamples.pdf> <./exp/vehicle.time.pdf>]
-
 [36]
 
-[37]
+[37 <./exp/vehicle.resamples.pdf> <./exp/vehicle.time.pdf>]
 
 [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [40]
-Underfull \vbox (badness 4492) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [42]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4492) has occurred while \output is active []
 
 
 
 [43]
-\g__nicematrix_max_cell_width_dim=\dimen328
-\c@iRow=\count394
-\c@jCol=\count395
-\l__nicematrix_cell_box=\box73
-\l__nicematrix_the_array_box=\box74
-\l__nicematrix_left_delim_dim=\dimen329
-\l__nicematrix_right_delim_dim=\dimen330
-\g__nicematrix_ddots_int=\count396
-\g__nicematrix_iddots_int=\count397
-\g__nicematrix_delta_x_one_dim=\dimen331
-\g__nicematrix_delta_y_one_dim=\dimen332
-\g__nicematrix_delta_x_two_dim=\dimen333
-\g__nicematrix_delta_y_two_dim=\dimen334
-\l__nicematrix_initial_i_int=\count398
-\l__nicematrix_initial_j_int=\count399
-\l__nicematrix_final_i_int=\count400
-\l__nicematrix_final_j_int=\count401
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1049,19 +1063,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [45]
+\g__nicematrix_max_cell_width_dim=\dimen341
+\c@iRow=\count401
+\c@jCol=\count402
+\l__nicematrix_cell_box=\box73
+\l__nicematrix_the_array_box=\box74
+\l__nicematrix_left_delim_dim=\dimen342
+\l__nicematrix_right_delim_dim=\dimen343
+\g__nicematrix_ddots_int=\count403
+\g__nicematrix_iddots_int=\count404
+\g__nicematrix_delta_x_one_dim=\dimen344
+\g__nicematrix_delta_y_one_dim=\dimen345
+\g__nicematrix_delta_x_two_dim=\dimen346
+\g__nicematrix_delta_y_two_dim=\dimen347
+\l__nicematrix_initial_i_int=\count405
+\l__nicematrix_initial_j_int=\count406
+\l__nicematrix_final_i_int=\count407
+\l__nicematrix_final_j_int=\count408
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [46]
-Underfull \vbox (badness 1708) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [48]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1708) has occurred while \output is active []
 
 
 
@@ -1070,7 +1102,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[50
+[50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[52
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.30}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1080,49 +1122,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[51]
-
-[52]
-
 [53]
 
 [54]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1417 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1417 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1417 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1417 \begin{equation}
-                       
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [56]
-<figs/learn-pipeline-crop.pdf, id=1219, 1002.74625pt x 281.05pt>
-File: figs/learn-pipeline-crop.pdf Graphic file (type pdf)
-<use figs/learn-pipeline-crop.pdf>
-Package pdftex.def Info: figs/learn-pipeline-crop.pdf  used on input line 1468.
-(pdftex.def)             Requested size: 450.75069pt x 126.33838pt.
-
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1417 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1417 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1417 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1417 \begin{equation}
+                       
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1132,17 +1158,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[58 <./figs/learn-pipeline-crop.pdf>]
+[58]
+<figs/learn-pipeline-crop.pdf, id=1284, 1002.74625pt x 281.05pt>
+File: figs/learn-pipeline-crop.pdf Graphic file (type pdf)
+<use figs/learn-pipeline-crop.pdf>
+Package pdftex.def Info: figs/learn-pipeline-crop.pdf  used on input line 1468.
+(pdftex.def)             Requested size: 450.75069pt x 126.33838pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[60]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[60 <./figs/learn-pipeline-crop.pdf>]
 
 [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1155,65 +1187,254 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [64]
-Underfull \vbox (badness 1776) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [65]
-<exp/randkcnf_5_500_500_0001.uniform.pdf, id=1393, 295.61443pt x 203.57933pt>
+
+[66]
+Underfull \vbox (badness 1776) has occurred while \output is active []
+
+
+
+[67]
+<exp/randkcnf_5_500_500_0001.uniform.pdf, id=1459, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_500_500_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_500_500_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_500_500_0001.uniform.pdf  used on input line 1720.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_700_700_0001.uniform.pdf, id=1394, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_700_700_0001.uniform.pdf, id=1460, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_700_700_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_700_700_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_700_700_0001.uniform.pdf  used on input line 1721.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1000_1000_0001.uniform.pdf, id=1395, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1000_1000_0001.uniform.pdf, id=1461, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1000_1000_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1000_1000_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.uniform.pdf  used on input line 1722.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1500_1500_0001.uniform.pdf, id=1396, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1500_1500_0001.uniform.pdf, id=1462, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1500_1500_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1500_1500_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.uniform.pdf  used on input line 1723.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_500_500_0001.weighted.pdf, id=1397, 295.61443pt x 203.00784pt>
+<exp/randkcnf_5_500_500_0001.weighted.pdf, id=1463, 295.61443pt x 203.00784pt>
 File: exp/randkcnf_5_500_500_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_500_500_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_500_500_0001.weighted.pdf  used on input line 1727.
 (pdftex.def)             Requested size: 111.54657pt x 76.60168pt.
-<exp/randkcnf_5_700_700_0001.weighted.pdf, id=1398, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_700_700_0001.weighted.pdf, id=1464, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_700_700_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_700_700_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_700_700_0001.weighted.pdf  used on input line 1728.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1000_1000_0001.weighted.pdf, id=1399, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1000_1000_0001.weighted.pdf, id=1465, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1000_1000_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1000_1000_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.weighted.pdf  used on input line 1729.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1500_1500_0001.weighted.pdf, id=1400, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1500_1500_0001.weighted.pdf, id=1466, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1500_1500_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1500_1500_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.weighted.pdf  used on input line 1730.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
 )
 
-[66]
+[68]
 
-[67 <./exp/randkcnf_5_500_500_0001.uniform.pdf> <./exp/randkcnf_5_700_700_0001.uniform.pdf> <./exp/randkcnf_5_1000_1000_0001.uniform.pdf> <./exp/randkcnf_5_1500_1500_0001.uniform.pdf> <./exp/randkcnf_5_500_500_0001.weighted.pdf> <./exp/randkcnf_5_700_700_0001.weighted.pdf> <./exp/randkcnf_5_1000_1000_0001.weighted.pdf> <./exp/randkcnf_5_1500_1500_0001.weighted.pdf>] (phdthesis_YiGu.bbl
+[69 <./exp/randkcnf_5_500_500_0001.uniform.pdf> <./exp/randkcnf_5_700_700_0001.uniform.pdf> <./exp/randkcnf_5_1000_1000_0001.uniform.pdf> <./exp/randkcnf_5_1500_1500_0001.uniform.pdf> <./exp/randkcnf_5_500_500_0001.weighted.pdf> <./exp/randkcnf_5_700_700_0001.weighted.pdf> <./exp/randkcnf_5_1000_1000_0001.weighted.pdf> <./exp/randkcnf_5_1500_1500_0001.weighted.pdf>]
+Chapter 3
+(chap3.tex
+
+[70
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[74]
+
+[75]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[80]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[81]
+
+[82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[83]
+
+[84]
+
+[85]
+Underfull \vbox (badness 1253) has occurred while \output is active []
+
+
+
+[86]
+<sim_acc.png, id=2099, 566.115pt x 349.305pt>
+File: sim_acc.png Graphic file (type png)
+<use sim_acc.png>
+Package pdftex.def Info: sim_acc.png  used on input line 457.
+(pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
+<sim_auc.png, id=2101, 566.115pt x 349.305pt>
+File: sim_auc.png Graphic file (type png)
+<use sim_auc.png>
+Package pdftex.def Info: sim_auc.png  used on input line 459.
+(pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
+<sim_f1.png, id=2102, 566.115pt x 349.305pt>
+File: sim_f1.png Graphic file (type png)
+<use sim_f1.png>
+Package pdftex.def Info: sim_f1.png  used on input line 461.
+(pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
+
+Underfull \vbox (badness 2435) has occurred while \output is active []
+
+
+
+[87 <./sim_acc.png> <./sim_auc.png> <./sim_f1.png>]
+
+[88]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[89]
+<sim_time.png, id=2153, 565.11125pt x 349.305pt>
+File: sim_time.png Graphic file (type png)
+<use sim_time.png>
+Package pdftex.def Info: sim_time.png  used on input line 556.
+(pdftex.def)             Requested size: 182.11769pt x 112.56871pt.
+
+Underfull \hbox (badness 2753) in paragraph at lines 557--557
+[]\OT1/cmr/m/n/12 Figure 3.2.|Train-ing run time com-par-ing VarFA, SPARFA-M, and
+ []
+
+
+
+[90 <./sim_time.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[91]
+<violin3.png, id=2179, 493.845pt x 349.305pt>
+File: violin3.png Graphic file (type png)
+<use violin3.png>
+Package pdftex.def Info: violin3.png  used on input line 701.
+(pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
+<violin4.png, id=2180, 493.845pt x 349.305pt>
+File: violin4.png Graphic file (type png)
+<use violin4.png>
+Package pdftex.def Info: violin4.png  used on input line 707.
+(pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
+<violin7.png, id=2181, 493.845pt x 349.305pt>
+File: violin7.png Graphic file (type png)
+<use violin7.png>
+Package pdftex.def Info: violin7.png  used on input line 713.
+(pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[92 <./violin3.png> <./violin4.png> <./violin7.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[93]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[95]
+
+[96]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[97]
+
+[98]
+<student_skill.png, id=2270, 638.385pt x 277.035pt>
+File: student_skill.png Graphic file (type png)
+<use student_skill.png>
+Package pdftex.def Info: student_skill.png  used on input line 904.
+(pdftex.def)             Requested size: 364.24236pt x 158.068pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[99])
+
+[100 <./student_skill.png>] (phdthesis_YiGu.bbl
 Bibliography
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[68
+[101
 
 
 
@@ -1222,60 +1443,98 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[69]
+[102]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[70]
+[103]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[71])
-
-[72]
-Appendix A
-
-
-[73
-
-
-]
-Appendix B
-
-
-[74
-
-
-]
-Vita
-
-
-[75
+[104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-] (phdthesis_YiGu.aux)
+[105]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[107]
+Underfull \hbox (badness 3884) in paragraph at lines 751--759
+[]\OT1/cmr/m/n/12 Adam Paszke et al.  Py-torch: An im-per-a-tive style, high-performance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--759
+\OT1/cmr/m/n/12 deep learn-ing li-brary.  In H. Wal-lach, H. Larochelle, A. Beygelz-
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 751--759
+\OT1/cmr/m/n/12 imer, F. d\TS1/cmr/m/n/12 '\OT1/cmr/m/n/12 Alch^^Se-Buc, E. Fox, and R. Gar-nett, ed-i-tors, \OT1/cmr/m/it/12 Proc. Ad-
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 751--759
+\OT1/cmr/m/it/12 vances in Neu-ral In-for-ma-tion Pro-cess-ing Sys-tems\OT1/cmr/m/n/12 , pages 8024--8035. Cur-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--759
+\OT1/cmr/m/n/12 ran As-so-ciates, Inc., 2019.  URL [][]$\OT1/cmtt/m/n/12 http : / / papers . neurips . cc / paper /
+ []
+
+
+Overfull \hbox (22.95154pt too wide) in paragraph at lines 751--759
+\OT1/cmtt/m/n/12 9015-[]pytorch-[]an-[]imperative-[]style-[]high-[]performance-[]deep-[]learning-[]library .
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[108]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[109]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[110])
+
+[111] (phdthesis_YiGu.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `phdthesis_YiGu.out' has not changed.
-(rerunfilecheck)             Checksum: 0A5696FCACF1DC44677FB52DA50CB598;5343.
+(rerunfilecheck)             Checksum: 27DF6E1891C36888268C3ABA810AF797;6361.
  ) 
 Here is how much of TeX's memory you used:
- 31764 strings out of 473919
- 629332 string characters out of 5726953
- 2022908 words of memory out of 5000000
- 53678 multiletter control sequences out of 15000+600000
- 571858 words of font info for 88 fonts, out of 8000000 for 9000
+ 32573 strings out of 473919
+ 643856 string characters out of 5726953
+ 2025908 words of memory out of 5000000
+ 54304 multiletter control sequences out of 15000+600000
+ 575865 words of font info for 101 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,20n,93p,1156b,1226s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1440.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (75 pages, 1355021 bytes).
+ 90i,20n,93p,1272b,1223s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on phdthesis_YiGu.pdf (111 pages, 1776713 bytes).
 PDF statistics:
- 1918 PDF objects out of 2073 (max. 8388607)
- 322 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2588 PDF objects out of 2984 (max. 8388607)
+ 483 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

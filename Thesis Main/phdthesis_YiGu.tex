@@ -1,10 +1,12 @@
 \documentclass[12pt]{nuthesis}	
 
 \usepackage{algorithm}
+\usepackage{booktabs}
 \usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
 \algrenewcommand\algorithmicrequire{\textbf{Input:}}
 \algrenewcommand\algorithmicensure{\textbf{Output:}}
 \usepackage{xspace}
+\usepackage{bm, bbm}
 \usepackage{color}
 \usepackage{caption}
 \usepackage{hyperref}
@@ -26,6 +28,7 @@
 \usepackage{nicematrix}
 \usepackage{bold-extra}
 \usepackage{silence}
+\usepackage{subcaption}
 \WarningFilter{latex}{Text page}
 % \usepackage[numbers]{natbib}
 \definecolor{gblue}{RGB}{66,133,244}
@@ -45,6 +48,7 @@
 \newcommand{\nls}{\textsc{Nelson}\xspace}
 
 %
+
 \newcommand{\vect}[1]{\boldsymbol{\rm #1}}
 \newcommand{\var}{\mathtt{var}}
 \newcommand{\false}{\texttt{False}\xspace}
@@ -57,9 +61,19 @@
 \newcommand{\ent}{\end{theorem}}
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\g}{\Gamma}
+\newcommand{\sigmoid}{\sigma}
 \newcommand{\de}{\delta}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
+
+\def\mI{{\bm{I}}}
+\def\mY{{\bm{Y}}}
+\def\mQ{{\bm{Q}}}
+\def\rvc{{\mathbf{c}}}
+\def\rvm{{\mathbf{m}}}
+\def\vy{{\bm{y}}}
+\def\vu{{\bm{u}}}
+\def\vv{{\bm{v}}}
 
 \newtheorem{condition}{Condition} 
 \newtheorem{lemma}{\bf Lemma}
@@ -73,6 +87,7 @@
 \newtheorem{example}{\bf Example}
 \newtheorem{exercise}{\bf Exercise}
 \newtheorem{proposition}{\bf Proposition}
+\newtheorem{prop}{\bf Proposition}
 \newtheorem{question}{\bf Question}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,7 +132,6 @@
 
 \copyrightpage		% Creates the copyright page.
 
-
 \abstract		% Abstract.
 
 This is the abstract.
@@ -129,7 +143,6 @@ Text for acknowledgments.
 \preface		% Preface (optional).
 
 This is the preface.
-
 
 %% A few more optional pages (uncomment if needed)
 %
@@ -152,15 +165,13 @@ This is the preface.
 
 \clearpage\phantomsection % needed for the hyperlinks to work correctly
 \tableofcontents	% Table of Contents will be automatically
-			% generated and placed here.
+% generated and placed here.
 
 \clearpage\phantomsection % needed for the hyperlinks to work correctly
 \listoftables		% List of Tables and List of Figures will be placed
 
 \clearpage\phantomsection % needed for the hyperlinks to work correctly
 \listoffigures		% here, if applicable (optional).
-
-
 
 \mainmatter             % Actual text starts here.
 
@@ -171,31 +182,26 @@ This is the preface.
 % If there is an introduction it must be the first chapter
 
 \chapter{Convergence of t-Distributed Stochastic Neighbor Embedding with Generalized Input and Output Kernels}	% The first chapter.
-				% \chapter command is of the form
-				% \chapter[..]{..} or \chapter{..} where
-	... text ...		% {chapter heading} and [entry in table of
-				% contents].
+% \chapter command is of the form
+% \chapter[..]{..} or \chapter{..} where
+... text ...		% {chapter heading} and [entry in table of
+% contents].
 \section{First section of chapter 1}
-				% IMPORTANT: If your chapter heading consists
-				% of more than one lines, it will be auto-
-	... text ...		% matically broken into separate lines.
-				% However, if you don't like the way LaTeX
-				% breaks the chapter heading into lines, use
+% IMPORTANT: If your chapter heading consists
+% of more than one lines, it will be auto-
+... text ...		% matically broken into separate lines.
+% However, if you don't like the way LaTeX
+% breaks the chapter heading into lines, use
 \section{Another section}	% `\newheadline' command to break lines.
-				% Never use \\ in sectional (e.g., chapter,
-	... text ...		% section, subsection) headings.
+% Never use \\ in sectional (e.g., chapter,
+... text ...		% section, subsection) headings.
 \chapter{Learning Markov Random Fields for Combinatorial Structures via
-Sampling through Lov´asz Local Lemma} % Chapter 2.
+  Sampling through Lov\'asz Local Lemma} % Chapter 2.
 \input{chap2}
 
+\chapter{VarFA: A Variational Factor Analysis Framework For Efficient Bayesian Learning Analytics}
+\input{chap3}
 
-% Alternatively, you may write the chapters in separate
-% files, say chap1.tex, chap2.tex, etc., and include them 
-% with commands:
-
-%\include{chap1}
-
-%\include{chap2}
 
 % The command \includeonly above allows to include a selected 
 % set of chapters only.
@@ -205,10 +211,10 @@ Sampling through Lov´asz Local Lemma} % Chapter 2.
 % of 'thebibliography' in nuthesis.cls
 %
 \begin{singlespace}
-%\bibsep 12pt
-\clearpage\phantomsection % needed for hyperlikns to work correctly
-\setcitestyle{numbers}
-\bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
+	%\bibsep 12pt
+	\clearpage\phantomsection % needed for hyperlinks to work correctly
+	\setcitestyle{numbers}
+	\bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{singlespace}
 
@@ -223,52 +229,46 @@ Sampling through Lov´asz Local Lemma} % Chapter 2.
 % \bibliography{<bib file>}
 % \end{singlespace}
 
+% \appendix		% Appendix begins here (optional).
 
-\appendix		% Appendix begins here (optional).
+% \chapter{Title of First Appendix} 	% First appendix chapter, i.e., Appendix A.
 
+% Here goes the first appendix.
 
-\chapter{Title of First Appendix} 	% First appendix chapter, i.e., Appendix A.
+% \section{First section of Appendix}	% This is appendix section 1.
 
-Here goes the first appendix.
+% This is the Appendix.
 
+% \subsection{First subsection of Appendix}  % This is appendix subsection 1.
 
-\section{First section of Appendix}	% This is appendix section 1.
+% More text ...
 
-This is the Appendix.
+% \subsubsection{First subsubsection of Appendix}  % This is subsubsection 1.
 
-\subsection{First subsection of Appendix}  % This is appendix subsection 1.
+% Yet more text ...
 
-More text ...
+% \chapter{Title of Second Appendix}
 
-\subsubsection{First subsubsection of Appendix}  % This is subsubsection 1.
+% In case there is more than one appendix.
 
-Yet more text ...
+% \begin{vita}                    % Vita (optional).
 
-\chapter{Title of Second Appendix}
+% 	This is the Vita. This is the Vita. This is the Vita. This is the Vita. This is
+% 	the Vita. This is the Vita. This is the Vita. This is the Vita. This is the
+% 	Vita. This is the Vita. This is the Vita. This is the Vita. This is the Vita.
+% 	This is the Vita. This is the Vita. This is the Vita.
 
-In case there is more than one appendix.
+% 	This is the Vita. This is the Vita. This is the Vita. This is the Vita. This is
+% 	the Vita. This is the Vita. This is the Vita. This is the Vita. This is the
+% 	Vita. This is the Vita. This is the Vita. This is the Vita. This is the Vita.
+% 	This is the Vita. This is the Vita. This is the Vita.
 
+% 	This is the Vita. This is the Vita. This is the Vita. This is the Vita. This is
+% 	the Vita. This is the Vita. This is the Vita. This is the Vita. This is the
+% 	Vita. This is the Vita. This is the Vita. This is the Vita. This is the Vita.
+% 	This is the Vita. This is the Vita. This is the Vita.
 
-\begin{vita}                    % Vita (optional).
-
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-
-
-\end{vita}
-
+% \end{vita}
 
 \end{document}
 
