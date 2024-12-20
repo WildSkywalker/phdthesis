@@ -1,8 +1,14 @@
+\babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Sampling efficiency and accuracy for learning $K$-SAT solutions with preferences. The proposed \textsc {Nelson}\xspace is the most efficient (see ``Training Time Per Epoch'') and always generates valid assignments (see ``Validness'') with a small approximation error (see ``Approximation Error of Gradient'') against all baselines. T.O. means time out.}}{29}{table.caption.18}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces The quality of learning outcomes for learning random $K$-SAT solutions with preferences. \textsc {Nelson}\xspace achieves the best likelihood and MAP@10 scores. T.O. is time out.}}{30}{table.caption.20}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Sample efficiency and learning performance of the sink-free orientation task. \textsc {Nelson}\xspace is the most efficient (see Training Time Per Epoch) and always generates valid assignments (see Validness), has the smallest error approximating gradients, and has the best learning performance (see MAP@10) among all baselines.}}{33}{table.caption.24}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Summary of all the notations used in the theoretical analysis of Algorithm~\ref {alg:lll-sampler}.}}{37}{table.caption.28}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces 4 constraints for converting pairwise terms in the potential function into single variable form.}}{54}{table.caption.32}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,0 +1,352 @@
+\documentclass[numfooter,aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{natbib}
+% algorithm
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{xspace}
+
+\newcommand{\lovasz}{{Lov\'asz}\xspace}
+\newcommand{\nls}{\textsc{Nelson}\xspace}
+
+% math symbol
+\newcommand{\vect}[1]{\boldsymbol{\rm #1}}
+\newcommand{\var}{\mathtt{var}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\false}{\texttt{False}\xspace}
+\newcommand{\true}{\texttt{True}\xspace}
+
+
+\makeatletter
+\def\mathcolor#1#{\@mathcolor{#1}}
+\def\@mathcolor#1#2#3{%
+  \protect\leavevmode
+  \begingroup
+    \color#1{#2}#3%
+  \endgroup
+}
+\makeatother
+\usetheme{Arguelles}
+
+\title{Learn Combinatorial Structures via Markov Random Fields}
+\subtitle{with Sampling through \lovasz Local Lemma}
+
+\author{Nan Jiang$^{1,*}$, Yi Gu$^{2,*}$, \and Yexiang Xue}
+% \date{Spring 2023}
+\institute{$^1$Purdue University, $^2$Northwest University\\
+\{jiang631, yexiang\}@purdue.edu\\
+\quad \\
+\quad \\
+$^*$ the first two authors contribute equally.}
+\begin{document}
+\frame[plain]{\titlepage}
+
+
+\begin{frame}{Table of Content}
+    \begin{itemize}
+        \item Formulation of Lov\'asz local lemma.
+        \item Adaption to the machine learning settings.
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Constraint Satisfaction Problem - Boolean Satisfiability}
+\begin{itemize}
+    \item Variables: $V=\{x_1,x_2,x_3\}$, where $x_i\in\{0,1\}$.
+    \item Logical Operators: not ($\neg$), logic-AND ($\wedge$), logic-OR ($\vee$).
+    \item Clauses:
+    \begin{align*}
+    C_1&=x_1 \vee \neg x_2 \vee x_3 \\
+    C_2&=x_1 \vee x_2 \vee x_4 
+\end{align*}
+    \item Conjunctive normal formula (CNF):
+    $$\phi=C_1\wedge C_2$$
+\item Objective: find an assignment of variables in $V$, \textit{s.t.,} $\phi=\mathtt{True}$.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{GOAL}
+\begin{itemize}
+    \item Decision: Does SAT solution exist?\\
+    NP-Complete problem [Cook 1971, Levin 1973].
+    \item Counting: How many SAT solution? \\
+    \# P-Complete problem [Valiant 1979].
+    \item Sampling: Sampling SAT solution uniformly?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lov\'asz Local Lemma}
+\begin{itemize}
+    \item Each clause contains $K$ variables;
+    \item each variable belongs to \textbf{at most} $d$ clauses.
+\end{itemize}
+$K=3$ and $d=2$: $\phi=(x_1 \vee \mathcolor{blue}{\neg x_2} \vee x_3)\wedge (x_1 \vee \mathcolor{blue}{x_2} \vee \mathcolor{green}{x_4}) \wedge (x_3 \vee \mathcolor{green}{\neg x_4} \vee x_5) $
+\begin{theorem}[Lov\'asz Local Lemma]- (Existence)~\cite{erdHos1973problems}. If each variable takes a value in $\{0,1\}$ uniformly and independently and $K\ge \log d$. The $K$-SAT solution must exist with probability:
+$$
+Pr(\phi =\mathtt{true})\ge \left(1-\frac{1}{2dK}\right)^{dn}\qquad n=|V|
+$$
+- (Construction)~\cite{DBLP:journals/jacm/MoserT10}. A $K$-SAT solution can be \textbf{constructed} in expected time $\mathcal{O}(ndK)$. \\
+- (Sampling)~\cite{DBLP:journals/jacm/GuoJL19,DBLP:conf/stoc/Feng0Y21}. There exists an uniform sampler that can uniformly sample from the constrained space. 
+\end{theorem}
+\end{frame}
+
+\begin{frame}{Sampling \& counting $K$-SAT solutions}
+\textbf{Input:} $K$-CNF formula, with max degree $d$, error bound $\varepsilon,\delta>0$.
+\begin{itemize}
+    \item Almost uniform \textbf{sampling}: generate a $K$-SAT solution $x\in\{0,1\}^{|V|}$, s.t. \\$d_{TV}(x-\mu)\le \varepsilon$
+    \begin{itemize}
+        \item total variation distance between two prob. dist. $\mu$ and $\nu$ on $\mathcal{X}$: $d_{TV}(\mu,\nu)=\frac{1}{2}\sum_{x\in\mathcal{X}}|\mu(x)-\nu(x)|$
+        \item $\mu$: the uniform distribution of all $K$-SAT solution.
+    \end{itemize}
+    \item Approximate \textbf{counting}: estimate the number of $K$-CNF solutions,  
+    $$Pr\left( \Big|\frac{\hat{Z}-Z}{Z}\Big|\le \varepsilon\right)\le 1-\delta$$
+    \begin{itemize}
+        \item $Z:$ the exact number of $K$-SAT solutions;
+        \item $\hat{Z}:$ the estimated number of $K$-SAT solutions.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{A uniform sampling algorithm for Lov\'asz local lemma}
+\begin{figure}
+	\begin{algorithmic}[1]
+\Procedure{Sampler}{$\phi$}
+    \State random initialization: $x\leftarrow \{ x_i\sim\{0,1\}| x_i\in V\}$.
+    \While{$\phi(x)=\mathtt{False}$ }
+    \State $x'\leftarrow$ extract all the variables in unsatisfied clauses for $\phi(x)$.
+    \State redo step 2 for all $x'$
+    \EndWhile
+    \State \Return A uniformly sampled CNF solution $x$.
+\EndProcedure
+	\end{algorithmic}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Adaption via Exponential Family}
+\begin{itemize}
+        \item $\varphi_{\theta}(x),x\in\{0,1\}^{|V|}$: score of a $K$-CNF given by a neural network.
+\item The probability of a solution $Pr(x)$ could be defined as:
+\begin{equation}\label{eq:prob}
+\begin{aligned}
+Pr(x):=\frac{\exp({\varphi_{\theta}(x)})}{Z_\theta}=\frac{\exp({\varphi_{\theta}(x)})}{\sum_{x'}\exp({\varphi_{\theta}(x')})}
+\end{aligned}
+\end{equation}
+$Z_\theta$ is the weighted summation of all the valid CNF solutions.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Learning Steps}
+\begin{itemize}
+\item Learning.  Minimize the negative Log-Likelihood of ground-truth solution.
+$$\ell_{\theta}=-\log Pr(x)=-\log \varphi_{\theta}(x) +\log Z_\theta$$
+\item The gradient update rules ($\eta$ is the learning rate):
+ $$\theta^{t+1} =\theta^t -\eta \nabla \ell_{\theta}$$
+ where $\nabla \ell_\theta= \nabla \varphi_{\theta}(x) -\nabla\log Z_{\theta}$.
+\item Inference. Given a  learned model $\theta$, output a valid CNF solution with maximum score:
+$$x^*= \arg\max_{x'\in \{0,1\}^{|V|}}\varphi_{\theta}(x')$$
+\end{itemize}
+\end{frame}
+
+\Section{Methodology}
+\begin{frame}
+\frametitle{Gradient}
+
+\begin{itemize}
+\item Compute loss value $\ell_{\theta}$. We need to estimate $\log Z_\theta$:
+$$
+\log Z_{\theta}=\log\sum_{x'}\exp({\varphi_{\theta}(x')})
+$$
+\item Compute gradient $\nabla \ell_\theta$. We need to estimate $\nabla\log Z_\theta$:
+\begin{equation}\label{eq:mcmc}
+\begin{aligned}
+\nabla\log Z_\theta\approx \frac{1}{M} \sum_{i=1}^{M} \exp(\nabla\varphi_{\theta}(x_i)) \qquad x_i\sim Pr(x)
+\end{aligned}
+\end{equation}
+sample $M$ $K$-CNF valid solutions $\{x_{i}\}_{i=1}^M$ from  distribution $Pr(x)$.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Takeaway}
+Lov\'asz local lemma supports:
+\begin{itemize}
+    \item graph coloring problems~\citep{DBLP:journals/dc/ChungPS17}.
+    \item spanning trees problem in directed/undirected graph~\citep{DBLP:journals/jacm/GuoJL19}.
+    
+\end{itemize}
+We show an efficient learning algorithm with constraint satisfaction for $K$-SAT problem.
+\end{frame}
+
+\begin{frame}{Extensions}
+\begin{figure}
+	\begin{algorithmic}[1]
+\Procedure{Spanning-Tree-Sampler}{$G$}
+    \State $\mathcal{T}\leftarrow \{(u,v)| v\text{ is a random neighbor of }u, \forall v\in \mathcal{V},v\neq r\}$.
+    \While{$\mathtt{hasCycle}(\mathcal{T})=\mathtt{True}$ }
+    \State remove all edges in the cycle of $\mathcal{T}$
+    \State redo step 2 for all the vertices whose edge get removed.
+    \EndWhile
+    \State \Return A uniform rooted spanning tree  $\mathcal{T}$.
+\EndProcedure
+	\end{algorithmic}
+\end{figure}
+\end{frame}
+
+
+
+
+% \Section{Experiments}
+
+% \begin{frame}
+% \frametitle{NLP task: Dependency Parsing}
+% \begin{figure}[!ht]
+% 	\centering
+% \begin{dependency}
+% \begin{deptext}[column sep=.14cm, row sep=0.5ex, font=\small]
+% DT \& NN \& VBZ \& VBN \& PREP \& DT \& NN \& NN \\
+%  A \& hearing \& is \& scheduled \& on \& the \& issue \& today \\
+%     \end{deptext}
+%     \deproot{4}{root}
+%     \depedge{2}{1}{det}
+%     \depedge{4}{2}{nsubj:pass}
+%     \depedge{4}{3}{aux:pass}
+%     \depedge{7}{5}{case}
+%     \depedge{7}{6}{det}
+%     \depedge{2}{7}{nmod}
+%     \depedge{4}{8}{nmod:tmod}
+% \end{dependency}
+% \vspace{-1em}
+% 	\caption{A non-projective dependency tree with token $x_r=\mathtt{root}$  for sentence along with universal part-of-speech tags. Directed arcs represent the head-modifier relation between words, and the labels on the arcs denote the dependency type.}
+% 	\label{fig:dep-example}
+% \end{figure}
+%   \end{frame}
+  
+% \begin{frame}
+% \frametitle{Grammar constraints}
+% \begin{itemize}
+%     \item \textbf{Word as Header.} If a word $w_{h_i}$ is considered as a head, it can point to its modifier $w_j$ with limited UPOS tags.
+%     \begin{equation*}\scriptsize
+% (w_{h_i},w_j)\in\mathcal{T}\vee ((\texttt{upos}(w_{h_i})=\texttt{DET})\wedge (\texttt{REL}(w_{h_i},w_j)=\texttt{det}\vee \texttt{REL}(w_{h_i},w_j)=\texttt{nsubj}) )
+% \end{equation*}
+% It means the relation between head $w_{h_i}$ and its modifier $w_{j}$ should be in set $ \{\texttt{det}, \texttt{nsubj} \}$.
+%     \item \noindent\textbf{Word as Modifier.} Similarly, for a word $w_{m_i}$ is considered as a modifier, it can be linked by words with certain upos tags.
+    
+%     \begin{equation*}\scriptsize
+% \begin{aligned}
+% (\texttt{REL}(x_{h_i}, x_{m_i})=\texttt{dislocated})\wedge(x_{m_i}=\texttt{NOUN})\wedge(x_{h_i}=\texttt{ADJ}\vee x_{h_i}=\texttt{NOUN}\vee x_{h_i}=\texttt{PRON})\\
+% \end{aligned}
+% \end{equation*}
+% % \begin{itemize}
+% %     \item  $\texttt{REL}(x_{h_i}, x_{m_i})$: the relation type between  $(x_{h_i}, x_{m_i})$.
+% %     \item $(x_{m_i}=\texttt{NOUN})$: the UPOS tag of modifier word need to be \texttt{NOUN}.
+% %     \item  $(x_{h_i}=\texttt{ADJ}\vee x_{h_i}=\texttt{NOUN}\vee x_{h_i}=\texttt{PRON})$: the UPOS tag of the header word can only be adjective (\texttt{ADJ}), noun (\texttt{ADJ}) or pronoun (\texttt{PRON}).
+% % \end{itemize}
+% \end{itemize}
+% \end{frame}
+ 
+% \begin{frame}
+% \frametitle{Datasets}
+
+% We use UD (Universal
+% Dependency)~\cite{DBLP:journals/coling/MarneffeMNZ21} dataset with multiple language, to evaluation the performance of the algorithms. The statistics of
+% the datasets are described in Table~\ref{tab:data}.
+
+
+% \begin{table}
+% \small
+%     \centering
+%     \caption{Statistics of dependency parsing datasets of multiple languages. The table includes the
+% number of sentences in the training, development and testing datasets.}
+%     \label{tab:data}
+%     \begin{tabular}{r|r|r|r|r|r|r|r|r|r}
+%     \toprule
+% &Dutch& Spanish& English& French& Croatian& German& Italian& Russian& Japan. \\
+% \midrule
+% Train& 12269& 14187& 2914& 14450& 6983& 13814& 13121& 3850& 7133 \\
+% Dev& 718& 1400& 707& 1476& 849& 799& 564& 579& 511 \\
+% Test& 596& 426& 769& 416& 1057& 977& 482& 601& 551\\
+% \bottomrule
+%     \end{tabular}
+% \end{table}
+    
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Baselines and Evaluations}
+% \begin{itemize}
+%     \item Baselines. 
+%     \begin{enumerate}
+%     \item Deep Biaffine~\cite{DBLP:conf/iclr/DozatM17}. It firstly proposes the Biaffine attention neural network for learning a mapping from every head to its modifier.
+%     \item NeruoMST~\cite{DBLP:conf/ijcnlp/MaH17}. It combine the Biaffine attention with TreeCRF objective functions.
+%     % \item CRF2o~\cite{DBLP:conf/acl/ZhangLZ20}. It considers the length 2 hyper edge and the substructure for the whole tree. 
+%     % \item Zhang19~\cite{DBLP:conf/acl/ZhangMH19}. It evaluates the most useful practical tricks for the dependency parsing tasks.
+% \end{enumerate}
+% \item {Evaluation} We report LAS (Labeled Attachment Score) for labeled cases. Also we present UAS (Unlabeled
+% Attachment Score)
+
+% for the unlabeled case. These  metrics are evaluated using the official scorer1
+% of CoNLL-2006 shared task\footnote{\url{http://ilk.uvt.nl/conll/software.html}}.
+% \end{itemize}
+
+    
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Performance Benchmark}
+% \begin{table}\scriptsize
+%     \centering
+%     \caption{Benchmark for ``English-EWT'' dataset. We partition the input sentence length: $(0,20], (20, 40], (40,60], (60,80]$. }
+%     \label{tab:benchmark}
+%     \begin{tabular}{r|c|c|c|c|c}
+%     \toprule
+%         & $(0,20]$ &$(20, 40]$ &$(40,60]$ &$(60,80]$& Overall \\
+%      Methods    &  UAS / LAS & UAS / LAS & UAS / LAS& UAS / LAS& UAS / LAS \\
+%     \midrule
+%         Deep Biaffine&  90.97\% / 88.98\%& 87.01\% / 86.29\% & 85.75\% / 84.62\%&80.08\% / 79.37\%& 89.69\% / 87.97\%\\
+%          +\textsc{LLL-sampling} &  $91.19\%$ / $89.12\%$  & $88.45\%$ / $86.40\%$ & $87.17\%$ / $85.29\%$ & $81.09\%$ / $79.94\%$ & $90.40\%$ / $88.14\%$\\
+%         \midrule
+%         NeuroMST &  90.60\% / 88.47\% & 85.44\% / 83.02\%  & 81.28\% / 79.98\% & 69.91\% /  68.48\% & 88.21\% / 85.75\%\\
+%         +\textsc{LLL-sampling} &  $90.89\%$ / $88.67\%$  & $86.03\%$ / $85.14\%$ & $84.53\%$ / $81.22\%$ & $76.13\%$ / $70.12\%$ &$89.13\%$ / $86.12\%$\\
+%     \bottomrule
+%     \end{tabular}
+    
+% \end{table}
+    
+% \end{frame}
+
+
+% \begin{frame}
+%   \frametitle{Takeaway}
+%   \begin{itemize}
+%       \item We first give an unbiased and efficient learning approach for treeCRF over the constraints.
+%       \item We show that learning under grammar constraints boost the learning performance for dependency parsing tasks.
+%   \end{itemize}
+% \end{frame}
+  \begin{frame}[plain]
+  \frametitle[allowframebreaks]{References}
+\bibliographystyle{unsrtnat}
+\bibliography{reference}
+  \end{frame}
+
+  \ThankYou
+  \begin{frame}[plain,standout]
+  \Large
+    Thank You! \\
+    Q \& A?
+  \end{frame}
+
+\end{document}

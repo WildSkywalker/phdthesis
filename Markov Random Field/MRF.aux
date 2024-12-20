@@ -1,0 +1,609 @@
+\relax 
+\bibstyle{aaai23}
+\citation{DBLP:journals/neco/Hinton02,Tsochantaridis2005StructualSVM,goodfellow2014generative,kingma2013auto,Germain2015MADEMA,Larochelle2011Autoregressive,Oord2016PixelRN,arjovsky17WGAN,song2019generative,song21scoredifussion,murphy1999loopy,yedidia2001generalized,wainwright2006relaxation}
+\citation{Braunstein2005SurveyPA,AnHaHoTi2007,chavira2006compiling,VanHentenryck1989,GOGATE2012AndOr,Sang2005}
+\citation{kusner17GrammarVAE,Jin2018JunctionTV,Dai2018SyntaxDirectedVA,Hu17ControlledTextGen,lowd2008learning,DBLP:conf/icml/DingMXX21}
+\citation{erdHos1973problems}
+\citation{DBLP:journals/jacm/MoserT10}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{nanyiye2022}
+\citation{DBLP:conf/iclr/SelsamLBLMD19,DBLP:conf/icml/DuanVPRM22,DBLP:conf/nips/LiCK18}
+\citation{DBLP:conf/nips/YolcuP19,DBLP:conf/nips/ChenT19}
+\citation{DBLP:conf/nips/KaraliasL20,DBLP:journals/eor/BengioLP21}
+\citation{DBLP:conf/aaai/MandiDSG20}
+\citation{neal1993probabilistic,DBLP:journals/pami/DagumC93,pmlr-v84-ge18b}
+\citation{murphy1999loopy,DBLP:journals/jmlr/IhlerFW05,DBLP:journals/corr/abs-2011-02303,pmlr-v138-fan20a}
+\citation{DBLP:journals/ai/GogateD11}
+\citation{Gomes2006Sampling,Ermon13Wish,DBLP:conf/sat/AchlioptasT17,Chakraborty2013scalable}
+\citation{DBLP:journals/neco/Hinton02}
+\newlabel{sec:prelim}{{2}{2}{}{}{}}
+\newlabel{eq:mrf}{{1}{2}{}{}{}}
+\newlabel{eq:constr_mrf}{{2}{2}{}{}{}}
+\newlabel{eq:log-likelihood}{{3}{2}{}{}{}}
+\newlabel{eq:gradient}{{4}{2}{}{}{}}
+\citation{Sang2005}
+\citation{Mansour1994LearningBF}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{erdHos1973problems}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{DBLP:journals/jacm/GuoJL19}
+\newlabel{cond:extreme}{{1}{3}{}{}{}}
+\newlabel{eq:constr_mrf_single}{{6}{3}{}{}{}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{alg:lll-sampler}{{1}{3}{}{}{}}
+\newlabel{th:product-dist}{{1}{3}{}{}{}}
+\newlabel{sec:methodology}{{4}{4}{}{}{}}
+\newlabel{sec:nls}{{4.1}{4}{}{}{}}
+\newlabel{eq:cnf}{{7}{4}{}{}{}}
+\newlabel{eq:weight}{{8}{4}{}{}{}}
+\newlabel{eq:bias}{{9}{4}{}{}{}}
+\newlabel{eq:mapping-matrix}{{10}{4}{}{}{}}
+\newlabel{eq:Zt}{{12}{4}{}{}{}}
+\newlabel{notation:C}{{13}{4}{}{}{}}
+\newlabel{eq:iterative}{{15}{4}{}{}{}}
+\newlabel{example:matrix}{{1}{4}{}{}{}}
+\citation{carter1994gibbs}
+\citation{DBLP:conf/tacas/GuptaSRM19}
+\citation{DBLP:conf/aaai/ChakrabortyFMSV14}
+\citation{DBLP:conf/nips/ErmonGSS13,DBLP:conf/uai/DingX21}
+\citation{DBLP:conf/fmcad/GoliaSCM21}
+\citation{DBLP:conf/icse/DutraLBS18}
+\citation{DBLP:conf/cav/SoosGM20}
+\citation{DBLP:conf/lpar/SharmaGRM18}
+\citation{DBLP:conf/aiia/DodaroP19}
+\citation{DBLP:conf/sat/LauriaENV17}
+\citation{DBLP:conf/sat/IgnatievMM18}
+\newlabel{alg:main}{{2}{5}{}{}{}}
+\citation{DBLP:conf/aaai/ChakrabortyM19}
+\newlabel{tab:sampler}{{1}{6}{}{}{}}
+\newlabel{tab:learn-sat}{{2}{6}{}{}{}}
+\newlabel{fig:uniform_sample}{{1}{6}{}{}{}}
+\newlabel{fig:weighted_sample}{{2}{6}{}{}{}}
+\citation{DBLP:journals/combinatorics/CohnPP02}
+\citation{takahashi2009communication}
+\newlabel{tab:sink-free}{{3}{7}{}{}{}}
+\newlabel{fig:route}{{3}{7}{}{}{}}
+\bibdata{reference}
+\bibcite{DBLP:conf/sat/AchlioptasT17}{{1}{2017}{{Achlioptas and Theodoropoulos}}{{}}}
+\bibcite{AnHaHoTi2007}{{2}{2007}{{Andersen et~al.}}{{Andersen, Hadzic, Hooker, and Tiedemann}}}
+\bibcite{arjovsky17WGAN}{{3}{2017}{{Arjovsky, Chintala, and Bottou}}{{}}}
+\bibcite{DBLP:journals/eor/BengioLP21}{{4}{2021}{{Bengio, Lodi, and Prouvost}}{{}}}
+\bibcite{Braunstein2005SurveyPA}{{5}{2005}{{Braunstein, M{\'e}zard, and Zecchina}}{{}}}
+\bibcite{carter1994gibbs}{{6}{1994}{{Carter and Kohn}}{{}}}
+\bibcite{DBLP:conf/aaai/ChakrabortyFMSV14}{{7}{2014}{{Chakraborty et~al.}}{{Chakraborty, Fremont, Meel, Seshia, and Vardi}}}
+\bibcite{DBLP:conf/aaai/ChakrabortyM19}{{8}{2019}{{Chakraborty and Meel}}{{}}}
+\bibcite{Chakraborty2013scalable}{{9}{2013}{{Chakraborty, Meel, and Vardi}}{{}}}
+\bibcite{chavira2006compiling}{{10}{2006}{{Chavira, Darwiche, and Jaeger}}{{}}}
+\bibcite{DBLP:conf/nips/ChenT19}{{11}{2019}{{Chen and Tian}}{{}}}
+\bibcite{DBLP:journals/combinatorics/CohnPP02}{{12}{2002}{{Cohn, Pemantle, and Propp}}{{}}}
+\bibcite{DBLP:journals/corr/abs-2011-02303}{{13}{2020}{{Coja{-}Oghlan, M{\"{u}}ller, and Ravelomanana}}{{}}}
+\bibcite{DBLP:journals/pami/DagumC93}{{14}{1993}{{Dagum and Chavez}}{{}}}
+\bibcite{Dai2018SyntaxDirectedVA}{{15}{2018}{{Dai et~al.}}{{Dai, Tian, Dai, Skiena, and Song}}}
+\bibcite{DBLP:conf/icml/DingMXX21}{{16}{2021}{{Ding et~al.}}{{Ding, Ma, Xu, and Xue}}}
+\bibcite{pmlr-v138-fan20a}{{17}{2020}{{Ding and Xue}}{{}}}
+\bibcite{DBLP:conf/uai/DingX21}{{18}{2021}{{Ding and Xue}}{{}}}
+\bibcite{DBLP:conf/aiia/DodaroP19}{{19}{2019}{{Dodaro and Previti}}{{}}}
+\bibcite{DBLP:conf/icml/DuanVPRM22}{{20}{2022}{{Duan et~al.}}{{Duan, Vaezipoor, Paulus, Ruan, and Maddison}}}
+\bibcite{DBLP:conf/icse/DutraLBS18}{{21}{2018}{{Dutra et~al.}}{{Dutra, Laeufer, Bachrach, and Sen}}}
+\bibcite{erdHos1973problems}{{22}{1973}{{Erd{\H {o}}s and Lov{\'a}sz}}{{}}}
+\bibcite{DBLP:conf/nips/ErmonGSS13}{{23}{2013{a}}{{Ermon et~al.}}{{Ermon, Gomes, Sabharwal, and Selman}}}
+\bibcite{Ermon13Wish}{{24}{2013{b}}{{Ermon et~al.}}{{Ermon, Gomes, Sabharwal, and Selman}}}
+\bibcite{DBLP:conf/cp/FichteHZ19}{{25}{2019}{{Fichte, Hecher, and Zisser}}{{}}}
+\bibcite{pmlr-v84-ge18b}{{26}{2018}{{Ge, Xu, and Ghahramani}}{{}}}
+\bibcite{Germain2015MADEMA}{{27}{2015}{{Germain et~al.}}{{Germain, Gregor, Murray, and Larochelle}}}
+\bibcite{DBLP:journals/ai/GogateD11}{{28}{2011}{{Gogate and Dechter}}{{}}}
+\bibcite{GOGATE2012AndOr}{{29}{2012}{{Gogate and Dechter}}{{}}}
+\bibcite{DBLP:conf/fmcad/GoliaSCM21}{{30}{2021}{{Golia et~al.}}{{Golia, Soos, Chakraborty, and Meel}}}
+\bibcite{Gomes2006Sampling}{{31}{2006}{{Gomes, Sabharwal, and Selman}}{{}}}
+\bibcite{goodfellow2014generative}{{32}{2014}{{Goodfellow et~al.}}{{Goodfellow, Pouget{-}Abadie, Mirza, Xu, Warde{-}Farley, Ozair, Courville, and Bengio}}}
+\bibcite{DBLP:journals/jacm/GuoJL19}{{33}{2019}{{Guo, Jerrum, and Liu}}{{}}}
+\bibcite{DBLP:conf/tacas/GuptaSRM19}{{34}{2019}{{Gupta et~al.}}{{Gupta, Sharma, Roy, and Meel}}}
+\bibcite{DBLP:journals/neco/Hinton02}{{35}{2002}{{Hinton}}{{}}}
+\bibcite{Hu17ControlledTextGen}{{36}{2017}{{Hu et~al.}}{{Hu, Yang, Liang, Salakhutdinov, and Xing}}}
+\bibcite{DBLP:conf/sat/IgnatievMM18}{{37}{2018}{{Ignatiev, Morgado, and Marques{-}Silva}}{{}}}
+\bibcite{DBLP:journals/jmlr/IhlerFW05}{{38}{2005}{{Ihler, Fisher~III, and Willsky}}{{}}}
+\bibcite{DBLP:journals/arxiv/jerrum2021}{{39}{2021}{{Jerrum}}{{}}}
+\bibcite{nanyiye2022}{{40}{2022}{{Jiang, Gu, and Xue}}{{}}}
+\bibcite{Jin2018JunctionTV}{{41}{2018}{{Jin, Barzilay, and Jaakkola}}{{}}}
+\bibcite{DBLP:conf/nips/KaraliasL20}{{42}{2020}{{Karalias and Loukas}}{{}}}
+\bibcite{kingma2013auto}{{43}{2014}{{Kingma and Welling}}{{}}}
+\bibcite{kusner17GrammarVAE}{{44}{2017}{{Kusner, Paige, and Hern{\'{a}}ndez{-}Lobato}}{{}}}
+\bibcite{Larochelle2011Autoregressive}{{45}{2011}{{Larochelle and Murray}}{{}}}
+\bibcite{DBLP:conf/sat/LauriaENV17}{{46}{2017}{{Lauria et~al.}}{{Lauria, Elffers, Nordstr{\"{o}}m, and Vinyals}}}
+\bibcite{DBLP:conf/nips/LiCK18}{{47}{2018}{{Li, Chen, and Koltun}}{{}}}
+\bibcite{lowd2008learning}{{48}{2008}{{Lowd and Domingos}}{{}}}
+\bibcite{mahmoud2022gpu}{{49}{2022}{{Mahmoud}}{{}}}
+\bibcite{DBLP:conf/aaai/MandiDSG20}{{50}{2020}{{Mandi et~al.}}{{Mandi, Demirovic, Stuckey, and Guns}}}
+\bibcite{Mansour1994LearningBF}{{51}{1994}{{Mansour}}{{}}}
+\bibcite{DBLP:journals/jacm/MoserT10}{{52}{2010}{{Moser and Tardos}}{{}}}
+\bibcite{murphy1999loopy}{{53}{1999}{{Murphy, Weiss, and Jordan}}{{}}}
+\bibcite{neal1993probabilistic}{{54}{1993}{{Neal}}{{}}}
+\bibcite{DBLP:conf/sat/PrevotSM21}{{55}{2021}{{Prevot, Soos, and Meel}}{{}}}
+\bibcite{DBLP:conf/sac/RosaGO11}{{56}{2011}{{Rosa, Giunchiglia, and O'Sullivan}}{{}}}
+\bibcite{Sang2005}{{57}{2005}{{Sang, Bearne, and Kautz}}{{}}}
+\bibcite{DBLP:conf/iclr/SelsamLBLMD19}{{58}{2019}{{Selsam et~al.}}{{Selsam, Lamm, B{\"{u}}nz, Liang, de~Moura, and Dill}}}
+\bibcite{DBLP:conf/lpar/SharmaGRM18}{{59}{2018}{{Sharma et~al.}}{{Sharma, Gupta, Roy, and Meel}}}
+\bibcite{song2019generative}{{60}{2019}{{Song and Ermon}}{{}}}
+\bibcite{song21scoredifussion}{{61}{2021}{{Song et~al.}}{{Song, Sohl{-}Dickstein, Kingma, Kumar, Ermon, and Poole}}}
+\bibcite{DBLP:conf/cav/SoosGM20}{{62}{2020}{{Soos, Gocht, and Meel}}{{}}}
+\bibcite{takahashi2009communication}{{63}{2009}{{Takahashi et~al.}}{{Takahashi, Yamaguchi, Sekiyama, and Fukuda}}}
+\bibcite{Tsochantaridis2005StructualSVM}{{64}{2005}{{Tsochantaridis et~al.}}{{Tsochantaridis, Joachims, Hofmann, and Altun}}}
+\bibcite{Oord2016PixelRN}{{65}{2016}{{van~den Oord, Kalchbrenner, and Kavukcuoglu}}{{}}}
+\bibcite{VanHentenryck1989}{{66}{1989}{{Van~Hentenryck}}{{}}}
+\bibcite{wainwright2006relaxation}{{67}{2006}{{Wainwright and Jordan}}{{}}}
+\bibcite{yedidia2001generalized}{{68}{2000}{{Yedidia, Freeman, and Weiss}}{{}}}
+\bibcite{DBLP:conf/nips/YolcuP19}{{69}{2019}{{Yolcu and P{\'{o}}czos}}{{}}}
+\citation{DBLP:journals/jacm/GuoJL19,DBLP:journals/arxiv/jerrum2021}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{DBLP:journals/jacm/MoserT10}
+\newlabel{appendix:prob-dist}{{A}{11}{}{}{}}
+\newlabel{def:dep-graph}{{1}{11}{}{}{}}
+\newlabel{def:record}{{2}{11}{}{}{}}
+\newlabel{claim:record}{{1}{11}{}{}{}}
+\newlabel{def:general-cmrf}{{3}{11}{}{}{}}
+\newlabel{def:prs-prob}{{4}{11}{}{}{}}
+\newlabel{tab:quantifier}{{4}{12}{}{}{}}
+\newlabel{lem:ratio-prob}{{1}{12}{}{}{}}
+\newlabel{eq:ratio}{{17}{12}{}{}{}}
+\newlabel{eq:ratio-nelson}{{18}{12}{}{}{}}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{DBLP:journals/jacm/GuoJL19}
+\newlabel{eq:ratio-cmrf}{{19}{13}{}{}{}}
+\newlabel{eq:ratio-final}{{20}{13}{}{}{}}
+\newlabel{lem:space}{{2}{13}{}{}{}}
+\ExplSyntaxOn \cs_if_free:NT \pgfsyspdfmark {\cs_set_eq:NN \pgfsyspdfmark \@gobblethree }\ExplSyntaxOff 
+\ExplSyntaxOn 
+\char_set_catcode_space:n {32}
+\tl_gset:cn {c__nicematrix_1_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {0,8,8,0,8,8}}
+\ExplSyntaxOff 
+\ExplSyntaxOn 
+\char_set_catcode_space:n {32}
+\tl_gset:cn {c__nicematrix_2_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {0,1,1,0,8,8}}
+\ExplSyntaxOff 
+\ExplSyntaxOn 
+\char_set_catcode_space:n {32}
+\tl_gset:cn {c__nicematrix_3_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {0,8,8,0,8,8}}
+\ExplSyntaxOff 
+\ExplSyntaxOn 
+\char_set_catcode_space:n {32}
+\tl_gset:cn {c__nicematrix_4_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {0,1,1,0,8,8}}
+\ExplSyntaxOff 
+\pgfsyspdfmark {pgfid1}{16077470}{27175585}
+\pgfsyspdfmark {pgfid2}{16405151}{26670960}
+\pgfsyspdfmark {pgfid3}{16705753}{26670960}
+\pgfsyspdfmark {pgfid4}{17962316}{26670960}
+\pgfsyspdfmark {pgfid5}{19218879}{26670960}
+\pgfsyspdfmark {pgfid6}{20475442}{26670960}
+\pgfsyspdfmark {pgfid7}{21732005}{26670960}
+\pgfsyspdfmark {pgfid8}{22988568}{26670960}
+\pgfsyspdfmark {pgfid9}{24245131}{26670960}
+\pgfsyspdfmark {pgfid10}{25501694}{26670960}
+\pgfsyspdfmark {pgfid11}{16077470}{26454689}
+\pgfsyspdfmark {pgfid12}{16405151}{25950064}
+\pgfsyspdfmark {pgfid13}{15667642}{25950064}
+\pgfsyspdfmark {pgfid14}{16705753}{25950064}
+\pgfsyspdfmark {pgfid15}{17962316}{25950064}
+\pgfsyspdfmark {pgfid16}{19218879}{25950064}
+\pgfsyspdfmark {pgfid17}{20475442}{25950064}
+\pgfsyspdfmark {pgfid18}{21732005}{25950064}
+\pgfsyspdfmark {pgfid19}{22988568}{25950064}
+\pgfsyspdfmark {pgfid20}{24245131}{25950064}
+\pgfsyspdfmark {pgfid21}{25501694}{25950064}
+\pgfsyspdfmark {pgfid22}{16077470}{25733793}
+\pgfsyspdfmark {pgfid23}{16405151}{25229168}
+\pgfsyspdfmark {pgfid24}{15667642}{25229168}
+\pgfsyspdfmark {pgfid25}{16705753}{25229168}
+\pgfsyspdfmark {pgfid26}{17962316}{25229168}
+\pgfsyspdfmark {pgfid27}{19218879}{25229168}
+\pgfsyspdfmark {pgfid28}{20475442}{25229168}
+\pgfsyspdfmark {pgfid29}{21732005}{25229168}
+\pgfsyspdfmark {pgfid30}{22988568}{25229168}
+\pgfsyspdfmark {pgfid31}{24245131}{25229168}
+\pgfsyspdfmark {pgfid32}{25501694}{25229168}
+\pgfsyspdfmark {pgfid33}{16077470}{25012897}
+\pgfsyspdfmark {pgfid34}{16405151}{24508272}
+\pgfsyspdfmark {pgfid35}{15667642}{24508272}
+\pgfsyspdfmark {pgfid36}{16705753}{24508272}
+\pgfsyspdfmark {pgfid37}{17962316}{24508272}
+\pgfsyspdfmark {pgfid38}{19218879}{24508272}
+\pgfsyspdfmark {pgfid39}{20475442}{24508272}
+\pgfsyspdfmark {pgfid40}{21732005}{24508272}
+\pgfsyspdfmark {pgfid41}{22988568}{24508272}
+\pgfsyspdfmark {pgfid42}{24245131}{24508272}
+\pgfsyspdfmark {pgfid43}{25501694}{24508272}
+\pgfsyspdfmark {pgfid44}{16077470}{24292001}
+\pgfsyspdfmark {pgfid45}{16405151}{23787376}
+\pgfsyspdfmark {pgfid46}{15667642}{23787376}
+\pgfsyspdfmark {pgfid47}{16705753}{23787376}
+\pgfsyspdfmark {pgfid48}{17962316}{23787376}
+\pgfsyspdfmark {pgfid49}{19218879}{23787376}
+\pgfsyspdfmark {pgfid50}{20475442}{23787376}
+\pgfsyspdfmark {pgfid51}{21732005}{23787376}
+\pgfsyspdfmark {pgfid52}{22988568}{23787376}
+\pgfsyspdfmark {pgfid53}{24245131}{23787376}
+\pgfsyspdfmark {pgfid54}{25501694}{23787376}
+\pgfsyspdfmark {pgfid55}{16077470}{23571105}
+\pgfsyspdfmark {pgfid56}{16405151}{23017429}
+\pgfsyspdfmark {pgfid57}{15667642}{23017429}
+\pgfsyspdfmark {pgfid58}{16705753}{23017429}
+\pgfsyspdfmark {pgfid59}{17962316}{23017429}
+\pgfsyspdfmark {pgfid60}{19218879}{23017429}
+\pgfsyspdfmark {pgfid61}{20475442}{23017429}
+\pgfsyspdfmark {pgfid62}{21732005}{23017429}
+\pgfsyspdfmark {pgfid63}{22988568}{23017429}
+\pgfsyspdfmark {pgfid64}{24245131}{23017429}
+\pgfsyspdfmark {pgfid65}{25501694}{23017429}
+\pgfsyspdfmark {pgfid66}{16077470}{22791435}
+\pgfsyspdfmark {pgfid67}{16405151}{22237759}
+\pgfsyspdfmark {pgfid68}{15667642}{22237759}
+\pgfsyspdfmark {pgfid69}{16705753}{22237759}
+\pgfsyspdfmark {pgfid70}{17962316}{22237759}
+\pgfsyspdfmark {pgfid71}{19218879}{22237759}
+\pgfsyspdfmark {pgfid72}{20475442}{22237759}
+\pgfsyspdfmark {pgfid73}{21732005}{22237759}
+\pgfsyspdfmark {pgfid74}{22988568}{22237759}
+\pgfsyspdfmark {pgfid75}{24245131}{22237759}
+\pgfsyspdfmark {pgfid76}{25501694}{22237759}
+\pgfsyspdfmark {pgfid77}{16077470}{22011765}
+\pgfsyspdfmark {pgfid78}{16405151}{21458089}
+\pgfsyspdfmark {pgfid79}{15667642}{21458089}
+\pgfsyspdfmark {pgfid80}{16705753}{21458089}
+\pgfsyspdfmark {pgfid81}{17962316}{21458089}
+\pgfsyspdfmark {pgfid82}{19218879}{21458089}
+\pgfsyspdfmark {pgfid83}{20475442}{21458089}
+\pgfsyspdfmark {pgfid84}{21732005}{21458089}
+\pgfsyspdfmark {pgfid85}{22988568}{21458089}
+\pgfsyspdfmark {pgfid86}{24245131}{21458089}
+\pgfsyspdfmark {pgfid87}{25501694}{21458089}
+\pgfsyspdfmark {pgfid88}{16077470}{21232095}
+\pgfsyspdfmark {pgfid89}{16405151}{20678419}
+\pgfsyspdfmark {pgfid90}{15667642}{20678419}
+\pgfsyspdfmark {pgfid91}{16705753}{20678419}
+\pgfsyspdfmark {pgfid92}{17962316}{20678419}
+\pgfsyspdfmark {pgfid93}{19218879}{20678419}
+\pgfsyspdfmark {pgfid94}{20475442}{20678419}
+\pgfsyspdfmark {pgfid95}{21732005}{20678419}
+\pgfsyspdfmark {pgfid96}{22988568}{20678419}
+\pgfsyspdfmark {pgfid97}{24245131}{20678419}
+\pgfsyspdfmark {pgfid98}{25501694}{20678419}
+\pgfsyspdfmark {pgfid99}{16077470}{20452425}
+\pgfsyspdfmark {pgfid100}{14820907}{20452425}
+\pgfsyspdfmark {pgfid101}{16077471}{20452425}
+\pgfsyspdfmark {pgfid102}{17334034}{20452425}
+\pgfsyspdfmark {pgfid103}{18590597}{20452425}
+\pgfsyspdfmark {pgfid104}{19847160}{20452425}
+\pgfsyspdfmark {pgfid105}{21103723}{20452425}
+\pgfsyspdfmark {pgfid106}{22360286}{20452425}
+\pgfsyspdfmark {pgfid107}{23616849}{20452425}
+\pgfsyspdfmark {pgfid108}{24873412}{20452425}
+\pgfsyspdfmark {pgfid109}{26129975}{20452425}
+\pgfsyspdfmark {pgfid110}{26239203}{23263503}
+\pgfsyspdfmark {pgfid112}{26239203}{23263503}
+\pgfsyspdfmark {pgfid113}{15727147}{14952064}
+\pgfsyspdfmark {pgfid114}{16054828}{14447439}
+\pgfsyspdfmark {pgfid115}{16355430}{14447439}
+\pgfsyspdfmark {pgfid116}{17611993}{14447439}
+\pgfsyspdfmark {pgfid117}{18868556}{14447439}
+\pgfsyspdfmark {pgfid118}{20125119}{14447439}
+\pgfsyspdfmark {pgfid119}{21381682}{14447439}
+\pgfsyspdfmark {pgfid120}{22638245}{14447439}
+\pgfsyspdfmark {pgfid121}{23894808}{14447439}
+\pgfsyspdfmark {pgfid122}{25151371}{14447439}
+\pgfsyspdfmark {pgfid123}{15727147}{14231168}
+\pgfsyspdfmark {pgfid124}{16054828}{13677492}
+\pgfsyspdfmark {pgfid125}{16355430}{13677492}
+\pgfsyspdfmark {pgfid126}{17611993}{13677492}
+\pgfsyspdfmark {pgfid127}{18868556}{13677492}
+\pgfsyspdfmark {pgfid128}{20125119}{13677492}
+\pgfsyspdfmark {pgfid129}{21381682}{13677492}
+\pgfsyspdfmark {pgfid130}{22638245}{13677492}
+\pgfsyspdfmark {pgfid131}{23894808}{13677492}
+\pgfsyspdfmark {pgfid132}{25151371}{13677492}
+\pgfsyspdfmark {pgfid133}{15727147}{13451498}
+\pgfsyspdfmark {pgfid134}{15071787}{13451498}
+\pgfsyspdfmark {pgfid135}{15727148}{13451498}
+\pgfsyspdfmark {pgfid136}{16983711}{13451498}
+\pgfsyspdfmark {pgfid137}{18240274}{13451498}
+\pgfsyspdfmark {pgfid138}{19496837}{13451498}
+\pgfsyspdfmark {pgfid139}{20753400}{13451498}
+\pgfsyspdfmark {pgfid140}{22009963}{13451498}
+\pgfsyspdfmark {pgfid141}{23266526}{13451498}
+\pgfsyspdfmark {pgfid142}{24523089}{13451498}
+\pgfsyspdfmark {pgfid143}{25779652}{13451498}
+\pgfsyspdfmark {pgfid144}{25725040}{13626753}
+\pgfsyspdfmark {pgfid146}{25725040}{13626753}
+\pgfsyspdfmark {pgfid147}{9771335}{12342052}
+\pgfsyspdfmark {pgfid148}{10099016}{11837427}
+\pgfsyspdfmark {pgfid149}{10399618}{11837427}
+\pgfsyspdfmark {pgfid150}{11656181}{11837427}
+\pgfsyspdfmark {pgfid151}{12912744}{11837427}
+\pgfsyspdfmark {pgfid152}{14169307}{11837427}
+\pgfsyspdfmark {pgfid153}{15425870}{11837427}
+\pgfsyspdfmark {pgfid154}{16682433}{11837427}
+\pgfsyspdfmark {pgfid155}{17938996}{11837427}
+\pgfsyspdfmark {pgfid156}{19195559}{11837427}
+\pgfsyspdfmark {pgfid157}{9771335}{11621156}
+\pgfsyspdfmark {pgfid158}{10099016}{11116531}
+\pgfsyspdfmark {pgfid159}{9361507}{11116531}
+\pgfsyspdfmark {pgfid160}{10399618}{11116531}
+\pgfsyspdfmark {pgfid161}{11656181}{11116531}
+\pgfsyspdfmark {pgfid162}{12912744}{11116531}
+\pgfsyspdfmark {pgfid163}{14169307}{11116531}
+\pgfsyspdfmark {pgfid164}{15425870}{11116531}
+\pgfsyspdfmark {pgfid165}{16682433}{11116531}
+\pgfsyspdfmark {pgfid166}{17938996}{11116531}
+\pgfsyspdfmark {pgfid167}{19195559}{11116531}
+\pgfsyspdfmark {pgfid168}{9771335}{10900260}
+\pgfsyspdfmark {pgfid169}{10099016}{10395635}
+\pgfsyspdfmark {pgfid170}{9361507}{10395635}
+\pgfsyspdfmark {pgfid171}{10399618}{10395635}
+\pgfsyspdfmark {pgfid172}{11656181}{10395635}
+\pgfsyspdfmark {pgfid173}{12912744}{10395635}
+\pgfsyspdfmark {pgfid174}{14169307}{10395635}
+\pgfsyspdfmark {pgfid175}{15425870}{10395635}
+\pgfsyspdfmark {pgfid176}{16682433}{10395635}
+\pgfsyspdfmark {pgfid177}{17938996}{10395635}
+\pgfsyspdfmark {pgfid178}{19195559}{10395635}
+\pgfsyspdfmark {pgfid179}{9771335}{10179364}
+\pgfsyspdfmark {pgfid180}{10099016}{9674739}
+\pgfsyspdfmark {pgfid181}{9361507}{9674739}
+\pgfsyspdfmark {pgfid182}{10399618}{9674739}
+\pgfsyspdfmark {pgfid183}{11656181}{9674739}
+\pgfsyspdfmark {pgfid184}{12912744}{9674739}
+\pgfsyspdfmark {pgfid185}{14169307}{9674739}
+\pgfsyspdfmark {pgfid186}{15425870}{9674739}
+\pgfsyspdfmark {pgfid187}{16682433}{9674739}
+\pgfsyspdfmark {pgfid188}{17938996}{9674739}
+\pgfsyspdfmark {pgfid189}{19195559}{9674739}
+\pgfsyspdfmark {pgfid190}{9771335}{9458468}
+\pgfsyspdfmark {pgfid191}{10099016}{8953843}
+\pgfsyspdfmark {pgfid192}{9361507}{8953843}
+\pgfsyspdfmark {pgfid193}{10399618}{8953843}
+\pgfsyspdfmark {pgfid194}{11656181}{8953843}
+\pgfsyspdfmark {pgfid195}{12912744}{8953843}
+\pgfsyspdfmark {pgfid196}{14169307}{8953843}
+\pgfsyspdfmark {pgfid197}{15425870}{8953843}
+\pgfsyspdfmark {pgfid198}{16682433}{8953843}
+\pgfsyspdfmark {pgfid199}{17938996}{8953843}
+\pgfsyspdfmark {pgfid200}{19195559}{8953843}
+\pgfsyspdfmark {pgfid201}{9771335}{8737572}
+\pgfsyspdfmark {pgfid202}{10099016}{8183896}
+\pgfsyspdfmark {pgfid203}{9361507}{8183896}
+\pgfsyspdfmark {pgfid204}{10399618}{8183896}
+\pgfsyspdfmark {pgfid205}{11656181}{8183896}
+\pgfsyspdfmark {pgfid206}{12912744}{8183896}
+\pgfsyspdfmark {pgfid207}{14169307}{8183896}
+\pgfsyspdfmark {pgfid208}{15425870}{8183896}
+\pgfsyspdfmark {pgfid209}{16682433}{8183896}
+\pgfsyspdfmark {pgfid210}{17938996}{8183896}
+\pgfsyspdfmark {pgfid211}{19195559}{8183896}
+\pgfsyspdfmark {pgfid212}{9771335}{7957902}
+\pgfsyspdfmark {pgfid213}{10099016}{7404226}
+\pgfsyspdfmark {pgfid214}{9361507}{7404226}
+\pgfsyspdfmark {pgfid215}{10399618}{7404226}
+\pgfsyspdfmark {pgfid216}{11656181}{7404226}
+\pgfsyspdfmark {pgfid217}{12912744}{7404226}
+\pgfsyspdfmark {pgfid218}{14169307}{7404226}
+\pgfsyspdfmark {pgfid219}{15425870}{7404226}
+\pgfsyspdfmark {pgfid220}{16682433}{7404226}
+\pgfsyspdfmark {pgfid221}{17938996}{7404226}
+\pgfsyspdfmark {pgfid222}{19195559}{7404226}
+\pgfsyspdfmark {pgfid223}{9771335}{7178232}
+\pgfsyspdfmark {pgfid224}{10099016}{6624556}
+\pgfsyspdfmark {pgfid225}{9361507}{6624556}
+\pgfsyspdfmark {pgfid226}{10399618}{6624556}
+\pgfsyspdfmark {pgfid227}{11656181}{6624556}
+\pgfsyspdfmark {pgfid228}{12912744}{6624556}
+\pgfsyspdfmark {pgfid229}{14169307}{6624556}
+\pgfsyspdfmark {pgfid230}{15425870}{6624556}
+\pgfsyspdfmark {pgfid231}{16682433}{6624556}
+\pgfsyspdfmark {pgfid232}{17938996}{6624556}
+\pgfsyspdfmark {pgfid233}{19195559}{6624556}
+\pgfsyspdfmark {pgfid234}{9771335}{6398562}
+\pgfsyspdfmark {pgfid235}{10099016}{5844886}
+\pgfsyspdfmark {pgfid236}{9361507}{5844886}
+\pgfsyspdfmark {pgfid237}{10399618}{5844886}
+\pgfsyspdfmark {pgfid238}{11656181}{5844886}
+\pgfsyspdfmark {pgfid239}{12912744}{5844886}
+\pgfsyspdfmark {pgfid240}{14169307}{5844886}
+\pgfsyspdfmark {pgfid241}{15425870}{5844886}
+\pgfsyspdfmark {pgfid242}{16682433}{5844886}
+\pgfsyspdfmark {pgfid243}{17938996}{5844886}
+\pgfsyspdfmark {pgfid244}{19195559}{5844886}
+\pgfsyspdfmark {pgfid245}{9771335}{5618892}
+\pgfsyspdfmark {pgfid246}{8514772}{5618892}
+\pgfsyspdfmark {pgfid247}{9771336}{5618892}
+\pgfsyspdfmark {pgfid248}{11027899}{5618892}
+\pgfsyspdfmark {pgfid249}{12284462}{5618892}
+\pgfsyspdfmark {pgfid250}{13541025}{5618892}
+\pgfsyspdfmark {pgfid251}{14797588}{5618892}
+\pgfsyspdfmark {pgfid252}{16054151}{5618892}
+\pgfsyspdfmark {pgfid253}{17310714}{5618892}
+\pgfsyspdfmark {pgfid254}{18567277}{5618892}
+\pgfsyspdfmark {pgfid255}{19823840}{5618892}
+\pgfsyspdfmark {pgfid256}{19933068}{8429970}
+\pgfsyspdfmark {pgfid258}{19933068}{8429970}
+\pgfsyspdfmark {pgfid259}{23625154}{9755281}
+\pgfsyspdfmark {pgfid260}{23952835}{9250656}
+\pgfsyspdfmark {pgfid261}{24253437}{9250656}
+\pgfsyspdfmark {pgfid262}{25510000}{9250656}
+\pgfsyspdfmark {pgfid263}{26766563}{9250656}
+\pgfsyspdfmark {pgfid264}{28023126}{9250656}
+\pgfsyspdfmark {pgfid265}{29279689}{9250656}
+\pgfsyspdfmark {pgfid266}{30536252}{9250656}
+\pgfsyspdfmark {pgfid267}{31792815}{9250656}
+\pgfsyspdfmark {pgfid268}{33049378}{9250656}
+\pgfsyspdfmark {pgfid269}{23625154}{9034385}
+\pgfsyspdfmark {pgfid270}{23952835}{8480709}
+\pgfsyspdfmark {pgfid271}{24253437}{8480709}
+\pgfsyspdfmark {pgfid272}{25510000}{8480709}
+\pgfsyspdfmark {pgfid273}{26766563}{8480709}
+\pgfsyspdfmark {pgfid274}{28023126}{8480709}
+\pgfsyspdfmark {pgfid275}{29279689}{8480709}
+\pgfsyspdfmark {pgfid276}{30536252}{8480709}
+\pgfsyspdfmark {pgfid277}{31792815}{8480709}
+\pgfsyspdfmark {pgfid278}{33049378}{8480709}
+\pgfsyspdfmark {pgfid279}{23625154}{8254715}
+\pgfsyspdfmark {pgfid280}{22969794}{8254715}
+\pgfsyspdfmark {pgfid281}{23625155}{8254715}
+\pgfsyspdfmark {pgfid282}{24881718}{8254715}
+\pgfsyspdfmark {pgfid283}{26138281}{8254715}
+\pgfsyspdfmark {pgfid284}{27394844}{8254715}
+\pgfsyspdfmark {pgfid285}{28651407}{8254715}
+\pgfsyspdfmark {pgfid286}{29907970}{8254715}
+\pgfsyspdfmark {pgfid287}{31164533}{8254715}
+\pgfsyspdfmark {pgfid288}{32421096}{8254715}
+\pgfsyspdfmark {pgfid289}{33677659}{8254715}
+\pgfsyspdfmark {pgfid290}{33623047}{8429970}
+\pgfsyspdfmark {pgfid292}{33623047}{8429970}
+\citation{DBLP:journals/jacm/GuoJL19}
+\newlabel{appendix:time-analysis}{{B}{15}{}{}{}}
+\newlabel{def:p_q_st}{{5}{15}{}{}{}}
+\newlabel{eq:def-pst}{{25}{15}{}{}{}}
+\newlabel{eq:definition-qst}{{26}{15}{}{}{}}
+\newlabel{lem:recursion_start}{{3}{15}{}{}{}}
+\newlabel{rem:equal}{{1}{15}{}{}{}}
+\newlabel{eq:st-expand}{{27}{15}{}{}{}}
+\newlabel{eq:pair-prob}{{4}{16}{}{}{}}
+\newlabel{eq:subset}{{28}{16}{}{}{}}
+\newlabel{eq:bayes}{{29}{16}{}{}{}}
+\newlabel{eq:summation-st}{{30}{16}{}{}{}}
+\newlabel{lem:sample-record}{{5}{16}{}{}{}}
+\newlabel{pS_final}{{31}{16}{}{}{}}
+\newlabel{recursion_base}{{32}{16}{}{}{}}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{DBLP:journals/jacm/GuoJL19}
+\citation{DBLP:journals/jacm/GuoJL19}
+\newlabel{thm:runtime}{{B.2}{17}{}{}{}}
+\newlabel{thm:time}{{2}{17}{}{}{}}
+\newlabel{apx:difference}{{B.3}{17}{}{}{}}
+\newlabel{appendix:constrain-mrf}{{C}{17}{}{}{}}
+\newlabel{appendix:svf}{{C.1}{17}{}{}{}}
+\citation{Sang2005}
+\newlabel{tab:pairwise-to-single}{{5}{18}{}{}{}}
+\newlabel{appendix:partition}{{C.2}{18}{}{}{}}
+\newlabel{eq:full-gradient}{{33}{18}{}{}{}}
+\newlabel{appendix:exp-set}{{D}{18}{}{}{}}
+\newlabel{appendix:implementation}{{D.1}{18}{}{}{}}
+\newlabel{fig:pipeline}{{4}{19}{}{}{}}
+\newlabel{eq:emp-gradient}{{35}{19}{}{}{}}
+\citation{DBLP:conf/aiia/DodaroP19,DBLP:conf/sac/RosaGO11}
+\citation{DBLP:conf/sat/LauriaENV17}
+\citation{DBLP:conf/sat/IgnatievMM18}
+\citation{DBLP:journals/combinatorics/CohnPP02}
+\citation{takahashi2009communication}
+\citation{DBLP:journals/jacm/GuoJL19}
+\ExplSyntaxOn 
+\char_set_catcode_space:n {32}
+\tl_gset:cn {c__nicematrix_5_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {0,4,4,0,4,4}}
+\ExplSyntaxOff 
+\ExplSyntaxOn 
+\char_set_catcode_space:n {32}
+\tl_gset:cn {c__nicematrix_6_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {0,4,4,0,4,4}}
+\ExplSyntaxOff 
+\newlabel{eq:adjacency}{{36}{20}{}{}{}}
+\newlabel{eq:orientation-assign}{{37}{20}{}{}{}}
+\citation{carter1994gibbs}
+\citation{DBLP:conf/tacas/GuptaSRM19}
+\citation{DBLP:conf/aaai/ChakrabortyFMSV14}
+\citation{DBLP:conf/nips/ErmonGSS13,DBLP:conf/uai/DingX21}
+\citation{DBLP:conf/cav/SoosGM20}
+\citation{DBLP:conf/icse/DutraLBS18}
+\citation{DBLP:conf/fmcad/GoliaSCM21}
+\citation{DBLP:conf/lpar/SharmaGRM18}
+\pgfsyspdfmark {pgfid294}{13258763}{47011953}
+\pgfsyspdfmark {pgfid295}{13586444}{46507328}
+\pgfsyspdfmark {pgfid296}{13892280}{46507328}
+\pgfsyspdfmark {pgfid297}{15159311}{46507328}
+\pgfsyspdfmark {pgfid298}{16426342}{46507328}
+\pgfsyspdfmark {pgfid299}{17693373}{46507328}
+\pgfsyspdfmark {pgfid300}{13258763}{46291057}
+\pgfsyspdfmark {pgfid301}{13586444}{45786432}
+\pgfsyspdfmark {pgfid302}{12843701}{45786432}
+\pgfsyspdfmark {pgfid303}{13892280}{45786432}
+\pgfsyspdfmark {pgfid304}{15159311}{45786432}
+\pgfsyspdfmark {pgfid305}{16426342}{45786432}
+\pgfsyspdfmark {pgfid306}{17693373}{45786432}
+\pgfsyspdfmark {pgfid307}{13258763}{45570161}
+\pgfsyspdfmark {pgfid308}{13586444}{45065536}
+\pgfsyspdfmark {pgfid309}{12843701}{45065536}
+\pgfsyspdfmark {pgfid310}{13892280}{45065536}
+\pgfsyspdfmark {pgfid311}{15159311}{45065536}
+\pgfsyspdfmark {pgfid312}{16426342}{45065536}
+\pgfsyspdfmark {pgfid313}{17693373}{45065536}
+\pgfsyspdfmark {pgfid314}{13258763}{44849265}
+\pgfsyspdfmark {pgfid315}{13586444}{44344640}
+\pgfsyspdfmark {pgfid316}{12843701}{44344640}
+\pgfsyspdfmark {pgfid317}{13892280}{44344640}
+\pgfsyspdfmark {pgfid318}{15159311}{44344640}
+\pgfsyspdfmark {pgfid319}{16426342}{44344640}
+\pgfsyspdfmark {pgfid320}{17693373}{44344640}
+\pgfsyspdfmark {pgfid321}{13258763}{44128369}
+\pgfsyspdfmark {pgfid322}{13586444}{43623744}
+\pgfsyspdfmark {pgfid323}{12843701}{43623744}
+\pgfsyspdfmark {pgfid324}{13892280}{43623744}
+\pgfsyspdfmark {pgfid325}{15159311}{43623744}
+\pgfsyspdfmark {pgfid326}{16426342}{43623744}
+\pgfsyspdfmark {pgfid327}{17693373}{43623744}
+\pgfsyspdfmark {pgfid328}{13258763}{43407473}
+\pgfsyspdfmark {pgfid329}{11991732}{43407473}
+\pgfsyspdfmark {pgfid330}{13258764}{43407473}
+\pgfsyspdfmark {pgfid331}{14525795}{43407473}
+\pgfsyspdfmark {pgfid332}{15792826}{43407473}
+\pgfsyspdfmark {pgfid333}{17059857}{43407473}
+\pgfsyspdfmark {pgfid334}{18326888}{43407473}
+\pgfsyspdfmark {pgfid335}{18436116}{44659211}
+\pgfsyspdfmark {pgfid337}{18436116}{44659211}
+\pgfsyspdfmark {pgfid339}{31091171}{47011953}
+\pgfsyspdfmark {pgfid340}{31418852}{46507328}
+\pgfsyspdfmark {pgfid341}{31724688}{46507328}
+\pgfsyspdfmark {pgfid342}{32991719}{46507328}
+\pgfsyspdfmark {pgfid343}{34258750}{46507328}
+\pgfsyspdfmark {pgfid344}{35525781}{46507328}
+\pgfsyspdfmark {pgfid345}{31091171}{46291057}
+\pgfsyspdfmark {pgfid346}{31418852}{45786432}
+\pgfsyspdfmark {pgfid347}{30676109}{45786432}
+\pgfsyspdfmark {pgfid348}{31724688}{45786432}
+\pgfsyspdfmark {pgfid349}{32991719}{45786432}
+\pgfsyspdfmark {pgfid350}{34258750}{45786432}
+\pgfsyspdfmark {pgfid351}{35525781}{45786432}
+\pgfsyspdfmark {pgfid352}{31091171}{45570161}
+\pgfsyspdfmark {pgfid353}{31418852}{45065536}
+\pgfsyspdfmark {pgfid354}{30676109}{45065536}
+\pgfsyspdfmark {pgfid355}{31724688}{45065536}
+\pgfsyspdfmark {pgfid356}{32991719}{45065536}
+\pgfsyspdfmark {pgfid357}{34258750}{45065536}
+\pgfsyspdfmark {pgfid358}{35525781}{45065536}
+\pgfsyspdfmark {pgfid359}{31091171}{44849265}
+\pgfsyspdfmark {pgfid360}{31418852}{44344640}
+\pgfsyspdfmark {pgfid361}{30676109}{44344640}
+\pgfsyspdfmark {pgfid362}{31724688}{44344640}
+\pgfsyspdfmark {pgfid363}{32991719}{44344640}
+\pgfsyspdfmark {pgfid364}{34258750}{44344640}
+\pgfsyspdfmark {pgfid365}{35525781}{44344640}
+\pgfsyspdfmark {pgfid366}{31091171}{44128369}
+\pgfsyspdfmark {pgfid367}{31418852}{43623744}
+\pgfsyspdfmark {pgfid368}{30676109}{43623744}
+\pgfsyspdfmark {pgfid369}{31724688}{43623744}
+\pgfsyspdfmark {pgfid370}{32991719}{43623744}
+\pgfsyspdfmark {pgfid371}{34258750}{43623744}
+\pgfsyspdfmark {pgfid372}{35525781}{43623744}
+\pgfsyspdfmark {pgfid373}{31091171}{43407473}
+\pgfsyspdfmark {pgfid374}{29824140}{43407473}
+\pgfsyspdfmark {pgfid375}{31091172}{43407473}
+\pgfsyspdfmark {pgfid376}{32358203}{43407473}
+\pgfsyspdfmark {pgfid377}{33625234}{43407473}
+\pgfsyspdfmark {pgfid378}{34892265}{43407473}
+\pgfsyspdfmark {pgfid379}{36159296}{43407473}
+\pgfsyspdfmark {pgfid380}{36268524}{44659211}
+\pgfsyspdfmark {pgfid382}{36268524}{44659211}
+\newlabel{fig:sinkfreeex}{{5}{21}{}{}{}}
+\newlabel{eq:route}{{38}{21}{}{}{}}
+\citation{DBLP:conf/sat/PrevotSM21,mahmoud2022gpu}
+\citation{DBLP:conf/cp/FichteHZ19}
+\citation{DBLP:journals/jacm/MoserT10}
+\citation{DBLP:journals/jacm/MoserT10}
+\newlabel{fig:ap:resamples}{{6}{23}{}{}{}}
+\gdef \@abspage@last{23}

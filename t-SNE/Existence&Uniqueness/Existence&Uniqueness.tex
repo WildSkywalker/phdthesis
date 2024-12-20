@@ -24,7 +24,7 @@
 \usepackage{color}
 \usepackage{colortbl}
 \usepackage{tikz}
-\usepackage[numbers]{natbib}
+\usepackage[authoryear,square]{natbib}
 %\usepackage{vector}
 
 \definecolor{gblue}{RGB}{66,133,244}
@@ -148,7 +148,7 @@
 For the big picture, we aim to establish the convergence theorems for the
 $t$-SNE algorithm with generalized input and output kernels. For convenience,
 if not specified or otherwise explicitly defined, all notations are the same as
-in \cite{auffinger-tsne}. At the currently state, we have shown that the
+in \citep{auffinger-tsne}. At the currently state, we have shown that the
 relative entropy $t$-SNE with generalized kernel $g$ converges and can be
 computed if $g$ satisfies the following:
 
@@ -174,7 +174,7 @@ There are two main steps before we can complete the project. On one hand, we
 need to give a specific form to the generalized input kernel, and prove the
 existence and uniqueness of $\sigma^*$. Without the constraint on perplexity,
 $t$-SNE will fail. On the other hand, we need to prove the bounds for
-approximation and produce similar results like those in \cite{auffinger-tsne}.
+approximation and produce similar results like those in \citep{auffinger-tsne}.
 This document is dedicated to the former, and serves as the second main step in
 this project, hence the name.
 \section{The Generalized Input Kernel}
@@ -220,7 +220,7 @@ kernel. The most immediate and obvious requirements we can impose will be
 \end{align}
 These two are the bare minimum for this problem because apparently we want the normalizing quantity to be finite and $w$ must increase to infinity for a decaying tail. Taking $w(t) = t/2$, $\theta = 2$ and we have the original kernel back. We will start with these basic settings and gradually add more requirements as we proceed through the problem. Also, since the input kernel serves as the weight/probability mass, it is always normalized and we can assume $w(0) = 0$ without loss of generality.
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}
-We will try to replicate the results in section 2 of \cite{auffinger-tsne}. Recall that
+We will try to replicate the results in section 2 of \citep{auffinger-tsne}. Recall that
 \begin{align} \label{big_F_formula}
       & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                    \\
     = & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
@@ -310,7 +310,7 @@ We are able to move differentiation inside the integral because of dominant conv
     \int w\cdot w' \cdot \norm{x-x'}^{\theta} \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^{\theta} \exp(\cdot).
 \end{align}
 To tackle this inequality, we need the following lemma:
-\begin{lemma}[Theorem 7,\cite{liu2000inequ}]
+\begin{lemma}[Theorem 7,\citep{liu2000inequ}]
     Let $f(x),g(x),h(x)$ be continuous functions on $[a,b]$ such that
     \begin{align} \label{miracle_condition}
         \left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right) \geq 0.
@@ -334,7 +334,7 @@ This lemma can easily be extended to general Lebesgue integrals over $\mathbb{R}
     holds. If (\ref{miracle_condition_ext}) reverses, then (\ref{miracle_inequ_ext}) reverses.
 \end{lemma}
 \begin{proof}
-    The proof of this lemma is similar to the one in \cite{liu2000inequ}. It suffices to show that
+    The proof of this lemma is similar to the one in \citep{liu2000inequ}. It suffices to show that
     \begin{align}
         \int_{\mathbb{R}^d} f(x)d\mu \int_{\mathbb{R}^d} h(x)g(x)d\mu \geq \int_{\mathbb{R}^d} h(x)d\mu \int_{\mathbb{R}^d} f(x)g(x)d\mu.
     \end{align}
@@ -405,6 +405,8 @@ Here $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a
 \begin{align}
     \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta}))dt < \infty, \qquad \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty.
 \end{align}
+
+\setcitestyle{numbers}
 \bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
 
 \end{document}

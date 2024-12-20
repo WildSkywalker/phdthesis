@@ -1,12 +1,11 @@
 %%% This is nuthesis.cls
-%%% for writing doctoral dissertations in the 
-%%% Engineering Sciences and Applied Mathematics Department at
-%%% Northwestern University
+%%% for writing doctoral dissertations at the 
+%%% Mathematics Department of Northwestern University
 %%% 
-%%% Author: David Chopp (adapted from the math department version)
-%%% Date: 10/12/2020
+%%% Author: Miguel A. Lerma (mlerma@math.northwestern.edu)
+%%% Date: 04/23/2918
 %%%
-%%% Bug reports to: chopp@northwestern.edu
+%%% Bug reports to: mlerma@math.northwestern.edu
 %%%
 %%% IF YOU MODIFIY THIS FILE STATE THAT IT IS MODIFIED, WHEN AND BY WHOM,
 %%% AND IF POSSIBLE ALSO THE DETAILS AND MOTIVATIONS FOR THE CHANGES.
@@ -29,20 +28,20 @@
 %%   Right bracket \]     Circumflex    \^     Underscore    \_
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
-\NeedsTeXFormat{LaTeX2e}% LaTeX 2.09 can't be used (nor non-LaTeX)
-[1994/12/01]% LaTeX date must December 1994 or later
-\ProvidesClass{nuthesis}[2018/04/23 v1.17a by Miguel A. Lerma]
-   \PassOptionsToClass{oneside}{amsbook}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{amsbook}}
-       \ProcessOptions\relax
-        \LoadClass{amsbook}
+  \NeedsTeXFormat{LaTeX2e}% LaTeX 2.09 can't be used (nor non-LaTeX)
+	 [1994/12/01]% LaTeX date must December 1994 or later
+  \ProvidesClass{nuthesis}[2018/04/23 v1.17a by Miguel A. Lerma]
+		\PassOptionsToClass{oneside}{amsbook}
+    \DeclareOption*{\PassOptionsToClass{\CurrentOption}{amsbook}}
+			\ProcessOptions\relax
+			 \LoadClass{amsbook}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % contributed by Tomasz Strzalecki - 7/27/2008
 % there should be a page number on the page which displays the part name
 \def\part{\cleardoublepage %
-\null\vfil  \markboth{}{}\secdef\@part\@spart}
+  \null\vfil  \markboth{}{}\secdef\@part\@spart}
 
 
 %\def\singlespace{\renewcommand{\baselinestretch}{1}}
@@ -76,20 +75,20 @@
 % Another place where amsbook.cls yields scriptsize
 % (amsbook.cls yields scriptsize) - MAL 7/15/2003
 \def\ps@headings{\ps@empty
-\def\@evenhead{%
-\setTrue{runhead}%
-\normalfont\normalsize        % changed from scriptsize - MAL 7/15/2003
-\rlap{\thepage}\hfil \leftmark{}{}\hfil}%
-\def\@oddhead{%
-\setTrue{runhead}%
-\normalfont\normalsize \hfil  % changed from scriptsize - MAL 7/15/2003
-\rightmark{}{}\hfil \llap{\thepage}}%
-\let\@mkboth\markboth
-\def\partmark{\@secmark\markboth\partrunhead\partname}%
-\def\chaptermark{%
-\@secmark\markboth\chapterrunhead{}}%
-\def\sectionmark{%
-\@secmark\markright\sectionrunhead\sectionname}%
+  \def\@evenhead{%
+    \setTrue{runhead}%
+    \normalfont\normalsize        % changed from scriptsize - MAL 7/15/2003
+    \rlap{\thepage}\hfil \leftmark{}{}\hfil}%
+  \def\@oddhead{%
+    \setTrue{runhead}%
+    \normalfont\normalsize \hfil  % changed from scriptsize - MAL 7/15/2003
+    \rightmark{}{}\hfil \llap{\thepage}}%
+  \let\@mkboth\markboth
+  \def\partmark{\@secmark\markboth\partrunhead\partname}%
+  \def\chaptermark{%
+    \@secmark\markboth\chapterrunhead{}}%
+  \def\sectionmark{%
+    \@secmark\markright\sectionrunhead\sectionname}%
 }
 
 
@@ -102,37 +101,37 @@
 % - nice, but not being used - MAL 4/13/2012
 \newcommand\chapterX{\if@openright\cleardoublepage\else\clearpage\fi
 %   \thispagestyle{plain}%
-\global\@topnum\z@
-\@afterindentfalse
-\secdef\@addchap\@saddchap%
+    \global\@topnum\z@
+    \@afterindentfalse
+    \secdef\@addchap\@saddchap%
 }
 
 
 % from koma-script scrbook.cls - MAL 5/19/2005
 \newcommand\addchap{\if@openright\cleardoublepage\else\clearpage\fi
 %                    \thispagestyle{plain}%
-               \thispagestyle{myheadings}%
-               \global\@topnum\z@
-               \@afterindentfalse
-               \secdef\@addchap\@saddchap}
+                    \thispagestyle{myheadings}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@addchap\@saddchap}
 \def\@addchap[#1]#2{\typeout{#2}
-               \addcontentsline{toc}{chapter}{#1}%
-               \if@twoside\@mkboth{#1}{}\else\@mkboth{}{#1}\fi
-               \addtocontents{lof}{\protect\addvspace{10\p@}}%
-               \addtocontents{lot}{\protect\addvspace{10\p@}}%
-               \if@twocolumn
-                    \@topnewpage[\@makeschapterhead{#2}]%
-               \else
-                    \@makeschapterhead{#2}%
-                    \@afterheading
-               \fi}
+                    \addcontentsline{toc}{chapter}{#1}%
+                    \if@twoside\@mkboth{#1}{}\else\@mkboth{}{#1}\fi
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                         \@topnewpage[\@makeschapterhead{#2}]%
+                    \else
+                         \@makeschapterhead{#2}%
+                         \@afterheading
+                    \fi}
 \def\@saddchap#1{\@mkboth{}{}
-            \if@twocolumn
-                 \@topnewpage[\@makeschapterhead{#1}]%
-            \else
-                 \@makeschapterhead{#1}%
-                 \@afterheading
-            \fi}
+                 \if@twocolumn
+                      \@topnewpage[\@makeschapterhead{#1}]%
+                 \else
+                      \@makeschapterhead{#1}%
+                      \@afterheading
+                 \fi}
 
 
 
@@ -177,39 +176,39 @@
 % if tempskipa <= 0 the heading is a run-in heading
 
 \def\section{\@startsection{section}{1}%
-\z@{.7\linespacing\@plus\linespacing}{.5\linespacing}%
-{\normalfont\bfseries\centering}}
+  \z@{.7\linespacing\@plus\linespacing}{.5\linespacing}%
+  {\normalfont\bfseries\centering}}
 \def\subsection{\@startsection{subsection}{2}%
-\z@{-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
-{\normalfont\bfseries}}
+  \z@{-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
+  {\normalfont\bfseries}}
 \def\subsubsection{\@startsection{subsubsection}{3}%
-\z@\z@{-.5em}%
-{\normalfont\bfseries}}
+  \z@\z@{-.5em}%
+  {\normalfont\bfseries}}
 
 
 \def\th@plain{%
-\thm@headfont{\bfseries}
-\let\thmhead\thmhead@plain \let\swappedhead\swappedhead@plain
-\thm@preskip.5\baselineskip\@plus.2\baselineskip
-                               \@minus.2\baselineskip
-\thm@postskip\thm@preskip
-\itshape
+  \thm@headfont{\bfseries}
+  \let\thmhead\thmhead@plain \let\swappedhead\swappedhead@plain
+  \thm@preskip.5\baselineskip\@plus.2\baselineskip
+                                    \@minus.2\baselineskip
+  \thm@postskip\thm@preskip
+  \itshape
 }
 \def\th@definition{%
-\thm@headfont{\bfseries}%
-\let\thmhead\thmhead@plain \let\swappedhead\swappedhead@plain
-\thm@preskip.5\baselineskip\@plus.2\baselineskip
-                               \@minus.2\baselineskip
-\thm@postskip\thm@preskip
-\upshape
+  \thm@headfont{\bfseries}%
+  \let\thmhead\thmhead@plain \let\swappedhead\swappedhead@plain
+  \thm@preskip.5\baselineskip\@plus.2\baselineskip
+                                    \@minus.2\baselineskip
+  \thm@postskip\thm@preskip
+  \upshape
 }
 \def\th@remark{%
-\thm@headfont{\bfseries}%
-\let\thmhead\thmhead@plain \let\swappedhead\swappedhead@plain
-\thm@preskip.5\baselineskip\@plus.2\baselineskip
-                               \@minus.2\baselineskip
-\thm@postskip\thm@preskip
-\upshape
+  \thm@headfont{\bfseries}%
+  \let\thmhead\thmhead@plain \let\swappedhead\swappedhead@plain
+  \thm@preskip.5\baselineskip\@plus.2\baselineskip
+                                    \@minus.2\baselineskip
+  \thm@postskip\thm@preskip
+  \upshape
 }
 
 
@@ -238,13 +237,13 @@
 \def\degree#1{\def\d@gree{#1}}
 \def\d@gree{DOCTOR OF PHILOSOPHY}   % spelling corrected - MAL 3/8/2002
 \def\field#1{\def\fi@ld{#1}}
-\def\fi@ld{Applied Mathematics}
+\def\fi@ld{Mathematics}
 \def\campus#1{\def\c@mpus{#1}}
 \def\c@mpus{EVANSTON, ILLINOIS}
 
 \def\graduation@month{\ifcase\month\or
-June\or June\or June\or June\or June\or June\or December\or
-December\or December\or December\or December\or December\fi}
+    June\or June\or June\or June\or June\or June\or December\or
+    December\or December\or December\or December\or December\fi}
 \def\graduation@year{\number\year}
 
 \def\graduationmonth#1{\def\graduation@month{#1}}
@@ -254,25 +253,25 @@ December\or December\or December\or December\or December\fi}
 
 
 \def\frontmatter{%
-\cleardoublepage
-\pagenumbering{arabic}
-\pagestyle{myheadings}
+  \cleardoublepage
+  \pagenumbering{arabic}
+  \pagestyle{myheadings}
 }
 \def\mainmatter{} % not needed any more
 \def\backmatter{\cleardoublepage}
 
 
 \def\titlepage{%
-\cleardoublepage
-\thispagestyle{empty}\setcounter{page}{1}}
+  \cleardoublepage
+  \thispagestyle{empty}\setcounter{page}{1}}
 \def\endtitlepage{\newpage}
 
 
 \def\copyrightpage{%
-\cleardoublepage
+  \cleardoublepage
 \begin{center}
-\ \\
-\vspace{\fill}
+  \ \\
+  \vspace{\fill}
 \copyright \ Copyright by \authors{} \graduation@year \\
 All Rights Reserved
 \vspace{\fill}
@@ -282,7 +281,7 @@ All Rights Reserved
 
 
 \def\maketitle{\par
-\@topnum\z@ % this prevents figures from falling at the top of page 1
+  \@topnum\z@ % this prevents figures from falling at the top of page 1
 \begin{titlepage}
 \begin{center}
 NORTHWESTERN UNIVERSITY\par
@@ -304,9 +303,9 @@ By\par
 \vspace{0.5cm}
 \ifx\@empty\authors
 Author's name required\par
-\else
-\authors\par
-\fi
+  \else
+  \authors\par
+  \fi
 \vfill
 \c@mpus\par
 \vspace{0.5cm}
@@ -359,7 +358,7 @@ Author's name required\par
 % table of contents using new name and
 % appearing in the left PDF sidebar - MAL 4/18/2017
 \def\tableofcontents{%
-\@starttoc{toc}\nucontentsname
+  \@starttoc{toc}\nucontentsname
 }
 \def\nucontentsname{Table of Contents}
 % comment out the lines above and uncomment the following line:
@@ -386,24 +385,24 @@ Author's name required\par
 % and be single spaced with double space
 % between items.
 \renewenvironment{thebibliography}[1]{%
-\@xp\chapter\@xp*\@xp{\bibname}%
+  \@xp\chapter\@xp*\@xp{\bibname}%
 %  \normalfont\footnotesize            % commented out (MAL-5/4/2001)
-\labelsep .5em\relax
-\renewcommand\theenumiv{\arabic{enumiv}}\let\p@enumiv\@empty
-\list{\@biblabel{\theenumiv}}{%
-\settowidth\itemsep\@mainsize      % MAL - 5/9/2001
+  \labelsep .5em\relax
+  \renewcommand\theenumiv{\arabic{enumiv}}\let\p@enumiv\@empty
+  \list{\@biblabel{\theenumiv}}{%
+    \settowidth\itemsep\@mainsize      % MAL - 5/9/2001
 %    \singlespace                       % MAL - 5/9/2001
 %    \begin{singlespace} % removed MAL 3/31/2103 (bug reported by Martin Szydlowski)
-\settowidth\labelwidth{\@biblabel{#1}}%
-\leftmargin\labelwidth \advance\leftmargin\labelsep
-\usecounter{enumiv}}%
-\sloppy \clubpenalty\@M \widowpenalty\clubpenalty
-\sfcode`\.=\@m
+    \settowidth\labelwidth{\@biblabel{#1}}%
+    \leftmargin\labelwidth \advance\leftmargin\labelsep
+    \usecounter{enumiv}}%
+  \sloppy \clubpenalty\@M \widowpenalty\clubpenalty
+  \sfcode`\.=\@m
 }{%
-\def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+  \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
 %  \endsinglespace                      % MAL - 5/9/2001
 %    \end{singlespace} % removed MAL 3/31/2103  (bug reported by Martin Szydlowski)
-\endlist
+  \endlist
 }
 \def\bibname{References}
 
@@ -437,14 +436,14 @@ Author's name required\par
 \def\fnum@scheme{\schemename\ \thescheme}
 \def\schemename{Scheme}
 \newenvironment{scheme}{%
-\@float{scheme}%
+  \@float{scheme}%
 }{%
-\end@float
+  \end@float
 }
 \newenvironment{scheme*}{%
-\@dblfloat{scheme}%
+  \@dblfloat{scheme}%
 }{%
-\end@dblfloat
+  \end@dblfloat
 }
 %\def\l@scheme{\@tocline{0}{3pt plus2pt}{0pt}{1.5pc}{}}
 \def\l@scheme{\@tocline{0}{3pt plus2pt}{3pt}{5pc}{}}
@@ -464,3 +463,4 @@ Author's name required\par
 \endinput
 %%
 %% End of file `nuthesis.cls'.
+
