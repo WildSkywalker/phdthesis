@@ -1,5 +1,5 @@
 \section*{Overview}
-We propose VarFA, a variational inference factor analysis framework that extends existing factor analysis models for educational data mining to efficiently output uncertainty estimation in the model's estimated factors. Such uncertainty information is useful, for example, for an adaptive testing scenario, where additional tests can be administered if the model is not quite certain about a students' skill level estimation. Traditional Bayesian inference methods that produce such uncertainty information are computationally expensive and do not scale to large data sets. VarFA utilizes variational inference which makes it possible to efficiently perform Bayesian inference even on very large data sets. We use the sparse factor analysis model as a case study and demonstrate the efficacy of VarFA on both synthetic and real data sets. VarFA is also very general and can be applied to a wide array of factor analysis models. Code and instructions to reproduce results in this chapter are available from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
+In the last chapter of this thesis, we propose VarFA, a variational inference factor analysis framework that extends existing factor analysis models for educational data mining to efficiently output uncertainty estimation in the model's estimated factors. Such uncertainty information is useful, for example, for an adaptive testing scenario, where additional tests can be administered if the model is not quite certain about a students' skill level estimation. Traditional Bayesian inference methods that produce such uncertainty information are computationally expensive and do not scale to large data sets. VarFA utilizes variational inference which makes it possible to efficiently perform Bayesian inference even on very large data sets. We use the sparse factor analysis model as a case study and demonstrate the efficacy of VarFA on both synthetic and real data sets. VarFA is also very general and can be applied to a wide array of factor analysis models. Code and instructions to reproduce results in this chapter are available from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
 \section{Introduction}
 \label{sec:intro}
 % f\jack{TODOs: 1) add references 2) unify terminology (KC, concept), (methods, frameworks), (estimate, estimation) \st{3) check table and figure captions} 4) remove all red comments 5) check math notation and refine presentation 6) refine intro and abstract 7) refine the rest of the paper 8) clean code and upload it alone with data to google drive; add link to paper}
@@ -187,11 +187,8 @@ example, ~\cite{lindsey2014improving,mozer2016predicting} proposed DASH (short
 for \underline{d}ifficulty, \underline{a}bility, and \underline{s}tudent
 \underline{h}istory) that incorporates a student's total number of correct
 answers and total number of attempts for a question in a given time window
-\begin{align}
-    \begin{split}
-        \mathbb{P}(y_{ij}=1) & = \sigmoid\Bigg( c_i - \mu_j + \sum_{w=0}^{W-1} \Big(\theta_{2w+1}{\rm log}(1+\rho_{ijw}) \\[-5pt]
-                             & \qquad\qquad\qquad\qquad- \theta_{2w+2}{\rm log}(1+\gamma_{ijw})\Big) \Bigg)
-    \end{split}\label{eq:dash}
+\begin{align} \label{eq:dash}
+    \mathbb{P}(y_{ij}=1)  = \sigmoid\Bigg( c_i - \mu_j + \sum_{w=0}^{W-1} \Big(\theta_{2w+1}{\rm log}(1+\rho_{ijw}) - \theta_{2w+2}{\rm log}(1+\gamma_{ijw})\Big) \Bigg)
 \end{align}
 where $W$ is the length of the time windows (e.g., number of days), $\rho_{ijw}$ and $\gamma_{ijw}$ are the $i$-th student's total number of correct answers and total number of attempts for question $j$ at time $w$, respectively. $\theta$'s are parameters that captures the effect of correct answers and total attempts. More recently, DAS3H~\cite{das3h} extends DASH to further include skill tags associated with each question which essentially amounts to adding, within the last summation term in Eq.~\ref{eq:dash}, another summation over the number of skills.
 
@@ -226,8 +223,8 @@ functions accordingly. In this way, we still retain the general FA model in
 Eq.~\ref{eq:sparfa}. We will use this canonical form to facilitate discussions
 in the rest of this chapter.
 
-\subsection{Inference Methods for FA Models}
-\label{sec:FA-inference}
+\subsection{Inference Methods for FA Models} \label{sec:FA-inference}
+\vspace{-10pt}
 We first introduce the inference objective and briefly review maximum log likelihood estimation method. Then, we review existing works that uses Bayesian inference for FA and highlight their high computational complexity, paving the way to VarFA, our proposed efficient Bayesian inference framework based on variational inference.
 
 The factors in Eq.~\ref{eq:sparfa} may contain known factors that need no
@@ -354,12 +351,8 @@ where we now optimize a lower bound, known as the evidence lower bound
 a novel ELBO objective for variational inference applied to FA models in the
 EDM setting, summarized in the proposition below.
 \begin{prop} In VarFA, the ELBO objective for an FA model in the form of Eq.~\ref{eq:sparfa} is
-    \begin{align}
-        \begin{split}
-            \mathcal{L}_{\rm ELBO}(\phi, \theta) = & \sum_{i,j\in\Omega_{\rm obs}} \bigg(-D_{\rm KL}[q_\phi(\nu_i|\vy_i)\|p(\nu_i)]                  \\
-                                                   & \quad + \mathbb{E}_{\nu_i\sim q_\phi(\nu_i|\vy_i)}[{\rm log}\,p_{\theta_j}(y_{ij}|\nu_i)]\bigg)
-        \end{split}
-        \label{eq:elbo}
+    \begin{align} \label{eq:elbo}
+        \mathcal{L}_{\rm ELBO}(\phi, \theta) = \sum_{i,j\in\Omega_{\rm obs}} \bigg(-D_{\rm KL}[q_\phi(\nu_i|\vy_i)\|p(\nu_i)] + \mathbb{E}_{\nu_i\sim q_\phi(\nu_i|\vy_i)}[{\rm log}\,p_{\theta_j}(y_{ij}|\nu_i)]\bigg)
     \end{align}
     where $D_{\rm KL}$ is the Kullback–Leibler (KL) divergence~\cite{mackay2003information} between two distributions.
 \end{prop}
@@ -596,10 +589,10 @@ hyper-parameter settings for SPARFA-B following Section 4.2 in~\cite{lan14a}.
     %\vspace{-5pt}
     \begin{tabular}{lccc}
         \toprule
-        \textbf{data set} & \textbf{\#students} & \textbf{\#questions} & \textbf{\%observed} \\ \hline
-        assistment        & 392                 & 747                  & 12.93\%             \\
-        algebra           & 697                 & 782                  & 13.02\%             \\
-        bridge            & 913                 & 1242                 & 11.42\%             \\ \bottomrule
+        \textbf{data set}          & \textbf{\#students} & \textbf{\#questions} & \textbf{\%observed} \\ \hline
+        assistment \Tstrut \Bstrut & 392                 & 747                  & 12.93\%             \\
+        algebra                    & 697                 & 782                  & 13.02\%             \\
+        bridge                     & 913                 & 1242                 & 11.42\%             \\ \bottomrule
     \end{tabular}
     \label{tab:data-stat}
 \end{table}
@@ -644,14 +637,14 @@ performance.
         %\vspace{-5pt}
         \begin{tabular}{lcc}
             \toprule
-            \textbf{Metric}           & \multicolumn{2}{c}{\textbf{Algorithm}}                              \\  \hline \\[-8pt]
+            \textbf{Metric}                            & \multicolumn{2}{c}{\textbf{Algorithm}}                              \\  \hline \\[-8pt]
             % \cmidrule(l){2-2} \cmidrule(l){3-3}
-                                      & SPARFA-M                               & VarFA                      \\
+                                                       & SPARFA-M                               & VarFA                      \\
             \cmidrule(l){2-2} \cmidrule(l){3-3}
-            ACC $\uparrow$            & 0.7074$\pm$0.0044                      & \textbf{0.7101}$\pm$0.0048 \\
-            AUC $\uparrow$            & 0.756$\pm$0.048                        & \textbf{0.7635}$\pm$0.0036 \\
-            F1 $\uparrow$             & 0.7746$\pm$0.0029                      & \textbf{0.7765}$\pm$0.0014 \\ \hline
-            Run time (s) $\downarrow$ & \textbf{5.3319}$\pm0.2774$             & 6.9167$\pm$0.1074          \\
+            ACC $\uparrow$                             & 0.7074$\pm$0.0044                      & \textbf{0.7101}$\pm$0.0048 \\
+            AUC $\uparrow$                             & 0.756$\pm$0.048                        & \textbf{0.7635}$\pm$0.0036 \\
+            F1 $\uparrow$                              & 0.7746$\pm$0.0029                      & \textbf{0.7765}$\pm$0.0014 \\ \hline
+            Run time (s) $\downarrow$  \Tstrut \Bstrut & \textbf{5.3319}$\pm0.2774$             & 6.9167$\pm$0.1074          \\
             \bottomrule
             %\vspace{1pt}
         \end{tabular}
@@ -662,14 +655,14 @@ performance.
         %\vspace{-5pt}
         \begin{tabular}{lcc}
             \toprule
-            \textbf{Metric}           & \multicolumn{2}{c}{\textbf{Algorithm}}                              \\  \hline \\[-8pt]
+            \textbf{Metric}                           & \multicolumn{2}{c}{\textbf{Algorithm}}                              \\  \hline \\[-8pt]
             % \cmidrule(l){2-2} \cmidrule(l){3-3}
-                                      & SPARFA-M                               & VarFA                      \\
+                                                      & SPARFA-M                               & VarFA                      \\
             \cmidrule(l){2-2} \cmidrule(l){3-3}
-            ACC $\uparrow$            & 0.7735$\pm$0.0037                      & \textbf{0.7774}$\pm$0.0031 \\
-            AUC $\uparrow$            & 0.8137$\pm$0.003                       & \textbf{0.8245}$\pm$0.002  \\
-            F1 $\uparrow$             & 0.8465$\pm$0.0021                      & \textbf{0.8486}$\pm$0.001  \\\hline
-            Run time (s) $\downarrow$ & \textbf{8.464}$\pm$0.4568              & 10.3335$\pm$0.4435         \\
+            ACC $\uparrow$                            & 0.7735$\pm$0.0037                      & \textbf{0.7774}$\pm$0.0031 \\
+            AUC $\uparrow$                            & 0.8137$\pm$0.003                       & \textbf{0.8245}$\pm$0.002  \\
+            F1 $\uparrow$                             & 0.8465$\pm$0.0021                      & \textbf{0.8486}$\pm$0.001  \\\hline
+            Run time (s) $\downarrow$ \Tstrut \Bstrut & \textbf{8.464}$\pm$0.4568              & 10.3335$\pm$0.4435         \\
             \bottomrule
             %\vspace{1pt}
         \end{tabular}
@@ -680,14 +673,14 @@ performance.
         %\vspace{-5pt}
         \begin{tabular}{lcc}
             \toprule
-            \textbf{Metric}           & \multicolumn{2}{c}{\textbf{Algorithm}}                              \\  \hline \\[-8pt]
+            \textbf{Metric}                            & \multicolumn{2}{c}{\textbf{Algorithm}}                              \\  \hline \\[-8pt]
             % \cmidrule(l){2-2} \cmidrule(l){3-3}
-                                      & SPARFA-M                               & VarFA                      \\
+                                                       & SPARFA-M                               & VarFA                      \\
             \cmidrule(l){2-2} \cmidrule(l){3-3}
-            ACC $\uparrow$            & \textbf{0.8492}$\pm$0.0016             & 0.8468$\pm$0.0016          \\
-            AUC $\uparrow$            & 0.837$\pm$0.0024                       & \textbf{0.8419}$\pm$0.0028 \\
-            F1 $\uparrow$             & \textbf{0.9121}$\pm$0.0005             & 0.912$\pm$0.0009           \\\hline
-            Run time (s) $\downarrow$ & \textbf{15.6048}$\pm$0.7314            & 15.8558$\pm$1.046          \\
+            ACC $\uparrow$                             & \textbf{0.8492}$\pm$0.0016             & 0.8468$\pm$0.0016          \\
+            AUC $\uparrow$                             & 0.837$\pm$0.0024                       & \textbf{0.8419}$\pm$0.0028 \\
+            F1 $\uparrow$                              & \textbf{0.9121}$\pm$0.0005             & 0.912$\pm$0.0009           \\\hline
+            Run time (s) $\downarrow$  \Tstrut \Bstrut & \textbf{15.6048}$\pm$0.7314            & 15.8558$\pm$1.046          \\
             \bottomrule
         \end{tabular}
         \label{tab:bridge}
@@ -785,13 +778,13 @@ samples; the skinnier the violin, the more widespread the samples are, implying
 the model's less certainty on its estimations.
 
 \begin{table*}[t!]
-    \tiny
+    \fontsize{8pt}{8pt}\selectfont
     \caption{Illustration of the estimated latent skills with the their top 3 most strongly associated skill tags in the Assistment data set. The percentage in the parenthesis shows the association probability (summed to 1 for each latent skill). We see that the tagged skills associated with each estimated latent skill form intuitive and interpretable groups.
         % \ml{either here in the caption or in the text body, explain what these percentages mean. anything here sums to 1?}\jack{f}
     }
     \centering
     \setlength\heavyrulewidth{0.25ex}
-    \begin{tabular}{ll}
+    \begin{tabular}{p{0.45\textwidth}p{0.45\textwidth}}
         \toprule
         \textbf{Latent Skill 1}                                                                                                                                  & \textbf{Latent Skill 3}                                                                                                                                                                             \\ \hline \\[-5pt]
         \begin{tabular}[c]{@{}l@{}}Division Fractions (29.1\%)\\ Least Common Multiple (18.1\%)\\ Write Linear Equation from Ordered Pairs (17.8\%)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Conversion of Fraction Decimals Percents (7.3\%)\\ Addition and Subtraction Positive Decimals (6.8\%)\\ Probability of a Single Event (5.7\%)\end{tabular} \vspace{10pt} \\ \toprule \\[-10pt]

@@ -76,7 +76,7 @@
 \contentsline {subsection}{\tocsubsection {}{2.10.7}{Hyper-parameter Settings}}{68}{subsection.2.10.7}%
 \contentsline {chapter}{\tocchapter {Chapter}{3}{VarFA: A Variational Factor Analysis Framework For Efficient Bayesian Learning Analytics}}{70}{chapter.3}%
 \contentsline {section}{\tocsection {}{}{Overview}}{70}{section*.46}%
-\contentsline {section}{\tocsection {}{3.1}{Introduction}}{70}{section.3.1}%
+\contentsline {section}{\tocsection {}{3.1}{Introduction}}{71}{section.3.1}%
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Contributions}}{74}{section*.47}%
 \contentsline {section}{\tocsection {}{3.2}{Background and Related Work}}{75}{section.3.2}%
 \contentsline {subsection}{\tocsubsection {}{3.2.1}{Factor Analysis For Student Modeling}}{75}{subsection.3.2.1}%

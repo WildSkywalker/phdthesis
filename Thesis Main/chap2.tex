@@ -54,9 +54,9 @@ as algorithmic-LLL), in which find such a instance by executing the algorithm.
 \citep{DBLP:journals/jacm/GuoJL19} further proved that the algorithmic-LLL is an unbiased sampler if those bad events satisfy the so-called ``extreme'' condition.
 The expected running time of the sampler is also shown to be polynomial.
 %
-As one contribution of this piece of research, we offer proofs of the two aforementioned
-results using precise mathematical notations, clarifying a few descriptions not
-precisely defined in the original proof.
+As one contribution of this piece of research, we offer proofs of the two
+aforementioned results using precise mathematical notations, clarifying a few
+descriptions not precisely defined in the original proof.
 %
 While this line of research clearly demonstrates the potential of LLL in
 generative learning (generating samples that satisfy all hard constraints), it
@@ -111,23 +111,23 @@ efficiency in training\footnote{Code is at:
 
 Related to our \nls are neural-based approaches to solve combinatorial
 optimization
-problems~\citep{DBLP:conf/iclr/SelsamLBLMD19,DBLP:conf/icml/DuanVPRM22,DBLP:conf/nips/LiCK18}. %
+problems~\citep{DBLP:conf/iclr/SelsamLBLMD19,DBLP:conf/icml/DuanVPRM22,DBLP:conf/nips/LiCK18}.
 Machine learning is also used to discover better
-heuristics~\citep{DBLP:conf/nips/YolcuP19,DBLP:conf/nips/ChenT19}.
+heuristics~\citep{DBLP:conf/nips/YolcuP19,DBLP:conf/nips/ChenT19}.%
 %
 Reinforcement learning
 \citep{DBLP:conf/nips/KaraliasL20,DBLP:journals/eor/BengioLP21} as well as
-approaches integrating search with neural nets \citep{DBLP:conf/aaai/MandiDSG20}
-are found to be effective in solving combinatorial optimization problems as
-well.
+approaches integrating search with neural nets
+\citep{DBLP:conf/aaai/MandiDSG20} are found to be effective in solving
+combinatorial optimization problems as well.
 %
 Regarding probabilistic inference, there are a rich line of research on
 MCMC-type
 sampling~\citep{neal1993probabilistic,DBLP:journals/pami/DagumC93,pmlr-v84-ge18b}
 and various versions of belief
-propagation~\citep{murphy1999loopy,DBLP:journals/jmlr/IhlerFW05,DBLP:journals/corr/abs-2011-02303,pmlr-v138-fan20a}. %
+propagation~\citep{murphy1999loopy,DBLP:journals/jmlr/IhlerFW05,DBLP:journals/corr/abs-2011-02303,pmlr-v138-fan20a}.
 SampleSearch~\citep{DBLP:journals/ai/GogateD11} integrates importance sampling
-with constraint-driven search.
+with constraint-driven search.%
 %
 Probabilistic inference based on hashing and randomization obtains
 probabilistic guarantees for marginal queries and sampling via querying
@@ -249,7 +249,8 @@ single-variable factors.
 Notice this transformation is only possible when the MRF is subject to
 constraints.
 %
-We offer a detailed example in section \ref{appendix:svf} for further explanation.
+We offer a detailed example in section \ref{appendix:svf} for further
+explanation.
 %
 Equipped with this transformation, we assume all $\phi_{\theta,j}(x_j)$ are
 single variable factors for the rest of the chapter.
@@ -325,8 +326,9 @@ Under Condition~\ref{cond:extreme}, Algorithm~\ref{alg:lll-sampler} guarantees
 each sample is from the constrained MRFs' distribution $P_\theta(X=x |
     \mathcal{C})$ (shown in Theorem~\ref{th:product-dist}).
 %
-In section \ref{appendix:prob-dist}, we present the detailed proof and clarify the difference to the
-original descriptive proof~\citep{DBLP:journals/jacm/GuoJL19}.
+In section \ref{appendix:prob-dist}, we present the detailed proof and clarify
+the difference to the original descriptive
+proof~\citep{DBLP:journals/jacm/GuoJL19}.
 \begin{theorem}[Probability Distribution] \label{th:product-dist}
     Given  random variables $X=\{X_{i}\}_{i=1}^n$, constraints $\mathcal{C}=\{c_j\}_{j=1}^L$ that satisfy Condition~\ref{cond:extreme}, and the parameters of the constrained MRF in the single variable form  $\theta$. Upon termination, Algorithm~\ref{alg:lll-sampler}  outputs an assignment $x$ that is randomly drawn from the constrained MRF distribution: $x\sim P_\theta(X=x | \mathcal{C})$.
 
@@ -563,8 +565,9 @@ solutions of three combinatorial problems.
 Over all the tasks, we demonstrate that \nls outperforms baselines on learning
 performance, i.e., generating structures with high likelihoods and MAP@10
 scores
-(Table~\ref{tab:sampler}(c),~\ref{tab:learn-sat}(a,b),~\ref{tab:sink-free}(c,d)). %
-\nls also generates samples which 100\% satisfy constraints (Tables~\ref{tab:sampler}(b),~\ref{tab:sink-free}(b)).
+(Table~\ref{tab:sampler}(c),~\ref{tab:learn-sat}(a,b),~\ref{tab:sink-free}(c,d)).
+\nls also generates samples which 100\% satisfy constraints
+(Tables~\ref{tab:sampler}(b),~\ref{tab:sink-free}(b)).%
 %
 Finally, \nls is the most efficient sampler. Baselines either time out or
 cannot generate valid structures
@@ -581,11 +584,11 @@ with other sampling approaches. In terms of baseline samplers, we consider:
           sampler~\citep{DBLP:conf/nips/ErmonGSS13,DBLP:conf/uai/DingX21}.
     \item Uniform SAT samplers, including CMSGen~\citep{DBLP:conf/fmcad/GoliaSCM21},
           QuickSampler~\citep{DBLP:conf/icse/DutraLBS18},
-          UniGen~\citep{DBLP:conf/cav/SoosGM20} and KUS~\citep{DBLP:conf/lpar/SharmaGRM18}.
-          Notice these samplers cannot sample SAT solutions from a non-uniform
-          distribution. We include them in the learning experiments as a comparison, and
-          exclude them in the weighted sampling experiment (in
-          Fig.~\ref{fig:weighted_sample}).
+          UniGen~\citep{DBLP:conf/cav/SoosGM20} and
+          KUS~\citep{DBLP:conf/lpar/SharmaGRM18}. Notice these samplers cannot sample SAT
+          solutions from a non-uniform distribution. We include them in the learning
+          experiments as a comparison, and exclude them in the weighted sampling
+          experiment (in Fig.~\ref{fig:weighted_sample}).
 \end{itemize}
 
 \subsubsection*{Metrics} In terms of evaluation metrics, we consider:
@@ -846,8 +849,8 @@ generate valid structures.
 This section is for the proofs related to the probability distribution in the
 proposed Algorithm~\ref{alg:lll-sampler}. For convenience, commonly used
 notations are listed in Table~\ref{tab:quantifier}. We make some slight changes
-to some notations that appear in this chapter to make sure they are
-consistent and well-defined in this proof.
+to some notations that appear in this chapter to make sure they are consistent
+and well-defined in this proof.
 
 Similar to the previous
 analysis~\citep{DBLP:journals/jacm/GuoJL19,DBLP:journals/arxiv/jerrum2021}, we
@@ -1386,7 +1389,7 @@ For clarity, the newly added constraints do not impact Condition~\ref{cond:extre
 We use the Chain rule of the gradient to give a detailed deduction of Equation~\eqref{eq:gradient}.
 \begin{equation}\label{eq:full-gradient}
     \begin{aligned}
-          & \nabla\log Z_\mathcal{C}(\theta)=\frac{\nabla Z_\mathcal{C}(\theta)}{Z_\mathcal{C}(\theta)}=\frac{1}{Z_\mathcal{C}(\theta)}\nabla\sum_{x\in \mathcal{X}}\exp\left( \phi_{\theta}(x)\right)C(x) \nonumber \\
+          & \nabla\log Z_\mathcal{C}(\theta)=\frac{\nabla Z_\mathcal{C}(\theta)}{Z_\mathcal{C}(\theta)}=\frac{1}{Z_\mathcal{C}(\theta)}\nabla\sum_{x\in \mathcal{X}}\exp\left( \phi_{\theta}(x)\right)C(x) \nonumber                                                                     \\
         = & \sum_{x\in\mathcal{X}} \frac{\exp(\phi_{\theta}(x))C(x) }{Z_\mathcal{C}(\theta)}{\nabla\phi_\theta(x)} =\sum_{x\in \mathcal{X}} P_\theta(x|\mathcal{C}) \nabla\phi_{\theta}(x) = \mathbb{E}_{x\sim P_{\theta}(\tilde{x}|\mathcal{C})} \left({\nabla\phi_{\theta}(x)}.\right)
     \end{aligned}
 \end{equation}
@@ -1702,7 +1705,7 @@ In terms of evaluation metrics, we consider
           and draw samples $\{\tilde{x}^j\}_{j=1}^m$ with $m=2000$ from every sampler for
           approximation.
           \begin{equation*}
-              \left|\underbrace{\sum_{x\in\mathcal{X}} \frac{\exp\left( \sum_{j=1}^n\theta_jx_j\right)C(x) }{Z_\mathcal{C}(\theta)}{x_i}}_{\text{{Exact gradient term}}} \ - \ \underbrace{\sum_{j=1}^m \tilde{x}^j_i}_{\text{{Estimated gradient with sampler}}}\right|
+              \left|\, \, \underbrace{\sum_{x\in\mathcal{X}} \frac{\exp\left( \sum_{j=1}^n\theta_jx_j\right)C(x) }{Z_\mathcal{C}(\theta)}{x_i}}_{\text{{Exact gradient term}}} \ - \ \underbrace{\sum_{j=1}^m \tilde{x}^j_i}_{\text{{Estimated gradient with sampler}}} \, \,\right|
           \end{equation*}
           For fixed parameter $\theta$, the best sampler would attain the smallest approximation error.
 \end{itemize}

@@ -1,5 +1,8 @@
 \documentclass[12pt]{nuthesis}	
-
+\showboxbreadth=50 
+\showboxdepth=50
+\usepackage{array}
+\usepackage{adjustbox}
 \usepackage{algorithm}
 \usepackage{booktabs}
 \usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
@@ -44,6 +47,8 @@
     citecolor=gred,
     % bookmarks=true,
 }
+
+
 \newcommand{\lovasz}{{Lov\'asz}\xspace}
 \newcommand{\nls}{\textsc{Nelson}\xspace}
 
@@ -65,6 +70,14 @@
 \newcommand{\de}{\delta}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+\newcommand\nnfootnote[1]{%
+  \begin{NoHyper}
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \end{NoHyper}
+}
 
 \def\mI{{\bm{I}}}
 \def\mY{{\bm{Y}}}
@@ -197,9 +210,11 @@ This is the preface.
 ... text ...		% section, subsection) headings.
 \chapter{Learning Markov Random Fields for Combinatorial Structures via
   Sampling through Lov\'asz Local Lemma} % Chapter 2.
+  \nnfootnote{Published in AAAI 2023.}
 \input{chap2}
 
 \chapter{VarFA: A Variational Factor Analysis Framework For Efficient Bayesian Learning Analytics}
+\nnfootnote{Published in EDM 2020.}
 \input{chap3}
 
 

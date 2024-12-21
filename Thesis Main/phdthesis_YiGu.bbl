@@ -754,8 +754,6 @@ Adam Paszke et~al.
   Alch\'{e}-Buc, E.~Fox, and R.~Garnett, editors, {\em Proc. Advances in Neural
   Information Processing Systems}, pages 8024--8035. Curran Associates, Inc.,
   2019.
-\newblock URL
-  \url{http://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library.pdf}.
 
 \bibitem[Liang et~al.(2018)Liang, Krishnan, Hoffman, and
   Jebara]{liang2018variational}
