@@ -39,13 +39,13 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Learning Quality}}{34}{section*.25}%
 \contentsline {subsection}{\tocsubsection {}{2.5.4}{Learn Vehicle Delivery Routes}}{36}{subsection.2.5.4}%
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Task Definition \& Dataset}}{36}{section*.26}%
-\contentsline {section}{\tocsection {}{2.6}{Conclusion}}{36}{section.2.6}%
+\contentsline {section}{\tocsection {}{2.6}{Chapter Recap}}{36}{section.2.6}%
 \contentsline {section}{\tocsection {}{2.7}{Probability Distribution of Algorithm~\ref {alg:lll-sampler}}}{37}{section.2.7}%
 \contentsline {subsection}{\tocsubsection {}{2.7.1}{Definitions and Notations}}{37}{subsection.2.7.1}%
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Extra Notations related to Constrained MRF}}{40}{section*.29}%
-\contentsline {subsection}{\tocsubsection {}{2.7.2}{Ratio Property Lemma}}{40}{subsection.2.7.2}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Extra Notations related to Constrained MRF}}{39}{section*.29}%
+\contentsline {subsection}{\tocsubsection {}{2.7.2}{Ratio Property Lemma}}{41}{subsection.2.7.2}%
 \contentsline {subsection}{\tocsubsection {}{2.7.3}{Proof of Theorem~\ref {th:product-dist}}}{43}{subsection.2.7.3}%
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Summation of All Possible Sampling Records}}{43}{section*.30}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Summation of All Possible Sampling Records}}{44}{section*.30}%
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Sample Space Analysis At Termination}}{44}{section*.31}%
 \contentsline {subsection}{\tocsubsection {}{2.7.4}{Difference to the Original Proof}}{45}{subsection.2.7.4}%
 \contentsline {subsection}{\tocsubsection {}{2.7.5}{A Running Example in View of Markov Chain}}{45}{subsection.2.7.5}%
@@ -108,5 +108,5 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{3.4.2.2}{Results: Performance Comparison}}{94}{subsubsection.3.4.2.2}%
 \contentsline {subsubsection}{\tocsubsubsection {}{3.4.2.3}{Results: Bayesian Inference With VarFA}}{95}{subsubsection.3.4.2.3}%
 \contentsline {subsubsection}{\tocsubsubsection {}{3.4.2.4}{Results: Post-Processing for Improved Interpretability}}{97}{subsubsection.3.4.2.4}%
-\contentsline {section}{\tocsection {}{3.5}{Conclusions and Future Work}}{98}{section.3.5}%
+\contentsline {section}{\tocsection {}{3.5}{Chapter Conclusion and Future Work}}{98}{section.3.5}%
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{101}{chapter*.66}%

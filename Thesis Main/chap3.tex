@@ -208,7 +208,11 @@ functions accordingly. In this way, we still retain the general FA model in
 Eq.~\ref{eq:sparfa}. We will use this canonical form to facilitate discussions
 in the rest of this chapter.
 \subsection{Inference Methods for FA Models} \label{sec:FA-inference}
-We first introduce the inference objective and briefly review maximum log likelihood estimation method. Then, we review existing works that uses Bayesian inference for FA and highlight their high computational complexity, paving the way to VarFA, our proposed efficient Bayesian inference framework based on variational inference.
+We first introduce the inference objective and briefly review maximum log
+likelihood estimation method. Then, we review existing works that uses Bayesian
+inference for FA and highlight their high computational complexity, paving the
+way to VarFA, our proposed efficient Bayesian inference framework based on
+variational inference.
 
 The factors in Eq.~\ref{eq:sparfa} may contain known factors that need no
 inference. Therefore, for convenience of notation, let $[\nu, \theta, \psi]$ be
@@ -496,7 +500,7 @@ can be downloaded from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
     \tiny
     \centering
     \includegraphics[width=0.4\linewidth]{sim_time.png}
-    \caption{Training run time comparing VarFA, SPARFA-M, and SPARFA-B on synthetic data sets of varying sizes. VarFA performs approximate Bayesian inference almost 100x faster than SPARFA-B and is close to the run time of SPARFA-M. Thus, VarFA enables practical and scalable Bayesian inference for very large data sets.}
+    \caption{Training run time comparison among VarFA, SPARFA-M, and SPARFA-B on synthetic data sets of varying sizes. VarFA performs approximate Bayesian inference almost 100x faster than SPARFA-B and is close to the run time of SPARFA-M. Thus, VarFA enables practical and scalable Bayesian inference for very large data sets.}
     \label{fig:run-time}
 \end{figure}
 \subsection{Synthetic Data Experiments}
@@ -557,9 +561,10 @@ Fig.~\ref{fig:synthetic} shows bar plots that compare the
 student answer prediction performance of VarFA with SPARFA-M and SPARFA-B on
 all three evaluation metrics. We can observe that all three methods perform
 similarly and that SPARFA-M and SPARFA-B show no statistically significant
-advantage over VarFA.
-\sloppy
-We further showcase VarFA's scalability by comparing its training run-time with SPARFA-M and SPARFA-B. The results are shown in Fig.~\ref{fig:run-time}. VarFA is significantly faster than SPARFA-B and is almost as fast as SPARFA-M.
+advantage over VarFA. \sloppy We further showcase VarFA's scalability by
+comparing its training run-time with SPARFA-M and SPARFA-B. The results are
+shown in Fig.~\ref{fig:run-time}. VarFA is significantly faster than SPARFA-B
+and is almost as fast as SPARFA-M.
 
 In summary, with VarFA, we obtain posteriors that allow uncertainty
 quantification with roughly the \textit{same} computation complexity of
@@ -763,18 +768,18 @@ association of skill tags in the data set with each of the latent skills and
 show 4 of the latent skills with their top 3 most strongly associated skill
 tags. We can see that each latent skill roughly identify the same group of
 skill tags. For example, latent skill 4 clusters skill tags on statistics and
-probability while latent skill 7 clusters skill tags on
-geometry. Thus, by simple post-processing, we obtain an interpretation of the
-latent skills by associating them with known skill tags in the data.
+probability while latent skill 7 clusters skill tags on geometry. Thus, by
+simple post-processing, we obtain an interpretation of the latent skills by
+associating them with known skill tags in the data.
 
 We can similarly obtain VarFA's estimations of the students' mastery levels on
 each skill tags through the above process. In Fig.~\ref{fig:skill}, we compare
 the predicted mastery level for each skill tag (only for the questions this
-student answered) with the percent of correct answers for that skill tag.
-Blue curve shows the empirical student's mastery level on a skill tag by
-computing the percentage of correctly answered questions belonging to a
-particular skill tag. Orange curve shows VarFA's estimated student mastery
-level on a skill tag, normalized to range $[0,1]$.
+student answered) with the percent of correct answers for that skill tag. Blue
+curve shows the empirical student's mastery level on a skill tag by computing
+the percentage of correctly answered questions belonging to a particular skill
+tag. Orange curve shows VarFA's estimated student mastery level on a skill tag,
+normalized to range $[0,1]$.
 %
 We can see that, when the student gave more correct answers to questions of a
 particular skill tag, such as skill tag ID 2, 10, 14 and 30, VarFA also
@@ -786,9 +791,9 @@ mastery levels match our intuition about student's abilities (using the
 observed correct answer ratio as an empirical estimate) reasonably well. Thus,
 by post-processing, we can interpret VarFA's estimated students' latent skill
 mastery levels using the easily understandable skill tags.
-\section{Conclusions and Future Work}
+\section{Chapter Conclusion and Future Work}
 \label{sec:conclusion}
-We have presented VarFA, a variational inference factor analysis framework to perform efficient Bayesian inference for learning analytics. VarFA is general and can be applied to a wide array of FA models. We have demonstrated the effectiveness of our VarFA using the sparse factor analysis (SPARFA) model as a case study. We have shown that VarFA can very efficiently output interpretable, educationally meaningful information, in particular credible intervals, much faster than classic Bayesian inference methods. Thus, VarFA has potential application in many educational data mining scenarios where efficient credible interval computation is desired, i.e., in adaptive testing and adaptive learning systems. We have also provided open-source code to reproduce our results and facilitate further research efforts.
+In this chapter, we have presented VarFA, a variational inference factor analysis framework to perform efficient Bayesian inference for learning analytics. VarFA is general and can be applied to a wide array of FA models. We have demonstrated the effectiveness of our VarFA using the sparse factor analysis (SPARFA) model as a case study. We have shown that VarFA can very efficiently output interpretable, educationally meaningful information, in particular credible intervals, much faster than classic Bayesian inference methods. Thus, VarFA has potential application in many educational data mining scenarios where efficient credible interval computation is desired, i.e., in adaptive testing and adaptive learning systems. We have also provided open-source code to reproduce our results and facilitate further research efforts.
 
 We outline three possible future research directions and extensions. First,
 VarFA currently performs Bayesian inference on the student skill mastery level
@@ -816,13 +821,10 @@ extending VarFA to support approximate MCMC methods.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{student_skill.png}
-    %\vspace{-15pt}
+    \includegraphics[width=0.65\linewidth]{student_skill.png}
     \caption{Comparison between the estimated skill mastery levels using VarFA's predictions and using empirical observations for student with ID 110. Even though the two curves show different numeric values, they nevertheless demonstrate similar trends, showing that the predictions reasonably match our intuition about student's skill mastery levels.
-        % \ml{caption too long, ugly. move some of this into the text body}
     }
     \label{fig:skill}
-    %\vspace{-5pt}
 \end{figure}
 
 Finally, the goal of VarFA is to improve real-world educational systems and

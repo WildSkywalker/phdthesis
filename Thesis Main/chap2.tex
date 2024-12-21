@@ -828,13 +828,14 @@ is $100$) of valid visiting sequences.
     \caption{Frequency histograms for the number of resample and the total time of \nls method for uniformly sampling visiting paths for vehicle routing problem.}
     \label{fig:route}
 \end{figure}
-\section{Conclusion}
-In this research, we present \nls, which embeds a sampler based on \lovasz
-Local Lemma into the contrastive divergence learning of Markov random fields.
-The embedding is fully differentiable. This approach allows us to learn
-generative models over constrained domains, which presents significant
-challenges to other state-of-the-art models. We also give sound proofs of the
-performance of the LLL-based sampler.
+\section{Chapter Recap}
+Before we move onto the more technical part, let us recap the research problems
+this chapter wants to address. In this chapter, we present \nls, which embeds a
+sampler based on \lovasz Local Lemma into the contrastive divergence learning
+of Markov random fields. The embedding is fully differentiable. This approach
+allows us to learn generative models over constrained domains, which presents
+significant challenges to other state-of-the-art models. We also give sound
+proofs of the performance of the LLL-based sampler.
 %
 Experimental results on several real-world domains reveal that \nls learns to
 generate 100\% valid structures, while baselines either time out or cannot
