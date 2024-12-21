@@ -2,8 +2,7 @@
 In the last chapter of this thesis, we propose VarFA, a variational inference factor analysis framework that extends existing factor analysis models for educational data mining to efficiently output uncertainty estimation in the model's estimated factors. Such uncertainty information is useful, for example, for an adaptive testing scenario, where additional tests can be administered if the model is not quite certain about a students' skill level estimation. Traditional Bayesian inference methods that produce such uncertainty information are computationally expensive and do not scale to large data sets. VarFA utilizes variational inference which makes it possible to efficiently perform Bayesian inference even on very large data sets. We use the sparse factor analysis model as a case study and demonstrate the efficacy of VarFA on both synthetic and real data sets. VarFA is also very general and can be applied to a wide array of factor analysis models. Code and instructions to reproduce results in this chapter are available from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
 \section{Introduction}
 \label{sec:intro}
-% f\jack{TODOs: 1) add references 2) unify terminology (KC, concept), (methods, frameworks), (estimate, estimation) \st{3) check table and figure captions} 4) remove all red comments 5) check math notation and refine presentation 6) refine intro and abstract 7) refine the rest of the paper 8) clean code and upload it alone with data to google drive; add link to paper}
-% \ml{i suggest to use ``skill'' or ``KC'' instead of ``concept'' throughout and drop a note saying sparfa call it concepts but it's the same as skills - this community likes you 200\% more immediately if you do that}
+%
 A core task for many practical educational systems is \textit{student
     modeling}, i.e., estimating students' mastery level on a set of skills or
 knowledge components (KC)~\cite{vanlehn1988student, chrysafiadi2013student}.
@@ -23,7 +22,7 @@ assessment questions.
 \sloppy
 Many student modeling methods have been proposed in prior literature. A fruitful line of research for student modeling follows the \textit{factor analysis (FA)} approach.
 FA models usually assume that an unknown, potentially multi-dimensional student parameter, in which each dimension is associated with a certain skill, explains how a student answers questions and is to be estimated. Popular and successful FA models include item response theory (IRT)~\cite{irt}, multi-dimensional IRT~\cite{mirt}, learning factor analysis (LFA)~\cite{LFA}, performance factor analysis (PFA)~\cite{PFA}, DASH (short for {d}ifficulty, {a}bility, and {s}tudent {h}istory)~\cite{lindsey2014improving,mozer2016predicting}, DAS3H (short for {d}ifficulty, {a}bility, {s}kill and {s}tudent {s}kill {h}istory)~\cite{das3h}, knowledge tracing machines (KTM)~\cite{vie2019knowledge}, and so on.
-% These models differ in the modeling assumptions and what data to use for modeling; more details in Section~\ref{sec:fa}. 
+% 
 Recently, more complex student models based on deep neural networks (DNN) have
 also been proposed~\cite{DKT,zhang2017dynamic,minn2018deep}. Nevertheless,
 thanks to their simplicity, effectiveness and robustness, FA models remain
@@ -46,9 +45,7 @@ recommendations based on highly uncertain estimations are unreliable and
 instead notify a human instructor to evaluate the students' performance. This
 enables collaboration between ITS and instructors to create a more effective
 learning environment.
-% ~\cite{lan-loop,aist2002experimentally}. 
-% \ml{why in the loop? weird. it's not related to what you are describing in this paper, cut it}\jack{}
-% 
+%
 In adaptive testing systems~\cite{chang2009nonlinear,yan2016computerized},
 knowing the uncertainty in model's estimation could help the model
 intelligently pick the next test items to most effectively reduce its
@@ -57,12 +54,6 @@ potentially reduce the number of items needed to have a confident, accurate
 estimation of the students' skill mastery level, saving time for both students
 to take the test and instructors to have a good assessment of the student's
 skills.
-%
-% it is often desirable to not only obtain from the model interpretable, educationally meaningful insights but also how uncertain the model is about these insights. \ml{i think you can start with knowledge mastery directly - ``insights'' is unspecific and uncertainty about insights sounds weird.} Such uncertainty information has utility in numerous real-world implications and applications. For example, in learning analytics, such uncertainty information could advance human in the loop education systems [CITE]: the model can choose to not display the students' knowledge mastery level if the model decides that it is not confident enough about its estimations and then notifies a expert instructor to evaluate these students' performance. \ml{i think you can motivate with personalization, and then say for example, in adaptive testing, blahblahblah - because uncertainty helps personalization in general but it is easy to explain using adaptive testing} 
-% \ml{for adaptive testing cites, go with alina von davier and this paper ``Nonlinear sequential designs for logistic item response theory models with applications to computerized adaptive tests''} \jack{the act lady?:)} \ml{yup}
-%
-% \jack{maybe motivate that we focus on factor analysis models (FA) right here; mention a few prior work on neural networks but emphasize that FA is simpler and highly interpretable.}
-% \ml{first sentence is a bit weird - i think it should belong to the previous paragraph? you can discuss this at the beginning if you mention knowledge estimates right off the bat}
 
 All the above applications require the model to ``know what it does not know,''
 i.e., to quantify the uncertainty of its estimation. Achieving this does not
@@ -98,8 +89,7 @@ need to be processed in seconds or less instead of minutes or hours. It is thus
 highly desirable to accelerate Bayesian inference so that one can quantify
 model's uncertainty in its estimation as efficiently as non-Bayesian inference
 methods.
-% In contrast, non-Bayesian methods that typically use maximum log likelihood to produce a point estimate of desired quantities are typically much faster but does not give practitioners uncertainty information that they desire. 
-% Thus, a method that performs scalable Bayesian inference is much desired for EDM tasks. A possible way forward is through variational inference, which allows scalable 
+%
 
 \subsubsection*{Contributions}
 In this work, we propose VarFA, a novel framework based on \textit{variational
@@ -116,13 +106,11 @@ distribution that closely approximates the true posterior. Thus, we also regard
 our work as a first step in applying DNNs to FA models for student modeling,
 achieving efficient Bayesian inference (enabled by DNNs) without losing
 interpretability (brough by FA models).
-% The advantage of doing so is improved performance and efficient uncertainty quantification brought by modern deep latent variable methods while retaining interpretability brought by factor analysis models. 
-% Using the sparse factor analysis model (SPARFA) as a case study, 
+%
 We demonstrate the efficacy of our framework on both synthetic and real data
 sets, showcasing that VarFA substantially accelerates classic Bayesian
 inference for FA models with no compromise on performance.
-% \ml{this is a good summary but you gotta have a compelling argument on why we use SPARFA and not other factor models. I'd motivate with the sparsity and nonnegativity constraints; they are hard to deal with since you can't put Gaussian priors on them. although it doesn't look like you actually calculated uncertainty on item factors :D}
-% \jack{I worked around this by not mention sparfa here; sparfa case study is mentioned in experiment section} \ml{ok, that's good}
+%
 
 The remainder of this chapter is organized as follows.
 Section~\ref{sec:related-work} introduces the problem setup in FA and reviews
@@ -137,9 +125,6 @@ extensions to VarFA.
 \label{sec:related-work}
 We first set up the problem and review related work. Assume we have a data set $\mY\in\mathbb{R}^{N\times Q}$ organized in matrix format where $N$ is the total number of students and $Q$ is the number of questions. This is a binary students' answer record matrix where each entry $y_{ij}$ represents whether student $i$ correctly answered question $j$. Usually, not all students answer all questions. Thus, $\mY$ contains missing values. We use $\{i,j\}\in\Omega_{\rm obs}$ to denote entries in $\mY$, i.e., the $i$-th student's answer record to the $j$-th question, that are observed.
 
-% Often, auxiliary information is available. For example, we may have additional knowledge of the difficulty of question $j$, or the skill tags associated with each question.
-
-% \ml{just make sure you are clear with doing this for the student factor. the other things do not need to be repeated}
 We are interested in models capable of inferring each $i$-th student's skill
 mastery level that can accurately predict the student's answers given the above
 data. These models are often evaluated on the prediction accuracy and whether
@@ -149,7 +134,7 @@ most widely adopted and successful methodologies for the student modeling task.
 
 \subsection{Factor Analysis For Student Modeling}
 \label{sec:fa}
-% \jack{first review FA models and then mention despite there seemingly different forms, they can be cast into the following canonical form:} 
+% 
 One of the earliest FA model for student modeling is based on the item response
 theory (IRT)~\cite{irt}. It usually has the following form
 \begin{align}
@@ -222,9 +207,7 @@ change the Sigmoid activation $\sigmoid(\cdot)$ to some other activation
 functions accordingly. In this way, we still retain the general FA model in
 Eq.~\ref{eq:sparfa}. We will use this canonical form to facilitate discussions
 in the rest of this chapter.
-
 \subsection{Inference Methods for FA Models} \label{sec:FA-inference}
-\vspace{-10pt}
 We first introduce the inference objective and briefly review maximum log likelihood estimation method. Then, we review existing works that uses Bayesian inference for FA and highlight their high computational complexity, paving the way to VarFA, our proposed efficient Bayesian inference framework based on variational inference.
 
 The factors in Eq.~\ref{eq:sparfa} may contain known factors that need no
@@ -264,7 +247,7 @@ Bayesian inference methods treat the unknown parameters $\nu$ and $\theta$ as
 random variables drawn from some distribution. We are thus interested in
 inferring the \textit{posterior} distribution of $\nu$ and $\theta$. Using the
 Bayes rule, we have that
-% \jack{this feels problematic, with subscript $\psi$} \ml{yeah, i lost track of all of these things :) dunno what this $\psi$ is here for}\jack{attempted a fix in text right below these two equations}
+%
 \begin{align}
     p(\nu | \mY, \theta) & = \frac{p(\mY, \nu, \theta)}{p(\mY)} \label{eq: bayes-rule-1}                                                                         \\
                          & = \frac{p(\mY | \nu, \theta)\,p(\nu)\,p(\theta)}{\iint p(\mY | \nu, \theta)\,p(\nu)\,p(\theta) d\nu d\theta}. \label{eq:bayes-rule-2}
@@ -272,7 +255,6 @@ Bayes rule, we have that
 We can similarly derive the posterior for the other unknown factor $\theta$, although in this chapter we focus on Bayesian inference for the unknown student skill level parameter $\nu$.
 In Eq.~\ref{eq: bayes-rule-1} to Eq.~\ref{eq:bayes-rule-2} we have applied standard Bayes rule. Note that, because $\psi$ contains known factors and thus does not enter the Bayes rule equation, we have omitted it from the above equations. Once we estimate the posterior distribution for $\nu$ from data, we can obtain both point estimates and credible intervals by respectively taking the mean and the standard deviation of the posterior distributions. A number of prior works have proposed to use Bayesian inference for factor analysis, mostly developed for the IRT model~\cite{fox2001bayesian,mislevy1986bayes}. More recently, Bayesian methods are developed for more complex models. For example,~\cite{lan14a} proposed SPARFA-B, a specialized MCMC algorithm that accounts for SPARFA's sparsity and nonnegativity assumptions.
 
-% \ml{a short version of this should appear in the intro, like telling people these things are done via MCMC, which is sampling}
 However, Bayesian inference suffers from high computational cost despite its
 desired capability to quantify uncertainty. The challenge stems from the
 difficulty to evaluate the denominator in the posterior distribution in
@@ -290,21 +272,10 @@ very long time for MCMC to converge to the point that running MCMC is no longer
 practical when data set is very large. The high computational complexity of
 MCMC is apparently impractical for educational applications where timely
 feedback is of critical importance~\cite{driscoll1994psychology}.
-% Therefore, practical ITS systems that need timely feedback usually do not employ Bayesian methods; instead, these systems sacrifice the desire to quantify uncertainty for computational efficiency.
-
-% \subsection{Deep Learning for Factor Analysis}
-% Finally, we additionally review recent work on applying deep learning to factor analysis. \jack{maybe do not need this} \ml{i won't do this as its own section, but we should mention this somewhere before, like in the intro for example, where you discuss all these existing factor models}
-
-% \subsection{Neural Networks}
-% argue that latent factors is still preferred in many contexts because of its simplicity and interpretability: factors are associated with skills and can b easily interpreted by human instructors. Our work combines neural network and factor analysis models thus improves performance while retaining interpretability. \jack{can do a lot of citations here; maybe focus on learning analytics work. briefly mention that NN has been applied to other tasks as well but we focus on NN applied to learning analytics scenario}
-
-% \subsubsection{Hybrid MAP and MLE Inference}
-% \jack{talk about limited work in combining Bayesian and MLE inference, i.e., MH}
-% % \subsection{add a section on variational inference}
-% We briefly review variational inference (VI) that our framework builds on and its application to EDM. 
+% 
 \section{V{\normalfont\textbf{ar}}FA: A Variational Inference Factor Analysis Framework}
 \label{sec:method}
-% \ml{i'm not reading this section - it's not important for this community :)}
+%
 We are ready to introduce VarFA, our variational inference (VI) factor analysis
 framework for efficient Bayesian learning analytics. The core idea follows the
 variational principle, i.e., we use a parametric variational distribution to
@@ -321,13 +292,10 @@ all other unknown factors $\theta$. We consider this hybrid nature of VarFA in
 its current formulation as a novel feature because classic MLE or MAP
 estimation are not capable of performing Bayesian inference on a subset of the
 unknown factors.
-% \jack{i'm not sure if this is true}. \ml{i actually think there are people doing this hybrid thing - the IRT community does this. they put a prior on student parameters and do MLE on item parameters (while actually NOT doing inference on student parameters).}\jack{unfortunately I didnt find any} 
+%
 Extension to VarFA to full Bayesian inference for all unknown factors is part
 of an ongoing research; see~\ref{sec:conclusion} for more discussions.
-
-% To concretely and rigorously illustrate our framework, we will use SPARFA as the underlying FA model as a case study. We will refer to the variational inference algorithm for SPARFA as VarFA in the remainder of this paper. Towards the end of this section, we will provide a recipe to generalize our framework to other FA models.
-
-% \subsection{Case Study: VarFA}
+%
 \subsection{VarFA Details}
 \label{sec:method-details}
 Now, we explain in detail how to apply variational inference for FA models for efficient Bayesian inference.
@@ -340,7 +308,7 @@ Common in prior literature is to use a Gaussian with diagonal covariance for $q_
 \begin{align}
     q_\phi(\nu | \vy_i) = \mathcal{N}(\vu_j, {\rm diag}(\vv_j))\,,\label{eq:variational-distribution}
 \end{align}
-% \ml{vector multiplied with matrix? why not diag()}
+%
 where its mean and variance $[\vu_j^\top, \vv_j^\top]^\top = f_\phi(\vy_i)$. We
 can use arbitrarily complex functions such as a deep neural network for
 $f_\phi$ as long as they are differentiable; more details in
@@ -382,8 +350,7 @@ We form the following optimization objective to estimate $\phi$ and $\theta$:
 \end{align}
 where $\mathcal{R}(\theta)$ is a regularization term.
 That is, we perform VI on the student factor $\nu$ and MLE inference on the remaining factors $\theta$. More explicitly, to perform VI on $\nu$, we simply compute the mean and standard deviation of $q_\phi$ using $f_\phi$ with the learnt variational parameters $\phi$.
-
-% \subsection{Practical and Implementation Considerations}
+%
 \subsection{Why is VarFA efficient?}
 \label{sec:implementation-detail}
 \subsubsection*{VarFA supports efficient stochastic optimization}
@@ -415,7 +382,6 @@ gradient computation in VI. As a result, our framework can be efficiently
 implemented using a number of open source, automatic differentiation packages
 such as Tensorflow~\cite{tensorflow2015-whitepaper} and
 PyTorch~\cite{NEURIPS2019_9015}.
-
 %\vspace{-10pt}
 \subsubsection*{VarFA supports amortized inference} Classic Bayesian inference methods such as MCMC infer each parameter $\nu_i$
 for each student. As the number of students increases, the number of parameters
@@ -427,8 +393,7 @@ $\phi$ responsible for inferring \textit{all} $\nu_i$'s. In this way, once we
 have trained FA models using VarFA and obtain the variational parameter $\phi$,
 we can easily infer $\nu_i$ by simply computing $q_\phi$, even for new
 students, without invoking any additional optimization or inference procedures.
-
-% %\vspace{-10pt}
+%
 \subsection{Dealing with missing entries} Note from Eq.~\ref{eq:elbo} that the variational distribution $q_\phi$ for each
 $\nu_i$ is conditioned on $\vy_i\in\mathbb{R}^Q$, i.e., an entire row in $\mY$.
 However, in practice, the data matrix $\mY$ is often only partially observed,
@@ -444,7 +409,7 @@ designing specialized function $f_\phi$ for the variational
 distribution~\cite{ma2018eddi,gong2019icebreaker,ma2018partial}. We leave the
 investigation of more effectively dealing with missing entries to future work.
 
-% \subsubsection*{Dealing with missing entries} The function $f_\phi$ that parametrizes the mean and standard deviation of the variational distribution $q_\phi$ takes $\vy_i$ as input. Practically, $\vy_i$ is different for each $i$ because different students may answer a different subset of questions. This makes the computation 
+%
 \begin{figure*}[htp!]
     \centering
     \includegraphics[width=0.4\linewidth]{sim_acc.png}
@@ -458,8 +423,7 @@ investigation of more effectively dealing with missing entries to future work.
 \end{figure*}
 
 \subsection{Remarks}
-% A few remarks in the sequel. First, note that the same set of variational  parameters $\phi$ is responsible for inferring each $\rvc_i$. This has the advantage that, when new students join the class, we do not need to run an optimization procedure to estimate $\rvc_i$ as in MLE based inference methods. Instead, we simply compute $q_\phi$ with the learned $\phi$ with $x_{ij}$'s corresponding to the new student $i$'s answer records to question $j$'s to obtain $\rvc_i$, without performing any optimization. 
-
+%
 \subsubsection*{Applicability of VarFA} The VarFA framework is general and flexible and can be applied to a wide array
 of FA models. The recipe for applying VarFA to an FA model of choice is as
 follows: 1) formulate the FA model into the canonical formulation as in
@@ -483,33 +447,20 @@ of other FA models by following the recipe in the preceding paragraph,
 including IRT. Thus, our work complements existing literature in providing
 promising results in applying VI for FA models in the context of educational
 data mining.
-% In the experiment section, we will use SPARFA as the underlying FA to demonstrate the efficacy of our framework.
-
-% \subsection{Extension to Other FA Models}
-% Although we present our variational framework in the context of SPARFA, our framework is not limited to SPARFA and can be applied to many other FA models. We can simply achieve this by 1) partition the factors into $\nu$, $\theta$ and $\psi$
-
-% \subsection{Discussion: trade-offs and applicability}
-% Our variational framework for FA models enjoys computational efficiency and capability to obtain uncertainty quantification, but we would like to mention a few caveats. First, we do not have strong theoretical results such as convergence gaurantees. This is because the parametric function $f_\phi$ in the variational distribution $q_\phi$ can be arbitrarily, e.g., a neural nework, the optimization problem is no longer convex, and there is limited theoretical results for non-convex optimization. Second, variational inference is more sensitive to hyper-parameters such as learning rate, regularization hyper-parameters, parameter initializations compared to MCMC.
-
-% The first problem is somehow non-ideal, but given the wild practical success of deep learning and neural networks whose optimization theories are still in their infancy, we believe that sacrificing theoretical guarantees for performance improvements and computational efficiency is a justifiable trade-off. We will demonstrate performance and efficiency improvements in Section~\ref{sec:experiments}. The second problem can be offset by performing hyper-parameter search to obtain the best performing hyper-parameters. This can be done much more efficiently thanks to the computational efficiency of variational inference.
+%
 \section{Experiments}
 \label{sec:experiments}
-% \ml{gonna go over this rest of today}
+%
 We demonstrate the efficacy of VarFA variational inference framework using the
 sparse factor analysis model (SPARFA) as the underlying FA model.
-% In the following, we refer to our VI framework applied to SPARFA as VarFA for convenience.
-% \ml{this should've come much earlier, in intro/contributions :)}\jack{so it didnt appear early but i think it might be ok}
+%
 This choice of SPARFA as the FA model to investigate is motivated by its
 mathematical generality: it assumes no auxiliary information is available and
 all three factors $\rvc_i$'s, $\rvm_j$'s and $\mu_j$'s need to be estimated,
 which makes the inference problem more challenging.~\cite{lan14a} provides two
 inference algorithms including SPARFA-M (based on MLE) and SPARFA-B (based on
 MAP).
-% We will compare VarFA to both SPARFA-M and SPARFA-B.
-% \ml{first time you're introducing sparfa-B? i'd say introduce both inference algorithms when you discuss sparfa in detail}\jack{mentioned sparfa-b in 2.2.2}
-
-% \ml{no need for the 1st sentence}
-% We aim to highlight that VarFA achieves state-of-the-art performance while significantly accelerates Bayesian inference. Thus, 
+%
 We conduct experiments on both synthetic and real data sets. Using synthetic
 data sets, we compare VarFA to both SPARFA-M and SPARFA-B. We demonstrate that
 1) VarFA predicts students' answers as accurately as SPARFA-M and SPARFA-B; 2)
@@ -520,8 +471,7 @@ SPARFA-M, including point estimate of students' skill levels and questions'
 associations with skill tags;
 % \ml{you can be more specific here about what type of insights do we obtain} 
 3) VarFA can additionally output meaningful uncertainty quantification for student skill levels, which SPARFA-M is incapable of, without sacrifice to computational efficiency. Note that SPARFA-B can also compute uncertainty for small data sets but fails for large data sets due to scalability issues and thus we do not compare to SPARFA-B for real data sets.
-% \ml{make it clear that sparfa-B can do this as well, but fail on large datasets}
-
+%
 Specifically for SPARFA, using the notation convention in
 Section~\ref{sec:FA-inference}, the question-skill association factors
 $\rvm_j$'s and the question difficulty factors $\mu_j$ are collected in $\theta
@@ -541,8 +491,7 @@ and sparsity requirements; see Section 3.2 in~\cite{lan14a} for more details.
 For the other unknown factor $\mu_j$'s in $\theta$, we apply standard $\ell2$
 regularization. The code along with instructions to reproduce our experiments
 can be downloaded from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
-% \ml{don't forget about anonymity}\jack{of course :)} 
-
+%
 \begin{figure}
     \tiny
     \centering
@@ -552,8 +501,7 @@ can be downloaded from~{\color{blue}{\url{https://tinyurl.com/tvm4332}}}.
 \end{figure}
 \subsection{Synthetic Data Experiments}
 \subsubsection{Setup}
-% \jack{do a histogram plot with error bar, on acc and f1. see lan14a fig3. compare all 3 models across 5 data sizes in one plot. 2 plots, one for acc and one for f1}
-%\vspace{-10pt}
+%
 \subsubsection*{Data set generation} We generate data set according to the canonical FA model specified in
 Eq.~\ref{eq:sparfa}, taking into consideration the additional sparsity and
 nonnegativity assumptions in SPARFA. Specifically, We sample the factors
@@ -580,10 +528,7 @@ rate $=0.05$ for 100 epochs. Regularization hyper-parameters are chosen by grid
 search for each experiment. For VarFA, we use a simple 3-layer neural network
 for the function $f_\phi$ in the variational distribution. We use the
 hyper-parameter settings for SPARFA-B following Section 4.2 in~\cite{lan14a}.
-
-% For encoder in VAE, because it cannot process data matrix with missing values, we use simple zero imputation to fill those entries without values. Note that this may be a drawback to VAE, because filling zeros could severely impact the ratio of zero and ones in the data. Designing advanced encoder architectures, i.e., [CITE], is part of ongoing research.
-% , i.e., we randomly choose 50\% of the entries in the matrix as training set and the rest as test set. 
-
+%
 \begin{table}
     \caption{Summary statistics of pre-processed real data sets.}
     %\vspace{-5pt}
@@ -605,17 +550,14 @@ prediction accuracy (ACC) alone does not accurately reflect the performance of
 the inference algorithms under comparison. Thus, we use area under the receiver
 operating characteristic curve (AUC) and F1 score in addition to ACC, as
 standard in evaluating binary predictions~\cite{hastie2009elements}.
-% \ml{drop a cite to these metrics, a common ML/stat book is good enough}
-
-% %\vspace{-10pt}
+%
 \subsubsection{Results}
 Fig.~\ref{fig:synthetic} shows bar plots that compare the
-% \ml{what performance? i'd coin a term, like ``learner performance prediction''} 
+%
 student answer prediction performance of VarFA with SPARFA-M and SPARFA-B on
 all three evaluation metrics. We can observe that all three methods perform
 similarly and that SPARFA-M and SPARFA-B show no statistically significant
 advantage over VarFA.
-% We also see that, when data set size gets larger, VarFA's performance tends to improve across all three metrics and achieves the highest possible performance on AUC and F1 on data set size 900x50 (see the standard deviation in the last group of bars in the leftmost and rightmost plot in Fig.~\ref{fig:synthetic}). This observation suggests that VarFA is suitable for large-scale data scenarios. \ml{hmm - you mean its raw performance, or its relative performance compared to -M and -B? I do see raw performance of all three go up as data sizes go up (except the F1 figure which is kinda ugly). i mean as you have more data, imputation performance should increase, that has to happen for all methods, right?}
 \sloppy
 We further showcase VarFA's scalability by comparing its training run-time with SPARFA-M and SPARFA-B. The results are shown in Fig.~\ref{fig:run-time}. VarFA is significantly faster than SPARFA-B and is almost as fast as SPARFA-M.
 
@@ -623,11 +565,6 @@ In summary, with VarFA, we obtain posteriors that allow uncertainty
 quantification with roughly the \textit{same} computation complexity of
 computing point estimates and \textit{without} compromising prediction
 performance.
-% This comparison may be fair for SPARFA-B because both SPARFA-M and VarFA run on GPUs while SPARFA-B run on CPU. \ml{either cut this GPU/CPU thing, or be really clear - I wouldn't say ``may not be fair for -B''. I would also explicitly mention that MCMC is sequential so computation cannot be parallelized, which is why they can't leverage things like GPU} Nevertheless, this can be seen as a significant advantage of VarFA over SPARFA-B because variational inference turns Bayesian inference into an optimization problem which allows the use of efficient stochastic gradient descent algorithms on GPUs. In contrast, classic Bayesian inference methods such as MCMC which SPARFA-B is based on does not enjoy this advantage and cannot be executed on GPUs. We note that recent works have also considered stochastic version of MCMC \ml{what does this mean? MCMC is sampling and is therefore by definition, stochastic. i'd just say there are more efficient ways of parallel MCMC which we leave for future work.} which is an alternative to variational inference for accelerating Bayesian inference. We leave the investigation of more advanced MCMC algorithms for inference in FA models for future work. 
-% \ml{use the sloppy command to fix dangling text problems like in this para}
-
-% Note that even though SPARFA-B and SPARFA-M achieves similar performance,~\cite{lan14a} shows that SPARFA-B is better at identifying the true underlying factors than SPARFA-M (See Fig. [REF] in~\cite{lan14a}) while at the same time produce uncertainty quantification. However, the additional benefits of SPARFA-B is severely limited in practice by its demanding computational complexity because of perform Monte Carlo sampling. Although our method does not provide uncertainty quantification for all factors (only quantifies uncertainty for the student's knowledge state latent factor), we achieve a promising trade-off between computational complexity and the desire to acquire uncertainty information. Thus, our method is a promising first step in combining the benefits of both SPARFA-M (computational efficiency) and SPARFA-B (uncertainty quantification).
-
 \begin{table}[t!]
     \caption{Student answer prediction erformance comapring VarFA to SPARFA-M on Assistment, Algebra and Bridge data sets. $\uparrow$ and $\downarrow$ denote higher and lower is better, respectively. VarFA performs better than SPARFA-M on all three data sets and evaluation metrics most of the time. Additionally, VarFA's run time is very close to SPARFA-M.}
     % %\vspace{5pt}
@@ -716,13 +653,10 @@ performance.
 \subsubsection{Setup}
 %\vspace{-10pt}
 \subsubsection*{Data sets and pre-processing steps} We perform experiments on three large-scale, publicly available, real
-educational data sets including ASSISTments
-% \ml{it's called ASSISTments, capitalized ASSIST, and -s at the end} 
-2009-2010 (Assistment)~\cite{assistment}, Algebra I 2006-2007 (algebra)~\cite{Algebra} and Bridge to Algebra 2006-2007 (bridge)~\cite{bridge,Stamper2016The2K}. The details of the data sets, including data format and data collection procedure can be found in the preceding references. We remove students and questions that have too few answer records from the data sets to reduce the sparsity of the data sets. Specifically, we keep students and questions that have no less than 30, 35 and 40 answer records for Assistment, Algebra and Bridge data sets, respectively.
+educational data sets including ASSISTments 2009-2010 (Assistment)~\cite{assistment}, Algebra I 2006-2007 (algebra)~\cite{Algebra} and Bridge to Algebra 2006-2007 (bridge)~\cite{bridge,Stamper2016The2K}. The details of the data sets, including data format and data collection procedure can be found in the preceding references. We remove students and questions that have too few answer records from the data sets to reduce the sparsity of the data sets. Specifically, we keep students and questions that have no less than 30, 35 and 40 answer records for Assistment, Algebra and Bridge data sets, respectively.
 In each data set, each student may provide more than one answer record for each question. Therefore, we also remove student-question answer records except for the first one.
 Table~\ref{tab:data-stat} presents the summary statistics of the resulting pre-processed data matrix for each data set.
 
-%\vspace{-10pt}
 \subsubsection*{Experimental settings and evaluation metrics} Optimizer, learning rate, number of epochs, neural network architecture and
 evaluation metrics are the same as in synthetic data experiments. For real data
 sets, we use 8 latent skills instead of 5. Other choices of the number of
@@ -736,15 +670,13 @@ observed entries in each data set, without replacement, as training and test
 sets, respectively. Regularization hyper-parameters are selected by grid search
 and are different for each data set. We only compare VarFA with SPARFA-M
 because SPARFA-B does not scale to such large data sets.
-% We also use the same evaluation metrics as in the synthetic data experiment. 
-% \ml{remove metrics? these are the same as before}
-
+%
 \subsubsection{Results: Performance Comparison}
 Table~\ref{tab:real-data} shows the average performance on the test set of each
 data set comparing VarFA and SPARFA-M for all three data sets and additionally
 run time. We can see that VarFA achieves slightly better student answer
 prediction on most data sets and on most metrics.
-% \ml{don't say ``we can further gain insights - just say what we see, and provide a possible explanation (which is what you have below).}\jack{attempted a fix} 
+%
 Interestingly, recall that, in the preceding synthetic data set experiment,
 SPARFA-M performed better than VarFA most of the time. A possible explanation
 is that, for synthetic data sets, the underlying data generation process
@@ -759,14 +691,11 @@ SPARFA-M; see the last row in each sub-table. We see that both inference
 algorithms have very similar run time, showing that VarFA is applicable for
 very large data sets. Notably, VarFA achieves this efficiency while also
 performing Bayesian inference on the student knowledge level factor.
-% That is, we can obtain credible interval for the inferred knowledge level for each student via VarFA. 
-% \ml{the last 2 sentences are basically the same thing :)}\jack{fixed} 
-% As explained in previous sections, such uncertainty quantification is useful for many practical educational applications. In contrast, SPARFA-M is not capable of computing such credible interval. \ml{since you go into it next, no need to repeat this here}
-
+% 
 \subsubsection{Results: Bayesian Inference With VarFA}
 We now illustrate VarFA's capability of outputting credible intervals using the
 Assistment data set.
-% Because VarFA computes an approximate posterior distribution $q_\phi(\nu_i|\vy_i)$ for each student $i$, we can obtain a credible interval by either drawing samples from this distribution or looking up the computed standard deviation. 
+%
 Fig.~\ref{fig:violin} presents violin plots that show the sampled student
 latent skill levels for a random subset of 10 students.
 Plots~\ref{fig:violin1},~\ref{fig:violin2} and~\ref{fig:violin3} shows the
@@ -805,8 +734,7 @@ result implies that VarFA outputs sensible and interpretable credible
 intervals. As mentioned in Section~\ref{sec:intro}, such uncertainty
 quantification may benefit a number of educational applications such as
 improving adaptive testing algorithms.
-% \ml{i'm not sure this is what ETS does - just say this information helps adaptive testing algorithms. you can also use learning analytics or personalization to motivate this.}\jack{attempted a fix} 
-% we can assign students questions until the model's credible interval of the student's ability estimation is within a certain threshold. 
+%
 Note that VarFA is able to compute such credible interval as fast as SPARFA-M,
 making VarFA potentially useful for even real-time educational systems. In
 contrast, SPARFA-M is not capable of computing credible intervals. Although we
@@ -821,13 +749,10 @@ efficient as SPARFA-M and the previous drawbacks of SPARFA-M, we recommend
 VarFA over bootstrapping with SPARFA-M for quantifying model's uncertainty in
 practice.
 
-% \ml{side note: another way to compute confidence intervals is via some form of bootstrapping. say for example, you have 1000 observed entries, and you randomly select 900, run sparfa-M, and then use these estimates to build your confidence intervals. you may want to discuss that as well? i see two immediate reasons why one should not do bootstrapping - 1) run your algo many times, slow; 2) for a different run you may get a different permutation of the latent factors (although that's for sparfa only and does not hold for things like PFA where one factor is given)}\jack{sure, good idea}
-
 \subsubsection{Results: Post-Processing for Improved Interpretability}
 \label{sec:experiment-post-processing}
 SPARFA assumes that each student factor $\nu_i$ identifies a multi-dimensional skill level on a number of ``latent'' skills (recall that we use 8 latent skills in our experiments). As mentioned earlier, these latent skills are not interpretable without the aid of additional information. To improve interpretability,~\cite{lan14a} proposed that, when the skill tags for each question is available in the data set, we can associate each latent skill with skill tags via a simple matrix factorization. Then, we can compute each students' mastery levels on the actual skill tags. We refer readers to Sections 5.1 and 5.2 in~\cite{lan14a} for more technical details.
-% SPARFA-M can already do so; here, we simply want to show that VarFA is also capable of outputting such information. 
-% \ml{emphasize that in the original sparfa paper we did it with private data; here we're doing it for ASSISTments, a publicly available dataset.}\jack{done} 
+
 Although the above method to improve interpretability has already been
 proposed,~\cite{lan14a} only presented results on private data sets, whereas
 here we presents results on publicly available data set with code, making our
@@ -839,7 +764,6 @@ show 4 of the latent skills with their top 3 most strongly associated skill
 tags. We can see that each latent skill roughly identify the same group of
 skill tags. For example, latent skill 4 clusters skill tags on statistics and
 probability while latent skill 7 clusters skill tags on
-% \ml{``seems'' sounds weak}\jack{fixed} 
 geometry. Thus, by simple post-processing, we obtain an interpretation of the
 latent skills by associating them with known skill tags in the data.
 
@@ -847,7 +771,6 @@ We can similarly obtain VarFA's estimations of the students' mastery levels on
 each skill tags through the above process. In Fig.~\ref{fig:skill}, we compare
 the predicted mastery level for each skill tag (only for the questions this
 student answered) with the percent of correct answers for that skill tag.
-% Specifically, we normalize the prediction to range between 0 and 1 for a better illustration. 
 Blue curve shows the empirical student's mastery level on a skill tag by
 computing the percentage of correctly answered questions belonging to a
 particular skill tag. Orange curve shows VarFA's estimated student mastery
@@ -863,7 +786,6 @@ mastery levels match our intuition about student's abilities (using the
 observed correct answer ratio as an empirical estimate) reasonably well. Thus,
 by post-processing, we can interpret VarFA's estimated students' latent skill
 mastery levels using the easily understandable skill tags.
-% \ml{can you relate this to confidence intervals? compare skill 30 to skill 26 - both have 100\% actual correct answers, but one is predicted way higher than the other. is this due to the confidence interval? like the student hasn't answered that many questions on skill 26? this way the model is still being conservative? that'd be a nice story.}\jack{good idea; let me investigate}\jack{so this does not happen... I think to the CI only applies to the latent skills}
 \section{Conclusions and Future Work}
 \label{sec:conclusion}
 We have presented VarFA, a variational inference factor analysis framework to perform efficient Bayesian inference for learning analytics. VarFA is general and can be applied to a wide array of FA models. We have demonstrated the effectiveness of our VarFA using the sparse factor analysis (SPARFA) model as a case study. We have shown that VarFA can very efficiently output interpretable, educationally meaningful information, in particular credible intervals, much faster than classic Bayesian inference methods. Thus, VarFA has potential application in many educational data mining scenarios where efficient credible interval computation is desired, i.e., in adaptive testing and adaptive learning systems. We have also provided open-source code to reproduce our results and facilitate further research efforts.
@@ -874,7 +796,7 @@ factor. We are working on extending the framework to perform full Bayesian
 inference for all unknown factors. Extensions to some models such as IRT is
 straightforward, as studied in~\cite{wu2020variational}, because all factors
 can be reasonably assumed to be Gaussian.
-% As pointed out in~\cite{wu2020variational}, for distributions beyond Gaussians, we can apply the latest developments in variational inference, i.e., normalizing flow~\cite{nf, kingma2016improved} to obtain more complex distributions to better fit the data. 
+
 However, some other models involve additional modeling assumptions, making it
 challenging to design distributions that satisfy these assumptions. For
 example, in SPARFA, one of the factors is assumed to be nonnegative and
