@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  21 DEC 2024 21:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  21 DEC 2024 22:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1525,7 +1525,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/jacm/MoserT10}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 M
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 s
@@ -1548,7 +1548,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/jacm/MoserT10}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -2211,7 +2211,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.86673
 .\hbox(8.33331+2.33331)x455.30121, glue set 0.68553
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/neco/Hinton02}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -2221,7 +2221,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Tsochantaridis2005StructualSVM}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 s
 ..\OT1/cmr/m/n/12 o
@@ -2252,7 +2252,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Tsochantaridis2005StructualSVM}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -2264,7 +2264,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 14.53342
 .\hbox(8.33331+2.33331)x455.30121, glue set 0.14363
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Germain2015MADEMA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 G
 ..\OT1/cmr/m/n/12 e
 ..\OT1/cmr/m/n/12 r
@@ -2285,7 +2285,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Germain2015MADEMA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -2295,7 +2295,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Larochelle2011Autoregressive}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 L
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 r
@@ -2328,7 +2328,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.arjovsky17WGAN}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -2338,7 +2338,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.song2019generative}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 S
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 n
@@ -2358,7 +2358,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.song2019generative}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -2370,7 +2370,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.86673
 .\hbox(9.0+3.0)x455.30121, glue set 0.56241
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.yedidia2001generalized}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -2380,7 +2380,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.wainwright2006relaxation}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 W
 ..\kern-0.97916
 ..\OT1/cmr/m/n/12 a
@@ -2410,7 +2410,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.wainwright2006relaxation}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -2452,7 +2452,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Braunstein2005SurveyPA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 B
 ..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 a
@@ -2476,7 +2476,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set - 0.06888
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.chavira2006compiling}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -2486,7 +2486,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.VanHentenryck1989}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 V
 ..\kern-0.97916
 ..\OT1/cmr/m/n/12 a
@@ -2510,7 +2510,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.VanHentenryck1989}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 1
 ..\OT1/cmr/m/n/12 9
 ..\OT1/cmr/m/n/12 8
@@ -2520,7 +2520,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.GOGATE2012AndOr}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 G
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 g
@@ -2636,7 +2636,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set 20.17653fil
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Jin2018JunctionTV}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -2646,7 +2646,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Dai2018SyntaxDirectedVA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 D
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 i
@@ -2663,7 +2663,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Dai2018SyntaxDirectedVA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -2673,7 +2673,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Hu17ControlledTextGen}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 H
 ..\OT1/cmr/m/n/12 u
 ..\glue 3.91663 plus 1.95831 minus 1.30554
@@ -3199,7 +3199,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 2.44789 minus 1.04443
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/jacm/MoserT10}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 M
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 s
@@ -3274,7 +3274,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set - 0.20193
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/jacm/GuoJL19}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -4308,7 +4308,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.pmlr-v84-ge18b}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -4353,7 +4353,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set - 0.51268
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/jmlr/IhlerFW05}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -4363,7 +4363,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/corr/abs-2011-02303}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 o
 ..\kern0.65277
@@ -4390,7 +4390,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/corr/abs-2011-02303}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 2
@@ -4400,13 +4400,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.pmlr-v138-fan20a}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 D
 ..etc.
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set - 0.83978
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/ai/GogateD11}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -4594,7 +4594,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Gomes2006Sampling}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -4604,7 +4604,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Ermon13Wish}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 E
 ..\OT1/cmr/m/n/12 r
 ..\discretionary
@@ -4625,7 +4625,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Ermon13Wish}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -4638,7 +4638,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.86673
 .\hbox(9.0+3.0)x455.30121, glue set 425.27374fil
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Chakraborty2013scalable}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -6057,7 +6057,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/neco/Hinton02}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 H
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 n
@@ -6070,7 +6070,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/neco/Hinton02}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -6862,7 +6862,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Mansour1994LearningBF}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 M
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 n
@@ -7473,7 +7473,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.erdHos1973problems}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 E
 ..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 d
@@ -11957,7 +11957,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:conf/aaai/ChakrabortyM19}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 a
@@ -12458,7 +12458,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/combinatorics/CohnPP02}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -12517,7 +12517,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.takahashi2009communication}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 T
 ..\kern-0.97916
 ..\OT1/cmr/m/n/12 a
@@ -12544,7 +12544,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.takahashi2009communication}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -33910,7 +33910,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DBLP:journals/combinatorics/CohnPP02}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -33963,7 +33963,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.takahashi2009communication}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 T
 ..\kern-0.97916
 ..\OT1/cmr/m/n/12 a
@@ -33990,7 +33990,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.takahashi2009communication}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -42196,7 +42196,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\hbox(9.0+3.0)x455.30121, glue set 0.48878
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.vanlehn1988student}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 1
 ..\OT1/cmr/m/n/12 9
 ..\OT1/cmr/m/n/12 8
@@ -42207,7 +42207,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.chrysafiadi2013student}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 r
@@ -42239,7 +42239,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.chrysafiadi2013student}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -42388,7 +42388,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.pls1}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -42399,7 +42399,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.anderson1995cognitive}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 A
 ..\OT1/cmr/m/n/12 n
 ..\discretionary
@@ -42427,7 +42427,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\hbox(9.0+3.0)x455.30121, glue set - 0.67189
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.heffernan2014assistments}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -42438,7 +42438,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.rafferty2015inferring}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 R
 ..\OT1/cmr/m/n/12 a
 ..\discretionary replacing 1
@@ -42464,7 +42464,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.rafferty2015inferring}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -42623,7 +42623,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.romero2010educational}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 R
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 m
@@ -42652,7 +42652,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.romero2010educational}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..etc.
 .\glue(\baselineskip) 13.20004
@@ -42668,7 +42668,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.merceron2005educational}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -42970,7 +42970,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.vie2019knowledge}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -43064,7 +43064,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.DKT}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..etc.
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set 0.51772
@@ -43080,7 +43080,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.minn2018deep}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -43927,7 +43927,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.chang2009nonlinear}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 a
@@ -44778,7 +44778,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.gelman2013bayesian}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -44878,7 +44878,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.86673
 .\hbox(9.0+3.0)x455.30121, glue set 0.68259
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lan14a}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 L
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 n
@@ -44895,7 +44895,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lan14a}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -44906,7 +44906,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.fox2010bayesian}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 F
 ..\kern-0.97916
 ..\OT1/cmr/m/n/12 o
@@ -44917,7 +44917,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.fox2010bayesian}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -45326,7 +45326,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.driscoll1994psychology}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 D
 ..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 i
@@ -46626,7 +46626,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lan14a}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -46865,7 +46865,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.LFA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -47384,7 +47384,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.vie2019knowledge}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 V
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 e
@@ -47405,7 +47405,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.vie2019knowledge}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -47625,7 +47625,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\hbox(9.0+3.0)x455.30121, glue set - 0.55533
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lindsey2014improving}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -47636,7 +47636,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.mozer2016predicting}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 M
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 z
@@ -47661,7 +47661,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.mozer2016predicting}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -48173,7 +48173,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.das3h}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 o
@@ -50731,7 +50731,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.LFA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 e
 ..\OT1/cmr/m/n/12 n
@@ -50748,7 +50748,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.LFA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -50759,7 +50759,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.PFA}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 P
 ..\kern-0.32639
 ..\OT1/cmr/m/n/12 a
@@ -50770,7 +50770,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set 0.20422
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.das3h}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 o
@@ -50789,7 +50789,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.das3h}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -50800,7 +50800,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lindsey2014improving}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 L
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 n
@@ -51569,7 +51569,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.fox2001bayesian}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 F
 ..\kern-0.97916
 ..\OT1/cmr/m/n/12 o
@@ -51589,7 +51589,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.fox2001bayesian}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 0
@@ -51600,7 +51600,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.mislevy1986bayes}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..etc.
 .\glue(\baselineskip) 13.20004
 .\hbox(9.0+3.0)x455.30121, glue set - 0.42699
@@ -54371,7 +54371,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.kingma2013auto}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 K
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 n
@@ -54415,7 +54415,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.rezende2014stochastic}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 R
 ..\OT1/cmr/m/n/12 e
 ..\OT1/cmr/m/n/12 z
@@ -54436,7 +54436,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.rezende2014stochastic}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -54586,7 +54586,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.NEURIPS2019_9015}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 P
 ..\kern-0.32639
 ..\OT1/cmr/m/n/12 a
@@ -54608,7 +54608,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.NEURIPS2019_9015}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -55304,7 +55304,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.liang2018variational}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 L
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 a
@@ -55323,7 +55323,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.liang2018variational}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -55334,7 +55334,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.salakhutdinov2007restricted}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 S
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 l
@@ -55359,7 +55359,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.nazabal2018handling}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -55508,7 +55508,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 .\glue(\baselineskip) 12.8445
 .\hbox(9.0+3.0)x455.30121, glue set - 0.7274
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.ma2018partial}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 M
 ..\OT1/cmr/m/n/12 a
 ..\glue 3.91663 plus 1.95831 minus 1.30554
@@ -55524,7 +55524,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.ma2018partial}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -58395,7 +58395,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\hbox(9.0+3.0)x455.30121, glue set 0.01508
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.Stamper2016The2K}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -62742,7 +62742,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lan14a}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 L
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 n
@@ -63024,7 +63024,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lan14a}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 L
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 n
@@ -63041,7 +63041,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.lan14a}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -63693,7 +63693,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\hbox(9.0+3.0)x455.30121, glue set 96.71881fil
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.wu2020variational}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 2
@@ -64021,7 +64021,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.ishwaran2005spike}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 I
 ..\OT1/cmr/m/n/12 s
 ..\discretionary replacing 2
@@ -64100,7 +64100,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\hbox(9.0+3.0)x455.30121, glue set 308.75412fil
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.titsias2011spike}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -64111,7 +64111,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ;
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.enlighten191553}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 T
 ..\kern-0.97916
 ..\OT1/cmr/m/n/12 o
@@ -64136,7 +64136,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 [
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[0 1 0]} action goto name{cite.enlighten191553}
-..\pdfcolorstack 0 push {0.91765 0.26276 0.20784 rg 0.91765 0.26276 0.20784 RG}
+..\pdfcolorstack 0 push {0.20392 0.65881 0.32549 rg 0.20392 0.65881 0.32549 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 0
 ..\OT1/cmr/m/n/12 1
@@ -71553,15 +71553,15 @@ Package rerunfilecheck Info: File `phdthesis_YiGu.out' has not changed.
 (rerunfilecheck)             Checksum: 9ACD83BDC309CEA6DC5D9F3B260B1832;6513.
  ) 
 Here is how much of TeX's memory you used:
- 36082 strings out of 473919
- 709244 string characters out of 5726953
+ 36084 strings out of 473919
+ 709271 string characters out of 5726953
  2024908 words of memory out of 5000000
- 57725 multiletter control sequences out of 15000+600000
+ 57727 multiletter control sequences out of 15000+600000
  577293 words of font info for 102 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  91i,20n,120p,1196b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (112 pages, 1790236 bytes).
+Output written on phdthesis_YiGu.pdf (112 pages, 1790245 bytes).
 PDF statistics:
  2600 PDF objects out of 2984 (max. 8388607)
  486 named destinations out of 1000 (max. 500000)
