@@ -20,4 +20,4 @@ jobs:
           credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
           filename: 'Thesis Main/phdthesis_YiGu.pdf'
           folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-          overwrite: 'true' # optional boolean
+          # overwrite: 'true' # optional boolean
