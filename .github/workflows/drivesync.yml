@@ -14,22 +14,42 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install rclone
+      - name: Get list of files
+        id: file_list
         run: |
-          curl https://rclone.org/install.sh | sudo bash
+          echo "::set-output name=files::$(find . -type f -print0 | tr '\n' ',' | sed 's/,$//')" 
 
-      - name: Configure rclone
+      - name: Upload files to Google Drive
+        uses: logickoder/g-drive-upload@main
+        with:
+          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+          folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          overwrite: 'true'
         env:
-          RCLONE_CONFIG_GDRIVE_TYPE: drive
-          RCLONE_CONFIG_GDRIVE_SCOPE: drive
-          RCLONE_CONFIG_GDRIVE_SERVICE_ACCOUNT_FILE: credentials.json
-          RCLONE_CONFIG_GDRIVE_TEAM_DRIVE: ""
-          RCLONE_CONFIG_GDRIVE_ROOT_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-          RCLONE_CONFIG_GDRIVE_TOKEN: ''
+          FILE_LIST: ${{ steps.file_list.outputs.files }}
         run: |
-          echo "${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}" > credentials.json
-          /usr/bin/rclone config create gdrive drive config_is_local false service_account_file credentials.json root_folder_id "${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}"
+          IFS=',' read -r -a files <<< "$FILE_LIST"
+          for file in "${files[@]}"; do
+            # Extract directory path for creating folders
+            dir_path=$(dirname "$file")
+            
+            # Construct the full path for the current file
+            full_path="$file"
 
-      - name: Upload to Google Drive (using rclone)
-        run: |
-          /usr/bin/rclone copy . gdrive: -v
+            # Construct the target path for the current file in Google Drive
+            target_path="$dir_path/${file##*/}"
+
+            # Check if the file exists before attempting to upload it
+            if [ -f "$full_path" ]; then
+              echo "Uploading $full_path to Google Drive at $target_path"
+              
+              # Use logickoder/g-drive-upload action to upload each file
+              g-drive-upload --credentials "${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}" \
+                --filename "$full_path" \
+                --folderId "${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}" \
+                --name "$target_path" \
+                --overwrite true
+            else
+              echo "File not found: $full_path"
+            fi
+          done
