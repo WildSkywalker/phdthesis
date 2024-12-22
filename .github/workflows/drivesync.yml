@@ -18,6 +18,6 @@ jobs:
         uses: logickoder/g-drive-upload@main
         with:
           credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
-          filename: 'Thesis%20Main/phdthesis_YiGu.pdf'
+          filename: 'Thesis Main/phdthesis_YiGu.pdf'
           folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
           overwrite: 'true' # optional boolean
