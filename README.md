@@ -7,4 +7,4 @@ The final version of the thesis is in the "Thesis Main" folder. It consists of 3
 
 I have also included the my deprecated problem regarding spin glass and statistical physics in this repo. Though the problem has reached a dead end, or a stage that computation seems intangible, it is indeed a fascinating problem and worth documenting.
 
-Oh, almost forget. Thank you for visiting my humble repository. My journey is far from end, and may the force be with you ;)
+Oh, almost forget. Thank you for visiting my humble repository, and may the force be with you ;)
