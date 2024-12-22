@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: EDM_Article_Submission.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: abbrv.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Database file #1: sigproc.bib
+Warning--empty journal in chi2011instructional
+Warning--can't use both author and editor fields in pls1
+Warning--empty publisher in DKT
+Warning--empty institution in shute1994intelligent
+Warning--empty booktitle in Stamper2016The2K
+You've used 75 entries,
+            2118 wiz_defined-function locations,
+            899 strings with 17350 characters,
+and the built_in function-call counts, 29366 in all, are:
+= -- 2871
+> -- 1456
+< -- 29
++ -- 575
+- -- 491
+* -- 1957
+:= -- 4625
+add.period$ -- 232
+call.type$ -- 75
+change.case$ -- 450
+chr.to.int$ -- 0
+cite$ -- 80
+duplicate$ -- 1210
+empty$ -- 2266
+format.name$ -- 491
+if$ -- 6323
+int.to.chr$ -- 0
+int.to.str$ -- 75
+missing$ -- 82
+newline$ -- 377
+num.names$ -- 156
+pop$ -- 569
+preamble$ -- 1
+purify$ -- 384
+quote$ -- 0
+skip$ -- 955
+stack$ -- 0
+substring$ -- 1775
+swap$ -- 397
+text.length$ -- 29
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 280
+warning$ -- 5
+while$ -- 263
+width$ -- 77
+write$ -- 810
+(There were 5 warnings)
