@@ -43,4 +43,4 @@ jobs:
 
       - name: Upload to Google Drive
         run: |
-          /usr/bin/rclone copy . gdrive: --drive-server-side-across-configs -v --newer
+          /usr/bin/rclone copy . gdrive: --drive-server-side-across-configs -v
