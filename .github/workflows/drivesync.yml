@@ -14,42 +14,32 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Get list of files
-        id: file_list
-        run: |
-          echo "::set-output name=files::$(find . -type f -print0 | tr '\n' ',' | sed 's/,$//')" 
-
-      - name: Upload files to Google Drive
+      - name: Upload Main Thesis
         uses: logickoder/g-drive-upload@main
         with:
           credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+          filename: 'Thesis Main/phdthesis_YiGu.pdf'
           folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-          overwrite: 'true'
-        env:
-          FILE_LIST: ${{ steps.file_list.outputs.files }}
-        run: |
-          IFS=',' read -r -a files <<< "$FILE_LIST"
-          for file in "${files[@]}"; do
-            # Extract directory path for creating folders
-            dir_path=$(dirname "$file")
-            
-            # Construct the full path for the current file
-            full_path="$file"
+          overwrite: 'true' # optional boolean
+          useCompleteSourceFilenameAsName: 'true' # optional boolean
+          mirrorDirectoryStructure: 'false' # optional boolean
 
-            # Construct the target path for the current file in Google Drive
-            target_path="$dir_path/${file##*/}"
-
-            # Check if the file exists before attempting to upload it
-            if [ -f "$full_path" ]; then
-              echo "Uploading $full_path to Google Drive at $target_path"
-              
-              # Use logickoder/g-drive-upload action to upload each file
-              g-drive-upload --credentials "${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}" \
-                --filename "$full_path" \
-                --folderId "${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}" \
-                --name "$target_path" \
-                --overwrite true
-            else
-              echo "File not found: $full_path"
-            fi
-          done
+      - name: Upload t-SNE Paper
+        uses: logickoder/g-drive-upload@main
+        with:
+          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+          filename: 't-SNE/main paper/t-sne.pdf'
+          folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          overwrite: 'true' # optional boolean
+          useCompleteSourceFilenameAsName: 'true' # optional boolean
+          mirrorDirectoryStructure: 'false' # optional boolean
+      
+      - name: Upload t-SNE Existence and Uniqueness Proof
+        uses: logickoder/g-drive-upload@main
+        with:
+          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+          filename: 't-SNE/Existence&Uniqueness/Existence&Uniqueness.pdf'
+          folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          overwrite: 'true' # optional boolean
+          useCompleteSourceFilenameAsName: 'true' # optional boolean
+          mirrorDirectoryStructure: 'false' # optional boolean
