@@ -1,289 +1,39 @@
-\documentclass[12pt]{nuthesis}	
-\showboxbreadth=50 
-\showboxdepth=50
-\usepackage{array}
-\usepackage{adjustbox}
-\usepackage{algorithm}
-\usepackage{booktabs}
-\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
-\algrenewcommand\algorithmicrequire{\textbf{Input:}}
-\algrenewcommand\algorithmicensure{\textbf{Output:}}
-\usepackage{xspace}
-\usepackage{bm, bbm}
-\usepackage{color}
-\usepackage{caption}
-\usepackage{hyperref}
-% \usepackage[authoryear]{natbib}
-\usepackage[authoryear,square]{natbib}
-% \usepackage{natbib}
-\usepackage{amsmath,amsthm,amssymb,xparse}
-\usepackage{graphicx}
-\usepackage{bbm}
-\usepackage{xcolor}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{color}
-\usepackage{colortbl}
-\usepackage{tikz}
-\usepackage{multirow}
-\usepackage{nicematrix}
-\usepackage{bold-extra}
-\usepackage{silence}
-\usepackage{subcaption}
-\WarningFilter{latex}{Text page}
-% \usepackage[numbers]{natbib}
-\definecolor{gblue}{RGB}{66,133,244}
-\definecolor{gred}{RGB}{234, 67, 53}
-% \definecolor{ggreen}{RGB}{52, 168, 83}
-% \definecolor{gyellow}{RGB}{251, 188, 5}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=gblue,
-    filecolor=black,      
-    urlcolor=black,
-    % pdftitle={Rendering},
-    citecolor=gred,
-    % bookmarks=true,
-}
-
-
-\newcommand{\lovasz}{{Lov\'asz}\xspace}
-\newcommand{\nls}{\textsc{Nelson}\xspace}
-
+\documentclass[12pt]{nuthesis}
+\input{guyipreamthesis.tex}
 %
-
-\newcommand{\vect}[1]{\boldsymbol{\rm #1}}
-\newcommand{\var}{\mathtt{var}}
-\newcommand{\false}{\texttt{False}\xspace}
-\newcommand{\true}{\texttt{True}\xspace}
-\newcommand{\e}{\mathbb{E}}
-\newcommand{\p}{\mathbb{P}}
-\newcommand{\lra}{\leftrightarrow}
-\newcommand{\nlra}{\nleftrightarrow}
-\newcommand{\bet}{\begin{theorem}}
-\newcommand{\ent}{\end{theorem}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\g}{\Gamma}
-\newcommand{\sigmoid}{\sigma}
-\newcommand{\de}{\delta}
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-\newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
-\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
-\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
-\newcommand\nnfootnote[1]{%
-  \begin{NoHyper}
-  \renewcommand\thefootnote{}\footnote{#1}%
-  \addtocounter{footnote}{-1}%
-  \end{NoHyper}
-}
-
-\def\mI{{\bm{I}}}
-\def\mY{{\bm{Y}}}
-\def\mQ{{\bm{Q}}}
-\def\rvc{{\mathbf{c}}}
-\def\rvm{{\mathbf{m}}}
-\def\vy{{\bm{y}}}
-\def\vu{{\bm{u}}}
-\def\vv{{\bm{v}}}
-
-\newtheorem{condition}{Condition} 
-\newtheorem{lemma}{\bf Lemma}
-\newtheorem*{lemma*}{Lemma}
-\newtheorem{claim}{\bf Claim}
-\newtheorem{definition}{\bf Definition}
-\newtheorem{theorem}{\bf Theorem}
-\newtheorem*{theorem*}{\bf Theorem}
-\newtheorem{corollary}{\bf Corollary}
-\newtheorem{remark}{\bf Remark}
-\newtheorem{example}{\bf Example}
-\newtheorem{exercise}{\bf Exercise}
-\newtheorem{proposition}{\bf Proposition}
-\newtheorem{prop}{\bf Proposition}
-\newtheorem{question}{\bf Question}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DATA OF AUTHOR AND DISSERTATION %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \author{Yi Gu}
-
 \title{Generalized t-SNE and Beyond: Probabilistic Methods for Dimensionality Reduction, Combinatorial Optimization, and Machine Learning}
-
-\degree{DOCTOR OF PHILOSOPHY}  % Default: DOCTOR OF PHILOSOPHY
-
-\field{Mathematics}            % Default: Mathematics
-
-\graduationmonth{June}         % The default is June or December
-                                % depending on current date.
-
-\graduationyear{2025}          % Default: current year.
-
-
-				% Use \includeonly to select the 
-%\includeonly{chap1,chap2,...}	% chapters to include if you are 
-				% using the \include command below.
-				% This way you can latex only a the 
-				% part you are working on, which 
-				% is faster than latexing the entire 
-				% thesis. 
-
-
+\degree{DOCTOR OF PHILOSOPHY} 
+\field{Mathematics}           
+\graduationmonth{June}    
+\graduationyear{2025}
+%
 \begin{document}
-%	
-%	THE BODY OF YOUR THESIS STARTS HERE
 %
-
-%%%%%%%%%%%%%%%%%%%%%%
-% Some initial stuff %
-%%%%%%%%%%%%%%%%%%%%%%
-
-\frontmatter		% Preliminary pages start here.
-
-\maketitle		% Produces the title page.
-
-\copyrightpage		% Creates the copyright page.
-
-\abstract		% Abstract.
-
-This is the abstract.
-
-\acknowledgements	% Acknowledgements (optional).
-
-Text for acknowledgments.
-
-\preface		% Preface (optional).
-
-This is the preface.
-
-%% A few more optional pages (uncomment if needed)
+\frontmatter
+\maketitle
+\copyrightpage
+\input{abstract.tex}
+\input{acknowledgements.tex}
+\input{preface.tex}
+\input{dedication.tex}
+\clearpage\phantomsection 
+\tableofcontents
+\clearpage\phantomsection 
+\listoftables	
+\clearpage\phantomsection 
+\listoffigures	
 %
-%\listofabbreviations 
-%
-%This is the list of abbreviations (optional).
-%
-%\glossary
-%
-%This is the glossary (optional).
-%
-%\nomenclature
-%
-%This is the nomenclature (optional).
-%
-%% Note that the dedication text must be passed as an argument
-%% of the \dedication command
-%\dedication{This is the dedication (optional).}
-%
-
-\clearpage\phantomsection % needed for the hyperlinks to work correctly
-\tableofcontents	% Table of Contents will be automatically
-% generated and placed here.
-
-\clearpage\phantomsection % needed for the hyperlinks to work correctly
-\listoftables		% List of Tables and List of Figures will be placed
-
-\clearpage\phantomsection % needed for the hyperlinks to work correctly
-\listoffigures		% here, if applicable (optional).
-
-\mainmatter             % Actual text starts here.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Actual text starts here %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% If there is an introduction it must be the first chapter
-
-\chapter{Convergence of t-Distributed Stochastic Neighbor Embedding with Generalized Input and Output Kernels}	% The first chapter.
-% \chapter command is of the form
-% \chapter[..]{..} or \chapter{..} where
-... text ...		% {chapter heading} and [entry in table of
-% contents].
-\section{First section of chapter 1}
-% IMPORTANT: If your chapter heading consists
-% of more than one lines, it will be auto-
-... text ...		% matically broken into separate lines.
-% However, if you don't like the way LaTeX
-% breaks the chapter heading into lines, use
-\section{Another section}	% `\newheadline' command to break lines.
-% Never use \\ in sectional (e.g., chapter,
-... text ...		% section, subsection) headings.
-\chapter{Learning Markov Random Fields for Combinatorial Structures via
-  Sampling through Lov\'asz Local Lemma} % Chapter 2.
-  \nnfootnote{Published in AAAI 2023.}
-\input{chap2}
-
-\chapter{VarFA: A Variational Factor Analysis Framework for Efficient Bayesian Learning Analytics}
-\nnfootnote{Published in EDM 2020.}
-\input{chap3}
-
-
-% The command \includeonly above allows to include a selected 
-% set of chapters only.
-
-% Uncomment the 'singlespace' environment and '\bibsep' command
-% if needed - some bibliographic styles overide the definition
-% of 'thebibliography' in nuthesis.cls
+\mainmatter 
+\include{chap1}
+\include{chap2}
+\include{chap3}
 %
 \begin{singlespace}
-	%\bibsep 12pt
-	\clearpage\phantomsection % needed for hyperlinks to work correctly
+	\clearpage\phantomsection
 	\setcitestyle{numbers}
 	\bibliographystyle{hunsrtnat} \nocite{*} \bibliography{citation}
-
 \end{singlespace}
-
-% (The following suggested by Francisco Iacobelli - 5/11/2010)
-% In case, you want to use BibTeX, you should replace (or comment)
-% the bibliography environment.
-% Instead uncomment the following lines and replace <bib file>
-% with your .bib file:
-% \begin{singlespace}
-% \bibsep 12pt
-% \bibliographystyle{acm} %or another suitable style.
-% \bibliography{<bib file>}
-% \end{singlespace}
-
-% \appendix		% Appendix begins here (optional).
-
-% \chapter{Title of First Appendix} 	% First appendix chapter, i.e., Appendix A.
-
-% Here goes the first appendix.
-
-% \section{First section of Appendix}	% This is appendix section 1.
-
-% This is the Appendix.
-
-% \subsection{First subsection of Appendix}  % This is appendix subsection 1.
-
-% More text ...
-
-% \subsubsection{First subsubsection of Appendix}  % This is subsubsection 1.
-
-% Yet more text ...
-
-% \chapter{Title of Second Appendix}
-
-% In case there is more than one appendix.
-
-% \begin{vita}                    % Vita (optional).
-
-% 	This is the Vita. This is the Vita. This is the Vita. This is the Vita. This is
-% 	the Vita. This is the Vita. This is the Vita. This is the Vita. This is the
-% 	Vita. This is the Vita. This is the Vita. This is the Vita. This is the Vita.
-% 	This is the Vita. This is the Vita. This is the Vita.
-
-% 	This is the Vita. This is the Vita. This is the Vita. This is the Vita. This is
-% 	the Vita. This is the Vita. This is the Vita. This is the Vita. This is the
-% 	Vita. This is the Vita. This is the Vita. This is the Vita. This is the Vita.
-% 	This is the Vita. This is the Vita. This is the Vita.
-
-% 	This is the Vita. This is the Vita. This is the Vita. This is the Vita. This is
-% 	the Vita. This is the Vita. This is the Vita. This is the Vita. This is the
-% 	Vita. This is the Vita. This is the Vita. This is the Vita. This is the Vita.
-% 	This is the Vita. This is the Vita. This is the Vita.
-
-% \end{vita}
-
+%
 \end{document}
 

@@ -1,0 +1,136 @@
+\author{Yi Gu}
+
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage[authoryear,square]{natbib}
+%\usepackage{vector}
+
+\definecolor{gblue}{RGB}{66,133,244}
+\definecolor{gred}{RGB}{234, 67, 53}
+\definecolor{ggreen}{RGB}{52, 168, 83}
+\definecolor{gyellow}{RGB}{251, 188, 5}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=gblue,
+    filecolor=gyellow,      
+    urlcolor=ggreen,
+    citecolor=gred,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem*{theorem*}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{condition}{\bf Condition}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+% To print out the paper version, please comment out the next three lines.
+\definecolor{dimmedwhite}{rgb}{0.85,0.85,0.85}
+% \pagecolor{dimmedwhite}
+% \color{dimmedwhite}
+
+
+\numberwithin{equation}{section}

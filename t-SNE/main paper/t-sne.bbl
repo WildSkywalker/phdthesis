@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -32,5 +32,11 @@ Stéphane Boucheron, Gábor Lugosi, and Pascal Massart.
 \newblock {\em Concentration Inequalities: A Nonasymptotic Theory of
   Independence}.
 \newblock Oxford University Press, 2013.
+
+\bibitem[Weinkove(2024)]{weinkove2024flow}
+Ben Weinkove.
+\newblock Dimension reduction and the gradient flow of relative entropy, 2024,
+  2409.16963.
+\newblock URL \url{https://arxiv.org/abs/2409.16963}.
 
 \end{thebibliography}

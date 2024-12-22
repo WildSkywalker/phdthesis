@@ -1,0 +1,104 @@
+\showboxbreadth=50 
+\showboxdepth=50
+\usepackage{alphabeta}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage{algorithm}
+\usepackage{booktabs}
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\usepackage{xspace}
+\usepackage{bm, bbm}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{hyperref}
+% \usepackage[authoryear]{natbib}
+\usepackage[authoryear,square]{natbib}
+% \usepackage{natbib}
+\usepackage{amsmath,amsthm,amssymb,xparse}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{nicematrix}
+\usepackage{bold-extra}
+\usepackage{silence}
+\usepackage{subcaption}
+\WarningFilter{latex}{Text page}
+% \usepackage[numbers]{natbib}
+\definecolor{gblue}{RGB}{66,133,244}
+\definecolor{gred}{RGB}{234, 67, 53}
+% \definecolor{ggreen}{RGB}{52, 168, 83}
+% \definecolor{gyellow}{RGB}{251, 188, 5}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=gblue,
+    filecolor=black,      
+    urlcolor=black,
+    % pdftitle={Rendering},
+    citecolor=gred,
+    % bookmarks=true,
+}
+
+
+\newcommand{\lovasz}{{Lov\'asz}\xspace}
+\newcommand{\nls}{\textsc{Nelson}\xspace}
+
+%
+
+\newcommand{\vect}[1]{\boldsymbol{\rm #1}}
+\newcommand{\var}{\mathtt{var}}
+\newcommand{\false}{\texttt{False}\xspace}
+\newcommand{\true}{\texttt{True}\xspace}
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\sigmoid}{\sigma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+\newcommand\nnfootnote[1]{%
+  \begin{NoHyper}
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \end{NoHyper}
+}
+
+\def\mI{{\bm{I}}}
+\def\mY{{\bm{Y}}}
+\def\mQ{{\bm{Q}}}
+\def\rvc{{\mathbf{c}}}
+\def\rvm{{\mathbf{m}}}
+\def\vy{{\bm{y}}}
+\def\vu{{\bm{u}}}
+\def\vv{{\bm{v}}}
+
+\newtheorem{condition}{Condition} 
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem*{theorem*}{\bf Theorem}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{prop}{\bf Proposition}
+\newtheorem{question}{\bf Question}

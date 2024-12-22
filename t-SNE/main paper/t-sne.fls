@@ -1,12 +1,15 @@
-PWD e:\NU Staff\Thesis - GIT\t-SNE
+PWD e:\NU Staff\Thesis - GIT\t-SNE\main paper
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\NU Staff\Thesis - GIT\t-SNE\t-sne.tex
+INPUT e:\NU Staff\Thesis - GIT\t-SNE\main paper\t-sne.tex
 OUTPUT t-sne.log
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT .\guyipreammath.tex
+INPUT .\guyipreammath.tex
+INPUT guyipreammath.tex
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty

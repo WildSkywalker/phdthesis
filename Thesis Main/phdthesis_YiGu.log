@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  20 DEC 2024 23:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  21 DEC 2024 21:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -234,7 +234,370 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip59
 )
 \c@scheme=\count293
-) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+) (guyipreamthesis.tex (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\alphabeta.sty
+Package: alphabeta 2023-11-16 2.6 macros for Greek letters in text and math
+ (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\textalpha.sty
+Package: textalpha 2023-09-12 2.5 macros for Greek letters in text
+ (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\lgrenc.def
+File: lgrenc.def 2023-09-12 2.5 LGR Greek font encoding definitions
+Now handling font encoding LGR ...
+... processing UTF-8 mapping file for font encoding LGR
+ (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/greek-inputenc\lgrenc.dfu
+File: lgrenc.dfu 2023-03-21 1.9 UTF-8 support for Greek
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0259 (decimal 601)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+0374 (decimal 884)
+   defining Unicode char U+0375 (decimal 885)
+   defining Unicode char U+037A (decimal 890)
+   defining Unicode char U+037E (decimal 894)
+   defining Unicode char U+0384 (decimal 900)
+   defining Unicode char U+0385 (decimal 901)
+   defining Unicode char U+0386 (decimal 902)
+   defining Unicode char U+0387 (decimal 903)
+   defining Unicode char U+0388 (decimal 904)
+   defining Unicode char U+0389 (decimal 905)
+   defining Unicode char U+038A (decimal 906)
+   defining Unicode char U+038C (decimal 908)
+   defining Unicode char U+038E (decimal 910)
+   defining Unicode char U+038F (decimal 911)
+   defining Unicode char U+0390 (decimal 912)
+   defining Unicode char U+0391 (decimal 913)
+   defining Unicode char U+0392 (decimal 914)
+   defining Unicode char U+0393 (decimal 915)
+   defining Unicode char U+0394 (decimal 916)
+   defining Unicode char U+0395 (decimal 917)
+   defining Unicode char U+0396 (decimal 918)
+   defining Unicode char U+0397 (decimal 919)
+   defining Unicode char U+0398 (decimal 920)
+   defining Unicode char U+0399 (decimal 921)
+   defining Unicode char U+039A (decimal 922)
+   defining Unicode char U+039B (decimal 923)
+   defining Unicode char U+039C (decimal 924)
+   defining Unicode char U+039D (decimal 925)
+   defining Unicode char U+039E (decimal 926)
+   defining Unicode char U+039F (decimal 927)
+   defining Unicode char U+03A0 (decimal 928)
+   defining Unicode char U+03A1 (decimal 929)
+   defining Unicode char U+03A3 (decimal 931)
+   defining Unicode char U+03A4 (decimal 932)
+   defining Unicode char U+03A5 (decimal 933)
+   defining Unicode char U+03A6 (decimal 934)
+   defining Unicode char U+03A7 (decimal 935)
+   defining Unicode char U+03A8 (decimal 936)
+   defining Unicode char U+03A9 (decimal 937)
+   defining Unicode char U+03AA (decimal 938)
+   defining Unicode char U+03AB (decimal 939)
+   defining Unicode char U+03AC (decimal 940)
+   defining Unicode char U+03AD (decimal 941)
+   defining Unicode char U+03AE (decimal 942)
+   defining Unicode char U+03AF (decimal 943)
+   defining Unicode char U+03B0 (decimal 944)
+   defining Unicode char U+03B1 (decimal 945)
+   defining Unicode char U+03B2 (decimal 946)
+   defining Unicode char U+03B3 (decimal 947)
+   defining Unicode char U+03B4 (decimal 948)
+   defining Unicode char U+03B5 (decimal 949)
+   defining Unicode char U+03B6 (decimal 950)
+   defining Unicode char U+03B7 (decimal 951)
+   defining Unicode char U+03B8 (decimal 952)
+   defining Unicode char U+03B9 (decimal 953)
+   defining Unicode char U+03BA (decimal 954)
+   defining Unicode char U+03BB (decimal 955)
+   defining Unicode char U+03BC (decimal 956)
+   defining Unicode char U+03BD (decimal 957)
+   defining Unicode char U+03BE (decimal 958)
+   defining Unicode char U+03BF (decimal 959)
+   defining Unicode char U+03C0 (decimal 960)
+   defining Unicode char U+03C1 (decimal 961)
+   defining Unicode char U+03C2 (decimal 962)
+   defining Unicode char U+03C3 (decimal 963)
+   defining Unicode char U+03C4 (decimal 964)
+   defining Unicode char U+03C5 (decimal 965)
+   defining Unicode char U+03C6 (decimal 966)
+   defining Unicode char U+03C7 (decimal 967)
+   defining Unicode char U+03C8 (decimal 968)
+   defining Unicode char U+03C9 (decimal 969)
+   defining Unicode char U+03CA (decimal 970)
+   defining Unicode char U+03CB (decimal 971)
+   defining Unicode char U+03CC (decimal 972)
+   defining Unicode char U+03CD (decimal 973)
+   defining Unicode char U+03CE (decimal 974)
+   defining Unicode char U+03D0 (decimal 976)
+   defining Unicode char U+03D1 (decimal 977)
+   defining Unicode char U+03D5 (decimal 981)
+   defining Unicode char U+03D6 (decimal 982)
+   defining Unicode char U+03D8 (decimal 984)
+   defining Unicode char U+03D9 (decimal 985)
+   defining Unicode char U+03DA (decimal 986)
+   defining Unicode char U+03DB (decimal 987)
+   defining Unicode char U+03DC (decimal 988)
+   defining Unicode char U+03DD (decimal 989)
+   defining Unicode char U+03DE (decimal 990)
+   defining Unicode char U+03DF (decimal 991)
+   defining Unicode char U+03E0 (decimal 992)
+   defining Unicode char U+03E1 (decimal 993)
+   defining Unicode char U+03F0 (decimal 1008)
+   defining Unicode char U+03F1 (decimal 1009)
+   defining Unicode char U+03F4 (decimal 1012)
+   defining Unicode char U+03F5 (decimal 1013)
+   defining Unicode char U+1F00 (decimal 7936)
+   defining Unicode char U+1F01 (decimal 7937)
+   defining Unicode char U+1F02 (decimal 7938)
+   defining Unicode char U+1F03 (decimal 7939)
+   defining Unicode char U+1F04 (decimal 7940)
+   defining Unicode char U+1F05 (decimal 7941)
+   defining Unicode char U+1F06 (decimal 7942)
+   defining Unicode char U+1F07 (decimal 7943)
+   defining Unicode char U+1F08 (decimal 7944)
+   defining Unicode char U+1F09 (decimal 7945)
+   defining Unicode char U+1F0A (decimal 7946)
+   defining Unicode char U+1F0B (decimal 7947)
+   defining Unicode char U+1F0C (decimal 7948)
+   defining Unicode char U+1F0D (decimal 7949)
+   defining Unicode char U+1F0E (decimal 7950)
+   defining Unicode char U+1F0F (decimal 7951)
+   defining Unicode char U+1F10 (decimal 7952)
+   defining Unicode char U+1F11 (decimal 7953)
+   defining Unicode char U+1F12 (decimal 7954)
+   defining Unicode char U+1F13 (decimal 7955)
+   defining Unicode char U+1F14 (decimal 7956)
+   defining Unicode char U+1F15 (decimal 7957)
+   defining Unicode char U+1F18 (decimal 7960)
+   defining Unicode char U+1F19 (decimal 7961)
+   defining Unicode char U+1F1A (decimal 7962)
+   defining Unicode char U+1F1B (decimal 7963)
+   defining Unicode char U+1F1C (decimal 7964)
+   defining Unicode char U+1F1D (decimal 7965)
+   defining Unicode char U+1F20 (decimal 7968)
+   defining Unicode char U+1F21 (decimal 7969)
+   defining Unicode char U+1F22 (decimal 7970)
+   defining Unicode char U+1F23 (decimal 7971)
+   defining Unicode char U+1F24 (decimal 7972)
+   defining Unicode char U+1F25 (decimal 7973)
+   defining Unicode char U+1F26 (decimal 7974)
+   defining Unicode char U+1F27 (decimal 7975)
+   defining Unicode char U+1F28 (decimal 7976)
+   defining Unicode char U+1F29 (decimal 7977)
+   defining Unicode char U+1F2A (decimal 7978)
+   defining Unicode char U+1F2B (decimal 7979)
+   defining Unicode char U+1F2C (decimal 7980)
+   defining Unicode char U+1F2D (decimal 7981)
+   defining Unicode char U+1F2E (decimal 7982)
+   defining Unicode char U+1F2F (decimal 7983)
+   defining Unicode char U+1F30 (decimal 7984)
+   defining Unicode char U+1F31 (decimal 7985)
+   defining Unicode char U+1F32 (decimal 7986)
+   defining Unicode char U+1F33 (decimal 7987)
+   defining Unicode char U+1F34 (decimal 7988)
+   defining Unicode char U+1F35 (decimal 7989)
+   defining Unicode char U+1F36 (decimal 7990)
+   defining Unicode char U+1F37 (decimal 7991)
+   defining Unicode char U+1F38 (decimal 7992)
+   defining Unicode char U+1F39 (decimal 7993)
+   defining Unicode char U+1F3A (decimal 7994)
+   defining Unicode char U+1F3B (decimal 7995)
+   defining Unicode char U+1F3C (decimal 7996)
+   defining Unicode char U+1F3D (decimal 7997)
+   defining Unicode char U+1F3E (decimal 7998)
+   defining Unicode char U+1F3F (decimal 7999)
+   defining Unicode char U+1F40 (decimal 8000)
+   defining Unicode char U+1F41 (decimal 8001)
+   defining Unicode char U+1F42 (decimal 8002)
+   defining Unicode char U+1F43 (decimal 8003)
+   defining Unicode char U+1F44 (decimal 8004)
+   defining Unicode char U+1F45 (decimal 8005)
+   defining Unicode char U+1F48 (decimal 8008)
+   defining Unicode char U+1F49 (decimal 8009)
+   defining Unicode char U+1F4A (decimal 8010)
+   defining Unicode char U+1F4B (decimal 8011)
+   defining Unicode char U+1F4C (decimal 8012)
+   defining Unicode char U+1F4D (decimal 8013)
+   defining Unicode char U+1F50 (decimal 8016)
+   defining Unicode char U+1F51 (decimal 8017)
+   defining Unicode char U+1F52 (decimal 8018)
+   defining Unicode char U+1F53 (decimal 8019)
+   defining Unicode char U+1F54 (decimal 8020)
+   defining Unicode char U+1F55 (decimal 8021)
+   defining Unicode char U+1F56 (decimal 8022)
+   defining Unicode char U+1F57 (decimal 8023)
+   defining Unicode char U+1F59 (decimal 8025)
+   defining Unicode char U+1F5B (decimal 8027)
+   defining Unicode char U+1F5D (decimal 8029)
+   defining Unicode char U+1F5F (decimal 8031)
+   defining Unicode char U+1F60 (decimal 8032)
+   defining Unicode char U+1F61 (decimal 8033)
+   defining Unicode char U+1F62 (decimal 8034)
+   defining Unicode char U+1F63 (decimal 8035)
+   defining Unicode char U+1F64 (decimal 8036)
+   defining Unicode char U+1F65 (decimal 8037)
+   defining Unicode char U+1F66 (decimal 8038)
+   defining Unicode char U+1F67 (decimal 8039)
+   defining Unicode char U+1F68 (decimal 8040)
+   defining Unicode char U+1F69 (decimal 8041)
+   defining Unicode char U+1F6A (decimal 8042)
+   defining Unicode char U+1F6B (decimal 8043)
+   defining Unicode char U+1F6C (decimal 8044)
+   defining Unicode char U+1F6D (decimal 8045)
+   defining Unicode char U+1F6E (decimal 8046)
+   defining Unicode char U+1F6F (decimal 8047)
+   defining Unicode char U+1F70 (decimal 8048)
+   defining Unicode char U+1F71 (decimal 8049)
+   defining Unicode char U+1F72 (decimal 8050)
+   defining Unicode char U+1F73 (decimal 8051)
+   defining Unicode char U+1F74 (decimal 8052)
+   defining Unicode char U+1F75 (decimal 8053)
+   defining Unicode char U+1F76 (decimal 8054)
+   defining Unicode char U+1F77 (decimal 8055)
+   defining Unicode char U+1F78 (decimal 8056)
+   defining Unicode char U+1F79 (decimal 8057)
+   defining Unicode char U+1F7A (decimal 8058)
+   defining Unicode char U+1F7B (decimal 8059)
+   defining Unicode char U+1F7C (decimal 8060)
+   defining Unicode char U+1F7D (decimal 8061)
+   defining Unicode char U+1F80 (decimal 8064)
+   defining Unicode char U+1F81 (decimal 8065)
+   defining Unicode char U+1F82 (decimal 8066)
+   defining Unicode char U+1F83 (decimal 8067)
+   defining Unicode char U+1F84 (decimal 8068)
+   defining Unicode char U+1F85 (decimal 8069)
+   defining Unicode char U+1F86 (decimal 8070)
+   defining Unicode char U+1F87 (decimal 8071)
+   defining Unicode char U+1F88 (decimal 8072)
+   defining Unicode char U+1F89 (decimal 8073)
+   defining Unicode char U+1F8A (decimal 8074)
+   defining Unicode char U+1F8B (decimal 8075)
+   defining Unicode char U+1F8C (decimal 8076)
+   defining Unicode char U+1F8D (decimal 8077)
+   defining Unicode char U+1F8E (decimal 8078)
+   defining Unicode char U+1F8F (decimal 8079)
+   defining Unicode char U+1F90 (decimal 8080)
+   defining Unicode char U+1F91 (decimal 8081)
+   defining Unicode char U+1F92 (decimal 8082)
+   defining Unicode char U+1F93 (decimal 8083)
+   defining Unicode char U+1F94 (decimal 8084)
+   defining Unicode char U+1F95 (decimal 8085)
+   defining Unicode char U+1F96 (decimal 8086)
+   defining Unicode char U+1F97 (decimal 8087)
+   defining Unicode char U+1F98 (decimal 8088)
+   defining Unicode char U+1F99 (decimal 8089)
+   defining Unicode char U+1F9A (decimal 8090)
+   defining Unicode char U+1F9B (decimal 8091)
+   defining Unicode char U+1F9C (decimal 8092)
+   defining Unicode char U+1F9D (decimal 8093)
+   defining Unicode char U+1F9E (decimal 8094)
+   defining Unicode char U+1F9F (decimal 8095)
+   defining Unicode char U+1FA0 (decimal 8096)
+   defining Unicode char U+1FA1 (decimal 8097)
+   defining Unicode char U+1FA2 (decimal 8098)
+   defining Unicode char U+1FA3 (decimal 8099)
+   defining Unicode char U+1FA4 (decimal 8100)
+   defining Unicode char U+1FA5 (decimal 8101)
+   defining Unicode char U+1FA6 (decimal 8102)
+   defining Unicode char U+1FA7 (decimal 8103)
+   defining Unicode char U+1FA8 (decimal 8104)
+   defining Unicode char U+1FA9 (decimal 8105)
+   defining Unicode char U+1FAA (decimal 8106)
+   defining Unicode char U+1FAB (decimal 8107)
+   defining Unicode char U+1FAC (decimal 8108)
+   defining Unicode char U+1FAD (decimal 8109)
+   defining Unicode char U+1FAE (decimal 8110)
+   defining Unicode char U+1FAF (decimal 8111)
+   defining Unicode char U+1FB0 (decimal 8112)
+   defining Unicode char U+1FB1 (decimal 8113)
+   defining Unicode char U+1FB2 (decimal 8114)
+   defining Unicode char U+1FB3 (decimal 8115)
+   defining Unicode char U+1FB4 (decimal 8116)
+   defining Unicode char U+1FB6 (decimal 8118)
+   defining Unicode char U+1FB7 (decimal 8119)
+   defining Unicode char U+1FB8 (decimal 8120)
+   defining Unicode char U+1FB9 (decimal 8121)
+   defining Unicode char U+1FBA (decimal 8122)
+   defining Unicode char U+1FBB (decimal 8123)
+   defining Unicode char U+1FBC (decimal 8124)
+   defining Unicode char U+1FBD (decimal 8125)
+   defining Unicode char U+1FBE (decimal 8126)
+   defining Unicode char U+1FBF (decimal 8127)
+   defining Unicode char U+1FC0 (decimal 8128)
+   defining Unicode char U+1FC1 (decimal 8129)
+   defining Unicode char U+1FC2 (decimal 8130)
+   defining Unicode char U+1FC3 (decimal 8131)
+   defining Unicode char U+1FC4 (decimal 8132)
+   defining Unicode char U+1FC6 (decimal 8134)
+   defining Unicode char U+1FC7 (decimal 8135)
+   defining Unicode char U+1FC8 (decimal 8136)
+   defining Unicode char U+1FC9 (decimal 8137)
+   defining Unicode char U+1FCA (decimal 8138)
+   defining Unicode char U+1FCB (decimal 8139)
+   defining Unicode char U+1FCC (decimal 8140)
+   defining Unicode char U+1FCD (decimal 8141)
+   defining Unicode char U+1FCE (decimal 8142)
+   defining Unicode char U+1FCF (decimal 8143)
+   defining Unicode char U+1FD0 (decimal 8144)
+   defining Unicode char U+1FD1 (decimal 8145)
+   defining Unicode char U+1FD2 (decimal 8146)
+   defining Unicode char U+1FD3 (decimal 8147)
+   defining Unicode char U+1FD6 (decimal 8150)
+   defining Unicode char U+1FD7 (decimal 8151)
+   defining Unicode char U+1FD8 (decimal 8152)
+   defining Unicode char U+1FD9 (decimal 8153)
+   defining Unicode char U+1FDA (decimal 8154)
+   defining Unicode char U+1FDB (decimal 8155)
+   defining Unicode char U+1FDD (decimal 8157)
+   defining Unicode char U+1FDE (decimal 8158)
+   defining Unicode char U+1FDF (decimal 8159)
+   defining Unicode char U+1FE0 (decimal 8160)
+   defining Unicode char U+1FE1 (decimal 8161)
+   defining Unicode char U+1FE2 (decimal 8162)
+   defining Unicode char U+1FE3 (decimal 8163)
+   defining Unicode char U+1FE4 (decimal 8164)
+   defining Unicode char U+1FE5 (decimal 8165)
+   defining Unicode char U+1FE6 (decimal 8166)
+   defining Unicode char U+1FE7 (decimal 8167)
+   defining Unicode char U+1FE8 (decimal 8168)
+   defining Unicode char U+1FE9 (decimal 8169)
+   defining Unicode char U+1FEA (decimal 8170)
+   defining Unicode char U+1FEB (decimal 8171)
+   defining Unicode char U+1FEC (decimal 8172)
+   defining Unicode char U+1FED (decimal 8173)
+   defining Unicode char U+1FEE (decimal 8174)
+   defining Unicode char U+1FEF (decimal 8175)
+   defining Unicode char U+1FF2 (decimal 8178)
+   defining Unicode char U+1FF3 (decimal 8179)
+   defining Unicode char U+1FF4 (decimal 8180)
+   defining Unicode char U+1FF6 (decimal 8182)
+   defining Unicode char U+1FF7 (decimal 8183)
+   defining Unicode char U+1FF8 (decimal 8184)
+   defining Unicode char U+1FF9 (decimal 8185)
+   defining Unicode char U+1FFA (decimal 8186)
+   defining Unicode char U+1FFB (decimal 8187)
+   defining Unicode char U+1FFC (decimal 8188)
+   defining Unicode char U+1FFD (decimal 8189)
+   defining Unicode char U+1FFE (decimal 8190)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+10144 (decimal 65860)
+   defining Unicode char U+10145 (decimal 65861)
+   defining Unicode char U+10146 (decimal 65862)
+   defining Unicode char U+10147 (decimal 65863)
+) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\greek-fontenc.def
+File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
+))
+   defining Unicode char U+00B5 (decimal 181)
+)) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
 \col@sep=\dimen157
 \ar@mcellbox=\box55
@@ -774,41 +1137,103 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 49.
 \c@exercise=\count390
 \c@proposition=\count391
 \c@prop=\count392
+)
 \c@question=\count393
- (phdthesis_YiGu.aux)
+ (phdthesis_YiGu.aux (chap1.aux) (chap2.aux) (chap3.aux))
 \openout1 = `phdthesis_YiGu.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 133.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 11.
+LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 11.
+ (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/cbfonts-fd\lgrcmr.fd
+File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
+)
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 133.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package hyperref Info: Link coloring ON on input line 133.
+Package hyperref Info: Link coloring ON on input line 11.
  (phdthesis_YiGu.out) (phdthesis_YiGu.out)
 \@outlinefile=\write4
 \openout4 = `phdthesis_YiGu.out'.
 
+ (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\puenc-greek.def
+File: puenc-greek.def 2023-09-12 2.5 Greek LICRs for PDF strings
+ (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\greek-fontenc.def
+File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
+))
+LaTeX Info: Redefining \Upsilon on input line 11.
+LaTeX Info: Redefining \Omega on input line 11.
+LaTeX Info: Redefining \alpha on input line 11.
+LaTeX Info: Redefining \epsilon on input line 11.
+LaTeX Info: Redefining \eta on input line 11.
+LaTeX Info: Redefining \iota on input line 11.
+LaTeX Info: Redefining \rho on input line 11.
+LaTeX Info: Redefining \upsilon on input line 11.
+LaTeX Info: Redefining \omega on input line 11.
+   defining Unicode char U+0393 (decimal 915)
+   defining Unicode char U+0394 (decimal 916)
+   defining Unicode char U+0398 (decimal 920)
+   defining Unicode char U+039B (decimal 923)
+   defining Unicode char U+039E (decimal 926)
+   defining Unicode char U+03A0 (decimal 928)
+   defining Unicode char U+03A3 (decimal 931)
+   defining Unicode char U+03A5 (decimal 933)
+   defining Unicode char U+03A6 (decimal 934)
+   defining Unicode char U+03A8 (decimal 936)
+   defining Unicode char U+03A9 (decimal 937)
+   defining Unicode char U+03B1 (decimal 945)
+   defining Unicode char U+03B2 (decimal 946)
+   defining Unicode char U+03B3 (decimal 947)
+   defining Unicode char U+03B4 (decimal 948)
+   defining Unicode char U+03B5 (decimal 949)
+   defining Unicode char U+03B6 (decimal 950)
+   defining Unicode char U+03B7 (decimal 951)
+   defining Unicode char U+03B8 (decimal 952)
+   defining Unicode char U+03B9 (decimal 953)
+   defining Unicode char U+03BA (decimal 954)
+   defining Unicode char U+03BB (decimal 955)
+   defining Unicode char U+03BC (decimal 956)
+   defining Unicode char U+03BD (decimal 957)
+   defining Unicode char U+03BE (decimal 958)
+   defining Unicode char U+03C0 (decimal 960)
+   defining Unicode char U+03C1 (decimal 961)
+   defining Unicode char U+03C2 (decimal 962)
+   defining Unicode char U+03C3 (decimal 963)
+   defining Unicode char U+03C4 (decimal 964)
+   defining Unicode char U+03C5 (decimal 965)
+   defining Unicode char U+03C6 (decimal 966)
+   defining Unicode char U+03C7 (decimal 967)
+   defining Unicode char U+03C8 (decimal 968)
+   defining Unicode char U+03C9 (decimal 969)
+   defining Unicode char U+03D1 (decimal 977)
+   defining Unicode char U+03D5 (decimal 981)
+   defining Unicode char U+03D6 (decimal 982)
+   defining Unicode char U+03DD (decimal 989)
+   defining Unicode char U+03F1 (decimal 1009)
+   defining Unicode char U+03F5 (decimal 1013)
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count394
@@ -845,21 +1270,21 @@ Package caption Info: End \AtBeginDocument code.
 
 
 
-{C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (abstract.tex
 
 [2
 
 
 ]
 Abstract
-
+) (acknowledgements.tex
 
 [3
 
 
 ]
 Acknowledgements
-
+) (preface.tex
 
 [4
 
@@ -867,272 +1292,25 @@ Acknowledgements
 
 ]
 Preface
-
+) (dedication.tex
 
 [5
 
 
 
 ]
-Table of Contents
-(phdthesis_YiGu.toc
-Underfull \vbox (badness 2384) has occurred while \output is active
-\vbox(578.15999+0.0)x455.30121, glue set 2.87991
-.\write-{}
-.\pdfdest name{section*.6} xyz
-.\write-{}
-.\write-{}
-.\write4{\protect \BOOKMARK [0][]{section*.6}{\376\377\000T\000a\000b\000l\000e\000\040\000o\000f\000\040\000C\000o\000n\000t\000e\000n\000t\000s}{}% 4}
-.\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \tocchapter {Chapter}{}{Table of Contents}}{\thepage }{section*.6}\protected@file@percent }}
-.\glue(\topskip) 80.00002
-.\hbox(9.99998+0.0)x455.30121, glue set 164.7432fil
-..\glue(\leftskip) 0.0 plus 1.0fil
-..\hbox(0.0+0.0)x0.0
-..\OT1/cmr/bx/n/14.4 T
-..\kern-1.35
-..\OT1/cmr/bx/n/14.4 a
-..\OT1/cmr/bx/n/14.4 b
-..\OT1/cmr/bx/n/14.4 l
-..\OT1/cmr/bx/n/14.4 e
-..\glue 5.4 plus 2.7 minus 1.79999
-..\OT1/cmr/bx/n/14.4 o
-..\OT1/cmr/bx/n/14.4 f
-..\glue 5.4 plus 2.7 minus 1.79999
-..\OT1/cmr/bx/n/14.4 C
-..\OT1/cmr/bx/n/14.4 o
-..\OT1/cmr/bx/n/14.4 n
-..\kern-0.45001
-..\OT1/cmr/bx/n/14.4 t
-..\OT1/cmr/bx/n/14.4 e
-..\OT1/cmr/bx/n/14.4 n
-..\kern-0.45001
-..\OT1/cmr/bx/n/14.4 t
-..\OT1/cmr/bx/n/14.4 s
-..\penalty 10000
-..\glue(\parfillskip) 0.0
-..\glue(\rightskip) 0.0 plus 1.0fil
-.\glue 8.79996
-.\glue(\parskip) 0.0
-.\glue(\parskip) 0.0
-.\glue(\baselineskip) 16.86673
-.\hbox(8.33331+0.0)x455.30121, glue set 391.7254fil
-..\glue(\leftskip) 66.58264
-..\hbox(0.0+0.0)x0.0
-..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{chapter*.1}
-..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
-..\OT1/cmr/m/n/12 A
-..\OT1/cmr/m/n/12 b
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 t
-..\pdfcolorstack 0 pop
-..\pdfendlink
-..\penalty 10000
-..\glue 0.0 plus 1.0fil
-..\hbox(7.73332+0.0)x18.79987, glue set 12.92493fil
-...\glue 0.0 plus 1.0fil minus 1.0fil
-...\OT1/cmr/m/n/12 3
-..\penalty 10000
-..\glue(\parfillskip) -18.79987
-..\glue(\rightskip) 18.79987 plus 46.99951
-.\penalty 10000
-.\penalty -300
-.\glue 8.0 plus 1.0
-.\glue(\parskip) 0.0
-.\glue(\parskip) 0.0
-.\glue(\baselineskip) 16.86673
-.\hbox(8.33331+2.33331)x455.30121, glue set 339.50372fil
-..\glue(\leftskip) 66.58264
-..\hbox(0.0+0.0)x0.0
-..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{chapter*.3}
-..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
-..\OT1/cmr/m/n/12 A
-..\OT1/cmr/m/n/12 c
-..\kern-0.32639
-..\OT1/cmr/m/n/12 k
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 o
-..\kern-0.32639
-..\OT1/cmr/m/n/12 w
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 d
-..\OT1/cmr/m/n/12 g
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 m
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 n
-..\kern-0.32639
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 s
-..\pdfcolorstack 0 pop
-..\pdfendlink
-..\penalty 10000
-..\glue 0.0 plus 1.0fil
-..\hbox(7.73332+0.0)x18.79987, glue set 12.92493fil
-...\glue 0.0 plus 1.0fil minus 1.0fil
-...\OT1/cmr/m/n/12 4
-..\penalty 10000
-..\glue(\parfillskip) -18.79987
-..\glue(\rightskip) 18.79987 plus 46.99951
-.\penalty 10000
-.\penalty -300
-.\glue 8.0 plus 1.0
-.\glue(\parskip) 0.0
-.\glue(\parskip) 0.0
-.\glue(\baselineskip) 14.53342
-.\hbox(8.33331+0.0)x455.30121, glue set 398.80591fil
-..\glue(\leftskip) 66.58264
-..\hbox(0.0+0.0)x0.0
-..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{chapter*.5}
-..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
-..\OT1/cmr/m/n/12 P
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 f
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 e
-..\pdfcolorstack 0 pop
-..\pdfendlink
-..\penalty 10000
-..\glue 0.0 plus 1.0fil
-..\hbox(7.73332+0.0)x18.79987, glue set 12.92493fil
-...\glue 0.0 plus 1.0fil minus 1.0fil
-...\OT1/cmr/m/n/12 5
-..\penalty 10000
-..\glue(\parfillskip) -18.79987
-..\glue(\rightskip) 18.79987 plus 46.99951
-.\penalty 10000
-.\penalty -300
-.\glue 8.0 plus 1.0
-.\glue(\parskip) 0.0
-.\glue(\parskip) 0.0
-.\glue(\baselineskip) 16.86673
-.\hbox(8.33331+0.0)x455.30121, glue set 345.04813fil
-..\glue(\leftskip) 66.58264
-..\hbox(0.0+0.0)x0.0
-..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{section*.6}
-..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
-..\OT1/cmr/m/n/12 T
-..\kern-0.97916
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 b
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 e
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 f
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 C
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\kern-0.32639
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 n
-..\kern-0.32639
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 s
-..\pdfcolorstack 0 pop
-..\pdfendlink
-..\penalty 10000
-..\glue 0.0 plus 1.0fil
-..\hbox(7.73332+0.0)x18.79987, glue set 12.92493fil
-...\glue 0.0 plus 1.0fil minus 1.0fil
-...\OT1/cmr/m/n/12 6
-..\penalty 10000
-..\glue(\parfillskip) -18.79987
-..\glue(\rightskip) 18.79987 plus 46.99951
-.\penalty 10000
-.\penalty -300
-.\glue 8.0 plus 1.0
-.\glue(\parskip) 0.0
-.\glue(\parskip) 0.0
-.\glue(\baselineskip) 16.86673
-.\hbox(8.33331+0.0)x455.30121, glue set 366.36316fil
-..\glue(\leftskip) 66.58264
-..\hbox(0.0+0.0)x0.0
-..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{section*.7}
-..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
-..\OT1/cmr/m/n/12 L
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 f
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 T
-..\kern-0.97916
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 b
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\pdfcolorstack 0 pop
-..\pdfendlink
-..\penalty 10000
-..\glue 0.0 plus 1.0fil
-..\hbox(7.73332+0.0)x18.79987, glue set 12.92493fil
-...\glue 0.0 plus 1.0fil minus 1.0fil
-...\OT1/cmr/m/n/12 8
-..\penalty 10000
-..\glue(\parfillskip) -18.79987
-..\glue(\rightskip) 18.79987 plus 46.99951
-.\penalty 10000
-.\penalty -300
-.\glue 8.0 plus 1.0
-.\glue(\parskip) 0.0
-.\glue(\parskip) 0.0
-.\glue(\baselineskip) 16.86673
-.\hbox(8.33331+2.33331)x455.30121, glue set 361.63266fil
-..\glue(\leftskip) 66.58264
-..\hbox(0.0+0.0)x0.0
-..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{section*.8}
-..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
-..\OT1/cmr/m/n/12 L
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 f
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 F
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 g
-..\OT1/cmr/m/n/12 u
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\pdfcolorstack 0 pop
-..\pdfendlink
-..\penalty 10000
-..\glue 0.0 plus 1.0fil
-..\hbox(7.73332+0.0)x18.79987, glue set 7.04999fil
-...\glue 0.0 plus 1.0fil minus 1.0fil
-...\OT1/cmr/m/n/12 1
-...\OT1/cmr/m/n/12 0
-..\penalty 10000
-..\glue(\parfillskip) -18.79987
-..\glue(\rightskip) 18.79987 plus 46.99951
-.\penalty 10000
-.\penalty -300
-.etc.
-
-
+Dedication
+)
 
 [6
+
+
+
+]
+Table of Contents
+(phdthesis_YiGu.toc
+
+[7
 
 
 
@@ -1142,11 +1320,11 @@ Underfull \vbox (badness 2384) has occurred while \output is active
 
 
 
-[7]
+[8]
 List of Tables
 (phdthesis_YiGu.lot
 
-[8
+[9
 
 
 
@@ -1156,11 +1334,11 @@ List of Tables
 
 
 
-[9]
+[10]
 List of Figures
 (phdthesis_YiGu.lof
 
-[10
+[11
 
 
 
@@ -1284,7 +1462,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue(\leftskip) 66.58264
 ..\hbox(0.0+0.0)x0.0
 ..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.45}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.47}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\hbox(7.73332+0.0)x66.58264, glue set 51.56891fil
 ...\OT1/cmr/m/n/12 2
@@ -1558,8 +1736,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 0.0 plus 1.0fil
 ..\hbox(7.73332+0.0)x18.79987, glue set 7.04999fil
 ...\glue 0.0 plus 1.0fil minus 1.0fil
-...\OT1/cmr/m/n/12 6
-...\OT1/cmr/m/n/12 9
+...\OT1/cmr/m/n/12 7
+...\OT1/cmr/m/n/12 0
 ..etc.
 .\penalty 10000
 .\glue 10.0
@@ -1574,7 +1752,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue(\leftskip) 66.58264
 ..\hbox(0.0+0.0)x0.0
 ..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.50}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.52}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\hbox(7.73332+0.0)x66.58264, glue set 51.56891fil
 ...\OT1/cmr/m/n/12 3
@@ -1838,7 +2016,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\hbox(7.73332+0.0)x18.79987, glue set 7.04999fil
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ...\OT1/cmr/m/n/12 8
-...\OT1/cmr/m/n/12 7
+...\OT1/cmr/m/n/12 8
 ..\penalty 10000
 ..\glue(\parfillskip) -18.79987
 ..\glue(\rightskip) 18.79987 plus 46.99951
@@ -1852,7 +2030,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue(\leftskip) 66.58264
 ..\hbox(0.0+0.0)x0.0
 ..\glue -66.58264
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.54}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.56}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\hbox(7.73332+0.0)x66.58264, glue set 51.56891fil
 ...\OT1/cmr/m/n/12 3
@@ -1909,24 +2087,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[11])
+[12])
 \tf@lof=\write7
 \openout7 = `phdthesis_YiGu.lof'.
 
 
 
-[12]
+[13]
+\openout2 = `chap1.aux'.
+
+ (chap1.tex
 Chapter 1
+)
 
+[14
 
-[13
 
 
 ]
-Chapter 2
-(chap2.tex
+\openout2 = `chap2.aux'.
 
-[14
+ (chap2.tex
+Chapter 2
+
+
+[15
+
+
+
 
 
 ]
@@ -1960,8 +2148,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0
 ..\glue(\rightskip) 0.0 plus 1.0fil
-.\write4{\protect \BOOKMARK [1][]{section.2.1}{\376\377\0002\000.\0001\000.\000\040\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{chapter.2}% 12}
-.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.1}{Introduction}}{\thepage }{section.2.1}\protected@file@percent }}
+.\write4{\protect \BOOKMARK [1][]{section.2.1}{\376\377\0002\000.\0001\000.\000\040\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{chapter.2}% 13}
+.\write2{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.1}{Introduction}}{\thepage }{section.2.1}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.0
 .\glue(\parskip) 0.0
@@ -2911,7 +3099,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[15]
+[16]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -4101,9 +4289,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[16]
-
 [17]
+
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 5.5515
 .\glue(\topskip) 1.0
@@ -4496,11 +4684,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0
 ..\glue(\rightskip) 0.0 plus 1.0fil
-.\write4{\protect \BOOKMARK [1][]{section.2.2}{\376\377\0002\000.\0002\000.\000\040\000P\000r\000e\000l\000i\000m\000i\000n\000a\000r\000i\000e\000s}{chapter.2}% 13}
-.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.2}{Preliminaries}}{\thepage }{section.2.2}\protected@file@percent }}
+.\write4{\protect \BOOKMARK [1][]{section.2.2}{\376\377\0002\000.\0002\000.\000\040\000P\000r\000e\000l\000i\000m\000i\000n\000a\000r\000i\000e\000s}{chapter.2}% 14}
+.\write2{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.2}{Preliminaries}}{\thepage }{section.2.2}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.0
-.\write1{\newlabel{sec:prelim}{{2.2}{\thepage }{Preliminaries}{section.2.2}{}}}
+.\write2{\newlabel{sec:prelim}{{2.2}{\thepage }{Preliminaries}{section.2.2}{}}}
 .\penalty 10000
 .\penalty 10000
 .\pdfdest name{subsection.2.2.1} xyz
@@ -4549,7 +4737,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.1}{Markov Random Fields (MRF)}}{\thepage }{subsection.2.2.1}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.1}{Markov Random Fields (MRF)}}{\thepage }{subsection.2.2.1}\protected@file@percent }}
 .\penalty 10000
 .\penalty 10000
 .\glue 7.75 plus 1.03331
@@ -4668,7 +4856,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[18]
+[19]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 6.76166
 .\pdfdest name{subsection.2.2.2} xyz
@@ -4701,7 +4889,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.2}{Constrained MRF}}{\thepage }{subsection.2.2.2}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.2}{Constrained MRF}}{\thepage }{subsection.2.2.2}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -5015,7 +5203,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 2
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:constr_mrf}{{2.2}{\thepage }{Constrained MRF}{equation.2.2}{}}}
+...\write2{\newlabel{eq:constr_mrf}{{2.2}{\thepage }{Constrained MRF}{equation.2.2}{}}}
 ..\kern118.46933
 ..\hbox(17.11809+11.23141)x170.05748, display
 ...\penalty 10000
@@ -5208,7 +5396,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.3}{Learn Constrained MRF}}{\thepage }{subsection.2.2.3}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.3}{Learn Constrained MRF}}{\thepage }{subsection.2.2.3}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -5334,7 +5522,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[19]
+[20]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 12.93715
 .\glue(\topskip) 1.66669
@@ -5371,7 +5559,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 4
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:gradient}{{2.4}{\thepage }{Learn Constrained MRF}{equation.2.4}{}}}
+...\write2{\newlabel{eq:gradient}{{2.4}{\thepage }{Learn Constrained MRF}{equation.2.4}{}}}
 ..\kern84.81454
 ..\hbox(37.2612+31.26118)x237.36707, display
 ...\penalty 10000
@@ -6127,7 +6315,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.4}{Factor Potential in Single Variable Form}}{\thepage }{subsection.2.2.4}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.4}{Factor Potential in Single Variable Form}}{\thepage }{subsection.2.2.4}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -6301,7 +6489,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[20]
+[21]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 5.79968
 .\glue(\topskip) 1.0
@@ -7176,7 +7364,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.5}{Extreme Condition}}{\thepage }{subsection.2.2.5}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.2.5}{Extreme Condition}}{\thepage }{subsection.2.2.5}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -7184,8 +7372,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[21]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 311.
+[22]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 314.
 
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
@@ -7243,8 +7431,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0
 ..\glue(\rightskip) 0.0 plus 1.0fil
-.\write4{\protect \BOOKMARK [1][]{section.2.3}{\376\377\0002\000.\0003\000.\000\040\000S\000a\000m\000p\000l\000i\000n\000g\000\040\000T\000h\000r\000o\000u\000g\000h\000\040\000L\000o\000v\000\341\000s\000z\000\040\000L\000o\000c\000a\000l\000\040\000L\000e\000m\000m\000a}{chapter.2}% 14}
-.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.3}{Sampling Through Lov\'asz Local Lemma}}{\thepage }{section.2.3}\protected@file@percent }}
+.\write4{\protect \BOOKMARK [1][]{section.2.3}{\376\377\0002\000.\0003\000.\000\040\000S\000a\000m\000p\000l\000i\000n\000g\000\040\000T\000h\000r\000o\000u\000g\000h\000\040\000L\000o\000v\000\341\000s\000z\000\040\000L\000o\000c\000a\000l\000\040\000L\000e\000m\000m\000a}{chapter.2}% 15}
+.\write2{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.3}{Sampling Through Lov\'asz Local Lemma}}{\thepage }{section.2.3}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.0
 .\glue(\parskip) 0.0
@@ -7634,7 +7822,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 6
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:constr_mrf_single}{{2.6}{\thepage }{Sampling Through Lov\'asz Local Lemma}{equation.2.6}{}}}
+...\write2{\newlabel{eq:constr_mrf_single}{{2.6}{\thepage }{Sampling Through Lov\'asz Local Lemma}{equation.2.6}{}}}
 ..\kern103.27377
 ..\hbox(17.34464+11.34464)x200.44861, display
 ...\penalty 10000
@@ -8306,14 +8494,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[22]
-
 [23]
-LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <12> not available
-(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 361.
-
 
 [24]
+LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <12> not available
+(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 364.
+
+
+[25]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 13.60399
 .\glue(\topskip) 1.66669
@@ -9072,7 +9260,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\OT1/cmr/m/n/12 8
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:weight}{{2.8}{\thepage }{Represent Constraints as CNF}{equation.2.8}{}}}
+.....\write2{\newlabel{eq:weight}{{2.8}{\thepage }{Represent Constraints as CNF}{equation.2.8}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -9257,7 +9445,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\OT1/cmr/m/n/12 9
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:bias}{{2.9}{\thepage }{Represent Constraints as CNF}{equation.2.9}{}}}
+.....\write2{\newlabel{eq:bias}{{2.9}{\thepage }{Represent Constraints as CNF}{equation.2.9}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -9273,7 +9461,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[25]
+[26]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -9371,7 +9559,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.11} xyz
+.....\pdfdest name{section*.13} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 I
@@ -9389,7 +9577,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 o
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Initialization}}{\thepage }{section*.11}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Initialization}}{\thepage }{section*.13}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 T
 ..\kern-0.97916
@@ -9722,7 +9910,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.12} xyz
+.....\pdfdest name{section*.14} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 C
@@ -9765,7 +9953,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 o
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Check Constraint Satisfaction}}{\thepage }{section*.12}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Check Constraint Satisfaction}}{\thepage }{section*.14}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 T
 ..\kern-0.97916
@@ -9849,7 +10037,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 2
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:Zt}{{2.12}{\thepage }{Check Constraint Satisfaction}{equation.2.12}{}}}
+...\write2{\newlabel{eq:Zt}{{2.12}{\thepage }{Check Constraint Satisfaction}{equation.2.12}{}}}
 ..\kern153.29884
 ..\hbox(9.87534+2.33331)x88.64859, display
 ...\penalty 10000
@@ -10073,9 +10261,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[26]
-
 [27]
+
+[28]
 Underfull \vbox (badness 3954) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 3.40837
 .\vbox(151.76706+0.0)x455.30121
@@ -10159,8 +10347,8 @@ Underfull \vbox (badness 3954) has occurred while \output is active
 ..\kern 2.0
 ..\pdfcolorstack 0 push {0 g 0 G}
 ..\vbox(131.50044+0.0)x455.30121
-...\write1{\@writefile{loa}{\protect \contentsline {algorithm}{\protect \numberline {2}{\ignorespaces Learn Constrained MRFs via \protect \textsc  {Nelson}\protect \xspace  -CD.}}{\thepage }{algorithm.2}\protected@file@percent }}
-...\write1{\newlabel{alg:main}{{2}{\thepage }{Learn Constrained MRFs via \nls -CD}{algorithm.2}{}}}
+...\write2{\@writefile{loa}{\protect \contentsline {algorithm}{\protect \numberline {2}{\ignorespaces Learn Constrained MRFs via \protect \textsc  {Nelson}\protect \xspace  -CD.}}{\thepage }{algorithm.2}\protected@file@percent }}
+...\write2{\newlabel{alg:main}{{2}{\thepage }{Learn Constrained MRFs via \nls -CD}{algorithm.2}{}}}
 ...\penalty -51
 ...\glue 2.34993
 ...\glue(\parskip) 0.0
@@ -11551,13 +11739,13 @@ Underfull \vbox (badness 3954) has occurred while \output is active
 
 
 
-[28]
-
 [29]
 
 [30]
 
 [31]
+
+[32]
 Package epstopdf Info: Source file: <exp/sampling.randkcnf.uniform.time.eps>
 (epstopdf)                    date: 2024-12-19 22:24:28
 (epstopdf)                    size: 279777 bytes
@@ -11565,41 +11753,41 @@ Package epstopdf Info: Source file: <exp/sampling.randkcnf.uniform.time.eps>
 (epstopdf)                    date: 2024-12-19 22:24:28
 (epstopdf)                    size: 27926 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf exp/sampling.randkcnf.uniform.time.eps>
-(epstopdf)             \includegraphics on input line 707.
+(epstopdf)             \includegraphics on input line 710.
 Package epstopdf Info: Output file is already uptodate.
-<exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf, id=715, 236.885pt x 223.83624pt>
+<exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf, id=726, 236.885pt x 223.83624pt>
 File: exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf>
-Package pdftex.def Info: exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf  used on input line 707.
+Package pdftex.def Info: exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf  used on input line 710.
 (pdftex.def)             Requested size: 223.10008pt x 210.81595pt.
-<exp/sampling.randkcnf.valid.pdf, id=716, 247.38046pt x 226.19882pt>
+<exp/sampling.randkcnf.valid.pdf, id=727, 247.38046pt x 226.19882pt>
 File: exp/sampling.randkcnf.valid.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.valid.pdf>
-Package pdftex.def Info: exp/sampling.randkcnf.valid.pdf  used on input line 708.
+Package pdftex.def Info: exp/sampling.randkcnf.valid.pdf  used on input line 711.
 (pdftex.def)             Requested size: 227.6506pt x 208.16064pt.
 
 
 pdfTeX warning: pdflatex (file ./exp/sampling.randkcnf.weighted-crop.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<exp/sampling.randkcnf.weighted-crop.pdf, id=717, 275.0275pt x 231.86626pt>
+<exp/sampling.randkcnf.weighted-crop.pdf, id=728, 275.0275pt x 231.86626pt>
 File: exp/sampling.randkcnf.weighted-crop.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.weighted-crop.pdf>
-Package pdftex.def Info: exp/sampling.randkcnf.weighted-crop.pdf  used on input line 716.
+Package pdftex.def Info: exp/sampling.randkcnf.weighted-crop.pdf  used on input line 719.
 (pdftex.def)             Requested size: 241.30908pt x 203.445pt.
-<exp/valid.randkcnf.weighted.pdf, id=718, 265.89696pt x 104.34848pt>
+<exp/valid.randkcnf.weighted.pdf, id=729, 265.89696pt x 104.34848pt>
 File: exp/valid.randkcnf.weighted.pdf Graphic file (type pdf)
 <use exp/valid.randkcnf.weighted.pdf>
-Package pdftex.def Info: exp/valid.randkcnf.weighted.pdf  used on input line 720.
+Package pdftex.def Info: exp/valid.randkcnf.weighted.pdf  used on input line 723.
 (pdftex.def)             Requested size: 211.85336pt x 83.14133pt.
-<exp/resample.randkcnf.weighted.pdf, id=719, 240.03473pt x 142.94302pt>
+<exp/resample.randkcnf.weighted.pdf, id=730, 240.03473pt x 142.94302pt>
 File: exp/resample.randkcnf.weighted.pdf Graphic file (type pdf)
 <use exp/resample.randkcnf.weighted.pdf>
-Package pdftex.def Info: exp/resample.randkcnf.weighted.pdf  used on input line 721.
+Package pdftex.def Info: exp/resample.randkcnf.weighted.pdf  used on input line 724.
 (pdftex.def)             Requested size: 190.45284pt x 113.41667pt.
 
 
-[32]
+[33]
 
-[33 <./exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf> <./exp/sampling.randkcnf.valid.pdf> <./exp/sampling.randkcnf.weighted-crop.pdf> <./exp/valid.randkcnf.weighted.pdf> <./exp/resample.randkcnf.weighted.pdf>]
+[34 <./exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf> <./exp/sampling.randkcnf.valid.pdf> <./exp/sampling.randkcnf.weighted-crop.pdf> <./exp/valid.randkcnf.weighted.pdf> <./exp/resample.randkcnf.weighted.pdf>]
 Underfull \vbox (badness 1253) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 2.3254
 .\glue(\topskip) 1.0
@@ -11610,7 +11798,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.23} xyz
+.....\pdfdest name{section*.25} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 A
@@ -11629,7 +11817,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 d
 ..\OT1/cmr/bx/n/12 y
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Abalation Study}}{\thepage }{section*.23}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Abalation Study}}{\thepage }{section*.25}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 W
 ..\kern-0.97916
@@ -11860,7 +12048,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\OT1/cmr/m/n/12 .
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.21}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.23}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 .
@@ -12132,7 +12320,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.5.3}{Sink-Free Orientation in Undirected Graphs}}{\thepage }{subsection.2.5.3}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.5.3}{Sink-Free Orientation in Undirected Graphs}}{\thepage }{subsection.2.5.3}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -12431,28 +12619,28 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 
 
 
-[34]
-
 [35]
-<exp/vehicle.resamples.pdf, id=938, 295.34734pt x 197.7789pt>
+
+[36]
+<exp/vehicle.resamples.pdf, id=949, 295.34734pt x 197.7789pt>
 File: exp/vehicle.resamples.pdf Graphic file (type pdf)
 <use exp/vehicle.resamples.pdf>
-Package pdftex.def Info: exp/vehicle.resamples.pdf  used on input line 826.
+Package pdftex.def Info: exp/vehicle.resamples.pdf  used on input line 829.
 (pdftex.def)             Requested size: 225.37187pt x 150.9201pt.
-<exp/vehicle.time.pdf, id=939, 294.8221pt x 199.11227pt>
+<exp/vehicle.time.pdf, id=950, 294.8221pt x 199.11227pt>
 File: exp/vehicle.time.pdf Graphic file (type pdf)
 <use exp/vehicle.time.pdf>
-Package pdftex.def Info: exp/vehicle.time.pdf  used on input line 827.
+Package pdftex.def Info: exp/vehicle.time.pdf  used on input line 830.
 (pdftex.def)             Requested size: 225.37187pt x 152.211pt.
 
 
-[36]
+[37]
 
-[37 <./exp/vehicle.resamples.pdf> <./exp/vehicle.time.pdf>]
-
-[38]
+[38 <./exp/vehicle.resamples.pdf> <./exp/vehicle.time.pdf>]
 
 [39]
+
+[40]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 6.04677
 .\vbox(228.35838+0.0)x455.30121
@@ -12462,13 +12650,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\glue -7.0
 ...\glue 0.0
-...\pdfdest name{table.caption.28} xyz
+...\pdfdest name{table.caption.30} xyz
 ...\penalty 10000
 ...\rule(0.0+0.0)x*
 ...\penalty 10000
 ...\glue 7.0
 ...\glue 0.0
-...\write1{\@writefile{lot}{\protect \contentsline {table}{\protect \numberline {2.4}{\ignorespaces Summary of all the notations used in the theoretical analysis of Algorithm~\ref {alg:lll-sampler}.}}{\thepage }{table.caption.28}\protected@file@percent }}
+...\write2{\@writefile{lot}{\protect \contentsline {table}{\protect \numberline {2.4}{\ignorespaces Summary of all the notations used in the theoretical analysis of Algorithm~\ref {alg:lll-sampler}.}}{\thepage }{table.caption.30}\protected@file@percent }}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue 0.0
 ...\glue(\parskip) 0.0
@@ -12560,7 +12748,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 12.0
 ...\rule(0.0+0.0)x*
 ...\pdfcolorstack 0 pop
-...\write1{\newlabel{tab:quantifier}{{2.4}{\thepage }{Summary of all the notations used in the theoretical analysis of Algorithm~\ref {alg:lll-sampler}}{table.caption.28}{}}}
+...\write2{\newlabel{tab:quantifier}{{2.4}{\thepage }{Summary of all the notations used in the theoretical analysis of Algorithm~\ref {alg:lll-sampler}}{table.caption.30}{}}}
 ...\glue(\parskip) 0.0
 ...\glue(\parskip) 0.0
 ...\hbox(96.1792+92.17918)x455.30121, glue set 51.47849fil
@@ -13993,7 +14181,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue(\rightskip) 0.0
 .\penalty -51
 .\glue 12.60002 plus 5.03992 minus 5.03992
-.\write1{\newlabel{def:general-cmrf}{{3}{\thepage }{}{definition.3}{}}}
+.\write2{\newlabel{def:general-cmrf}{{3}{\thepage }{}{definition.3}{}}}
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 13.86673
@@ -14220,7 +14408,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\penalty -51
 .\glue 4.0
 .\glue 15.87595
-.\write1{\newlabel{def:prs-prob}{{4}{\thepage }{}{definition.4}{}}}
+.\write2{\newlabel{def:prs-prob}{{4}{\thepage }{}{definition.4}{}}}
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 5.01956
@@ -14408,7 +14596,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[40]
+[41]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 7.09158
 .\pdfdest name{subsection.2.7.2} xyz
@@ -14448,10 +14636,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.7.2}{Ratio Property Lemma}}{\thepage }{subsection.2.7.2}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.7.2}{Ratio Property Lemma}}{\thepage }{subsection.2.7.2}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
-.\write1{\newlabel{lem:ratio-prob}{{1}{\thepage }{Ratio Property}{lemma.1}{}}}
+.\write2{\newlabel{lem:ratio-prob}{{1}{\thepage }{Ratio Property}{lemma.1}{}}}
 .\penalty 10000
 .\penalty 10000
 .\glue(\parskip) 0.0
@@ -14733,7 +14921,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 7
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:ratio}{{2.17}{\thepage }{Ratio Property}{equation.2.17}{}}}
+...\write2{\newlabel{eq:ratio}{{2.17}{\thepage }{Ratio Property}{equation.2.17}{}}}
 ..\kern75.99258
 ..\hbox(17.11809+11.23141)x243.26111, display
 ...\penalty 10000
@@ -15262,7 +15450,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[41]
+[42]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 0.0
@@ -15535,7 +15723,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 8
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:ratio-nelson}{{2.18}{\thepage }{Ratio Property}{equation.2.18}{}}}
+...\write2{\newlabel{eq:ratio-nelson}{{2.18}{\thepage }{Ratio Property}{equation.2.18}{}}}
 ..\kern28.80627
 ..\hbox(19.18008+13.73149)x367.66118, display
 ...\penalty 10000
@@ -16296,7 +16484,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[42]
+[43]
 Underfull \vbox (badness 1009) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 2.16292
 .\glue(\topskip) 1.0
@@ -16734,7 +16922,7 @@ Underfull \vbox (badness 1009) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.7.3}{Proof of Theorem~\ref {th:product-dist}}}{\thepage }{subsection.2.7.3}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.7.3}{Proof of Theorem~\ref {th:product-dist}}}{\thepage }{subsection.2.7.3}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -16850,7 +17038,7 @@ Underfull \vbox (badness 1009) has occurred while \output is active
 
 
 
-[43]
+[44]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -16861,7 +17049,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.30} xyz
+.....\pdfdest name{section*.32} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 S
@@ -16914,7 +17102,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 d
 ..\OT1/cmr/bx/n/12 s
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Summation of All Possible Sampling Records}}{\thepage }{section*.30}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Summation of All Possible Sampling Records}}{\thepage }{section*.32}\protected@file@percent }}
 ..etc.
 .\penalty 20000
 .\glue(\baselineskip) 13.86673
@@ -17418,7 +17606,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\OT1/cmr/m/n/12 0
 ...\kern 0.0
 ...\OT1/cmr/m/n/12 )
-..\write1{\newlabel{eq:ratio-final}{{2.20}{\thepage }{Summation of All Possible Sampling Records}{equation.2.20}{}}}
+..\write2{\newlabel{eq:ratio-final}{{2.20}{\thepage }{Summation of All Possible Sampling Records}{equation.2.20}{}}}
 .\penalty 10000
 .\glue(\baselineskip) 3.4644
 .\hbox(18.73564+13.28705)x416.00842, shifted 19.6464, display
@@ -17683,7 +17871,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.31} xyz
+.....\pdfdest name{section*.33} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 S
@@ -17735,7 +17923,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 o
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Sample Space Analysis At Termination}}{\thepage }{section*.31}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Sample Space Analysis At Termination}}{\thepage }{section*.33}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 W
 ..\kern-0.97916
@@ -17927,9 +18115,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[44]
-
 [45]
+
+[46]
 \g__nicematrix_max_cell_width_dim=\dimen355
 \c@iRow=\count404
 \c@jCol=\count405
@@ -18939,7 +19127,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[46]
+[47]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -25758,9 +25946,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[47]
-
 [48]
+
+[49]
 Underfull \vbox (badness 1708) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 2.57745
 .\glue(\topskip) 1.66669
@@ -26068,7 +26256,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.8.1}{Definitions and Notations}}{\thepage }{subsection.2.8.1}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.8.1}{Definitions and Notations}}{\thepage }{subsection.2.8.1}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -26128,7 +26316,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ..etc.
 .\penalty -51
 .\glue 12.60002 plus 5.03992 minus 5.03992
-.\write1{\newlabel{def:p_q_st}{{5}{\thepage }{}{definition.5}{}}}
+.\write2{\newlabel{def:p_q_st}{{5}{\thepage }{}{definition.5}{}}}
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 13.86673
@@ -26256,7 +26444,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ....\OT1/cmr/m/n/12 6
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:def-pst}{{2.26}{\thepage }{}{equation.2.26}{}}}
+...\write2{\newlabel{eq:def-pst}{{2.26}{\thepage }{}{equation.2.26}{}}}
 ..\kern148.33824
 ..\hbox(21.00017+16.48637)x98.5698, display
 ...\penalty 10000
@@ -26365,7 +26553,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 
 
 
-[49]
+[50]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 13.23994
 .\glue(\topskip) 1.66669
@@ -27321,7 +27509,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[50]
+[51]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -27470,7 +27658,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\OT1/cmr/m/n/12 8
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:st-expand}{{2.28}{\thepage }{Equivalence of Record}{equation.2.28}{}}}
+.....\write2{\newlabel{eq:st-expand}{{2.28}{\thepage }{Equivalence of Record}{equation.2.28}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -27488,7 +27676,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\penalty -51
 .\glue 4.0
 .\glue 15.87595
-.\write1{\newlabel{eq:pair-prob}{{4}{\thepage }{}{lemma.4}{}}}
+.\write2{\newlabel{eq:pair-prob}{{4}{\thepage }{}{lemma.4}{}}}
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\lineskip) 1.0
@@ -27792,7 +27980,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[51]
+[52]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 12.284
 .\glue(\topskip) 1.66669
@@ -28538,7 +28726,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ........\OT1/cmr/m/n/12 )
 .....\mathoff
 ....\glue(\tabskip) 0.0
-..\write1{\newlabel{eq:bayes}{{2.30}{\thepage }{}{equation.2.30}{}}}
+..\write2{\newlabel{eq:bayes}{{2.30}{\thepage }{}{equation.2.30}{}}}
 .\penalty 0
 .\glue(\belowdisplayskip) 15.87595
 .\glue(\parskip) 0.0
@@ -28675,7 +28863,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 0
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:summation-st}{{2.30}{\thepage }{}{equation.2.30}{}}}
+...\write2{\newlabel{eq:summation-st}{{2.30}{\thepage }{}{equation.2.30}{}}}
 ..\kern77.93423
 ..\hbox(20.22342+14.2234)x239.3778, display
 ...\penalty 10000
@@ -29108,11 +29296,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[52
+[53
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.30}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1281     \end{equation}
+l.1284     \end{equation}
                          ]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
@@ -29217,7 +29405,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 1
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{pS_final}{{2.31}{\thepage }{}{equation.2.31}{}}}
+...\write2{\newlabel{pS_final}{{2.31}{\thepage }{}{equation.2.31}{}}}
 ..\kern129.08064
 ..\hbox(21.66672+15.00008)x137.08499, display
 ...\penalty 10000
@@ -29832,7 +30020,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 2
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{recursion_base}{{2.32}{\thepage }{}{equation.2.32}{}}}
+...\write2{\newlabel{recursion_base}{{2.32}{\thepage }{}{equation.2.32}{}}}
 ..\kern100.73442
 ..\hbox(13.28476+12.0981)x193.77744, display
 ...\penalty 10000
@@ -29973,32 +30161,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[53]
-
 [54]
 
 [55]
 
 [56]
+
+[57]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1421 \begin{equation}
+l.1424 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1421 \begin{equation}
+l.1424 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1421 \begin{equation}
+l.1424 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1421 \begin{equation}
+l.1424 \begin{equation}
                        
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 4.70894
@@ -30276,11 +30464,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0
 ..\glue(\rightskip) 0.0 plus 1.0fil
-.\write4{\protect \BOOKMARK [1][]{section.2.10}{\376\377\0002\000.\0001\0000\000.\000\040\000E\000x\000p\000e\000r\000i\000m\000e\000n\000t\000\040\000S\000e\000t\000t\000i\000n\000g\000s\000\040\000a\000n\000d\000\040\000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000s}{chapter.2}% 21}
-.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.10}{Experiment Settings and Configurations}}{\thepage }{section.2.10}\protected@file@percent }}
+.\write4{\protect \BOOKMARK [1][]{section.2.10}{\376\377\0002\000.\0001\0000\000.\000\040\000E\000x\000p\000e\000r\000i\000m\000e\000n\000t\000\040\000S\000e\000t\000t\000i\000n\000g\000s\000\040\000a\000n\000d\000\040\000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000s}{chapter.2}% 22}
+.\write2{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{2.10}{Experiment Settings and Configurations}}{\thepage }{section.2.10}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.0
-.\write1{\newlabel{appendix:exp-set}{{2.10}{\thepage }{Experiment Settings and Configurations}{section.2.10}{}}}
+.\write2{\newlabel{appendix:exp-set}{{2.10}{\thepage }{Experiment Settings and Configurations}{section.2.10}{}}}
 .\penalty 10000
 .\penalty 10000
 .\pdfdest name{subsection.2.10.1} xyz
@@ -30325,11 +30513,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.10.1}{Implementation Details}}{\thepage }{subsection.2.10.1}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.10.1}{Implementation Details}}{\thepage }{subsection.2.10.1}\protected@file@percent }}
 .\penalty 10000
 .\penalty 10000
 .\glue 7.75 plus 1.03331
-.\write1{\newlabel{appendix:implementation}{{2.10.1}{\thepage }{Implementation Details}{subsection.2.10.1}{}}}
+.\write2{\newlabel{appendix:implementation}{{2.10.1}{\thepage }{Implementation Details}{subsection.2.10.1}{}}}
 .\penalty 10000
 .\penalty 10000
 .\glue(\parskip) 0.0
@@ -30342,7 +30530,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.33} xyz
+.....\pdfdest name{section*.35} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 I
@@ -30373,7 +30561,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/b/sc/12 n
 ..\kern 0.0
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Implementation of \protect \textsc  {Nelson}\protect \xspace  }}{\thepage }{section*.33}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Implementation of \protect \textsc  {Nelson}\protect \xspace  }}{\thepage }{section*.35}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 h
@@ -30506,7 +30694,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[57]
+[58]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 4.4437
 .\glue(\topskip) 1.66669
@@ -30517,7 +30705,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.34} xyz
+.....\pdfdest name{section*.36} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 I
@@ -30535,7 +30723,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 o
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Initialization}}{\thepage }{section*.34}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Initialization}}{\thepage }{section*.36}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 h
@@ -30839,7 +31027,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.35} xyz
+.....\pdfdest name{section*.37} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 C
@@ -30874,7 +31062,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 o
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Check Constraint Satisfaction}}{\thepage }{section*.35}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Check Constraint Satisfaction}}{\thepage }{section*.37}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 h
@@ -31315,11 +31503,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[58]
-<figs/learn-pipeline-crop.pdf, id=1286, 1002.74625pt x 281.05pt>
+[59]
+<figs/learn-pipeline-crop.pdf, id=1297, 1002.74625pt x 281.05pt>
 File: figs/learn-pipeline-crop.pdf Graphic file (type pdf)
 <use figs/learn-pipeline-crop.pdf>
-Package pdftex.def Info: figs/learn-pipeline-crop.pdf  used on input line 1472.
+Package pdftex.def Info: figs/learn-pipeline-crop.pdf  used on input line 1475.
 (pdftex.def)             Requested size: 450.75069pt x 126.33838pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active
@@ -31559,7 +31747,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.37} xyz
+.....\pdfdest name{section*.39} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 R
@@ -31571,7 +31759,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 l
 ..\OT1/cmr/bx/n/12 e
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Resample}}{\thepage }{section*.37}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Resample}}{\thepage }{section*.39}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 G
 ..\OT1/cmr/m/n/12 i
@@ -32288,7 +32476,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[59]
+[60]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 11.23972
 .\vbox(194.33838+0.0)x455.30121
@@ -32298,7 +32486,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\glue -7.0
 ...\glue 0.0
-...\pdfdest name{figure.caption.38} xyz
+...\pdfdest name{figure.caption.40} xyz
 ...\penalty 10000
 ...\rule(0.0+0.0)x*
 ...\penalty 10000
@@ -32325,7 +32513,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
-...\write1{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {2.4}{\ignorespaces Implementation pipeline of the \protect \textsc  {Nelson}\protect \xspace  -CD algorithm with $m=1$. The proposed \protect \textsc  {Nelson}\protect \xspace  can be efficiently adapted to a Pytorch-based machine learning library and enforces constraint satisfaction during learning.}}{\thepage }{figure.caption.38}\protected@file@percent }}
+...\write2{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {2.4}{\ignorespaces Implementation pipeline of the \protect \textsc  {Nelson}\protect \xspace  -CD algorithm with $m=1$. The proposed \protect \textsc  {Nelson}\protect \xspace  can be efficiently adapted to a Pytorch-based machine learning library and enforces constraint satisfaction during learning.}}{\thepage }{figure.caption.40}\protected@file@percent }}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\rule(0.0+0.0)x*
 ...\glue 12.0
@@ -32534,7 +32722,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\glue(\rightskip) 0.0
 ...\glue 0.0
 ...\pdfcolorstack 0 pop
-...\write1{\newlabel{fig:pipeline}{{2.4}{\thepage }{Implementation pipeline of the \nls -CD algorithm with $m=1$. The proposed \nls can be efficiently adapted to a Pytorch-based machine learning library and enforces constraint satisfaction during learning}{figure.caption.38}{}}}
+...\write2{\newlabel{fig:pipeline}{{2.4}{\thepage }{Implementation pipeline of the \nls -CD algorithm with $m=1$. The proposed \nls can be efficiently adapted to a Pytorch-based machine learning library and enforces constraint satisfaction during learning}{figure.caption.40}{}}}
 ...\glue 0.0
 ..\pdfcolorstack 0 pop
 .\glue 12.0 plus 6.0 minus 4.0
@@ -32606,7 +32794,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 4
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:emp-gradient}{{2.34}{\thepage }{Implementation of Algorithm~\ref {alg:main}}{equation.2.34}{}}}
+...\write2{\newlabel{eq:emp-gradient}{{2.34}{\thepage }{Implementation of Algorithm~\ref {alg:main}}{equation.2.34}{}}}
 ..\kern102.22432
 ..\hbox(19.6445+16.64433)x190.79764, display
 ...\penalty 10000
@@ -33312,9 +33500,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[60 <./figs/learn-pipeline-crop.pdf>]
+[61 <./figs/learn-pipeline-crop.pdf>]
 
-[61]
+[62]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 5.33318
 .\glue(\topskip) 1.66669
@@ -33584,7 +33772,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 a
 ..\OT1/cmr/bx/n/12 p
 ..etc.
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.10.3}{Learn Sink-Free Orientation in Undirected Graphs}}{\thepage }{subsection.2.10.3}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.10.3}{Learn Sink-Free Orientation in Undirected Graphs}}{\thepage }{subsection.2.10.3}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -33947,7 +34135,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 e
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.42}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.44}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 .
@@ -34105,7 +34293,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[62]
+[63]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 15.12189
 .\vbox(331.29575+0.0)x455.30121
@@ -34115,7 +34303,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\glue -7.0
 ...\glue 0.0
-...\pdfdest name{figure.caption.42} xyz
+...\pdfdest name{figure.caption.44} xyz
 ...\penalty 10000
 ...\rule(0.0+0.0)x*
 ...\penalty 10000
@@ -38078,7 +38266,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
-...\write1{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {2.5}{\ignorespaces {\protect \textbf  {(a)} An un-directed graph $G(V,E)$ where the vertices are $V=\{v_1,v_2,v_3,v_4\}$ and the un-directed edges are $E=\{e_1=(v_1,v_2),e_2=(v_1,v_3),e_3=(v_2,v_3),e_4=(v_2,v_4),e_5=(v_3,v_4)\}$. \protect \textbf  {(b)} A possible sink-free orientation of the edges in the graph and its matrix representation $x$, where every vertex has at least one outgoing edge. }}}{\thepage }{figure.caption.42}\protected@file@percent }}
+...\write2{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {2.5}{\ignorespaces {\protect \textbf  {(a)} An un-directed graph $G(V,E)$ where the vertices are $V=\{v_1,v_2,v_3,v_4\}$ and the un-directed edges are $E=\{e_1=(v_1,v_2),e_2=(v_1,v_3),e_3=(v_2,v_3),e_4=(v_2,v_4),e_5=(v_3,v_4)\}$. \protect \textbf  {(b)} A possible sink-free orientation of the edges in the graph and its matrix representation $x$, where every vertex has at least one outgoing edge. }}}{\thepage }{figure.caption.44}\protected@file@percent }}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\rule(0.0+0.0)x*
 ...\glue 12.0
@@ -38381,7 +38569,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\glue(\rightskip) 0.0
 ...\glue 0.0
 ...\pdfcolorstack 0 pop
-...\write1{\newlabel{fig:sinkfreeex}{{2.5}{\thepage }{\textbf {(a)} An un-directed graph $G(V,E)$ where the vertices are $V=\{v_1,v_2,v_3,v_4\}$ and the un-directed edges are $E=\{e_1=(v_1,v_2),e_2=(v_1,v_3),e_3=(v_2,v_3),e_4=(v_2,v_4),e_5=(v_3,v_4)\}$. \textbf {(b)} A possible sink-free orientation of the edges in the graph and its matrix representation $x$, where every vertex has at least one outgoing edge}{figure.caption.42}{}}}
+...\write2{\newlabel{fig:sinkfreeex}{{2.5}{\thepage }{\textbf {(a)} An un-directed graph $G(V,E)$ where the vertices are $V=\{v_1,v_2,v_3,v_4\}$ and the un-directed edges are $E=\{e_1=(v_1,v_2),e_2=(v_1,v_3),e_3=(v_2,v_3),e_4=(v_2,v_4),e_5=(v_3,v_4)\}$. \textbf {(b)} A possible sink-free orientation of the edges in the graph and its matrix representation $x$, where every vertex has at least one outgoing edge}{figure.caption.44}{}}}
 ...\glue 0.0
 ..\pdfcolorstack 0 pop
 .\glue 12.0 plus 6.0 minus 4.0
@@ -38395,7 +38583,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.43} xyz
+.....\pdfdest name{section*.45} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 N
@@ -38408,7 +38596,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 s
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Notations}}{\thepage }{section*.43}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Notations}}{\thepage }{section*.45}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 L
 ..\OT1/cmr/m/n/12 e
@@ -38501,7 +38689,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 5
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:adjacency}{{2.35}{\thepage }{Notations}{equation.2.35}{}}}
+...\write2{\newlabel{eq:adjacency}{{2.35}{\thepage }{Notations}{equation.2.35}{}}}
 ..\kern132.23946
 ..\hbox(33.23994+27.23994)x130.76736, display
 ...\penalty 10000
@@ -38621,7 +38809,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[63]
+[64]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 5.99118
 .\glue(\topskip) 1.66669
@@ -38719,7 +38907,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 6
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:orientation-assign}{{2.36}{\thepage }{Notations}{equation.2.36}{}}}
+...\write2{\newlabel{eq:orientation-assign}{{2.36}{\thepage }{Notations}{equation.2.36}{}}}
 ..\kern84.4229
 ..\hbox(33.23994+27.23994)x226.40047, display
 ...\penalty 10000
@@ -39292,7 +39480,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.44} xyz
+.....\pdfdest name{section*.46} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 D
@@ -39303,7 +39491,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 e
 ..\OT1/cmr/bx/n/12 t
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Dataset}}{\thepage }{section*.44}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Dataset}}{\thepage }{section*.46}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 W
 ..\kern-0.97916
@@ -39457,7 +39645,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[64]
+[65]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 5.90012
 .\pdfdest name{subsection.2.10.4} xyz
@@ -39507,7 +39695,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.10.4}{Learn Vehicle Delivery Routes}}{\thepage }{subsection.2.10.4}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{2.10.4}{Learn Vehicle Delivery Routes}}{\thepage }{subsection.2.10.4}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\glue(\parskip) 0.0
@@ -39749,7 +39937,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 e
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.27}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.29}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 2
 ..\OT1/cmr/m/n/12 .
@@ -39871,7 +40059,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\OT1/cmr/m/n/12 7
 ....\kern 0.0
 ....\OT1/cmr/m/n/12 )
-...\write1{\newlabel{eq:route}{{2.37}{\thepage }{Learn Vehicle Delivery Routes}{equation.2.37}{}}}
+...\write2{\newlabel{eq:route}{{2.37}{\thepage }{Learn Vehicle Delivery Routes}{equation.2.37}{}}}
 ..\kern102.50465
 ..\hbox(33.23994+27.23994)x190.23695, display
 ...\penalty 10000
@@ -40229,9 +40417,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[65]
-
 [66]
+
+[67]
 Underfull \vbox (badness 1776) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 2.61046
 .\glue(\topskip) 1.0
@@ -41207,63 +41395,69 @@ Underfull \vbox (badness 1776) has occurred while \output is active
 
 
 
-[67]
-<exp/randkcnf_5_500_500_0001.uniform.pdf, id=1461, 295.61443pt x 203.57933pt>
+[68]
+<exp/randkcnf_5_500_500_0001.uniform.pdf, id=1472, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_500_500_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_500_500_0001.uniform.pdf>
-Package pdftex.def Info: exp/randkcnf_5_500_500_0001.uniform.pdf  used on input line 1724.
+Package pdftex.def Info: exp/randkcnf_5_500_500_0001.uniform.pdf  used on input line 1727.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_700_700_0001.uniform.pdf, id=1462, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_700_700_0001.uniform.pdf, id=1473, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_700_700_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_700_700_0001.uniform.pdf>
-Package pdftex.def Info: exp/randkcnf_5_700_700_0001.uniform.pdf  used on input line 1725.
+Package pdftex.def Info: exp/randkcnf_5_700_700_0001.uniform.pdf  used on input line 1728.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1000_1000_0001.uniform.pdf, id=1463, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1000_1000_0001.uniform.pdf, id=1474, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1000_1000_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1000_1000_0001.uniform.pdf>
-Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.uniform.pdf  used on input line 1726.
+Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.uniform.pdf  used on input line 1729.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1500_1500_0001.uniform.pdf, id=1464, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1500_1500_0001.uniform.pdf, id=1475, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1500_1500_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1500_1500_0001.uniform.pdf>
-Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.uniform.pdf  used on input line 1727.
+Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.uniform.pdf  used on input line 1730.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_500_500_0001.weighted.pdf, id=1465, 295.61443pt x 203.00784pt>
+<exp/randkcnf_5_500_500_0001.weighted.pdf, id=1476, 295.61443pt x 203.00784pt>
 File: exp/randkcnf_5_500_500_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_500_500_0001.weighted.pdf>
-Package pdftex.def Info: exp/randkcnf_5_500_500_0001.weighted.pdf  used on input line 1731.
+Package pdftex.def Info: exp/randkcnf_5_500_500_0001.weighted.pdf  used on input line 1734.
 (pdftex.def)             Requested size: 111.54657pt x 76.60168pt.
-<exp/randkcnf_5_700_700_0001.weighted.pdf, id=1466, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_700_700_0001.weighted.pdf, id=1477, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_700_700_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_700_700_0001.weighted.pdf>
-Package pdftex.def Info: exp/randkcnf_5_700_700_0001.weighted.pdf  used on input line 1732.
+Package pdftex.def Info: exp/randkcnf_5_700_700_0001.weighted.pdf  used on input line 1735.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1000_1000_0001.weighted.pdf, id=1467, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1000_1000_0001.weighted.pdf, id=1478, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1000_1000_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1000_1000_0001.weighted.pdf>
-Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.weighted.pdf  used on input line 1733.
+Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.weighted.pdf  used on input line 1736.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1500_1500_0001.weighted.pdf, id=1468, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1500_1500_0001.weighted.pdf, id=1479, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1500_1500_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1500_1500_0001.weighted.pdf>
-Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.weighted.pdf  used on input line 1734.
+Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.weighted.pdf  used on input line 1737.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
 )
 
-[68]
+[69]
 
-[69 <./exp/randkcnf_5_500_500_0001.uniform.pdf> <./exp/randkcnf_5_700_700_0001.uniform.pdf> <./exp/randkcnf_5_1000_1000_0001.uniform.pdf> <./exp/randkcnf_5_1500_1500_0001.uniform.pdf> <./exp/randkcnf_5_500_500_0001.weighted.pdf> <./exp/randkcnf_5_700_700_0001.weighted.pdf> <./exp/randkcnf_5_1000_1000_0001.weighted.pdf> <./exp/randkcnf_5_1500_1500_0001.weighted.pdf>]
+[70 <./exp/randkcnf_5_500_500_0001.uniform.pdf> <./exp/randkcnf_5_700_700_0001.uniform.pdf> <./exp/randkcnf_5_1000_1000_0001.uniform.pdf> <./exp/randkcnf_5_1500_1500_0001.uniform.pdf> <./exp/randkcnf_5_500_500_0001.weighted.pdf> <./exp/randkcnf_5_700_700_0001.weighted.pdf> <./exp/randkcnf_5_1000_1000_0001.weighted.pdf> <./exp/randkcnf_5_1500_1500_0001.weighted.pdf>]
+\openout2 = `chap3.aux'.
+
+ (chap3.tex
 Chapter 3
-(chap3.tex
+
 Underfull \vbox (badness 1163) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 2.26772
 .\write-{}
 .\write-{}
+.\write-{}
+.\write-{}
+.\write-{}
 .\pdfdest name{chapter.3} xyz
-.\write4{\protect \BOOKMARK [0][]{chapter.3}{\376\377\000C\000h\000a\000p\000t\000e\000r\000\040\0003\000.\000\040\000V\000a\000r\000F\000A\000:\000\040\000A\000\040\000V\000a\000r\000i\000a\000t\000i\000o\000n\000a\000l\000\040\000F\000a\000c\000t\000o\000r\000\040\000A\000n\000a\000l\000y\000s\000i\000s\000\040\000F\000r\000a\000m\000e\000w\000o\000r\000k\000\040\000f\000o\000r\000\040\000E\000f\000f\000i\000c\000i\000e\000n\000t\000\040\000B\000a\000y\000e\000s\000i\000a\000n\000\040\000L\000e\000a\000r\000n\000i\000n\000g\000\040\000A\000n\000a\000l\000y\000t\000i\000c\000s}{}% 22}
-.\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \tocchapter {Chapter}{3}{VarFA: A Variational Factor Analysis Framework for Efficient Bayesian Learning Analytics}}{\thepage }{chapter.3}\protected@file@percent }}
-.\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
-.\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
+.\write4{\protect \BOOKMARK [0][]{chapter.3}{\376\377\000C\000h\000a\000p\000t\000e\000r\000\040\0003\000.\000\040\000V\000a\000r\000F\000A\000:\000\040\000A\000\040\000V\000a\000r\000i\000a\000t\000i\000o\000n\000a\000l\000\040\000F\000a\000c\000t\000o\000r\000\040\000A\000n\000a\000l\000y\000s\000i\000s\000\040\000F\000r\000a\000m\000e\000w\000o\000r\000k\000\040\000f\000o\000r\000\040\000E\000f\000f\000i\000c\000i\000e\000n\000t\000\040\000B\000a\000y\000e\000s\000i\000a\000n\000\040\000L\000e\000a\000r\000n\000i\000n\000g\000\040\000A\000n\000a\000l\000y\000t\000i\000c\000s}{}% 23}
+.\write2{\@writefile{toc}{\protect \contentsline {chapter}{\protect \tocchapter {Chapter}{3}{VarFA: A Variational Factor Analysis Framework for Efficient Bayesian Learning Analytics}}{\thepage }{chapter.3}\protected@file@percent }}
+.\write2{\@writefile{lof}{\protect \addvspace {10\p@ }}}
+.\write2{\@writefile{lot}{\protect \addvspace {10\p@ }}}
 .\glue(\topskip) 80.00002
 .\hbox(9.99998+2.79999)x455.30121, glue set 7.9567fil
 ..\glue(\leftskip) 0.0 plus 1.0fil
@@ -41395,7 +41589,7 @@ Underfull \vbox (badness 1163) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.46} xyz
+.....\pdfdest name{section*.48} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 O
@@ -41410,8 +41604,8 @@ Underfull \vbox (badness 1163) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0
 ..\glue(\rightskip) 0.0 plus 1.0fil
-.\write4{\protect \BOOKMARK [1][]{section*.46}{\376\377\000O\000v\000e\000r\000v\000i\000e\000w}{chapter.3}% 23}
-.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{}{Overview}}{\thepage }{section*.46}\protected@file@percent }}
+.\write4{\protect \BOOKMARK [1][]{section*.48}{\376\377\000O\000v\000e\000r\000v\000i\000e\000w}{chapter.3}% 24}
+.\write2{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{}{Overview}}{\thepage }{section*.48}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.0
 .\glue(\parskip) 0.0
@@ -41834,69 +42028,14 @@ Underfull \vbox (badness 1163) has occurred while \output is active
 ..\OT1/cmr/m/n/12 v
 ..etc.
 .\penalty 10000
-.\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set - 0.6253
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 z
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 v
-..\kern-0.65277
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 i
-..\discretionary
-...\OT1/cmr/m/n/12 -
-..\OT1/cmr/m/n/12 a
-..\discretionary
-...\OT1/cmr/m/n/12 -
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 l
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 n
-..\discretionary
-...\OT1/cmr/m/n/12 -
-..\OT1/cmr/m/n/12 f
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 r
-..\discretionary
-...\OT1/cmr/m/n/12 -
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 e
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 w
-..\OT1/cmr/m/n/12 h
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 c
-..\kern-0.32639
-..\OT1/cmr/m/n/12 h
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 m
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 k
-..\kern-0.32639
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..etc.
-.\glue(\baselineskip) 14.53342
 .etc.
 
 
 
-[70
+[71
+
+
+
 
 
 ]
@@ -41930,11 +42069,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0
 ..\glue(\rightskip) 0.0 plus 1.0fil
-.\write4{\protect \BOOKMARK [1][]{section.3.1}{\376\377\0003\000.\0001\000.\000\040\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{chapter.3}% 24}
-.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{3.1}{Introduction}}{\thepage }{section.3.1}\protected@file@percent }}
+.\write4{\protect \BOOKMARK [1][]{section.3.1}{\376\377\0003\000.\0001\000.\000\040\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{chapter.3}% 25}
+.\write2{\@writefile{toc}{\protect \contentsline {section}{\protect \tocsection {}{3.1}{Introduction}}{\thepage }{section.3.1}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.0
-.\write1{\newlabel{sec:intro}{{3.1}{\thepage }{Introduction}{section.3.1}{}}}
+.\write2{\newlabel{sec:intro}{{3.1}{\thepage }{Introduction}{section.3.1}{}}}
 .\penalty 10000
 .\penalty 10000
 .\glue(\parskip) 0.0
@@ -42814,7 +42953,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[71]
+[72]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -44010,7 +44149,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[72]
+[73]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -45089,7 +45228,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[73]
+[74]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -45391,7 +45530,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.47} xyz
+.....\pdfdest name{section*.49} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 C
@@ -45409,7 +45548,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 s
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Contributions}}{\thepage }{section*.47}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{Contributions}}{\thepage }{section*.49}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 I
 ..\OT1/cmr/m/n/12 n
@@ -46141,9 +46280,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[74]
-
 [75]
+
+[76]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -46986,7 +47125,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\OT1/cmr/m/n/12 2
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:laf}{{3.2}{\thepage }{Factor Analysis For Student Modeling}{equation.3.2}{}}}
+.....\write2{\newlabel{eq:laf}{{3.2}{\thepage }{Factor Analysis For Student Modeling}{equation.3.2}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -47167,7 +47306,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[76]
+[77]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -47818,7 +47957,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\OT1/cmr/m/n/12 3
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:dash}{{3.3}{\thepage }{Factor Analysis For Student Modeling}{equation.3.3}{}}}
+.....\write2{\newlabel{eq:dash}{{3.3}{\thepage }{Factor Analysis For Student Modeling}{equation.3.3}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -48153,7 +48292,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[77]
+[78]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 0.17863
@@ -49380,7 +49519,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[78]
+[79]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 14.519
 .\glue(\topskip) 1.66669
@@ -49553,10 +49692,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{3.2.2}{Inference Methods for FA Models}}{\thepage }{subsection.3.2.2}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{3.2.2}{Inference Methods for FA Models}}{\thepage }{subsection.3.2.2}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
-.\write1{\newlabel{sec:FA-inference}{{3.2.2}{\thepage }{Inference Methods for FA Models}{subsection.3.2.2}{}}}
+.\write2{\newlabel{sec:FA-inference}{{3.2.2}{\thepage }{Inference Methods for FA Models}{subsection.3.2.2}{}}}
 .\penalty 10000
 .\penalty 10000
 .\glue(\parskip) 0.0
@@ -50125,7 +50264,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[79]
+[80]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\pdfdest name{subsubsection.3.2.2.1} xyz
@@ -50175,7 +50314,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 o
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{3.2.2.1}{Maximum Likelihood Estimation}}{\thepage }{subsubsection.3.2.2.1}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{3.2.2.1}{Maximum Likelihood Estimation}}{\thepage }{subsubsection.3.2.2.1}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 h
@@ -50403,7 +50542,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\OT1/cmr/m/n/12 5
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:mle}{{3.5}{\thepage }{Maximum Likelihood Estimation}{equation.3.5}{}}}
+.....\write2{\newlabel{eq:mle}{{3.5}{\thepage }{Maximum Likelihood Estimation}{equation.3.5}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -50813,7 +50952,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue 0.0
 .\pdfdest name{subsubsection.3.2.2.2} xyz
 .\penalty 10000
-.\write1{\newlabel{sec:bayes}{{3.2.2.2}{\thepage }{Maximum A Posteriori Estimation}{subsubsection.3.2.2.2}{}}}
+.\write2{\newlabel{sec:bayes}{{3.2.2.2}{\thepage }{Maximum A Posteriori Estimation}{subsubsection.3.2.2.2}{}}}
 .\penalty 10000
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
@@ -50863,7 +51002,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 o
 ..\OT1/cmr/bx/n/12 n
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{3.2.2.2}{Maximum A Posteriori Estimation}}{\thepage }{subsubsection.3.2.2.2}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{3.2.2.2}{Maximum A Posteriori Estimation}}{\thepage }{subsubsection.3.2.2.2}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 h
@@ -50982,7 +51121,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[80]
+[81]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -52182,9 +52321,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[81]
-
 [82]
+
+[83]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -52903,7 +53042,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\OT1/cmr/m/n/12 9
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:variational-distribution}{{3.9}{\thepage }{VarFA Details}{equation.3.9}{}}}
+.....\write2{\newlabel{eq:variational-distribution}{{3.9}{\thepage }{VarFA Details}{equation.3.9}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -53099,7 +53238,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[83]
+[84]
 Underfull \vbox (badness 1292) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 2.3476
 .\glue(\topskip) 1.66669
@@ -53328,7 +53467,7 @@ Underfull \vbox (badness 1292) has occurred while \output is active
 ......\OT1/cmr/m/n/12 0
 ......\kern 0.0
 ......\OT1/cmr/m/n/12 )
-.....\write1{\newlabel{eq:elbo}{{3.10}{\thepage }{}{equation.3.10}{}}}
+.....\write2{\newlabel{eq:elbo}{{3.10}{\thepage }{}{equation.3.10}{}}}
 ....\glue 0.0 plus 1.0fil minus 1.0fil
 ...\kern 455.30121
 ..\glue(\tabskip) 0.0
@@ -53967,9 +54106,9 @@ Underfull \vbox (badness 1292) has occurred while \output is active
 
 
 
-[84]
-
 [85]
+
+[86]
 Underfull \vbox (badness 1253) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 2.3254
 .\glue(\topskip) 1.0
@@ -54493,7 +54632,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.49} xyz
+.....\pdfdest name{section*.51} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 V
@@ -54534,7 +54673,7 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 c
 ..\OT1/cmr/bx/n/12 e
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{VarFA supports amortized inference}}{\thepage }{section*.49}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{}{VarFA supports amortized inference}}{\thepage }{section*.51}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 C
 ..\OT1/cmr/m/n/12 l
@@ -54974,21 +55113,21 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 
 
 
-[86]
-<sim_acc.png, id=2102, 566.115pt x 349.305pt>
+[87]
+<sim_acc.png, id=2113, 566.115pt x 349.305pt>
 File: sim_acc.png Graphic file (type png)
 <use sim_acc.png>
-Package pdftex.def Info: sim_acc.png  used on input line 419.
+Package pdftex.def Info: sim_acc.png  used on input line 421.
 (pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
-<sim_auc.png, id=2104, 566.115pt x 349.305pt>
+<sim_auc.png, id=2115, 566.115pt x 349.305pt>
 File: sim_auc.png Graphic file (type png)
 <use sim_auc.png>
-Package pdftex.def Info: sim_auc.png  used on input line 421.
+Package pdftex.def Info: sim_auc.png  used on input line 423.
 (pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
-<sim_f1.png, id=2105, 566.115pt x 349.305pt>
+<sim_f1.png, id=2116, 566.115pt x 349.305pt>
 File: sim_f1.png Graphic file (type png)
 <use sim_f1.png>
-Package pdftex.def Info: sim_f1.png  used on input line 423.
+Package pdftex.def Info: sim_f1.png  used on input line 425.
 (pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
 
 Underfull \vbox (badness 2435) has occurred while \output is active
@@ -55450,7 +55589,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ...\penalty 10000
 ...\glue -7.0
 ...\glue 0.0
-...\pdfdest name{figure.caption.50} xyz
+...\pdfdest name{figure.caption.52} xyz
 ...\penalty 10000
 ...\rule(0.0+0.0)x*
 ...\penalty 10000
@@ -55511,7 +55650,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
-...\write1{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {3.1}{\ignorespaces Performance of the SPARFA-M, SPARFA-B, and VarFA algorithms on the synthetic data set with different data sizes. Plots from left to right show comparison on accuracy (ACC), area under curve (AUC) and F1 metrics, respectively. Higher is better for all metrics. VarFA performs similarly to SPARFA-M and SPARFA-B.}}{\thepage }{figure.caption.50}\protected@file@percent }}
+...\write2{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {3.1}{\ignorespaces Performance of the SPARFA-M, SPARFA-B, and VarFA algorithms on the synthetic data set with different data sizes. Plots from left to right show comparison on accuracy (ACC), area under curve (AUC) and F1 metrics, respectively. Higher is better for all metrics. VarFA performs similarly to SPARFA-M and SPARFA-B.}}{\thepage }{figure.caption.52}\protected@file@percent }}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\rule(0.0+0.0)x*
 ...\glue 12.0
@@ -55808,7 +55947,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 ....\glue(\rightskip) 0.0
 ...\glue 0.0
 ...\pdfcolorstack 0 pop
-...\write1{\newlabel{fig:synthetic}{{3.1}{\thepage }{Performance of the SPARFA-M, SPARFA-B, and VarFA algorithms on the synthetic data set with different data sizes. Plots from left to right show comparison on accuracy (ACC), area under curve (AUC) and F1 metrics, respectively. Higher is better for all metrics. VarFA performs similarly to SPARFA-M and SPARFA-B}{figure.caption.50}{}}}
+...\write2{\newlabel{fig:synthetic}{{3.1}{\thepage }{Performance of the SPARFA-M, SPARFA-B, and VarFA algorithms on the synthetic data set with different data sizes. Plots from left to right show comparison on accuracy (ACC), area under curve (AUC) and F1 metrics, respectively. Higher is better for all metrics. VarFA performs similarly to SPARFA-M and SPARFA-B}{figure.caption.52}{}}}
 ...\glue 0.0
 ..\pdfcolorstack 0 pop
 .\penalty 0
@@ -55819,15 +55958,15 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 
 
 
-[87 <./sim_acc.png> <./sim_auc.png> <./sim_f1.png>]
-<sim_time.png, id=2139, 565.11125pt x 349.305pt>
+[88 <./sim_acc.png> <./sim_auc.png> <./sim_f1.png>]
+<sim_time.png, id=2150, 565.11125pt x 349.305pt>
 File: sim_time.png Graphic file (type png)
 <use sim_time.png>
-Package pdftex.def Info: sim_time.png  used on input line 502.
+Package pdftex.def Info: sim_time.png  used on input line 504.
 (pdftex.def)             Requested size: 182.11769pt x 112.56871pt.
 
 
-[88]
+[89]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -57062,25 +57201,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[89]
+[90]
 
-[90 <./sim_time.png>]
+[91 <./sim_time.png>]
 
-[91]
-<violin3.png, id=2183, 493.845pt x 349.305pt>
+[92]
+<violin3.png, id=2194, 493.845pt x 349.305pt>
 File: violin3.png Graphic file (type png)
 <use violin3.png>
-Package pdftex.def Info: violin3.png  used on input line 636.
+Package pdftex.def Info: violin3.png  used on input line 638.
 (pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
-<violin4.png, id=2184, 493.845pt x 349.305pt>
+<violin4.png, id=2195, 493.845pt x 349.305pt>
 File: violin4.png Graphic file (type png)
 <use violin4.png>
-Package pdftex.def Info: violin4.png  used on input line 642.
+Package pdftex.def Info: violin4.png  used on input line 644.
 (pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
-<violin7.png, id=2185, 493.845pt x 349.305pt>
+<violin7.png, id=2196, 493.845pt x 349.305pt>
 File: violin7.png Graphic file (type png)
 <use violin7.png>
-Package pdftex.def Info: violin7.png  used on input line 648.
+Package pdftex.def Info: violin7.png  used on input line 650.
 (pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
 
 Underfull \vbox (badness 1708) has occurred while \output is active
@@ -57092,7 +57231,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ...\penalty 10000
 ...\glue -7.0
 ...\glue 0.0
-...\pdfdest name{figure.caption.60} xyz
+...\pdfdest name{figure.caption.62} xyz
 ...\penalty 10000
 ...\rule(0.0+0.0)x*
 ...\penalty 10000
@@ -57170,8 +57309,8 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ......\glue(\rightskip) 0.0
 .....\glue 0.0
 .....\pdfcolorstack 0 pop
-.....\write1{\newlabel{fig:violin1}{{3.3a}{\thepage }{3rd latent concept}{figure.caption.60}{}}}
-.....\write1{\newlabel{sub@fig:violin1}{{a}{\thepage }{3rd latent concept}{figure.caption.60}{}}}
+.....\write2{\newlabel{fig:violin1}{{3.3a}{\thepage }{3rd latent concept}{figure.caption.62}{}}}
+.....\write2{\newlabel{sub@fig:violin1}{{a}{\thepage }{3rd latent concept}{figure.caption.62}{}}}
 ....\glue 3.91663 plus 1.95831 minus 1.30554
 ....\glue 5.0
 ....\glue 3.91663 plus 1.95831 minus 1.30554
@@ -57242,8 +57381,8 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ......\glue(\rightskip) 0.0
 .....\glue 0.0
 .....\pdfcolorstack 0 pop
-.....\write1{\newlabel{fig:violin2}{{3.3b}{\thepage }{4th latent concept}{figure.caption.60}{}}}
-.....\write1{\newlabel{sub@fig:violin2}{{b}{\thepage }{4th latent concept}{figure.caption.60}{}}}
+.....\write2{\newlabel{fig:violin2}{{3.3b}{\thepage }{4th latent concept}{figure.caption.62}{}}}
+.....\write2{\newlabel{sub@fig:violin2}{{b}{\thepage }{4th latent concept}{figure.caption.62}{}}}
 ....\glue 3.91663 plus 1.95831 minus 1.30554
 ....\glue 5.0
 ....\glue 3.91663 plus 1.95831 minus 1.30554
@@ -57314,12 +57453,12 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ......\glue(\rightskip) 0.0
 .....\glue 0.0
 .....\pdfcolorstack 0 pop
-.....\write1{\newlabel{fig:violin3}{{3.3c}{\thepage }{7th latent concept}{figure.caption.60}{}}}
-.....\write1{\newlabel{sub@fig:violin3}{{c}{\thepage }{7th latent concept}{figure.caption.60}{}}}
+.....\write2{\newlabel{fig:violin3}{{3.3c}{\thepage }{7th latent concept}{figure.caption.62}{}}}
+.....\write2{\newlabel{sub@fig:violin3}{{c}{\thepage }{7th latent concept}{figure.caption.62}{}}}
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
-...\write1{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {3.3}{\ignorespaces Violin plot showing the mean and standard deviation of the estimated skill mastery levels on 10 selected students on the 3rd, 4th and 7th latent skills that VarFA computes. In each sub-figure, bottom and top axises respectively shows student IDs and top axis shows the number of questions each student answered. The more questions a student answers, the tighter the credible interval. (Best viewed in color.)}}{\thepage }{figure.caption.60}\protected@file@percent }}
+...\write2{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline {3.3}{\ignorespaces Violin plot showing the mean and standard deviation of the estimated skill mastery levels on 10 selected students on the 3rd, 4th and 7th latent skills that VarFA computes. In each sub-figure, bottom and top axises respectively shows student IDs and top axis shows the number of questions each student answered. The more questions a student answers, the tighter the credible interval. (Best viewed in color.)}}{\thepage }{figure.caption.62}\protected@file@percent }}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\rule(0.0+0.0)x*
 ...\glue 12.0
@@ -57653,7 +57792,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ....\glue(\rightskip) 0.0
 ...\glue 0.0
 ...\pdfcolorstack 0 pop
-...\write1{\newlabel{fig:violin}{{3.3}{\thepage }{Violin plot showing the mean and standard deviation of the estimated skill mastery levels on 10 selected students on the 3rd, 4th and 7th latent skills that VarFA computes. In each sub-figure, bottom and top axises respectively shows student IDs and top axis shows the number of questions each student answered. The more questions a student answers, the tighter the credible interval. (Best viewed in color.)}{figure.caption.60}{}}}
+...\write2{\newlabel{fig:violin}{{3.3}{\thepage }{Violin plot showing the mean and standard deviation of the estimated skill mastery levels on 10 selected students on the 3rd, 4th and 7th latent skills that VarFA computes. In each sub-figure, bottom and top axises respectively shows student IDs and top axis shows the number of questions each student answered. The more questions a student answers, the tighter the credible interval. (Best viewed in color.)}{figure.caption.62}{}}}
 ...\glue 0.0
 ..\pdfcolorstack 0 pop
 .\glue 12.0 plus 6.0 minus 4.0
@@ -57680,7 +57819,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ..\OT1/cmr/bx/n/12 t
 ..\OT1/cmr/bx/n/12 s
 ..\OT1/cmr/bx/n/12 .
-..\write1{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{3.4.1.2}{Results}}{\thepage }{subsubsection.3.4.1.2}\protected@file@percent }}
+..\write2{\@writefile{toc}{\protect \contentsline {subsubsection}{\protect \tocsubsubsection {}{3.4.1.2}{Results}}{\thepage }{subsubsection.3.4.1.2}\protected@file@percent }}
 ..\glue 5.87494
 ..\OT1/cmr/m/n/12 F
 ..\OT1/cmr/m/n/12 i
@@ -57688,7 +57827,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ..\OT1/cmr/m/n/12 .
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.50}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.52}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 3
 ..\OT1/cmr/m/n/12 .
@@ -57980,7 +58119,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ..\OT1/cmr/m/n/12 .
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.54}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.56}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 3
 ..\OT1/cmr/m/n/12 .
@@ -58239,7 +58378,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{3.4.2}{Real Data Experiments}}{\thepage }{subsection.3.4.2}\protected@file@percent }}
+.\write2{\@writefile{toc}{\protect \contentsline {subsection}{\protect \tocsubsection {}{3.4.2}{Real Data Experiments}}{\thepage }{subsection.3.4.2}\protected@file@percent }}
 .\penalty 10000
 .\glue 7.75 plus 1.03331
 .\pdfdest name{subsubsection.3.4.2.1} xyz
@@ -58247,9 +58386,9 @@ Underfull \vbox (badness 1708) has occurred while \output is active
 
 
 
-[92 <./violin3.png> <./violin4.png> <./violin7.png>]
+[93 <./violin3.png> <./violin4.png> <./violin7.png>]
 
-[93]
+[94]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -58713,7 +58852,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\penalty 10000
 ...\hbox(0.0+0.0)x0.0
 ....\hbox(0.0+0.0)x0.0, shifted -25.20004
-.....\pdfdest name{section*.62} xyz
+.....\pdfdest name{section*.64} xyz
 .....\penalty 10000
 ...\glue 0.0 plus 1.0fil minus 1.0fil
 ..\OT1/cmr/bx/n/12 E
@@ -59263,7 +59402,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[94]
+[95]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -59683,7 +59822,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 e
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{table.caption.59}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{table.caption.61}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 3
 ..\OT1/cmr/m/n/12 .
@@ -60100,7 +60239,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 s
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.60}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.62}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 3
 ..\OT1/cmr/m/n/12 .
@@ -60111,7 +60250,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 ,
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.60}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.62}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 3
 ..\OT1/cmr/m/n/12 .
@@ -60125,7 +60264,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 d
 ..\penalty 10000
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.60}
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{figure.caption.62}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 3
 ..\OT1/cmr/m/n/12 .
@@ -60307,7 +60446,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[95]
+[96]
 Underfull \vbox (badness 3343) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121, glue set 3.22409
 .\vbox(174.56665+0.0)x455.30121
@@ -60317,13 +60456,13 @@ Underfull \vbox (badness 3343) has occurred while \output is active
 ...\penalty 10000
 ...\glue -7.0
 ...\glue 0.0
-...\pdfdest name{table.caption.63} xyz
+...\pdfdest name{table.caption.65} xyz
 ...\penalty 10000
 ...\rule(0.0+0.0)x*
 ...\penalty 10000
 ...\glue 7.0
 ...\glue 0.0
-...\write1{\@writefile{lot}{\protect \contentsline {table}{\protect \numberline {3.3}{\ignorespaces Illustration of the estimated latent skills with the their top 3 most strongly associated skill tags in the Assistment data set. The percentage in the parenthesis shows the association probability (summed to 1 for each latent skill). We see that the tagged skills associated with each estimated latent skill form intuitive and interpretable groups. }}{\thepage }{table.caption.63}\protected@file@percent }}
+...\write2{\@writefile{lot}{\protect \contentsline {table}{\protect \numberline {3.3}{\ignorespaces Illustration of the estimated latent skills with the their top 3 most strongly associated skill tags in the Assistment data set. The percentage in the parenthesis shows the association probability (summed to 1 for each latent skill). We see that the tagged skills associated with each estimated latent skill form intuitive and interpretable groups. }}{\thepage }{table.caption.65}\protected@file@percent }}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue 0.0
 ...\glue(\parskip) 0.0
@@ -62209,7 +62348,7 @@ Underfull \vbox (badness 3343) has occurred while \output is active
 
 
 
-[96]
+[97]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -62323,7 +62462,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue 0.0
 .\pdfdest name{subsubsection.3.4.2.4} xyz
 .\penalty 10000
-.\write1{\newlabel{sec:experiment-post-processing}{{3.4.2.4}{\thepage }{Results: Post-Processing for Improved Interpretability}{subsubsection.3.4.2.4}{}}}
+.\write2{\newlabel{sec:experiment-post-processing}{{3.4.2.4}{\thepage }{Results: Post-Processing for Improved Interpretability}{subsubsection.3.4.2.4}{}}}
 .\penalty 10000
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
@@ -63082,13 +63221,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[97]
-
 [98]
-<student_skill.png, id=2273, 638.385pt x 277.035pt>
+
+[99]
+<student_skill.png, id=2284, 638.385pt x 277.035pt>
 File: student_skill.png Graphic file (type png)
 <use student_skill.png>
-Package pdftex.def Info: student_skill.png  used on input line 824.
+Package pdftex.def Info: student_skill.png  used on input line 826.
 (pdftex.def)             Requested size: 295.943pt x 128.4268pt.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active
@@ -64122,20 +64261,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[99]
+[100]
 
-[100 <./student_skill.png>] (phdthesis_YiGu.bbl
+[101 <./student_skill.png>] (phdthesis_YiGu.bbl
 Bibliography
 
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\write-{}
-.\pdfdest name{section*.65} xyz
 .\write-{}
 .\write-{}
-.\pdfdest name{chapter*.66} xyz
-.\write4{\protect \BOOKMARK [0][]{chapter*.66}{\376\377\000B\000i\000b\000l\000i\000o\000g\000r\000a\000p\000h\000y}{}% 29}
-.\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \tocchapter {Chapter}{}{Bibliography}}{\thepage }{chapter*.66}\protected@file@percent }}
+.\pdfdest name{section*.67} xyz
+.\write-{}
+.\write-{}
+.\pdfdest name{chapter*.68} xyz
+.\write4{\protect \BOOKMARK [0][]{chapter*.68}{\376\377\000B\000i\000b\000l\000i\000o\000g\000r\000a\000p\000h\000y}{}% 30}
+.\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \tocchapter {Chapter}{}{Bibliography}}{\thepage }{chapter*.68}\protected@file@percent }}
 .\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
 .\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
 .\glue(\topskip) 80.00002
@@ -64673,65 +64814,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..etc.
 .\penalty 20000
 .\glue(\baselineskip) 2.66669
-.\hbox(8.33331+2.33331)x426.14868, glue set - 0.87009, shifted 29.15253
-..\OT1/cmr/m/n/12 F
-..\kern-0.97916
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 y
-..\kern-0.97916
-..\OT1/cmr/m/n/12 ,
-..\glue 3.91663 plus 2.44789 minus 1.04443
-..\OT1/cmr/m/n/12 S
-..\OT1/cmr/m/n/12 h
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 r
-..\discretionary
-...\OT1/cmr/m/n/12 -
-..\OT1/cmr/m/n/12 j
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 l
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 O
-..\OT1/cmr/m/n/12 z
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 ,
-..\glue 3.91663 plus 2.44789 minus 1.04443
-..\OT1/cmr/m/n/12 A
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\penalty 10000
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 C
-..\OT1/cmr/m/n/12 .
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 C
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 u
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 v
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 ,
-..\glue 3.91663 plus 2.44789 minus 1.04443
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 d
-..etc.
-.\penalty 4000
 .etc.
 
 
 
-[101
+[102
+
+
 
 
 
@@ -65482,7 +65571,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[102]
+[103]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -66219,7 +66308,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[103]
+[104]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 2.26668
@@ -66875,7 +66964,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[104]
+[105]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -67591,7 +67680,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[105]
+[106]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -68335,7 +68424,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[106]
+[107]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -69160,7 +69249,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[107]
+[108]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -69957,7 +70046,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[108]
+[109]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.0
@@ -70750,7 +70839,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[109]
+[110]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
 .\glue(\topskip) 1.66669
@@ -71453,28 +71542,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 
-[110])
+[111])
 
-[111] (phdthesis_YiGu.aux)
+[112] (phdthesis_YiGu.aux (chap1.aux) (chap2.aux) (chap3.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `phdthesis_YiGu.out' has not changed.
-(rerunfilecheck)             Checksum: 8EAC5AEF755FD25419EA43CA23DCBBDE;6417.
+(rerunfilecheck)             Checksum: 9ACD83BDC309CEA6DC5D9F3B260B1832;6513.
  ) 
 Here is how much of TeX's memory you used:
- 33688 strings out of 473919
- 664075 string characters out of 5726953
+ 36082 strings out of 473919
+ 709244 string characters out of 5726953
  2024908 words of memory out of 5000000
- 55385 multiletter control sequences out of 15000+600000
- 575865 words of font info for 101 fonts, out of 8000000 for 9000
+ 57725 multiletter control sequences out of 15000+600000
+ 577293 words of font info for 102 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,20n,117p,1194b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (111 pages, 1777073 bytes).
+ 91i,20n,120p,1196b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on phdthesis_YiGu.pdf (112 pages, 1790236 bytes).
 PDF statistics:
- 2585 PDF objects out of 2984 (max. 8388607)
- 483 named destinations out of 1000 (max. 500000)
- 365 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2600 PDF objects out of 2984 (max. 8388607)
+ 486 named destinations out of 1000 (max. 500000)
+ 373 words of extra memory for PDF output out of 10000 (max. 10000000)
 

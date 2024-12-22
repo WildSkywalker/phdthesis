@@ -7,6 +7,9 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT .\guyipreammath.tex
+INPUT .\guyipreammath.tex
+INPUT guyipreammath.tex
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
