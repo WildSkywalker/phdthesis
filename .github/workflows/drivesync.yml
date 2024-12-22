@@ -41,5 +41,5 @@ jobs:
           filename: 't-SNE/Existence&Uniqueness/Existence&Uniqueness.pdf'
           folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
           overwrite: 'true' # optional boolean
-          useCompleteSourceFilenameAsName: 'true' # optional boolean
+          useCompleteSourceFilenameAsName: 'false' # optional boolean
           mirrorDirectoryStructure: 'false' # optional boolean
