@@ -14,11 +14,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
-      - name: Upload Repository
+      - name: Upload Repository 1
         uses: logickoder/g-drive-upload@main
         with:
           credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
-          filename: '*/*,*/*/*'
+          filename: '*/*'
+          folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          overwrite: 'true' # optional boolean
+          useCompleteSourceFilenameAsName: 'false' # optional boolean
+          mirrorDirectoryStructure: 'true' # optional boolean
+      
+      - name: Upload Repository 2
+        uses: logickoder/g-drive-upload@main
+        with:
+          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+          filename: '*/*/*'
           folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
           overwrite: 'true' # optional boolean
           useCompleteSourceFilenameAsName: 'false' # optional boolean
