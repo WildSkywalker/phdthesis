@@ -14,12 +14,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload to Google Drive
-        uses: logickoder/g-drive-upload@main
-        with:
-          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
-          filename: 'Thesis Main/phdthesis_YiGu.pdf'
-          folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-          overwrite: 'true' # optional boolean
-          useCompleteSourceFilenameAsName: 'true' # optional boolean
-          mirrorDirectoryStructure: 'true' # optional boolean
+
+
+      - name: Configure rclone
+        env:
+          RCLONE_CONFIG_GDRIVE_TYPE: drive
+          RCLONE_CONFIG_GDRIVE_SCOPE: drive
+          RCLONE_CONFIG_GDRIVE_SERVICE_ACCOUNT_FILE: credentials.json
+          RCLONE_CONFIG_GDRIVE_TEAM_DRIVE: ""
+          RCLONE_CONFIG_GDRIVE_ROOT_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          RCLONE_CONFIG_GDRIVE_TOKEN: ''
+        run: |
+          echo "${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}" > credentials.json
+          /usr/bin/rclone config create gdrive drive config_is_local false service_account_file credentials.json root_folder_id "${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}"
+
+      - name: Upload to Google Drive (using rclone)
+        run: |
+          /usr/bin/rclone copy . gdrive: -v
