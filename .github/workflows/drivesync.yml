@@ -18,7 +18,7 @@ jobs:
         uses: logickoder/g-drive-upload@main
         with:
           credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
-          filename: '*'
+          filename: '*/*,*/*/*'
           folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
           overwrite: 'true' # optional boolean
           useCompleteSourceFilenameAsName: 'false' # optional boolean
