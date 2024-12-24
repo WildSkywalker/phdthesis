@@ -1,0 +1,27 @@
+\documentclass[10pt]{article}
+
+\input{guyipreammath.tex}
+
+\begin{document}
+
+
+\title{Final Endeavor for the Generalized \texorpdfstring{$t$}{Lg}-SNE Problem}
+\maketitle
+
+\section{Progress So Far and Setup}
+This is it. We have reached this step and the end is within our grasp.
+We will try to replicate the results in section 2 of \citep{auffinger-tsne}. Recall that
+\begin{align} \label{big_F_formula}
+      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                    \\
+    = & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
+    = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                               \\
+      & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right)  + \log \rho.
+\end{align}
+\section{Important Lemmas}
+\section{The Rest of the Proof}
+\section{Wrap Up and Conclusion}
+
+\nocite{*}
+\bibliography{citation}
+
+\end{document}

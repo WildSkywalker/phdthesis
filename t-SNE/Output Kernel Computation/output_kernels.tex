@@ -24,18 +24,22 @@
 \usepackage{color}
 \usepackage{colortbl}
 \usepackage{tikz}
-\usepackage[numbers]{natbib}
+\usepackage[authoryear,square]{natbib}
 %\usepackage{vector}
 
+\definecolor{gblue}{RGB}{66,133,244}
+\definecolor{gred}{RGB}{234, 67, 53}
+\definecolor{ggreen}{RGB}{52, 168, 83}
+\definecolor{gyellow}{RGB}{251, 188, 5}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdftitle={Sharelatex Example},
-    citecolor=red,
+    linkcolor=gblue,
+    filecolor=gyellow,      
+    urlcolor=gred,
+    citecolor=ggreen,
     % bookmarks=true,
 }
+
 
 \font\tencmmib=cmmib10 \skewchar\tencmmib '60
 \newfam\cmmibfam
@@ -95,7 +99,7 @@
 \newcommand{\g}{\Gamma}
 \newcommand{\de}{\delta}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-\newcommand{\gy}[1]{\textbf{\color{red}[Yi: #1]}}
+\newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
 \newcommand{\olsi}[1]{\,\overline{\!{#1}}}
 \newcommand\y{\cellcolor{blue!20}}
 \newcommand\x{\cellcolor{red!20}}
@@ -105,7 +109,7 @@
 \newtheorem{claim}{\bf Claim}
 \newtheorem{definition}{\bf Definition}
 \newtheorem{theorem}{\bf Theorem}
-\newtheorem*{theorem*}{Theorem}
+\newtheorem*{theorem*}{\bf Theorem}
 \newtheorem{corollary}{\bf Corollary}
 \newtheorem{remark}{\bf Remark}
 \newtheorem{example}{\bf Example}
@@ -124,17 +128,17 @@
 \newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
 \newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
 
-
 % To print out the paper version, please comment out the next three lines.
-% \definecolor{dimmedwhite}{rgb}{0.8,0.8,0.8}
-% \pagecolor{black}
+\definecolor{dimmedwhite}{rgb}{0.85,0.85,0.85}
+% \pagecolor{dimmedwhite}
 % \color{dimmedwhite}
+
 
 \numberwithin{equation}{section}
 
 
 \begin{document}
-\title{t-SNE Problem Boot Camp}
+\title{First Peek at the Generalized \texorpdfstring{$t$}{Lg}-SNE Problem}
 \maketitle
 \tableofcontents
 \section{Summary and Overview}

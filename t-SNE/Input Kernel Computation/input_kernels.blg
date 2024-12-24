@@ -1,13 +1,13 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: warmup.aux
+The top-level auxiliary file: input_kernels.aux
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 The style file: hunsrtnat.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: citation.bib
 You've used 6 entries,
             2647 wiz_defined-function locations,
-            612 strings with 5653 characters,
+            612 strings with 5667 characters,
 and the built_in function-call counts, 1846 in all, are:
 = -- 149
 > -- 88

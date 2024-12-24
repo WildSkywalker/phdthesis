@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex warmup"] 1733701038.50077 "warmup.aux" "warmup.bbl" "warmup" 1734332825.4905 0
+["bibtex output_kernels"] 1735029153.81592 "output_kernels.aux" "output_kernels.bbl" "output_kernels" 1735029297.63564 0
   "./citation.bib" 1733700980 1894 6b1c5882c043b00de17d3df3ecb35a36 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "warmup.aux" 1734332824 4134 d9ec377cdda73356cb3bc31039d11d57 "pdflatex"
+  "output_kernels.aux" 1735029296 4134 d9ec377cdda73356cb3bc31039d11d57 "pdflatex"
   (generated)
-  "warmup.bbl"
-  "warmup.blg"
+  "output_kernels.bbl"
+  "output_kernels.blg"
   (rewritten before read)
-["pdflatex"] 1734332823.4506 "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" "warmup.pdf" "warmup" 1734332825.4918 0
-  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1732768762 121619 28cafe8888aecb5d9688fed740e82db1 ""
+["pdflatex"] 1735029295.79754 "e:/NU Staff/Thesis - GIT/t-SNE/Output Kernel Computation/output_kernels.tex" "output_kernels.pdf" "output_kernels" 1735029297.63683 0
+  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1735029071 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm10.pk" 1665676832 6984 cf1a156611e3b3d56cd70c3e1029dcfa ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm7.pk" 1678784426 4860 8e23f95e00911d2896a2a33c2ee94dda ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/bbm/bbm10.tfm" 1665676829 560 39fd35b5e4a6aca3672660cc548ba860 ""
@@ -49,6 +49,7 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1247593067 36554 b67dc2cfa451409e100b3fcf5f506509 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247593067 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247593067 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247593067 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247593067 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247593067 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247593067 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -195,16 +196,16 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/warmup/warmup.tex" 1734332822 63096 6b372db2dd7514369c508a24b75e3bc2 ""
-  "warmup.aux" 1734332824 4134 d9ec377cdda73356cb3bc31039d11d57 "pdflatex"
-  "warmup.bbl" 1733701038 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex warmup"
-  "warmup.out" 1734332824 1095 2f69508e5ee8576dada624b95fef7f04 "pdflatex"
-  "warmup.tex" 1734332822 63096 6b372db2dd7514369c508a24b75e3bc2 ""
-  "warmup.toc" 1734332824 572 77b1b362860376f067833d76eefbff51 "pdflatex"
+  "e:/NU Staff/Thesis - GIT/t-SNE/Output Kernel Computation/output_kernels.tex" 1735029295 63288 812cfbbb493de077ddf80f27a3ae8f24 ""
+  "output_kernels.aux" 1735029296 4134 d9ec377cdda73356cb3bc31039d11d57 "pdflatex"
+  "output_kernels.bbl" 1735029154 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex output_kernels"
+  "output_kernels.out" 1735029296 1095 2f69508e5ee8576dada624b95fef7f04 "pdflatex"
+  "output_kernels.tex" 1735029295 63288 812cfbbb493de077ddf80f27a3ae8f24 ""
+  "output_kernels.toc" 1735029296 572 77b1b362860376f067833d76eefbff51 "pdflatex"
   (generated)
-  "warmup.aux"
-  "warmup.log"
-  "warmup.out"
-  "warmup.pdf"
-  "warmup.toc"
+  "output_kernels.aux"
+  "output_kernels.log"
+  "output_kernels.out"
+  "output_kernels.pdf"
+  "output_kernels.toc"
   (rewritten before read)
