@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex t-sne"] 1734834485.55391 "t-sne.aux" "t-sne.bbl" "t-sne" 1734843486.00957 0
+["bibtex t-sne"] 1734834485.55391 "t-sne.aux" "t-sne.bbl" "t-sne" 1735007462.47971 0
   "./citation.bib" 1733700978 1894 6b1c5882c043b00de17d3df3ecb35a36 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne.aux" 1734843485 1404 dfe832c5af96443877c8cc42db91018e "pdflatex"
+  "t-sne.aux" 1735007461 1404 dfe832c5af96443877c8cc42db91018e "pdflatex"
   (generated)
   "t-sne.bbl"
   "t-sne.blg"
   (rewritten before read)
-["pdflatex"] 1734843484.36859 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1734843486.01069 0
-  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1734842471 153425 1f36bb5fffb0d69c3f5d5cf0c521f51e ""
+["pdflatex"] 1735007460.93675 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1735007462.48081 0
+  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1735006958 153425 1f36bb5fffb0d69c3f5d5cf0c521f51e ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626407855 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1626407857 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -186,12 +186,13 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" 1734834553 9795 5195f4de52558ea4ecf8bc3ffb7e440e ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" 1735007460 317 8d9dbf436647df033a10b487fd697fd3 ""
   "guyipreammath.tex" 1734843483 4273 c322b45b90b0b1fce66c7fb7c72e6b9d ""
-  "t-sne.aux" 1734843485 1404 dfe832c5af96443877c8cc42db91018e "pdflatex"
+  "t-sne.aux" 1735007461 1404 dfe832c5af96443877c8cc42db91018e "pdflatex"
   "t-sne.bbl" 1734834485 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex t-sne"
-  "t-sne.out" 1734843485 505 b409af81f1cc447dd6433d4da60e4af1 "pdflatex"
-  "t-sne.tex" 1734834553 9795 5195f4de52558ea4ecf8bc3ffb7e440e ""
+  "t-sne.out" 1735007461 505 b409af81f1cc447dd6433d4da60e4af1 "pdflatex"
+  "t-sne.tex" 1735007460 317 8d9dbf436647df033a10b487fd697fd3 ""
+  "t-sne_main_text.tex" 1734995270 9503 7d00241c1f48639571e0a53d27452593 ""
   (generated)
   "t-sne.aux"
   "t-sne.log"

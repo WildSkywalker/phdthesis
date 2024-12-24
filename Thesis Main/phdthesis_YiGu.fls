@@ -167,6 +167,8 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.st
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption-ams-smf.sto
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption-ams-smf.sto
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption-ams-smf.sto
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\import\import.sty
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\import\import.sty
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\natbib\natbib.sty
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\natbib\natbib.sty
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsthm.sty
@@ -433,6 +435,11 @@ OUTPUT chap1.aux
 INPUT .\chap1.tex
 INPUT .\chap1.tex
 INPUT chap1.tex
+INPUT ..\t-SNE\main paper\t-sne_main_text.tex
+INPUT ..\t-SNE\main paper\t-sne_main_text.tex
+INPUT ..\t-SNE\main paper\t-sne_main_text.tex
+INPUT ..\t-SNE\main paper\t-sne_main_text.tex
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
 INPUT .\chap2.tex
 INPUT .\chap2.tex
 OUTPUT chap2.aux
@@ -441,7 +448,6 @@ INPUT .\chap2.tex
 INPUT chap2.tex
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
