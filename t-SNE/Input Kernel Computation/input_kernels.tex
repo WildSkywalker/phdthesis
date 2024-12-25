@@ -2,6 +2,10 @@
 
 \input{guyipreammath.tex}
 
+
+\newcommand{\ki}{\mathbf{Ker}_{\mathbf{I}}}
+\newcommand{\ko}{\mathbf{Ker}_{\mathbf{O}}}
+
 \begin{document}
 
 \title{Final Endeavor for the Generalized \texorpdfstring{$t$}{Lg}-SNE Problem}
@@ -9,12 +13,13 @@
 
 \section{Progress So Far and Setup}
 OK this is it. We have reached this step and the end is within our grasp. The
-stake is high and I can literally feel the adrenaline coursing my vein. So far
-we have done two things. First, we have finished the proof of convergence for
-the generalized output kernel. The main theorems in \cite{auffinger-tsne} will
-hold if
+stake is high and I can literally feel the adrenaline coursing my vein, along
+with my fear. So far we have finished two crucial steps. First, we have
+finished the proof of convergence for the generalized output kernel. Denote
+$\ko$ the output kernel and $\ki$ the input kernel. The main theorems in
+\cite{auffinger-tsne} will hold if the following is true:
 \begin{condition}[Output Kernel Conditions] \label{output_kernel_conditions}
-  The output kernel $g(y,y') = k (\norm{y-y'})$ depends only on the distance between $y$ and $y'$ and that:
+  The output kernel $\ko(y,y') = k (\norm{y-y'})$ depends only on the distance between $y$ and $y'$ and that:
 
   1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded;
 
@@ -27,7 +32,7 @@ hold if
 
   4. $k'(0) = 0$.
 \end{condition}
-Moreover, the lemmas that deal with the output does not interfere with those related to the input kernel. The initial exploration we did around the output kernel not only provides us a good oppoturnity to understand the problem and the literarture, but also serves as an integral part of the final paper. If we are able to tackle the lemmas realted to the input kernel we will be able to join the results seamlessly.
+Moreover, the lemmas that deal with the output does not interfere with those related to the input kernel. The initial exploration we did around the output kernel not only provides us a good opportunity to understand the problem and the literature, but also serves as an integral part of the final paper. If we are able to tackle the lemmas related to the input kernel we will be able to join the results seamlessly.
 
 On the other hand, we have established the form of the generalized input
 kernel, set a basis for us to work on, and prove the existence of
@@ -35,7 +40,7 @@ $\sigma_{\rho,\mu}^*(x)$, the unique solution to $F_{\rho,\mu}(x,\sigma) = 0$.
 For this to happen, the generalized input kernel should satisfy the following
 conditions:
 \begin{condition}[Initial Input Kernel Conditions] \label{input_kernel_conditions_1}
-  Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))$. Here, $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) $w$ satisfies:
+  Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x_i,x_j,\sigma_i) = \exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))$. Here, $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) $w$ satisfies:
 
   1. $w'(t)>0$ for all $t \geq 0$ with $\lim_{t \to \infty} w(t) = \infty$;
 
@@ -47,7 +52,7 @@ conditions:
   \end{align}
 
 \end{condition}
-Since the probability masses are all normalized, we can assume without loss of generality that $w(0)=0$. Note that condition \ref{input_kernel_conditions_1} is only enough to prove the existence and uniqueness of $\sigma^*$. We may add more assumptions later on if necessary. Before we march towards the final batlle, let us remind ourselves some important definitions and notations, as well as some of the lemmas from \cite{auffinger-tsne} that we can borrow. Recall that $X$ or the corresponding probability measure $\mu$ is called sub-Gaussian if $\p(X>t) \leq 2 \exp(-Ct^2)$ for some positive constant $C$.
+Since the probability masses are all normalized, we can assume without loss of generality that $w(0)=0$. Note that condition \ref{input_kernel_conditions_1} is only enough to prove the existence and uniqueness of $\sigma^*$. We may add more assumptions later on if necessary. Before we march towards the final battle, let us remind ourselves some important definitions and notations, as well as some of the lemmas from \cite{auffinger-tsne} that we can borrow. Recall that $X$ or the corresponding probability measure $\mu$ is called sub-Gaussian if $\p(X>t) \leq 2 \exp(-Ct^2)$ for some positive constant $C$.
 \begin{lemma} \label{Gaussian_lemma}
   Let $\nu$ be sub-Gaussian with second moment equal to 1 and suppose $X \in \mathbb{R}^d$ has i.i.d. entries drawn from $\nu$. Then there exists constant $C, c_1$ such that
   \begin{align}
@@ -77,7 +82,7 @@ Finally, let us also recall that
   = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                               \\
     & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right)  + \log \rho.
 \end{align}
-The two terms in the formula of $F$ are the pillars of this manuscript. Their convergence will lead us to prove the convergence of $F$, and most importantly, the uniform convergence of $\sigma(x)$.
+The two terms in the formula of $F$ are the pillars of this manuscript. Their convergence will lead us to prove the convergence of $F$, and most importantly, the uniform convergence of $\sigma(x)$.\gy{As for the question Tuca asked me during our discussion, yes we can define $\sigma(x)$ to be the unique solution to $F(x,\sigma)=3$ or whatever number we peek as long as the number is greatly than zero (to ensure the existence of uniquess of the solution). If we move the constant to the left it is equivalent to just pick a different perplexity. The convergence of $F$ works for any $\sigma$ and that is the key. As long as control the entropy, we are expecting convergence as long as we set up the continuous version to have the same perplexity.}
 \section{The Two Most Important Lemmas}
 OK I am nervous as fuck but let us do this.
 \section{The Rest of the Proof}
