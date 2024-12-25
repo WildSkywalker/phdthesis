@@ -3,13 +3,13 @@ The t-distributed stochastic neighbour embedding(t-SNE) is a well-known method o
 \begin{align} \label{original_prob_mass}
     p_{j|i} = \frac{\exp(-\norm{X_i-X_j}^2/2\sigma_i^2)}{\sum_{k \neq i} \exp(-\norm{X_i-X_k}^2/2\sigma_i^2)},
 \end{align}
-where $\sigma_i$ are given constants. Notice that we assigned a Gaussian mass to each pair of input vector. Or we can say in the original t-SNE, the algorithm has a \textit{Gaussian kernel}. In this paper, we want to normalize t-SNE with generalized result. Let $f(x,y): \mathbb{R}^d  \times \mathbb{R}^d \to \mathbb{R}^+$ be such that $f(x,y)=f(y,x)$. We replace the probability mass in (\ref{original_prob_mass}) with the following
+where $\sigma_i$ are given constants. Notice that we assigned a Gaussian mass to each pair of input vector. Or we can say in the original t-SNE, the algorithm has a \textit{Gaussian kernel}. In this paper, we want to normalize t-SNE with generalized result. Let $\ki(x,y,\sigma): \mathbb{R}^d  \times \mathbb{R}^d \to \mathbb{R}^+$ be such that $\ki(x,y,\sigma)=\ki(y,x,\sigma)$. We replace the probability mass in (\ref{original_prob_mass}) with the following
 \begin{align}
-    p_{j|i} = \frac{f(X_i,X_j)}{\sum_{k \neq i} f(X_i,X_k)}.
+    p_{j|i} = \frac{\ki(X_i,X_j)}{\sum_{k \neq i} \ki(X_i,X_k)}.
 \end{align}
-We call $f(x,y)$ \textit{the generalized kernel} of the t-SNE method. Now we set up the problem like in the original setting. Let $p_{ii} = 0$ and for $1 \leq i \neq j \leq n$,
+We call $\ki(x,y)$ \textit{the generalized kernel} of the t-SNE method. Now we set up the problem like in the original setting. Let $p_{ii} = 0$ and for $1 \leq i \neq j \leq n$,
 \begin{align}
-    p_{ij} = \frac{p_{j|i} + p_{i|j}}{2n} = \frac{1}{2n}\left(\frac{f(X_i,X_j)}{\sum_{k \neq i} f(X_i,X_k)}+\frac{f(X_i,X_j)}{\sum_{k \neq j} f(X_j,X_k)}\right).
+    p_{ij} = \frac{p_{j|i} + p_{i|j}}{2n} = \frac{1}{2n}\left(\frac{\ki(X_i,X_j)}{\sum_{k \neq i} \ki(X_i,X_k)}+\frac{\ki(X_i,X_j)}{\sum_{k \neq j} \ki(X_j,X_k)}\right).
 \end{align}
 Both $p_{j|i}$ and $p_{ij}$ are well-defined probability masses as obviously,
 \begin{align}
@@ -31,15 +31,15 @@ In the expression of $L_n(X,Y)$, all $p_{ij}$ are given and $q_{ij}$ is a functi
 \begin{align}
     \mu_n := \frac{1}{n} \sum_{i=1}^n \delta(X_i,Y_i) \in \mathcal{M}(\mathbb{R}^d \times \mathbb{R}^s).
 \end{align}
-We are interested in its limiting measure as $n \to \infty$. To finish the setup, there are a few more remaining quantity we would like to introduce. Let $\mu \in \mathcal{M}(\mathbb{R}^d \times \mathbb{R}^s)$. For a given kernel $f(x,y)$, define $F_{\mu,f} : \mathbb{R}^d \to \mathbb{R}$ as
+We are interested in its limiting measure as $n \to \infty$. To finish the setup, there are a few more remaining quantity we would like to introduce. Let $\mu \in \mathcal{M}(\mathbb{R}^d \times \mathbb{R}^s)$. For a given kernel $\ki(x,y)$, define $F_{\mu,f} : \mathbb{R}^d \to \mathbb{R}$ as
 \begin{align}
-    F_{\mu,f}(x) = \int \frac{f(x,x')}{\int f(x,x')d\mu(x')} \log \left(\frac{f(x,x')}{\int f(x,x')d\mu(x')}\right) d\mu(x').
+    F_{\mu,f}(x) = \int \frac{\ki(x,x')}{\int \ki(x,x')d\mu(x')} \log \left(\frac{\ki(x,x')}{\int \ki(x,x')d\mu(x')}\right) d\mu(x').
 \end{align}
 Note that the last $s$ variables in the integrands stay constant.
 
 Let $q: \mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$ be defined by
 \begin{align}
-    p(x,x') = \frac{1}{2}\left( \frac{f(x,x')}{\int f(x,x')d\mu(x')} + \frac{f(x,x')}{\int f(x,x')d\mu(x)}\right).
+    p(x,x') = \frac{1}{2}\left( \frac{\ki(x,x')}{\int \ki(x,x')d\mu(x')} + \frac{\ki(x,x')}{\int \ki(x,x')d\mu(x)}\right).
 \end{align}
 Then, let $q: \mathbb{R}^s \times \mathbb{R}^s \to \mathbb{R}$ be given by
 \begin{align}
@@ -64,7 +64,7 @@ The goal of this project is to find the relationship between the following two q
 \section{Roadmap of the Problem}
 We dedicate this section to a tentative roadmap of the problem. I could be wrong, and this section will be removed after the project is finished. But for now this section will serve as a general guideline.
 
-Step 1: Unlike \cite{auffinger-tsne}, we do not have a parameter for kernel $f(x,y)$. Instead, try to get an estimate of $F$'s value using similar techniques in \cite{auffinger-tsne}. Explore what kind of extra preliminary conditions we need to impose on $f(x,y)$.
+Step 1: Unlike \cite{auffinger-tsne}, we do not have a parameter for kernel $\ki(x,y)$. Instead, try to get an estimate of $F$'s value using similar techniques in \cite{auffinger-tsne}. Explore what kind of extra preliminary conditions we need to impose on $\ki(x,y)$.
 
 Step 2: Establish uniform convergence for $F_{\mu_n,f}$. In detail, start to estimate
 \begin{align}
@@ -83,7 +83,7 @@ First off are the assumptions on the samples, a.k.a., random variables $X_i$'s. 
         \nu((t,\infty)) \leq 2 \exp(-Ct^2).
     \end{align}
 \end{definition}
-What follows are a few lemmas from \cite{auffinger-tsne} that discuss the properties of our samples $X_i$. Since they do not depend on the kernel $f(x,y)$.
+What follows are a few lemmas from \cite{auffinger-tsne} that discuss the properties of our samples $X_i$. Since they do not depend on the kernel $\ki(x,y)$.
 \begin{lemma} \label{sample_lemma_1}
     Let $\nu$ be a sub-Gaussian with second moment equal to 1 and $X = (X_i)_{i \leq d} \in \mathbb{R}^d$ be i.i.d. random variables with probability measure $\nu$. Then there exists constant $C,c_1$ such that
     \begin{align}
@@ -111,7 +111,7 @@ What follows are a few lemmas from \cite{auffinger-tsne} that discuss the proper
         \sup_{\sigma \in K_n , x} \left|\int h(x,x',\sigma) d \mu_n(x') - \int h(x,x',\sigma) d \mu(x') \right| \leq \epsilon + O \left(\sqrt{\frac{log n}{n}}\right).
     \end{align}
 \end{lemma}
-The above lemma has a relatively loose restriction on the kernel. Indeed, in the original t-SNE the kernel is smooth with exponential decay. Moreover, the parameter $\sigma$ in the lemma is used to control the entropy of probability distribution $p_{j|i}$ for each $i$. We start to give our first set of conditions on the kernel $f(x,y)$.
+The above lemma has a relatively loose restriction on the kernel. Indeed, in the original t-SNE the kernel is smooth with exponential decay. Moreover, the parameter $\sigma$ in the lemma is used to control the entropy of probability distribution $p_{j|i}$ for each $i$. We start to give our first set of conditions on the kernel $\ki(x,y)$.
 \begin{condition}
-    $f(x,y)$ is a function of $\norm{x-y}$. Moreover, $f(x,y) \equiv f(\norm{x-y})$ satisfies all conditions in the assumptions of lemma \ref{kernel_condition_lemma}.
+    $\ki(x,y)$ is a function of $\norm{x-y}$. Moreover, $\ki(x,y) \equiv \ki(\norm{x-y})$ satisfies all conditions in the assumptions of lemma \ref{kernel_condition_lemma}.
 \end{condition}
