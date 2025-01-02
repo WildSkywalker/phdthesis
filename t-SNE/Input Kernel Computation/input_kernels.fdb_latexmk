@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex input_kernels"] 1735110282.68952 "input_kernels.aux" "input_kernels.bbl" "input_kernels" 1735110628.11551 0
+["bibtex input_kernels"] 1735764666.43951 "input_kernels.aux" "input_kernels.bbl" "input_kernels" 1735765242.46232 0
   "./citation.bib" 1733700978 1894 6b1c5882c043b00de17d3df3ecb35a36 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "input_kernels.aux" 1735110627 1615 16c625117ea8231aace675b60bff0e49 "pdflatex"
+  "input_kernels.aux" 1735765241 1746 529bbe93a3b37146e2e3a83408c18197 "pdflatex"
   (generated)
   "input_kernels.bbl"
   "input_kernels.blg"
   (rewritten before read)
-["pdflatex"] 1735110626.49212 "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" "input_kernels.pdf" "input_kernels" 1735110628.11666 0
+["pdflatex"] 1735765240.88309 "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" "input_kernels.pdf" "input_kernels" 1735765242.46345 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1735029071 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626407855 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -54,6 +54,7 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1247593067 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247593067 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247593066 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247593066 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247593067 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247593067 31099 342ef5a582aacbd3346f3cf4579679fa ""
@@ -189,12 +190,12 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" 1735110625 6832 9ac79d61e7ef76b60f4412135faefbb1 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" 1735765240 8862 4e59bbbf2cde4b4b8f338fb4b6325bd7 ""
   "guyipreammath.tex" 1735029244 4292 eccb543e23cab8f1505022a06846e39d ""
-  "input_kernels.aux" 1735110627 1615 16c625117ea8231aace675b60bff0e49 "pdflatex"
-  "input_kernels.bbl" 1735110283 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex input_kernels"
-  "input_kernels.out" 1735110627 702 d39de0d4364354e18129f38857d3d5ff "pdflatex"
-  "input_kernels.tex" 1735110625 6832 9ac79d61e7ef76b60f4412135faefbb1 ""
+  "input_kernels.aux" 1735765241 1746 529bbe93a3b37146e2e3a83408c18197 "pdflatex"
+  "input_kernels.bbl" 1735764666 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex input_kernels"
+  "input_kernels.out" 1735765241 702 d39de0d4364354e18129f38857d3d5ff "pdflatex"
+  "input_kernels.tex" 1735765240 8862 4e59bbbf2cde4b4b8f338fb4b6325bd7 ""
   (generated)
   "input_kernels.aux"
   "input_kernels.log"

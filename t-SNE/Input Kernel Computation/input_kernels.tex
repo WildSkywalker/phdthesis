@@ -69,10 +69,10 @@ Since the probability masses are all normalized, we can assume without loss of g
   Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
   1. $\mu$ is sub-Gaussian; \\
   2. $h(x,x',\sigma)$ and $\nabla_x h(x,x',\sigma)$ are bounded for al $x,x'$ and all $\delta \in K_n$;\\
-  3. $h(x,x',\sigma) \to 0$ as $\norm{x-x'}/\sigma \to \infty$.\\
+  3. $h(x,x',\sigma) \to 0$ as $\sigma\norm{x-x'} \to \infty$.\\
   Let $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Let $\mu_n = (1/n)\sum_i \delta_{X_i}$. Then for any $\epsilon > 0$ with probability at least $1 - e^{-c\epsilon^2n}$ we have
   \begin{align}
-    \sup_{\sigma \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
+    \sup_{\sigma^{-1} \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
   \end{align}
 \end{lemma}
 Finally, let us also recall that
@@ -84,7 +84,34 @@ Finally, let us also recall that
 \end{align}
 The two terms in the formula of $F$ are the pillars of this manuscript. Their convergence will lead us to prove the convergence of $F$, and most importantly, the uniform convergence of $\sigma(x)$.\gy{As for the question Tuca asked me during our discussion, yes we can define $\sigma(x)$ to be the unique solution to $F(x,\sigma)=3$ or whatever number we peek as long as the number is greatly than zero (to ensure the existence of uniquess of the solution). If we move the constant to the left it is equivalent to just pick a different perplexity. The convergence of $F$ works for any $\sigma$ and that is the key. As long as control the entropy, we are expecting convergence as long as we set up the continuous version to have the same perplexity.}
 \section{The Two Most Important Lemmas}
-OK I am nervous as fuck but let us do this.
+The biggest obtascles left are to proof two lemmas similar to lemma 6 and lemma
+7 in \cite{auffinger-tsne}. These two lemmas will give us the convergence of
+$F$ and thus the convergence of $\sigma(x)$. We will try to tackle this part using similar methods from the original paper. Write
+\begin{align}
+  f_{\sigma}(x,x') = & \exp(-w(\sigma\norm{x-x'}^{\theta})),  \nonumber                   \\
+  g_{\sigma}(x,x') = & w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta})).
+\end{align}
+Note that for any real numbers $A,B,C,D$, we have
+\begin{align}
+  \left|\frac{A}{B}-\frac{C}{D}\right| = \left|\frac{AD-BC}{BD}\right| = \left|\frac{D(A-C)+C(D-B)}{BD}\right| \leq \left|\frac{A-C}{B}\right|+\left|\frac{C(D-B)}{BD} \right|.
+\end{align}
+This means
+\begin{align} \label{important_lemmas:triangle_inequality}
+   & \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}-\frac{\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu(x')}\right| \leq \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')-\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}\right| \nonumber \\
+   & \qquad \qquad + \left|\frac{\int g_{\sigma}(x,x')d\mu(x')(\int f_{\sigma}(x,x') d\mu_n(x')-\int f_{\sigma}(x,x') d\mu(x'))}{\int f_{\sigma}(x,x')d\mu(x')\int f_{\sigma}(x,x') d\mu_n(x')} \right|.
+\end{align}
+Let $\alpha >0$. Define
+\begin{align}
+  E'_1 = \left\{\max_{i = 1,\dots,n}\norm{X_i} \geq \sqrt{\left(\alpha+\frac{1}{c_1}\right)}\sqrt{\log n} + \sqrt{d}\right\}.
+\end{align}
+Setting $t = \sqrt{\alpha \log n}$ in lemma \ref{max_iid_lemma} we have $\p(E'_1) \leq Cn^{-c_1 \alpha}$. To absorb the $\sqrt{d}$ term in $E'_1$, we can find $\epsilon_n \to 0$ such that
+\begin{align}
+  E_1 = \left\{\max_{i = 1,\dots,n}\norm{X_i} \geq \sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n}\right\}
+\end{align}
+with $\p(E_1) \leq Cn^{-c_1 \alpha}$. On the other hand, on $E_1^c$ for all $i,j$,
+\begin{align}
+  \norm{X_i-X_j} \leq 2\sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n}.
+\end{align}
 \section{The Rest of the Proof}
 \section{Wrap Up and Conclusion}
 
