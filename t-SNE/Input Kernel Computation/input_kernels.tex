@@ -150,7 +150,68 @@ i.e.,
 \begin{align}
   n^{-\eta} \exp \left(w\left(\left(\frac{2\gamma \sqrt{\log n}}{\delta} \right)^{\theta} \right) \right) \to 0,\qquad  c_1 \alpha > 1, \qquad 0< \eta < 1/2.
 \end{align}
+Let $\alpha = 1/c_1 + \epsilon_1$ and $\eta = 1/2 - \epsilon_2$. Then the above requirements are equivalent to
+\begin{align}
+  \lim_{n \to \infty} n^{-1/2+\epsilon_2} \exp \left(w\left(\left(\sqrt{\frac{8}{(c_1+\epsilon_1)\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right) = 0.
+\end{align}
+As $\epsilon_1$ and $\epsilon_2$ can be arbitrarily small, the above limit can be further simplified to
+\begin{align} \label{important_lemmas:convergence_conditions_3}
+  \lim_{n \to \infty} n^{-1/2} \exp \left(w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right) = 0.
+\end{align}
+Like \cite{auffinger-tsne}, the quantity $c_1\delta^2$ shows up again as our slider. It is just less explicit. Also, we need to choose $w$ that does not increase too fast that the above limit will fail. To put it in a more formal way, consider the set below
+\begin{align}
+  \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} \exp \left(w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+\end{align}
+Obviously, $0 \in \mathcal{K}_w$ so it is nonempty. If there exists $\tilde{C}'\in \mathcal{K}_w$ such that $\tilde{C}' >0$. Then for any $0 \leq \tilde{C}'' < \tilde{C}'$, we have $\tilde{C}'' \in \mathcal{K}_w$ by monotonicity of $w$. Inspired by this fact, we can require
+\begin{align}
+  \sup \mathcal{K}_w > 0.
+\end{align}
+Then for any $\tilde{C} < \sup \mathcal{K}_w$, $\tilde{C} \in \mathcal{K}_w$. Back to \eqref{important_lemmas:convergence_conditions_3}, we simply need to let
+\begin{align}
+  c_1\delta^2 > \frac{8}{(\sup \mathcal{K}_w)^2}.
+\end{align}
+Now we are ready to formally state the two MOST important lemmas for this entire project.
+\begin{condition} \label{important_lemmas:convergence_conditions}
+  Define
+  \begin{align}
+    \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} \exp \left(w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+  \end{align}
+  Then $w$ satisfies that 
+  \begin{align}
+    \sup \mathcal{K}_w > 0.
+  \end{align}
+\end{condition}
+\begin{lemma}
+  Let $c_1$ be the decay constant of the sub-Gaussian distribution $\mu$, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Then almost surely in $X_1,\dots,X_n$,
+  \begin{align}
+    &\sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(X_i,x') d\mu_n(x')}{\int f_{\sigma}(X_i,x') d\mu_n(x')}-\frac{\int g_{\sigma}(X_i,x') d\mu(x')}{\int f_{\sigma}(X_i,x') d\mu(x')}\right| \nonumber \\
+    & \qquad \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
+  \end{align}
+\end{lemma}
+Using the elementary inequality $\log(x) \leq x-1$, we can prove the next lemma in a similar way:
+\begin{lemma}
+  Let $c_1$ be the decay constant of the sub-Gaussian distribution $\mu$, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Then almost surely in $X_1,\dots,X_n$,
+  \begin{align}
+    &\sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left| \log\left(\int f_{\sigma}(X_i,x') d\mu_n(x')\right)- \log\left(\int f_{\sigma}(X_i,x') d\mu(x')\right) \right| \nonumber \\
+    & \qquad \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(w\left(\left(\sqrt{\frac{4}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
+  \end{align}
+\end{lemma}
+Then using these two lemmas we have the following two theorems:
+\begin{proposition}
+Let $\mu$ be sub-Gaussian with decay constant $c_1$ from lemma \ref{Gaussian_lemma} and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Set $\delta>0$ to be a constant such that $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$. Then almost surely in $X_1,\dots,X_n$,
+\begin{align}
+  \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)\right| = o(1).
+\end{align}
+\end{proposition}
+Since in \cite{auffinger-tsne} the convergence of $\sigma^*$ does not use the polynomial decay in the original paper, we have the following milestone proposition as well:
+\begin{proposition}
+  Suppose $\mu$ has compact support and $C_1$ density. Then almost surely, as $n \to \infty$,
+  \begin{align}
+    \sup_{i=1,\dots,n} \left|\sigma_{\mu_n}^*(X_i)-\sigma_{\mu}^*(X_i)\right| \to 0.
+  \end{align}
+\end{proposition}
 \section{The Rest of the Proof}
+It is not over yet, as in \cite{auffinger-tsne} some of the remaining lemmas require polynomial decay and we need to thread carefully and tweak condition \ref{important_lemmas:convergence_conditions} to make sure the rest of the proof goes through, along with the generalized output kernels.
 \section{Wrap Up and Conclusion}
 
 \nocite{*}

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex input_kernels"] 1735954283.27197 "input_kernels.aux" "input_kernels.bbl" "input_kernels" 1735954285.34288 0
+["bibtex input_kernels"] 1736023095.16887 "input_kernels.aux" "input_kernels.bbl" "input_kernels" 1736023097.07589 0
   "./citation.bib" 1733700978 1894 6b1c5882c043b00de17d3df3ecb35a36 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "input_kernels.aux" 1735954284 2279 c96c587b0f369ab3edaf64a340862b0b "pdflatex"
+  "input_kernels.aux" 1736023096 2545 2ae6fcce3c62dea34bade9d4b57063ae "pdflatex"
   (generated)
   "input_kernels.bbl"
   "input_kernels.blg"
   (rewritten before read)
-["pdflatex"] 1735954283.66676 "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" "input_kernels.pdf" "input_kernels" 1735954285.34403 0
+["pdflatex"] 1736023095.44982 "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" "input_kernels.pdf" "input_kernels" 1736023097.07697 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1735029071 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626407855 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -190,12 +190,12 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" 1735954280 12287 4d2f22ecabdd52ed53069724a1abd959 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" 1736023092 17218 cefb110c59b627cd4e5bfa2753a65100 ""
   "guyipreammath.tex" 1735029244 4292 eccb543e23cab8f1505022a06846e39d ""
-  "input_kernels.aux" 1735954284 2279 c96c587b0f369ab3edaf64a340862b0b "pdflatex"
-  "input_kernels.bbl" 1735954283 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex input_kernels"
-  "input_kernels.out" 1735954284 702 d39de0d4364354e18129f38857d3d5ff "pdflatex"
-  "input_kernels.tex" 1735954280 12287 4d2f22ecabdd52ed53069724a1abd959 ""
+  "input_kernels.aux" 1736023096 2545 2ae6fcce3c62dea34bade9d4b57063ae "pdflatex"
+  "input_kernels.bbl" 1736023095 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex input_kernels"
+  "input_kernels.out" 1736023096 702 d39de0d4364354e18129f38857d3d5ff "pdflatex"
+  "input_kernels.tex" 1736023092 17218 cefb110c59b627cd4e5bfa2753a65100 ""
   (generated)
   "input_kernels.aux"
   "input_kernels.log"
