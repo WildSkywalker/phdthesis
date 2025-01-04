@@ -106,11 +106,49 @@ Let $\alpha >0$. Define
 \end{align}
 Setting $t = \sqrt{\alpha \log n}$ in lemma \ref{max_iid_lemma} we have $\p(E'_1) \leq Cn^{-c_1 \alpha}$. To absorb the $\sqrt{d}$ term in $E'_1$, we can find $\epsilon_n \to 0$ such that
 \begin{align}
-  E_1 = \left\{\max_{i = 1,\dots,n}\norm{X_i} \geq \sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n}\right\}
+  E_1 = \left\{\max_{i = 1,\dots,n}\norm{X_i} \geq \sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n}\right\} 
 \end{align}
 with $\p(E_1) \leq Cn^{-c_1 \alpha}$. On the other hand, on $E_1^c$ for all $i,j$,
 \begin{align}
-  \norm{X_i-X_j} \leq 2\sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n}.
+  \norm{X_i-X_j} \leq 2\sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n} =: 2\gamma \sqrt{\log n}.
+\end{align}
+This means for $\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]$ on $E_1^c$ we have
+\begin{align} \label{important_lemmas:denominator_bound_1}
+  \int f_{\sigma}(X_i,x')d\mu_n(x') &= \int \exp(-w(\sigma\norm{X_i-x'}^{\theta})) d\mu_n(x') \nonumber \\
+  &\geq \exp \left(-w\left(\left(\frac{2\gamma \sqrt{\log n}}{\delta} \right)^{\theta} \right) \right) =: T.
+\end{align}
+\gy{This is where the interesting part begins. The proofs in the original paper shows us that we do not want our kernel to decay too fast otherwise the bounds cannot be controlled.}In a same way, by lemma \ref{Gaussian_lemma}, we get similar bounds
+\begin{align} \label{important_lemmas:denominator_bound_2}
+  \int f_{\sigma}(X_i,x')d\mu(x') \geq & (1-Cm^{-c_1 \alpha}) T \geq \frac{1}{2} T.
+\end{align}
+By lemma \ref{approx_lemma} with $h = f_{\sigma}$ and $h = g_{\sigma}$, there exits $E_2$ with $\p(E_2) \leq 2e^{-c\epsilon^2n}$ such that on $E_2^c$,
+\begin{align} \label{important_lemmas:approximation}
+  &\sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\int f_{\sigma}(X_i,x')d\mu_n(x') - \int f_{\sigma}(X_i,x')d\mu(x') \right| \nonumber \\
+  & \qquad + \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\int g_{\sigma}(X_i,x')d\mu_n(x') - \int g_{\sigma}(X_i,x')d\mu(x') \right|\leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
+\end{align}
+Therefore on $E_1^c \cap E_2^c$, combining \eqref{important_lemmas:triangle_inequality}, \eqref{important_lemmas:denominator_bound_1}, \eqref{important_lemmas:denominator_bound_2}, and \eqref{important_lemmas:approximation} gives us
+\begin{align}
+  \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}-\frac{\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu(x')}\right| \leq C \epsilon T^{-1} + O\left(\frac{\sqrt{\log n}}{n^{1/2}T}\right).
+\end{align}
+Again, we have reduced the core parts of this problem into a calculus exercise. We want RHS goes to zero as $n \to \infty$. Towards this end we need
+\begin{align} \label{important_lemmas:convergence_conditions_1}
+  \epsilon T^{-1} \to 0, \qquad  T^{-1} \cdot \frac{\sqrt{\log n}}{n^{1/2}} \to 0.
+\end{align} \label{important_lemmas:convergence_conditions_2}
+On the other hand, since $\p(E_1 \cap E_2) \leq Cn^{-c_1 \alpha} + 2e^{-c\epsilon^2n}$, we also need
+\begin{align}
+  c_1 \alpha > 1, \qquad \epsilon^2 n \to \infty.
+\end{align}
+Let $\epsilon = n^{-\eta}$ and by \eqref{important_lemmas:convergence_conditions_1} we have $0< \eta < 1/2$. Then, if we have $ n^{-\eta} T^{-1} \to 0$ for some $\eta \in (0,1/2)$, then we must have 
+\begin{align}
+  T^{-1} \cdot \frac{\sqrt{\log n}}{n^{1/2}} \leq \frac{\sqrt{\log n}}{n^{1/2 -\eta}} \to 0.
+\end{align}
+This means the first inequality in \eqref{important_lemmas:convergence_conditions_1} implies the second. The requirements in \eqref{important_lemmas:convergence_conditions_1} and \eqref{important_lemmas:convergence_conditions_2} are equivalent to
+\begin{align}
+  n^{-\eta} T^{-1} \to 0,\qquad  c_1 \alpha > 1, \qquad 0< \eta < 1/2.
+\end{align}
+i.e.,
+\begin{align}
+  n^{-\eta} \exp \left(w\left(\left(\frac{2\gamma \sqrt{\log n}}{\delta} \right)^{\theta} \right) \right) \to 0,\qquad  c_1 \alpha > 1, \qquad 0< \eta < 1/2.
 \end{align}
 \section{The Rest of the Proof}
 \section{Wrap Up and Conclusion}
