@@ -244,7 +244,7 @@ Using triangluar inequality, we have
 \end{align}
 In order to get the convergence, we need to check the convergence of each term. Note that $f,f_n \leq 1$. Denote
 \begin{align}
- \tilde{T} = \exp \left(w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right).
+  \tilde{T} = \exp \left(w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right).
 \end{align}The first can be bounded by using \eqref{important_lemmas:denominator_bound_1} and \eqref{important_lemmas:convergence_conditions_3}:
 \begin{align} \label{p_convergence:first_term}
   \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| \leq \frac{1}{n} \left|\frac{1}{\int f_n d\mu_n - 1/n} \cdot \frac{1}{\int f_n d\mu_n}\right|= O(n^{-1}\tilde{T}^2).
@@ -267,14 +267,14 @@ Next up, we want to bound
 \begin{align}
   \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)|.
 \end{align}
-Let $\epsilon_n$ be such that 
+Let $\epsilon_n$ be such that
 \begin{align}
   \frac{|f_n-f|}{|\int f_n d\mu_n||\int f d\mu_n|} = O(|f_n-f|\tilde{T}^2) = O(\epsilon_n),
 \end{align}
 which we inherit from \eqref{p_convergence:second_term}. We compute
 \begin{align}
-  p_n \log p_n =& p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber \\
-  =& p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
+  p_n \log p_n = & p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber           \\
+  =              & p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
 \end{align}
 The third term will apparently vanish. For the second term, recall that $p \leq \tilde{T}^{-1}$. We reqruire
 \begin{align} \label{p_convergence:entropy_bound}
@@ -286,14 +286,14 @@ The third term will apparently vanish. For the second term, recall that $p \leq 
 \end{align}
 Recall that $p_{j|i} = \frac{1}{n}p'_n(X_i,X_j)$. Therefore
 \begin{align}
-  \sum_j p_{j|i} \log p_{j|i} =& \sum_{j \neq i} \frac{1}{n}p'_n(X_i,X_j) \log \left(\frac{1}{n}p'_n(X_i,X_j) \right ) + \log n + \log \rho \nonumber \\
-  =& \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho + \log n \left(1 - \frac{1}{n}\sum_{j \neq i} p'_n(X_i,X_j)\right) \nonumber \\
-  =& \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho
+  \sum_j p_{j|i} \log p_{j|i} = & \sum_{j \neq i} \frac{1}{n}p'_n(X_i,X_j) \log \left(\frac{1}{n}p'_n(X_i,X_j) \right ) + \log n + \log \rho \nonumber                                  \\
+  =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho + \log n \left(1 - \frac{1}{n}\sum_{j \neq i} p'_n(X_i,X_j)\right) \nonumber \\
+  =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho
 \end{align}
 because by definition $n - \sum_{j \neq i} p'_n(X_i,X_j) = 0$. We proceed to write the first summation as an integral over the measure $\mu_n$, with the difference being the diagonal terms.
 \begin{align} \label{p_convergence:diagonal_term}
-  &\frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) - \int p'_n(X_i,x') \log p'_n(X_i,x') d\mu_n(x') \nonumber \\
-=& -\frac{1}{n}\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\log \left(\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\right).
+    & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) - \int p'_n(X_i,x') \log p'_n(X_i,x') d\mu_n(x') \nonumber     \\
+  = & -\frac{1}{n}\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\log \left(\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\right).
 \end{align}
 If $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. If $\mu_X$ is sub-Gaussian, then by \eqref{important_lemmas:denominator_bound_1}, \eqref{important_lemmas:convergence_conditions} and condition \ref{input_kernel_conditions_1}, we get
 \begin{align}
@@ -301,7 +301,8 @@ If $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. If 
 \end{align}
 This means the diagonal term in \eqref{p_convergence:diagonal_term} is $O(n^{-1}\tilde{T}\log(\tilde{T})) = o(1)$ by condition \ref{input_kernel_conditions_1} and the defintion of $\mathcal{K}_w$. The rest of convergence follows in the exact same way in \cite{auffinger-tsne}.
 
-At this point, we need to tweak condition \ref{important_lemmas:convergence_conditions} such that both
+At this point, we need to tweak condition
+\ref{important_lemmas:convergence_conditions} such that both
 \begin{align}
   O(|f_n-f|\tilde{T}^3), O(n^{-1/2}\tilde{T}^2)
 \end{align}
@@ -311,13 +312,13 @@ are $o(1)$. The second bound is easy to tweak, we simply need to tweak the defin
 \end{align}
 Only one thing left! Let us take a look at $|f_n-f|$. By definition and assume $\sigma(x) \geq \sigma_n(x)$ WLOG (or we can always compute the other way around), we have
 \begin{align} \label{f_convergence:difference}
-  |f_n-f| =& \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right|\exp(w(-\sigma(x)\norm{x-x}^{\theta})) \nonumber \\
-  \leq & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right| \nonumber \\
-  =&\left|\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right|.
+  |f_n-f| = & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right|\exp(w(-\sigma(x)\norm{x-x}^{\theta})) \nonumber \\
+  \leq      & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right| \nonumber                                       \\
+  =         & \left|\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right|.
 \end{align}
 We will have to assume the derivative of $w$ is bounded from above by some constant $\tilde{M}$. Also, if $\mu_X$ is sub-Gaussian, let $C$ be the constant of decay for $X_i-X_j$ and we have
 \begin{align} \label{distance_esti}
-    \p(\norm{X_i-X_j}^2 \geq \log n) \leq 2 \exp(-\log n /C^2) = 2 \exp\left(\frac{1}{c^2}\right) \cdot \frac{1}{n} \to 0.
+  \p(\norm{X_i-X_j}^2 \geq \log n) \leq 2 \exp(-\log n /C^2) = 2 \exp\left(\frac{1}{c^2}\right) \cdot \frac{1}{n} \to 0.
 \end{align}
 This means $\norm{X_i-X_j}^2 = O(\log n)$ almost surely. Finally, we know that
 \begin{align} \label{f_convergence:sigma_difference}
@@ -337,7 +338,10 @@ which is stronger than the condition in \ref{important_lemmas:convergence_condit
 \end{align}
 And we are DONE.
 \section{Wrap Up and Conclusion}
-Except for coding and simulation, the problem of generalized t-SNE has been solved. The assumptions of output kernels stay unchanged as in condtion \ref{output_kernel_conditions}. We are now ready to state the conditions we need for input kernels.
+Except for coding and simulation, the problem of generalized t-SNE has been
+solved. The assumptions of output kernels stay unchanged as in condtion
+\ref{output_kernel_conditions}. We are now ready to state the conditions we
+need for input kernels.
 \begin{condition}[Final Input Kernel Conditions] \label{input_kernel_conditions_2}
   Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x_i,x_j,\sigma_i) = \exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))$. Here, $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) Define
   \begin{align}
