@@ -68,7 +68,9 @@ def get_original_pairwise_affinities(X: np.ndarray, perplexity: int = 10) -> np.
         diff = X[i] - X
         σ_i = grid_search(diff, i, perplexity)  # Grid Search for σ_i
         norm = np.linalg.norm(diff, axis=1)
-        p_ij[i, :] = np.exp(-(norm**2) / (2 * σ_i**2))
+        # p_ij[i, :] = np.exp(-(norm**2) / (2 * σ_i**2))
+        # p_ij[i, :] = (norm**(-10)) / (2 * σ_i**2)
+        p_ij[i, :] = (norm**(-10)) / (2 * σ_i**2) + np.exp(-(norm) / (2 * σ_i**2))
 
         # Set p = 0 when j = i
         np.fill_diagonal(p_ij, 0)
@@ -162,7 +164,8 @@ def get_low_dimensional_affinities(Y: np.ndarray) -> np.ndarray:
         # Equation 4 Numerator
         diff = Y[i] - Y
         norm = np.linalg.norm(diff, axis=1)
-        q_ij[i, :] = (1 + norm**2) ** (-1)
+        # q_ij[i, :] = (1 + norm**2) ** (-1)
+        q_ij[i, :] = (1 + norm**2 + norm**4) ** (-1)
 
     # Set p = 0 when j = i
     np.fill_diagonal(q_ij, 0)
