@@ -86,7 +86,8 @@ The two terms in the formula of $F$ are the pillars of this manuscript. Their co
 \section{The Two Most Important Lemmas}
 The biggest obtascles left are to proof two lemmas similar to lemma 6 and lemma
 7 in \cite{auffinger-tsne}. These two lemmas will give us the convergence of
-$F$ and thus the convergence of $\sigma(x)$. We will try to tackle this part using similar methods from the original paper. Write
+$F$ and thus the convergence of $\sigma(x)$. We will try to tackle this part
+using similar methods from the original paper. Write
 \begin{align}
   f_{\sigma}(x,x') = & \exp(-w(\sigma\norm{x-x'}^{\theta})),  \nonumber                   \\
   g_{\sigma}(x,x') = & w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta})).
@@ -106,7 +107,7 @@ Let $\alpha >0$. Define
 \end{align}
 Setting $t = \sqrt{\alpha \log n}$ in lemma \ref{max_iid_lemma} we have $\p(E'_1) \leq Cn^{-c_1 \alpha}$. To absorb the $\sqrt{d}$ term in $E'_1$, we can find $\epsilon_n \to 0$ such that
 \begin{align}
-  E_1 = \left\{\max_{i = 1,\dots,n}\norm{X_i} \geq \sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n}\right\} 
+  E_1 = \left\{\max_{i = 1,\dots,n}\norm{X_i} \geq \sqrt{\left(\alpha+\frac{1}{c_1}+\epsilon_n \right)}\sqrt{\log n}\right\}
 \end{align}
 with $\p(E_1) \leq Cn^{-c_1 \alpha}$. On the other hand, on $E_1^c$ for all $i,j$,
 \begin{align}
@@ -114,8 +115,8 @@ with $\p(E_1) \leq Cn^{-c_1 \alpha}$. On the other hand, on $E_1^c$ for all $i,j
 \end{align}
 This means for $\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]$ on $E_1^c$ we have
 \begin{align} \label{important_lemmas:denominator_bound_1}
-  \int f_{\sigma}(X_i,x')d\mu_n(x') &= \int \exp(-w(\sigma\norm{X_i-x'}^{\theta})) d\mu_n(x') \nonumber \\
-  &\geq \exp \left(-w\left(\left(\frac{2\gamma \sqrt{\log n}}{\delta} \right)^{\theta} \right) \right) =: T.
+  \int f_{\sigma}(X_i,x')d\mu_n(x') & = \int \exp(-w(\sigma\norm{X_i-x'}^{\theta})) d\mu_n(x') \nonumber                                        \\
+                                    & \geq \exp \left(-w\left(\left(\frac{2\gamma \sqrt{\log n}}{\delta} \right)^{\theta} \right) \right) =: T.
 \end{align}
 \gy{This is where the interesting part begins. The proofs in the original paper shows us that we do not want our kernel to decay too fast otherwise the bounds cannot be controlled.}In a same way, by lemma \ref{Gaussian_lemma}, we get similar bounds
 \begin{align} \label{important_lemmas:denominator_bound_2}
@@ -123,12 +124,12 @@ This means for $\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]$ on $E_1^c$ we ha
 \end{align}
 By lemma \ref{approx_lemma} with $h = f_{\sigma}$ and $h = g_{\sigma}$, there exits $E_2$ with $\p(E_2) \leq 2e^{-c\epsilon^2n}$ such that on $E_2^c$,
 \begin{align} \label{important_lemmas:approximation}
-  &\sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\int f_{\sigma}(X_i,x')d\mu_n(x') - \int f_{\sigma}(X_i,x')d\mu(x') \right| \nonumber \\
-  & \qquad + \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\int g_{\sigma}(X_i,x')d\mu_n(x') - \int g_{\sigma}(X_i,x')d\mu(x') \right|\leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
+   & \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]          \\ i = 1,\dots, n}} \left|\int f_{\sigma}(X_i,x')d\mu_n(x') - \int f_{\sigma}(X_i,x')d\mu(x') \right| \nonumber \\
+   & \qquad + \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left|\int g_{\sigma}(X_i,x')d\mu_n(x') - \int g_{\sigma}(X_i,x')d\mu(x') \right|\leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
 \end{align}
 Therefore on $E_1^c \cap E_2^c$, combining \eqref{important_lemmas:triangle_inequality}, \eqref{important_lemmas:denominator_bound_1}, \eqref{important_lemmas:denominator_bound_2}, and \eqref{important_lemmas:approximation} gives us
-\begin{align}
-  \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}-\frac{\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu(x')}\right| \leq C \epsilon T^{-1} + O\left(\frac{\sqrt{\log n}}{n^{1/2}T}\right).
+\begin{align} \label{important_lemmas:approximation_2}
+  \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}-\frac{\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu(x')}\right| \leq C \epsilon T^{-1} + O\left(\frac{\sqrt{\log n}}{n^{1/2}T}\right).
 \end{align}
 Again, we have reduced the core parts of this problem into a calculus exercise. We want RHS goes to zero as $n \to \infty$. Towards this end we need
 \begin{align} \label{important_lemmas:convergence_conditions_1}
@@ -138,7 +139,7 @@ On the other hand, since $\p(E_1 \cap E_2) \leq Cn^{-c_1 \alpha} + 2e^{-c\epsilo
 \begin{align}  \label{important_lemmas:convergence_conditions_2}
   c_1 \alpha > 1, \qquad \epsilon^2 n \to \infty.
 \end{align}
-Let $\epsilon = n^{-\eta}$ and by \eqref{important_lemmas:convergence_conditions_1} we have $0< \eta < 1/2$. Then, if we have $ n^{-\eta} T^{-1} \to 0$ for some $\eta \in (0,1/2)$, then we must have 
+Let $\epsilon = n^{-\eta}$ and by \eqref{important_lemmas:convergence_conditions_1} we have $0< \eta < 1/2$. Then, if we have $ n^{-\eta} T^{-1} \to 0$ for some $\eta \in (0,1/2)$, then we must have
 \begin{align}
   T^{-1} \cdot \frac{\sqrt{\log n}}{n^{1/2}} \leq \frac{\sqrt{\log n}}{n^{1/2 -\eta}} \to 0.
 \end{align}
@@ -176,7 +177,7 @@ Now we are ready to formally state the two MOST important lemmas for this entire
   \begin{align}
     \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} \exp \left(w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
   \end{align}
-  Then $w$ satisfies that 
+  Then $w$ satisfies that
   \begin{align}
     \sup \mathcal{K}_w > 0.
   \end{align}
@@ -184,24 +185,24 @@ Now we are ready to formally state the two MOST important lemmas for this entire
 \begin{lemma}
   Let $c_1$ be the decay constant of the sub-Gaussian distribution $\mu$, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Then almost surely in $X_1,\dots,X_n$,
   \begin{align}
-    &\sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(X_i,x') d\mu_n(x')}{\int f_{\sigma}(X_i,x') d\mu_n(x')}-\frac{\int g_{\sigma}(X_i,x') d\mu(x')}{\int f_{\sigma}(X_i,x') d\mu(x')}\right| \nonumber \\
-    & \qquad \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
+     & \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]                                                                                                               \\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(X_i,x') d\mu_n(x')}{\int f_{\sigma}(X_i,x') d\mu_n(x')}-\frac{\int g_{\sigma}(X_i,x') d\mu(x')}{\int f_{\sigma}(X_i,x') d\mu(x')}\right| \nonumber \\
+     & \qquad \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
   \end{align}
 \end{lemma}
 Using the elementary inequality $\log(x) \leq x-1$, we can prove the next lemma in a similar way:
 \begin{lemma}
   Let $c_1$ be the decay constant of the sub-Gaussian distribution $\mu$, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Then almost surely in $X_1,\dots,X_n$,
   \begin{align}
-    &\sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left| \log\left(\int f_{\sigma}(X_i,x') d\mu_n(x')\right)- \log\left(\int f_{\sigma}(X_i,x') d\mu(x')\right) \right| \nonumber \\
-    & \qquad \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(w\left(\left(\sqrt{\frac{4}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
+     & \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]                                                                                                               \\ i = 1,\dots, n}} \left| \log\left(\int f_{\sigma}(X_i,x') d\mu_n(x')\right)- \log\left(\int f_{\sigma}(X_i,x') d\mu(x')\right) \right| \nonumber \\
+     & \qquad \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(w\left(\left(\sqrt{\frac{4}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
   \end{align}
 \end{lemma}
 Then using these two lemmas we have the following two theorems:
 \begin{proposition}
-Let $\mu$ be sub-Gaussian with decay constant $c_1$ from lemma \ref{Gaussian_lemma} and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Set $\delta>0$ to be a constant such that $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$. Then almost surely in $X_1,\dots,X_n$,
-\begin{align}
-  \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]\\ i = 1,\dots, n}} \left|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)\right| = o(1).
-\end{align}
+  Let $\mu$ be sub-Gaussian with decay constant $c_1$ from lemma \ref{Gaussian_lemma} and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Set $\delta>0$ to be a constant such that $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$. Then almost surely in $X_1,\dots,X_n$,
+  \begin{align}
+    \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)\right| = o(1).
+  \end{align}
 \end{proposition}
 Since in \cite{auffinger-tsne} the convergence of $\sigma^*$ does not use the polynomial decay in the original paper, we have the following milestone proposition as well:
 \begin{proposition}
@@ -211,9 +212,151 @@ Since in \cite{auffinger-tsne} the convergence of $\sigma^*$ does not use the po
   \end{align}
 \end{proposition}
 \section{The Rest of the Proof}
-It is not over yet, as in \cite{auffinger-tsne} some of the remaining lemmas require polynomial decay and we need to thread carefully and tweak condition \ref{important_lemmas:convergence_conditions} to make sure the rest of the proof goes through, along with the generalized output kernels.
-\section{Wrap Up and Conclusion}
+It is not over yet, as in \cite{auffinger-tsne} some of the remaining lemmas
+require polynomial decay and we need to thread carefully and tweak condition
+\ref{important_lemmas:convergence_conditions} to make sure the rest of the
+proof goes through, along with the generalized output kernels. We will cite
+some lemmas from \cite{auffinger-tsne} like we did for the output kernel
+computation so that the flow of the manuscript is easier to understand.
+\begin{lemma}
+  Any sequence in $\tilde{\mathcal{P}}_X$ is tight.
+\end{lemma}
+Recall Prokhorov's theorem:
+\begin{theorem*}[Prokhorov's Theorem]
+  If $\mu_n$ is a tight sequence of measures in Euclidean space. There exists a subsequence $\mu_{n_k}$ and a measure $\mu$ such that $\mu_{n_k}$ converges to $\mu$ weakly.
+\end{theorem*}
+We immediately get the following lemma:
+\begin{lemma} \label{mu_star_lemma}
+  There exits $\mu^*$ such that
+  \begin{align}
+    I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)
+  \end{align}
+\end{lemma}
+Recall that the lemmas concerning generalized output kernels do not interfere with the lemmas concerning the input kernel. We have a few more lemmas to check before victory. For simplicity of writing, notations we use without defininitions will be same as in \cite{auffinger-tsne}. We start by looking at
+\begin{align}
+  \sup_{i,j}|p'_n(X_i,X_j)-p'(X_i,X_j)|.
+\end{align}
+Using triangluar inequality, we have
+\begin{align}
+       & |p'_n - p'| = \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f}{\int f d \mu}\right| \nonumber                                                                                       \\
+  \leq & \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| + \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \nonumber                       \\
+       & \qquad \qquad \qquad \qquad \qquad \qquad \qquad + \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| + \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right|.
+\end{align}
+In order to get the convergence, we need to check the convergence of each term. Note that $f,f_n \leq 1$. Denote
+\begin{align}
+ \tilde{T} = \exp \left(w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right).
+\end{align}The first can be bounded by using \eqref{important_lemmas:denominator_bound_1} and \eqref{important_lemmas:convergence_conditions_3}:
+\begin{align} \label{p_convergence:first_term}
+  \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| \leq \frac{1}{n} \left|\frac{1}{\int f_n d\mu_n - 1/n} \cdot \frac{1}{\int f_n d\mu_n}\right|= O(n^{-1}\tilde{T}^2).
+\end{align}
+Recall the definitions of $\mathcal{K}_w$ and $\tilde{T}$, we have $O(n^{-1}\tilde{T}^2) = o(1)$ if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$. The second term is where we might need to tweak things a bit.
+\begin{align} \label{p_convergence:second_term}
+  \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \leq \frac{|f_n-f|}{|\int f_n d\mu_n||\int f d\mu_n|} = O(|f_n-f|\tilde{T}^2).
+\end{align}
+We wil postpone the estimation of $|f_n-f|$ as it will appear later in the lemmas we need to check. Continue onward, for the third them we can use lemma \ref{approx_lemma} and repeat the procedure that leads us to \eqref{important_lemmas:approximation_2}, which gives us
+\begin{align} \label{p_convergence:third_term}
+  \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| \leq \frac{|\int f d \mu_n - \int f d \mu|}{|\int f d \mu||\int f d \mu_n|} = O(n^{-1/2}\tilde{T}^2).
+\end{align}
+For the final term, we have a similar inequality as the second term:
+\begin{align} \label{p_convergence:fourth_term}
+  \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right| = O(|f_n-f|\tilde{T}).
+\end{align}
+By definition of $\tilde{T}$ and the monotonicity of $w$, if \eqref{p_convergence:second_term} vanishes, so does \eqref{p_convergence:fourth_term}. On the other hand, clearly \eqref{p_convergence:third_term} needs a slightly stronger bound than what we already have from $\tilde{K}_w$. We will keep this in mind for the near future and there is not much left to check!
 
+Next up, we want to bound
+\begin{align}
+  \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)|.
+\end{align}
+Let $\epsilon_n$ be such that 
+\begin{align}
+  \frac{|f_n-f|}{|\int f_n d\mu_n||\int f d\mu_n|} = O(|f_n-f|\tilde{T}^2) = O(\epsilon_n),
+\end{align}
+which we inherit from \eqref{p_convergence:second_term}. We compute
+\begin{align}
+  p_n \log p_n =& p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber \\
+  =& p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
+\end{align}
+The third term will apparently vanish. For the second term, recall that $p \leq \tilde{T}^{-1}$. We reqruire
+\begin{align} \label{p_convergence:entropy_bound}
+  O(\epsilon_n)/p = O(\epsilon_n \tilde{T}) = o(1).
+\end{align}
+\eqref{p_convergence:entropy_bound} also asks a little more in terms of convergence speed. We have one more lemma left to check before we put everything together. Lastly, we want to find the convergence condition for
+\begin{align}
+  \sum_j p_{j|i} \log p_{j|i} + \log(\rho n) = o(1).
+\end{align}
+Recall that $p_{j|i} = \frac{1}{n}p'_n(X_i,X_j)$. Therefore
+\begin{align}
+  \sum_j p_{j|i} \log p_{j|i} =& \sum_{j \neq i} \frac{1}{n}p'_n(X_i,X_j) \log \left(\frac{1}{n}p'_n(X_i,X_j) \right ) + \log n + \log \rho \nonumber \\
+  =& \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho + \log n \left(1 - \frac{1}{n}\sum_{j \neq i} p'_n(X_i,X_j)\right) \nonumber \\
+  =& \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho
+\end{align}
+because by definition $n - \sum_{j \neq i} p'_n(X_i,X_j) = 0$. We proceed to write the first summation as an integral over the measure $\mu_n$, with the difference being the diagonal terms.
+\begin{align} \label{p_convergence:diagonal_term}
+  &\frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) - \int p'_n(X_i,x') \log p'_n(X_i,x') d\mu_n(x') \nonumber \\
+=& -\frac{1}{n}\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\log \left(\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\right).
+\end{align}
+If $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. If $\mu_X$ is sub-Gaussian, then by \eqref{important_lemmas:denominator_bound_1}, \eqref{important_lemmas:convergence_conditions} and condition \ref{input_kernel_conditions_1}, we get
+\begin{align}
+  \int f(X_i,x')d\mu_n(x')-\frac{1}{n} \geq \frac{1}{2} \tilde{T}^{-1}.
+\end{align}
+This means the diagonal term in \eqref{p_convergence:diagonal_term} is $O(n^{-1}\tilde{T}\log(\tilde{T})) = o(1)$ by condition \ref{input_kernel_conditions_1} and the defintion of $\mathcal{K}_w$. The rest of convergence follows in the exact same way in \cite{auffinger-tsne}.
+
+At this point, we need to tweak condition \ref{important_lemmas:convergence_conditions} such that both
+\begin{align}
+  O(|f_n-f|\tilde{T}^3), O(n^{-1/2}\tilde{T}^2)
+\end{align}
+are $o(1)$. The second bound is easy to tweak, we simply need to tweak the definition of $\mathcal{K}_w$ to be
+\begin{align} \label{important_lemmas:convergence_conditions_temp}
+  \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} \exp \left(2 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+\end{align}
+Only one thing left! Let us take a look at $|f_n-f|$. By definition and assume $\sigma(x) \geq \sigma_n(x)$ WLOG (or we can always compute the other way around), we have
+\begin{align} \label{f_convergence:difference}
+  |f_n-f| =& \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right|\exp(w(-\sigma(x)\norm{x-x}^{\theta})) \nonumber \\
+  \leq & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right| \nonumber \\
+  =&\left|\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right|.
+\end{align}
+We will have to assume the derivative of $w$ is bounded from above by some constant $\tilde{M}$. Also, if $\mu_X$ is sub-Gaussian, let $C$ be the constant of decay for $X_i-X_j$ and we have
+\begin{align} \label{distance_esti}
+    \p(\norm{X_i-X_j}^2 \geq \log n) \leq 2 \exp(-\log n /C^2) = 2 \exp\left(\frac{1}{c^2}\right) \cdot \frac{1}{n} \to 0.
+\end{align}
+This means $\norm{X_i-X_j}^2 = O(\log n)$ almost surely. Finally, we know that
+\begin{align} \label{f_convergence:sigma_difference}
+  \sigma(x)-\sigma_n(x) = O(F_{\rho,\mu}(x,\sigma)-F_{\rho,\mu}(x,\sigma_n)) = O(n^{-1/2}\tilde{T}).
+\end{align}
+Applying \eqref{f_convergence:sigma_difference}, the difference \eqref{f_convergence:difference} can be bounded as
+\begin{align}
+  |f_n-f| = O(n^{-1/2} (\log n)^{\theta}\tilde{T}).
+\end{align}
+And we in turn obtain
+\begin{align}
+  O(|f_n-f|\tilde{T}^3) = O(n^{-1/2} (\log n)^{\theta}\tilde{T}^4),
+\end{align}
+which is stronger than the condition in \ref{important_lemmas:convergence_conditions_temp} and such fact compells us to tweak the definition of $\mathcal{K}_w$ one last time to
+\begin{align}
+  \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(4 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+\end{align}
+And we are DONE.
+\section{Wrap Up and Conclusion}
+Except for coding and simulation, the problem of generalized t-SNE has been solved. The assumptions of output kernels stay unchanged as in condtion \ref{output_kernel_conditions}. We are now ready to state the conditions we need for input kernels.
+\begin{condition}[Final Input Kernel Conditions] \label{input_kernel_conditions_2}
+  Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x_i,x_j,\sigma_i) = \exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))$. Here, $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) Define
+  \begin{align}
+    \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(4 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+  \end{align}
+  Then $w$ satisfies that
+  $w$ satisfies:
+
+  1. $\forall t \geq 0$, $w'(t)>0$ and $\exists M > 0$ s.t. $w'(t) \leq M$. $\lim_{t \to \infty} w(t) = \infty$;
+
+  2. $w'(t)+tw''(t) \geq 0$ for all $t \geq 0$;
+
+  3. The following two integrals converge:
+  \begin{align}
+    \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta}))dt < \infty, \qquad \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty;
+  \end{align}
+
+  4. $\sup \mathcal{K}_w > 0$.
+\end{condition}
 \nocite{*}
 \bibliography{citation}
 
