@@ -362,16 +362,20 @@ need for input kernels.
   4. $\sup \mathcal{K}_w > 0$.
 \end{condition}
 \section{Simulation Plots}
-Now it is time to run some simulations and see what the results are like. As shown in figure \ref{fig:tsne_plots}, we used four different configurations for the input and output kernels. They are
-\begin{enumerate}
+Now it is time to run some simulations and see what the results are like. As
+shown in figure \ref{fig:tsne_plots}, we used four different configurations for
+the input and output kernels. They are
+\begin{enumerate} [label=(\alph*)]
   \item Original $t$-SNE kernels;
-  \item Polynomial input kernel $\ki(x_i,x_j,\sigma_i) = \sigma_i \norm{x_i-x_j}^{-10}$ ;
-  \item Mixed input kernel $\ki(x_i,x_j,\sigma_i) = (\sigma_i \norm{x_i-x_j})^{-10} + \exp(-\sigma_i\norm{x_i-x_j})$;
-  \item Custom input and output kernels with 
-  \begin{align}
-    \ki(x_i,x_j,\sigma_i) =& (\sigma_i \norm{x_i-x_j})^{-10} + \exp(-\sigma_i\norm{x_i-x_j}), \nonumber \\
-    \ko(y_i,y_j) =& (1+\norm{y_i-y_j}^2+\norm{y_i-y_j}^4)^{-1}. \nonumber
-  \end{align}
+  \item Polynomial input kernel $\ki(x_i,x_j,\sigma_i) = \sigma_i \norm{x_i-x_j}^{-10}$
+        ;
+  \item Mixed input kernel $\ki(x_i,x_j,\sigma_i) = (\sigma_i \norm{x_i-x_j})^{-10} +
+          \exp(-\sigma_i\norm{x_i-x_j})$;
+  \item Custom input and output kernels with
+        \begin{align}
+          \ki(x_i,x_j,\sigma_i) = & (\sigma_i \norm{x_i-x_j})^{-10} + \exp(-\sigma_i\norm{x_i-x_j}), \nonumber \\
+          \ko(y_i,y_j) =          & (1+\norm{y_i-y_j}^2+\norm{y_i-y_j}^4)^{-1}. \nonumber
+        \end{align}
 \end{enumerate}
 All three custom configurations of kernels have on-par performance as the original $t$-SNE and they have different output distributions. This aligns with our prediction and proofs.
 \begin{figure}
@@ -382,7 +386,7 @@ All three custom configurations of kernels have on-par performance as the origin
   \subfloat[\centering Mixed Input Kernel]{{\includegraphics[width=6.5cm]{poly+exp_input.png} }}%
   \qquad
   \subfloat[\centering Custom Input\&Output Kernels]{{\includegraphics[width=6.5cm]{custom_in+out.png} }}
-  \caption{$t$-SNE running with different combinations of input and output kernels on the MNIST data set.}%
+  \caption{$t$-SNE running with different combinations of input and output kernels on the MNIST data set. All three custom kernel combinations are able to perform on par with the original algorithm.}%
   \label{fig:tsne_plots}
 \end{figure}
 \clearpage

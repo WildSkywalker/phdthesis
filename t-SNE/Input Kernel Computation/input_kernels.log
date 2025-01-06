@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  6 JAN 2025 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  6 JAN 2025 15:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -632,22 +632,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <../plots/default_kernel.png, id=192, 481.8pt x 481.8pt>
 File: ../plots/default_kernel.png Graphic file (type png)
 <use ../plots/default_kernel.png>
-Package pdftex.def Info: ../plots/default_kernel.png  used on input line 379.
+Package pdftex.def Info: ../plots/default_kernel.png  used on input line 383.
 (pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
 <../plots/poly_input_kernel.png, id=194, 481.8pt x 481.8pt>
 File: ../plots/poly_input_kernel.png Graphic file (type png)
 <use ../plots/poly_input_kernel.png>
-Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 381.
+Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 385.
 (pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
 <../plots/poly+exp_input.png, id=195, 481.8pt x 481.8pt>
 File: ../plots/poly+exp_input.png Graphic file (type png)
 <use ../plots/poly+exp_input.png>
-Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 382.
+Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 386.
 (pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
 <../plots/custom_in+out.png, id=196, 481.8pt x 481.8pt>
 File: ../plots/custom_in+out.png Graphic file (type png)
 <use ../plots/custom_in+out.png>
-Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 384.
+Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 388.
 (pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
 
 
@@ -666,15 +666,15 @@ Package rerunfilecheck Info: File `input_kernels.out' has not changed.
 (rerunfilecheck)             Checksum: C1AE89AC1A08769CA7FFF518EA6369A9;828.
  ) 
 Here is how much of TeX's memory you used:
- 24016 strings out of 473919
- 445924 string characters out of 5726953
+ 24017 strings out of 473919
+ 445952 string characters out of 5726953
  1953908 words of memory out of 5000000
- 46364 multiletter control sequences out of 15000+600000
+ 46365 multiletter control sequences out of 15000+600000
  570642 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,14n,90p,855b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on input_kernels.pdf (11 pages, 713851 bytes).
+Output written on input_kernels.pdf (11 pages, 713934 bytes).
 PDF statistics:
  350 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
