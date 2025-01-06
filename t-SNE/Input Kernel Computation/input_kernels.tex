@@ -324,7 +324,7 @@ This means $\norm{X_i-X_j}^2 = O(\log n)$ almost surely. Finally, we know that
 \begin{align} \label{f_convergence:sigma_difference}
   \sigma(x)-\sigma_n(x) = O(F_{\rho,\mu}(x,\sigma)-F_{\rho,\mu}(x,\sigma_n)) = O(n^{-1/2}\tilde{T}).
 \end{align}
-Applying \eqref{f_convergence:sigma_difference}, the difference \eqref{f_convergence:difference} can be bounded as
+Applying \eqref{f_convergence:sigma_difference} and by the simple limit $\lim_{x \to 0}(e^x-1)/x = 1$, the difference \eqref{f_convergence:difference} can be bounded as
 \begin{align}
   |f_n-f| = O(n^{-1/2} (\log n)^{\theta}\tilde{T}).
 \end{align}
