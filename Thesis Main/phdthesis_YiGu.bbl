@@ -8,12 +8,6 @@ Robin~A. Moser and G{\'{a}}bor Tardos.
 \newblock A constructive proof of the general lov{\'{a}}sz local lemma.
 \newblock {\em J. {ACM}}, 57\penalty0 (2):\penalty0 11:1--11:15, 2010.
 
-\bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
-Antonio Auffinger and Daniel Fletcher.
-\newblock Equilibrium distributions for t-distributed stochastic neighbour
-  embedding, 2023, 2304.03727.
-\newblock URL \url{https://arxiv.org/abs/2304.03727}.
-
 \bibitem[Hinton(2002)]{DBLP:journals/neco/Hinton02}
 Geoffrey~E. Hinton.
 \newblock Training products of experts by minimizing contrastive divergence.
@@ -922,6 +916,12 @@ Raza Habib and David Barber.
 \newblock Auxiliary variational mcmc.
 \newblock {\em Proc. International Conference on Learning Representations},
   2019.
+
+\bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
+Antonio Auffinger and Daniel Fletcher.
+\newblock Equilibrium distributions for t-distributed stochastic neighbour
+  embedding, 2023, 2304.03727.
+\newblock URL \url{https://arxiv.org/abs/2304.03727}.
 
 \bibitem[Ravuri and Lawrence(2024)]{ravuri-lawrence}
 Aditya Ravuri and Neil~D. Lawrence.
