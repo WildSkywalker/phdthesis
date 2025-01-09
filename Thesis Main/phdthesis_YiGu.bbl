@@ -8,6 +8,11 @@ Robin~A. Moser and G{\'{a}}bor Tardos.
 \newblock A constructive proof of the general lov{\'{a}}sz local lemma.
 \newblock {\em J. {ACM}}, 57\penalty0 (2):\penalty0 11:1--11:15, 2010.
 
+\bibitem[Liu et~al.(2009)Liu, Ngo, and Huy]{liu2000inequ}
+Wenjun Liu, Quoc Ngo, and Vu~Huy.
+\newblock Several interesting integral inequalities.
+\newblock {\em Journal of Mathematical Inequalities}, 3, 06 2009.
+
 \bibitem[Hinton(2002)]{DBLP:journals/neco/Hinton02}
 Geoffrey~E. Hinton.
 \newblock Training products of experts by minimizing contrastive divergence.
@@ -952,11 +957,6 @@ Ben Weinkove.
 \newblock Dimension reduction and the gradient flow of relative entropy, 2024,
   2409.16963.
 \newblock URL \url{https://arxiv.org/abs/2409.16963}.
-
-\bibitem[Liu et~al.(2009)Liu, Ngo, and Huy]{liu2000inequ}
-Wenjun Liu, Quoc Ngo, and Vu~Huy.
-\newblock Several interesting integral inequalities.
-\newblock {\em Journal of Mathematical Inequalities}, 3, 06 2009.
 
 \bibitem[Jiang et~al.(2022)Jiang, Gu, and Xue]{nanyiye2022}
 Nan Jiang, Yi~Gu, and Yexiang Xue.

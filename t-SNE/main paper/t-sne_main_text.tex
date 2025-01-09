@@ -1,5 +1,11 @@
 \section{Introduction} \label{sec_intro}
-The t-distributed stochastic neighbor embedding(t-SNE) is a well-known method of visualizing high-dimensional data with low-dimensional vectors (so they can be easily visualized). Let $d,s \geq 2$ with $d>s$, and $n \geq 1$. The input of t-SNE consist of vectors $X_1, \cdots, X_n \in \mathbb{R}^d$. The goal is the find vectors $Y_1, \cdots Y_n \in \mathbb{R}^s$ that serve as a good representation of the original vectors. The process of t-SNE starts with defining the following probability masses:
+The t-distributed stochastic neighbor embedding(t-SNE) is a well-known method
+of visualizing high-dimensional data with low-dimensional vectors (so they can
+be easily visualized). Let $d,s \geq 2$ with $d>s$, and $n \geq 1$. The input
+of t-SNE consist of vectors $X_1, \cdots, X_n \in \mathbb{R}^d$. The goal is
+the find vectors $Y_1, \cdots Y_n \in \mathbb{R}^s$ that serve as a good
+representation of the original vectors. The process of t-SNE starts with
+defining the following probability masses:
 \begin{align} \label{original_prob_mass}
     p_{j|i} = \frac{\exp(-\norm{X_i-X_j}^2/2\sigma_i^2)}{\sum_{k \neq i} \exp(-\norm{X_i-X_k}^2/2\sigma_i^2)},
 \end{align}
@@ -68,38 +74,41 @@ Lastly, define
 %     \lim_{n \to \infty} \inf_Y L(X,Y), \text{ and} \inf_{\mu \in \tilde{\mathcal{P}}_X} I(\mu).
 % \end{align}
 \section{Main Results}
-The core results of this problem are the conditions we assume the input and output kernels to have such that the output of the generalized $t$-SNE algorithm converges to a limiting equilibrium measure. Towards this end, below are the constraints we impose on the input and output kernels.
+The core results of this problem are the conditions we assume the input and
+output kernels to have such that the output of the generalized $t$-SNE
+algorithm converges to a limiting equilibrium measure. Towards this end, below
+are the constraints we impose on the input and output kernels.
 \begin{condition}[Input Kernel Conditions] \label{input_kernel_conditions}
     Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x_i,x_j,\sigma_i) = \exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))$. Here, $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) Define
     \begin{align}
-      \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(4 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+        \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(4 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
     \end{align}
-    Then $w$ satisfies that
-    $w$ satisfies:
-  
+    Then $w$ satisfies:
+
     1. $\forall t \geq 0$, $w'(t)>0$ and $\exists M > 0$ s.t. $w'(t) \leq M$. $\lim_{t \to \infty} w(t) = \infty$;
-  
+
     2. $w'(t)+tw''(t) \geq 0$ for all $t \geq 0$;
-  
+
     3. The following integral converges:
     \begin{align}
-      \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty;
+        \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty;
     \end{align}
-  
+
     4. $\sup \mathcal{K}_w > 0$.
 \end{condition}
+Since the all probability masses are normalized, we can assume without loss of generality that $w(0)=0$ from now on.
 \begin{condition}[Output Kernel Conditions] \label{output_kernel_conditions}
-    The output kernel $\ko(y,y') = k (\norm{y-y'})$ depends only on the distance between $y$ and $y'$ and that:
-  
-    1. $k: \mathbb{R}^+ \to \mathbb{R}^+$ is decreasing and bounded;
-  
-    2. $g$ satisfies
+    The output kernel depends only on the distance between two output data points $y$ and $y'$. In particular, $\ko(y,y') = k (\norm{y-y'})$ and that:
+
+    1. $k: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is decreasing and bounded;
+
+    2. $\ko$ satisfies
     \begin{align}
-      \iint_{(0,\infty)^2} g(y,y') dy dy' < \infty;
+        \iint_{(0,\infty)^2} \ko(y,y') dy dy' < \infty;
     \end{align}
-  
+
     3. $k$ has bounded derivative;
-  
+
     4. $k'(0) = 0$.
 \end{condition}
 We are ready to state the main results
@@ -125,9 +134,174 @@ We are ready to state the main results
     \subfloat[\centering Custom Input\&Output Kernels]{{\includegraphics[width=6.5cm]{custom_in+out.png} }}
     \caption{$t$-SNE running with different combinations of input and output kernels on the MNIST data set. All three custom kernel combinations are able to perform on par with the original algorithm.}%
     \label{fig:tsne_plots}
-  \end{figure}
+\end{figure}
 \clearpage
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}\label{tsne:sec:existence_uniqueness}
+In this section we establish the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$. Recall that $\sigma^*_{\rho,\mu}(x)$ is the unique solution of the equation
+\begin{align}
+    F_{\rho,\mu}(x,\sigma) = \int \frac{\ki(x,x',\sigma)}{\int \ki(x,x',\sigma)d\mu(x')} \log \left(\frac{\ki(x,x',\sigma)}{\int \ki(x,x',\sigma)d\mu(x')}\right) d\mu(x') + \log \rho = 0
+\end{align}
+Intuitively speaking, $\sigma^*$ is the limit of $\sigma_i$'s that are used to control the entropy. The purpose of this section is to prove that such limit exists and is unique for each given $x$. The existence and uniqueness of of $\sigma^*$ will become the foundation of everything we will prove afterwards. By condition \ref{input_kernel_conditions}, we can write
+\begin{align} \label{big_F_formula}
+      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                    \\
+    = & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
+    = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                               \\
+      & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right)  + \log \rho.
+\end{align}
+We start with the lemma that gives $F$ an increasing lower bound.
+\begin{lemma} \label{existence_uniqueness:existence_lemma}
+    If $\mu$ has a $C^1$ density $f(x)$ and both $f$ and $\norm{ \nabla f}$ are bounded, then there exists a constant $C>0$ such that
+    \begin{align}  \label{big_F_lowerbound_final}
+        F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Notice that for any integrable function $h$ on $\mathbb{R}_{\geq 0}$, we have
+    \begin{align}
+         & \int_{\mathbb{R}^d} h(\norm{x}) dx = \int_{\mathbb{S}^{d-1}} \int_0^{\infty} r^{d-1}h(r) dr d\nu=S_{d-1} \int_0^{\infty} r^{d-1}h(r) dr,
+    \end{align}
+    where $\mathbb{S}^{d-1}$ is the $(d-1)$-dimensional sphere, $d\nu$ the corresponding surface measure, and $S_{d-1}$ the volume of the sphere. By Condition \ref{input_kernel_conditions}, we know that
+    \begin{align}
+        \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty.
+    \end{align}
+    Since $w$ is increasing and $\lim_{t \to \infty} w(t) = \infty$, it is easy to see that
+    \begin{align}
+        \int_0^{\infty} t^{d-1} \exp(-w(t^{\theta}))dt < \infty.
+    \end{align}
+    Denote
+    \begin{align}
+        Z_d :=\int_{\mathbb{R}^d}\exp(-w(\norm{\tau}^{\theta})) d \tau = S_{d-1} \int_0^{\infty} t^{d-1}\exp(-w(t^{\theta})) dt.
+    \end{align}
+    Consider
+    \begin{align}
+          & \int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x') = \int \exp(-w(\sigma\norm{x-x'}^{\theta})) f(x')dx' \nonumber \\
+        = & Z_d \sigma^{-d/\theta}\int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx'.
+    \end{align}
+    Because $\lim_{x \to \infty} w(x) = \infty$, the integrand of the above integral converges weakly to $\delta_x f(x')$. To prove this statement, notice that
+    \begin{align}
+               & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{Z_d \sigma^{-d/\theta}} f(x')dx' \nonumber                                          \\
+        =      & \frac{1}{Z_d} \int \exp\left(-w \left(\norm{\sigma^{1/\theta}(x-x')}^{\theta}\right)\right) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
+        \equiv & \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau.
+    \end{align}
+    Since $f$ is bounded, $\exp(-w(\norm{\tau}^{\theta})) \sup f$ is integrable. By dominant convergence theorem and the continuity of $f$, we have
+    \begin{align}
+          & \lim_{\sigma \to \infty} \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
+        = & \frac{1}{Z_d} \int \lim_{\sigma \to \infty} \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
+        = & f(x) \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) d\tau \nonumber                                                  \\
+        = & f(x).
+    \end{align}
+    There exists some $\epsilon(\sigma) \to 0$ as $\sigma\to \infty$ and a constant $C>0$, that
+    \begin{align} \label{big_f_lowerbound_1}
+        -\log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right) = & -\log\left(Z_d \sigma^{-d/\theta}\right) - \log f(x)+ \epsilon(\sigma) \nonumber \\
+        \geq                                                                   & C\log \sigma - \log f(x).
+    \end{align}
+    Next, since $f$ is bounded, there exists $M>0$ such that $f \leq M$.
+    \begin{align} \label{big_F_lowerbound_2}
+             & \int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                  \\
+        \leq & M \frac{\int w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))dx'}{\int \exp(-w(\sigma\norm{x-x'}^{\theta}))f(x') dx'} \nonumber                                                                      \\
+        =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\sigma^{1/\theta}(x-x')}^{\theta})\exp(-w(\norm{\sigma^{1/\theta}(x-x')}^{\theta}))d\sigma^{1/\theta}(x-x')}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber \\
+        =    & M \frac{\sigma^{-d/\theta}\int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau}{ \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                          \\
+        % =    & M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z_d \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                                  \\
+        \to  & \frac{M}{Z_d f(x)} \int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau < \infty.
+    \end{align}
+    The numerator converges because of condition \ref{input_kernel_conditions}. As the bound in (\ref{big_F_lowerbound_2}) does not depend on $\sigma$, we can combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and deduce that
+    \begin{align}
+        F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
+    \end{align}
+\end{proof}
+This lemma proves the existence of $\sigma^*_{\rho,\mu}(x)$. Indeed, by \eqref{big_F_formula}, apparently 
+\begin{align} \label{existence_uniqueness:limit_1}
+    \lim_{\sigma \to 0} F_{\rho,\mu}(x,\sigma) = \log \rho < 0.
+\end{align}
+since $\rho \in (0,1)$. Now with lemma \ref{existence_uniqueness:existence_lemma}, we get
+\begin{align} \label{existence_uniqueness:limit_2}
+    \lim_{\sigma \to \infty} F_{\rho,\mu}(x,\sigma) = \infty.
+\end{align}
+By contuity of $f$ and intermediate value theorem, $\sigma^*_{\rho,\mu}(x)$ exists. To prove the uniqueness, we are left to show that $F_{\rho,\mu}$ is strictly increasing. The next lemma will do just that.
+\begin{lemma} \label{existence_uniqueness:uniqueness_lemma}
+    Given the same condition as in lemma \ref{existence_uniqueness:existence_lemma}, $F_{\rho,\mu}(x,\sigma)$ is strictly increasing in $\sigma$.
+\end{lemma}
+To tackle this proof, we need one additional lemma insipired by theorem 7 in \citep{liu2000inequ}.
+\begin{lemma} \label{miracle_lemma_ext}
+    Let $f(x),g(x),h(x)$ be continuous functions $\mathbb{R}^d \to \mathbb{R}^+$ such that for all $x,y \in \mathbb{R}^d$
+    \begin{align} \label{miracle_condition_ext}
+        \left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right) \geq 0.
+    \end{align}
+    Let $\mu$ be an arbitrary Lebesgue measure and assume all integrals in this lemma converge. Then the inequality
+    \begin{align} \label{miracle_inequ_ext}
+        \frac{\int_{\mathbb{R}^d} f(x)d\mu}{\int_{\mathbb{R}^d} h(x)d\mu} \geq \frac{\int_{\mathbb{R}^d} f(x)g(x)d\mu}{\int_{\mathbb{R}^d} h(x)g(x)d\mu}
+    \end{align}
+    holds. If (\ref{miracle_condition_ext}) reverses, then (\ref{miracle_inequ_ext}) reverses.
+\end{lemma}
+\begin{proof}
+    The proof of this lemma is similar to the one in \citep{liu2000inequ}. It suffices to show that
+    \begin{align}
+        \int_{\mathbb{R}^d} f(x)d\mu \int_{\mathbb{R}^d} h(x)g(x)d\mu \geq \int_{\mathbb{R}^d} h(x)d\mu \int_{\mathbb{R}^d} f(x)g(x)d\mu.
+    \end{align}
+    The above inequality is equivalent to
+    \begin{align}
+        \int_{\mathbb{R}^d} f(x)d\mu(x) \int_{\mathbb{R}^d} h(y)g(y)d\mu(y) \geq \int_{\mathbb{R}^d} h(x)d\mu(x) \int_{\mathbb{R}^d} f(y)g(y)d\mu(y).
+    \end{align}
+    That means we need to show
+    \begin{align}
+        \mathcal{G}:=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(y)(f(x)h(y)-f(y)h(x))d\mu(x)d\mu(y) \geq 0.
+    \end{align}
+    Swap $x$ and $y$ in the formula of $\mathcal{G}$ and we have an equivalent expression:
+    \begin{align}
+        \mathcal{G}=\int_{\mathbb{R}^d} \int_{\mathbb{R}^d} g(x)(f(y)h(x)-f(x)h(y))d\mu(x)d\mu(y).
+    \end{align}
+    Adding the last two formulas together yields
+    \begin{align}
+        2\mathcal{G} = & \int_{\mathbb{R}^d} \int_{\mathbb{R}^d} (g(x)-g(y))(f(y)h(x)-f(x)h(y))d\mu(x)d\mu(y) \nonumber                                              \\
+        =              & \int_{\mathbb{R}^d} \int_{\mathbb{R}^d} h(x)h(y)\left(g(x)-g(y)\right)\left(\frac{f(y)}{h(y)}-\frac{f(x)}{h(x)}\right)d\mu(x)d\mu(y) \geq 0
+    \end{align}
+    by the hypothesis of the lemma. This finishes the proof.
+\end{proof}
+\begin{proof}[Proof of Lemma \ref{existence_uniqueness:uniqueness_lemma}]
+    We compute the derivative of $F_{\rho,\mu}(x,\sigma)$ directly using \eqref{big_F_formula}. The following simplified
+    notations will be used in the first several steps:
+    \begin{align}
+        w = w(\sigma\norm{x-x'}^{\theta}), \quad w'=w'(\sigma\norm{x-x'}^{\theta}), \quad \exp(\cdot) = \exp(-w(\sigma\norm{x-x'}^{\theta})).
+    \end{align}
+    Omit $d\mu(x')$ in the integration for cleaner writing, and we have
+    \begin{align}
+          & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                    \\
+        = & -\int \frac{w'\norm{x-x'}^{\theta}\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
+        \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} - \frac{\left(\int \exp(\cdot)\right)'}{\int \exp(\cdot)} \nonumber                                            \\
+        = & -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
+        \int \frac{w \exp(\cdot) \left(\int \exp(\cdot)\right)'}{\left(\int \exp(\cdot)\right)^2} \quad \text{\normalfont (The first and fourth terms cancel.)} \nonumber                                        \\
+        = & \int \frac{w\cdot w' \cdot \norm{x-x'}^{\theta} \cdot \exp(\cdot)}{\int \exp(\cdot)}-\frac{\int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^{\theta} \exp(\cdot)}{\left(\int \exp(\cdot)\right)^2}.
+    \end{align}
+    We are able to move differentiation inside the integral because of dominant convergence theorem. To show that $\frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \geq 0$, we just need to show
+    \begin{align} \label{monotone_inequ}
+        \int w\cdot w' \cdot \norm{x-x'}^{\theta} \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^{\theta} \exp(\cdot).
+    \end{align}
+    For each $x,y,x' \in \mathbb{R}$ if the equality
+\begin{align} \label{monotone_condition}
+     & (w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta}) \nonumber                                   \\
+     & \qquad \qquad \qquad \qquad \qquad \qquad \cdot \left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
+\end{align}
+holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta}$, we have (\ref{monotone_inequ}) to be true by lemma \ref{miracle_lemma_ext}. Let $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we are left to show
+\begin{align}
+    w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta} \geq 0.
+\end{align}
+Since $\sigma >0$, the above inequality is equivalent to
+\begin{align} \label{generalized_condition_inequ}
+    w'(\sigma\norm{x-x'}^{\theta})\sigma \norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta}) \sigma \norm{y-x'}^{\theta} \geq 0.
+\end{align}
+Let $\tilde{w}(x) = x w'(x)$. Based on the second assumption in condition \ref{input_kernel_conditions} and mean value theorem, $\tilde{w}$ satisfies for all $a,b\geq 0$, $a>b$, there exists $c \in [b,a]$ that
+\begin{align}
+    \frac{aw'(a) - bw'(b)}{a-b} = w'(c) + cw''(c) \geq 0.
+\end{align}
+This proves \eqref{generalized_condition_inequ} by letting $a = \sigma\norm{x-x'}^{\theta}$ and $b = \sigma\norm{y-x'}^{\theta}$, as desired.
+\end{proof}
+We can formally state and prove the main result of this section
+\begin{proposition}
+    Let $\mu \in \mathcal{M}(\mathbb{R}^d)$ with $C^1$ density $f$ such that both $f$ and $\norm{\nabla f}$ are bounded. The equation $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^*_{\rho,\mu}(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. Moreover, $x \mapsto \sigma^*_{\rho,\mu}(x)$ is smooth.
+\end{proposition}
+\begin{proof}
+    The existence and uniqueness can be proven by combining \eqref{existence_uniqueness:limit_1}, \eqref{existence_uniqueness:limit_2}, lemma \ref{existence_uniqueness:existence_lemma} and lemma \ref{existence_uniqueness:uniqueness_lemma}. The smoothness of $\sigma^*_{\rho,\mu}(x)$ follows from implicit function theorem.
+\end{proof}
 \section{Uniform Convergence of \texorpdfstring{$\sigma^*$}{Lg}}\label{tsne:sec:uniform_convergence}
 \section{Proofs of the Main Results}\label{tsne:sec:proofs}
 \section{Extra Technical Proofs}\label{tsne:sec:extra_proofs}

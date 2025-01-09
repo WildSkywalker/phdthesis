@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex t-sne"] 1736296423.62087 "t-sne.aux" "t-sne.bbl" "t-sne" 1736296485.82073 0
-  "./citation.bib" 1733700978 1894 6b1c5882c043b00de17d3df3ecb35a36 ""
+["bibtex t-sne"] 1736384029.02362 "t-sne.aux" "t-sne.bbl" "t-sne" 1736384934.56869 0
+  "./citation.bib" 1736383257 2196 9cdb3ee3bbe89ce9d2ac74793a5fffc6 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne.aux" 1736296484 3517 0b94cae1a91307a055952694384bbc08 "pdflatex"
+  "t-sne.aux" 1736384933 5000 e5d7fcb394145d5964b430a5fd160846 "pdflatex"
   (generated)
   "t-sne.bbl"
   "t-sne.blg"
   (rewritten before read)
-["pdflatex"] 1736296483.72386 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1736296485.82186 0
+["pdflatex"] 1736384932.47216 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1736384934.56986 0
   "../plots/custom_in+out.png" 1736197114 150164 5fe3ec28e6b8fd0ff18e643f69dc68f0 ""
   "../plots/default_kernel.png" 1736197074 149018 ad0d0f0c4904a1583cb29f7b6531525a ""
   "../plots/poly+exp_input.png" 1736197104 148925 6a6f99122ab122027a6d8e57b0ebe568 ""
@@ -202,13 +202,13 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" 1736295735 465 d2984ae40b0f61b3f793e75992e12ba9 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" 1736384931 465 d2984ae40b0f61b3f793e75992e12ba9 ""
   "guyipreammath.tex" 1736295685 4280 b94f51676424a3e4a49a75bc22c9aa49 ""
-  "t-sne.aux" 1736296484 3517 0b94cae1a91307a055952694384bbc08 "pdflatex"
-  "t-sne.bbl" 1736296423 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex t-sne"
-  "t-sne.out" 1736296484 1157 9f608fbbff2de84b53bf145ff5899cd5 "pdflatex"
-  "t-sne.tex" 1736295735 465 d2984ae40b0f61b3f793e75992e12ba9 ""
-  "t-sne_main_text.tex" 1736296483 10713 2af10c9f83d717d1f668f232aa0cd484 ""
+  "t-sne.aux" 1736384933 5000 e5d7fcb394145d5964b430a5fd160846 "pdflatex"
+  "t-sne.bbl" 1736384029 1909 e53803d1edafb453087f5916c8e93755 "bibtex t-sne"
+  "t-sne.out" 1736384933 1157 9f608fbbff2de84b53bf145ff5899cd5 "pdflatex"
+  "t-sne.tex" 1736384931 465 d2984ae40b0f61b3f793e75992e12ba9 ""
+  "t-sne_main_text.tex" 1736384894 25348 7246eb4addc413fde043f611b36adfa4 ""
   (generated)
   "t-sne.aux"
   "t-sne.log"
