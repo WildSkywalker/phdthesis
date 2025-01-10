@@ -79,13 +79,13 @@ output kernels to have such that the output of the generalized $t$-SNE
 algorithm converges to a limiting equilibrium measure. Towards this end, below
 are the constraints we impose on the input and output kernels.
 \begin{condition}[Input Kernel Conditions] \label{input_kernel_conditions}
-    Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x_i,x_j,\sigma_i) = \exp(-w(\sigma_i\norm{x_j-x_i}^{\theta}))$. Here, $\sigma_i$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. (We can replace $\sigma_i$ with $\psi: \mathbb{R}^d \to \mathbb{R}^+$ in the continuous version of the kernel.) Define
-    \begin{align}
-        \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(4 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+    Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of
+    \begin{align} \label{tsne:input_kernel}
+        \ki(x,x',\sigma) = \exp(-w(\sigma\norm{x-x'}^{\theta}))
     \end{align}
-    Then $w$ satisfies:
+    Here, $\sigma$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. Then $w$ satisfies:
 
-    1. $\forall t \geq 0$, $w'(t)>0$ and $\exists M > 0$ s.t. $w'(t) \leq M$. $\lim_{t \to \infty} w(t) = \infty$;
+    1. $\forall t \geq 0$, $w'(t)>0$. $\lim_{t \to \infty} w(t) = \infty$;
 
     2. $w'(t)+tw''(t) \geq 0$ for all $t \geq 0$;
 
@@ -93,8 +93,6 @@ are the constraints we impose on the input and output kernels.
     \begin{align}
         \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty;
     \end{align}
-
-    4. $\sup \mathcal{K}_w > 0$.
 \end{condition}
 Since the all probability masses are normalized, we can assume without loss of generality that $w(0)=0$ from now on.
 \begin{condition}[Output Kernel Conditions] \label{output_kernel_conditions}
@@ -119,29 +117,134 @@ We are ready to state the main results
     \end{align}
     Moreover, there exist a measure $\mu^*$ and a sub-sequence $\{n_k\}$ such that $\mu_{n_k} \to \mu^*$ weakly and $I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$.
 \end{theorem}
-\begin{theorem}
+\begin{theorem} \label{tsne:main_theorem_2}
     Under the same assumptions of theorem \ref{tsne:main_theorem_1}, $\mu^*$ has compact support.
 \end{theorem}
-\section{Intuitive Insights and Simulations}
-\gy{TODO: Come back and finish this section when the rest of the paper is complete.}
-\begin{figure}
+
+\begin{remark*}
+    From section \ref{tsne:sec:uniform_convergence} up to a very late point in our proofs, we will prove our lemmas under lighter assumptions on the probability measure $\mu_X$ we draw the input samples from. We will asssume $\mu_X$ is sub-Gaussian rather than with compact support. For results in those parts to be true, we need to add one more constraint to the input kernel, as shown in the \textbf{condition below}. The reader can easily verify that if we assume $\mu_X$ to be compact from the beginning, all the lemmas can be easily proven using the exact same framework(and in fact, easier). We will discuss why we choose to prove those lemmas under the sub-Gaussian assumption, as well as other intuition and insights in section \ref{tsne:sec:intuition}.
+\end{remark*}
+\begin{condition}[Input Kernel Conditions] \label{input_kernel_conditions_ext}
+    Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x,x,\sigma) = \exp(-w(\sigma\norm{x-x'}^{\theta}))$. Here, $\sigma$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. Define
+    \begin{align}
+        \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(4 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = 0 \right\}.
+    \end{align}
+    Then $w$ satisfies:
+
+    1. $\forall t \geq 0$, $w'(t)>0$. $\lim_{t \to \infty} w(t) = \infty$;
+
+    2. $w'(t)+tw''(t) \geq 0$ for all $t \geq 0$;
+
+    3. The following integral converges:
+    \begin{align}
+        \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty;
+    \end{align}
+
+    4.$\exists M > 0$ s.t. $\forall t \geq 0, w'(t) \leq M$, and $\sup \mathcal{K}_w > 0$.
+\end{condition}
+\section{Intuitive Insights and Simulations} \label{tsne:sec:intuition}
+We dedicate this section to provide some intuition and insights on the context.
+From the form of the kernels we choose, to why we introduce the extra condition
+\ref{input_kernel_conditions_ext}, and to a series of simulation plots that
+demonstrate the effectiveness of the generalized $t$-SNE algorithm. we hope to
+provide the reader with a better understanding of the problem and the results
+we aim to prove.
+
+\subsubsection*{Is the form of the input kernel general
+    enough?} The input kernel may be the most important part of the algorithm.
+Since we would like to expand the result of the original version, it is
+important that we do not lose comprehensiveness when assuming a concrete form
+of the input kernel. Therefore, \eqref{tsne:input_kernel} is due an
+explanation.
+
+We start by realizing that $t$-SNE is about the relationship between each data
+point. The insights we gain from the algorithm should be translation and
+rotation invariant with respect to the coordinate systems we choose. Hence, it
+is only reasonable to assume that the input kernel is a function of
+$\norm{x-x'}$ for each pair of input data points $x,x'$.
+
+On the other hand, the weight we assign to each pair of data points is always
+positive due to nature of probability mass. We thus lose no generality by
+assuming the input kernel has an exponential form because obviously, the
+exponential function is a smooth bijection from $\mathbb{R}$ to $\mathbb{R}^+$.
+
+Additionally, though it is coincidental that in the original version of the
+algorithm $\sigma_i$ can be viewed as the variance of a Gaussian random
+variable, in reality $\sigma_i$'s are only used to control the entropy of each
+probability distribution induced by $x_i$. With that being said, we only need
+to introuce $\sigma$ in such a way that it is able to control the entropy for
+each $x$. As we can see in section \ref{tsne:sec:existence_uniqueness}, simply
+multiplying $\sigma$ to $\norm{x-x'}^{\theta}$ is enough to achieve this goal.
+Moreover, we prove the convergence of $\sigma^*$ in section
+\ref{tsne:sec:uniform_convergence}, providing the anchor of the following
+results just as in \cite{auffinger-tsne}.
+
+Finally, combining all the above, we arrive at the form of the input kernel in
+\eqref{tsne:input_kernel}, by adding a general function $w$ to the product
+$\sigma \norm{x-x'}^{\theta}$. This gives us a kernel we can easily work on
+without lossing any generality.
+
+\subsubsection*{Are the conditions on the input/output kernel general enough?}
+
+Besides the form of of the input kernel, we also want to make sure that the
+conditions we impose on the kernels are also general enough for the
+significance of our results. Since we frequently deal with integrals containing
+the input and output kernels, their integrability is the bare minimum we should
+assume. Along with integrability comes their decay to 0 at infinity. Apart from
+that, we do not add any excessive constraints to the kernels and readers will
+see later in proofs that those assumptions are strictly necessary for the
+results to hold.
+
+Specifically, notice the second assumption of condition
+\ref{input_kernel_conditions} is basically requiring the input kernel to decay
+faster than a minimal speed by controlling its second order derivative. If we
+let $w(t) = \log t$, we have $w'(t)+tw''(t) = 0$. Roughly speaking, this
+implies that the main theorems hold as long as the input kernel decays at
+polynomial rate or faster, which is a big step up than proving the convergence
+for Gaussian kernels alone.
+
+\subsubsection*{Why do we introduce condition \ref{input_kernel_conditions_ext}?}
+\gy{Ask Tuca about this and come back.}
+\subsubsection*{Simulations}
+Another important question we would like to ask, is that can the results in the main theorems be visualized and thus verified? In theory, if we choose any input and output kernels meeting condition \ref{input_kernel_conditions} and \ref{output_kernel_conditions} respectively, we are able to get an asymptotic equilibrium measure and each equilibrium measure will look different for different combinations of input and output kernels.
+
+Towards that end, we choose four different combinations of input and output
+kernels, including the original one, and run $t$-SNE algorithms on the exactly
+same MNIST data set. As shown in figure \ref{fig:tsne_plots}, we used four
+different configurations for the input and output kernels. They are
+\begin{enumerate} [label=(\alph*)]
+    \item Original $t$-SNE kernels;
+    \item Polynomial input kernel $\ki(x_i,x_j,\sigma_i) = (\sigma_i
+              \norm{x_i-x_j}^{10}+1)^{-1}$ ;
+    \item Mixed input kernel $\ki(x_i,x_j,\sigma_i) = (\sigma_i \norm{x_i-x_j}+1)^{-10} +
+              \exp(-\sigma_i\norm{x_i-x_j})$;
+    \item Custom input and output kernels with
+          \begin{align}
+              \ki(x_i,x_j,\sigma_i) = & (\sigma_i \norm{x_i-x_j}+1)^{-10} + \exp(-\sigma_i\norm{x_i-x_j}), \nonumber \\
+              \ko(y_i,y_j) =          & (1+\norm{y_i-y_j}^2+\norm{y_i-y_j}^4)^{-1}. \nonumber
+          \end{align}
+\end{enumerate}
+In the end, all four combinations are able to converge and produce on-par performance, in terms of distinguishing different digits. Meanwhile, each combination shows a different distribution of the output data points, which is consistent with our theoretical results.
+
+\begin{wrapfigure}{r}{0.99\textwidth}
     \centering
-    \subfloat[\centering Original $t$-SNE]{{\includegraphics[width=6.5cm]{default_kernel.png} }}%
+    \subfloat[\centering Original $t$-SNE]{{\includegraphics[width=6cm]{default_kernel.png} }}%
     \qquad
-    \subfloat[\centering Polynomial Input Kernel]{{\includegraphics[width=6.5cm]{poly_input_kernel.png} }} \\
-    \subfloat[\centering Mixed Input Kernel]{{\includegraphics[width=6.5cm]{poly+exp_input.png} }}%
+    \subfloat[\centering Polynomial Input Kernel]{{\includegraphics[width=6cm]{poly_input_kernel.png} }} \\
+    \subfloat[\centering Mixed Input Kernel]{{\includegraphics[width=6cm]{poly+exp_input.png} }}%
     \qquad
-    \subfloat[\centering Custom Input\&Output Kernels]{{\includegraphics[width=6.5cm]{custom_in+out.png} }}
+    \subfloat[\centering Custom Input\&Output Kernels]{{\includegraphics[width=6cm]{custom_in+out.png} }}
     \caption{$t$-SNE running with different combinations of input and output kernels on the MNIST data set. All three custom kernel combinations are able to perform on par with the original algorithm.}%
     \label{fig:tsne_plots}
-\end{figure}
+\end{wrapfigure}
+
 \clearpage
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{Lg}}\label{tsne:sec:existence_uniqueness}
 In this section we establish the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$. Recall that $\sigma^*_{\rho,\mu}(x)$ is the unique solution of the equation
 \begin{align}
     F_{\rho,\mu}(x,\sigma) = \int \frac{\ki(x,x',\sigma)}{\int \ki(x,x',\sigma)d\mu(x')} \log \left(\frac{\ki(x,x',\sigma)}{\int \ki(x,x',\sigma)d\mu(x')}\right) d\mu(x') + \log \rho = 0
 \end{align}
-Intuitively speaking, $\sigma^*$ is the limit of $\sigma_i$'s that are used to control the entropy. The purpose of this section is to prove that such limit exists and is unique for each given $x$. The existence and uniqueness of of $\sigma^*$ will become the foundation of everything we will prove afterwards. By condition \ref{input_kernel_conditions}, we can write
+Intuitively speaking, $\sigma^*$ is the limit function of $\sigma_i$'s that are used to control the entropy. The purpose of this section is to prove that such limit exists and is unique for each given $x$. The existence and uniqueness of of $\sigma^*$ will become the foundation of everything we will prove afterwards. By condition \ref{input_kernel_conditions}, we can write
 \begin{align} \label{big_F_formula}
       & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                    \\
     = & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
@@ -209,15 +312,15 @@ We start with the lemma that gives $F$ an increasing lower bound.
         F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
     \end{align}
 \end{proof}
-This lemma proves the existence of $\sigma^*_{\rho,\mu}(x)$. Indeed, by \eqref{big_F_formula}, apparently 
+This lemma proves the existence of $\sigma^*_{\rho,\mu}(x)$. Indeed, by \eqref{big_F_formula}, apparently
 \begin{align} \label{existence_uniqueness:limit_1}
-    \lim_{\sigma \to 0} F_{\rho,\mu}(x,\sigma) = \log \rho < 0.
+    \lim_{\sigma \to 0} F_{\rho,\mu}(x,\sigma) = \log \rho < 0
 \end{align}
 since $\rho \in (0,1)$. Now with lemma \ref{existence_uniqueness:existence_lemma}, we get
 \begin{align} \label{existence_uniqueness:limit_2}
     \lim_{\sigma \to \infty} F_{\rho,\mu}(x,\sigma) = \infty.
 \end{align}
-By contuity of $f$ and intermediate value theorem, $\sigma^*_{\rho,\mu}(x)$ exists. To prove the uniqueness, we are left to show that $F_{\rho,\mu}$ is strictly increasing. The next lemma will do just that.
+By continuity of $f$ and intermediate value theorem, $\sigma^*_{\rho,\mu}(x)$ exists. To prove the uniqueness, we are left to show $F_{\rho,\mu}$ is strictly increasing. The next lemma will do just that.
 \begin{lemma} \label{existence_uniqueness:uniqueness_lemma}
     Given the same condition as in lemma \ref{existence_uniqueness:existence_lemma}, $F_{\rho,\mu}(x,\sigma)$ is strictly increasing in $\sigma$.
 \end{lemma}
@@ -277,25 +380,25 @@ To tackle this proof, we need one additional lemma insipired by theorem 7 in \ci
         \int w\cdot w' \cdot \norm{x-x'}^{\theta} \cdot \exp(\cdot) \int \exp(\cdot) \geq \int w \cdot \exp(\cdot) \int w'\cdot \norm{x-x'}^{\theta} \exp(\cdot).
     \end{align}
     For each $x,y,x' \in \mathbb{R}$ if the equality
-\begin{align} \label{monotone_condition}
-     & (w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta}) \nonumber                                   \\
-     & \qquad \qquad \qquad \qquad \qquad \qquad \cdot \left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
-\end{align}
-holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta}$, we have (\ref{monotone_inequ}) to be true by lemma \ref{miracle_lemma_ext}. Let $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we are left to show
-\begin{align}
-    w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta} \geq 0.
-\end{align}
-Since $\sigma >0$, the above inequality is equivalent to
-\begin{align} \label{generalized_condition_inequ}
-    w'(\sigma\norm{x-x'}^{\theta})\sigma \norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta}) \sigma \norm{y-x'}^{\theta} \geq 0.
-\end{align}
-Let $\tilde{w}(x) = x w'(x)$. Based on the second assumption in condition \ref{input_kernel_conditions} and mean value theorem, $\tilde{w}$ satisfies for all $a,b\geq 0$, $a>b$, there exists $c \in [b,a]$ that
-\begin{align}
-    \frac{aw'(a) - bw'(b)}{a-b} = w'(c) + cw''(c) \geq 0.
-\end{align}
-This proves \eqref{generalized_condition_inequ} by letting $a = \sigma\norm{x-x'}^{\theta}$ and $b = \sigma\norm{y-x'}^{\theta}$, as desired.
+    \begin{align} \label{monotone_condition}
+         & (w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta}) \nonumber                                   \\
+         & \qquad \qquad \qquad \qquad \qquad \qquad \cdot \left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
+    \end{align}
+    holds, then by letting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta}$, we have (\ref{monotone_inequ}) to be true by lemma \ref{miracle_lemma_ext}. Let $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we are left to show
+    \begin{align}
+        w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta} \geq 0.
+    \end{align}
+    Since $\sigma >0$, the above inequality is equivalent to
+    \begin{align} \label{generalized_condition_inequ}
+        w'(\sigma\norm{x-x'}^{\theta})\sigma \norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta}) \sigma \norm{y-x'}^{\theta} \geq 0.
+    \end{align}
+    Let $\tilde{w}(x) = x w'(x)$. Based on the second assumption in condition \ref{input_kernel_conditions} and mean value theorem, $\tilde{w}$ satisfies for all $a,b\geq 0$, $a>b$, there exists $c \in [b,a]$ that
+    \begin{align}
+        \frac{aw'(a) - bw'(b)}{a-b} = w'(c) + cw''(c) \geq 0.
+    \end{align}
+    This proves \eqref{generalized_condition_inequ} by letting $a = \sigma\norm{x-x'}^{\theta}$ and $b = \sigma\norm{y-x'}^{\theta}$, as desired.
 \end{proof}
-We can formally state and prove the main result of this section
+We can now formally state and prove the main result of this section.
 \begin{proposition}
     Let $\mu \in \mathcal{M}(\mathbb{R}^d)$ with $C^1$ density $f$ such that both $f$ and $\norm{\nabla f}$ are bounded. The equation $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^*_{\rho,\mu}(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. Moreover, $x \mapsto \sigma^*_{\rho,\mu}(x)$ is smooth.
 \end{proposition}
@@ -304,4 +407,10 @@ We can formally state and prove the main result of this section
 \end{proof}
 \section{Uniform Convergence of \texorpdfstring{$\sigma^*$}{Lg}}\label{tsne:sec:uniform_convergence}
 \section{Proofs of the Main Results}\label{tsne:sec:proofs}
+\begin{lemma} \label{output_kernel_int_lemma}
+    As $n \to \infty$, we have
+    \begin{align}
+        \iint g(y,y')d\mu_n(y) d\mu_n(y) - \frac{1}{n} = \iint g(y,y')d\mu^* d\mu^* + o(1).
+    \end{align}
+\end{lemma}
 \section{Extra Technical Proofs}\label{tsne:sec:extra_proofs}

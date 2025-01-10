@@ -3,16 +3,16 @@
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
 
-\bibitem[Liu et~al.(2009)Liu, Ngo, and Huy]{liu2000inequ}
-Wenjun Liu, Quoc Ngo, and Vu~Huy.
-\newblock Several interesting integral inequalities.
-\newblock {\em Journal of Mathematical Inequalities}, 3, 06 2009.
-
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
 \newblock Equilibrium distributions for t-distributed stochastic neighbour
   embedding, 2023, 2304.03727.
 \newblock URL \url{https://arxiv.org/abs/2304.03727}.
+
+\bibitem[Liu et~al.(2009)Liu, Ngo, and Huy]{liu2000inequ}
+Wenjun Liu, Quoc Ngo, and Vu~Huy.
+\newblock Several interesting integral inequalities.
+\newblock {\em Journal of Mathematical Inequalities}, 3, 06 2009.
 
 \bibitem[Ravuri and Lawrence(2024)]{ravuri-lawrence}
 Aditya Ravuri and Neil~D. Lawrence.

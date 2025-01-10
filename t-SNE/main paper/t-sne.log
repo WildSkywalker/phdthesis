@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  8 JAN 2025 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  10 JAN 2025 02:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -519,31 +519,38 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@lotdepth=\count326
 \sf@top=\skip65
 \sf@bottom=\skip66
+) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen276
+\WF@size=\dimen277
+\c@WF@wrappedlines=\count327
+\WF@box=\box68
+\WF@everypar=\toks46
+Package: wrapfig 2003/01/31  v 3.6
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip67
 \bibsep=\skip68
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count327
+\c@NAT@ctr=\count328
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 42.
+Package hyperref Info: Option `colorlinks' set `true' on input line 43.
 \cmmibfam=\mathgroup7
-\c@lemma=\count328
-\c@claim=\count329
-\c@definition=\count330
-\c@theorem=\count331
-\c@corollary=\count332
-\c@remark=\count333
-\c@example=\count334
-\c@exercise=\count335
-\c@proposition=\count336
-\c@question=\count337
-\c@condition=\count338
-\c@acknowledgements=\count339
+\c@lemma=\count329
+\c@claim=\count330
+\c@definition=\count331
+\c@theorem=\count332
+\c@corollary=\count333
+\c@remark=\count334
+\c@example=\count335
+\c@exercise=\count336
+\c@proposition=\count337
+\c@question=\count338
+\c@condition=\count339
+\c@acknowledgements=\count340
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count340
-\l__pdf_internal_box=\box68
+\l__color_backend_stack_int=\count341
+\l__pdf_internal_box=\box69
 ) (t-sne.aux)
 \openout1 = `t-sne.aux'.
 
@@ -568,20 +575,21 @@ LaTeX Font Info:    ... okay on input line 10.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count341
-\scratchdimen=\dimen276
-\scratchbox=\box69
-\nofMPsegments=\count342
-\nofMParguments=\count343
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count344
-\MPscratchDim=\dimen277
-\MPnumerator=\count345
-\makeMPintoPDFobject=\count346
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count342
+\scratchdimen=\dimen278
+\scratchbox=\box70
+\nofMPsegments=\count343
+\nofMParguments=\count344
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count345
+\MPscratchDim=\dimen279
+\MPnumerator=\count346
+\makeMPintoPDFobject=\count347
+\everyMPtoPDFconversion=\toks48
 ) (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
@@ -619,43 +627,45 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [2]
 
 [3]
-<../plots/default_kernel.png, id=89, 481.8pt x 481.8pt>
-File: ../plots/default_kernel.png Graphic file (type png)
-<use ../plots/default_kernel.png>
-Package pdftex.def Info: ../plots/default_kernel.png  used on input line 129.
-(pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
-<../plots/poly_input_kernel.png, id=91, 481.8pt x 481.8pt>
-File: ../plots/poly_input_kernel.png Graphic file (type png)
-<use ../plots/poly_input_kernel.png>
-Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 131.
-(pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
-<../plots/poly+exp_input.png, id=92, 481.8pt x 481.8pt>
-File: ../plots/poly+exp_input.png Graphic file (type png)
-<use ../plots/poly+exp_input.png>
-Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 132.
-(pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
-<../plots/custom_in+out.png, id=93, 481.8pt x 481.8pt>
-File: ../plots/custom_in+out.png Graphic file (type png)
-<use ../plots/custom_in+out.png>
-Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 134.
-(pdftex.def)             Requested size: 184.9429pt x 184.9385pt.
-
 
 [4]
 
-[5 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
+[5]
+<../plots/default_kernel.png, id=124, 481.8pt x 481.8pt>
+File: ../plots/default_kernel.png Graphic file (type png)
+<use ../plots/default_kernel.png>
+Package pdftex.def Info: ../plots/default_kernel.png  used on input line 231.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
+<../plots/poly_input_kernel.png, id=126, 481.8pt x 481.8pt>
+File: ../plots/poly_input_kernel.png Graphic file (type png)
+<use ../plots/poly_input_kernel.png>
+Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 233.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
+<../plots/poly+exp_input.png, id=127, 481.8pt x 481.8pt>
+File: ../plots/poly+exp_input.png Graphic file (type png)
+<use ../plots/poly+exp_input.png>
+Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 234.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
+<../plots/custom_in+out.png, id=128, 481.8pt x 481.8pt>
+File: ../plots/custom_in+out.png Graphic file (type png)
+<use ../plots/custom_in+out.png>
+Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 236.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
 
-[6
+
+[6 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
+
+[7
 
 ]
 
-[7]
+[8]
 
-[8]) (t-sne.bbl
+[9]
 
-[9])
+[10]) (t-sne.bbl)
 
-[10] (t-sne.aux)
+[11] (t-sne.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -664,17 +674,17 @@ Package rerunfilecheck Info: File `t-sne.out' has not changed.
 (rerunfilecheck)             Checksum: 9F608FBBFF2DE84B53BF145FF5899CD5;1157.
  ) 
 Here is how much of TeX's memory you used:
- 24005 strings out of 473919
- 445371 string characters out of 5726953
- 1949908 words of memory out of 5000000
- 46366 multiletter control sequences out of 15000+600000
- 570642 words of font info for 87 fonts, out of 8000000 for 9000
+ 24105 strings out of 473919
+ 447020 string characters out of 5726953
+ 1950908 words of memory out of 5000000
+ 46447 multiletter control sequences out of 15000+600000
+ 571001 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,13n,90p,824b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on t-sne.pdf (10 pages, 707154 bytes).
+ 89i,13n,90p,881b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on t-sne.pdf (11 pages, 731828 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
+ 362 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
