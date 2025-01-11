@@ -442,7 +442,6 @@ INPUT ..\t-SNE\main paper\t-sne_main_text.tex
 INPUT ..\t-SNE\main paper\t-sne_main_text.tex
 INPUT ..\t-SNE\main paper\t-sne_main_text.tex
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT ..\t-SNE\plots\default_kernel.png
 INPUT ..\t-SNE\plots\default_kernel.png
 INPUT ..\t-SNE\plots\default_kernel.png
@@ -477,6 +476,13 @@ INPUT ..\t-SNE\plots\custom_in+out.png
 INPUT ..\t-SNE\plots\custom_in+out.png
 INPUT ..\t-SNE\plots\custom_in+out.png
 INPUT ..\t-SNE\plots\custom_in+out.png
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm12.tfm
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm8.tfm
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm6.tfm
 INPUT .\chap2.tex
 INPUT .\chap2.tex
 OUTPUT chap2.aux
@@ -486,6 +492,9 @@ INPUT chap2.tex
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm10.tfm
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm7.tfm
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\tfm\public\bbm\bbm5.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
@@ -678,14 +687,16 @@ INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tct
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1200.pk
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\cm\dpi720\cmbcsc10.pk
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\cm\dpi720\cmbcsc10.pk
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\bbm\dpi600\bbm8.pk
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\bbm\dpi600\bbm8.pk
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\bbm\dpi600\bbm12.pk
+INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\public\bbm\dpi600\bbm12.pk
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\nunic\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb

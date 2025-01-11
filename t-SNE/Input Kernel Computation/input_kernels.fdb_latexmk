@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex input_kernels"] 1736198931.12405 "input_kernels.aux" "input_kernels.bbl" "input_kernels" 1736492019.30363 0
+["bibtex input_kernels"] 1736198931.12405 "input_kernels.aux" "input_kernels.bbl" "input_kernels" 1736557878.46838 0
   "./citation.bib" 1733700978 1894 6b1c5882c043b00de17d3df3ecb35a36 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "input_kernels.aux" 1736492018 5097 8f210b907144e9f8327962bb31436f1d "pdflatex"
+  "input_kernels.aux" 1736557877 5097 8f210b907144e9f8327962bb31436f1d "pdflatex"
   (generated)
   "input_kernels.bbl"
   "input_kernels.blg"
   (rewritten before read)
-["pdflatex"] 1736492017.41249 "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" "input_kernels.pdf" "input_kernels" 1736492019.3048 0
+["pdflatex"] 1736557876.42528 "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" "input_kernels.pdf" "input_kernels" 1736557878.46961 0
   "../plots/custom_in+out.png" 1736197114 150164 5fe3ec28e6b8fd0ff18e643f69dc68f0 ""
   "../plots/default_kernel.png" 1736197074 149018 ad0d0f0c4904a1583cb29f7b6531525a ""
   "../plots/poly+exp_input.png" 1736197104 148925 6a6f99122ab122027a6d8e57b0ebe568 ""
   "../plots/poly_input_kernel.png" 1736197089 148807 00f5318b29cf07f2f9d6d60752363df7 ""
-  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1736197328 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
+  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1736496987 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626407855 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1626407857 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -201,12 +201,12 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718352776 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" 1736492016 30250 1c45d378587ab0ebe2b177164c846ac2 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/Input Kernel Computation/input_kernels.tex" 1736557875 30254 c1f92c50482d449c1a22d289d2fe4ba8 ""
   "guyipreammath.tex" 1736197323 4335 001385a0a07d66d8b4e581475b4bade8 ""
-  "input_kernels.aux" 1736492018 5097 8f210b907144e9f8327962bb31436f1d "pdflatex"
+  "input_kernels.aux" 1736557877 5097 8f210b907144e9f8327962bb31436f1d "pdflatex"
   "input_kernels.bbl" 1736198931 1692 6e57e39a0e5860a0b98444eccb1ef4e7 "bibtex input_kernels"
-  "input_kernels.out" 1736492018 828 c1ae89ac1a08769ca7fff518ea6369a9 "pdflatex"
-  "input_kernels.tex" 1736492016 30250 1c45d378587ab0ebe2b177164c846ac2 ""
+  "input_kernels.out" 1736557877 828 c1ae89ac1a08769ca7fff518ea6369a9 "pdflatex"
+  "input_kernels.tex" 1736557875 30254 c1f92c50482d449c1a22d289d2fe4ba8 ""
   (generated)
   "input_kernels.aux"
   "input_kernels.log"

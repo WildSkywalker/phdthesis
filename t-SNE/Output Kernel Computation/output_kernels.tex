@@ -462,7 +462,7 @@ One thing we should highlight here is that we are abusing the notation of $\sigm
         \sup_{i,j}|p_n(X_i,X_j)-p(X_i,X_j)|   & = O(n^{-\epsilon}).
     \end{align}
 \end{lemma}
-\begin{proof}[Supplementary Proof]
+\begin{proof}[Supplemental Proof]
     The overall methodology of the original proof in \cite{auffinger-tsne} is natural and clear. However, it can still be slightly confusing as it is missing the actual values we assign to $\epsilon$. In the original paper, we can take, for some constant $k>0$, that
     \begin{align}
         n^{-\epsilon} = n^{8/c_1\delta^2 -1/2} (\log n)^k.
@@ -519,8 +519,8 @@ $g$: $g(y,y') = k (\norm{y-y'})$ such that:
     \end{align}
     Recall that $g(y,y')$ is bounded. We have
     \begin{align}
-             & -\sum_{i \neq j} p_{ij} log \left(\sum_{m \neq l}g(y_m,y_l) \right) = -\log \left(\sum_{m \neq l}g(y_m,y_l) \right) \nonumber \\
-        \leq & -\sum_{i \neq j} p_{ij} log \left(\sum_{m\neq k, l \neq k, m \neq l}g(y_m,y_l) \right) < \infty.
+             & -\sum_{i \neq j} p_{ij} \log \left(\sum_{m \neq l}g(y_m,y_l) \right) = -\log \left(\sum_{m \neq l}g(y_m,y_l) \right) \nonumber \\
+        \leq & -\sum_{i \neq j} p_{ij} \log \left(\sum_{m\neq k, l \neq k, m \neq l}g(y_m,y_l) \right) < \infty.
     \end{align}
     On the other hand, we have $g(y_i,y_k) = k (\norm{y_i-y_k}) \to 0$ as $|y_k| \to \infty$ because $\norm{y_i-y_k} \to \infty$ and $k$ satisfies
     \begin{align}
@@ -567,7 +567,7 @@ $g$: $g(y,y') = k (\norm{y-y'})$ such that:
     \begin{align}
         h(x,x',\sigma) :=  p(x,x')\log p(x,x')
     \end{align}
-    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ is sub-Gaussian by construction. Then is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. Thus $p \to 0$ as $\norm{x-x}/\sigma \to \infty$. It is also obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}/\sigma \to \infty$. The rest of the conditions are also very easily to prove. We can finally conclude that
+    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ is sub-Gaussian by construction. Then is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. Thus $p \to 0$ as $\norm{x-x}/\sigma \to \infty$. It is also obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}/\sigma \to \infty$. The rest of the conditions are also very easy to prove. We can finally conclude that
     \begin{align}
         \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') + o(1).
     \end{align}
@@ -649,8 +649,8 @@ In the original paper, this is the point where we finish proving the lower bound
 \begin{align}
     q_n(y,y') = \frac{g(y,y')}{\iint g(y,y')d \mu_n(y) d \mu_n (y') - \frac{1}{n}k(0)}.
 \end{align}
-Here $k(0) = g(y,y)$ is the value of the output kernel when both inputs are equal. Since multiplying a constant to $g$ does not change anything, we can just treat $k(0)=1$ for convenience as everything is normalized.
-By lemma \ref{mu_star_lemma} there exists $mu^*$ such that $I(\mu^*) = \inf_{\mu}I_{\rho}(\mu)$. Let $(X_1,Y_1), \dots, (X_n,Y_n)$ be i.i.d. random variables drawn from $\mu^*$ and $\mu_n = \frac{1}{n} \sum_{i=1}^n \delta_{(X_i,Y_i)}$ their empirical measure. $\mu_n$ converges to $\mu^*$ weakly.
+Here $k(0) = g(y,y)$ is the value of the output kernel when both inputs are equal. Since multiplying a constant to $g$ does not change anything, we can just treat $k(0)=1$ without loss of generality as everything is normalized.
+By lemma \ref{mu_star_lemma} there exists $\mu^*$ such that $I(\mu^*) = \inf_{\mu}I_{\rho}(\mu)$. Let $(X_1,Y_1), \dots, (X_n,Y_n)$ be i.i.d. random variables drawn from $\\mu^*$ and $\mu_n = \frac{1}{n} \sum_{i=1}^n \delta_{(X_i,Y_i)}$ their empirical measure. $\mu_n$ converges to $\mu^*$ weakly.
 \begin{lemma} \label{int_approx_lemma_2}
     As $\n \to \infty$, we have
     \begin{align}
@@ -866,7 +866,7 @@ This lemma can be proved by mimicking lemma \ref{int_approx_lemma_2}. Now let us
 \begin{align}
     \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
 \end{align}
-We can easily show that $mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. Then, using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}, we have the following important proposition:
+We can easily show that $\mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. Then, using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}, we have the following important proposition:
 \begin{proposition} \label{lower_bound_prop}
     There exists a sub-sequence $n(k)$ such that
     \begin{align}
@@ -883,7 +883,7 @@ We now state the main theorems and prove it.
     \end{align}
     Moreover, there exists a measure $\mu^*$ and a sub-sequence $n_k$ such that $\mu_{n_k}$ converges weakly to $\mu^*$ and $I_{\rho}(\mu^*) =\inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$
 \end{theorem}
-\begin{proof}\
+\begin{proof}
     Write
     \begin{align}
         d_{n,\rho}(X) = \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y).

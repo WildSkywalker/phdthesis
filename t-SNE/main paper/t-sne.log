@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  10 JAN 2025 02:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  10 JAN 2025 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -631,60 +631,100 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [4]
 
 [5]
-<../plots/default_kernel.png, id=124, 481.8pt x 481.8pt>
+<../plots/default_kernel.png, id=150, 481.8pt x 481.8pt>
 File: ../plots/default_kernel.png Graphic file (type png)
 <use ../plots/default_kernel.png>
-Package pdftex.def Info: ../plots/default_kernel.png  used on input line 231.
+Package pdftex.def Info: ../plots/default_kernel.png  used on input line 232.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/poly_input_kernel.png, id=126, 481.8pt x 481.8pt>
+<../plots/poly_input_kernel.png, id=152, 481.8pt x 481.8pt>
 File: ../plots/poly_input_kernel.png Graphic file (type png)
 <use ../plots/poly_input_kernel.png>
-Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 233.
+Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 234.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/poly+exp_input.png, id=127, 481.8pt x 481.8pt>
+<../plots/poly+exp_input.png, id=153, 481.8pt x 481.8pt>
 File: ../plots/poly+exp_input.png Graphic file (type png)
 <use ../plots/poly+exp_input.png>
-Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 234.
+Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 235.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/custom_in+out.png, id=128, 481.8pt x 481.8pt>
+<../plots/custom_in+out.png, id=154, 481.8pt x 481.8pt>
 File: ../plots/custom_in+out.png Graphic file (type png)
 <use ../plots/custom_in+out.png>
-Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 236.
+Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 237.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
 
 
-[6 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
+[6]
 
-[7
+[7 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
+
+[8
 
 ]
 
-[8]
-
 [9]
 
-[10]) (t-sne.bbl)
+[10]
 
-[11] (t-sne.aux)
+[11]
+
+[12]
+
+[13]
+
+[14]
+
+[15]
+
+[16]
+
+[17]
+
+[18]
+
+[19]
+
+[20]
+
+[21]
+
+[22]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 916.
+ (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/bbm\ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
+
+[23]
+
+[24]
+
+[25]
+
+[26]
+
+[27]) (t-sne.bbl
+
+[28])
+
+[29] (t-sne.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `t-sne.out' has not changed.
-(rerunfilecheck)             Checksum: 9F608FBBFF2DE84B53BF145FF5899CD5;1157.
+(rerunfilecheck)             Checksum: 68F979D6322C751D3A527E9A32738FA1;2203.
  ) 
 Here is how much of TeX's memory you used:
- 24105 strings out of 473919
- 447020 string characters out of 5726953
- 1950908 words of memory out of 5000000
- 46447 multiletter control sequences out of 15000+600000
- 571001 words of font info for 88 fonts, out of 8000000 for 9000
+ 24358 strings out of 473919
+ 451017 string characters out of 5726953
+ 1954908 words of memory out of 5000000
+ 46524 multiletter control sequences out of 15000+600000
+ 572042 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,13n,90p,881b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on t-sne.pdf (11 pages, 731828 bytes).
+ 89i,14n,90p,910b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm7.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on t-sne.pdf (29 pages, 878409 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 778 PDF objects out of 1000 (max. 8388607)
+ 272 named destinations out of 1000 (max. 500000)
+ 137 words of extra memory for PDF output out of 10000 (max. 10000000)
 

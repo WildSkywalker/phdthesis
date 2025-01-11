@@ -236,7 +236,7 @@ Recall that the lemmas concerning generalized output kernels do not interfere wi
 \begin{align}
   \sup_{i,j}|p'_n(X_i,X_j)-p'(X_i,X_j)|.
 \end{align}
-Using triangluar inequality, we have
+Using the triangular inequality, we have
 \begin{align}
        & |p'_n - p'| = \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f}{\int f d \mu}\right| \nonumber                                                                                       \\
   \leq & \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| + \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \nonumber                       \\
@@ -276,7 +276,7 @@ which we inherit from \eqref{p_convergence:second_term}. We compute
   p_n \log p_n = & p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber           \\
   =              & p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
 \end{align}
-The third term will apparently vanish. For the second term, recall that $p \leq \tilde{T}^{-1}$. We reqruire
+The third term will apparently vanish. For the second term, recall that $p \leq \tilde{T}^{-1}$. We require
 \begin{align} \label{p_convergence:entropy_bound}
   O(\epsilon_n)/p = O(\epsilon_n \tilde{T}) = o(1).
 \end{align}
@@ -299,7 +299,7 @@ If $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. If 
 \begin{align}
   \int f(X_i,x')d\mu_n(x')-\frac{1}{n} \geq \frac{1}{2} \tilde{T}^{-1}.
 \end{align}
-This means the diagonal term in \eqref{p_convergence:diagonal_term} is $O(n^{-1}\tilde{T}\log(\tilde{T})) = o(1)$ by condition \ref{input_kernel_conditions_1} and the defintion of $\mathcal{K}_w$. The rest of convergence follows in the exact same way in \cite{auffinger-tsne}.
+This means the diagonal term in \eqref{p_convergence:diagonal_term} is $O(n^{-1}\tilde{T}\log(\tilde{T})) = o(1)$ by condition \ref{input_kernel_conditions_1} and the definition of $\mathcal{K}_w$. The rest of convergence follows in the exact same way in \cite{auffinger-tsne}.
 
 At this point, we need to tweak condition
 \ref{important_lemmas:convergence_conditions} such that both
