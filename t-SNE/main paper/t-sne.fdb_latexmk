@@ -1,18 +1,20 @@
 # Fdb version 4
-["bibtex t-sne"] 1736560920.89932 "t-sne.aux" "t-sne.bbl" "t-sne" 1736561262.20828 0
+["bibtex t-sne"] 1736700548.51433 "t-sne.aux" "t-sne.bbl" "t-sne" 1736700550.96806 0
   "./citation.bib" 1736383257 2196 9cdb3ee3bbe89ce9d2ac74793a5fffc6 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne.aux" 1736561261 11238 661ffaabea6eb50df417ae73fd34c63a "pdflatex"
+  "t-sne.aux" 1736700550 11324 8dd6c6a6e4d87a7b753ccb0c0d55c007 "pdflatex"
   (generated)
   "t-sne.bbl"
   "t-sne.blg"
   (rewritten before read)
-["pdflatex"] 1736561259.99298 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1736561262.20955 0
+["pdflatex"] 1736700548.84191 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1736700550.96917 0
   "../plots/custom_in+out.png" 1736197114 150164 5fe3ec28e6b8fd0ff18e643f69dc68f0 ""
   "../plots/default_kernel.png" 1736197074 149018 ad0d0f0c4904a1583cb29f7b6531525a ""
   "../plots/poly+exp_input.png" 1736197104 148925 6a6f99122ab122027a6d8e57b0ebe568 ""
   "../plots/poly_input_kernel.png" 1736197089 148807 00f5318b29cf07f2f9d6d60752363df7 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1736496987 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
+  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk" 1736700248 7284 c271b2921810af7a0bf064673a314b16 ""
+  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0800.pk" 1736700249 9292 b6b542cafa8bcf55d2f4fddd5a2cf719 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm10.pk" 1665676832 6984 cf1a156611e3b3d56cd70c3e1029dcfa ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm7.pk" 1678784426 4860 8e23f95e00911d2896a2a33c2ee94dda ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/bbm/bbm10.tfm" 1665676829 560 39fd35b5e4a6aca3672660cc548ba860 ""
@@ -22,6 +24,8 @@
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626407856 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1626407857 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1719445742 24264068 455c439cbc2cfb213e96f614f9433854 ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0600.tfm" 993058906 1456 d21918d95ca20f07aa266303b9a0a14c ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0800.tfm" 993058906 1444 e35ead393df86aae37b5564284d9aa05 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -212,13 +216,13 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" 1736561259 465 d2984ae40b0f61b3f793e75992e12ba9 ""
-  "guyipreammath.tex" 1736496982 4337 f121cef4c7e76c612308d988f283c8fa ""
-  "t-sne.aux" 1736561261 11238 661ffaabea6eb50df417ae73fd34c63a "pdflatex"
-  "t-sne.bbl" 1736560921 1909 a774b20764ae6ff4745617fb38190f7e "bibtex t-sne"
-  "t-sne.out" 1736561261 2203 68f979d6322c751d3a527e9a32738fa1 "pdflatex"
-  "t-sne.tex" 1736561259 465 d2984ae40b0f61b3f793e75992e12ba9 ""
-  "t-sne_main_text.tex" 1736561242 88555 8a1f5b0509c7406c41324aaac68b2ea8 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" 1736700545 566 7fb6f9d9dc962f934462869eded42736 ""
+  "guyipreammath.tex" 1736700243 4317 0020b92a0aad7cd7538b2aaa924cd9fe ""
+  "t-sne.aux" 1736700550 11324 8dd6c6a6e4d87a7b753ccb0c0d55c007 "pdflatex"
+  "t-sne.bbl" 1736700548 1909 a774b20764ae6ff4745617fb38190f7e "bibtex t-sne"
+  "t-sne.out" 1736700550 2203 68f979d6322c751d3a527e9a32738fa1 "pdflatex"
+  "t-sne.tex" 1736700545 566 7fb6f9d9dc962f934462869eded42736 ""
+  "t-sne_main_text.tex" 1736700545 88536 0ed445f37ebc1ec48c932fb80ac27c41 ""
   (generated)
   "t-sne.aux"
   "t-sne.log"

@@ -125,8 +125,8 @@ We are ready to state the main results
 
 \begin{condition}[Alternative Input Kernel Conditions] \label{input_kernel_conditions_ext}
     Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x,x,\sigma) = \exp(-w(\sigma\norm{x-x'}^{\theta}))$. Here, $\sigma$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. Define
-    \begin{align}
-        \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(5 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon}) \right\}.
+    \begin{align} \label{tsne:kw_def}
+        \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} \exp \left(5 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon}) \right\}.
     \end{align}
     Then $w$ satisfies:
 
@@ -551,7 +551,7 @@ Using the elementary inequality $\log(x) \leq x-1$, we can prove the next lemma 
 \end{lemma}
 Combine the above two lemmas and \eqref{big_F_formula}, we immediately obtain the following proposition:
 \begin{proposition} \label{tsne:uniform_convergence_prop}
-    Let $\mu$ be sub-Gaussian with decay constant $c_1$ from lemma \ref{Gaussian_lemma}, $\mathcal{K}_w'$ be defined in \eqref{tsne:kw_prime} and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Set $\delta>0$ to be a constant such that $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$. If condition \ref{input_kernel_conditions_ext} holds, then there exists a constant $\epsilon>0$, that almost surely in $X_1,\dots,X_n$,
+    Let $\mu$ be sub-Gaussian with decay constant $c_1$ from lemma \ref{Gaussian_lemma}, $\mathcal{K}_w$ be defined in \eqref{tsne:kw_def} and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Set $\delta>0$ to be a constant such that $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$. If condition \ref{input_kernel_conditions_ext} holds, then there exists a constant $\epsilon>0$, that almost surely in $X_1,\dots,X_n$,
     \begin{align}
         \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)\right| = O(n^{-\epsilon}).
     \end{align}
@@ -596,7 +596,7 @@ Note that $p_{j|i} = p'_n(X_i,X_j)/n$ and $p_{ij} = p_n(X_i,X_j)/n^2$, and for $
 \end{align}
 Lastly, we can write the definition of $\mathcal{K}_w$ as
 \begin{align} \label{tsne:kw_simplified}
-    \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \tilde{T}^5 = O(n^{-\epsilon}) \right\}.
+    \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} \tilde{T}^5 = O(n^{-\epsilon}) \right\}.
 \end{align}
 \begin{lemma} \label{tsne:f_n_convergence_lemma}
     Assuming condition \ref{input_kernel_conditions_ext}, if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$, then as $n \to \infty$,
