@@ -120,13 +120,23 @@ We are ready to state the main results
     Under the same assumptions of theorem \ref{tsne:main_theorem_1}, $\mu^*$ has compact support.
 \end{theorem}
 
-
-    From section \ref{tsne:sec:uniform_convergence} up to a very late point in our proofs, we will prove our lemmas under lighter assumptions on the probability measure $\mu_X$ we draw the input samples from. We will assume $\mu_X$ is sub-Gaussian rather than with compact support. For results in those parts to be true, we need to add one more constraint to the input kernel, as shown in the \textbf{condition below}. The reader can easily verify that if we assume $\mu_X$ to be compact from the beginning, all the lemmas can be easily proven using the exact same framework without the extra condition below (and in fact, easier). We will discuss why we choose to prove those lemmas under the sub-Gaussian assumption, as well as other intuition and insights in section \ref{tsne:sec:intuition}.
+From section \ref{tsne:sec:uniform_convergence} up to a very late point in our
+proofs, we will prove our lemmas under lighter assumptions on the probability
+measure $\mu_X$ we draw the input samples from. We will assume $\mu_X$ is
+sub-Gaussian rather than with compact support. For results in those parts to be
+true, we need to add one more constraint to the input kernel, as shown in the
+\textbf{condition below}. The reader can easily verify that if we assume
+$\mu_X$ to be compact from the beginning, all the lemmas can be easily proven
+using the exact same framework without the extra condition below (and in fact,
+easier). We will discuss why we choose to prove those lemmas under the
+sub-Gaussian assumption, as well as other intuition and insights in section
+\ref{tsne:sec:intuition}. We will also reiterate how the proofs are structured
+in section \ref{tsne:sec:proof_structure}.
 
 \begin{condition}[Alternative Input Kernel Conditions] \label{input_kernel_conditions_ext}
     Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x,x,\sigma) = \exp(-w(\sigma\norm{x-x'}^{\theta}))$. Here, $\sigma$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. Define
     \begin{align} \label{tsne:kw_def}
-        \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} \exp \left(5 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon}) \right\}.
+        \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} \exp \left(6 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon}) \right\}.
     \end{align}
     Then $w$ satisfies:
 
@@ -139,12 +149,12 @@ We are ready to state the main results
         \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty;
     \end{align}
 
-    4.$\exists M > 0$ s.t. $\forall t \geq 0, w'(t) \leq M$, and $\sup \mathcal{K}_w > 0$.
+    4.$\exists M > 0$ s.t. $\forall t \geq 0, w'(t) \leq w(t)$, and $\sup \mathcal{K}_w > 0$.
 \end{condition}
 \textbf{In short, if a lemma can be proved with assuming condition \ref{input_kernel_conditions_ext} and $\mu_X$ being sub-Gaussian, then it can also be proved in a very similar (and most likely easier) way by assuming only condition \ref{input_kernel_conditions} and $\mu_X$ being compactly supported.}
-\section{Intuitive Insights and Simulations} \label{tsne:sec:intuition}
-We dedicate this section to provide some intuition and insights on the context.
-From the form of the kernels we choose, to why we introduce the extra condition
+\section{Intuitive Insights} \label{tsne:sec:intuition}
+We use this section to provide some intuition and insights on the context. From
+the form of the kernels we choose, to why we introduce the extra condition
 \ref{input_kernel_conditions_ext}, and to a series of simulation plots that
 demonstrate the effectiveness of the generalized $t$-SNE algorithm. we hope to
 provide the reader with a better understanding of the problem and the results
@@ -204,8 +214,29 @@ polynomial rate or faster, which is a big step up than proving the convergence
 for Gaussian kernels alone.
 
 \subsubsection*{Why do we introduce condition \ref{input_kernel_conditions_ext}?}
-\gy{Ask Tuca about this and come back.}
-\subsubsection*{Simulations}
+\gy{Ask Tuca about this and come back. Tuca said the convergence fo $\sigma^*$ is
+ "important in its own right". I would like to write a little bit more about this.}
+\section{Structure of the Proofs} \label{tsne:sec:proof_structure}
+
+The outline of the proofs should be self-explanatory by the titles of each
+sections. However, we would still like to dedicate this short section to remind
+the readers of how the proofs are structured. We have two conditions for the
+input kernels, i.e., condition \ref{input_kernel_conditions} and condition
+\ref{input_kernel_conditions_ext} and latter has one more assumption compared
+to the former while being the same for everything else.
+
+Since the convergence of components are important in their own rights, as we
+discussed in section \ref{tsne:sec:intuition}, we will prove lemmas assuming
+$\mu_X$ is sub-Gaussian and condition \ref{input_kernel_conditions_ext} when we
+are able to. All proofs can be easily adapted to the case where $\mu_X$ is
+compactly supported and condition \ref{input_kernel_conditions} is assumed. To
+summarize, the flows of the proofs will not be disrupted by proving lemmas
+under the sub-Gaussian assumption with condition
+\ref{input_kernel_conditions_ext}. We will also indicate which assumptions we
+are using in each proof to avoid confusion.
+
+\section{Simulations}
+\gy{Under Construction}
 Another important question we would like to ask, is that can the results in the main theorems be visualized and thus verified? In theory, if we choose any input and output kernels meeting condition \ref{input_kernel_conditions} and \ref{output_kernel_conditions} respectively, we are able to get an asymptotic equilibrium measure and each equilibrium measure will look different for different combinations of input and output kernels.
 
 Towards that end, we choose four different combinations of input and output
@@ -254,7 +285,7 @@ Intuitively speaking, $\sigma^*$ is the limit function of $\sigma_i$'s that are 
 \end{align}
 We start with the lemma that gives $F$ an increasing lower bound.
 \begin{lemma} \label{existence_uniqueness:existence_lemma}
-    If $\mu$ has a $C^1$ density $f(x)$ and both $f$ and $\norm{ \nabla f}$ are bounded, then there exists a constant $C>0$ such that
+    If $\mu$ has a continuous, bounded density $f(x)$, then there exists a constant $C>0$ such that
     \begin{align}  \label{big_F_lowerbound_final}
         F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
     \end{align}
@@ -308,7 +339,7 @@ We start with the lemma that gives $F$ an increasing lower bound.
         % =    & M \frac{\int w(\norm{t}^{\theta})\exp(-w(\norm{t}^{\theta}))dt}{Z_d \int \exp(-w(\sigma \norm{(x-x')}^{\theta}))f(x') dx'} \nonumber                                                                                  \\
         \to  & \frac{M}{Z_d f(x)} \int w(\norm{\tau}^{\theta})\exp(-w(\norm{\tau}^{\theta}))d\tau < \infty.
     \end{align}
-    The numerator converges because of condition \ref{input_kernel_conditions}. As the bound in (\ref{big_F_lowerbound_2}) does not depend on $\sigma$, we can combine (\ref{big_F_formula}),(\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and deduce that
+    The numerator converges because of condition \ref{input_kernel_conditions}. As the bound in (\ref{big_F_lowerbound_2}) does not depend on $\sigma$, we can combine (\ref{big_F_formula}), (\ref{big_f_lowerbound_1}) and (\ref{big_F_lowerbound_2}) and deduce that
     \begin{align}
         F_{\rho,\mu}(x,\sigma) \geq C \log \sigma - \log f(x) + \log \rho.
     \end{align}
@@ -401,7 +432,7 @@ To tackle this proof, we need one additional lemma inspired by theorem 7 in \cit
 \end{proof}
 We can now formally state and prove the main result of this section.
 \begin{proposition}
-    Let $\mu \in \mathcal{M}(\mathbb{R}^d)$ with $C^1$ density $f$ such that both $f$ and $\norm{\nabla f}$ are bounded. The equation $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^*_{\rho,\mu}(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. Moreover, $x \mapsto \sigma^*_{\rho,\mu}(x)$ is smooth.
+    Let $\mu \in \mathcal{M}(\mathbb{R}^d)$ with $C^0$ density $f$ such that $f$ is bounded. The equation $F_{\rho,\mu}(x,\sigma) = 0$ has a unique solution $\sigma^*_{\rho,\mu}(x)$ for all $\rho \in (0,1)$ and $x \in \mathbb{R}^d$. Moreover, $x \mapsto \sigma^*_{\rho,\mu}(x)$ is smooth.
 \end{proposition}
 \begin{proof}
     The existence and uniqueness can be proven by combining \eqref{existence_uniqueness:limit_1}, \eqref{existence_uniqueness:limit_2}, lemma \ref{existence_uniqueness:existence_lemma} and lemma \ref{existence_uniqueness:uniqueness_lemma}. The smoothness of $\sigma^*_{\rho,\mu}(x)$ follows from implicit function theorem.
@@ -448,7 +479,7 @@ Also, let us recall that
 \end{align}
 And $\mathcal{K}_w$ is defined as
 \begin{align}
-    \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(5 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon}) \right\}.
+    \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(6 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon}) \right\}.
 \end{align}
 Finally, to lighten up the notations, write
 \begin{align} \label{tsne:uniform_convergence:notation}
@@ -459,8 +490,8 @@ Finally, to lighten up the notations, write
 \begin{lemma} \label{tsne:uniform_convergence:component_lemma}
     Let $c_1$ be the decay constant of the sub-Gaussian distribution $\mu$, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. If condition \ref{input_kernel_conditions_ext} holds, then there exists a constant $\mathcal{C}_1$ such that if $c_1 \delta^2 > \mathcal{C}_1$, then almost surely in $X_1,\dots,X_n$,
     \begin{align}
-         & \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]                                                                                                                \\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(X_i,x') d\mu_n(x')}{\int f_{\sigma}(X_i,x') d\mu_n(x')}-\frac{\int g_{\sigma}(X_i,x') d\mu(x')}{\int f_{\sigma}(X_i,x') d\mu(x')}\right| \nonumber \\
-         & \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(2w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right) = o(1).
+         & \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]                                                                                                         \\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(X_i,x') d\mu_n(x')}{\int f_{\sigma}(X_i,x') d\mu_n(x')}-\frac{\int g_{\sigma}(X_i,x') d\mu(x')}{\int f_{\sigma}(X_i,x') d\mu(x')}\right| \nonumber \\
+         & \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(2w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
     \end{align}
 \end{lemma}
 \begin{proof}
@@ -581,7 +612,7 @@ The lemmas can be borrowed directly from \cite{auffinger-tsne} as they irrelevan
 \end{lemma}
 \subsection{Convergence Lemmas for \texorpdfstring{$p_{ij}$}{pij}}
 To further lighten up the notations, define(the original definitions of $f$ can be found in \eqref{tsne:uniform_convergence:notation})
-\begin{align}
+\begin{align} \label{tsne:convergence_lemmas:notation}
     \sigma_n(x) = & \sigma_{\rho,\mu_n}^*(x), \nonumber                                                                                \\
     \sigma(x)   = & \sigma_{\rho,\mu_X}^*(x), \nonumber                                                                                \\
     f_n(x,x') =   & f_{\sigma_n}(x,x'), \nonumber                                                                                      \\
@@ -610,76 +641,82 @@ Lastly, we can write the definition of $\mathcal{K}_w$ as
     \begin{align} \label{f_convergence:difference}
         |f_n-f| = & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right|\exp(w(-\sigma(x)\norm{x-x}^{\theta})) \nonumber \\
         \leq      & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right| \nonumber                                       \\
-        =         & \left|\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right|.
+        =         & \left|\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right| \nonumber                      \\
+        \leq      & \left|\exp(w(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right|.
     \end{align}
-    If $\mu_X$ has compact support, then $\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta}))$ is bounded from above. If $\mu_X$ is sub Gaussian, by condition \ref{input_kernel_conditions_ext}, $w'(\cdot)$ is bounded from above and so is $\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta}))$. We turn to the rest of terms in \eqref{f_convergence:difference}. If $\mu_X$ has compact support, then the lemma is proved by simply applying proposition \ref{tsne:uniform_convergence_prop_2}. If $\mu_X$ is sub-Gaussian, let $C$ be the constant of decay for $X_i-X_j$ and we have
+    The last step comes from (4) of condition \ref{input_kernel_conditions_ext}. The lemma is proved if $\mu_X$ has compact support as $\exp(w(\tilde{\sigma}(x)\norm{x-x}^{\theta}))$ is bounded from above. On the other hand, if $\mu_X$ is sub-Gaussian, let $C$ be the constant of decay for $X_i-X_j$ and we have
     \begin{align} \label{tsne:distance_esti}
         \p(\norm{X_i-X_j}^2 \geq \log n) \leq 2 \exp(-\log n /C^2) = 2 \exp\left(\frac{1}{c^2}\right) \cdot \frac{1}{n} \to 0.
     \end{align}
-    This means $\norm{X_i-X_j}^2 = O(\log n)$ almost surely. Finally, we know that
+    This means $\norm{X_i-X_j}^2 = O(\log n)$ almost surely. By (4) of condition \ref{input_kernel_conditions_ext} and definition of $\tilde{T}$ in \eqref{tsne:convergence_lemmas:notation}, $\exp(w(\tilde{\sigma}(x)\norm{x-x}^{\theta})) = O(\tilde{T})$ because $\tilde{\sigma}$ sits between $\sigma$ and $\sigma_n$ and $\sigma_n \to \sigma$.
+
+    We turn to the rest of terms in \eqref{f_convergence:difference}. If $\mu_X$
+    has compact support, then the lemma is proved by simply applying proposition
+    \ref{tsne:uniform_convergence_prop_2}. Finally, we know that
     \begin{align} \label{f_convergence:sigma_difference}
         \sigma(x)-\sigma_n(x) = O(F_{\rho,\mu}(x,\sigma)-F_{\rho,\mu}(x,\sigma_n)) = O(n^{-1/2}\tilde{T}^2).
     \end{align}
     Applying \eqref{f_convergence:sigma_difference} and by the simple limit $\lim_{x \to 0}(e^x-1)/x = 1$, the difference \eqref{f_convergence:difference} can be bounded as
     \begin{align} \label{tsne:kw_bounds_1}
-        |f_n-f| = O(n^{-1/2} (\log n)^{\theta}\tilde{T}^2).
+        |f_n-f| = O(n^{-1/2} (\log n)^{\theta}\tilde{T}^3).
     \end{align}
     The rest of the proof can be finished by constructing a similar set as in \eqref{tsne:kw_prime} and using the same argument as in the proof of lemma \ref{tsne:uniform_convergence:component_lemma}. (Simply compare the formula in \eqref{tsne:kw_bounds_1} with \eqref{tsne:kw_simplified}).
 \end{proof}
 \begin{lemma} \label{tsne:integrand_lemma_2}
     Assuming condition \ref{input_kernel_conditions_ext} and $\mu_X$ is sub-Gaussian, if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$, then there exists $\epsilon>0$ such that as $n \to \infty$,
     \begin{align}
-        \sup_{i,j} \left|p'_n(X_i,X_j) - p'(X_i,X_j)\right| =& O(n^{-\epsilon}), \nonumber \\
-        \sup_{i,j} \left|p_n(X_i,X_j) - p(X_i,X_j)\right| =& O(n^{-\epsilon}) \nonumber.
+        \sup_{i,j} \left|p'_n(X_i,X_j) - p'(X_i,X_j)\right| = & O(n^{-\epsilon}), \nonumber \\
+        \sup_{i,j} \left|p_n(X_i,X_j) - p(X_i,X_j)\right| =   & O(n^{-\epsilon}) \nonumber.
     \end{align}
 \end{lemma}
 \begin{proof}
     Once again, we omit $X_i$ and $X_j$ for lighter notations. Using the triangular inequality, we have
-\begin{align} \label{p_convergence:triangle_inequality}
-       & |p'_n - p'| = \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f}{\int f d \mu}\right| \nonumber                                                                                       \\
-  \leq & \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| + \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \nonumber                       \\
-       & \qquad \qquad \qquad \qquad \qquad \qquad \qquad + \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| + \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right|.
-\end{align}
-In order to get the convergence, we need to check the convergence of each term. Note that $f,f_n \leq 1$. Denote
-The first can be bounded by using \eqref{important_lemmas:denominator_bound_1} and \eqref{important_lemmas:convergence_conditions_3}:
-\begin{align} \label{p_convergence:first_term}
-  \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| \leq \frac{1}{n} \left|\frac{1}{\int f_n d\mu_n - 1/n} \cdot \frac{1}{\int f_n d\mu_n}\right|= O(n^{-1}\tilde{T}^2).
-\end{align}
-Recall the definitions of $\mathcal{K}_w$ and $\tilde{T}$, we have $O(n^{-1}\tilde{T}^2) = O(n^{-\epsilon})$ if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$.
+    \begin{align} \label{p_convergence:triangle_inequality}
+             & |p'_n - p'| = \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f}{\int f d \mu}\right| \nonumber                                                                                       \\
+        \leq & \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| + \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \nonumber                       \\
+             & \qquad \qquad \qquad \qquad \qquad \qquad \qquad + \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| + \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right|.
+    \end{align}
+    In order to get the convergence, we need to check the convergence of each term. Note that $f,f_n \leq 1$. Denote
+    The first can be bounded by using \eqref{important_lemmas:denominator_bound_1} and \eqref{important_lemmas:convergence_conditions_3}:
+    \begin{align} \label{p_convergence:first_term}
+        \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| \leq \frac{1}{n} \left|\frac{1}{\int f_n d\mu_n - 1/n} \cdot \frac{1}{\int f_n d\mu_n}\right|= O(n^{-1}\tilde{T}^2).
+    \end{align}
+    Recall the definitions of $\mathcal{K}_w$ and $\tilde{T}$, we have $O(n^{-1}\tilde{T}^2) = O(n^{-\epsilon})$ if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$.
 
-Continue to the second term, we compute
-\begin{align} \label{p_convergence:second_term}
-  \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \leq \frac{|f_n-f|}{|\int f_n d\mu_n||\int f d\mu_n|} = O(|f_n-f|\tilde{T}^2) = O(n^{-1/2} (\log n)^{\theta}\tilde{T}^4)
-\end{align}
-by lemma \ref{tsne:f_n_convergence_lemma}. This term is also $O(n^{-\epsilon})$ if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$, as the RHS of \eqref{p_convergence:second_term} decays faster than the formula in \eqref{tsne:kw_simplified}.
+    Continue to the second term, we compute
+    \begin{align} \label{p_convergence:second_term}
+        \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \leq \frac{|f_n-f|}{|\int f_n d\mu_n||\int f d\mu_n|} = O(|f_n-f|\tilde{T}^2) = O(n^{-1/2} (\log n)^{\theta}\tilde{T}^5)
+    \end{align}
+    by lemma \ref{tsne:f_n_convergence_lemma}. This term is also $O(n^{-\epsilon})$ if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$, as the RHS of \eqref{p_convergence:second_term} decays faster than the formula in \eqref{tsne:kw_simplified}.
 
-For the third them we can use lemma \ref{approx_lemma} and repeat the procedure that leads us to \eqref{important_lemmas:approximation_2}, which gives us
-\begin{align} \label{p_convergence:third_term}
-  \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| \leq \frac{|\int f d \mu_n - \int f d \mu|}{|\int f d \mu||\int f d \mu_n|} = O(n^{-1/2}\tilde{T}^2),
-\end{align}
-which is also $O(n^{-\epsilon})$ based on the hypothesis of the lemma.
+    For the third them we can use lemma \ref{approx_lemma} and repeat the procedure
+    that leads us to \eqref{important_lemmas:approximation_2}, which gives us
+    \begin{align} \label{p_convergence:third_term}
+        \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| \leq \frac{|\int f d \mu_n - \int f d \mu|}{|\int f d \mu||\int f d \mu_n|} = O(n^{-1/2}\tilde{T}^2),
+    \end{align}
+    which is also $O(n^{-\epsilon})$ based on the hypothesis of the lemma.
 
-Finally, we have a similar inequality as the second term for the fourth term:
-\begin{align} \label{p_convergence:fourth_term}
-  \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right| = O(|f_n-f|\tilde{T}).
-\end{align}
-The RHS is $O(n^{-\epsilon})$ because it decays faster than the RHS of \eqref{p_convergence:second_term}. The proof is finished by putting \eqref{p_convergence:triangle_inequality}, \eqref{p_convergence:first_term}, \eqref{p_convergence:second_term}, \eqref{p_convergence:third_term}, and \eqref{p_convergence:fourth_term} together.
+    Finally, we have a similar inequality as the second term for the fourth term:
+    \begin{align} \label{p_convergence:fourth_term}
+        \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right| = O(|f_n-f|\tilde{T}).
+    \end{align}
+    The RHS is $O(n^{-\epsilon})$ because it decays faster than the RHS of \eqref{p_convergence:second_term}. The proof is finished by putting \eqref{p_convergence:triangle_inequality}, \eqref{p_convergence:first_term}, \eqref{p_convergence:second_term}, \eqref{p_convergence:third_term}, and \eqref{p_convergence:fourth_term} together.
 \end{proof}
 \begin{lemma} \label{tsne:plogp_convergence_lemma}
     Assuming condition \ref{input_kernel_conditions_ext} and $\mu_X$ is sub-Gaussian, if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$, then there exists $\epsilon>0$ such that as $n \to \infty$,
     \begin{align}
-        \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)| =& O(n^{-\epsilon}). \nonumber
+        \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)| = & O(n^{-\epsilon}). \nonumber
     \end{align}
 \end{lemma}
 \begin{proof}
-    Let $\epsilon_n = n^{-1/2} (\log n)^{\theta}\tilde{T}^4$, where we inherit from \eqref{p_convergence:second_term}. We compute
+    Let $\epsilon_n = n^{-1/2} (\log n)^{\theta}\tilde{T}^5$, where we inherit from \eqref{p_convergence:second_term}. We compute
     \begin{align}
-      p_n \log p_n = & p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber           \\
-      =              & p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
+        p_n \log p_n = & p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber           \\
+        =              & p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
     \end{align}
     The third term will apparently vanish. For the second term, recall that $p \leq \tilde{T}^{-1}$. We want
     \begin{align} \label{p_convergence:entropy_bound}
-      O(\epsilon_n)/p = O(\epsilon_n \tilde{T}) = O(n^{-1/2} (\log n)^{\theta}\tilde{T}^5) = O(n^{-\epsilon}),
+        O(\epsilon_n)/p = O(\epsilon_n \tilde{T}) = O(n^{-1/2} (\log n)^{\theta}\tilde{T}^6) = O(n^{-\epsilon}),
     \end{align}
     which is just enough by \eqref{tsne:kw_simplified} and condition \ref{input_kernel_conditions_ext}.
 \end{proof}
@@ -687,21 +724,21 @@ The RHS is $O(n^{-\epsilon})$ because it decays faster than the RHS of \eqref{p_
     Assuming condition \ref{input_kernel_conditions_ext} and $\mu_X$ is sub-Gaussian, if $c_1\delta^2 > 8/(\sup \mathcal{K}_w)^2$, then as $n \to \infty$,
     \begin{align}
         \sum_j p_{j|i} \log p_{j|i} + \log(\rho n) = o(1).
-      \end{align}
+    \end{align}
 \end{lemma}
 \begin{proof}
     Recall that $p_{j|i} = \frac{1}{n}p'_n(X_i,X_j)$. Therefore
-\begin{align}
-  \sum_j p_{j|i} \log p_{j|i} = & \sum_{j \neq i} \frac{1}{n}p'_n(X_i,X_j) \log \left(\frac{1}{n}p'_n(X_i,X_j) \right ) + \log n + \log \rho \nonumber                                  \\
-  =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho + \log n \left(1 - \frac{1}{n}\sum_{j \neq i} p'_n(X_i,X_j)\right) \nonumber \\
-  =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho
-\end{align}
-because by definition $n - \sum_{j \neq i} p'_n(X_i,X_j) = 0$. We proceed to write the first summation as an integral over the measure $\mu_n$, with the difference being the diagonal terms.
-\begin{align} \label{p_convergence:diagonal_term}
-    & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) - \int p'_n(X_i,x') \log p'_n(X_i,x') d\mu_n(x') \nonumber     \\
-  = & -\frac{1}{n}\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\log \left(\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\right).
-\end{align}
-If $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. If $\mu_X$ is sub-Gaussian, then by \eqref{tsne:important_bounds}, the diagonal term in \eqref{p_convergence:diagonal_term} is $O(n^{-1}\tilde{T}\log(\tilde{T})) = o(1)$ by condition \ref{input_kernel_conditions_ext} and the definition of $\mathcal{K}_w$. The rest of convergence follows in the exact same way in \cite{auffinger-tsne}.
+    \begin{align}
+        \sum_j p_{j|i} \log p_{j|i} = & \sum_{j \neq i} \frac{1}{n}p'_n(X_i,X_j) \log \left(\frac{1}{n}p'_n(X_i,X_j) \right ) + \log n + \log \rho \nonumber                                  \\
+        =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho + \log n \left(1 - \frac{1}{n}\sum_{j \neq i} p'_n(X_i,X_j)\right) \nonumber \\
+        =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho
+    \end{align}
+    because by definition $n - \sum_{j \neq i} p'_n(X_i,X_j) = 0$. We proceed to write the first summation as an integral over the measure $\mu_n$, with the difference being the diagonal terms.
+    \begin{align} \label{p_convergence:diagonal_term}
+          & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) - \int p'_n(X_i,x') \log p'_n(X_i,x') d\mu_n(x') \nonumber     \\
+        = & -\frac{1}{n}\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\log \left(\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\right).
+    \end{align}
+    If $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. If $\mu_X$ is sub-Gaussian, then by \eqref{tsne:important_bounds}, the diagonal term in \eqref{p_convergence:diagonal_term} is $O(n^{-1}\tilde{T}\log(\tilde{T})) = o(1)$ by condition \ref{input_kernel_conditions_ext} and the definition of $\mathcal{K}_w$. The rest of convergence follows in the exact same way in \cite{auffinger-tsne}.
 \end{proof}
 \subsection{Lower Bound for \texorpdfstring{$\inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y)$}{L(X,Y)}}
 We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
@@ -712,7 +749,7 @@ We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
     \end{align}
 \end{lemma}
 \begin{proof}
-    Fortunately, the first proof is almost identical to the original one. Let $k \in \{1,\cdots, n\}$. We are going to show that
+    Let $k \in \{1,\cdots, n\}$. We are going to show that
     \begin{align}
         \lim_{|y_k| \to \infty} L_{n,\rho}(X,y) = \infty.
     \end{align}
@@ -731,7 +768,7 @@ We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
     \end{align}
     On the other hand, we have $g(y_i,y_k) = k (\norm{y_i-y_k}) \to 0$ as $|y_k| \to \infty$ because $\norm{y_i-y_k} \to \infty$ and $k$ satisfies
     \begin{align}
-        \iint_{(0,\infty)^2} k(x,x') dxdx' < \infty.
+        \iint_{(0,\infty)^2} k(\norm{x-x'}) dxdx' < \infty.
     \end{align}
     This means
     \begin{align}
@@ -752,34 +789,33 @@ We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
         = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n\sum_{i \neq j} \frac{1}{n^2} p_n(X_i,X_j) \nonumber \\
         = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n,
     \end{align}
-    because the second summation is just the sum of all probability mass. Now we have the $2 \log n$ term and we are left to deal with the first summation. We begin by showing that the diagonal terms do not matter in our estimation. consider
+    because the second summation is just the sum of all probability mass. Now we get the $2 \log n$ term and we are left to deal with the first summation. We begin by showing that the diagonal terms do not matter in our estimation. consider
     \begin{align}
           & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber                     \\
-        = & - \frac{1}{n^2}\sum_{t=1}^{n}p'_n(X_t,X_t) \nonumber                                                                                             \\
         = & - \frac{1}{n^2}\sum_{t=1}^{n} \frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\log\left(\frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\right).
     \end{align}
-    If we refer to the proof of lemma 14 in \cite{auffinger-tsne}, we can see that the difference of diagonal term vanishes and it does not depend on the specific $X_i$. Therefore in our proof, when we sum over all the $X_i$ and normalize by dividing $n^2$, we reach the exact same conclusion. The diagonal term is $O(n^{-1}\tilde{T}\log \tilde{T}) = O(n^{-\epsilon})$ which is $o(1)$ if $c_1 \delta^2 > 8/(\sup \mathcal{K}_w)^2$.
+    If we refer to the proof of lemma 14 in \cite{auffinger-tsne}, we can see that the difference of diagonal term vanishes and it does not depend on the specific $X_i$. Therefore in our proof, when we sum over all the $X_i$ and normalize by dividing $n^2$, we reach the exact same conclusion. The diagonal term is $O(n^{-2}\tilde{T}\log \tilde{T}) = O(n^{-\epsilon})$ which is $o(1)$ if $c_1 \delta^2 > 8/(\sup \mathcal{K}_w)^2$.
 
-    Then we apply lemma \ref{tsne:plogp_convergence_lemma} and since $d \mu_n \times d \mu_n$ is
-    a probability measure, we have
+    Then we apply lemma \ref{tsne:plogp_convergence_lemma} and since $d \mu_n
+        \times d \mu_n$ is a probability measure, we have
     \begin{align}
         \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') +o(1),
     \end{align}
     which immediately implies
     \begin{align} \label{entropy_esti}
-        \sum_{i \neq j}p_{ij} \log{ij} = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') -2 \log n + o(1).
+        \sum_{i \neq j}p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') -2 \log n + o(1).
     \end{align}
     The proof will be finished if we are able to replace the measure in the last integral with $d \mu$. We verify that
     \begin{align}
         h(x,x',\sigma) :=  p(x,x')\log p(x,x')
     \end{align}
-    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ is sub-Gaussian by construction. Then is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. Thus $p \to 0$ as $\norm{x-x}/\sigma \to \infty$. It is also obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}/\sigma \to \infty$. The rest of the conditions are also very easy to prove. We can finally conclude that
+    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ is sub-Gaussian by construction. Then is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. Thus $p \to 0$ as $\norm{x-x}\sigma \to \infty$. It is also obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}\sigma \to \infty$. The rest of the conditions are also very easy to prove. We can finally conclude that
     \begin{align}
         \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') + o(1).
     \end{align}
     Combine this estimation with (\ref{entropy_esti}) and we can conclude
     \begin{align}
-        \sum_{i \neq j}p_{ij} \log{ij} = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') - 2\log n + o(1),
+        \sum_{i \neq j}p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') - 2\log n + o(1),
     \end{align}
     as desired.
 \end{proof}
@@ -820,7 +856,7 @@ towards the end. Onto the next lemma we go:
     \end{align}
 \end{lemma}
 \begin{proof}
-Just as in lemma \ref{derivative_lemma}, we first break down the summation:
+    Just as in lemma \ref{derivative_lemma}, we first break down the summation:
     \begin{align}
         \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \sum_{i \neq j} p_{ij} \log p_{ij} - \sum_{i \neq j} p_{ij} \log q_{ij}.
     \end{align}
@@ -856,10 +892,10 @@ Just as in lemma \ref{derivative_lemma}, we first break down the summation:
 \end{proposition}
 \begin{proof}
     Let $y^*$ be given in the lemma and define
-\begin{align}
-    \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
-\end{align}
-We can easily show that $\mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma} in section \ref{tsne:sec:extra_proofs}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. The proof is complete by using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}.
+    \begin{align}
+        \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
+    \end{align}
+    We can easily show that $\mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma} in section \ref{tsne:sec:extra_proofs}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. The proof is complete by using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}.
 \end{proof}
 \subsection{Upper Bound for \texorpdfstring{$\inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y)$}{L(X,Y)}}
 For convenience, define
@@ -988,19 +1024,19 @@ Using the previous lemma and we can immediately get
     \end{align}
 \end{proposition}
 \subsection{Proof of theorem \ref{tsne:main_theorem_1}}
-    Write
-    \begin{align}
-        d_{n,\rho}(X) = \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y).
-    \end{align}
-    By proposition \ref{upper_bound_prop}, \ref{lower_bound_prop} and the fact that $\mu^* = \argmin_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$, there exists $\mu \in \tilde{\mathcal{P}}_X$ and a subsequence $n(k)$ such that
-    \begin{align}
-        I_{\rho}(\mu^*) \geq \limsup_{n \to \infty} d_{n,\rho}(X) \geq \limsup_{n \to \infty} d_{n(k),\rho}(X) \geq I_{\rho}(\mu) \geq I_{\rho}(\mu^*).
-    \end{align}
-    Therefore the limit
-    \begin{align}
-        \lim_{n \to \infty} d_{n(k),\rho}(X) = I_{\rho}(\mu) = I_{\rho}(\mu^*)
-    \end{align}
-    holds when we look at the sub-sequence $n(k)$ with the empirical measure $\mu$ converging to $\mu$ weakly. For the general limit, we can repeat the reasoning above by looking at any convergent sub-sequences of $d_{n,\rho}(X)$. We are able to find a sub-sequence inside each convergent sub-sequence and they all converges to $I_{\rho}(\mu^*)$. Therefore each convergent sub-sequence of $d_{n,\rho}(X)$ has the same limit and the theorem is proved. \qed
+Write
+\begin{align}
+    d_{n,\rho}(X) = \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y).
+\end{align}
+By proposition \ref{upper_bound_prop}, \ref{lower_bound_prop} and the fact that $\mu^* = \argmin_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$, there exists $\mu \in \tilde{\mathcal{P}}_X$ and a subsequence $n(k)$ such that
+\begin{align}
+    I_{\rho}(\mu^*) \geq \limsup_{n \to \infty} d_{n,\rho}(X) \geq \limsup_{n \to \infty} d_{n(k),\rho}(X) \geq I_{\rho}(\mu) \geq I_{\rho}(\mu^*).
+\end{align}
+Therefore the limit
+\begin{align}
+    \lim_{n \to \infty} d_{n(k),\rho}(X) = I_{\rho}(\mu) = I_{\rho}(\mu^*)
+\end{align}
+holds when we look at the sub-sequence $n(k)$ with the empirical measure $\mu$ converging to $\mu$ weakly. For the general limit, we can repeat the reasoning above by looking at any convergent sub-sequences of $d_{n,\rho}(X)$. We are able to find a sub-sequence inside each convergent sub-sequence and they all converges to $I_{\rho}(\mu^*)$. Therefore each convergent sub-sequence of $d_{n,\rho}(X)$ has the same limit and the theorem is proved. \qed
 \subsection{Proof of theorem \ref{tsne:main_theorem_2}}
 We need another lemma before proving this theorem.
 \begin{lemma} \label{home_stretch_lemma}
@@ -1063,12 +1099,37 @@ We need another lemma before proving this theorem.
     \end{align}
     This contradicts with the boundedness. We must have that $\mu^*(D_n)=0$ for $n$ sufficiently large. That is, $\mu^*(\norm{Y} \geq n)=0$, so $\mu^*$ has compact support in $Y$.
 \end{proof}
+\section{Conclusion}
+We studied the asymptotic behavior and the equilibrium measures of the t-SNE algorithm with generalized input and output kernels. Our results significantly advances the understanding of t-SNE by investigating its asymptotic behavior and equilibrium measures under generalized input and output kernels. Our key contributions can be summarized as follows:
+
+1. \textbf{A Foundation for Generalized Kernels:} We established a concrete, yet general, formulation for both input and output kernels, providing a solid foundation for subsequent theoretical analyses.
+
+2. \textbf{Guaranteed Convergence:} We identified specific conditions on these kernels that ensure the existence of an equilibrium measure, $\mu^*$, and guarantee the convergence of the perplexity-controlled t-SNE algorithm. These conditions provide crucial insights into the essential properties of kernels required for optimal algorithmic performance.
+
+3. \textbf{Relaxed Constraints and Novel Proofs:} Through the development of novel proof techniques, we demonstrated the existence and uniqueness of the perplexity-controlling parameter, $\sigma^*$, while simultaneously relaxing the constraints on the underlying probability measure, $\mu_X$. This significantly broadens the applicability of t-SNE and enables a more comprehensive convergence analysis.
+
+4. \textbf{Extended Convergence Analysis:} We rigorously proved the existence of the equilibrium measure, $\mu^*$, and demonstrated that, under the specified conditions, the output of the generalized t-SNE algorithm converges to this equilibrium. This result dramatically extends the convergence analysis in \cite{auffinger-tsne} to a significantly wider class of kernels.
+
+5. \textbf{Empirical Validation through Simulation:} We performed extensive simulations across a diverse range of kernel combinations, providing strong empirical support for the validity and robustness of our theoretical findings.
+
+These advancements pave the way for more flexible and powerful applications of t-SNE in various domains. Future work may focus on designing novel kernels based on this framework, further optimizing the algorithm's performance and extending its capabilities.
+% Our contribution can be summarized as follows:
+
+% 1. We established a concrete form of the input and output kernels with minimal loss of generality. The formula we give to the kernels set the foundations for all the following computations.
+
+% 2. We provided specific conditions on the input and output kernels that guarantee the existence of the equilibrium measure $\mu^*$ and the convergence of the perplexity-controlled t-SNE algorithm. These conditions reveal insights on what properties the kernels should have for the algorithm to converge.
+
+% 3. We used novel methods to prove the existence and uniqueness of $\sigma^*$ that controls the perplexity. More importantly, under the new techniques, we relieve the condition of the probability measure $\mu_X$ that we draw sample from. This allows us to conduct convergence analysis on related quantities.
+
+% 4. We proved the existence of the equilibrium measure $\mu^*$ and showed that under the conditions we provided, the output of the generalized t-SNE algorithm converges to the equilibrium measure, greatly expanding the result in \cite{auffinger-tsne} to a much wider class of kernels.
+
+% 5. We conducted simulations on a variety combinations of kernerls to accompany our theoretical results.
 \section{Auxiliary Lemmas}\label{tsne:sec:extra_proofs}
-Recall that $\mu_n =
-    \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}$ is the empirical measure of both the
-input and output. We just ignore the first or the second part based on the
-integration variable because it is a probability measure. Let $Y = Y^* =
-    (Y_1,\dots,Y_n)$ be a minimizer of $L$. Recall from (\ref{L_derivative}) that
+Recall that $\mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}$ is the empirical
+measure of both the input and output. We just ignore the first or the second
+part based on the integration variable because it is a probability measure. Let
+$Y = Y^* = (Y_1,\dots,Y_n)$ be a minimizer of $L$. Recall from
+(\ref{L_derivative}) that
 \begin{align}
     \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} = 0.
 \end{align}

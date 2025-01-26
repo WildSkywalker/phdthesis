@@ -1,0 +1,17 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Main Results}{3}{section.2}%
+\contentsline {section}{\numberline {3}Intuitive Insights}{5}{section.3}%
+\contentsline {section}{\numberline {4}Structure of the Proofs}{6}{section.4}%
+\contentsline {section}{\numberline {5}Simulations}{6}{section.5}%
+\contentsline {section}{\numberline {6}Existence and Uniqueness of $\sigma ^*$}{9}{section.6}%
+\contentsline {section}{\numberline {7}Uniform Convergence of $F_{\rho , \mu _n}(x,\sigma )$}{13}{section.7}%
+\contentsline {section}{\numberline {8}Proofs of the Main Theorems}{16}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Existence of $\mu ^*$}{16}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Convergence Lemmas for $p_{ij}$}{17}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Lower Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{19}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Upper Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{23}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Proof of theorem \ref {tsne:main_theorem_1}}{26}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Proof of theorem \ref {tsne:main_theorem_2}}{27}{subsection.8.6}%
+\contentsline {section}{\numberline {9}Conclusion}{28}{section.9}%
+\contentsline {section}{\numberline {10}Auxiliary Lemmas}{29}{section.10}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  12 JAN 2025 10:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  25 JAN 2025 22:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -554,24 +554,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (t-sne.aux)
 \openout1 = `t-sne.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
@@ -602,23 +602,27 @@ Package grfext Info: Graphics extension search list:
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 10.
+Package hyperref Info: Link coloring ON on input line 11.
  (t-sne.out) (t-sne.out)
 \@outlinefile=\write4
 \openout4 = `t-sne.out'.
 
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (t-sne_main_text.tex
+) (t-sne.toc)
+\tf@toc=\write5
+\openout5 = `t-sne.toc'.
+
+ (t-sne_main_text.tex
 
 [1
 
@@ -631,37 +635,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [4]
 
 [5]
-<../plots/default_kernel.png, id=153, 481.8pt x 481.8pt>
-File: ../plots/default_kernel.png Graphic file (type png)
-<use ../plots/default_kernel.png>
-Package pdftex.def Info: ../plots/default_kernel.png  used on input line 232.
-(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/poly_input_kernel.png, id=155, 481.8pt x 481.8pt>
-File: ../plots/poly_input_kernel.png Graphic file (type png)
-<use ../plots/poly_input_kernel.png>
-Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 234.
-(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/poly+exp_input.png, id=156, 481.8pt x 481.8pt>
-File: ../plots/poly+exp_input.png Graphic file (type png)
-<use ../plots/poly+exp_input.png>
-Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 235.
-(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/custom_in+out.png, id=157, 481.8pt x 481.8pt>
-File: ../plots/custom_in+out.png Graphic file (type png)
-<use ../plots/custom_in+out.png>
-Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 237.
-(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-
 
 [6]
+<../plots/default_kernel.png, id=162, 481.8pt x 481.8pt>
+File: ../plots/default_kernel.png Graphic file (type png)
+<use ../plots/default_kernel.png>
+Package pdftex.def Info: ../plots/default_kernel.png  used on input line 263.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
+<../plots/poly_input_kernel.png, id=164, 481.8pt x 481.8pt>
+File: ../plots/poly_input_kernel.png Graphic file (type png)
+<use ../plots/poly_input_kernel.png>
+Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 265.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
+<../plots/poly+exp_input.png, id=165, 481.8pt x 481.8pt>
+File: ../plots/poly+exp_input.png Graphic file (type png)
+<use ../plots/poly+exp_input.png>
+Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 266.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
+<../plots/custom_in+out.png, id=166, 481.8pt x 481.8pt>
+File: ../plots/custom_in+out.png Graphic file (type png)
+<use ../plots/custom_in+out.png>
+Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 268.
+(pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
 
-[7 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
 
-[8
+[7]
+
+[8 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
+
+[9
 
 ]
-
-[9]
 
 [10]
 
@@ -688,12 +692,12 @@ Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 237.
 [21]
 
 [22]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 916.
+
+[23]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 952.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-
-[23]
 
 [24]
 
@@ -701,30 +705,34 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 [26]
 
-[27]) (t-sne.bbl
+[27]
 
-[28])
+[28]
 
-[29] (t-sne.aux)
+[29]) (t-sne.bbl
+
+[30])
+
+[31] (t-sne.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `t-sne.out' has not changed.
-(rerunfilecheck)             Checksum: 68F979D6322C751D3A527E9A32738FA1;2203.
+(rerunfilecheck)             Checksum: C37BB8A32EF0A23F6A17EF4AA264D4E0;1438.
  ) 
 Here is how much of TeX's memory you used:
- 24364 strings out of 473919
- 451096 string characters out of 5726953
+ 24379 strings out of 473919
+ 451406 string characters out of 5726953
  1954908 words of memory out of 5000000
- 46528 multiletter control sequences out of 15000+600000
+ 46534 multiletter control sequences out of 15000+600000
  572719 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,14n,90p,910b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,14n,90p,824b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm7.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0600.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on t-sne.pdf (29 pages, 882117 bytes).
+Output written on t-sne.pdf (31 pages, 894925 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 272 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 814 PDF objects out of 1000 (max. 8388607)
+ 278 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
