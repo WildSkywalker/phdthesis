@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex t-sne"] 1737865251.68441 "t-sne.aux" "t-sne.bbl" "t-sne" 1737865253.9787 0
+["bibtex t-sne"] 1737913126.0564 "t-sne.aux" "t-sne.bbl" "t-sne" 1737913128.44257 0
   "./citation.bib" 1736820589 2772 79b15ca4821ef79732c7974a76ddfcb5 ""
   "./hunsrtnat.bst" 1719446007 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne.aux" 1737865253 11990 7c370cc000a238635de6c95f91f3cee8 "pdflatex"
+  "t-sne.aux" 1737913127 12005 59b3e7cc0255fb5415d9168b0afc4dfc "pdflatex"
   (generated)
   "t-sne.bbl"
   "t-sne.blg"
   (rewritten before read)
-["pdflatex"] 1737865251.96143 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1737865253.97982 0
+["pdflatex"] 1737913126.33398 "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" "t-sne.pdf" "t-sne" 1737913128.44382 0
   "../plots/custom_in+out.png" 1736197114 150164 5fe3ec28e6b8fd0ff18e643f69dc68f0 ""
   "../plots/default_kernel.png" 1736197074 149018 ad0d0f0c4904a1583cb29f7b6531525a ""
   "../plots/poly+exp_input.png" 1736197104 148925 6a6f99122ab122027a6d8e57b0ebe568 ""
@@ -218,12 +218,12 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "e:/NU Staff/Thesis - GIT/t-SNE/main paper/t-sne.tex" 1737863922 610 16d76cd05b5d200fed1ed4d690179d32 ""
   "guyipreammath.tex" 1736700243 4317 0020b92a0aad7cd7538b2aaa924cd9fe ""
-  "t-sne.aux" 1737865253 11990 7c370cc000a238635de6c95f91f3cee8 "pdflatex"
-  "t-sne.bbl" 1737865251 2499 6309cf7d6192b75c8ea390402e5da8f6 "bibtex t-sne"
-  "t-sne.out" 1737865253 1438 c37bb8a32ef0a23f6a17ef4aa264d4e0 "pdflatex"
+  "t-sne.aux" 1737913127 12005 59b3e7cc0255fb5415d9168b0afc4dfc "pdflatex"
+  "t-sne.bbl" 1737913126 2499 6309cf7d6192b75c8ea390402e5da8f6 "bibtex t-sne"
+  "t-sne.out" 1737913127 1438 9b1c2b4fa6929224c7bac02a11845e40 "pdflatex"
   "t-sne.tex" 1737863922 610 16d76cd05b5d200fed1ed4d690179d32 ""
-  "t-sne.toc" 1737865253 1487 cef2d64aae1492f2e38c935e40c24609 "pdflatex"
-  "t-sne_main_text.tex" 1737865248 93702 166330377833d6c43a917f676d380534 ""
+  "t-sne.toc" 1737913127 1487 5668244de62708b6cfe8e590dbae66c7 "pdflatex"
+  "t-sne_main_text.tex" 1737913123 93846 16bd045b6fe2b2dcd248c77f9e48e833 ""
   (generated)
   "t-sne.aux"
   "t-sne.log"

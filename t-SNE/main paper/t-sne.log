@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  25 JAN 2025 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  26 JAN 2025 11:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -637,35 +637,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [5]
 
 [6]
-<../plots/default_kernel.png, id=162, 481.8pt x 481.8pt>
+<../plots/default_kernel.png, id=164, 481.8pt x 481.8pt>
 File: ../plots/default_kernel.png Graphic file (type png)
 <use ../plots/default_kernel.png>
 Package pdftex.def Info: ../plots/default_kernel.png  used on input line 263.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/poly_input_kernel.png, id=164, 481.8pt x 481.8pt>
+<../plots/poly_input_kernel.png, id=166, 481.8pt x 481.8pt>
 File: ../plots/poly_input_kernel.png Graphic file (type png)
 <use ../plots/poly_input_kernel.png>
 Package pdftex.def Info: ../plots/poly_input_kernel.png  used on input line 265.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/poly+exp_input.png, id=165, 481.8pt x 481.8pt>
+<../plots/poly+exp_input.png, id=167, 481.8pt x 481.8pt>
 File: ../plots/poly+exp_input.png Graphic file (type png)
 <use ../plots/poly+exp_input.png>
 Package pdftex.def Info: ../plots/poly+exp_input.png  used on input line 266.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
-<../plots/custom_in+out.png, id=166, 481.8pt x 481.8pt>
+<../plots/custom_in+out.png, id=168, 481.8pt x 481.8pt>
 File: ../plots/custom_in+out.png Graphic file (type png)
 <use ../plots/custom_in+out.png>
 Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 268.
 (pdftex.def)             Requested size: 170.71652pt x 170.71304pt.
 
 
-[7]
+[7 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
 
-[8 <../plots/default_kernel.png> <../plots/poly_input_kernel.png> <../plots/poly+exp_input.png> <../plots/custom_in+out.png>]
-
-[9
+[8
 
 ]
+
+[9]
 
 [10]
 
@@ -692,12 +692,12 @@ Package pdftex.def Info: ../plots/custom_in+out.png  used on input line 268.
 [21]
 
 [22]
-
-[23]
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 952.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
+
+[23]
 
 [24]
 
@@ -707,32 +707,30 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 [27]
 
-[28]
+[28]) (t-sne.bbl
 
-[29]) (t-sne.bbl
+[29])
 
-[30])
-
-[31] (t-sne.aux)
+[30] (t-sne.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `t-sne.out' has not changed.
-(rerunfilecheck)             Checksum: C37BB8A32EF0A23F6A17EF4AA264D4E0;1438.
+(rerunfilecheck)             Checksum: 9B1C2B4FA6929224C7BAC02A11845E40;1438.
  ) 
 Here is how much of TeX's memory you used:
- 24379 strings out of 473919
- 451406 string characters out of 5726953
+ 24378 strings out of 473919
+ 451399 string characters out of 5726953
  1954908 words of memory out of 5000000
  46534 multiletter control sequences out of 15000+600000
  572719 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,14n,90p,824b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm7.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0600.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on t-sne.pdf (31 pages, 894925 bytes).
+Output written on t-sne.pdf (30 pages, 894897 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 278 named destinations out of 1000 (max. 500000)
+ 811 PDF objects out of 1000 (max. 8388607)
+ 277 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

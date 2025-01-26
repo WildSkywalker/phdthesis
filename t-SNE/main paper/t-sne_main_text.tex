@@ -14,9 +14,9 @@ where $\sigma_i$ are given constants. For each pair of data points $X_i$ and $X_
 \end{align}
 $\sigma_i$ satisfies that for each $i = 1, \dots, n$, that
 \begin{align}
-    -\sum_{j = 1, j \neq i}^n p_{j|i} \log p_{j|i} = \log \textbf{Prep} =: \log (n \rho).
+    -\sum_{j = 1, j \neq i}^n p_{j|i} \log p_{j|i} = \log \textbf{Perp} =: \log (n \rho).
 \end{align}
-$\textbf{Prep}$ is called the perplexity of the model and $\rho \in (0,1)$ is a given constant. The purpose of $\sigma_i$ is to make sure that for each $i$, the probability distribution induced by $p_{j|i}$ has the same entropy across all $i$. Clearly, $p_{j|i}$ is not symmetric. We then define $p_{ii} = 0$ and for $1 \leq i \neq j \leq n$,
+$\textbf{Perp}$ is called the perplexity of the model and $\rho \in (0,1)$ is a given constant. The purpose of $\sigma_i$ is to make sure that for each $i$, the probability distribution induced by $p_{j|i}$ has the same entropy across all $i$. Clearly, $p_{j|i}$ is not symmetric. We then define $p_{ii} = 0$ and for $1 \leq i \neq j \leq n$,
 \begin{align}
     p_{ij} = \frac{p_{j|i} + p_{i|j}}{2n} = \frac{1}{2n}\left(\frac{\ki(X_i,X_j,\sigma_i)}{\sum_{k \neq i} \ki(X_i,X_k,\sigma_i)}+\frac{\ki(X_i,X_j,\sigma_j)}{\sum_{k \neq j} \ki(X_j,X_k,\sigma_j)}\right).
 \end{align}
@@ -108,9 +108,9 @@ Since the all probability masses are normalized, we can assume without loss of g
 
     4. $k'(0) = 0$.
 \end{condition}
-We are ready to state the main results
+We are ready to state the main results. Note that compared to \cite{auffinger-tsne}, we no longer require $\mu_X$ to have $C^1$ density. We manged to relax the condition to $C^0$.
 \begin{theorem} \label{tsne:main_theorem_1}
-    Assume $\mu_X$ has a $C^1$ density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be i.i.d random variables with probability measure $\mu_X$. If condition \ref{input_kernel_conditions} and condition \ref{output_kernel_conditions} hold, then for any $\rho \in (0,1)$,
+    Assume $\mu_X$ has a continuous density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be i.i.d random variables with probability measure $\mu_X$. If condition \ref{input_kernel_conditions} and condition \ref{output_kernel_conditions} hold, then for any $\rho \in (0,1)$,
     \begin{align}
         \lim_{n \to \infty} \inf_Y L_{n,\rho}(X,Y) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu).
     \end{align}
@@ -161,15 +161,15 @@ provide the reader with a better understanding of the problem and the results
 we aim to prove.
 
 \subsubsection*{Is the form of the input kernel general
-    enough?} The input kernel may be the most important part of the algorithm.
+    enough?} The input kernel is the most important part of the algorithm.
 Since we would like to expand the result of the original version, it is
 important that we do not lose comprehensiveness when assuming a concrete form
 of the input kernel. Therefore, \eqref{tsne:input_kernel} is due an
 explanation.
 
-We start by realizing that $t$-SNE is about the relationship between each data
-point. The insights we gain from the algorithm should be translation and
-rotation invariant with respect to the coordinate systems we choose. Hence, it
+We start by realizing that $t$-SNE is about the relationship between all data
+points. The insights we gain from the algorithm should be translation and
+rotation invariant with respect to the coordinate system we choose. Hence, it
 is only reasonable to assume that the input kernel is a function of
 $\norm{x-x'}$ for each pair of input data points $x,x'$.
 
@@ -191,7 +191,7 @@ results just as in \cite{auffinger-tsne}.
 
 Finally, combining all the above, we arrive at the form of the input kernel in
 \eqref{tsne:input_kernel}, by adding a general function $w$ to the product
-$\sigma \norm{x-x'}^{\theta}$. This gives us a kernel we can easily work on
+$\sigma \norm{x-x'}^{\theta}$. This gives us a kernel we can easily work
 without losing any generality.
 
 \subsubsection*{Are the conditions on the input/output kernel general enough?}
@@ -221,7 +221,7 @@ for Gaussian kernels alone.
 The outline of the proofs should be self-explanatory by the titles of each
 sections. However, we would still like to dedicate this short section to remind
 the readers of how the proofs are structured. We have two conditions for the
-input kernels, i.e., condition \ref{input_kernel_conditions} and condition
+input kernels, i.e., Condition \ref{input_kernel_conditions} and Condition
 \ref{input_kernel_conditions_ext} and latter has one more assumption compared
 to the former while being the same for everything else.
 
@@ -266,7 +266,7 @@ In the end, all four combinations are able to converge and produce on-par perfor
     \subfloat[\centering Mixed Input Kernel]{{\includegraphics[width=6cm]{poly+exp_input.png} }}%
     \qquad
     \subfloat[\centering Custom Input\&Output Kernels]{{\includegraphics[width=6cm]{custom_in+out.png} }}
-    \caption{$t$-SNE running with different combinations of input and output kernels on the MNIST data set. All three custom kernel combinations are able to perform on par with the original algorithm.}%
+    \caption{$t$-SNE ran with different combinations of input and output kernels on the MNIST data set. All three custom kernel combinations are able to perform on par with the original algorithm.}%
     \label{fig:tsne_plots}
 \end{wrapfigure}
 
@@ -318,7 +318,7 @@ We start with the lemma that gives $F$ an increasing lower bound.
         =      & \frac{1}{Z_d} \int \exp\left(-w \left(\norm{\sigma^{1/\theta}(x-x')}^{\theta}\right)\right) f(x') d\sigma^{1/\theta}(x-x') \nonumber \\
         \equiv & \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau.
     \end{align}
-    Since $f$ is bounded, $\exp(-w(\norm{\tau}^{\theta})) \sup f$ is integrable. By dominant convergence theorem and the continuity of $f$, we have
+    Since $f$ is bounded, $\exp(-w(\norm{\tau}^{\theta})) \sup f$ is integrable. By Dominant Convergence Theorem and the continuity of $f$, we have
     \begin{align}
           & \lim_{\sigma \to \infty} \frac{1}{Z_d} \int \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
         = & \frac{1}{Z_d} \int \lim_{\sigma \to \infty} \exp(-w(\norm{\tau}^{\theta})) f(x-\tau \sigma^{-1/\theta}) d\tau \nonumber \\
@@ -392,7 +392,7 @@ To tackle this proof, we need one additional lemma inspired by theorem 7 in \cit
     \end{align}
     by the hypothesis of the lemma. This finishes the proof.
 \end{proof}
-\begin{proof}[Proof of Lemma \ref{existence_uniqueness:uniqueness_lemma}]
+\begin{proof}[Proof of lemma \ref{existence_uniqueness:uniqueness_lemma}]
     We compute the derivative of $F_{\rho,\mu}(x,\sigma)$ directly using \eqref{big_F_formula}. The following simplified
     notations will be used in the first several steps:
     \begin{align}
@@ -420,11 +420,11 @@ To tackle this proof, we need one additional lemma inspired by theorem 7 in \cit
     \begin{align}
         w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta} \geq 0.
     \end{align}
-    Since $\sigma >0$, the above inequality is equivalent to
+    Since $\sigma >0$, the above inequality is equivalent to:
     \begin{align} \label{generalized_condition_inequ}
         w'(\sigma\norm{x-x'}^{\theta})\sigma \norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta}) \sigma \norm{y-x'}^{\theta} \geq 0.
     \end{align}
-    Let $\tilde{w}(x) = x w'(x)$. Based on the second assumption in condition \ref{input_kernel_conditions} and mean value theorem, $\tilde{w}$ satisfies for all $a,b\geq 0$, $a>b$, there exists $c \in [b,a]$ that
+    Let $\tilde{w}(x) = x w'(x)$. Based on the second assumption in Condition \ref{input_kernel_conditions} and mean value theorem, $\tilde{w}$ satisfies for all $a,b\geq 0$, $a>b$, there exists $c \in [b,a]$ that
     \begin{align}
         \frac{aw'(a) - bw'(b)}{a-b} = w'(c) + cw''(c) \geq 0.
     \end{align}
@@ -438,7 +438,7 @@ We can now formally state and prove the main result of this section.
     The existence and uniqueness can be proven by combining \eqref{existence_uniqueness:limit_1}, \eqref{existence_uniqueness:limit_2}, lemma \ref{existence_uniqueness:existence_lemma} and lemma \ref{existence_uniqueness:uniqueness_lemma}. The smoothness of $\sigma^*_{\rho,\mu}(x)$ follows from implicit function theorem.
 \end{proof}
 \section{Uniform Convergence of \texorpdfstring{$F_{\rho, \mu_n}(x,\sigma)$}{F}}\label{tsne:sec:uniform_convergence}
-As we mentioned in section \ref{tsne:sec:main_results} and \ref{tsne:sec:intuition}, we will establish the uniform convergence of $F_{\rho,\mu_n}(x,\sigma)$ under the assumption that $\mu_X$ is sub-Gaussian, instead of $\mu_X$ being compactly supported. In order to do this, we will assume condition \ref{input_kernel_conditions_ext} for the input kernels. On the other hand, the reader will be able to easily verify all lemmas under with compactly supported $\mu_X$ assuming only condition \ref{input_kernel_conditions}.
+As we mentioned in Section \ref{tsne:sec:main_results} and \ref{tsne:sec:intuition}, we will establish the uniform convergence of $F_{\rho,\mu_n}(x,\sigma)$ under the assumption that $\mu_X$ is sub-Gaussian, instead of $\mu_X$ being compactly supported. In order to do this, we will assume Condition \ref{input_kernel_conditions_ext} for the input kernels. On the other hand, the reader will be able to easily verify all lemmas under with compactly supported $\mu_X$ assuming only Condition \ref{input_kernel_conditions}.
 
 Recall that a random variable $X$ or the corresponding probability measure
 $\mu$ is called sub-Gaussian if $\p(X>t) \leq 2 \exp(-Ct^2)$ for some positive
@@ -464,42 +464,42 @@ directly.
     1. $\mu$ is sub-Gaussian; \\
     2. $h(x,x',\sigma)$ and $\nabla_x h(x,x',\sigma)$ are bounded for al $x,x'$ and all $\delta \in K_n$;\\
     3. $h(x,x',\sigma) \to 0$ as $\sigma\norm{x-x'} \to \infty$.\\
-    Let $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. Let $\mu_n = (1/n)\sum_i \delta_{X_i}$. Then for any $\epsilon > 0$ with probability at least $1 - e^{-c\epsilon^2n}$ we have
+    Let $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$, and $\mu_n = (1/n)\sum_i \delta_{X_i}$. Then for any $\epsilon > 0$ with probability at least $1 - e^{-c\epsilon^2n}$ we have
     \begin{align}
         \sup_{\sigma^{-1} \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
     \end{align}
 \end{lemma}
 
-Also, let us recall that
+Also, let us recall that:
 \begin{align}
       & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                    \\
     = & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
     = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                               \\
       & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right)  + \log \rho. \nonumber
 \end{align}
-And $\mathcal{K}_w$ is defined as
+And $\mathcal{K}_w$ is defined as:
 \begin{align}
     \mathcal{K}_w = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} (\log n)^{\theta} \exp \left(6 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon}) \right\}.
 \end{align}
-Finally, to lighten up the notations, write
+Finally, to lighten up the notations, write:
 \begin{align} \label{tsne:uniform_convergence:notation}
     F_{\mu_n}(x,\sigma) = & F_{\rho, \mu_n}(x,\sigma) \nonumber                                \\
     f_{\sigma}(x,x') =    & \exp(-w(\sigma\norm{x-x'}^{\theta})),  \nonumber                   \\
     g_{\sigma}(x,x') =    & w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta})).
 \end{align}
 \begin{lemma} \label{tsne:uniform_convergence:component_lemma}
-    Let $c_1$ be the decay constant of the sub-Gaussian distribution $\mu$, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. If condition \ref{input_kernel_conditions_ext} holds, then there exists a constant $\mathcal{C}_1$ such that if $c_1 \delta^2 > \mathcal{C}_1$, then almost surely in $X_1,\dots,X_n$,
+    Let $c_1$ be the decay constant of the sub-Gaussian distribution $\mu$, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. If Condition \ref{input_kernel_conditions_ext} holds, then there exists a constant $\mathcal{C}_1$ such that if $c_1 \delta^2 > \mathcal{C}_1$, then almost surely in $X_1,\dots,X_n$,
     \begin{align}
          & \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]                                                                                                         \\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(X_i,x') d\mu_n(x')}{\int f_{\sigma}(X_i,x') d\mu_n(x')}-\frac{\int g_{\sigma}(X_i,x') d\mu(x')}{\int f_{\sigma}(X_i,x') d\mu(x')}\right| \nonumber \\
          & \qquad \qquad \qquad \qquad \qquad \qquad= O\left(n^{-1/2} \exp \left(2w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right)\right).
     \end{align}
 \end{lemma}
 \begin{proof}
-    Note that for any real numbers $A,B,C,D$, we have
+    Note that for any real numbers $A,B,C,D$, we have:
     \begin{align}
         \left|\frac{A}{B}-\frac{C}{D}\right| = \left|\frac{AD-BC}{BD}\right| = \left|\frac{D(A-C)+C(D-B)}{BD}\right| \leq \left|\frac{A-C}{B}\right|+\left|\frac{C(D-B)}{BD} \right|.
     \end{align}
-    This means
+    This means:
     \begin{align} \label{important_lemmas:triangle_inequality}
          & \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}-\frac{\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu(x')}\right| \leq \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')-\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}\right| \nonumber \\
          & \qquad \qquad + \left|\frac{\int g_{\sigma}(x,x')d\mu(x')(\int f_{\sigma}(x,x') d\mu_n(x')-\int f_{\sigma}(x,x') d\mu(x'))}{\int f_{\sigma}(x,x')d\mu(x')\int f_{\sigma}(x,x') d\mu_n(x')} \right|.
@@ -562,7 +562,7 @@ Finally, to lighten up the notations, write
     \begin{align} \label{important_lemmas:convergence_conditions_3}
         \exists \epsilon_1, \text{\normalfont s.t.}\lim_{n \to \infty} n^{-1/2} \exp \left(2w\left(\left(\sqrt{\frac{8}{c_1\delta^2}}\sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon_1}).
     \end{align}
-    Consider set
+    Consider the set
     \begin{align} \label{tsne:kw_prime}
         \mathcal{K}_w' = \left\{\tilde{C} \in \mathbb{R}_{\geq 0} \bigg\rvert \exists \epsilon_1>0, \text{\normalfont s.t.} \lim_{n \to \infty} n^{-1/2} \exp \left(2 w\left(\left(\tilde{C} \sqrt{\log n} \right)^{\theta} \right) \right) = O(n^{-\epsilon_1}) \right\}.
     \end{align}
@@ -610,7 +610,7 @@ The lemmas can be borrowed directly from \cite{auffinger-tsne} as they irrelevan
         I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)
     \end{align}
 \end{lemma}
-\subsection{Convergence Lemmas for \texorpdfstring{$p_{ij}$}{pij}}
+\subsection{Convergence lemmas for \texorpdfstring{$p_{ij}$}{pij}}
 To further lighten up the notations, define(the original definitions of $f$ can be found in \eqref{tsne:uniform_convergence:notation})
 \begin{align} \label{tsne:convergence_lemmas:notation}
     \sigma_n(x) = & \sigma_{\rho,\mu_n}^*(x), \nonumber                                                                                \\
@@ -1124,7 +1124,7 @@ These advancements pave the way for more flexible and powerful applications of t
 % 4. We proved the existence of the equilibrium measure $\mu^*$ and showed that under the conditions we provided, the output of the generalized t-SNE algorithm converges to the equilibrium measure, greatly expanding the result in \cite{auffinger-tsne} to a much wider class of kernels.
 
 % 5. We conducted simulations on a variety combinations of kernerls to accompany our theoretical results.
-\section{Auxiliary Lemmas}\label{tsne:sec:extra_proofs}
+\section{Auxiliary lemmas}\label{tsne:sec:extra_proofs}
 Recall that $\mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}$ is the empirical
 measure of both the input and output. We just ignore the first or the second
 part based on the integration variable because it is a probability measure. Let
