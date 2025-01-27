@@ -1,0 +1,147 @@
+\documentclass[10pt]{article}
+
+\input{guyipreammath.tex}
+\author{Yi Gu}
+\newcommand{\ki}{\mathbf{Ker}_{\mathbf{I}}}
+\newcommand{\ko}{\mathbf{Ker}_{\mathbf{O}}}
+
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+
+\title{Ph.D Thesis Introductory Chapter: Planning and Execution}
+
+\maketitle
+
+\tableofcontents
+\section{Overview and Layout}
+This manuscript is the introductory chapter of my Ph.D thesis, as well as all the discussion and layout planning that comes before it. The goal of the chapter is to provide a rich and comprehensive introduction to the main body of the thesis. We will start by giving a rough outline of the sections and how long each section should be. Then we will iterate through discussion and determine the exact layout of the chapter. After Tuca gives the green light on the organization, I will start to add references and write the main text.
+
+The title of the thesis is:
+
+\textbf{Generalized t-SNE and Beyond: Probabilistic Methods for Dimensionality Reduction, Combinatorial Optimization, and Machine Learning}
+
+\subsection{Introduction (5-7 pages)}
+\textbf{1. Hook:} Start with a captivating and accessible description of the challenges posed by high-dimensional data in the modern world and we can use real world examples like recommendation systems, social networks, and natural language processing. Emphasize the need for methods that can extract meaningful information and patterns from complex datasets.
+
+\textbf{2. The Power of Probabilistic Methods:} Briefly introduce the elegance and power of probabilistic methods in tackling these challenges. Highlight their ability to handle uncertainty, model complex dependencies, and provide insights beyond deterministic approaches.
+
+\textbf{3. Dimensionality Reduction as a Cornerstone:} Explain why dimensionality reduction is a crucial technique in this context. It simplifies data, reduces noise, and facilitates visualization and understanding.
+
+\textbf{4. Thesis Overview:} Present a concise overview of the thesis, outlining the three main projects and their contributions. Briefly touch upon how each project utilizes probabilistic methods in a unique way. Emphasize t-SNE as the method that kicks off the whole thesis and the other two projects can be viewed as some natural extensions of the t-SNE framework.
+
+\textbf{5. Roadmap:} Provide a roadmap for the introductory chapter, guiding the reader through the structure and content that will follow.
+
+\subsection{The Landscape of Dimensionality Reduction (10-12 pages)}
+\textbf{1. A Historical Perspective:} Trace the evolution of dimensionality reduction techniques. We will start with classical methods like Principal Component Analysis (PCA) and Multi-Dimensional Scaling (MDS), explaining their underlying principles and limitations.
+
+\textbf{2. The Rise of Non-Linear Methods:} Transition to the need for non-linear methods like Isometric Mapping (Isomap), Locally Linear Embedding (LLE), and others. Highlight the challenges in preserving both local and global structures in high-dimensional data. Introduce the idea of the manifold where data points lie in.
+
+\textbf{3. Introducing t-SNE:} Introduce t-Distributed Stochastic Neighbor Embedding (t-SNE) as a powerful and widely used non-linear dimensionality reduction technique. Explain its key ideas:
+
+\begin{itemize}
+    \item Similarity Measurement: How t-SNE measures similarity between data points in high-dimensional space using Gaussian kernels.
+    \item Probability Distributions: The construction of probability distributions over pairs of data points, reflecting their similarities.
+    \item Optimization Objective: The core optimization problem of t-SNE, minimizing the Kullback-Leibler (KL) divergence between the high-dimensional and low-dimensional probability distributions.
+    \item Student t-Distribution: Explain the rationale behind using the Student t-distribution in the low-dimensional space to alleviate the "crowding problem."
+    \item Gradient Descent: Briefly describe the optimization algorithm.
+\end{itemize}
+
+\textbf{4. Limitations of Traditional t-SNE:} Discuss the limitations of the original t-SNE formulation, particularly its use of fixed kernels and its sensitivity to hyperparameters. This sets the stage for the first project.
+
+\subsection{Generalized t-SNE: Expanding the Horizons of Dimensionality Reduction (10-12 pages)}
+\textbf{1. Motivation:}
+\begin{itemize}
+    \item Clearly articulate the motivation behind generalizing t-SNE. Explain the potential benefits of exploring different kernels and extending its applicability.
+    \item Highlight the limitations of traditional t-SNE with fixed Gaussian input kernel and student-t output kernel, particularly its sensitivity to hyperparameters, and its potential to misrepresent certain data structures.
+    \item Introduce the idea that a generalized kernel framework could lead to improved visualizations, better preservation of local and global structure, and applicability to a wider array of data types and similarity measures.
+    \item Mention that the core of t-SNE is its probabilistic framework, and our extension is natural: utilizing different probability distributions.
+\end{itemize}
+
+\textbf{2. Introducing the Generalized Kernel Framework:}
+\begin{itemize}
+    \item A Foundation for Generalized Kernels: Present the generalized t-SNE framework, emphasizing the flexibility it offers in choosing input and output kernels. Clearly define the generalized kernel formulation, using clear mathematical notation but keeping it as accessible as possible. Provide examples of different kernels and discuss their properties (e.g., heavy-tailed kernels, kernels for specific data types like strings or graphs).
+    \item Intuitive Explanation: Provide an intuitive explanation of how different kernels can capture different notions of similarity and how this affects the resulting embeddings. For example heavy-tailed input kernel can help reveal the global structure of the data.
+    \item Connections to Similarity Measures: Discuss how different kernels can be related to various similarity measures used in different domains.
+\end{itemize}
+
+\textbf{3. Theoretical Underpinnings: Convergence and Equilibrium}
+\begin{itemize}
+    \item State the specific conditions we identified on the kernels that ensure the existence of an equilibrium measure, $\mu^*$, and guarantee the convergence of the perplexity-controlled t-SNE algorithm.
+    \item Strive for a balance between mathematical rigor and intuitive explanations. While we should present the key theorems and results, also provide clear explanations of their meaning and significance. State that these theoretical results justify the use of these generalized kernels.
+\end{itemize}
+
+\textbf{5. Empirical Validation:} Briefly showcase some key empirical results demonstrating the effectiveness of the generalized t-SNE on various datasets.
+
+\textbf{6. Connections and Implications:}  Discuss potential connections between our generalized t-SNE and other dimensionality reduction methods. For example, explore whether certain kernel choices can make t-SNE resemble other techniques. Meanwhile, discuss the practical implications of our work. How might practitioners use the generalized t-SNE framework to improve their data analysis and visualization workflows?
+
+\subsection{From Dimensionality Reduction to Combinatorial Optimization: The Probabilistic Bridge (10-12 pages)}
+\textbf{1. Bridging the Gap:} Explain the conceptual leap from dimensionality reduction to combinatorial optimization. You might emphasize that both involve finding "good" low-dimensional representations, whether it's a low-dimensional embedding of data or a good solution within a vast combinatorial space.
+
+\textbf{2. Markov Random Fields (MRFs):} Introduce Markov Random Fields (MRFs) as a powerful tool for modeling complex dependencies in combinatorial problems. Explain the concepts of nodes, edges, potential functions, and the challenges in learning MRFs from data. Provide some motivating examples like image segmentation, natural language processing and social networks.
+
+\textbf{3. Traditional MRF Learning:} Discuss traditional approaches to learning MRFs, such as maximum likelihood estimation and pseudo-likelihood methods. Highlight their computational limitations, particularly for problems with complex dependencies.
+
+\textbf{4. The Lovász Local Lemma (LLL):} Introduce the Lovász Local Lemma (LLL) as a powerful tool from probabilistic combinatorics. Explain its core idea: even when dealing with many potentially ``bad" events, if each event is only dependent on a limited number of others, there's a non-zero probability that none of the bad events occur.
+
+\textbf{5. Sampling via LLL:} Explain how the LLL can be used to construct efficient sampling algorithms for problems that might otherwise seem intractable.
+
+\textbf{6. Connecting LLL to MRFs:} Clearly explain how the project connects LLL-based sampling to the problem of learning MRFs. Emphasize how this approach allows us to efficiently sample from the space of solutions and learn the underlying structure of the MRF.
+
+\textbf{7. Advantages and Applications:} Discuss the advantages of our LLL-based MRF learning approach, such as its scalability and ability to handle complex dependencies. Briefly mention some applications where this method can be beneficial.
+
+\subsection{Bayesian Learning and Factor Analysis: A Probabilistic Framework for Inference (10-12 pages)}
+\textbf{1. The Bayesian Paradigm:} Introduce Bayesian learning as a powerful framework for incorporating prior knowledge and quantifying uncertainty in statistical inference. Explain the key concepts of prior distributions, likelihood functions, and posterior distributions.
+
+\textbf{2. Factor Analysis:} Introduce factor analysis as a classical statistical technique for uncovering latent factors that explain observed correlations among variables. Explain the basic model and its assumptions.
+
+\textbf{3. Limitations of Traditional Factor Analysis:} Discuss the limitations of traditional factor analysis, such as its reliance on point estimates and its difficulty in handling missing data and non-linear relationships.
+
+\textbf{4. Variational Inference:} Introduce variational inference as an efficient method for approximate Bayesian inference. Explain its core idea: approximating the intractable posterior distribution with a simpler, tractable distribution.
+
+\textbf{5. VarFA: Variational Factor Analysis:} Introduce the VarFA framework, explaining how it extends traditional factor analysis within a Bayesian setting using variational inference.
+
+\textbf{6. Benefits of VarFA:} Highlight the advantages of VarFA, such as its ability to handle missing data, provide uncertainty estimates, and potentially capture non-linear relationships through appropriate prior choices.
+
+\textbf{7. Applications in Learning Analytics:} Discuss the specific applications of VarFA in learning analytics, such as student modeling, knowledge tracing, and personalized learning.
+
+\subsection{Conclusion and Future Directions (3-5 pages)}
+\textbf{1. Synthesis:} Briefly synthesize the key contributions of the thesis, emphasizing the unifying theme of probabilistic methods and their power in dimensionality reduction, combinatorial optimization, and machine learning.
+
+\textbf{2. Impact and Significance:} Discuss the potential impact and significance of our work, highlighting its contributions to both theory and practice.
+
+\textbf{3. Open Questions and Future Research:} Outline some open questions and potential directions for future research that build upon my work. This could include exploring new kernels for t-SNE, developing more efficient LLL-based algorithms, extending VarFA to handle more complex data types, or applying my methods to new domains.
+\section{How to Connect the Dots}
+Let us spend some extra ink on how to connect t-SNE with the other two projects.
+
+\subsection{t-SNE as a Problem of Representation Learning}
+1. Introduce t-SNE not just as a dimensionality reduction technique but as a method for representation learning. Emphasize that t-SNE aims to find a low-dimensional representation of data that preserves the essential relationships between data points. It's about learning a meaningful "embedding" or "code" for each data point.
+
+2. Highlight that representation learning is a central theme in machine learning. Many machine learning problems, including those involving combinatorial structures and Bayesian learning, can be framed as finding good representations. This connects t-SNE to a broader context.
+
+\subsection{t-SNE's Probabilistic Nature as the Bridge}
+1. Emphasize the probabilistic core of t-SNE. It uses probability distributions to represent similarities and aims to minimize the divergence between distributions in high and low-dimensional spaces.
+
+2. Highlight that this probabilistic framework is inherently flexible and adaptable. This adaptability is what allows for the generalizations we explored in the first project (generalized kernels) and sets the stage for probabilistic approaches in other domains.
+
+\subsection{Connecting to Combinatorial Optimization (MRFs and LLL)}
+1. Analogy of "Embedding" Solutions: Draw an analogy between finding a low-dimensional embedding for data points in t-SNE and finding a "good" configuration or solution within a vast combinatorial space in MRFs. In both cases, we're searching for a representation that satisfies certain constraints or optimizes certain criteria.
+
+2. Probabilistic Relaxation: We can state that t-SNE performs optimization on a probability distribution. Similarly, MRF learning can also be formulated as some optimization on probability distributions.
+
+3. LLL as a Tool for Exploring Solution Spaces: Introduce LLL as a technique that helps navigate and sample from complex probability distributions defined over combinatorial structures. Position it as a natural extension of the probabilistic thinking inherent in t-SNE, now applied to a different but related problem domain.
+
+\subsection{Connecting to Bayesian Learning (VarFA)}
+1. Factor Analysis as Latent Variable Modeling: Explain that factor analysis, at its heart, is about finding a low-dimensional latent representation that explains observed data. This is conceptually similar to t-SNE's goal of finding a low-dimensional embedding.
+
+2. Probabilistic Modeling of Latent Structure: Highlight that VarFA extends factor analysis by embracing a fully probabilistic Bayesian approach. This connects to t-SNE's probabilistic underpinnings and the exploration of different probabilistic kernels.
+
+3. Inference as Learning Representations: Frame Bayesian inference in VarFA as a process of learning the posterior distribution over latent factors. This can be seen as learning a probabilistic representation of the underlying structure of the data, similar in spirit to how t-SNE learns a probabilistic representation in a low-dimensional space.
+\input{intro_main_text.tex}
+\bibliographystyle{hunsrtnat}
+\setcitestyle{numbers}
+\nocite{*}
+\bibliography{citation}
+
+\end{document}
