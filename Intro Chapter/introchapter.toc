@@ -1,13 +1,2 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Overview and Layout}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Introduction (5-7 pages)}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}The Landscape of Dimensionality Reduction (10-12 pages)}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Generalized t-SNE: Expanding the Horizons of Dimensionality Reduction (10-12 pages)}{3}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}From Dimensionality Reduction to Combinatorial Optimization: The Probabilistic Bridge (10-12 pages)}{4}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Bayesian Learning and Factor Analysis: A Probabilistic Framework for Inference (10-12 pages)}{4}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Conclusion and Future Directions (3-5 pages)}{5}{subsection.1.6}%
-\contentsline {section}{\numberline {2}How to Connect the Dots}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}t-SNE as a Problem of Representation Learning}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}t-SNE's Probabilistic Nature as the Bridge}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Connecting to Combinatorial Optimization (MRFs and LLL)}{5}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Connecting to Bayesian Learning (VarFA)}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {1}Modern Data and Probabilistic Algorithms}{1}{section.1}%
