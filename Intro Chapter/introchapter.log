@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  29 MAR 2025 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  31 MAR 2025 03:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -626,15 +626,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [1
 
-{C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]) (introchapter.bbl
+{C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 [2]
 
 [3]
 
 [4]
+<color-wheels-RYB-RGB.jpg, id=112, 1070.8005pt x 1068.3915pt>
+File: color-wheels-RYB-RGB.jpg Graphic file (type jpg)
+<use color-wheels-RYB-RGB.jpg>
+Package pdftex.def Info: color-wheels-RYB-RGB.jpg  used on input line 55.
+(pdftex.def)             Requested size: 170.71652pt x 170.32664pt.
+) (introchapter.bbl
 
-[5]
+[5 <./color-wheels-RYB-RGB.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 48--54
+[]\OT1/cmr/m/n/10 Robert Tib-shi-rani.  Re-gres-sion shrink-age and se-lec-tion via the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--54
+\OT1/cmr/m/n/10 lasso.  \OT1/cmr/m/it/10 Jour-nal of the Royal Sta-tis-ti-cal So-ci-ety: Se-ries B (Method-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--54
+\OT1/cmr/m/it/10 olog-i-cal)\OT1/cmr/m/n/10 , 58(1):267--288, 1996, https://academic.oup.com/jrsssb/article-
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 48--54
+\OT1/cmr/m/n/10 pdf/58/1/267/49098631/jrsssb[]58[]1[]267.pdf.  URL [][]$\OT1/cmtt/m/n/10 https : / / doi . org / 10 . 1111 /
+ []
+
+
 
 [6]
 
@@ -644,28 +670,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [9]
 
-[10])
+[10]
 
-[11] (introchapter.aux)
+[11]
+
+[12]
+
+[13]
+
+[14]
+
+[15])
+
+[16] (introchapter.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `introchapter.out' has not changed.
-(rerunfilecheck)             Checksum: F83F5DA58DF4E05ABDA3CC77752C1CFD;255.
+(rerunfilecheck)             Checksum: D1E4A0A1FDD17A1C02C869C7A12D61A7;1048.
  ) 
 Here is how much of TeX's memory you used:
- 24520 strings out of 473919
- 458625 string characters out of 5726953
- 1940908 words of memory out of 5000000
- 46791 multiletter control sequences out of 15000+600000
- 568702 words of font info for 79 fonts, out of 8000000 for 9000
+ 24610 strings out of 473919
+ 460425 string characters out of 5726953
+ 1941908 words of memory out of 5000000
+ 46855 multiletter control sequences out of 15000+600000
+ 569009 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,7n,90p,1156b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on introchapter.pdf (11 pages, 191013 bytes).
+ 89i,10n,90p,1377b,901s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on introchapter.pdf (16 pages, 450861 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 199 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

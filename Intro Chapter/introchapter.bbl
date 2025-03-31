@@ -1,4 +1,4 @@
-\begin{thebibliography}{158}
+\begin{thebibliography}{170}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -37,6 +37,88 @@ Laurens van~der Maaten and Geoffrey Hinton.
 \newblock Visualizing data using t-sne.
 \newblock {\em Journal of Machine Learning Research}, 9\penalty0 (2579-2605),
   2008.
+
+\bibitem[Donoho(2000)]{Donoho_Dimensions}
+David Donoho.
+\newblock High-dimensional data analysis: The curses and blessings of
+  dimensionality.
+\newblock {\em AMS Math Challenges Lecture}, pages 1--32, 01 2000.
+
+\bibitem[Tibshirani(1996)]{lasso1996}
+Robert Tibshirani.
+\newblock Regression shrinkage and selection via the lasso.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 58\penalty0 (1):\penalty0 267--288, 1996,
+  https://academic.oup.com/jrsssb/article-pdf/58/1/267/49098631/jrsssb\_58\_1\_267.pdf.
+\newblock URL \url{https://doi.org/10.1111/j.2517-6161.1996.tb02080.x}.
+
+\bibitem[Chen and Donoho(1994)]{BPDN}
+Shaobing Chen and D.~Donoho.
+\newblock Basis pursuit.
+\newblock In {\em Proceedings of 1994 28th Asilomar Conference on Signals,
+  Systems and Computers}, volume~1, pages 41--44 vol.1, 1994.
+
+\bibitem[Fan and Lv(2010)]{variableselection2010}
+Jianqing Fan and Jinchi Lv.
+\newblock A selective overview of variable selection in high dimensional
+  feature space.
+\newblock {\em Statistica Sinica}, 20:\penalty0 101--148, 01 2010.
+
+\bibitem[Kingma and Welling(2014)]{kingma2013auto}
+Diederik~P. Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock In {\em {ICLR}}, 2014.
+
+\bibitem[Bellman(1961)]{Bellman1961adaptive}
+Richard Bellman.
+\newblock {\em Adaptive Control Processes: A Guided Tour}.
+\newblock Princeton University Press, 1961.
+\newblock ISBN 9780691079011.
+\newblock URL \url{http://www.jstor.org/stable/j.ctt183ph6v}.
+
+\bibitem[Hughes(1968)]{hughes1968}
+G.~Hughes.
+\newblock On the mean accuracy of statistical pattern recognizers.
+\newblock {\em IEEE Transactions on Information Theory}, 14\penalty0
+  (1):\penalty0 55--63, 1968.
+
+\bibitem[Karl~Pearson(1901)]{Pearson1901PCA}
+F.R.S Karl~Pearson.
+\newblock Liii. on lines and planes of closest fit to systems of points in
+  space.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 2\penalty0 (11):\penalty0 559--572, 1901,
+  https://doi.org/10.1080/14786440109462720.
+\newblock URL \url{https://doi.org/10.1080/14786440109462720}.
+
+\bibitem[Hotelling(1933)]{Hotelling1933}
+Harold Hotelling.
+\newblock Analysis of a complex of statistical variables into principal
+  components.
+\newblock {\em J. Ed. Psych.}, 24:\penalty0 417--441, 1933.
+
+\bibitem[Torgerson(1952)]{Torgerson1952}
+W.~S. Torgerson.
+\newblock Multidimensional scaling: I. theory and method.
+\newblock {\em Psychometrika}, 17:\penalty0 401--419, 1952.
+
+\bibitem[Torgerson(1958)]{torgerson1958theory}
+W.S. Torgerson.
+\newblock {\em Theory and methods of scaling}.
+\newblock Wiley, 1958.
+\newblock URL \url{https://books.google.com/books?id=FWN-AAAAMAAJ}.
+
+\bibitem[Shepard(1962)]{Shepard_1962}
+Roger~N. Shepard.
+\newblock The analysis of proximities: Multidimensional scaling with an unknown
+  distance function. i. and ii.
+\newblock {\em Psychometrika}, 27\penalty0 (2):\penalty0 125–140, 1962.
+
+\bibitem[Kruskal(1964)]{Kruskal_1964}
+J.~B. Kruskal.
+\newblock Multidimensional scaling by optimizing goodness of fit to a nonmetric
+  hypothesis.
+\newblock {\em Psychometrika}, 29\penalty0 (1):\penalty0 1–27, 1964.
 
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
@@ -103,11 +185,6 @@ Ian~J. Goodfellow, Jean Pouget{-}Abadie, Mehdi Mirza, Bing Xu, David
   Warde{-}Farley, Sherjil Ozair, Aaron~C. Courville, and Yoshua Bengio.
 \newblock Generative adversarial nets.
 \newblock In {\em {NIPS}}, pages 2672--2680, 2014.
-
-\bibitem[Kingma and Welling(2014)]{kingma2013auto}
-Diederik~P. Kingma and Max Welling.
-\newblock Auto-encoding variational bayes.
-\newblock In {\em {ICLR}}, 2014.
 
 \bibitem[Germain et~al.(2015)Germain, Gregor, Murray, and
   Larochelle]{Germain2015MADEMA}
