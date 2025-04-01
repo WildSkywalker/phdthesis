@@ -1,4 +1,4 @@
-\begin{thebibliography}{170}
+\begin{thebibliography}{173}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -119,6 +119,14 @@ J.~B. Kruskal.
 \newblock Multidimensional scaling by optimizing goodness of fit to a nonmetric
   hypothesis.
 \newblock {\em Psychometrika}, 29\penalty0 (1):\penalty0 1–27, 1964.
+
+\bibitem[Roweis and Saul(2000)]{Roweis2000}
+Sam~T. Roweis and Lawrence~K. Saul.
+\newblock {Nonlinear Dimensionality Reduction by Locally Linear Embedding}.
+\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000,
+  http://www.sciencemag.org/cgi/reprint/290/5500/2323.pdf.
+\newblock URL
+  \url{http://www.sciencemag.org/cgi/content/abstract/290/5500/2323}.
 
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
@@ -1108,5 +1116,19 @@ Jiaming Song, Shengjia Zhao, and Stefano Ermon.
 \newblock A-nice-mc: Adversarial training for mcmc.
 \newblock In {\em Proc. Advances in Neural Information Processing Systems},
   pages 5140--5150, 2017.
+
+\bibitem[Tenenbaum et~al.(2000)Tenenbaum, de~Silva, and
+  Langford]{tenenbaum_global_2000}
+Joshua~B. Tenenbaum, Vin de~Silva, and John~C. Langford.
+\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2319, 2000.
+
+\bibitem[Hinton and Roweis(2002)]{NIPS2002_6150ccc6}
+Geoffrey~E Hinton and Sam Roweis.
+\newblock Stochastic neighbor embedding.
+\newblock In S.~Becker, S.~Thrun, and K.~Obermayer, editors, {\em Advances in
+  Neural Information Processing Systems}, volume~15. MIT Press, 2002.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf}.
 
 \end{thebibliography}

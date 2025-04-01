@@ -3,4 +3,4 @@
 \contentsline {section}{\numberline {2}t-SNE and Dimension Reduction}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The Ubiquity and Challenge of High-Dimensional Data}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}A Brief History of Dimensionality Reduction}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The Road to t-SNE}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}The Road to t-SNE}{6}{subsection.2.3}%
