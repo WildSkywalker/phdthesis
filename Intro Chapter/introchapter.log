@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  6 APR 2025 17:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  7 APR 2025 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -640,14 +640,31 @@ Package pdftex.def Info: color-wheels-RYB-RGB.jpg  used on input line 55.
 (pdftex.def)             Requested size: 170.71652pt x 170.32664pt.
 
 
-[5 <./color-wheels-RYB-RGB.jpg>]) (introchapter.bbl
+[5 <./color-wheels-RYB-RGB.jpg>]
 
 [6]
+<isomap.jpg, id=142, 917.829pt x 433.62pt>
+File: isomap.jpg Graphic file (type jpg)
+<use isomap.jpg>
+Package pdftex.def Info: isomap.jpg  used on input line 90.
+(pdftex.def)             Requested size: 398.33858pt x 188.1931pt.
+<LLE_failed.jpg, id=143, 757.02824pt x 549.252pt>
+File: LLE_failed.jpg Graphic file (type jpg)
+<use LLE_failed.jpg>
+Package pdftex.def Info: LLE_failed.jpg  used on input line 98.
+(pdftex.def)             Requested size: 284.52756pt x 206.43832pt.
+
+
+[7 <./isomap.jpg>]
+
+[8 <./LLE_failed.jpg>]) (introchapter.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 48--54
 \OT1/cmr/m/n/10 https://academic.oup.com/jrsssb/article-pdf/58/1/267/49098631/jrsssb[]58[]1[]267.pdf.
  []
 
 
+
+[9]
 Underfull \hbox (badness 3439) in paragraph at lines 124--130
 []\OT1/cmr/m/n/10 Sam T. Roweis and Lawrence K. Saul.  Non-lin-ear Di-men-sion-al-ity Re-duc-
  []
@@ -664,7 +681,7 @@ Underfull \hbox (badness 7704) in paragraph at lines 124--130
 
 )
 
-[7] (introchapter.aux)
+[10] (introchapter.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -673,17 +690,17 @@ Package rerunfilecheck Info: File `introchapter.out' has not changed.
 (rerunfilecheck)             Checksum: D1E4A0A1FDD17A1C02C869C7A12D61A7;1048.
  ) 
 Here is how much of TeX's memory you used:
- 23986 strings out of 473919
- 444860 string characters out of 5726953
+ 24034 strings out of 473919
+ 446016 string characters out of 5726953
  1941908 words of memory out of 5000000
- 46390 multiletter control sequences out of 15000+600000
+ 46427 multiletter control sequences out of 15000+600000
  568297 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,10n,90p,1377b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,10n,90p,1377b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on introchapter.pdf (7 pages, 396162 bytes).
+Output written on introchapter.pdf (10 pages, 1124284 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

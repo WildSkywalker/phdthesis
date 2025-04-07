@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex introchapter"] 1743977417.1142 "introchapter.aux" "introchapter.bbl" "introchapter" 1743977529.30175 0
-  "./citation.bib" 1743480482 59881 7b87f0739da7f09474d23c46268753e3 ""
+["bibtex introchapter"] 1744004921.38083 "introchapter.aux" "introchapter.bbl" "introchapter" 1744005157.47763 0
+  "./citation.bib" 1743999706 60336 2c7c77a5b0ac751601bf3026c9bc0a1e ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "introchapter.aux" 1743977528 3641 6d6b27f01b449a754c2ed474c1762eac "pdflatex"
+  "introchapter.aux" 1744005156 5124 c16fa936ef1be7206ca9aec8abfb3516 "pdflatex"
   (generated)
   "introchapter.bbl"
   "introchapter.blg"
   (rewritten before read)
-["pdflatex"] 1743977527.56679 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1743977529.30286 0
+["pdflatex"] 1744005155.49906 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744005157.47878 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743407234 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626411455 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626411456 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -188,15 +188,17 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044406800 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
+  "LLE_failed.jpg" 1744002959 387618 3652c2ce9387a894570dffef594c69d6 ""
   "color-wheels-RYB-RGB.jpg" 1743407454 156361 e2c3bd2256906a3f96b2c945e466f941 ""
   "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" 1743976826 15619 c40136a7d8ba7464714c6fab3105a333 ""
   "guyipreammath.tex" 1743407501 4317 0020b92a0aad7cd7538b2aaa924cd9fe ""
-  "intro_main_text.tex" 1743977526 19366 bc8da3f7acee3b00a345c89ba15658eb ""
-  "introchapter.aux" 1743977528 3641 6d6b27f01b449a754c2ed474c1762eac "pdflatex"
-  "introchapter.bbl" 1743977417 5648 2cab4604af126d06c88cf440694e0297 "bibtex introchapter"
-  "introchapter.out" 1743977528 1048 d1e4a0a1fdd17a1c02c869c7a12d61a7 "pdflatex"
+  "intro_main_text.tex" 1744005154 26751 a4ef9cc05f748919972ebfdbdbeec129 ""
+  "introchapter.aux" 1744005156 5124 c16fa936ef1be7206ca9aec8abfb3516 "pdflatex"
+  "introchapter.bbl" 1744004921 6649 1569c16a0898e4a31cbd2a2961b643d4 "bibtex introchapter"
+  "introchapter.out" 1744005156 1048 d1e4a0a1fdd17a1c02c869c7a12d61a7 "pdflatex"
   "introchapter.tex" 1743976826 15619 c40136a7d8ba7464714c6fab3105a333 ""
-  "introchapter.toc" 1743977528 488 38449b796b753edae0c7851c817e1280 "pdflatex"
+  "introchapter.toc" 1744005156 488 a3c83f99242338db24bee2c533a5a702 "pdflatex"
+  "isomap.jpg" 1744002491 321008 6e6c0fe897c8c4f2a42f748ec86c8bfa ""
   (generated)
   "introchapter.aux"
   "introchapter.log"
