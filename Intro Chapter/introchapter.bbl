@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{24}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -148,5 +148,27 @@ Geoffrey~E Hinton and Sam Roweis.
   Neural Information Processing Systems}, volume~15. MIT Press, 2002.
 \newblock URL
   \url{https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf}.
+
+\bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
+Antonio Auffinger and Daniel Fletcher.
+\newblock Equilibrium distributions for t-distributed stochastic neighbour
+  embedding, 2023, 2304.03727.
+\newblock URL \url{https://arxiv.org/abs/2304.03727}.
+
+\bibitem[Kobak et~al.(2020)Kobak, Linderman, Steinerberger, Kluger, and
+  Berens]{Kobak_2020}
+Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
+  Berens.
+\newblock {\em Heavy-Tailed Kernels Reveal a Finer Cluster Structure in t-SNE
+  Visualisations}, page 124–139.
+\newblock Springer International Publishing, 2020.
+\newblock ISBN 9783030461508.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-030-46150-8_8}.
+
+\bibitem[Weinkove(2024)]{weinkove2024flow}
+Ben Weinkove.
+\newblock Dimension reduction and the gradient flow of relative entropy, 2024,
+  2409.16963.
+\newblock URL \url{https://arxiv.org/abs/2409.16963}.
 
 \end{thebibliography}

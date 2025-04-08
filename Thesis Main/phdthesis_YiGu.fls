@@ -316,6 +316,9 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT .\phdthesis_YiGu.aux
 INPUT .\phdthesis_YiGu.aux
 INPUT phdthesis_YiGu.aux
+INPUT .\introchap.aux
+INPUT .\introchap.aux
+INPUT introchap.aux
 INPUT .\chap1.aux
 INPUT .\chap1.aux
 INPUT chap1.aux
@@ -431,6 +434,12 @@ INPUT phdthesis_YiGu.lof
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
 OUTPUT phdthesis_YiGu.lof
+INPUT .\introchap.tex
+INPUT .\introchap.tex
+OUTPUT introchap.aux
+INPUT .\introchap.tex
+INPUT .\introchap.tex
+INPUT introchap.tex
 INPUT .\chap1.tex
 INPUT .\chap1.tex
 OUTPUT chap1.aux
@@ -672,6 +681,9 @@ INPUT .\phdthesis_YiGu.bbl
 INPUT phdthesis_YiGu.bbl
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcti1200.tfm
 INPUT phdthesis_YiGu.aux
+INPUT .\introchap.aux
+INPUT .\introchap.aux
+INPUT introchap.aux
 INPUT .\chap1.aux
 INPUT .\chap1.aux
 INPUT chap1.aux

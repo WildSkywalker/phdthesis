@@ -46,9 +46,31 @@
 \newlabel{fig:lle_swissroll_failed}{{3}{8}{A failed LLE output based on the same Swiss roll input in figure \ref {fig:isomap_swissroll}. The algorithm tries to search for neighbors in a overly broad area, causing the result to be distorted}{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The Road to t-SNE}{8}{subsection.2.3}\protected@file@percent }
 \newlabel{intro_chap:sec:tsne:preintro}{{2.3}{8}{The Road to t-SNE}{subsection.2.3}{}}
+\citation{auffinger-tsne}
+\citation{key}
+\newlabel{SNE_input_kernel}{{2.11}{9}{The Road to t-SNE}{equation.2.11}{}}
+\newlabel{SNE_input_entropy}{{2.12}{9}{The Road to t-SNE}{equation.2.12}{}}
+\newlabel{SNE_output_kernel}{{2.13}{9}{The Road to t-SNE}{equation.2.13}{}}
+\newlabel{SNE_loss_function}{{2.14}{9}{The Road to t-SNE}{equation.2.14}{}}
+\newlabel{tSNE_output_kernel}{{2.15}{10}{The Road to t-SNE}{equation.2.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A sample of the MNIST dataset (left) and the output of t-SNE (right). t-SNE successfully grouped the handwriting with different digits together, with some minor imperfections (there are two clusters for the digit 0).}}{10}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:mnist_tsne}{{4}{10}{A sample of the MNIST dataset (left) and the output of t-SNE (right). t-SNE successfully grouped the handwriting with different digits together, with some minor imperfections (there are two clusters for the digit 0)}{figure.caption.5}{}}
+\citation{auffinger-tsne}
+\citation{auffinger-tsne}
+\citation{auffinger-tsne}
+\citation{auffinger-tsne}
+\newlabel{thm:auffinger-tsne_1.1}{{1}{11}{Theorem 1.1, \cite {auffinger-tsne}}{theorem.1}{}}
+\newlabel{thm:auffinger-tsne_1.2}{{2}{11}{Theorem 1.2, \cite {auffinger-tsne}}{theorem.2}{}}
+\citation{Kobak_2020}
+\citation{Kobak_2020}
+\citation{Kobak_2020}
+\citation{weinkove2024flow}
 \bibstyle{hunsrtnat}
 \bibdata{citation}
 \bibcite{hey2009the}{{1}{2009}{{Hey et~al.}}{{Hey, Tansley, Tolle, and Gray}}}
+\newlabel{t_dist_density}{{2.19}{12}{The Road to t-SNE}{equation.2.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The running result of different SNE algorithms in \cite  {Kobak_2020}, with (A) being the light-tail t-SNE, (B) the normal t-SNE and (C) the heavy-tailed t-SNE. Heavy tailed variants are producing tighter and finer clusters, while the light-tail version produces results similar to the original SNE. ($t$-distribution will converge to Gaussian if $\alpha \to \infty $.)}}{12}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:heavytail_tsne}{{5}{12}{The running result of different SNE algorithms in \cite {Kobak_2020}, with (A) being the light-tail t-SNE, (B) the normal t-SNE and (C) the heavy-tailed t-SNE. Heavy tailed variants are producing tighter and finer clusters, while the light-tail version produces results similar to the original SNE. ($t$-distribution will converge to Gaussian if $\alpha \to \infty $.)}{figure.caption.6}{}}
 \bibcite{NIPS2012_c399862d}{{2}{2012}{{Krizhevsky et~al.}}{{Krizhevsky, Sutskever, and Hinton}}}
 \bibcite{NIPS2017_3f5ee243}{{3}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
 \bibcite{key}{{4}{2008}{{van~der Maaten and Hinton}}{{}}}
@@ -69,4 +91,7 @@
 \bibcite{tenenbaum_global_2000}{{19}{2000}{{Tenenbaum et~al.}}{{Tenenbaum, de~Silva, and Langford}}}
 \bibcite{Fredman1984fibonacci}{{20}{1984}{{Fredman and Tarjan}}{{}}}
 \bibcite{NIPS2002_6150ccc6}{{21}{2002}{{Hinton and Roweis}}{{}}}
-\gdef \@abspage@last{10}
+\bibcite{auffinger-tsne}{{22}{2023}{{Auffinger and Fletcher}}{{}}}
+\bibcite{Kobak_2020}{{23}{2020}{{Kobak et~al.}}{{Kobak, Linderman, Steinerberger, Kluger, and Berens}}}
+\bibcite{weinkove2024flow}{{24}{2024}{{Weinkove}}{{}}}
+\gdef \@abspage@last{14}

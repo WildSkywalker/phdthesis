@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex introchapter"] 1744004921.38083 "introchapter.aux" "introchapter.bbl" "introchapter" 1744005157.47763 0
-  "./citation.bib" 1743999706 60336 2c7c77a5b0ac751601bf3026c9bc0a1e ""
+["bibtex introchapter"] 1744083894.3081 "introchapter.aux" "introchapter.bbl" "introchapter" 1744083896.38639 0
+  "./citation.bib" 1744082059 60869 611fda42104b39c39ac69bfb61f58da4 ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "introchapter.aux" 1744005156 5124 c16fa936ef1be7206ca9aec8abfb3516 "pdflatex"
+  "introchapter.aux" 1744083895 7756 b958a1c34c82ca00edb3d96c06afed80 "pdflatex"
   (generated)
   "introchapter.bbl"
   "introchapter.blg"
   (rewritten before read)
-["pdflatex"] 1744005155.49906 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744005157.47878 0
+["pdflatex"] 1744083894.61788 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744083896.38759 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743407234 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626411455 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626411456 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -42,6 +42,7 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -190,15 +191,17 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "LLE_failed.jpg" 1744002959 387618 3652c2ce9387a894570dffef594c69d6 ""
   "color-wheels-RYB-RGB.jpg" 1743407454 156361 e2c3bd2256906a3f96b2c945e466f941 ""
-  "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" 1743976826 15619 c40136a7d8ba7464714c6fab3105a333 ""
+  "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" 1744070320 15619 c40136a7d8ba7464714c6fab3105a333 ""
   "guyipreammath.tex" 1743407501 4317 0020b92a0aad7cd7538b2aaa924cd9fe ""
-  "intro_main_text.tex" 1744005154 26751 a4ef9cc05f748919972ebfdbdbeec129 ""
-  "introchapter.aux" 1744005156 5124 c16fa936ef1be7206ca9aec8abfb3516 "pdflatex"
-  "introchapter.bbl" 1744004921 6649 1569c16a0898e4a31cbd2a2961b643d4 "bibtex introchapter"
-  "introchapter.out" 1744005156 1048 d1e4a0a1fdd17a1c02c869c7a12d61a7 "pdflatex"
-  "introchapter.tex" 1743976826 15619 c40136a7d8ba7464714c6fab3105a333 ""
-  "introchapter.toc" 1744005156 488 a3c83f99242338db24bee2c533a5a702 "pdflatex"
+  "heavytail_tsne.jpg" 1744082358 295298 2f810197b361c0391683a5b2d6648525 ""
+  "intro_main_text.tex" 1744083891 38912 5d5973a826381b28dc4de9ac18d51715 ""
+  "introchapter.aux" 1744083895 7756 b958a1c34c82ca00edb3d96c06afed80 "pdflatex"
+  "introchapter.bbl" 1744083894 7577 495096ab49a9619c1b88844b40610d9b "bibtex introchapter"
+  "introchapter.out" 1744083895 1048 d1e4a0a1fdd17a1c02c869c7a12d61a7 "pdflatex"
+  "introchapter.tex" 1744070320 15619 c40136a7d8ba7464714c6fab3105a333 ""
+  "introchapter.toc" 1744083895 488 a3c83f99242338db24bee2c533a5a702 "pdflatex"
   "isomap.jpg" 1744002491 321008 6e6c0fe897c8c4f2a42f748ec86c8bfa ""
+  "mnist_tsne.jpg" 1744075016 265242 8ee2e0649a54606a2fd898b287751931 ""
   (generated)
   "introchapter.aux"
   "introchapter.log"

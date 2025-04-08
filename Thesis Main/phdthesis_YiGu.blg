@@ -1,6 +1,8 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: phdthesis_YiGu.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: introchap.aux
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 A level-1 auxiliary file: chap1.aux
 Reallocating 'name_of_file' (item size: 1) to 10 items.
@@ -11,44 +13,44 @@ Reallocating 'name_of_file' (item size: 1) to 10 items.
 The style file: hunsrtnat.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: citation.bib
-You've used 154 entries,
+You've used 174 entries,
             2647 wiz_defined-function locations,
-            1455 strings with 32506 characters,
-and the built_in function-call counts, 70615 in all, are:
-= -- 6234
-> -- 3345
-< -- 158
-+ -- 1280
-- -- 969
-* -- 5066
-:= -- 10315
-add.period$ -- 510
-call.type$ -- 154
-change.case$ -- 294
-chr.to.int$ -- 151
-cite$ -- 154
-duplicate$ -- 3885
-empty$ -- 6529
-format.name$ -- 1214
-if$ -- 15840
+            1593 strings with 36792 characters,
+and the built_in function-call counts, 78705 in all, are:
+= -- 6931
+> -- 3711
+< -- 181
++ -- 1426
+- -- 1075
+* -- 5672
+:= -- 11591
+add.period$ -- 586
+call.type$ -- 174
+change.case$ -- 331
+chr.to.int$ -- 171
+cite$ -- 174
+duplicate$ -- 4313
+empty$ -- 7293
+format.name$ -- 1350
+if$ -- 17603
 int.to.chr$ -- 4
-int.to.str$ -- 155
-missing$ -- 156
-newline$ -- 780
-num.names$ -- 468
-pop$ -- 1580
+int.to.str$ -- 175
+missing$ -- 179
+newline$ -- 892
+num.names$ -- 536
+pop$ -- 1747
 preamble$ -- 1
-purify$ -- 154
+purify$ -- 174
 quote$ -- 0
-skip$ -- 2656
+skip$ -- 2911
 stack$ -- 0
-substring$ -- 3613
-swap$ -- 1183
-text.length$ -- 96
+substring$ -- 3978
+swap$ -- 1265
+text.length$ -- 104
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1039
+type$ -- 1170
 warning$ -- 0
-while$ -- 580
+while$ -- 645
 width$ -- 0
-write$ -- 2052
+write$ -- 2342

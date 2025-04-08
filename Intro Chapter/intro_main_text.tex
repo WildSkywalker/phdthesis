@@ -107,7 +107,7 @@ Finally, Isomap carries some implicit assumptions. It assumes that the data on t
 
 Both LLE and Isomap are important milestones in the advancement of dimension reduction algorithms. With different focusing aspects, both provided us with a useful set of tools to analyze high-dimensional data, suited for different scenarios. However, mathematicians and computer scientists did not stop there. All the algorithms up to this point still work primarily with Euclidean distance. What if we want to extract the abstract structure of similarity out of the data sets, rather than the distance itself? What if we encode the information of neighborhood using probability distribution, rather than plain physical proximity? Such ideas inspired the creation of stochastic neighbor embedding (SNE) and the subsequent t-stochastic neighbor embedding (t-SNE). And that is where our story begins.
 \subsection{The Road to t-SNE} \label{intro_chap:sec:tsne:preintro}
-SNE was first introduce in 2002 by Hinton and Roweis (\cite{NIPS2002_6150ccc6}, with Rowei also being the creator of LLE). Like we just mentioned at the end of the previous section, SNE use probability distributions to record the information of neighborhood. With this new framework, we need a new concept to measure the distance between two probability distributions, and that is the famous Kullback-Leibler (KL) divergence.
+SNE was first introduced in 2002 by Hinton and Roweis (\cite{NIPS2002_6150ccc6}, with Roweis also being the creator of LLE). Like we just mentioned at the end of the previous section, SNE uses probability distributions to record the information of neighborhood. With this new framework, we need a new concept to measure the distance between two probability distributions, and that is the famous Kullback-Leibler (KL) divergence.
 \begin{definition}
     Let $P$ and $Q$ be two probability measures with $p(x)$ and $q(x)$ as their respective probability density functions. The KL divergence between $P$ and $Q$ is defined as:
     \begin{align}
@@ -119,3 +119,83 @@ SNE was first introduce in 2002 by Hinton and Roweis (\cite{NIPS2002_6150ccc6}, 
     \end{align}
 \end{definition}
 Note that the KL divergence is zero if and only if $P$ and $Q$ are the same distribution. At the same time, it is not symmetric and is not a true distance metric. It is also called the relative entropy. Since both SNE and t-SNE will construct probability distributions from the original data set, rather than plain Euclidean distance, KL divergence is used to formulate the loss function we aim to minimize.
+
+SNE starts with defining the following probability mass function for each data point $X_i$: for each $j \neq i$, let
+\begin{align}\label{SNE_input_kernel}
+        p_{j|i} = \frac{\exp(-\norm{X_i - X_j}^2/2\sigma_i^2)}{\sum_{k \neq i}\exp(-\norm{X_i - X_k}^2/2\sigma_i^2)}.
+\end{align}
+$\sigma_i$ is a hyperparameter that is set by the user or by computation. We restrict that for each $i$, the induced probability distribution has the same entropy for all $i$. This means for some constant $\rho$, we have
+\begin{align} \label{SNE_input_entropy}
+    \sum_{j \neq i} p_{j|i} \log\left(p_{j|i}\right) = \log(N\rho),
+\end{align}
+where $N$ is the number of data points. The quantity $N\rho := \text{Perp}$ is called perplexity. This is a very clever design and it serves as a "slide bar" for each $X_i$. For example, the majority of the data points are located inside a ball with radius 1 and there is one data point that is more than 1000 units away. Then from that point's perspective, the rest of the data points are roughly "equally" distant from itself. The induced probability distribution will be very close to a discrete uniform distribution. A lot of information is lost during this process. By introducing perplexity, we allow each induced probability distribution to zoom in and out so that they are "observing" the rest from the data set on the same scale. Later we will see that this setting is not only backed up by clear intuition, but also plays an important role in proving the convergence to equilibrium measure in chapter 2, as well as in the prior work by Auffinger and Fletcher (\cite{auffinger-tsne}).
+
+Let $Y_i$ be the low-dimensional output of SNE. We can define a similar probability mass function:
+\begin{align} \label{SNE_output_kernel}
+    q_{i|j} = \frac{\exp(-\norm{Y_i - Y_j}^2)}{\sum_{k \neq i}\exp(-\norm{Y_i - Y_k}^2)}.
+\end{align}
+Next, SNE will then try to minimize the KL divergence between the two (collections of) distributions, i.e.:
+\begin{align} \label{SNE_loss_function}
+    L = \sum_{i=1}^N D_{KL}(P_i||Q_i) = \sum_{i=1}^N \sum_{j \neq i} p_{j|i} \log\left(\frac{p_{j|i}}{q_{j|i}}\right). 
+\end{align}
+Since the input $X_i$'s are given and fixed, the loss function $L$ is a function of the output points $Y_i$'s. The minimum can be found using gradient descent. Different from LLE, SNE is not guaranteed to find a global minimum.
+
+Though the formulation of SNE resembles LLE, the invention of SNE was still a refreshing evolution. From plain distance, to geodesic distance from constructed graphs, and now to probability distribution, it is good to see that mathematicians are using more flexible concepts to encode the general landscape of data. But people soon discovered that SNE has its own problems. Since the output distribution decays exponentially and it does not have a slide bar like perplexity, SNE is not able to distinguish clusters that are not in close proximity. This is the well-known "crowding problem" of SNE, and it directly inspired the birth the subsequent t-SNE algorithm (\cite{key}).
+
+The t-SNE algorithm shares the same procedure as SNE. However, instead of using the Gaussian function in the output schema, t-SNE uses the much slower decaying student's t-distribution with 1 degree of freedom, i.e.,
+\begin{align} \label{tSNE_output_kernel}
+    q_{ij} = \frac{(1 + \norm{Y_i - Y_j}^2)^{-1}}{\sum_{k \neq i}(1 + \norm{Y_i - Y_k}^2)^{-1}}.
+\end{align}
+That is also where the letter "t" in the name comes from. The t-distribution greatly mitigates the crowding problem, and it is able to perform very well across different data sets. Also, t-SNE defines the input probability mass $p_{ij}$ as
+\begin{align}
+    p_{ij} = \frac{p_{j|i}+p_{i|j}}{2n},
+\end{align}
+which makes the input probability masses symmetric. One of the greatest and most well-known showcase of t-SNE is its implementation on the MNIST data set. The Modified National Institute of Standards and Technology (MNIST) is a large database consisting of handwritten digits. It is one of the mostly commonly used public data set for machine learning and computer vision. Started with USPS database that records handwritten zip codes, today's MNIST contains 60000 training images and 10000 testing images and serves as a benchmark for many machine learning algorithms. t-SNE is able to effectively capture the structure of data and clearly cluster different digits into separate groups. This algorithm is one of the greatest achievements in the field of dimension reduction and unsupervised learning in the 21st century.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=14cm]{mnist_tsne.jpg}
+    \caption{A sample of the MNIST dataset (left) and the output of t-SNE (right). t-SNE successfully grouped the handwriting with different digits together, with some minor imperfections (there are two clusters for the digit 0).}%
+    \label{fig:mnist_tsne}
+\end{figure}
+Unfortunately, we need to repeat the same statement again: nothing is perfect. t-SNE is also a computationally expensive algorithm. If the data set is large and complex, it is advised to pre-process the data set using lightweight dimension reductions such as PCA. Meanwhile, though with better flexibility and overall performance, t-SNE inherits the same drawback from LLE: poor performance at preserving global structures. The distance between two clusters are often meaningless. We only know that the corresponding original data points do not belong to the same group, but little information can be extracted by the distance between the resulting low-dimensional clusters. t-SNE is also non-deterministic by nature: ending results might vary slightly for the same data set and hyperparameters. While the general cluster structures might be similar, the exact positions and orientations can vary, which can be sometimes confusing.
+
+Such traits of t-SNE inspired some discussion regarding the mathematical nature of the algorithm. First, if t-SNE is non-deterministic, can we say something about its convergence and asymptotic behavior? Will the output of t-SNE converge to a certain equilibrium measure as we increase the number of samples to infinity? The answer is yes. We have the following results from \cite{auffinger-tsne}:
+
+\begin{theorem} [Theorem 1.1, \cite{auffinger-tsne}] \label{thm:auffinger-tsne_1.1}
+    Assume all input data points of t-SNE are drawn independent from a probability measure $\mu_X$. $\mu_X$ has a $C^1$ density function $f(x)$ and compact support. Denote $X$, $Y$ the input and output data set, $n$ the number of data points, $\rho$ the perplexity, and $L_{n,\rho}(X,Y)$ the loss function (KL-divergence) of t-SNE.
+    
+    Then for any $\rho \in (0,1)$ given, there exists a function $I_{\rho}$ and a set of measures $\mathcal{P}_{\mu_X}$, such that
+    \begin{align}
+        \lim_{n \to \infty} \inf_{Y} L_{n,\rho}(X,Y) = \inf_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu).
+    \end{align}
+\end{theorem}
+If we write
+\begin{align}
+    \mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}
+\end{align}
+as the empirical measure of the input and output data set, then the following theorem also holds:
+\begin{theorem}[Theorem 1.2, \cite{auffinger-tsne}] \label{thm:auffinger-tsne_1.2}
+    Assume the same conditions as in theorem \ref{thm:auffinger-tsne_1.1}. Then there exists a measure $\mu^*$ and a sub-sequence $\{n_k\}$ such that $\mu_{n_k}$ converges weakly to $\mu^*$, and $\mu^* = \inf_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu)$. Moreover, $\mu^*$ has compact support.
+\end{theorem}
+The formulation of the theorems are slightly different from the original paper and some technical details are omitted due to the introductory nature of this chapter. The above two theorems send a strong message about the theoretical guarantee of t-SNE. If the input data is drawn independently from the same distribution, t-SNE is able to output a global minimum equilibrium measure (here measure means the distribution of the output data set) as we increase the sample size to infinity, with compact support. These are the first rigorous mathematical results about this algorithm after it has been used for so many years. And it leads to the next question, the question we are able to address in chapter 2. 
+
+For the output distributions, using the Gaussian is not necessary as the successful execution of the algorithm does not rely on the specific properties of Gaussian functions. The two theorems above further verify this observation. This gives rise to the concept of kernels. For a pair of points $(x,y)$, a kernel is a positive function of $\norm{x-y}$ that we can use to determine the normalizing weights that produce the input and output distributions. For input, the kernel is the Gaussian function and for the output, the kernel is the function $f(x) = (1 + x^2)^{-1}$. It is natural to ask:
+
+\textbf{``Is the student t-distribution not the only kernel that might give us the same theoretical guarantees? If no, then what is the class of output kernels that will give us the same results in \cite{auffinger-tsne}? Even more generally speaking, if we swap out both input and output kernels, what conditions do we need for the same theorems to be true?"}
+
+These are the exact questions we are able to answer with rigorous proofs in chapter 2. Besides that, people are already swapping out output kernels in practice. Note that in the formula of KL-divergence, for the term $p_{ij}\log(p_{ij}/q_{ij})$ reaches its minimum zero when $p_{ij} = q_{ij}$. This means if we manually increase $p_{ij}$, the gradient descent process will tend to increase $q_{ij}$ as well. This is achieved by putting the output points $Y_i$ and $Y_j$ closer together, as the output kernel $f(x) = (1 + x^2)^{-1}$ is monotone decreasing. Therefore, in application people often replace $p_{ij}$ with its multiple $kp_{ij}$ for some constant $k > 1$. This is called the early exaggeration, one of the frequently used techniques. Using early exaggeration will result in closer clusters, improving visualization results.
+
+Another known modification of the t-SNE algorithm is the heavy-tailed t-SNE. Recall that the density function of the t-distribution is given by
+\begin{align} \label{t_dist_density}
+    f(x) = \left(1+\frac{x^2}{\alpha}\right)^{-\frac{\alpha+1}{2}},
+\end{align}
+where $\alpha$ is the degree of freedom. Decreasing $\alpha$ will reduce its decaying speed and make it more "heavy-tailed". This will make $q_{ij}$ relatively larger and the output clusters will be compact. It is also shown in \cite{Kobak_2020} that heavy-tailed t-SNE tends to produce finer clusters, such as sub-clusters of the same digit in the MNIST data set.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=14cm]{heavytail_tsne.jpg}
+    \caption{The running result of different SNE algorithms in \cite{Kobak_2020}, with (A) being the light-tail t-SNE, (B) the normal t-SNE and (C) the heavy-tailed t-SNE. Heavy tailed variants are producing tighter and finer clusters, while the light-tail version produces results similar to the original SNE. ($t$-distribution will converge to Gaussian if $\alpha \to \infty$.)}%
+    \label{fig:heavytail_tsne}
+\end{figure}
+Both early exaggeration and heavy-tailed t-SNE can be seen as manipulations of the output kernel. t-SNE works effectively under the modification and produces promising results, besides different characteristics researchers hope to see. Besides exploring different conditions for the convergence to hold and the equilibrium measure to exist, it is also an interesting problem to see how exactly the output changes with the modification of the output kernel. Some insightful results can be found in \cite{weinkove2024flow}.
+
+It is fascinating to see the rigorous mathematical theory behind widely used algorithms like t-SNE, which are often used to produce qualitative rather than quantitative results. Getting to the bottom of the convergence behavior will provide valuable insights on the algorithm itself, refining the theoretical landscape of the dimension reduction theory. We will resume our journey in chapter 2.
