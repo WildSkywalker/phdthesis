@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex introchapter"] 1744083894.3081 "introchapter.aux" "introchapter.bbl" "introchapter" 1744083896.38639 0
+["bibtex introchapter"] 1744083894.3081 "introchapter.aux" "introchapter.bbl" "introchapter" 1744084463.96393 0
   "./citation.bib" 1744082059 60869 611fda42104b39c39ac69bfb61f58da4 ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "introchapter.aux" 1744083895 7756 b958a1c34c82ca00edb3d96c06afed80 "pdflatex"
+  "introchapter.aux" 1744084463 7756 b958a1c34c82ca00edb3d96c06afed80 "pdflatex"
   (generated)
   "introchapter.bbl"
   "introchapter.blg"
   (rewritten before read)
-["pdflatex"] 1744083894.61788 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744083896.38759 0
+["pdflatex"] 1744084462.32233 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744084463.96509 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743407234 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626411455 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626411456 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -194,12 +194,12 @@
   "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" 1744070320 15619 c40136a7d8ba7464714c6fab3105a333 ""
   "guyipreammath.tex" 1743407501 4317 0020b92a0aad7cd7538b2aaa924cd9fe ""
   "heavytail_tsne.jpg" 1744082358 295298 2f810197b361c0391683a5b2d6648525 ""
-  "intro_main_text.tex" 1744083891 38912 5d5973a826381b28dc4de9ac18d51715 ""
-  "introchapter.aux" 1744083895 7756 b958a1c34c82ca00edb3d96c06afed80 "pdflatex"
+  "intro_main_text.tex" 1744084461 38964 9c75842f6383617754234c2f6902534b ""
+  "introchapter.aux" 1744084463 7756 b958a1c34c82ca00edb3d96c06afed80 "pdflatex"
   "introchapter.bbl" 1744083894 7577 495096ab49a9619c1b88844b40610d9b "bibtex introchapter"
-  "introchapter.out" 1744083895 1048 d1e4a0a1fdd17a1c02c869c7a12d61a7 "pdflatex"
+  "introchapter.out" 1744084463 1048 d1e4a0a1fdd17a1c02c869c7a12d61a7 "pdflatex"
   "introchapter.tex" 1744070320 15619 c40136a7d8ba7464714c6fab3105a333 ""
-  "introchapter.toc" 1744083895 488 a3c83f99242338db24bee2c533a5a702 "pdflatex"
+  "introchapter.toc" 1744084463 488 a3c83f99242338db24bee2c533a5a702 "pdflatex"
   "isomap.jpg" 1744002491 321008 6e6c0fe897c8c4f2a42f748ec86c8bfa ""
   "mnist_tsne.jpg" 1744075016 265242 8ee2e0649a54606a2fd898b287751931 ""
   (generated)
