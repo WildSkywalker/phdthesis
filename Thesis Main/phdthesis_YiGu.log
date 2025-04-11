@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  7 APR 2025 14:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  8 APR 2025 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -97326,7 +97326,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
+...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -97337,7 +97337,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 2
-....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -97478,7 +97477,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
+...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -97488,8 +97487,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.liu2000inequ} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 2
-....\OT1/cmr/m/n/12 4
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -97616,7 +97614,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
+...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -97626,8 +97624,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:journals/neco/Hinton02} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 2
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -97716,7 +97713,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.murphy1999loopy} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 3
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -97866,7 +97863,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.yedidia2001generalized} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 3
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 5
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -97998,7 +97995,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.wainwright2006relaxation} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 3
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -98169,7 +98166,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.Braunstein2005SurveyPA} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 3
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -98298,7 +98295,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.AnHaHoTi2007} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 3
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 8
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -98484,7 +98481,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:journals/jacm/GuoJL19} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -98613,7 +98610,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/iclr/SelsamLBLMD19} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -98780,7 +98777,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/icml/DuanVPRM22} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -98979,7 +98976,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/nips/LiCK18} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -99119,7 +99116,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/nips/YolcuP19} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -99234,7 +99231,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:journals/ai/GogateD11} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 5
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -99363,7 +99360,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.Gomes2006Sampling} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -99503,7 +99500,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.Ermon13Wish} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -99706,7 +99703,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/sat/AchlioptasT17} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 8
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -99867,7 +99864,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/aiia/DodaroP19} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 8
+....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -100021,7 +100018,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/sat/LauriaENV17} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 8
+....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -100161,7 +100158,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/sat/IgnatievMM18} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 8
+....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -100344,7 +100341,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:conf/aaai/ChakrabortyM19} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 8
+....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -100454,7 +100451,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DBLP:journals/combinatorics/CohnPP02} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 8
+....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -100586,7 +100583,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.nye2014autotutor} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 9
+....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -100769,7 +100766,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.heffernan2014assistments} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 9
+....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -101029,7 +101026,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.rafferty2015inferring} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 9
+....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 8
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -101158,7 +101155,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.romero2010educational} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 9
+....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -101298,7 +101295,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253
+...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -101308,8 +101305,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.baker2009state} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 0
+....\OT1/cmr/m/n/12 8
 ....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -101377,7 +101373,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253
+...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -101387,8 +101383,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.DKT} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -101592,7 +101587,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253
+...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -101602,8 +101597,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.zhang2017dynamic} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -101771,7 +101765,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253
+...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -101781,8 +101775,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.minn2018deep} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -101970,7 +101963,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253
+...\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -101980,8 +101973,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.irt-best} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -102172,7 +102164,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 2
+....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 5
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -102302,7 +102294,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 2
+....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -102407,7 +102399,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 2
+....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -102483,7 +102475,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 2
+....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 8
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -102613,7 +102605,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 2
+....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -102743,7 +102735,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 3
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -102946,7 +102938,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 3
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -103109,7 +103101,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 4
+....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -103346,7 +103338,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 4
+....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -103528,7 +103520,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 4
+....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -103718,7 +103710,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -103938,7 +103930,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 4
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -104109,7 +104101,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 5
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -104269,7 +104261,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 3
 ....\OT1/cmr/m/n/12 6
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
@@ -104400,7 +104392,7 @@ Underfull \hbox (badness 1565) in paragraph at lines 1016--1023
 ..\glue 0.0
 ..\glue -24.15253
 ..\glue -5.0
-..\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
+..\hbox(9.0+3.0)x24.15253
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0 plus 1.0fil
@@ -104410,7 +104402,9 @@ Underfull \hbox (badness 1565) in paragraph at lines 1016--1023
 .....\pdfdest name{cite.NIPS2012_c399862d} xyz
 .....\penalty 10000
 ...\OT1/cmr/m/n/12 [
-...\OT1/cmr/m/n/12 3
+...\OT1/cmr/m/n/12 1
+...\OT1/cmr/m/n/12 5
+...\OT1/cmr/m/n/12 7
 ...\OT1/cmr/m/n/12 ]
 ...\pdfcolorstack 0 pop
 ..\glue 5.0
@@ -104668,7 +104662,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
+...\hbox(9.0+3.0)x24.15253
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -104678,7 +104672,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.key} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 4
+....\OT1/cmr/m/n/12 7
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -104807,8 +104803,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 6
-....\OT1/cmr/m/n/12 7
+....\OT1/cmr/m/n/12 4
+....\OT1/cmr/m/n/12 8
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -104937,8 +104933,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 6
-....\OT1/cmr/m/n/12 8
+....\OT1/cmr/m/n/12 4
+....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -105067,8 +105063,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 6
-....\OT1/cmr/m/n/12 9
+....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -105371,8 +105367,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
 ....\OT1/cmr/m/n/12 1
-....\OT1/cmr/m/n/12 7
-....\OT1/cmr/m/n/12 0
+....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -105499,7 +105495,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1042--1048
 ..\glue 0.0
 ..\glue -24.15253
 ..\glue -5.0
-..\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
+..\hbox(9.0+3.0)x24.15253
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0 plus 1.0fil
@@ -105509,7 +105505,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1042--1048
 .....\pdfdest name{cite.lasso1996} xyz
 .....\penalty 10000
 ...\OT1/cmr/m/n/12 [
-...\OT1/cmr/m/n/12 7
+...\OT1/cmr/m/n/12 1
+...\OT1/cmr/m/n/12 6
+...\OT1/cmr/m/n/12 0
 ...\OT1/cmr/m/n/12 ]
 ...\pdfcolorstack 0 pop
 ..\glue 5.0
@@ -105701,7 +105699,7 @@ Underfull \hbox (badness 1436) in paragraph at lines 1113--1119
 ..\glue 0.0
 ..\glue -24.15253
 ..\glue -5.0
-..\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
+..\hbox(9.0+3.0)x24.15253
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0 plus 1.0fil
@@ -105712,7 +105710,8 @@ Underfull \hbox (badness 1436) in paragraph at lines 1113--1119
 .....\penalty 10000
 ...\OT1/cmr/m/n/12 [
 ...\OT1/cmr/m/n/12 1
-...\OT1/cmr/m/n/12 9
+...\OT1/cmr/m/n/12 7
+...\OT1/cmr/m/n/12 1
 ...\OT1/cmr/m/n/12 ]
 ...\pdfcolorstack 0 pop
 ..\glue 5.0
@@ -105841,7 +105840,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1127--1133
 ..\glue 0.0
 ..\glue -24.15253
 ..\glue -5.0
-..\hbox(9.0+3.0)x24.15253, glue set 2.93747fil
+..\hbox(9.0+3.0)x24.15253
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0 plus 1.0fil
@@ -105851,8 +105850,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1127--1133
 .....\pdfdest name{cite.NIPS2002_6150ccc6} xyz
 .....\penalty 10000
 ...\OT1/cmr/m/n/12 [
-...\OT1/cmr/m/n/12 2
-...\OT1/cmr/m/n/12 2
+...\OT1/cmr/m/n/12 1
+...\OT1/cmr/m/n/12 7
+...\OT1/cmr/m/n/12 3
 ...\OT1/cmr/m/n/12 ]
 ...\pdfcolorstack 0 pop
 ..\glue 5.0
@@ -106215,7 +106215,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
+...\hbox(9.0+3.0)x24.15253
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -106225,7 +106225,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.Donoho_Dimensions} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 5
+....\OT1/cmr/m/n/12 9
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -106350,7 +106352,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
+...\hbox(9.0+3.0)x24.15253
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -106360,7 +106362,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.lasso1996} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 7
+....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 0
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -106648,7 +106652,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
+...\hbox(9.0+3.0)x24.15253
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -106658,7 +106662,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.BPDN} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 8
+....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 1
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -106776,7 +106782,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue -24.15253
 ...\glue -5.0
-...\hbox(9.0+3.0)x24.15253, glue set 5.87494fil
+...\hbox(9.0+3.0)x24.15253
 ....\pdfcolorstack 0 push {0 g 0 G}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fil
@@ -106786,7 +106792,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\pdfdest name{cite.variableselection2010} xyz
 ......\penalty 10000
 ....\OT1/cmr/m/n/12 [
-....\OT1/cmr/m/n/12 9
+....\OT1/cmr/m/n/12 1
+....\OT1/cmr/m/n/12 6
+....\OT1/cmr/m/n/12 2
 ....\OT1/cmr/m/n/12 ]
 ....\pdfcolorstack 0 pop
 ...\glue 5.0
@@ -106906,12 +106914,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 [168])
 
-[169] (phdthesis_YiGu.aux (introchap.aux) (chap1.aux) (chap2.aux) (chap3.aux)
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+[169] (phdthesis_YiGu.aux (introchap.aux) (chap1.aux) (chap2.aux) (chap3.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -106920,17 +106923,17 @@ Package rerunfilecheck Info: File `phdthesis_YiGu.out' has not changed.
 (rerunfilecheck)             Checksum: DC043302612E07FC01E5092E2967D61F;8125.
  ) 
 Here is how much of TeX's memory you used:
- 36780 strings out of 473919
- 722100 string characters out of 5726953
+ 36798 strings out of 473919
+ 722469 string characters out of 5726953
  2024908 words of memory out of 5000000
- 58077 multiletter control sequences out of 15000+600000
+ 58090 multiletter control sequences out of 15000+600000
  580598 words of font info for 117 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  91i,20n,120p,1196b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm8.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm12.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (169 pages, 2424452 bytes).
+Output written on phdthesis_YiGu.pdf (169 pages, 2426552 bytes).
 PDF statistics:
- 3406 PDF objects out of 3580 (max. 8388607)
- 794 named destinations out of 1000 (max. 500000)
+ 3414 PDF objects out of 3580 (max. 8388607)
+ 799 named destinations out of 1000 (max. 500000)
  465 words of extra memory for PDF output out of 10000 (max. 10000000)
 

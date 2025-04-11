@@ -1,4 +1,4 @@
-\begin{thebibliography}{174}
+\begin{thebibliography}{179}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -958,16 +958,16 @@ Ben Weinkove.
   2409.16963.
 \newblock URL \url{https://arxiv.org/abs/2409.16963}.
 
-\bibitem[Kobak et~al.(2020)Kobak, Linderman, Steinerberger, Kluger, and
-  Berens]{10.1007/978-3-030-46150-8_8}
+\bibitem[Kobak et~al.(2020{\natexlab{a}})Kobak, Linderman, Steinerberger,
+  Kluger, and Berens]{10.1007/978-3-030-46150-8_8}
 Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
   Berens.
 \newblock Heavy-tailed kernels reveal a finer cluster structure in t-sne
   visualisations.
 \newblock In Ulf Brefeld, Elisa Fromont, Andreas Hotho, Arno Knobbe, Marloes
   Maathuis, and C{\'e}line Robardet, editors, {\em Machine Learning and
-  Knowledge Discovery in Databases}, pages 124--139, Cham, 2020. Springer
-  International Publishing.
+  Knowledge Discovery in Databases}, pages 124--139, Cham, 2020{\natexlab{a}}.
+  Springer International Publishing.
 \newblock ISBN 978-3-030-46150-8.
 
 \bibitem[Jiang et~al.(2022)Jiang, Gu, and Xue]{nanyiye2022}
@@ -1137,5 +1137,40 @@ M.L. Fredman and R.E. Tarjan.
   algorithms.
 \newblock In {\em 25th Annual Symposium onFoundations of Computer Science,
   1984.}, pages 338--346, 1984.
+
+\bibitem[Kobak et~al.(2020{\natexlab{b}})Kobak, Linderman, Steinerberger,
+  Kluger, and Berens]{Kobak_2020}
+Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
+  Berens.
+\newblock {\em Heavy-Tailed Kernels Reveal a Finer Cluster Structure in t-SNE
+  Visualisations}, page 124–139.
+\newblock Springer International Publishing, 2020{\natexlab{b}}.
+\newblock ISBN 9783030461508.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-030-46150-8_8}.
+
+\bibitem[Stegle et~al.(2015)Stegle, Teichmann, and Marioni]{StegleRNA2015}
+Oliver Stegle, Sarah Teichmann, and John Marioni.
+\newblock Computational and analytical challenges in single-cell
+  transcriptomics.
+\newblock {\em Nature reviews. Genetics}, 16, 01 2015.
+
+\bibitem[Kiselev et~al.(2019)Kiselev, Andrews, and Hemberg]{KiselevRNA2019}
+Vladimir Kiselev, Tallulah Andrews, and Martin Hemberg.
+\newblock Challenges in unsupervised clustering of single-cell rna-seq data.
+\newblock {\em Nature Reviews Genetics}, 20:\penalty0 1, 01 2019.
+
+\bibitem[Visscher et~al.(2017)Visscher, Wray, Zhang, Sklar, McCarthy, Brown,
+  and Yang]{Visscher2017}
+Peter Visscher, Naomi Wray, Qian Zhang, Pamela Sklar, Mark McCarthy, Matthew
+  Brown, and Jian Yang.
+\newblock 10 years of gwas discovery: Biology, function, and translation.
+\newblock {\em The American Journal of Human Genetics}, 101:\penalty0 5--22, 07
+  2017.
+
+\bibitem[McInnes et~al.(2020)McInnes, Healy, and Melville]{mcinnes2020umap}
+Leland McInnes, John Healy, and James Melville.
+\newblock Umap: Uniform manifold approximation and projection for dimension
+  reduction, 2020, 1802.03426.
+\newblock URL \url{https://arxiv.org/abs/1802.03426}.
 
 \end{thebibliography}

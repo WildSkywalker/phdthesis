@@ -2,5 +2,9 @@
 \contentsline {section}{\numberline {1}Overview}{1}{section.1}%
 \contentsline {section}{\numberline {2}t-SNE and Dimension Reduction}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The Ubiquity and Challenge of High-Dimensional Data}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}A Brief History of Dimensionality Reduction}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The Road to t-SNE}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.2}A Brief History of Dimensionality Reduction}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Road to t-SNE}{11}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Markov Random Field and Probabilistic Graphical Models (PGM)}{16}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Dependency: An Unavoidable Problem}{16}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}PGM, a Short History}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Bayesian Networks and Markov Random Fields}{20}{subsection.3.3}%
