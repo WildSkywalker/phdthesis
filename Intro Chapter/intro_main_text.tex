@@ -1,19 +1,86 @@
 \section{Overview} \label{intro_chap:sec:layout}
-As we venture further into the 21st century, our world is shaped, built, or dare we say, defined by data (\cite{hey2009the}). From simple information like class rosters, to large scale datasets like the Human Genome Project, we are recording everything, with the realization that there are limitless values to be extracted. Mathematics and algorithms are at the center of this grand picture, as the extent to which we can unlock this value is fundamentally constrained by our mathematical understanding. Indeed, for decades have we collected visual data such as satellite imagery and medical scans, but the studies and utilization of them remained primarily manual. In 2012, the success of ImageNet(\cite{NIPS2012_c399862d}), along with Convolution Neural Network (CNN), made automated analysis of visual data possible. It was moments like this that revealed to us there is so much to be seen and discovered with data.
+As we venture further into the 21st century, our world is shaped, built, or
+dare we say, defined by data (\cite{hey2009the}). From simple information like
+class rosters, to large scale datasets like the Human Genome Project, we are
+recording everything, with the realization that there are limitless values to
+be extracted. Mathematics and algorithms are at the center of this grand
+picture, as the extent to which we can unlock this value is fundamentally
+constrained by our mathematical understanding. Indeed, for decades have we
+collected visual data such as satellite imagery and medical scans, but the
+studies and utilization of them remained primarily manual. In 2012, the success
+of ImageNet(\cite{NIPS2012_c399862d}), along with Convolution Neural Network
+(CNN), made automated analysis of visual data possible. It was moments like
+this that revealed to us there is so much to be seen and discovered with data.
 
-Among all the mathematical theories and tools that forge the foundation of data science, probability theory and probabilistic algorithms are of unique and paramount importance. With data comes uncertainty and noise, and with forecasting and prediction comes ambiguity. The nature of the tasks data science aims to tackle and the intrinsic problems stemming from all forms of data call for probabilistic approaches. It provides the mathematical language and framework for us to navigate through randomness with deterministic confidence.
+Among all the mathematical theories and tools that forge the foundation of data
+science, probability theory and probabilistic algorithms are of unique and
+paramount importance. With data comes uncertainty and noise, and with
+forecasting and prediction comes ambiguity. The nature of the tasks data
+science aims to tackle and the intrinsic problems stemming from all forms of
+data call for probabilistic approaches. It provides the mathematical language
+and framework for us to navigate through randomness with deterministic
+confidence.
 
-Take the example of CNN we just mentioned. The success of CNN is seen by many as the watershed moment in the history of mathematics and computer science. Though the advancements in semiconductor industry and hardware engineering should never be overlooked, the birth of CNN is the result of a series of brilliant developments in probability since Kholmogorov. The applications of concepts like softmax layers, maximum log-likelihood estimation, etc all have a deep root in probability theory and constitute the core mechanism of CNN(\cite{NIPS2012_c399862d}). And our stories have just begun. As of today, the development of Large Language Models (LLM), the closest ever creation of humans to Artificial General Intelligence (AGI) is essentially a probabilistic algorithm (\cite{NIPS2017_3f5ee243}). 
+Take the example of CNN we just mentioned. The success of CNN is seen by many
+as the watershed moment in the history of mathematics and computer science.
+Though the advancements in semiconductor industry and hardware engineering
+should never be overlooked, the birth of CNN is the result of a series of
+brilliant developments in probability since Kholmogorov. The applications of
+concepts like softmax layers, maximum log-likelihood estimation, etc all have a
+deep root in probability theory and constitute the core mechanism of
+CNN(\cite{NIPS2012_c399862d}). And our stories have just begun. As of today,
+the development of Large Language Models (LLM), the closest ever creation of
+humans to Artificial General Intelligence (AGI) is essentially a probabilistic
+algorithm (\cite{NIPS2017_3f5ee243}).
 
-In this thesis, we will explore three different probabilistic algorithms. In chapter 2, we will study t-SNE, another famous and important dimension reduction algorithm developed by Hinton (\cite{key}). We will show that we are able to swap out the widely used input and output kernels and still achieve convergence and equilibrium measure in the asymptotic case. In chapter 3, we will transform a classic theorem, Lov\'asz Local Lemma, into a probabilistic algorithm that can learn difficult combinatorial structures. We will also provide the theoretical foundation of the algorithm, proving its correctness and giving an estimation of the running time expectation. In chapter 4, we will dive into another dimension reduction algorithm, Variational Autoencoder (VAE), and how a particularly designed VAE can handle missing data via imputation and help us through factor analysis (thus the name VarFA). All three algorithms represent a different yet extremely important aspect of data science, each with its own charm and characteristics.
+In this thesis, we will explore three different probabilistic algorithms. In
+chapter 2, we will study t-SNE, another famous and important dimension
+reduction algorithm developed by Hinton (\cite{key}). We will show that we are
+able to swap out the widely used input and output kernels and still achieve
+convergence and equilibrium measure in the asymptotic case. In chapter 3, we
+will transform a classic theorem, Lov\'asz Local Lemma, into a probabilistic
+algorithm that can learn difficult combinatorial structures. We will also
+provide the theoretical foundation of the algorithm, proving its correctness
+and giving an estimation of the running time expectation. In chapter 4, we will
+dive into another dimension reduction algorithm, Variational Autoencoder (VAE),
+and how a particularly designed VAE can handle missing data via imputation and
+help us through factor analysis (thus the name VarFA). All three algorithms
+represent a different yet extremely important aspect of data science, each with
+its own charm and characteristics.
 
-For the rest of this chapter, we will provide a brief introduction to the probabilistic algorithms we will discuss in this thesis. From basic concepts, to history, and related progress. It is very exciting to see all the mathematical concepts our predecessors have developed, and have been passionate about, are being turned into new technologies that impact and steer the modern world. And may this thesis provides an insignificant, yet meaningful addition to this great painting of our future.
+For the rest of this chapter, we will provide a brief introduction to the
+probabilistic algorithms we will discuss in this thesis. From basic concepts,
+to history, and related progress. It is very exciting to see all the
+mathematical concepts our predecessors have developed, and have been passionate
+about, are being turned into new technologies that impact and steer the modern
+world. And may this thesis provides an insignificant, yet meaningful addition
+to this great painting of our future.
 
 \section{t-SNE and Dimension Reduction} \label{intro_chap:sec:tsne}
 \subsection{The Ubiquity and Challenge of High-Dimensional Data} \label{intro_chap:sec:tsne:ubiquity}
-Most data and data sets we deal with on a daily basis are multi-dimensional by nature. For example, a simple class roster can have multiple exam and homework scores. If the total number of assignments is greater than 3, then this single class roster is already beyond what we can natively visualize (if we want to represent each student as a point). On the other hand, each image can be seen as a high-dimensional vector and the dimensionalities increase rapidly while the resolution we are able to capture advances with technology. The number of variables scale in a breakneck pace as we are more capable of capturing detail-rich data as well as automating the process (\cite{Donoho_Dimensions}). As stated in the last section, this process gives us practically unlimited potentials. The objects and processes we would like to study were recorded with utmost details, unlike the past when vital bits of information could be lost forever. However, this also brings caveats and new mathematical challenges.
+Most data and data sets we deal with on a daily basis are multi-dimensional by
+nature. For example, a simple class roster can have multiple exam and homework
+scores. If the total number of assignments is greater than 3, then this single
+class roster is already beyond what we can natively visualize (if we want to
+represent each student as a point). On the other hand, each image can be seen
+as a high-dimensional vector and the dimensionalities increase rapidly while
+the resolution we are able to capture advances with technology. The number of
+variables scale in a breakneck pace as we are more capable of capturing
+detail-rich data as well as automating the process (\cite{Donoho_Dimensions}).
+As stated in the last section, this process gives us practically unlimited
+potentials. The objects and processes we would like to study were recorded with
+utmost details, unlike the past when vital bits of information could be lost
+forever. However, this also brings caveats and new mathematical challenges.
 
-One of the most important and hardest challenges is the noise that comes with data. Apart from noise caused by engineering factors, the growth of dimensionality also brings noise because many dimensions may be irrelevant for the problems one want to solve. The extra dimensions themselves become the ``noise". In 1996, Robert Tibshirani discovered the famous Least Absolute Shrinkage and Selection Operator (LASSO) for the purpose of variable selection (\cite{lasso1996}). Consider a sample consisting of $N$ cases, each with dimension $p$. Let $y_i$ be the outcome and $x_i$ be the $p$-dimensional vector that represents the $i$-th case. LASSO aims to solve
+One of the most important and hardest challenges is the noise that comes with
+data. Apart from noise caused by engineering factors, the growth of
+dimensionality also brings noise because many dimensions may be irrelevant for
+the problems one want to solve. The extra dimensions themselves become the
+``noise". In 1996, Robert Tibshirani discovered the famous Least Absolute
+Shrinkage and Selection Operator (LASSO) for the purpose of variable selection
+(\cite{lasso1996}). Consider a sample consisting of $N$ cases, each with
+dimension $p$. Let $y_i$ be the outcome and $x_i$ be the $p$-dimensional vector
+that represents the $i$-th case. LASSO aims to solve
 \begin{align}
     \min_{\beta_0,\beta} \sum_{i=1}^N (y_i - \beta_0 - x_i^T\beta)^2,
 \end{align}
@@ -23,21 +90,61 @@ with constraint
 \end{align}
 LASSO marks the early realization and effort mathematicians and scientists were trying to mitigate the overwhelming information brought by high dimensional data. LASSO was also closely related to Basis Pursuit Denoising (BPDN), introduced in 1994 (\cite{BPDN}). BPDN is a well known NP-hard problem. Before the age of big data comes, mathematicians had been thinking about extracting useful signals from noise/spurious correlations. After the dawn of 21st century and the explosive growth of computer science, problems like BPDN and LASSO become even more important after we add computational cost to the equation (\cite{variableselection2010}).
 
-Apart from feature and variable selection, people also seek to ``compress" the data, creating a mathematical summary of the essence. t-SNE is one of such examples. Instead of making a selection, t-SNE aims to find a low-dimensional representation of the data and taking the entire data set into account. Another good example is the Variational Auto Encoder (\cite{kingma2013auto}), a generative model that is able to scale well with large data sets using a low-dimensional ``latent space". We will discuss VAE and our related work on this topic in chapter 4.
+Apart from feature and variable selection, people also seek to ``compress" the
+data, creating a mathematical summary of the essence. t-SNE is one of such
+examples. Instead of making a selection, t-SNE aims to find a low-dimensional
+representation of the data and taking the entire data set into account. Another
+good example is the Variational Auto Encoder (\cite{kingma2013auto}), a
+generative model that is able to scale well with large data sets using a
+low-dimensional ``latent space". We will discuss VAE and our related work on
+this topic in chapter 4.
 
-In the face of large amount of high dimensional data, digesting it ``as is'' is more often than not impossible. The above examples show us that we either make a selection, or we perform compression, which are the two most common approaches in terms of getting what we need from the data. We would like to discuss this further because high-dimensional data is not only mathematically and computationally hard to deal with, but also tends to mask the insights we are looking for. This is somehow a paradoxical nature of high-dimensionality. Faithful recording of data assures us the information and values we seek are within the data sets and within in our reach. But the form and scaling of the high-dimensional data also buries the light we are after. This is the so-called ``curse of dimensionality".
+In the face of large amount of high dimensional data, digesting it ``as is'' is
+more often than not impossible. The above examples show us that we either make
+a selection, or we perform compression, which are the two most common
+approaches in terms of getting what we need from the data. We would like to
+discuss this further because high-dimensional data is not only mathematically
+and computationally hard to deal with, but also tends to mask the insights we
+are looking for. This is somehow a paradoxical nature of high-dimensionality.
+Faithful recording of data assures us the information and values we seek are
+within the data sets and within in our reach. But the form and scaling of the
+high-dimensional data also buries the light we are after. This is the so-called
+``curse of dimensionality".
 
-The term ``curse of dimensionality" was first coined by Richard Bellman in 1961 (\cite{Bellman1961adaptive}). It refers to various phenomena that appears when analyzing data in high-dimensional space that do not occur when dimensionality is low. Qualitatively speaking, the ``curse'' usually means that as dimensionality increases, the exponential increase of volume makes the same amount of data sparse and harder to work with.
+The term ``curse of dimensionality" was first coined by Richard Bellman in 1961
+(\cite{Bellman1961adaptive}). It refers to various phenomena that appears when
+analyzing data in high-dimensional space that do not occur when dimensionality
+is low. Qualitatively speaking, the ``curse'' usually means that as
+dimensionality increases, the exponential increase of volume makes the same
+amount of data sparse and harder to work with.
 
-To understand this concept, let us first look at the famous example of hypercube vs hypersphere. Consider a hypercube with edge length $2r$ in $d$-dimensional Euclidean space and its inscribed sphere with radius $r$. Denote $\Gamma$ the gamma function and $C_d$, $S_d$ the volume of the hypercube and hypersphere respectively. Then we have
+To understand this concept, let us first look at the famous example of
+hypercube vs hypersphere. Consider a hypercube with edge length $2r$ in
+$d$-dimensional Euclidean space and its inscribed sphere with radius $r$.
+Denote $\Gamma$ the gamma function and $C_d$, $S_d$ the volume of the hypercube
+and hypersphere respectively. Then we have
 \begin{align}
     \lim_{d \to \infty} \frac{S_d}{C_d} = \lim_{d \to \infty} \frac{\pi^{d/2}}{d2^{d-1}\Gamma(d/2)} = 0.
 \end{align}
 This means that our low-dimensional intuition fails. The volume of hypercubes are mostly ``concentrated" in the corners and the inscribed sphere's volume becomes negligible. If we want to analyze the data related to the hypercube, a data set that is uniformly distributed in the hypercube will become an increasingly small part of the whole space. In general, as we increase the dimension of our sample space, any finite data set will occupy a vanishingly small part of it. On the other hand, to maintain the roughly same density, one needs to accumulate exponentially more data points to compensate for the increase in dimensions.
 
-Such fact also induces a data mining problem, where it is unrealistic to gather enough amount of data points to guarantee the separability of data generated by two different distributions. It is a well known fact in machine learning that too many features with inadequate data points will lead to overfitting. This discovery is not new, either. In 1968, Hughes showed that adding more features past certain points without providing more data points will cause worse classification performance (\cite{hughes1968}). Later it becomes known as the famous Hughes phenomenon. Adding features is not a free lunch and the results could be detrimental.
+Such fact also induces a data mining problem, where it is unrealistic to gather
+enough amount of data points to guarantee the separability of data generated by
+two different distributions. It is a well known fact in machine learning that
+too many features with inadequate data points will lead to overfitting. This
+discovery is not new, either. In 1968, Hughes showed that adding more features
+past certain points without providing more data points will cause worse
+classification performance (\cite{hughes1968}). Later it becomes known as the
+famous Hughes phenomenon. Adding features is not a free lunch and the results
+could be detrimental.
 
-To further illustrate the curse of dimensionality, let us look at two extra examples, one mathematical and one from the field of biology. We just compared the volume of hypercubes and hyperspheres as the dimensionality tends to infinity. This comparison is closely related to another phenomenon called the concentration of distance. It refers to the fact that uniformly sampled points in high-dimensional space tend to be equidistant from each other. This can be seen more intuitively from the two collections of plots below.
+To further illustrate the curse of dimensionality, let us look at two extra
+examples, one mathematical and one from the field of biology. We just compared
+the volume of hypercubes and hyperspheres as the dimensionality tends to
+infinity. This comparison is closely related to another phenomenon called the
+concentration of distance. It refers to the fact that uniformly sampled points
+in high-dimensional space tend to be equidistant from each other. This can be
+seen more intuitively from the two collections of plots below.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=14cm]{concentration_distance_hypercube.png}
@@ -45,7 +152,12 @@ To further illustrate the curse of dimensionality, let us look at two extra exam
     \label{fig:concentration_distance_hypercube}
 \end{figure}
 
-For the second plot, we replace the unit cube with the unit sphere as our sample space. On the top of distance concentration, we can see that most points are located towards the surface of the hypersphere, rather than the interior. This aligns with our intuition that the volume of the hypersphere is mostly concentrated near the surface, and the volume of a hypercube is mostly concentrated near the corners.
+For the second plot, we replace the unit cube with the unit sphere as our
+sample space. On the top of distance concentration, we can see that most points
+are located towards the surface of the hypersphere, rather than the interior.
+This aligns with our intuition that the volume of the hypersphere is mostly
+concentrated near the surface, and the volume of a hypercube is mostly
+concentrated near the corners.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=14cm]{concentration_distance_hypershpere.png}
@@ -53,9 +165,28 @@ For the second plot, we replace the unit cube with the unit sphere as our sample
     \label{fig:concentration_distance_hypersphere}
 \end{figure}
 
-The above two plots reinforce the intuition behind the data mining problem we just brought up. Distance, one of the most fundamental and important feature that distinguishes data points, becomes less and less effective as the dimension of the data increases. It directly leads to the fact that purely distance-based algorithms will perform poorly with high-dimensional data sets. It is crucial to find ways to extract the information we need from high dimensions, then compress, analyze and visualize it in lower-dimensions. The concentration of distance is also one of the reasons that algorithms such as t-SNE are invented. As we will see in the coming sections, t-SNE encodes the neighborhood information using probability distributions, rather than plain Euclidean distance.
+The above two plots reinforce the intuition behind the data mining problem we
+just brought up. Distance, one of the most fundamental and important feature
+that distinguishes data points, becomes less and less effective as the
+dimension of the data increases. It directly leads to the fact that purely
+distance-based algorithms will perform poorly with high-dimensional data sets.
+It is crucial to find ways to extract the information we need from high
+dimensions, then compress, analyze and visualize it in lower-dimensions. The
+concentration of distance is also one of the reasons that algorithms such as
+t-SNE are invented. As we will see in the coming sections, t-SNE encodes the
+neighborhood information using probability distributions, rather than plain
+Euclidean distance.
 
-The last example we would like to share is the RNA sequencing and many genome projects, where the curse of dimensionality manifests itself in real-world scientific research. Generally speaking, RNA sequencing experiments measure the abundance of tens of thousands of different RNA transcripts on expression level. Such rich information can exist simultaneously within a single biological sample because life itself is tremendously complex. From a data science point of view, all these genes/transcripts are features and each acts as a dimension so the dimensionality is extremely high. For humans, that number is somewhere roughly between $10^4$ to $10^5$. For Genome sequencing that number can be even larger, ranging from $10^6$ to $10^7$.
+The last example we would like to share is the RNA sequencing and many genome
+projects, where the curse of dimensionality manifests itself in real-world
+scientific research. Generally speaking, RNA sequencing experiments measure the
+abundance of tens of thousands of different RNA transcripts on expression
+level. Such rich information can exist simultaneously within a single
+biological sample because life itself is tremendously complex. From a data
+science point of view, all these genes/transcripts are features and each acts
+as a dimension so the dimensionality is extremely high. For humans, that number
+is somewhere roughly between $10^4$ to $10^5$. For Genome sequencing that
+number can be even larger, ranging from $10^6$ to $10^7$.
 
 \begin{figure}[ht]
     \centering
@@ -64,19 +195,87 @@ The last example we would like to share is the RNA sequencing and many genome pr
     \label{fig:RNA2015DRplot}
 \end{figure}
 
-This causes all kinds of problems we mentioned about high-dimensional data (\cite{StegleRNA2015}, \cite{KiselevRNA2019}, \cite{Visscher2017}). On one hand, Euclidean distance becomes less meaningful. The Euclidean distance between two patients (data points) may not contain any useful implications for their similarities in genetic traits or tendencies for a specific disease. The occurrence of spurious correlations are much higher, that people often finds significant correlations between features(genes) and outcomes(disease status) that are purely coincidental and not biologically meaningful. On the other hand, Hughes phenomenon is prevalent in model training because it is nearly impossible to gather enough data so that the sample size is significantly larger than the number of features. This results in massive overfitting and poor predictions for critical problems such as tumor types classification. At the same time, genetic sequences are absolute nightmares for hypothesis testing due to their sheer complexity, making false positives much more prone to happen.
+This causes all kinds of problems we mentioned about high-dimensional data
+(\cite{StegleRNA2015}, \cite{KiselevRNA2019}, \cite{Visscher2017}). On one
+hand, Euclidean distance becomes less meaningful. The Euclidean distance
+between two patients (data points) may not contain any useful implications for
+their similarities in genetic traits or tendencies for a specific disease. The
+occurrence of spurious correlations are much higher, that people often finds
+significant correlations between features(genes) and outcomes(disease status)
+that are purely coincidental and not biologically meaningful. On the other
+hand, Hughes phenomenon is prevalent in model training because it is nearly
+impossible to gather enough data so that the sample size is significantly
+larger than the number of features. This results in massive overfitting and
+poor predictions for critical problems such as tumor types classification. At
+the same time, genetic sequences are absolute nightmares for hypothesis testing
+due to their sheer complexity, making false positives much more prone to
+happen.
 
-For these very reasons, dimension reduction really shines through the field of biology and bioinformatics. Most algorithms introduced in the next section are still widely used today, from the old classic PCA, to methods created in 21st century such as t-SNE. Dimension reduction is a crucial toolset that makes continuing research and analysis of genetic data possible, with its impact and usage expanding well beyond the field of biology to almost all scientific subjects related to data science, statistics and machine learning.
+For these very reasons, dimension reduction really shines through the field of
+biology and bioinformatics. Most algorithms introduced in the next section are
+still widely used today, from the old classic PCA, to methods created in 21st
+century such as t-SNE. Dimension reduction is a crucial toolset that makes
+continuing research and analysis of genetic data possible, with its impact and
+usage expanding well beyond the field of biology to almost all scientific
+subjects related to data science, statistics and machine learning.
 
-With all the above being said, it is of paramount importance to study dimension reduction techniques and algorithms. The knowledge of which aspects of data are important is obviously not a priori, so it is impossible to select the features/dimensions we need beforehand. The only option for us is to develop the mathematical theory, and reduce the dimensionality to the extent that the information we seek becomes apparent. Now we are almost a quarter into the 21st century, the development of technology resonates with the need for dimension reduction, and puts our mathematical legacy to the test.
+With all the above being said, it is of paramount importance to study dimension
+reduction techniques and algorithms. The knowledge of which aspects of data are
+important is obviously not a priori, so it is impossible to select the
+features/dimensions we need beforehand. The only option for us is to develop
+the mathematical theory, and reduce the dimensionality to the extent that the
+information we seek becomes apparent. Now we are almost a quarter into the 21st
+century, the development of technology resonates with the need for dimension
+reduction, and puts our mathematical legacy to the test.
 \subsection{A Brief History of Dimensionality Reduction} \label{intro_chap:sec:tsne:DR}
-The theory of dimension reduction can be traced back to the beginning of 20th century. In 1901, Karl Pearson introduced the geometric idea of finding lines and planes of best fit to data points, later known as the famous Principle Component Analysis (PCA)(\cite{Pearson1901PCA}). This technique was also independently discovered by Harold Hotelling in 1933 (\cite{Hotelling1933}). The idea behind PCA is mainly linear algebra. It first centers the data set at zero and then tries to find the largest eigenvalue of the covariance matrix. The corresponding eigenvector marks the direction of the most variance in the data, making it the biggest principle component. Then this component gets subtracted and the algorithm repeats to find the next largest eigenvalue. The algorithm can stop at any number of principle component. The corresponding eigenvalues and eigenvectors will then be used to construct a subspace with lower dimensions that represents the original data.
+The theory of dimension reduction can be traced back to the beginning of 20th
+century. In 1901, Karl Pearson introduced the geometric idea of finding lines
+and planes of best fit to data points, later known as the famous Principle
+Component Analysis (PCA)(\cite{Pearson1901PCA}). This technique was also
+independently discovered by Harold Hotelling in 1933 (\cite{Hotelling1933}).
+The idea behind PCA is mainly linear algebra. It first centers the data set at
+zero and then tries to find the largest eigenvalue of the covariance matrix.
+The corresponding eigenvector marks the direction of the most variance in the
+data, making it the biggest principle component. Then this component gets
+subtracted and the algorithm repeats to find the next largest eigenvalue. The
+algorithm can stop at any number of principle component. The corresponding
+eigenvalues and eigenvectors will then be used to construct a subspace with
+lower dimensions that represents the original data.
 
-Intuitively speaking, PCA tries to fit a high-dimensional ellipsoid to the data set. Each axis of the ellipsoid represents one principle component. The larger the eigenvalue, the longer the corresponding axis of the ellipsoid. PCA is simple and elegant, so much so that it is still widely used today, but its shortcomings are also apparent. PCA assumes linearity as what it does is primarily finding a new coordinate system where the axes, a.k.a. the principle components, are linear combinations of the original variables. The mapping from the original high-dimensional space to the lower-dimensional subspace defined by principle components is an orthogonal linear transformation. This means that by analyzing the covariance matrix, PCA can mostly only capture linear dependencies. This approach will fail if the intrinsic structure of the data is non-linear. For example, PCA is likely to give two principle components if asked to analyze a circle, a typical 1-dimensional manifold in 2-dimensional Euclidean space. It is unable to see that the points on a circle are all part of a 1-dimensional space. Similar results with Swiss roll, PCA will very likely be unable to ``unroll" the Swiss roll into its natural 2-dimensional representation, but rather cut through it.
+Intuitively speaking, PCA tries to fit a high-dimensional ellipsoid to the data
+set. Each axis of the ellipsoid represents one principle component. The larger
+the eigenvalue, the longer the corresponding axis of the ellipsoid. PCA is
+simple and elegant, so much so that it is still widely used today, but its
+shortcomings are also apparent. PCA assumes linearity as what it does is
+primarily finding a new coordinate system where the axes, a.k.a. the principle
+components, are linear combinations of the original variables. The mapping from
+the original high-dimensional space to the lower-dimensional subspace defined
+by principle components is an orthogonal linear transformation. This means that
+by analyzing the covariance matrix, PCA can mostly only capture linear
+dependencies. This approach will fail if the intrinsic structure of the data is
+non-linear. For example, PCA is likely to give two principle components if
+asked to analyze a circle, a typical 1-dimensional manifold in 2-dimensional
+Euclidean space. It is unable to see that the points on a circle are all part
+of a 1-dimensional space. Similar results with Swiss roll, PCA will very likely
+be unable to ``unroll" the Swiss roll into its natural 2-dimensional
+representation, but rather cut through it.
 
-PCA is one of the most important and widely used dimension reduction algorithms. Though its assumption on linearity limits its application, it also allows it to be computationally efficient using modern hardware and parallelism. It outperforms many modern algorithms in terms of speed and scalability. For this reason PCA is included in many modern software packages like scikit-learn and PyTorch.
+PCA is one of the most important and widely used dimension reduction
+algorithms. Though its assumption on linearity limits its application, it also
+allows it to be computationally efficient using modern hardware and
+parallelism. It outperforms many modern algorithms in terms of speed and
+scalability. For this reason PCA is included in many modern software packages
+like scikit-learn and PyTorch.
 
-Continuing onward, in the 1950s, Warren Torgerson invented Multidimensional Scaling (MDS) (\cite{Torgerson1952}, \cite{torgerson1958theory}), with the classical version often known as Torgerson Scaling. MDS is one of the early non-linear dimension reduction algorithms. Given a distance/dissimilarity matrix (where the distance does not have to be Euclidean distance) and a target dimension $N$, MDS aims to find a set of points in $N$-dimensional space where the pairwise distances are preserved as much as possible. Often one lets $N=2$ so the result can be easily visualized. In classical MDS, the final goal is to minimize the loss function, which is also called strain:
+Continuing onward, in the 1950s, Warren Torgerson invented Multidimensional
+Scaling (MDS) (\cite{Torgerson1952}, \cite{torgerson1958theory}), with the
+classical version often known as Torgerson Scaling. MDS is one of the early
+non-linear dimension reduction algorithms. Given a distance/dissimilarity
+matrix (where the distance does not have to be Euclidean distance) and a target
+dimension $N$, MDS aims to find a set of points in $N$-dimensional space where
+the pairwise distances are preserved as much as possible. Often one lets $N=2$
+so the result can be easily visualized. In classical MDS, the final goal is to
+minimize the loss function, which is also called strain:
 \begin{align} \label{strain_def}
     \text{Strain}(x_1,\dots,x_n) = \left(\frac{\sum_{i,j}(b_ij-x^T_i x_j)^2}{\sum_{i,j}b^2_{i,j}}\right).
 \end{align}
@@ -88,11 +287,42 @@ Here, $x_i$'s are vectors in $N$-dimensional space that we are trying to find, a
     \label{fig:color_wheel}
 \end{figure}
 
-Being intuitive and flexible, MDS gained a lot of popularity and it was developed into a family of algorithms. Shepard and Kruskal developed non-metric MDS independently in 1962 and 1964 (\cite{Shepard_1962},\cite{Kruskal_1964}). Their work allowed MDS to handle Ordinal data, meaning the modified algorithm only requires the rank order of dissimilarities. Such outstanding flexibility is one of the major reasons that it is still widely used today, especially when there is a lack of good distance metrics or quantitative data, such as market research. However, MDS is not without drawbacks. The axes of the output do not have inherent meanings from the original data set and sometimes it is not possible to find a solution with low enough stress values (the stain in the classical MDS). More importantly, MDS is not computationally efficient. Though modern algorithms like t-SNE and UMAP share some of the disadvantages with the MDS family, they often outperform MDS by a fair margin. Nevertheless, the limitations of MDS algorithms do not diminish their importance. MDS is still one of the most important algorithms in the field of dimension reduction.
+Being intuitive and flexible, MDS gained a lot of popularity and it was
+developed into a family of algorithms. Shepard and Kruskal developed non-metric
+MDS independently in 1962 and 1964 (\cite{Shepard_1962},\cite{Kruskal_1964}).
+Their work allowed MDS to handle Ordinal data, meaning the modified algorithm
+only requires the rank order of dissimilarities. Such outstanding flexibility
+is one of the major reasons that it is still widely used today, especially when
+there is a lack of good distance metrics or quantitative data, such as market
+research. However, MDS is not without drawbacks. The axes of the output do not
+have inherent meanings from the original data set and sometimes it is not
+possible to find a solution with low enough stress values (the stain in the
+classical MDS). More importantly, MDS is not computationally efficient. Though
+modern algorithms like t-SNE and UMAP share some of the disadvantages with the
+MDS family, they often outperform MDS by a fair margin. Nevertheless, the
+limitations of MDS algorithms do not diminish their importance. MDS is still
+one of the most important algorithms in the field of dimension reduction.
 
-Fast forwarding to the millennium, the rapid advancement of computer science and applied mathematics created increasingly stronger needs to study data of nonlinear nature. Scientists had been striving to create new tools and algorithms that can handle the emerging complex data sets.Though mentioned in earlier works, many regarded the work of Roweis and Saul in 2000 as the pillar of manifold learning (\cite{Roweis2000}). Unlike PCA, which tries to project a collection of high dimensional vectors onto a linear subspace, manifold learning projects the high-dimensional data onto a lower-dimensional latent manifold. Since manifold learning was created specifically to tackle problems with nonlinear nature, it is also called Nonlinear Dimension Reduction (NLDR).
+Fast forwarding to the millennium, the rapid advancement of computer science
+and applied mathematics created increasingly stronger needs to study data of
+nonlinear nature. Scientists had been striving to create new tools and
+algorithms that can handle the emerging complex data sets.Though mentioned in
+earlier works, many regarded the work of Roweis and Saul in 2000 as the pillar
+of manifold learning (\cite{Roweis2000}). Unlike PCA, which tries to project a
+collection of high dimensional vectors onto a linear subspace, manifold
+learning projects the high-dimensional data onto a lower-dimensional latent
+manifold. Since manifold learning was created specifically to tackle problems
+with nonlinear nature, it is also called Nonlinear Dimension Reduction (NLDR).
 
-In the same paper, Roweis and Saul presented the Local Linear Embedding (LLE), one of the classic algorithms in NLDR. From this point onward, readers who are familiar with SNE and t-SNE may notice the resemblance between the algorithms and how they draw inspiration from each other. Given original data points $X_i \in \mathbb{R}^D$, the goal of LLE is to find a set of points $Y_i \in \mathbb{R}^d$ usually with $D >> d$ such that $Y_i$'s form a good representation(embedding) of $X_i$'s. This is done in two steps. First, LLE looks at each point $X_i$ and tries to find the closest approximation of $X_i$ using the linear combination of other points. i.e., for each $i$, LLE computes
+In the same paper, Roweis and Saul presented the Local Linear Embedding (LLE),
+one of the classic algorithms in NLDR. From this point onward, readers who are
+familiar with SNE and t-SNE may notice the resemblance between the algorithms
+and how they draw inspiration from each other. Given original data points $X_i
+    \in \mathbb{R}^D$, the goal of LLE is to find a set of points $Y_i \in
+    \mathbb{R}^d$ usually with $D >> d$ such that $Y_i$'s form a good
+representation(embedding) of $X_i$'s. This is done in two steps. First, LLE
+looks at each point $X_i$ and tries to find the closest approximation of $X_i$
+using the linear combination of other points. i.e., for each $i$, LLE computes
 \begin{align}
     \norm{X_i - \sum_{j} W_{ij}X_j}^2,
 \end{align}
@@ -110,11 +340,30 @@ This ensures that $W$ is not affected by rotation and translation. The first ste
 \end{align}
 The algorithm terminates when the minima of $C(Y)$ is found. Directly from the same paper (\cite{Roweis2000}), we know that finding the minimum of $C(Y)$ is equivalent to solving a sparse eigenvalue problem and we are able to find the global minimum. This is one of the most appealing mathematical properties of LLE, that both of its core steps yield globally optimal solutions. However, nothing is perfect and LLE does come with its own shortcomings. Let us discuss that after we introduce another NLDR algorithm that was created around the same time, and is just as famous and important: Isomap.
 
-Isomap was first introduced in around 2000 (\cite{tenenbaum_global_2000}). It is a modern generalization of MDS. Instead of using the Euclidean distance, Isomap generates the so called geodesic distance between each pair data points then apply MDS to get the low-dimensional output. We start with our high-dimensional input $X_i \in \mathbb{R}^D$. The first step of Isomap is to find the neighbors of each $X_i$. This can be achieved by either considering a ball with radius $\epsilon$ around $X_i$ and see which points are inside the ball, or by using the $k$ nearest neighbors. Both $\epsilon$ and $k$ are hyperparameters set by the user.
+Isomap was first introduced in around 2000 (\cite{tenenbaum_global_2000}). It
+is a modern generalization of MDS. Instead of using the Euclidean distance,
+Isomap generates the so called geodesic distance between each pair data points
+then apply MDS to get the low-dimensional output. We start with our
+high-dimensional input $X_i \in \mathbb{R}^D$. The first step of Isomap is to
+find the neighbors of each $X_i$. This can be achieved by either considering a
+ball with radius $\epsilon$ around $X_i$ and see which points are inside the
+ball, or by using the $k$ nearest neighbors. Both $\epsilon$ and $k$ are
+hyperparameters set by the user.
 
-After getting the neighbors for each point, we will construct a weighted graph $G$ based on the information we just obtained. Each vertex of $G$ represents an input data point. We will use the term vertex $i$ when the vertex represents $X_i$. We draw an edge between vertex $i$ and vertex $j$ if $X_j$ is a neighbor of $X_i$, which is determined during the previous step of the algorithm. The weight of the edge $(i,j)$ is the Euclidean distance between $X_i$ and $X_j$. Next up, we perform the Dijkstra algorithm on $G$, which yields the shortest graph distance between each pair of vertices $i$ and $j$. This distance is called the geodesic distance, denoted by $d_G(i,j)$. This concludes the second step of Isomap.
+After getting the neighbors for each point, we will construct a weighted graph
+$G$ based on the information we just obtained. Each vertex of $G$ represents an
+input data point. We will use the term vertex $i$ when the vertex represents
+$X_i$. We draw an edge between vertex $i$ and vertex $j$ if $X_j$ is a neighbor
+of $X_i$, which is determined during the previous step of the algorithm. The
+weight of the edge $(i,j)$ is the Euclidean distance between $X_i$ and $X_j$.
+Next up, we perform the Dijkstra algorithm on $G$, which yields the shortest
+graph distance between each pair of vertices $i$ and $j$. This distance is
+called the geodesic distance, denoted by $d_G(i,j)$. This concludes the second
+step of Isomap.
 
-Afterwards, since $d_G(i,j)$ is well defined for each tuple $(i,j)$, we have a distance matrix as the input of the MDS algorithm. Running the algorithm with the target low dimension $d$ will produce the final result of Isomap.
+Afterwards, since $d_G(i,j)$ is well defined for each tuple $(i,j)$, we have a
+distance matrix as the input of the MDS algorithm. Running the algorithm with
+the target low dimension $d$ will produce the final result of Isomap.
 
 \begin{figure}[ht]
     \centering
@@ -123,7 +372,17 @@ Afterwards, since $d_G(i,j)$ is well defined for each tuple $(i,j)$, we have a d
     \label{fig:isomap_swissroll}
 \end{figure}
 
-With the introduction of Isomap, it is easier to explain the drawbacks of LLE. As we can see in the steps of LLE, it emphasizes the local reconstruction of each data point using its neighbors. Because of this, LLE can potentially fail to preserve the global structure of the data, namely the distances on a larger scale. Points that are very far away in the original data set can be mapped close to one another in the output of LLE, especially when the space itself is very ``curved". This shortcoming is addressed by Isomap, as the intermediate step of finding the graph $G$ is specifically designed to preserve global structure. Using MDS subsequently ensures that such preservation is translated into the low-dimensional output. The graph $G$ represents the grand picture Isomap tries to summarize.
+With the introduction of Isomap, it is easier to explain the drawbacks of LLE.
+As we can see in the steps of LLE, it emphasizes the local reconstruction of
+each data point using its neighbors. Because of this, LLE can potentially fail
+to preserve the global structure of the data, namely the distances on a larger
+scale. Points that are very far away in the original data set can be mapped
+close to one another in the output of LLE, especially when the space itself is
+very ``curved". This shortcoming is addressed by Isomap, as the intermediate
+step of finding the graph $G$ is specifically designed to preserve global
+structure. Using MDS subsequently ensures that such preservation is translated
+into the low-dimensional output. The graph $G$ represents the grand picture
+Isomap tries to summarize.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=10cm]{LLE_failed.jpg}
@@ -132,13 +391,47 @@ With the introduction of Isomap, it is easier to explain the drawbacks of LLE. A
 \end{figure}
 Nevertheless, Isomap is not perfect, either. As we already mentioned earlier in this section, MDS is a computationally expensive algorithm. On the top of that, given a graph $G = (V,E)$, the Dijkstra algorithm has a time complexity of $O(|E| + |V| \log |V|)$, where $|E|$ and $|V|$ are the number of edges and vertices in the graph respectively (\cite{Fredman1984fibonacci}). For dense graphs, $|E|$ will scale quadratically with $|V|$. By combining two computationally intense algorithms, Isomap is inevitably slow and becomes a bad choice for large and dense data sets.
 
-Moreover, Isomap is very sensitive to the choice of hyperparameters and outliers. If the number of neighbors or the ball radius is too small, Isomap will sometimes produce a disconnected graph, prevents the algorithm from generating a global structure. But if the hyperparameters are too large, the algorithm might include ``short-circuit" edges that connect points across gaps or folds in the manifold that are close in the ambient Euclidean space, such as distant points on a tightly packed Swiss roll. Then in this case Isomap will contain the worst of both worlds, by being an extraordinarily slow algorithm that also carries the disadvantages of LLE. Besides that, since Isomap is designed to preserve the global structure, it will cover everything, including outliers. Having an outlier in the data set, such as a point far away from everything else, can significantly disrupt the output.
+Moreover, Isomap is very sensitive to the choice of hyperparameters and
+outliers. If the number of neighbors or the ball radius is too small, Isomap
+will sometimes produce a disconnected graph, prevents the algorithm from
+generating a global structure. But if the hyperparameters are too large, the
+algorithm might include ``short-circuit" edges that connect points across gaps
+or folds in the manifold that are close in the ambient Euclidean space, such as
+distant points on a tightly packed Swiss roll. Then in this case Isomap will
+contain the worst of both worlds, by being an extraordinarily slow algorithm
+that also carries the disadvantages of LLE. Besides that, since Isomap is
+designed to preserve the global structure, it will cover everything, including
+outliers. Having an outlier in the data set, such as a point far away from
+everything else, can significantly disrupt the output.
 
-Finally, Isomap carries some implicit assumptions. It assumes that the data on the manifold is well sampled, meaning that the graph constructed in Isomap is a truthful representation of the true geodesic distances on the manifold, from a differential geometry perspective. It also assumes that the intrinsic geometry of the manifold can be isometrically embedded into a lower-dimensional Euclidean space, hence the name. Such assumptions are not always true, and we should treat the output with caution if the stress values (similar to the definition in \eqref{strain_def}) are high.
+Finally, Isomap carries some implicit assumptions. It assumes that the data on
+the manifold is well sampled, meaning that the graph constructed in Isomap is a
+truthful representation of the true geodesic distances on the manifold, from a
+differential geometry perspective. It also assumes that the intrinsic geometry
+of the manifold can be isometrically embedded into a lower-dimensional
+Euclidean space, hence the name. Such assumptions are not always true, and we
+should treat the output with caution if the stress values (similar to the
+definition in \eqref{strain_def}) are high.
 
-Both LLE and Isomap are important milestones in the advancement of dimension reduction algorithms. With different focusing aspects, both provided us with a useful set of tools to analyze high-dimensional data, suited for different scenarios. However, mathematicians and computer scientists did not stop there. All the algorithms up to this point still work primarily with Euclidean distance. What if we want to extract the abstract structure of similarity out of the data sets, rather than the distance itself? What if we encode the information of neighborhood using probability distribution, rather than plain physical proximity? Such ideas inspired the creation of stochastic neighbor embedding (SNE) and the subsequent t-stochastic neighbor embedding (t-SNE). And that is where our story begins.
+Both LLE and Isomap are important milestones in the advancement of dimension
+reduction algorithms. With different focusing aspects, both provided us with a
+useful set of tools to analyze high-dimensional data, suited for different
+scenarios. However, mathematicians and computer scientists did not stop there.
+All the algorithms up to this point still work primarily with Euclidean
+distance. What if we want to extract the abstract structure of similarity out
+of the data sets, rather than the distance itself? What if we encode the
+information of neighborhood using probability distribution, rather than plain
+physical proximity? Such ideas inspired the creation of stochastic neighbor
+embedding (SNE) and the subsequent t-stochastic neighbor embedding (t-SNE). And
+that is where our story begins.
 \subsection{The Road to t-SNE} \label{intro_chap:sec:tsne:preintro}
-SNE was first introduced in 2002 by Hinton and Roweis (\cite{NIPS2002_6150ccc6}, with Roweis also being the creator of LLE). Like we just mentioned at the end of the previous section, SNE uses probability distributions to record the information of neighborhood. With this new framework, we need a new concept to measure the distance between two probability distributions, and that is the famous Kullback-Leibler (KL) divergence.
+SNE was first introduced in 2002 by Hinton and Roweis
+(\cite{NIPS2002_6150ccc6}, with Roweis also being the creator of LLE). Like we
+just mentioned at the end of the previous section, SNE uses probability
+distributions to record the information of neighborhood. With this new
+framework, we need a new concept to measure the distance between two
+probability distributions, and that is the famous Kullback-Leibler (KL)
+divergence.
 \begin{definition}
     Let $P$ and $Q$ be two probability measures with $p(x)$ and $q(x)$ as their respective probability density functions. The KL divergence between $P$ and $Q$ is defined as:
     \begin{align}
@@ -151,9 +444,10 @@ SNE was first introduced in 2002 by Hinton and Roweis (\cite{NIPS2002_6150ccc6},
 \end{definition}
 Note that the KL divergence is zero if and only if $P$ and $Q$ are the same distribution. At the same time, it is not symmetric and is not a true distance metric. It is also called the relative entropy. Since both SNE and t-SNE will construct probability distributions from the original data set, rather than plain Euclidean distance, KL divergence is used to formulate the loss function we aim to minimize.
 
-SNE starts with defining the following probability mass function for each data point $X_i$: for each $j \neq i$, let
+SNE starts with defining the following probability mass function for each data
+point $X_i$: for each $j \neq i$, let
 \begin{align}\label{SNE_input_kernel}
-        p_{j|i} = \frac{\exp(-\norm{X_i - X_j}^2/2\sigma_i^2)}{\sum_{k \neq i}\exp(-\norm{X_i - X_k}^2/2\sigma_i^2)}.
+    p_{j|i} = \frac{\exp(-\norm{X_i - X_j}^2/2\sigma_i^2)}{\sum_{k \neq i}\exp(-\norm{X_i - X_k}^2/2\sigma_i^2)}.
 \end{align}
 $\sigma_i$ is a hyperparameter that is set by the user or by computation. We restrict that for each $i$, the induced probability distribution has the same entropy for all $i$. This means for some constant $\rho$, we have
 \begin{align} \label{SNE_input_entropy}
@@ -161,19 +455,30 @@ $\sigma_i$ is a hyperparameter that is set by the user or by computation. We res
 \end{align}
 where $N$ is the number of data points. The quantity $N\rho := \text{Perp}$ is called perplexity. This is a very clever design and it serves as a ``slide bar" for each $X_i$. For example, the majority of the data points are located inside a ball with radius 1 and there is one data point that is more than 1000 units away. Then from that point's perspective, the rest of the data points are roughly "equally" distant from itself. The induced probability distribution will be very close to a discrete uniform distribution. A lot of information is lost during this process. By introducing perplexity, we allow each induced probability distribution to zoom in and out so that they are "observing" the rest from the data set on the same scale. Later we will see that this setting is not only backed up by clear intuition, but also plays an important role in proving the convergence to equilibrium measure in chapter 2, as well as in the prior work by Auffinger and Fletcher (\cite{auffinger-tsne}).
 
-Let $Y_i$ be the low-dimensional output of SNE. We can define a similar probability mass function:
+Let $Y_i$ be the low-dimensional output of SNE. We can define a similar
+probability mass function:
 \begin{align} \label{SNE_output_kernel}
     q_{i|j} = \frac{\exp(-\norm{Y_i - Y_j}^2)}{\sum_{k \neq i}\exp(-\norm{Y_i - Y_k}^2)}.
 \end{align}
 Next, SNE will then try to minimize the KL divergence between the two (collections of) distributions, i.e.:
 \begin{align} \label{SNE_loss_function}
-    L = \sum_{i=1}^N D_{KL}(P_i||Q_i) = \sum_{i=1}^N \sum_{j \neq i} p_{j|i} \log\left(\frac{p_{j|i}}{q_{j|i}}\right). 
+    L = \sum_{i=1}^N D_{KL}(P_i||Q_i) = \sum_{i=1}^N \sum_{j \neq i} p_{j|i} \log\left(\frac{p_{j|i}}{q_{j|i}}\right).
 \end{align}
 Since the input $X_i$'s are given and fixed, the loss function $L$ is a function of the output points $Y_i$'s. The minimum can be found using gradient descent. Different from LLE, SNE is not guaranteed to find a global minimum.
 
-Though the formulation of SNE resembles LLE, the invention of SNE was still a refreshing evolution. From plain distance, to geodesic distance from constructed graphs, and now to probability distribution, it is good to see that mathematicians are using more flexible concepts to encode the general landscape of data. But people soon discovered that SNE has its own problems. Since the output distribution decays exponentially and it does not have a slide bar like perplexity, SNE is not able to distinguish clusters that are not in close proximity. This is the well-known ``crowding problem" of SNE, and it directly inspired the birth the subsequent t-SNE algorithm (\cite{key}).
+Though the formulation of SNE resembles LLE, the invention of SNE was still a
+refreshing evolution. From plain distance, to geodesic distance from
+constructed graphs, and now to probability distribution, it is good to see that
+mathematicians are using more flexible concepts to encode the general landscape
+of data. But people soon discovered that SNE has its own problems. Since the
+output distribution decays exponentially and it does not have a slide bar like
+perplexity, SNE is not able to distinguish clusters that are not in close
+proximity. This is the well-known ``crowding problem" of SNE, and it directly
+inspired the birth the subsequent t-SNE algorithm (\cite{key}).
 
-The t-SNE algorithm shares the same procedure as SNE. However, instead of using the Gaussian function in the output schema, t-SNE uses the much slower decaying student's t-distribution with 1 degree of freedom, i.e.,
+The t-SNE algorithm shares the same procedure as SNE. However, instead of using
+the Gaussian function in the output schema, t-SNE uses the much slower decaying
+student's t-distribution with 1 degree of freedom, i.e.,
 \begin{align} \label{tSNE_output_kernel}
     q_{ij} = \frac{(1 + \norm{Y_i - Y_j}^2)^{-1}}{\sum_{k \neq i}(1 + \norm{Y_i - Y_k}^2)^{-1}}.
 \end{align}
@@ -190,12 +495,18 @@ which makes the input probability masses symmetric. One of the greatest and most
 \end{figure}
 Unfortunately, we need to repeat the same statement again: nothing is perfect. t-SNE is also a computationally expensive algorithm. If the data set is large and complex, it is advised to pre-process the data set using lightweight dimension reductions such as PCA. Meanwhile, though with better flexibility and overall performance, t-SNE inherits the same drawback from LLE: poor performance at preserving global structures. The distance between two clusters are often meaningless. We only know that the corresponding original data points do not belong to the same group, but little information can be extracted by the distance between the resulting low-dimensional clusters. t-SNE is also non-deterministic by nature: ending results might vary slightly for the same data set and hyperparameters. While the general cluster structures might be similar, the exact positions and orientations can vary, which can be sometimes confusing.
 
-Such traits of t-SNE inspired some discussion regarding the mathematical nature of the algorithm. First, if t-SNE is non-deterministic, can we say something about its convergence and asymptotic behavior? Will the output of t-SNE converge to a certain equilibrium measure as we increase the number of samples to infinity? The answer is yes. We have the following results from \cite{auffinger-tsne}:
+Such traits of t-SNE inspired some discussion regarding the mathematical nature
+of the algorithm. First, if t-SNE is non-deterministic, can we say something
+about its convergence and asymptotic behavior? Will the output of t-SNE
+converge to a certain equilibrium measure as we increase the number of samples
+to infinity? The answer is yes. We have the following results from
+\cite{auffinger-tsne}:
 
 \begin{theorem} [Theorem 1.1, \cite{auffinger-tsne}] \label{thm:auffinger-tsne_1.1}
     Assume all input data points of t-SNE are drawn independent from a probability measure $\mu_X$. $\mu_X$ has a $C^1$ density function $f(x)$ and compact support. Denote $X$, $Y$ the input and output data set, $n$ the number of data points, $\rho$ the perplexity, and $L_{n,\rho}(X,Y)$ the loss function (KL-divergence) of t-SNE.
-    
-    Then for any $\rho \in (0,1)$ given, there exists a function $I_{\rho}$ and a set of measures $\mathcal{P}_{\mu_X}$, such that
+
+    Then for any $\rho \in (0,1)$ given, there exists a function $I_{\rho}$ and a
+    set of measures $\mathcal{P}_{\mu_X}$, such that
     \begin{align}
         \lim_{n \to \infty} \inf_{Y} L_{n,\rho}(X,Y) = \inf_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu).
     \end{align}
@@ -208,15 +519,34 @@ as the empirical measure of the input and output data set, then the following th
 \begin{theorem}[Theorem 1.2, \cite{auffinger-tsne}] \label{thm:auffinger-tsne_1.2}
     Assume the same conditions as in theorem \ref{thm:auffinger-tsne_1.1}. Then there exists a measure $\mu^*$ and a sub-sequence $\{n_k\}$ such that $\mu_{n_k}$ converges weakly to $\mu^*$, and $\mu^* = \inf_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu)$. Moreover, $\mu^*$ has compact support.
 \end{theorem}
-The formulation of the theorems are slightly different from the original paper and some technical details are omitted due to the introductory nature of this chapter. The above two theorems send a strong message about the theoretical guarantee of t-SNE. If the input data is drawn independently from the same distribution, t-SNE is able to output a global minimum equilibrium measure (here measure means the distribution of the output data set) as we increase the sample size to infinity, with compact support. These are the first rigorous mathematical results about this algorithm after it has been used for so many years. And it leads to the next question, the question we are able to address in chapter 2. 
+The formulation of the theorems are slightly different from the original paper and some technical details are omitted due to the introductory nature of this chapter. The above two theorems send a strong message about the theoretical guarantee of t-SNE. If the input data is drawn independently from the same distribution, t-SNE is able to output a global minimum equilibrium measure (here measure means the distribution of the output data set) as we increase the sample size to infinity, with compact support. These are the first rigorous mathematical results about this algorithm after it has been used for so many years. And it leads to the next question, the question we are able to address in chapter 2.
 
-For the output distributions, using the Gaussian is not necessary as the successful execution of the algorithm does not rely on the specific properties of Gaussian functions. The two theorems above further verify this observation. This gives rise to the concept of kernels. For a pair of points $(x,y)$, a kernel is a positive function of $\norm{x-y}$ that we can use to determine the normalizing weights that produce the input and output distributions. For input, the kernel is the Gaussian function and for the output, the kernel is the function $f(x) = (1 + x^2)^{-1}$. It is natural to ask:
+For the output distributions, using the Gaussian is not necessary as the
+successful execution of the algorithm does not rely on the specific properties
+of Gaussian functions. The two theorems above further verify this observation.
+This gives rise to the concept of kernels. For a pair of points $(x,y)$, a
+kernel is a positive function of $\norm{x-y}$ that we can use to determine the
+normalizing weights that produce the input and output distributions. For input,
+the kernel is the Gaussian function and for the output, the kernel is the
+function $f(x) = (1 + x^2)^{-1}$. It is natural to ask:
 
 \textbf{``Is the student t-distribution not the only kernel that might give us the same theoretical guarantees? If no, then what is the class of output kernels that will give us the same results in \cite{auffinger-tsne}? Even more generally speaking, if we swap out both input and output kernels, what conditions do we need for the same theorems to be true?"}
 
-These are the exact questions we are able to answer with rigorous proofs in chapter 2. Besides that, people are already swapping out output kernels in practice. Note that in the formula of KL-divergence, for the term $p_{ij}\log(p_{ij}/q_{ij})$ reaches its minimum zero when $p_{ij} = q_{ij}$. This means if we manually increase $p_{ij}$, the gradient descent process will tend to increase $q_{ij}$ as well. This is achieved by putting the output points $Y_i$ and $Y_j$ closer together, as the output kernel $f(x) = (1 + x^2)^{-1}$ is monotone decreasing. Therefore, in application people often replace $p_{ij}$ with its multiple $kp_{ij}$ for some constant $k > 1$. This is called the early exaggeration, one of the frequently used techniques. Using early exaggeration will result in closer clusters, improving visualization results.
+These are the exact questions we are able to answer with rigorous proofs in
+chapter 2. Besides that, people are already swapping out output kernels in
+practice. Note that in the formula of KL-divergence, for the term
+$p_{ij}\log(p_{ij}/q_{ij})$ reaches its minimum zero when $p_{ij} = q_{ij}$.
+This means if we manually increase $p_{ij}$, the gradient descent process will
+tend to increase $q_{ij}$ as well. This is achieved by putting the output
+points $Y_i$ and $Y_j$ closer together, as the output kernel $f(x) = (1 +
+    x^2)^{-1}$ is monotone decreasing. Therefore, in application people often
+replace $p_{ij}$ with its multiple $kp_{ij}$ for some constant $k > 1$. This is
+called the early exaggeration, one of the frequently used techniques. Using
+early exaggeration will result in closer clusters, improving visualization
+results.
 
-Another known modification of the t-SNE algorithm is the heavy-tailed t-SNE. Recall that the density function of the t-distribution is given by
+Another known modification of the t-SNE algorithm is the heavy-tailed t-SNE.
+Recall that the density function of the t-distribution is given by
 \begin{align} \label{t_dist_density}
     f(x) = \left(1+\frac{x^2}{\alpha}\right)^{-\frac{\alpha+1}{2}},
 \end{align}
@@ -229,22 +559,65 @@ where $\alpha$ is the degree of freedom. Decreasing $\alpha$ will reduce its dec
 \end{figure}
 Both early exaggeration and heavy-tailed t-SNE can be seen as manipulations of the output kernel. t-SNE works effectively under the modification and produces promising results, besides different characteristics researchers hope to see. Besides exploring different conditions for the convergence to hold and the equilibrium measure to exist, it is also an interesting problem to see how exactly the output changes with the modification of the output kernel. Some insightful results can be found in \cite{weinkove2024flow}.
 
-It is fascinating to see the rigorous mathematical theory behind widely used algorithms like t-SNE, which are often used to produce qualitative rather than quantitative results. Getting to the bottom of the convergence behavior will provide valuable insights on the algorithm itself, refining the theoretical landscape of the dimension reduction theory. We will resume our journey in chapter 2.
+It is fascinating to see the rigorous mathematical theory behind widely used
+algorithms like t-SNE, which are often used to produce qualitative rather than
+quantitative results. Getting to the bottom of the convergence behavior will
+provide valuable insights on the algorithm itself, refining the theoretical
+landscape of the dimension reduction theory. We will resume our journey in
+chapter 2.
 
 \section{Markov Random Field and Probabilistic Graphical Models (PGM)} \label{intro_chap:sec:MRF}
-\subsection{Dependency: An Unavoidable Problem}
-We have seen how the theory of dimension reduction has come a long way for the purpose of addressing the challenges from high-dimensional data. Now we turn to another, likely more fundamental problem that probability, statistics and data science need to face: dependency. Though most of probability textbook starts with the concept of independence and theorems assuming it, dependencies are probably one of the oldest and most prevalent challenges we have had to tackle ever since the concept of probability was born. How farmers might change their planting plans based on weather; how gamblers leverage their bets based on the cards in hand; how traders design their investment strategies based on the stock market. All these decisions are based on dependencies and uncertainty. Probabilistic dependency has been with us since the beginning of our time. Even to this day, people might still care about the fate of Schrodinger's cat, "condition on" the mysterious nature of quantum superposition.
+\subsection{Dependency: An Unavoidable Problem} \label{intro_chap:sec:MRF:intro}
+We have seen how the theory of dimension reduction has come a long way for the
+purpose of addressing the challenges from high-dimensional data. Now we turn to
+another, likely more fundamental problem that probability, statistics and data
+science need to face: dependency. Though most of probability textbook starts
+with the concept of independence and theorems assuming it, dependencies are
+probably one of the oldest and most prevalent challenges we have had to tackle
+ever since the concept of probability was born. How farmers might change their
+planting plans based on weather; how gamblers leverage their bets based on the
+cards in hand; how traders design their investment strategies based on the
+stock market. All these decisions are based on dependencies and uncertainty.
+Probabilistic dependency has been with us since the beginning of our time. Even
+to this day, people might still care about the fate of Schrodinger's cat,
+``condition on" the mysterious nature of quantum superposition.
 
-The explosive advancement of computer science and modern industry not only brings high-dimensional data, but also exponentially more complicated dependencies that come with it. Let us take a look at several examples\footnote{All images used in this section are under free or open copyright licenses such as CC BY-SA and CC BY. All images have been properly credited.} that demonstrate the difficulties and complexity of such problems. The first instance is image segmentation and the famous paper written by Geman and Geman (\cite{Geman1984}). With the introduction of digital imagery, we receive a grid of many pixels, as well as a grid of intricate dependencies. The color and intensity of any given pixel is highly likely to be similar to that of its immediate neighbors. This is true for almost all real images that include actual content. Pixels from the same object they depict tend to share common characteristics, and that is how our eyes capture and process the world we see through various coherence. If we treat all pixels as independent noises, we will be getting static noise that does not convey any information. Therefore, the authors treat the problem of image segmentation and denoising as a statistical inference problem, with Markov random field being the main tool they deployed to encode the information.
+The explosive advancement of computer science and modern industry not only
+brings high-dimensional data, but also exponentially more complicated
+dependencies that come with it. Let us take a look at several
+examples\footnote{All images used in this section are under free or open
+    copyright licenses such as CC BY-SA and CC BY. All images have been properly
+    credited.} that demonstrate the difficulties and complexity of such problems.
+The first instance is image segmentation and the famous paper written by Geman
+and Geman (\cite{Geman1984}). With the introduction of digital imagery, we
+receive a grid of many pixels, as well as a grid of intricate dependencies. The
+color and intensity of any given pixel is highly likely to be similar to that
+of its immediate neighbors. This is true for almost all real images that
+include actual content. Pixels from the same object they depict tend to share
+common characteristics, and that is how our eyes capture and process the world
+we see through various coherence. If we treat all pixels as independent noises,
+we will be getting static noise that does not convey any information.
+Therefore, the authors treat the problem of image segmentation and denoising as
+a statistical inference problem, with Markov random field being the main tool
+they deployed to encode the information.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{Image_segmentation.png}
-    \caption{A simple expample of image segmentation, by B Palac, from Wikimedia Commons. Different objects like the bus, the road and the buildings in the background can be detected and identified by algorithms. This technology is widely used in critical fields like self-driving cars.}%
+    \caption{A simple example of image segmentation, by B Palac, from Wikimedia Commons. Different objects like the bus, the road and the buildings in the background can be detected and identified by algorithms. This technology is widely used in critical fields like self-driving cars.}%
     \label{fig:image_segmentation}
 \end{figure}
 
-This paper is one of the most famous and important paper in the field of computer vision and pattern analysis. It utilizes a lot of important tools and concepts like Bayesian inference, Gibbs sampling, and Markov random field, some of which will be introduced more systematically in the next several sections. The paper also draws inspiration from statistical physics and today the intersection between statistical physics, math, and computer science has developed into a even larger and more captivating field. It is easy to write a couple of books just based on the keywords from this single paper so we will not go into too much nuances. Rather, let us talk about some of the real-life impact this discovery brought.  
+This paper is one of the most famous and important paper in the field of
+computer vision and pattern analysis. It utilizes a lot of important tools and
+concepts like Bayesian inference, Gibbs sampling, and Markov random field, some
+of which will be introduced more systematically in the next several sections.
+The paper also draws inspiration from statistical physics and today the
+intersection between statistical physics, math, and computer science has
+developed into a even larger and more captivating field. It is easy to write a
+couple of books just based on the keywords from this single paper so we will
+not go into too much nuances. Rather, let us talk about some of the real-life
+impact this discovery brought.
 
 \begin{figure}[ht]
     \centering
@@ -253,7 +626,17 @@ This paper is one of the most famous and important paper in the field of compute
     \label{fig:waymo}
 \end{figure}
 
-One of the major application of image segmentation is self-driving cars. In order to identify various objects on the road and navigate through ever-changing traffic, self-driving cars need to have cameras and computer vision technologies to detect and identify objects. This is the aspect that cameras can be much more useful than radars (while radars are better handling positional and distance information). In 2025, we already have commercialized self-driving taxi services by Waymo in several major cities like San Francisco, Los Angeles, and Phoenix, with some known for its notoriously difficult traffic conditions. Not only doing business, Waymo is also active in related research fields, and some of its published results still draw inspiration from Geman and Geman in 1984 (\cite{zhu2023superpixeltransformersefficientsemantic}).
+One of the major application of image segmentation is self-driving cars. In
+order to identify various objects on the road and navigate through
+ever-changing traffic, self-driving cars need to have cameras and computer
+vision technologies to detect and identify objects. This is the aspect that
+cameras can be much more useful than radars (while radars are better handling
+positional and distance information). In 2025, we already have commercialized
+self-driving taxi services by Waymo in several major cities like San Francisco,
+Los Angeles, and Phoenix, with some known for its notoriously difficult traffic
+conditions. Not only doing business, Waymo is also active in related research
+fields, and some of its published results still draw inspiration from Geman and
+Geman in 1984 (\cite{zhu2023superpixeltransformersefficientsemantic}).
 
 \begin{figure}[ht]
     \centering
@@ -262,9 +645,35 @@ One of the major application of image segmentation is self-driving cars. In orde
     \label{fig:more_image_segmentation}
 \end{figure}
 
-Another well-known and important follow-up is the Graph Cuts, emerging in early 2000s (\cite{Boykov2001}, \cite{Kolmogorov2004}, \cite{Boykov2004}). This new image segmentation algorithm was solid step up from Geman and Geman's work and it profoundly influenced the world. Due to its massive improvement in computational effiency and overall perforamnce, it is widely used in many areas like medical imaging. MRI and CT are able to identify organs, lesions and tissues with the help of segmentation and it is safe to say these devices saved countless lives. Graph Cuts also contributed to the development of stereo vision, which allows the depth of images to be recovered by using two or more cameras, similar to how our eyes work. The narratives and stories above can all be traced back to 1984, where the dependencies problems were effectively modelled and addressed. Vision is the most common sense we use to perceive the world. It contains great obstacles just as it contains great values.
+Another well-known and important follow-up is the Graph Cuts, emerging in early
+2000s (\cite{Boykov2001}, \cite{Kolmogorov2004}, \cite{Boykov2004}). This new
+image segmentation algorithm was solid step up from Geman and Geman's work and
+it profoundly influenced the world. Due to its massive improvement in
+computational efficiency and overall perforamnce, it is widely used in many
+areas like medical imaging. MRI and CT are able to identify organs, lesions and
+tissues with the help of segmentation and it is safe to say these devices saved
+countless lives. Graph Cuts also contributed to the development of stereo
+vision, which allows the depth of images to be recovered by using two or more
+cameras, similar to how our eyes work. The narratives and stories above can all
+be traced back to 1984, where the dependencies problems were effectively
+modelled and addressed. Vision is the most common sense we use to perceive the
+world. It contains great obstacles just as it contains great values.
 
-Another good example of dependency research is again, not surprisingly, about genetic sequencing. One of the core reasons that genetic research is extremely difficult is the dependencies between different genes. They do not work in isolation. The expression level of one gene can activate or inhibit the expression of others such as the lac Operon and the trp Operon in E. coli (\cite{Naville2010}, \cite{JACOB1961318}). For humans a well known genetic piece is the Estrogen Receptor (ER$\alpha$). ER$\alpha$ plays a vital role in the development and function of many tissues, particularly in the female reproduction system, but also in bone, brain and cardiovascular health. ER$\alpha$ affects our body primarily by interacting and binding with other DNA sequences, which ultimately leads to changes in cell behavior. Particularly, ER$\alpha$ dysregulation is a key driver in the majority of breast cancers (\cite{10.1158/0008-5472.CAN-03-3326}, \cite{doi:10.1152/physrev.00026.2006}). Drugs that block estrogen binding or ER$\alpha$ activity are critical therapies for breast cancer treatments.
+Another good example of dependency research is again, not surprisingly, about
+genetic sequencing. One of the core reasons that genetic research is extremely
+difficult is the dependencies between different genes. They do not work in
+isolation. The expression level of one gene can activate or inhibit the
+expression of others such as the lac Operon and the trp Operon in E. coli
+(\cite{Naville2010}, \cite{JACOB1961318}). For humans a well known genetic
+piece is the Estrogen Receptor (ER$\alpha$). ER$\alpha$ plays a vital role in
+the development and function of many tissues, particularly in the female
+reproduction system, but also in bone, brain and cardiovascular health.
+ER$\alpha$ affects our body primarily by interacting and binding with other DNA
+sequences, which ultimately leads to changes in cell behavior. Particularly,
+ER$\alpha$ dysregulation is a key driver in the majority of breast cancers
+(\cite{10.1158/0008-5472.CAN-03-3326}, \cite{doi:10.1152/physrev.00026.2006}).
+Drugs that block estrogen binding or ER$\alpha$ activity are critical therapies
+for breast cancer treatments.
 
 \begin{figure}[ht]
     \centering
@@ -273,9 +682,38 @@ Another good example of dependency research is again, not surprisingly, about ge
     \label{fig:gene_regulatory_networks}
 \end{figure}
 
-This is just one graph of the vast nest of dependencies in our genetic sequence. Therefore scientists felt it imperative to use mathematical tools to encode, analyze and understand the dependency relationship. Gene Regulatory Networks (GRN) is one of such creations. GRNs use Bayesian Networks (we will cover more details in section \ref{intro_chap:sec:MRF:sec:BN_MRF}.) to model the relations between genetics and cellular function, development and disease. By representing genes as nodes and regulatory influences as directed edges, scientists can infer plausible probabilistic relationships between gene expression levels, even in the presence of noise (\cite{doi:10.1089/106652700750050961}, \cite{Sachs2005}). GRNs are often better understood visually than through textual explanation. Please see figure \ref{fig:gene_regulatory_networks} to see how five different types of cancers are related to a large collection of genes via different types of regulatory influences. Without the help of probability and Bayesian network, such information is impossible to be extracted.
+This is just one graph of the vast nest of dependencies in our genetic
+sequence. Therefore scientists felt it imperative to use mathematical tools to
+encode, analyze and understand the dependency relationship. Gene Regulatory
+Networks (GRN) is one of such creations. GRNs use Bayesian Networks (we will
+cover more details in section \ref{intro_chap:sec:MRF:sec:BN_MRF}.) to model
+the relations between genetics and cellular function, development and disease.
+By representing genes as nodes and regulatory influences as directed edges,
+scientists can infer plausible probabilistic relationships between gene
+expression levels, even in the presence of noise
+(\cite{doi:10.1089/106652700750050961}, \cite{Sachs2005}). GRNs are often
+better understood visually than through textual explanation. Please see figure
+\ref{fig:gene_regulatory_networks} to see how five different types of cancers
+are related to a large collection of genes via different types of regulatory
+influences. Without the help of probability and Bayesian network, such
+information is impossible to be extracted.
 
-While GRNs map interactions between genes, Hidden Markov Models (HMM) aim to decipher the functional grammar within a single sequence (\cite{Krogh1994HMM}, \cite{Durbin_Eddy_Krogh_Mitchison_1998}). It is another extremely important tool in genetic research like GRN but with a different focus. One key concept HMM has that is not present in GRN is called the hidden states. Generally speaking, the observed gene sequence is just the tip of the iceberg. There are so many activies and biochemical reactions that happen before a segement of gene is formed and observed. To give an instance, for eukaryotic genes we have concepts of exon and intron. Exons are the coding regions that are present in the final mRNA transcript, while introns are the non-coding regions that get removed during RNA splicing. One of the key functions of HMM is to identify the hidden states, the status ``behind the scene", that connect an intron state to a possible exon state, using a framework similar to the Markov chain, hence the name. For example, if we have a hidden state with some particular intron, HMM will find the transition probability of this state to other hidden states, and ultimately, to different observed sequences.
+While GRNs map interactions between genes, Hidden Markov Models (HMM) aim to
+decipher the functional grammar within a single sequence (\cite{Krogh1994HMM},
+\cite{Durbin_Eddy_Krogh_Mitchison_1998}). It is another extremely important
+tool in genetic research like GRN but with a different focus. One key concept
+HMM has that is not present in GRN is called the hidden states. Generally
+speaking, the observed gene sequence is just the tip of the iceberg. There are
+so many actives and biochemical reactions that happen before a segment of gene
+is formed and observed. To give an instance, for eukaryotic genes we have
+concepts of exon and intron. Exons are the coding regions that are present in
+the final mRNA transcript, while introns are the non-coding regions that get
+removed during RNA splicing. One of the key functions of HMM is to identify the
+hidden states, the status ``behind the scene", that connect an intron state to
+a possible exon state, using a framework similar to the Markov chain, hence the
+name. For example, if we have a hidden state with some particular intron, HMM
+will find the transition probability of this state to other hidden states, and
+ultimately, to different observed sequences.
 
 \begin{figure}[ht]
     \centering
@@ -284,12 +722,240 @@ While GRNs map interactions between genes, Hidden Markov Models (HMM) aim to dec
     \label{fig:HMM_modeling}
 \end{figure}
 
-Contrary to GRNs, whose goal is often the network structure itself, HMMs are used for classification and alignment, such as calculating the probability that a given sequence was generated by a particular collections of hidden states. We call this the emission probabilities. If we see a coding regions with a certain sequence of nucleotide A, C, G, T or some types of amino acids, we are likely able to predict the likelihood of obtaining a specific observable symbol. HMM reveals and decodes the mechanism behind gene formation, allowing us to understand the process of gene expression and regulation on a systematic level.
+Contrary to GRNs, whose goal is often the network structure itself, HMMs are
+used for classification and alignment, such as calculating the probability that
+a given sequence was generated by a particular collections of hidden states. We
+call this the emission probabilities. If we see a coding regions with a certain
+sequence of nucleotide A, C, G, T or some types of amino acids, we are likely
+able to predict the likelihood of obtaining a specific observable symbol. HMM
+reveals and decodes the mechanism behind gene formation, allowing us to
+understand the process of gene expression and regulation on a systematic level.
 
-For both examples we just went through (image segmentation and genetic sequencing), we can see the incredible values contained within dependencies, because dependencies encode relations. It is relations that define the world we live in, not isolated objects. All the applications in those examples benefit from properly modelled dependencies. And all those dependencies are transcribed in graph structures. Indeed, probabilistic graphical models are specifically designed to address the dependencies problems, and there have been so many successful advancements and applications of PGMs. As we venture deeper into the finer structure of this universe, both on micro and macro scales, PGMs have become even more important than ever before.
+For both examples we just went through (image segmentation and genetic
+sequencing), we can see the incredible values contained within dependencies,
+because dependencies encode relations. It is relations that define the world we
+live in, not isolated objects. All the applications in those examples benefit
+from properly modelled dependencies. And all those dependencies are transcribed
+in graph structures. Indeed, probabilistic graphical models are specifically
+designed to address the dependencies problems, and there have been so many
+successful advancements and applications of PGMs. As we venture deeper into the
+finer structure of this universe, both on micro and macro scales, PGMs have
+become even more important than ever before.
 
 \begin{remark}
     Though PGMs are the specialized tool to solve dependency problems, we should also be aware that they are not the only tools. As vast as the theories and applications of PGMs have come to be, they are a small part of a much larger overarching theme, combinatorial optimization (CO). This term can refer to any problems that aim to find an optimal object from a finite set of objects (\cite{Schrijver2003}), often comes with a set of constraints as well. Probabilistic dependency is only one kind of constraints and PGMs are only one type of tools that record such constraints. The field of CO is extremely diverse and rich. We can start with basic examples like the traveling salesman problem all the way to the major unsolved problems such as P=NP. It is easy to go too deep into the rabbit hole. Therefore, it would be appropriate to acknowledge the wider picture while focusing on PGMs in this section.
 \end{remark}
 \subsection{PGM, a Short History}
+Both graph theory and probability have a long history. Though the foundation of
+modern probability is widely regarded as the work by Kolmogorov, probability
+theory, in general, can date back to the 16th century
+(\cite{lightner1991brief}). Graph theory is often believed to be the brain
+child of Euler (\cite{Euler1736}). The basic ingredients of PGM have existed
+long before PGM itself was created. Therefore, the history of PGM can be
+roughly divided into three parts: the early conceptual seeds (from probability
+and graph theory), the emergence of mainstream models (Bayesian networks and
+Markov random fields), and the unification/expansion era that came with the
+advent of modern computer science.
+
+Prior to the 1980s, there was not a definitive concept of PGM that was widely
+acknowledged and used among the research community. However, the practices that
+used graphs to represent probabilistic models started to emerge in the first
+half of the 20th century. In 1925, Ernst Ising used the lattice graph in his
+Ph. D thesis to represent the the magnetic dipole moments of atomic ``spins"
+(\cite{Ising1925BeitragZT}). Later this idea was generalized by Lars Onsager in
+1944 (\cite{PhysRev.65.117}) and then evolved into the famous Ising model we
+know today in statistical physics. Formally speaking, let $\Lambda$ be the
+lattice graph(site) and we use positive integers to denote its vertices. For
+each vertex(site) $k$, there is a discrete variable $\sigma_k$ such that
+$\sigma_k \in \{-1,1\}$, representing the site's spin. We call the collection
+of all spins $\sigma := \{\sigma_k\}_{k \in \Lambda}$ the spin configuration.
+For any two adjacent sites(vertices) $i,j \in \Lambda$, there is an interaction
+$J_{ij}$. Finally, let $\mu$ be the magnet moment and $h_j$ be the external
+magnetic field interacting with $j$. The Ising model is defined by the
+following random function called the Hamiltonian:
+\begin{align}
+    H(\sigma) = -\sum_{<ij>} J_{ij} \sigma_i \sigma_j - \mu \sum_{j \in \Lambda} h_j \sigma_j,
+\end{align}
+where the first summation is over all pairs of vertices/sites $i,j$ that are adjacent on the lattice. Ising model is widely considered the first model in the study of spin glasses. The Hamiltonian effectively captures the interaction, thus dependencies between each spin via a graph structure. Exchanging the lattice graph with other types of graph will give us some of the other famous models, such as the Sherrington-Kirkpatrick model (complete graph) and Edwards-Anderson model (high-dimensional lattice). Though by definition spin glass models can be seen as PGMs, the studies about them do not have a strong relation with tools in graph theory. In fact, it is a drastically different field compared to the topic we are discussing in chapter 3. Rather, we mention Ising model to highlight the novel representation of mathematical objects that bring probability and graph theory together.
+
+Another early example is path analysis introduced by Sewall Wright in 1921
+(\cite{Wright1921CorrelationAndCausation}, \cite{Wright1934}). This method was
+created to understand and quantify the relationships among a set of correlated
+random variables, based on a hypothesized causal structure. Wright represented
+the hypothesized causal relationship using path diagrams (essentially Directed
+Acyclic Graphs or DAGs), where nodes represent variables and arrows represent
+direct causal influences.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=13cm]{casualmap.png}
+    \caption{An intuitive example of path diagrams with edge weights (contributing factors). The daily activities of a person depend on the transportation and food choices, which further depend on the weather, mood and how hungry the person is. Using the diagram, we can conduct analysis such as estimating the impact of weather on the person's daily activities.}%
+    \label{fig:casualmap}
+\end{figure}
+
+With the help of directed graphs, complicated chain of influence can be
+decomposed and quantitatively studied. The correlation/causation between two
+variables are measured by the sum of all paths that connect them and the
+contribution of a path is determined via the product of all its edge weight.
+This simple but effective framework allows us to estimate the magnitude of
+direct and indirect effects within the causal model.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=11cm]{wrightpathanalysis.png}
+    \caption{A path analysis diagram from \cite{10.1093/genetics/6.2.111}. Wright used this diagram to visualize and analyze the relations between two mated individuals and their progeny.}%
+    \label{fig:wrightpathanalysis}
+\end{figure}
+
+Wright himself was also a population geneticist and he used path analysis
+extensively to study inheritance. Some of his famous work included the piebald
+patterns of Guinea-Pigs and factor analysis for offspring phenotype
+(\cite{Wright1920TheRI}, \cite{10.1093/genetics/6.2.111}). In fact, Wright had
+already started using the concept of path analysis in 1918 before he formally
+defined the term (\cite{10.1093/genetics/3.4.367}). It is safe to say the his
+biological research inspired the creation of this important mathematical model,
+yet another great victory for the interdisciplinary research between math and
+biology!
+
+It is also worth noting that the Wright's work has profoundly influenced the
+field of PGM and computer science. Path analysis is considered a direct
+precursor to modern Structural Equation Modeling (SEM). In 1960s and 1970s,
+social scientist used path analysis and created a set of tools that are still
+widely used today in social science, psychology and economics
+(\cite{Duncan1975}, \cite{Bollen89}).
+
+The inspiration of path analysis did not stop there. Fast-forwarding to the
+1980s, the concept of PGM was widely recognized and used with the invention of
+Bayesian networks and Markov random fields, the two pillars of the realm.
+Continuing from Wright's work, Judea Pearl formalized Bayesian Networks (BN) in
+1988 (\cite{10.5555/534975}). Similar to path analysis, BN uses nodes to
+represent variables and arrows (directed edges) to represent direct dependence.
+On the top of that, BN accurately captures the conditional probability using
+the chain decomposition. Let $X_1, X_2, \ldots, X_n$ be a collection of random
+variables and $p(x_1,\dots, x_n)$ their joint density function. We have
+\begin{align}
+    p(x_1,\dots, x_n) = p(x_1)p(x_2|x_1)\cdots p(x_n|x_1,\dots,x_{n-1}).
+\end{align}
+BN uses the decomposition, but based on the graph structure. So compared to path analysis, the computation of weight in BN produces actual probability. This greatly increase the information density of the same framework. Using BNs, we are able to effectively navigate through complex dependency relationships and compute the probability of events from evidence.
+
+BNs have been widely used in various fields. Besides biology and medical
+research, BNs are also used in software engineering and finance. One of the
+most well-known application of BNs is the email spam filter
+(\cite{Sahami1998}). The early version of email spam filters had very simple
+structures. It looked at the overall probability of an email being potential
+spam and conditional probability when certain words are present. Intuitively it
+worked a lot like how we detect scam calls in some way. When we pick up a phone
+call, if the number is unknown, then we will likely raise our suspicion
+(conditional scam probability goes up). Then if the caller starts to ask for
+personal information or request money, then the conditional probability of the
+call being a scam goes up even more. We then most likely hang up because there
+is a Bayesian network-like process that just happens in our head. Today, email
+spam filters have got much more sophisticated, with some including LLMs.
+However, LLMs are expensive to run so traditional, BN-based email filters are
+still the mainstream choices, keeping billions of people safe from spam emails
+every day. For finance, the nature of BNs makes it the ideal tool to model
+potential risks (\cite{BNRisk2003}, \cite{Gemela2001}). Risks and risk
+assessment can be generalized as attempts to answer the ``what if" questions.
+In our daily lives, such questions can be easy. ``What if I got a flat tire?"
+``Prepare a tire repair kit in your trunk.'' Financial market and related risks
+have much more intertwined underlying causes. Such needs directly overlap with
+the specialty of BNs, making it the ideal tool for risk assessment and
+management til this day.
+
+Now let us turn our attention to Markov Random Field (MRF). While Bayesian
+networks are very effective in representing direct dependencies and causal
+relationships. There are other types of links lacking clear ``directionality".
+As with the pixels of a picture we previously mentioned. It is clear that two
+adjacent pixels in a picture are likely to be correlated because they can
+depict the same object. However, it is impossible, or more accurately,
+logically unsound to say that one pixel causes the other. There are a lot more
+examples where the correlations are undirected or symmetric. In order to model
+those probabilistic dependencies, we need a different PGM other than BN. That
+is where MRF comes in.
+
+The formalization of MRF is widely considered to be the work of Besag in 1974
+(\cite{Besag1974}). In this famous paper, Besag also presented an alternate
+proof for the famous Hammersley-Clifford theorem, showcasing the MRF as a
+powerful tool in terms of modeling dependencies based on geographic proximity.
+We will not go into the details of the proof, but it would be beneficial to
+state the theorem and compare the notion of MRF with a traditional Markov
+Chain.
+
+Let $[n] = \{1,2,\dots,n\}$ and $\mathcal{X} = (X_t)_{t \in [n]}$ be a finite
+dimension random vector with each $X_t$ taking values in a finite set
+$\mathcal{S}_t = \{1,2,\dots,m_t\}$. Suppose $[n]$ is the set of vertices of a
+graph. For each $t$, denote $\mathcal{N}_t$ the set of vertices $s$ such that
+$s$ is adjacent to $t$ in the graph.
+
+\begin{definition}
+    The process $(X_t)_{t \in [n]}$ is said to be a Markov random field if
+
+    (i) for each tuple $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$, the joint probability satisfies
+    \begin{align}
+        P(X_1 = x_1, X_2 = x_2, \dots, X_n = x_n) >0;
+    \end{align}
+
+    (ii) for each $t$ and $x$,
+    \begin{align}
+        \p \{X_t = x_t | X_s = x_s, s \neq t\} = \p \{X_t = x_t | X_s = x_s, s \in \mathcal{N}_t \}.
+    \end{align}
+\end{definition}
+
+We can see that the definition of MRF resembles much of the discrete-time
+Markov chain. Instead of the sequential Markov property, MRF has its own Markov
+property induced by the graph topology. A subset of vertices $A \subset [n]$ is
+said to be complete (or a clique) if each pair of vertices is connected with an
+edge in the graph. We can use this notion to define a Gibbs distribution.
+\begin{definition}
+    Let $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$ be an arbitrary tuple from the joint distribution, and $\mathcal{C}$ the collection of all complete vertex subsets. A probability distribution $Q$ is called a Gibbs distribution (or Gibbs random field) if it can be written in the form
+    \begin{align}
+        Q(X) = \prod_{A \in \mathcal{C}} V_A(x),
+    \end{align}
+    where $V_A(x)$ is a positive function that depends only on $x_i$'s with $i \in A$.
+\end{definition}
+It is clear that each process $(X_t)_{t \in [n]}$ has a corresponding Gibbs distribution based on the dependencies. Now we can state the powerful Hammersley–Clifford theorem:
+\begin{theorem}[Hammersley–Clifford theorem]
+    Let $Q$ be a probability distribution on $\prod_{i=1}^n \mathcal{S}_i$. Then $Q$ is a Gibbs distribution if and only if it is a Markov random field with respect to the same graph structure.
+\end{theorem}
+Besag's paper is a major cornerstone in statistics and fields dealing with spatial data. Before his work, defining a valid joint probability distribution over many interacting variables was often difficult. Besag showed how one could specify the model based on conditional probability of each variable given its neighbors (using the local Markov property). Such practice is much more intuitive and actionable. On the other hand, his paper did not stop at a theoretical level. Besag also proposed practical methods for statistical analysis using pseudo-likelihood, which uses conditional probabilities to approximate maximum likelihood. Such estimations used to be intractable due to computational difficulties. Bridging theory and application, this paper was a huge achievement in the field of statistical learning that inspired countless advancements after it, such as the work by Geman and Geman (\cite{Geman1984}) we mentioned in section \ref{intro_chap:sec:MRF:intro}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=12cm]{ICMBesag.png}
+    \caption{Besag used MRF to develop the Iterated Condition Modes (ICM) algorithm that is able to restore dirty images. The figure is from his work in 1986 \cite{Besag1986}. As we can see, ICM performs much better than the old maximum-likelihood classifier.}%
+    \label{fig:ICMBesag}
+\end{figure}
+
+The introduction of BN and MRF made researchers realize the power of PGMs.
+Also, graph theory and probability happen to be two of the mathematical
+sub-fields that are most related to computer science. People started to give
+PGMs much more focus, aiming to unify the models and theories so that a more
+comprehensive framework could serve to tackle the dependency problems emerging
+from complex systems and machine learning.
+
+Factor graph was created for this very purpose in 2001
+(\cite{Kschischang2001}). As the name suggests, factor graphs provide a general
+representation that explicitly shows the factorization of a global function
+into local factors. The joint probability we discussed above for MRF is a good
+example. They connect widely used models like MRF and BN, then unify the
+inference algorithms like belief propagation. The lineage from both MRF and BN
+is very clear.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{beliefprop.png}
+    \caption{The diagram illustrating belief propagation in \cite{Kschischang2001}. Belief propagation is a powerful model built upon BN and MRF that are broadly used in information theory and other related fields.}%
+    \label{fig:beliefprop}
+\end{figure}
+
+There were also other new ideas rising from the fertile soil of PGMs, such as
+Junction Trees, Variational Inference and MCMC (\cite{Jordan1999},
+\cite{Gelfand01061990}). On the larger scale, the development of machine
+learning was also gradually shifting the fashion of the field. Instead of
+relying on expert knowledge, people began to use ML algorithms to learn the
+unknown parameters or the graph structures from complex data, building the
+navigation chart amidst the black sea of chaos. The effectiveness of PGMs,
+combined with the strong generative power of ML, expand the potentials of PGMs
+even further. It is exciting to see what this field will bring us for the rest
+of this century.
 \subsection{Bayesian Networks and Markov Random Fields} \label{intro_chap:sec:MRF:sec:BN_MRF}
