@@ -1,4 +1,4 @@
-\begin{thebibliography}{61}
+\begin{thebibliography}{66}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -440,5 +440,39 @@ Alan~E. Gelfand and Adrian F. M.~Smith and.
   https://www.tandfonline.com/doi/pdf/10.1080/01621459.1990.10476213.
 \newblock URL
   \url{https://www.tandfonline.com/doi/abs/10.1080/01621459.1990.10476213}.
+
+\bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
+D.~Koller and N.~Friedman.
+\newblock {\em Probabilistic Graphical Models: Principles and Techniques}.
+\newblock Adaptive computation and machine learning. MIT Press, 2009.
+\newblock ISBN 9780262013192.
+\newblock URL \url{https://books.google.co.in/books?id=7dzpHCHzNQ4C}.
+
+\bibitem[Erdős and László(1974)]{LLL1975}
+Paul Erdős and Lovász László.
+\newblock Problems and results on 3-chromatic hypergraphs and some related
+  questions.
+\newblock {\em Coll Math Soc J Bolyai}, 10, 01 1974.
+
+\bibitem[Shearer(1985)]{LLL1985}
+James~B Shearer.
+\newblock On a problem of spencer.
+\newblock {\em Combinatorica}, 5\penalty0 (3):\penalty0 241–245, July 1985.
+\newblock ISSN 0209-9683.
+\newblock URL \url{https://doi.org/10.1007/BF02579368}.
+
+\bibitem[Spencer(1977)]{SPENCER197769}
+Joel Spencer.
+\newblock Asymptotic lower bounds for ramsey functions.
+\newblock {\em Discrete Mathematics}, 20:\penalty0 69--76, 1977.
+\newblock ISSN 0012-365X.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/0012365X77900449}.
+
+\bibitem[Moser and Tardos(2009)]{moser2009constructiveproofgenerallovasz}
+Robin~A. Moser and Gábor Tardos.
+\newblock A constructive proof of the general lovasz local lemma, 2009,
+  0903.0544.
+\newblock URL \url{https://arxiv.org/abs/0903.0544}.
 
 \end{thebibliography}

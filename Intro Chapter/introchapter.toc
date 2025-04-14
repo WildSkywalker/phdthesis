@@ -8,3 +8,4 @@
 \contentsline {subsection}{\numberline {3.1}Dependency: An Unavoidable Problem}{16}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}PGM, a Short History}{20}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Bayesian Networks and Markov Random Fields}{25}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}The Necessity of Sampling and {Lov\'asz}\xspace Local Lemma}{30}{subsection.3.4}%
