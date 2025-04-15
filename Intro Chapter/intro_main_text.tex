@@ -959,14 +959,32 @@ combined with the strong generative power of ML, expand the potentials of PGMs
 even further. It is exciting to see what this field will bring us for the rest
 of this century.
 \subsection{Bayesian Networks and Markov Random Fields} \label{intro_chap:sec:MRF:sec:BN_MRF}
-As we mentioned in section \ref{intro_chap:sec:MRF:sec:PGM_history}, Bayesian networks and Markov random fields represent the two main types of PGMs, reflecting to choice of directed or undirected graph. In chapter 3, we will provide a self-contained walkthrough on how machine learning algorithms can be used to learn the graph structure. Towards that end, in this chapter, we will dedicate some space to introduce the two main PGMs themselves, as well as the \lovasz Local Lemma. This way we will have a better understanding of the background and how chapter 3 weaves different topics together to create a new algorithm.
+As we mentioned in section \ref{intro_chap:sec:MRF:sec:PGM_history}, Bayesian
+networks and Markov random fields represent the two main types of PGMs,
+reflecting to choice of directed or undirected graph. In chapter 3, we will
+provide a self-contained walkthrough on how machine learning algorithms can be
+used to learn the graph structure. Towards that end, in this chapter, we will
+dedicate some space to introduce the two main PGMs themselves, as well as the
+\lovasz Local Lemma. This way we will have a better understanding of the
+background and how chapter 3 weaves different topics together to create a new
+algorithm.
 
-Let us start with Bayesian network. Let $p(x_1,\dots,x_n)$ be any probability density function. Recall that we can decompose $p$ using a chain of condition probability:
+Let us start with Bayesian network. Let $p(x_1,\dots,x_n)$ be any probability
+density function. Recall that we can decompose $p$ using a chain of condition
+probability:
 \begin{align}
     p(x_1,\dots,x_n) = p(x_1)p(x_2|x_1)\cdots p(x_n|x_1,\dots,x_{n-1}).
 \end{align}
 
-Such decomposition is often computationally intractable. For BN, we modify such decomposition that each $x_i$ only depends on a small subset of ancestor variables $x_{A_i}$. For example, whether one takes the walk or bus depends on tomorrow's weather, and the weather depends a series of complicated natural factors. It would be an overkill if we model the choices of transportation on all these factors. Instead, we just let the weather be the only ancestor variable of the transportation choices and weather itself depends on the natural factors such as temperature, wind direction, etc. Bearing the intuition in mind, we can now give the formal definition of BN.
+Such decomposition is often computationally intractable. For BN, we modify such
+decomposition that each $x_i$ only depends on a small subset of ancestor
+variables $x_{A_i}$. For example, whether one takes the walk or bus depends on
+tomorrow's weather, and the weather depends a series of complicated natural
+factors. It would be an overkill if we model the choices of transportation on
+all these factors. Instead, we just let the weather be the only ancestor
+variable of the transportation choices and weather itself depends on the
+natural factors such as temperature, wind direction, etc. Bearing the intuition
+in mind, we can now give the formal definition of BN.
 
 \begin{definition}
     A Bayesian network is a directed acyclic graph (DAG) $G = (V:=[n],E)$ such that:
@@ -975,7 +993,8 @@ Such decomposition is often computationally intractable. For BN, we modify such 
 
     (ii) for each $X_i$, there is a corresponding conditional probability distribution $p(x_i|x_{A_i})$ where $A_i$ consists of all the immediate ancestors of $i$ in the graph $G$.
 
-    Conversely, we say a probability distribution $p$ factorizes over a DAG $G$ if it can be decomposed into a product of factors induced by $G$.
+    Conversely, we say a probability distribution $p$ factorizes over a DAG $G$ if
+    it can be decomposed into a product of factors induced by $G$.
 \end{definition}
 
 Let us take a look at a simple example from \cite{koller2009probabilistic}.
@@ -987,7 +1006,10 @@ Let us take a look at a simple example from \cite{koller2009probabilistic}.
     \label{fig:BNstudent}
 \end{figure}
 
-Denote difficulties, grade, intelligence, SAT, and Letter by their first letter $d,i,g,s,l$ respectively. We can decompose the joint probability $p(d,i,g,s,l)$ in figure \ref{fig:BNstudent} starting from end nodes $s$ and $l$ and moving upwards through the ancestry:
+Denote difficulties, grade, intelligence, SAT, and Letter by their first letter
+$d,i,g,s,l$ respectively. We can decompose the joint probability $p(d,i,g,s,l)$
+in figure \ref{fig:BNstudent} starting from end nodes $s$ and $l$ and moving
+upwards through the ancestry:
 \begin{align}
     p(d,i,g,s,l) = p(s|i) \cdot p(l|g) p(g |i,d)p(i)p(d).
 \end{align}
@@ -1006,8 +1028,8 @@ The reason that the example is well constructed is that not only it provides an 
 \end{align}
 For any $x,y,z$, $z$ fixed, we have
 \begin{align}
-    &\p(X=x,Y=y|Z=z) = \p(X=x|Z=z)\p(Y=y|Z=z)\p(Z=z|Z=z) \nonumber \\
-    =& \p(X=x|Z=z)\p(Y=y|Z=z)
+      & \p(X=x,Y=y|Z=z) = \p(X=x|Z=z)\p(Y=y|Z=z)\p(Z=z|Z=z) \nonumber \\
+    = & \p(X=x|Z=z)\p(Y=y|Z=z)
 \end{align}
 by the definition of conditional independence.
 
@@ -1015,7 +1037,11 @@ by the definition of conditional independence.
 
 (iii) Evidential and causal effects, representing (a) and (b) in figure \ref{fig:BNpatterns}. Clearly for unobserved $Z$ we have $X$ and $Y$ are not independent. However, if the intermediate node $Z$ is observed, then $X \bot Y |Z$. This means that everything it takes to determine the final state is provided, so the root in the network no longer plays a role in the outcome of its children. This is also clear in figure \ref{fig:BNstudent}. If the exam result is released, then the letter grade of a student will depend solely on the score, not on the smartness of the student.
 
-The three patterns can be used to define another important concept called d-separation. As we just see, dependency can be passed through paths on the graph via a series of 3-node patterns given observed data. If there are no such way to connect two clusters of nodes, then they are essentially conditionally independent, revealing insights of the data we are trying to analyze.
+The three patterns can be used to define another important concept called
+d-separation. As we just see, dependency can be passed through paths on the
+graph via a series of 3-node patterns given observed data. If there are no such
+way to connect two clusters of nodes, then they are essentially conditionally
+independent, revealing insights of the data we are trying to analyze.
 
 \begin{definition}[d-separation]
     Let $\mathcal{X}$, $\mathcal{Y}$ and $\mathcal{O}$ be three sets of nodes in a Bayesian network $G$. We say that $\mathcal{X}$ and $\mathcal{Y}$ are d-separated given $\mathcal{O}$ (The letter $\mathcal{O}$ stands for observed) if $\mathcal{X}$ and $\mathcal{Y}$ are not connected by an active path. An undirected path in $G$ (meaning one can go against the arrows) is called active given observed nodes $\mathcal{O}$ if for every sequence of consecutive three nodes $X,Y,Z$ on the path satisfies one of the following conditions:
@@ -1036,7 +1062,10 @@ The three patterns can be used to define another important concept called d-sepa
     \label{fig:dsep}
 \end{figure}
 
-In figure \ref{fig:dsep}, we mark the observed nodes with a darker gray color. It is easy to check that node $A$ and $F$ are d-separated given $B$ and $C$ on the left, while $B$ and $C$ are not d-separated given $A$ and $F$ on the right ($B \to D \to F \to E \to C$ is an active path). We then proceed to define
+In figure \ref{fig:dsep}, we mark the observed nodes with a darker gray color.
+It is easy to check that node $A$ and $F$ are d-separated given $B$ and $C$ on
+the left, while $B$ and $C$ are not d-separated given $A$ and $F$ on the right
+($B \to D \to F \to E \to C$ is an active path). We then proceed to define
 \begin{align}
     \mathcal{I}(G) = \{(\mathcal{X},\mathcal{Y},\mathcal{Z}) | \text{$\mathcal{X},\mathcal{Y}$ are d-separated by $\mathcal{Z}$}\}.
 \end{align}
@@ -1050,9 +1079,16 @@ This definition is where the power of graph theory starts to manifest. Recall th
     such that the only difference between $G_i$ and $G_{i+1}$, $1 \leq i \leq k=1$ is a single reversal of a covered edge.
 \end{theorem}
 
-This theorem, combined with an algorithm that can find $\mathcal{I}(G)$ and machine learning algorithms that can learn the graph structure, provides a capable framework for studying highly complex objects with lots of intricate dependencies. There are many other fascinating facts about BN but we should stop here to prevent ourselves from deviating too far. Now we will turn our attention to MRF.
+This theorem, combined with an algorithm that can find $\mathcal{I}(G)$ and
+machine learning algorithms that can learn the graph structure, provides a
+capable framework for studying highly complex objects with lots of intricate
+dependencies. There are many other fascinating facts about BN but we should
+stop here to prevent ourselves from deviating too far. Now we will turn our
+attention to MRF.
 
-Unlike BNs, the definition of an MRF does not derive strictly from decomposition of conditional probability. Rather, it assigns a factor(weight) to each clique(complete subgraph) in the graph.
+Unlike BNs, the definition of an MRF does not derive strictly from
+decomposition of conditional probability. Rather, it assigns a factor(weight)
+to each clique(complete subgraph) in the graph.
 
 \begin{figure}[ht]
     \centering
@@ -1061,7 +1097,10 @@ Unlike BNs, the definition of an MRF does not derive strictly from decomposition
     \label{fig:MRFexample}
 \end{figure}
 
-Take figure \ref{fig:MRFexample} for instance, in the left graph, there are four complete subgraphs $(A,B)$, $(B,C)$, $(C,D)$ and $(A,D)$. For any value assignments $(a,b,c,d)$ of the random variables $(A,B,C,D)$, we can write the factor of the value assignment as
+Take figure \ref{fig:MRFexample} for instance, in the left graph, there are
+four complete subgraphs $(A,B)$, $(B,C)$, $(C,D)$ and $(A,D)$. For any value
+assignments $(a,b,c,d)$ of the random variables $(A,B,C,D)$, we can write the
+factor of the value assignment as
 \begin{align}
     \tilde{p}(a,b,c,d) = \phi(a,b)\phi(b,c)\phi(c,d)\phi(a,d),
 \end{align}
@@ -1097,24 +1136,65 @@ Now we can give an alternative and equivalent definition based on the graph stru
     \label{fig:MRFindep}
 \end{figure}
 
-While both are powerful, MRFs and BNs excel at modeling different types of dependencies. Although neither is strictly more general, any BN distribution can be represented by an MRF through a process called moralization. This involves adding an edge between any pair of parents that share a common child (`marrying parents') and then making all edges undirected. Furthermore, the concept of conditional independence is defined differently: while BNs use d-separation via active paths, two sets of nodes in an MRF are conditionally independent given a third set if that third set separates them in the graph. The idea follows similarly as the evidential and causal effects in BN: a path of nodes connecting two clusters is the shared part of their randomness. If the path is fully observed, then the rest of randomness is conditionally independent. In particular, if all neighbors of a node are observed, then this node is independent from the rest of the network.
+While both are powerful, MRFs and BNs excel at modeling different types of
+dependencies. Although neither is strictly more general, any BN distribution
+can be represented by an MRF through a process called moralization. This
+involves adding an edge between any pair of parents that share a common child
+(`marrying parents') and then making all edges undirected. Furthermore, the
+concept of conditional independence is defined differently: while BNs use
+d-separation via active paths, two sets of nodes in an MRF are conditionally
+independent given a third set if that third set separates them in the graph.
+The idea follows similarly as the evidential and causal effects in BN: a path
+of nodes connecting two clusters is the shared part of their randomness. If the
+path is fully observed, then the rest of randomness is conditionally
+independent. In particular, if all neighbors of a node are observed, then this
+node is independent from the rest of the network.
 
-Upon this point, we can see that MRF has several advantages over BN. First, MRF is more versatile. We can apply MRF to a broader range of problems. Any BNs can be converted to MRF but not vice versa, and especially when the dependencies of the model are naturally symmetric. This gives us the second advantage, that MRFs are able to describe certain dependency structures that cannot be captured by BNs like $k$-CNF formulas.
+Upon this point, we can see that MRF has several advantages over BN. First, MRF
+is more versatile. We can apply MRF to a broader range of problems. Any BNs can
+be converted to MRF but not vice versa, and especially when the dependencies of
+the model are naturally symmetric. This gives us the second advantage, that
+MRFs are able to describe certain dependency structures that cannot be captured
+by BNs like $k$-CNF formulas.
 
-However, there are reasons that we cannot just use MRF everywhere. The primary drawback of MRF is the computation of $Z$. To compute the partition function $Z$, one might need to sum over an exponential number of possible value assignments. This summation is generally NP-hard. Moreover, since every BN is required to be acyclic and directed, it is very easy to generate data using the hierarchy of dependencies relations. Since MRF, in contrast, is undirected and thus has no ``starting points" or ancestors, it is often much harder to generate data from a MRF.
+However, there are reasons that we cannot just use MRF everywhere. The primary
+drawback of MRF is the computation of $Z$. To compute the partition function
+$Z$, one might need to sum over an exponential number of possible value
+assignments. This summation is generally NP-hard. Moreover, since every BN is
+required to be acyclic and directed, it is very easy to generate data using the
+hierarchy of dependencies relations. Since MRF, in contrast, is undirected and
+thus has no ``starting points" or ancestors, it is often much harder to
+generate data from a MRF.
 
-Since our work in chapter 3 mainly deals with intractable computations, we will dedicate some space to discuss sampling and \lovasz Local Lemma in the next section. We also encourage the reader to check out the textbook by Koller and Friedman \cite{koller2009probabilistic} for a more comprehensive introduction to PGMs, which is considered the standard textbook on the subject.
+Since our work in chapter 3 mainly deals with intractable computations, we will
+dedicate some space to discuss sampling and \lovasz Local Lemma in the next
+section. We also encourage the reader to check out the textbook by Koller and
+Friedman \cite{koller2009probabilistic} for a more comprehensive introduction
+to PGMs, which is considered the standard textbook on the subject.
 
 \subsection{The Necessity of Sampling and \lovasz Local Lemma} \label{intro_chap:sec:MRF:sec:sampling}
-In the previous section, we mentioned that computing the partition function $Z$ in an MRF directly is likely to be computationally intractable. Therefore, sampling algorithms are usually required so that we can avoid computations that scale exponentially. This is a clever and natural idea and approach, but it introduces a new problem.
+In the previous section, we mentioned that computing the partition function $Z$
+in an MRF directly is likely to be computationally intractable. Therefore,
+sampling algorithms are usually required so that we can avoid computations that
+scale exponentially. This is a clever and natural idea and approach, but it
+introduces a new problem.
 
-As the theme throughout this section, dependency is everywhere in the data we are trying to analyze. It often comes in the form of constraints, or a series of ``bad events". For the machine learning algorithm to effectively learn the PGM model, we need to make sure the samples we generate are from the actual conditional distributions from the data. Therefore when we are trying to sampling with constraints, it is important for us to know the (approximate) answers of the following two questions:
+As the theme throughout this section, dependency is everywhere in the data we
+are trying to analyze. It often comes in the form of constraints, or a series
+of ``bad events". For the machine learning algorithm to effectively learn the
+PGM model, we need to make sure the samples we generate are from the actual
+conditional distributions from the data. Therefore when we are trying to
+sampling with constraints, it is important for us to know the (approximate)
+answers of the following two questions:
 
 (i) Given a set of constraints, do the samples satisfying all conditions exist?
 
 (ii) If yes, how do we sample from the distribution effectively without spending exponential time or stuck in an finite loop. (Meeting one constraint will fail another. Sometimes constant adjustment without proper strategy will indefinitely prolong the sampling process.)
 
-Though there is no one-size-fits-all answer to the two questions, there are some general principles that can be applied to a wide range of problems. One of the most famous and widely used principle is \lovasz Local Lemma (LLL), discovered and proved by Erd\"os and \lovasz in 1975.
+Though there is no one-size-fits-all answer to the two questions, there are
+some general principles that can be applied to a wide range of problems. One of
+the most famous and widely used principle is \lovasz Local Lemma (LLL),
+discovered and proved by Erd\"os and \lovasz in 1975.
 
 \begin{lemma}[\cite{LLL1975}] \label{lem:LLL1975}
     Let $A_1,\dots,A_k$ be a sequence of events such that each event occurs with probability at most $p$ and such that each event if independent of all the other events except for at most $d$ of them. Assume
@@ -1124,17 +1204,26 @@ Though there is no one-size-fits-all answer to the two questions, there are some
     Then there is a nonzero probability that none of the events occurs.
 \end{lemma}
 
-Shearer improved the results in 1985 and the updated lemma becomes the \lovasz Local Lemma(LLL) we know today:
+Shearer improved the results in 1985 and the updated lemma becomes the \lovasz
+Local Lemma(LLL) we know today:
 \begin{lemma}[\cite{LLL1985}] \label{lem:LLL1985}
     Assuming the same conditions as lemma \ref{lem:LLL1975}, if we have $p \leq \frac{1}{2d}$. Assume
     \begin{align}
-        p <& \frac{(d-1)^{(d-1)}}{d^d}, \quad d>1 \nonumber \\
-        p <& \frac{1}{2}, \quad d=1.
+        p < & \frac{(d-1)^{(d-1)}}{d^d}, \quad d>1 \nonumber \\
+        p < & \frac{1}{2}, \quad d=1.
     \end{align}
     Then there is a nonzero probability that none of the events occurs.
 \end{lemma}
 
-Both lemma \ref{lem:LLL1975} and \ref{lem:LLL1985} answered the first existence problem. However, there is a lot of room for improvement. All the bad events have a common upper bound $p$, which reduces the applicability of the lemmas. Spencer in 1977 proved the asymmetric version of the lemma. To state this result, we need to the concept of dependency graphs, which are extensively used in chapter 3. To put in simple terms, a dependency graph is a graph with nodes representing a set of events such that mutually independent events are not adjacent, otherwise connected via an edge. With that being said, we have the following statement.
+Both lemma \ref{lem:LLL1975} and \ref{lem:LLL1985} answered the first existence
+problem. However, there is a lot of room for improvement. All the bad events
+have a common upper bound $p$, which reduces the applicability of the lemmas.
+Spencer in 1977 proved the asymmetric version of the lemma. To state this
+result, we need to the concept of dependency graphs, which are extensively used
+in chapter 3. To put in simple terms, a dependency graph is a graph with nodes
+representing a set of events such that mutually independent events are not
+adjacent, otherwise connected via an edge. With that being said, we have the
+following statement.
 
 \begin{lemma}[\cite{SPENCER197769}, Asymmetric Lovász local lemma]
     Let $\mathcal{A} = \{A_1, \dots, A_n\}$ be a finite set of events in the probability space $\Omega$. For $A \in \mathcal{A}$, let $\Gamma(A)$ be the neighbors of $A$ in the dependency graph. Assume there exists a map $f: \mathcal{A} \to [0,1)$ such that for every $A \in \mathcal{A}$,
@@ -1147,6 +1236,87 @@ Both lemma \ref{lem:LLL1975} and \ref{lem:LLL1985} answered the first existence 
     \end{align}
 \end{lemma}
 
-As we can see, the asymmetric LLL has a stronger result, even with a positive lower bound. However, the improved existence does not lead to a actionable algorithm that helps us sample from the distribution. All proofs of the three lemmas above are non-constructive. In order to put this powerful mathematical fact into practice, there has been many attempts seeking for constructive proofs or better, an algorithmic version of LLL. To name a few, Beck in 1991 gave an algorithmic proof of LLL under polynomial time, one of the early milestones that turned LLL into an effective sampling technique. The most well-known result is probably by Moser and Tardos (\cite{moser2009constructiveproofgenerallovasz}). Because of their improvement and novelty, Robin Moser and Gábor Tardos received the Gödel Prize in 2020.
+As we can see, the asymmetric LLL has a stronger result, even with a positive
+lower bound. However, the improved existence does not lead to a actionable
+algorithm that helps us sample from the distribution. All proofs of the three
+lemmas above are non-constructive. In order to put this powerful mathematical
+fact into practice, there has been many attempts seeking for constructive
+proofs or better, an algorithmic version of LLL. To name a few, Beck in 1991
+gave an algorithmic proof of LLL under polynomial time, one of the early
+milestones that turned LLL into an effective sampling technique. The most
+well-known result is probably by Moser and Tardos
+(\cite{moser2009constructiveproofgenerallovasz}). Because of their improvement
+and novelty, Robin Moser and Gábor Tardos received the Gödel Prize in 2020.
 
-Thus far, we have introduced most background knowledge related to our work in chapter 3. We started with the importance of the overarching dependency problem, then proceeded to give a brief history of the tools we use. Finally, we introduced LLL, which we later incorporate into a neural solver with parallelism capability. Starting from graph theory and probability, the intersection between various fields of mathematics and computer science never ceases to amaze us with its beauty and potential.
+Thus far, we have introduced most background knowledge related to our work in
+chapter 3. We started with the importance of the overarching dependency
+problem, then proceeded to give a brief history of the tools we use. Finally,
+we introduced LLL, which we later incorporate into a neural solver with
+parallelism capability. Starting from graph theory and probability, the
+intersection between various fields of mathematics and computer science never
+ceases to amaze us with its beauty and potential.
+
+\section{Factor Analysis and Variational Inference} \label{intro_chap:sec:FA_VI}
+\subsection{Combining DR and PGM}
+In previous sections \ref{intro_chap:sec:tsne} and \ref{intro_chap:sec:MRF}, we
+have discussed the importance and difficulties of problems in probability and
+data science that arise from high dimensionality and dependencies. To solve
+these two problems, scientists created dimension reduction and probabilistic
+graphic models to tackle them respectively. For our work in chapter 4, the
+algorithm we develop involves both dimension reduction and probabilistic
+graphic models. The framework we invented is called Variational inference
+Factor Analysis (VarFA). It is self-explanatory that this toolkit combines
+variational inference with factor analysis.
+
+From the dimension reduction perspective, the variational inference part draws
+inspiration of classical Variational AutoEncoder (VAE), which utilizes the
+so-called ``latent dimensions" to generate output similar to the input data
+set. To understand latent dimensions, let us take a look at some real-life
+examples, such as modeling in games. For large games (especially open world
+games) it is impossible to create models for every single NPC, building and
+tree, etc. One could use the same object repetitively, but seeing two identical
+people on the street will definitely break immersion. Instead, game developers
+want to generate a set of objects that are similar to the in-game object they
+have already created, but different. If we see input image $X$ as
+high-dimensional data with pixel information, then we want to find a
+probabilistic algorithm that can compute the probability $p(X)$, where $p$
+refers to the probability of how likely this collection of pixel can be seen as
+similar objects created manually by developers. If $p$ is high, we take the
+image and a new in-game object is generated.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=10cm]{VAEMNIST.png}
+    \caption{The original handwritten digits from MNIST (top row) and VAE-generated digits (bottom row), from \cite{VAE2023}. Though some outputs are not entirely natural, all are recognizable and there is no mixing of two different digits.}
+    \label{fig:VAEMNIST}
+\end{figure}
+
+But the task is not as easy as it seems. If we use brutal force approaches, we
+can end up with an NPC with body of a human and head of a cat, if the pool of
+hand-drawn objects contain both humans and buses. This will create a lot of
+trouble. However, if the model is designed to assign a category to each of the
+objects, such as human, vehicles, plants, etc, then it will know not to mix
+things up when generating objects. The vector (human, vehicles, plants,
+$\dots$) is the latent dimension we are talking about. In practice, latent
+dimensions usually do not have meaningful labels, and they do not need to. Just
+as t-SNE, the latent dimensions are used to represent different types of data
+samples and make sure the output is consistent with the
+categorization/representing clusters.
+
+As for PGM viewpoint, the architecture of VarFA can be represented as a neural
+network (direct graph), where each layers of input determines the
+values/distributions of the next layers. The training process of the model is
+essentially learning the parameters on the graph. This firmly places VarFA in
+the PGM family. Indeed, as we can see in chapter 4, we model the
+performance/grades of students based on latent skill levels. How well a student
+perform on a specific test question can be a combination of related skills.
+VarFA establishes the dependency structures between competence and exam scores,
+not just predicting them.
+
+The only background we have not covered is factor analysis. In the next
+section, we will cover the basic concepts of factor analysis as well as its
+historical heritage. Afterwards, we will discuss the concepts and techniques we
+borrow from VAE. With all the topics covered, the readers should have a
+sufficient context to understand the motivation and contribution of our work in
+chapter 4.
+\subsection{Lineage of Factor Analysis}

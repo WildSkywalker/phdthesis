@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex introchapter"] 1744609124.47929 "introchapter.aux" "introchapter.bbl" "introchapter" 1744609645.41967 0
-  "./citation.bib" 1744605281 80505 e170ff82c764e0ce6d610857814457f9 ""
+["bibtex introchapter"] 1744686561.90877 "introchapter.aux" "introchapter.bbl" "introchapter" 1744686794.3195 0
+  "./citation.bib" 1744686561 80776 e357eb827fed8ce96f0bf8fb0965369f ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "introchapter.aux" 1744609644 24065 a6e562dee51ad884ecd88cdd8eb17392 "pdflatex"
+  "introchapter.aux" 1744686793 25301 dee4fdcc0e2498eaaf7b8cb95642d7d1 "pdflatex"
   (generated)
   "introchapter.bbl"
   "introchapter.blg"
   (rewritten before read)
-["pdflatex"] 1744609641.20536 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744609645.42081 0
+["pdflatex"] 1744686789.59683 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744686794.32067 0
   "A_profile_HMM_modelling_a_multiple_sequence_alignment.png" 1744354421 209977 b9400d6741209ce131e6ec61338c5cba ""
   "BNpatterns.png" 1744583726 90044 2b457978e3f96f4da7a6ab8bd9c891c9 ""
   "BNstudent.png" 1744582077 80487 1213a6ff3100b029be7509e1f49a773c ""
@@ -202,6 +202,7 @@
   "MRFexample.png" 1744595955 99575 d392ee2161f602e79041edebdbda5f39 ""
   "MRFindep.png" 1744599586 83814 547a57f6f3d47e870b1c2ab9e1d0402e ""
   "RNA2015DRplot.png" 1744161982 110947 e4b03b008a6918907a79cae2b9764997 ""
+  "VAEMNIST.png" 1744686317 296859 c8647b432330e6e5a90e5667e9bec4c3 ""
   "beliefprop.png" 1744522613 60519 c911c795e15ed769eea54a18efb955b5 ""
   "casualmap.png" 1744592118 49818 cf4b64147420b8b07a5e7c4fe4c1e973 ""
   "color-wheels-RYB-RGB.jpg" 1743407454 156361 e2c3bd2256906a3f96b2c945e466f941 ""
@@ -211,12 +212,12 @@
   "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" 1744567877 15674 d3c89c2485b8fea46497b6acdd7ccdcb ""
   "guyipreammath.tex" 1744567924 4338 8d9e94373d036c14f4e327311f9f6988 ""
   "heavytail_tsne.jpg" 1744082358 295298 2f810197b361c0391683a5b2d6648525 ""
-  "intro_main_text.tex" 1744609640 92199 275c2cdfca93bf3d3f8255e2ba47aaa7 ""
-  "introchapter.aux" 1744609644 24065 a6e562dee51ad884ecd88cdd8eb17392 "pdflatex"
-  "introchapter.bbl" 1744609124 21016 b6f22f7e944e4a25ebfb4f35e06032bb "bibtex introchapter"
-  "introchapter.out" 1744609644 2424 1de734594e35d2dbf10ab4a7438869f3 "pdflatex"
+  "intro_main_text.tex" 1744686788 96464 86910e2a964d8e539eedb2eba5fdc851 ""
+  "introchapter.aux" 1744686793 25301 dee4fdcc0e2498eaaf7b8cb95642d7d1 "pdflatex"
+  "introchapter.bbl" 1744686562 21232 7df9f52e8b70b0af062dff5640cbba9d "bibtex introchapter"
+  "introchapter.out" 1744686793 3049 c06fc61b4eb8c210ec71172cbaccce02 "pdflatex"
   "introchapter.tex" 1744567877 15674 d3c89c2485b8fea46497b6acdd7ccdcb ""
-  "introchapter.toc" 1744609644 1029 e626b4f5e924769b8a191be1bad46113 "pdflatex"
+  "introchapter.toc" 1744686793 1307 160d6c15ea5154dfb29161abc61c401c "pdflatex"
   "isomap.jpg" 1744002491 321008 6e6c0fe897c8c4f2a42f748ec86c8bfa ""
   "mnist_tsne.jpg" 1744075016 265242 8ee2e0649a54606a2fd898b287751931 ""
   "moreimagesegmentation.png" 1744341107 1406623 94c2f58bceca379db781d2d00f10c98b ""

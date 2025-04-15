@@ -1,4 +1,4 @@
-\begin{thebibliography}{66}
+\begin{thebibliography}{67}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -474,5 +474,10 @@ Robin~A. Moser and Gábor Tardos.
 \newblock A constructive proof of the general lovasz local lemma, 2009,
   0903.0544.
 \newblock URL \url{https://arxiv.org/abs/0903.0544}.
+
+\bibitem[Mak et~al.(2023)Mak, Han, and Yin]{VAE2023}
+Hugo Mak, Runze Han, and Hoover Yin.
+\newblock Application of variational autoencoder (vae) model and image
+  processing approaches in game design, 02 2023.
 
 \end{thebibliography}
