@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex introchapter"] 1744686561.90877 "introchapter.aux" "introchapter.bbl" "introchapter" 1744686794.3195 0
-  "./citation.bib" 1744686561 80776 e357eb827fed8ce96f0bf8fb0965369f ""
+["bibtex introchapter"] 1745043034.4206 "introchapter.aux" "introchapter.bbl" "introchapter" 1745043235.67123 0
+  "./citation.bib" 1745040801 83027 2e11c04f56cf3e013cb040b16feb2b6c ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "introchapter.aux" 1744686793 25301 dee4fdcc0e2498eaaf7b8cb95642d7d1 "pdflatex"
+  "introchapter.aux" 1745043234 26163 81e39d3b927f8907d58c3b38b0e8065e "pdflatex"
   (generated)
   "introchapter.bbl"
   "introchapter.blg"
   (rewritten before read)
-["pdflatex"] 1744686789.59683 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1744686794.32067 0
+["pdflatex"] 1745043230.87709 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1745043235.67239 0
   "A_profile_HMM_modelling_a_multiple_sequence_alignment.png" 1744354421 209977 b9400d6741209ce131e6ec61338c5cba ""
   "BNpatterns.png" 1744583726 90044 2b457978e3f96f4da7a6ab8bd9c891c9 ""
   "BNstudent.png" 1744582077 80487 1213a6ff3100b029be7509e1f49a773c ""
@@ -212,12 +212,12 @@
   "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" 1744567877 15674 d3c89c2485b8fea46497b6acdd7ccdcb ""
   "guyipreammath.tex" 1744567924 4338 8d9e94373d036c14f4e327311f9f6988 ""
   "heavytail_tsne.jpg" 1744082358 295298 2f810197b361c0391683a5b2d6648525 ""
-  "intro_main_text.tex" 1744686788 96464 86910e2a964d8e539eedb2eba5fdc851 ""
-  "introchapter.aux" 1744686793 25301 dee4fdcc0e2498eaaf7b8cb95642d7d1 "pdflatex"
-  "introchapter.bbl" 1744686562 21232 7df9f52e8b70b0af062dff5640cbba9d "bibtex introchapter"
-  "introchapter.out" 1744686793 3049 c06fc61b4eb8c210ec71172cbaccce02 "pdflatex"
+  "intro_main_text.tex" 1745043230 102161 cdfd56b60250e3be304afec21d047386 ""
+  "introchapter.aux" 1745043234 26163 81e39d3b927f8907d58c3b38b0e8065e "pdflatex"
+  "introchapter.bbl" 1745043034 22795 ee43c16bbcc88d6b0e211fe1e77b0a31 "bibtex introchapter"
+  "introchapter.out" 1745043234 3339 f1f68275abbab3a1499488974585ffea "pdflatex"
   "introchapter.tex" 1744567877 15674 d3c89c2485b8fea46497b6acdd7ccdcb ""
-  "introchapter.toc" 1744686793 1307 160d6c15ea5154dfb29161abc61c401c "pdflatex"
+  "introchapter.toc" 1745043234 1418 be5e32ccc87848f8d9a20b28fbca8fb3 "pdflatex"
   "isomap.jpg" 1744002491 321008 6e6c0fe897c8c4f2a42f748ec86c8bfa ""
   "mnist_tsne.jpg" 1744075016 265242 8ee2e0649a54606a2fd898b287751931 ""
   "moreimagesegmentation.png" 1744341107 1406623 94c2f58bceca379db781d2d00f10c98b ""

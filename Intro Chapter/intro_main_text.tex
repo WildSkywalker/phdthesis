@@ -1272,12 +1272,12 @@ From the dimension reduction perspective, the variational inference part draws
 inspiration of classical Variational AutoEncoder (VAE), which utilizes the
 so-called ``latent dimensions" to generate output similar to the input data
 set. To understand latent dimensions, let us take a look at some real-life
-examples, such as modeling in games. For large games (especially open world
-games) it is impossible to create models for every single NPC, building and
-tree, etc. One could use the same object repetitively, but seeing two identical
-people on the street will definitely break immersion. Instead, game developers
-want to generate a set of objects that are similar to the in-game object they
-have already created, but different. If we see input image $X$ as
+examples, such as modeling in games. For large games (such as games with vast
+open worlds) it is impossible to create models for every single NPC, building
+and tree, etc. One could use the same object repetitively, but seeing two
+identical people on the street will definitely break immersion. Instead, game
+developers want to generate a set of objects that are similar to the in-game
+object they have already created, but different. If we see input image $X$ as
 high-dimensional data with pixel information, then we want to find a
 probabilistic algorithm that can compute the probability $p(X)$, where $p$
 refers to the probability of how likely this collection of pixel can be seen as
@@ -1292,7 +1292,7 @@ image and a new in-game object is generated.
 \end{figure}
 
 But the task is not as easy as it seems. If we use brutal force approaches, we
-can end up with an NPC with body of a human and head of a cat, if the pool of
+can end up with an NPC with body of a human and head of a bus, if the pool of
 hand-drawn objects contain both humans and buses. This will create a lot of
 trouble. However, if the model is designed to assign a category to each of the
 objects, such as human, vehicles, plants, etc, then it will know not to mix
@@ -1304,7 +1304,7 @@ samples and make sure the output is consistent with the
 categorization/representing clusters.
 
 As for PGM viewpoint, the architecture of VarFA can be represented as a neural
-network (direct graph), where each layers of input determines the
+network (directed graph), where each layers of input determines the
 values/distributions of the next layers. The training process of the model is
 essentially learning the parameters on the graph. This firmly places VarFA in
 the PGM family. Indeed, as we can see in chapter 4, we model the
@@ -1320,3 +1320,89 @@ borrow from VAE. With all the topics covered, the readers should have a
 sufficient context to understand the motivation and contribution of our work in
 chapter 4.
 \subsection{Lineage of Factor Analysis}
+We have introduced the brief history of dimension reduction in section
+\ref{intro_chap:sec:tsne:DR}, including a brief reference to VAE. In fact,
+Factor Analysis (FA) is also a dimension reduction technique, but not in the
+same fashion as the other algorithms we introduced earlier. Therefore, it would
+be beneficial to give a short rundown of this approach before we move onto the
+next section.
+
+FA was widely considered to be the brain child of Charles Spearman
+(\cite{Spearman_1904}), the famous statistician and psychologist known for the
+famous ``Spearman Correlation''. In his famous paper, he conducted a series of
+experiments on the performance of students in different school subjects and
+found that although a lot of the subjects were seemingly unrelated, the
+students' performance was consistent across the board. This led him to think
+that there was one single underlying factor that determines the competence of
+students, or colloquially speaking, ``smart kids can learn any subject quickly
+and easily''. What he proposed was the so-called single-factor model,
+associating students' performance with a single variable called ``general
+mental ability''. Coincidentally, VarFA also focuses its application in
+education and the modelling of students' performance. It is no doubt that
+education is more than vital to the entire human society, and that is precisely
+why we continue to go back to such topic, more so in the era of machine
+learning and AI.
+
+After Spearman's idea, various researchers tried to expand the model to
+naturally include the cases where multiple factors are required to model and
+predict the data. One of the most important cornerstones in this field is the
+work by Thurstone (\cite{thurstone1947multiple}). This book includes various
+important works starting from the 1930s. The discoveries in this period laid
+the foundation of the FA framework we are familiar with today.
+
+In particular, assume there are $p$ rounds of observations for $n$ individuals.
+FA assumes that the collective behavior of the individuals can be explained by
+$k$ common factors, and $k < p$. Mathematically speaking,
+\begin{align} \label{eq:FA}
+    x_{i,m} - \mu_i = \sum_{j=1}^k l_{i,j}f_{j,m} + \epsilon_{i,m}.
+\end{align}
+Here, $x_{i,m}$ is the $i$-th observation of the $m$-th individual, $\mu_i$ is the mean of the $i$-th observation, $l_{i,j}$ is the loading of the $j$-th factor on the $i$-th observation, $f_{j,m}$ is the $j$-th factor score for the $m$-th individual and $\epsilon_{i,m}$ is the error term, usually with zero mean and finite variance. This definition is the formulation of basically one sentence:
+
+\textbf{For the samples we are investigating, the observations are linear combinations of the common factors plus some noise.}
+
+And it is easy to see that \eqref{eq:FA} can be rewritten in the form of matrix
+multiplication:
+\begin{align}
+    X - M = LF + \epsilon.
+\end{align}
+
+More details about factor analysis will be given in chapter 4. In this
+introductory chapter, it is more important to address te unaddressed statement
+at the beginning of this section: why is factor analysis different from other
+dimension reduction techniques, though it seems very basic, only using linear
+combinations and independent noise? The answer lies not in the mathematical
+formulation, but rather the philosophy of usage. \textbf{FA is the quantitative
+    catalyst of statistical intuition.}
+
+To explain this answer, let us point out that FA can be divided into two
+categories: Exploratory Factor Analysis (EFA) and Confirmatory Factor Analysis
+(CFA). EFA is created in 1930s and largely contributed by Thurstone
+(\cite{thurstone1947multiple}). In EFA, the user does not specify the structure
+of observations and is required to determine the number of factors.
+Afterwards, the user needs to choose a rotation method to make the factors more
+interpretable. Unlike PCA, EFA's goal is to help researchers interpret the
+latent factors, whereas PCA stops after giving the data points in lower
+dimensions. EFA aims to generate intuitions.Though closely related to PCA, the
+mind set behind EFA was already different even in early 20th century.
+
+This unique philosophy of EFA was extended further when CFA was created in
+1960s by Jöreskog (\cite{Jöreskog_1967}, \cite{Jöreskog_1969}). The user now
+needs to specify the structure of the model, from the number of factors and the
+loadings for each of them. CFA was created to provide a statistically sound
+procedure to verify what might be considered ``a good guess from experienced
+researchers''. To use this model, researchers are required to think carefully
+about the underlying structure of their measurements, and provide a plausible
+model to evaluate those thoughts. CFA tests intuition.
+
+The DR techniques we introduced in section \ref{intro_chap:sec:tsne} are mostly
+automatic, input the data and the algorithm will do the rest for you.
+Meanwhile, FA values human input and strives to make the results explainable.
+Though a lot of advancement in today's AI comes with the caveat of ``black
+box", FA's lineage was well preserved and inspired a lot of subsequent
+discoveries in the field of Explainable Artificial Intelligence (XAI)
+(\cite{doshivelez2017}, \cite{miller2018}). It is also the reason why we choose
+FA to combine with the generative power of VAE. Our work in chapter 4 is not a
+mere mix and swap of models, but rather a concrete practice of new mindsets
+towards the goal of fostering human learning with machine learning.
+
+\subsection{The Modern Toolkit: Variational Autoencoders} \label{intro_chap:sec:VarFA:sec:VAE}
