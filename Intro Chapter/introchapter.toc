@@ -13,3 +13,4 @@
 \contentsline {subsection}{\numberline {4.1}Combining DR and PGM}{32}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Lineage of Factor Analysis}{33}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}The Modern Toolkit: Variational Autoencoders}{34}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The High-Level View of VarFA based on VAE}{39}{subsection.4.4}%

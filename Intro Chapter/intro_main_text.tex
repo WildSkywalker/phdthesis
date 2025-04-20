@@ -42,11 +42,11 @@ will transform a classic theorem, Lov\'asz Local Lemma, into a probabilistic
 algorithm that can learn difficult combinatorial structures. We will also
 provide the theoretical foundation of the algorithm, proving its correctness
 and giving an estimation of the running time expectation. In chapter 4, we will
-dive into another dimension reduction algorithm, Variational Autoencoder (VAE),
-and how a particularly designed VAE can handle missing data via imputation and
-help us through factor analysis (thus the name VarFA). All three algorithms
-represent a different yet extremely important aspect of data science, each with
-its own charm and characteristics.
+dive into another dimension reduction algorithm, Variational Factor Analysis
+(VarFA), and how we can combine the classic Variational AutoEncoder (VAE) with
+factor analysis to create a more interpretable generative model. All three
+algorithms represent a different yet extremely important aspect of data
+science, each with its own charm and characteristics.
 
 For the rest of this chapter, we will provide a brief introduction to the
 probabilistic algorithms we will discuss in this thesis. From basic concepts,
@@ -389,7 +389,7 @@ Isomap tries to summarize.
     \caption{A failed LLE output based on the same Swiss roll input in figure \ref{fig:isomap_swissroll}. The algorithm tries to search for neighbors in a overly broad area, causing the result to be distorted.}%
     \label{fig:lle_swissroll_failed}
 \end{figure}
-Nevertheless, Isomap is not perfect, either. As we already mentioned earlier in this section, MDS is a computationally expensive algorithm. On the top of that, given a graph $G = (V,E)$, the Dijkstra algorithm has a time complexity of $O(|E| + |V| \log |V|)$, where $|E|$ and $|V|$ are the number of edges and vertices in the graph respectively (\cite{Fredman1984fibonacci}). For dense graphs, $|E|$ will scale quadratically with $|V|$. By combining two computationally intense algorithms, Isomap is inevitably slow and becomes a bad choice for large and dense data sets.
+Nevertheless, Isomap is not perfect, either. As we already mentioned earlier in this section, MDS is a computationally expensive algorithm. On top of that, given a graph $G = (V,E)$, the Dijkstra algorithm has a time complexity of $O(|E| + |V| \log |V|)$, where $|E|$ and $|V|$ are the number of edges and vertices in the graph respectively (\cite{Fredman1984fibonacci}). For dense graphs, $|E|$ will scale quadratically with $|V|$. By combining two computationally intense algorithms, Isomap is inevitably slow and becomes a bad choice for large and dense data sets.
 
 Moreover, Isomap is very sensitive to the choice of hyperparameters and
 outliers. If the number of neighbors or the ball radius is too small, Isomap
@@ -432,7 +432,7 @@ distributions to record the information of neighborhood. With this new
 framework, we need a new concept to measure the distance between two
 probability distributions, and that is the famous Kullback-Leibler (KL)
 divergence.
-\begin{definition}
+\begin{definition} \label{def:KL_divergence}
     Let $P$ and $Q$ be two probability measures with $p(x)$ and $q(x)$ as their respective probability density functions. The KL divergence between $P$ and $Q$ is defined as:
     \begin{align}
         D_{KL}(P||Q) = \int p(x) \log\left(\frac{p(x)}{q(x)}\right) dx.
@@ -830,8 +830,8 @@ Bayesian networks and Markov random fields, the two pillars of the realm.
 Continuing from Wright's work, Judea Pearl formalized Bayesian Networks (BN) in
 1988 (\cite{10.5555/534975}). Similar to path analysis, BN uses nodes to
 represent variables and arrows (directed edges) to represent direct dependence.
-On the top of that, BN accurately captures the conditional probability using
-the chain decomposition. Let $X_1, X_2, \ldots, X_n$ be a collection of random
+On top of that, BN accurately captures the conditional probability using the
+chain decomposition. Let $X_1, X_2, \ldots, X_n$ be a collection of random
 variables and $p(x_1,\dots, x_n)$ their joint density function. We have
 \begin{align}
     p(x_1,\dots, x_n) = p(x_1)p(x_2|x_1)\cdots p(x_n|x_1,\dots,x_{n-1}).
@@ -1378,8 +1378,8 @@ To explain this answer, let us point out that FA can be divided into two
 categories: Exploratory Factor Analysis (EFA) and Confirmatory Factor Analysis
 (CFA). EFA is created in 1930s and largely contributed by Thurstone
 (\cite{thurstone1947multiple}). In EFA, the user does not specify the structure
-of observations and is required to determine the number of factors.
-Afterwards, the user needs to choose a rotation method to make the factors more
+of observations and is required to determine the number of factors. Afterwards,
+the user needs to choose a rotation method to make the factors more
 interpretable. Unlike PCA, EFA's goal is to help researchers interpret the
 latent factors, whereas PCA stops after giving the data points in lower
 dimensions. EFA aims to generate intuitions.Though closely related to PCA, the
@@ -1406,3 +1406,315 @@ mere mix and swap of models, but rather a concrete practice of new mindsets
 towards the goal of fostering human learning with machine learning.
 
 \subsection{The Modern Toolkit: Variational Autoencoders} \label{intro_chap:sec:VarFA:sec:VAE}
+Apart from FA, VAE is another core piece of the puzzle in our work about VarFA.
+We brought up VAE in section \ref{intro_chap:sec:tsne:DR} briefly and now it is
+a good time to formally introduce it. Similar to algorithms like t-SNE, VAE
+uses the so-called latent dimensions that are often not interpretable. However,
+unlike t-SNE, VAE is a generative model, meaning instead of visualization, it
+is to generate new data points that follow the same distribution as the input
+data. Invented by Welling and Kingma in 2013 (\cite{kingma2013auto}), not long
+after CNN was coined. VAE is an important milestone in the field of artificial
+intelligence because the capability of generating content based on training
+materials back then was truly revolutionary.
+
+That being said, VAE is not the silver bullet, far from it. As we will see very
+soon in the deduction of the method, VAE relies on a lot of bold assumptions
+and approximations, and offers little room for tuning. Unlike t-SNE and MRF,
+VAE is not used in chapter 4, but extremely important in the overall
+literature. Therefore we will give a more detailed walkthrough of this amazing
+algorithm, focusing on the underlying assumptions and more explicit
+mathematical details. (There are many other more standard materials on VAE,
+such as the famous tutorial by Carl Doersch
+\cite{doersch2021tutorialvariationalautoencoders}.)
+
+Given a data point $\vx$ in high dimension, VAE assumes that $\vx$ is
+determined by a fewer number of latent variables, denoted as a lower
+dimensional vector $\vz$. Using conditional probability decomposition, we can
+write
+\begin{align}
+    p(\vx|\vz) = \int p(\vx|\vz)p(\vz)d\vz \equiv \int p_{\theta}(\vx|\vz)p(\vz)d\vz,
+\end{align}
+where $\theta$ is the hyperparameter VAE is trying to learn. The exact formulation is given in \eqref{eq:pzbernoulli} and \eqref{eq:pzcontinuous}. The true bold claim here is not that data itself depends on latent variables, but the assumption that $p(z)$ is (often) a multi-dimensional random variable with i.i.d., standard normal entries. Bold as it might be, the assumption itself is in fact pretty well-grounded. For instance, your performance at a certain sport is determined by a series of factors such as your endurance and strength. It would be normal that both your strength and endurance follow a Gaussian-like distribution. Your endurance might fluctuate around your ``average'' level and performing significantly above or below your average is getting exponentially rare. Since all Gaussian distributions are the result of a simple affine transformation of the standard normal distribution, we might as well assume that the latent variables are i.i.d. standard normal from the very beginning. Furthermore, $p_{\theta}$ is also mostly set to be a Gaussian distribution if the target data is continuous following the same logic.
+
+After giving $p(z)$ a distribution, determining the parameters for
+$p_{\theta}(x|z)$ directly is not feasible. That is the primal motivation for
+the encoder-decoder architecture. By Bayes formula, we can write
+\begin{align}
+    p_{\theta}(\vz|\vx) = \frac{p_{\theta}(\vx|\vz) p(\vz)}{p(\vx)} = \frac{p_{\theta}(\vx|\vz) p(\vz)}{\int p_{\theta}(\vx|\vz') p(\vz') d\vz'}.
+\end{align}
+This means we want to learn the relationship between the input data and the latent factors first before we start generating data. This way we can use the learned hyperparameter $\theta$ and samples from $p(\vz)$ to generate new data points. This leads to the next problem: $p(\vx)$ is also intractable. Therefore, we need another parametrized Gaussian distribution $q_{\phi}(\vz|\vx)$ to approximate $p_{\theta}(\vz|\vx)$. This is the second bold assumption, that the conditional distribution of latent variables given observed data is (almost) Gaussian. To give an intuitive example, suppose we see a student performing exceptionally well in a math exam, we might take a high guess at the student's math skill (mean), or the related latent variable. If the student is consistent, then we might decrease the variance. Formally speaking, $q_{\phi}(\vz|\vx)$ takes the following form:
+\begin{align}
+    q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx))).
+\end{align}
+Here, $\vmu_{\phi}(\vx)$ is the mean vector. $\vsigma^2_{\phi}(\vx)$ is the variance vector (diagonal elements of the covariance matrix).
+The encoder network takes $\vx$ as input and outputs the parameters $\vmu_{\phi}(\vx)$ and $\vsigma^2_{\phi}(\vx)$ (or often $\log \vsigma^2_{\phi}(\vx)$ for numerical stability). The explicit formula for the probability density function (PDF) of $q_{\phi}(\vz|\vx)$, assuming a $N$-dimensional latent space, is:
+\begin{align}
+    q_{\phi}(\vz|\vx) = \frac{1}{(2\pi)^{N/2} |\mSigma_{\phi}(\vx)|^{1/2}} \exp\left(-\frac{1}{2} (\vz - \vmu_{\phi}(\vx))^T \mSigma_{\phi}(\vx)^{-1} (\vz - \vmu_{\phi}(\vx))\right)
+\end{align}
+where $|\mSigma_{\phi}(\vx)|$ is the determinant of the covariance matrix $\mSigma_{\phi}(\vx)$, which simplifies to $\prod_{j=1}^{N} \sigma_{j, \phi}^2(\vx)$.
+
+Let us take a pause here and recall that we make two bold assumptions during
+the setup of the encoder-decoder framework. We assume that the latent variables
+are i.i.d. standard normal random variables, and the conditional distribution
+of latent variables given observed data is also Gaussian. Without these two
+assumptions, VAE will not be computationally possible. So qualitatively
+speaking, we can say VAE roots itself in one core belief:
+
+\textbf{The data we are working on is intrinsically Gaussian.}
+
+Now let us go back to the mathematical details. We call $p_{\theta}(\vz|\vx)$
+the true posterior distribution, the distribution ``post the observation'' and
+$p(z)$ the prior, the distribution ``prior to the observation''. We measure the
+distance between our approximation $q_{\phi}(\vz|\vx)$ and
+$p_{\theta}(\vz|\vx)$ using KL-divergence. By definition
+\ref{def:KL_divergence}, we compute
+\begin{align}
+    \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} & = \int q_{\phi}(\vz|\vx) \log \frac{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} d\vz                   \\
+                                                & = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vz|\vx) \right]
+\end{align}
+Substitute $p_{\theta}(\vz|\vx) = \frac{p_{\theta}(\vx|\vz) p(\vz)}{p(\vx)}$:
+\begin{align}
+     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                      \\
+     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vx|\vz) - \log p(\vz) + \log p(\vx) \right]
+\end{align}
+Since $\log p(\vx)$ does not depend on $\vz$, the expectation is just $\log p(\vx)$:
+\begin{align}
+     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                                                                     \\
+     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right] - \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx)
+\end{align}
+The first term is the KL divergence between the approximate posterior and the prior:
+\begin{align}
+    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right]
+\end{align}
+Substituting this back into the equation of $\KL{q_{\phi}(\vz|\vx)}{p(\vz)}$ gives:
+\begin{align}
+     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                \\
+     & \quad \quad = \KL{q_{\phi}(\vz|\vx)}{p(\vz)} - \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx)
+\end{align}
+Rearranging for $\log p(\vx)$:
+\begin{align}
+     & \log p(\vx) \nonumber                                                                                                                                                \\
+     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)} + \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}
+\end{align}
+Since KL divergence is always non-negative ($\KL{q}{p} \ge 0$), we have:
+\begin{align}
+    \log p(\vx) \ge \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)}
+\end{align}
+This right-hand side is the Evidence Lower Bound (ELBO), often denoted $\mathcal{L}(\theta, \phi; \vx)$:
+\begin{align}
+    \mathcal{L}(\theta, \phi; \vx) = \underbrace{\e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right]}_{\text{Reconstruction Term}} - \underbrace{\KL{q_{\phi}(\vz|\vx)}{p(\vz)}}_{\substack{\text{KL Divergence /} \\ \text{Regularization Term}}}
+    \label{eq:elbointro}
+\end{align}
+Maximizing the ELBO with respect to parameters $\theta$ and $\phi$ serves two purposes:
+
+1. It pushes $\log p(\vx)$ higher (our original goal).
+
+2. It minimizes the KL divergence between the approximate posterior $q_{\phi}(\vz|\vx)$ and the true posterior $p_{\theta}(\vz|\vx)$ (because $\log p(\vx)$ is fixed for a given $\vx$, and the ELBO is $\log p(\vx) - \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}$).
+
+To making things mathematically explicit, let us take a look at the the formula
+of ELBO \eqref{eq:elbointro}. The KL divergence term measures how much the
+approximate posterior (learned by the encoder) deviates from the prior
+$p(\vz)$. Specifically, when $q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx),
+    \text{diag}(\vsigma^2_{\phi}(\vx)))$ and $p(\vz) = \Ndist(\vz; \mathbf{0},
+    \mI)$, this KL divergence has a convenient analytical solution:
+\begin{align}
+    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right)
+    \label{eq:kl_gaussian}
+\end{align}
+To see this, the general KL divergence between $Q = \Ndist(\vmu_Q, \mSigma_Q)$ and $P = \Ndist(\vmu_P, \mSigma_P)$ is
+\begin{align}
+    \frac{1}{2} \left( \text{Tr}(\mSigma_P^{-1} \mSigma_Q) + (\vmu_P - \vmu_Q)^T \mSigma_P^{-1} (\vmu_P - \vmu_Q) - N + \log \frac{|\mSigma_P|}{|\mSigma_Q|} \right).
+\end{align}
+Plugging in $\vmu_Q = \vmu_{\phi}(\vx)$, $\mSigma_Q = \text{diag}(\vsigma^2_{\phi}(\vx))$, $\vmu_P = \mathbf{0}$, and $\mSigma_P = \mI$ leads to the simplified formula above.
+
+On the other hand, the reconstruction term usually depends on whether the data
+is binary or continuous. For binary data such as MNIST digits, we assume each
+pixel $x_i$ is a Bernoulli random variable. The decoder network (parameterized
+by $\theta$) takes $\vz$ and outputs a vector $\boldsymbol{p}_{\theta}(\vz)$,
+where each element $p_{i, \theta}(\vz)$ is the probability that pixel $x_i$ is
+1.
+\begin{align} \label{eq:pzbernoulli}
+    p_{\theta}(\vx|\vz) = \prod_{i=1}^{N} p_{i, \theta}(\vz)^{x_i} (1 - p_{i, \theta}(\vz))^{1-x_i}
+\end{align}
+where $N$ is the dimensionality of $\vx$.
+The log-likelihood is:
+\begin{align}
+    \log p_{\theta}(\vx|\vz) = \sum_{i=1}^{N} \left[ x_i \log p_{i, \theta}(\vz) + (1 - x_i) \log(1 - p_{i, \theta}(\vz)) \right]
+\end{align}
+This is the negative binary cross-entropy between the input $\vx$ and the reconstructed probabilities $\boldsymbol{p}_{\theta}(\vz)$. The reconstruction term becomes:
+\begin{align}
+    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \sum_{i=1}^{N} \left( x_i \log p_{i, \theta}(\vz) + (1 - x_i) \log(1 - p_{i, \theta}(\vz)) \right) \right]
+\end{align}
+
+For continuous data, we assume each dimension $x_i$ is Gaussian. The decoder
+network takes $\vz$ and outputs the mean of the Gaussian $\vmu_{\theta}(\vz)$.
+We often assume a fixed variance, say $\sigma^2 \mI$, for simplicity (e.g.,
+$\sigma^2=1$), or the decoder could also output the variance. Assuming fixed
+variance $\sigma^2$:
+\begin{align}
+    p_{\theta}(\vx|\vz) = \prod_{i=1}^{N} \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x_i - \mu_{i, \theta}(\vz))^2}{2 \sigma^2}\right)
+\end{align}
+The log-likelihood is:
+\begin{align} \label{eq:pzcontinuous}
+    \log p_{\theta}(\vx|\vz) & = \sum_{i=1}^{N} \left[ -\frac{1}{2} \log(2\pi \sigma^2) - \frac{(x_i - \mu_{i, \theta}(\vz))^2}{2 \sigma^2} \right] \\
+                             & = -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^{N} (x_i - \mu_{i, \theta}(\vz))^2               \\
+                             & = -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2
+\end{align}
+This is proportional to the negative squared error between the input $\vx$ and the reconstructed mean $\vmu_{\theta}(\vz)$. The reconstruction term becomes:
+\begin{align}
+    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2 \right]
+\end{align}
+Since the constant term doesn't affect optimization w.r.t $\theta, \phi$, maximizing this term is equivalent to minimizing the expected squared error: $\e_{\vz \sim q_{\phi}(\vz|\vx)} [||\vx - \vmu_{\theta}(\vz)||^2]$.
+
+After clearing things up, let us go back to \eqref{eq:elbointro}. There's a
+problem with the reconstruction term $\e_{\vz \sim q_{\phi}(\vz|\vx)} [\dots]$.
+We need to compute its gradient with respect to $\phi$. However, the
+expectation is taken over a distribution $q_{\phi}$ whose parameters
+($\vmu_{\phi}, \vsigma^2_{\phi}$) depend on $\phi$. Computationally, standard
+backpropagation cannot handle gradients through the sampling process $\vz \sim
+    q_{\phi}(\vz|\vx)$.
+
+The famous reparameterization trick (\cite{kingma2013auto}) solves this (which
+is also applicable to VarFA). For distributions like the Gaussian, we can
+rewrite the sampling process. Instead of sampling $\vz$ directly from
+$\Ndist(\vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx)))$, we first sample
+a noise vector $\vepsilon$ from a fixed, simple distribution, typically a
+standard normal: $\vepsilon \sim \Ndist(\mathbf{0}, \mI)$. Then we can
+transform this noise using the parameters from the encoder:
+\begin{align}
+    \vz = \vmu_{\phi}(\vx) + \vsigma_{\phi}(\vx) \odot \vepsilon
+    \label{eq:reparam}
+\end{align}
+where $\odot$ denotes the element-wise product (Hadamard product), and $\vsigma_{\phi}(\vx)$ is the vector of standard deviations (square root of the variances $\vsigma^2_{\phi}(\vx)$). Note that the encoder usually outputs $\log \vsigma^2_{\phi}(\vx)$, so $\vsigma_{\phi}(\vx) = \exp(0.5 \times \log \vsigma^2_{\phi}(\vx))$.
+
+Now, $\vz$ still follows the desired distribution $q_{\phi}(\vz|\vx)$, but the
+stochasticity comes from $\vepsilon$, which is independent of $\phi$. The
+dependence on $\phi$ is now deterministic through $\vmu_{\phi}(\vx)$ and
+$\vsigma_{\phi}(\vx)$.
+
+We can rewrite the reconstruction term in \eqref{eq:elbointro} using this
+trick:
+\begin{align}
+    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] = \e_{\vepsilon \sim \Ndist(\mathbf{0}, \mI)} \left[ \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) + \vsigma_{\phi}(\vx) \odot \vepsilon) \right]
+\end{align}
+In practice, we approximate this expectation using Monte Carlo sampling, typically with just one sample ($L=1$) of $\vepsilon$ per data point $\vx$ per training step:
+\begin{align}
+    \log p_{\theta}(\vx|\vz^{(i, l)}) \quad \text{where} \quad \vz^{(i, l)} = \vmu_{\phi}(\vx^{(i)}) +  \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(l)}  \quad \text{and} \quad \vepsilon^{(l)} \sim \Ndist(\mathbf{0}, \mI)
+\end{align}
+Here we used superscript to distinguish sampled data points from general variables and coordinates. Combining everything, the objective function we want to maximize (or minimize its negative) for a single data point $\vx$, using the reparameterization trick \eqref{eq:reparam} and the analytical KL divergence \eqref{eq:kl_gaussian}, is approximated as:
+\begin{align}
+    \mathcal{L}(\theta, \phi; \vx) \approx \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) & +  \vsigma_{\phi}(\vx) \odot \vepsilon ) \nonumber                                                                           \\
+    -                                                                                 & \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right)
+    \label{eq:final_elbo_approx}
+\end{align}
+where $\vepsilon \sim \Ndist(\mathbf{0}, \mI)$ is sampled once.
+
+We typically minimize the \emph{negative} ELBO averaged over a mini-batch of
+$M$ data points:
+\begin{align}
+    \text{Loss} & = -\frac{1}{M} \sum_{i=1}^M \mathcal{L}(\theta, \phi; \vx^{(i)})                                                                                                                                                                                                                                               \\
+                & \approx \frac{1}{M} \sum_{i=1}^M \left[ \underbrace{-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})}_{\text{Reconstruction Loss}} + \underbrace{\frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx^{(i)}) + \sigma_{j, \phi}^2(\vx^{(i)}) - \log(\sigma_{j, \phi}^2(\vx^{(i)})) - 1 \right)}_{\text{KL Loss}} \right]
+    \label{eq:final_loss}
+\end{align}
+where $\vz^{(i)} = \vmu_{\phi}(\vx^{(i)}) +  \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(i)}$ with $\vepsilon^{(i)} \sim \Ndist(\mathbf{0}, \mI)$.
+
+The term $-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})$ is the reconstruction loss
+(e.g., binary cross-entropy or mean squared error, depending on the data type
+and choice of $p_{\theta}$).
+
+At this point, we have broken down the VAE algorithm into as many details as
+possible for mathematical clarity. Let us end this section with the formal
+procedure of the training process and data generation after the training is
+done, so that the readers know what exactly is being computed in each step.
+
+\textbf{Training Procedure of VAE}
+\begin{enumerate}
+    \item Initialize encoder parameters $\phi$ and decoder parameters $\theta$.
+    \item Repeat until convergence:
+          \begin{enumerate}
+              \item Sample a mini-batch of data $\{\vx^{(1)}, ..., \vx^{(M)}\}$.
+              \item For each $\vx^{(i)}$ in the mini-batch:
+                    \begin{enumerate}
+                        \item Pass $\vx^{(i)}$ through the encoder network to get $\vmu_{\phi}(\vx^{(i)})$
+                              and $\log \vsigma^2_{\phi}(\vx^{(i)})$.
+                        \item Calculate $\vsigma_{\phi}(\vx^{(i)}) = \exp(0.5 \times \log
+                                  \vsigma^2_{\phi}(\vx^{(i)}))$.
+                        \item Sample $\vepsilon^{(i)} \sim \Ndist(\mathbf{0}, \mI)$.
+                        \item Compute the latent variable sample: $\vz^{(i)} = \vmu_{\phi}(\vx^{(i)}) +
+                                  \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(i)}$.
+                        \item Pass $\vz^{(i)}$ through the decoder network to get the parameters of
+                              $p_{\theta}(\vx|\vz^{(i)})$ (e.g., $\boldsymbol{p}_{\theta}(\vz^{(i)})$ for
+                              Bernoulli, or $\vmu_{\theta}(\vz^{(i)})$ for Gaussian).
+                        \item Calculate the reconstruction loss term $-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})$.
+                        \item Calculate the KL divergence term $\KL{q_{\phi}(\vz|\vx^{(i)})}{p(\vz)}$ using
+                              the analytical formula (\ref{eq:kl_gaussian}) with $\vmu_{\phi}(\vx^{(i)})$ and
+                              $\vsigma^2_{\phi}(\vx^{(i)})$.
+                    \end{enumerate}
+              \item Compute the average loss over the mini-batch (Negative ELBO,
+                    \eqref{eq:final_loss}).
+              \item Compute gradients of the loss with respect to $\phi$ and $\theta$ using back
+                    propagation (enabled by the reparameterization trick).
+              \item Update $\phi$ and $\theta$ using an optimizer (e.g., Adam, SGD).
+          \end{enumerate}
+\end{enumerate}
+
+\textbf{Data Generation Procedure after Training}
+
+Once the VAE is trained, we can generate new data points $\vx_{new}$ that
+resemble the training data:
+\begin{enumerate}
+    \item Sample a latent vector $\vz_{new}$ from the prior distribution: $\vz_{new} \sim
+              p(\vz) = \Ndist(\mathbf{0}, \mI)$.
+    \item Pass $\vz_{new}$ through the trained decoder network to obtain the parameters
+          of $p_{\theta}(\vx|\vz_{new})$.
+    \item Sample a new data point $\vx_{new}$ from this distribution
+          $p_{\theta}(\vx|\vz_{new})$. (For example, if $p_{\theta}$ is Gaussian with
+          mean $\vmu_{\theta}(\vz_{new})$ and fixed variance $\sigma^2$, then $\vx_{new}
+              \sim \Ndist(\vmu_{\theta}(\vz_{new}), \sigma^2\mI)$). Often, for image
+          generation, people just use the mean output of the decoder (e.g.,
+          $\boldsymbol{p}_{\theta}(\vz_{new})$ or $\vmu_{\theta}(\vz_{new})$) directly as
+          the generated sample, rather than sampling from the output distribution.
+\end{enumerate}
+\subsection{The High-Level View of VarFA based on VAE}
+After going through VAE thoroughly, we can end the introduction of chapter 4
+with a short section highlighting the difference between VarFA and VAE. The
+mathematical deduction in the previous section, along with the high-level
+description provided in this section should prepare us well for the content in
+chapter 4.
+
+Generally, VarFA starts with two more interpretable assumptions compared to
+VAE:
+
+1. The students' overall performance follow a FA model.
+
+2. The students' latent skills follow a multi-dimensional Gaussian distribution. (Like we mentioned previously, we assume everyone performs around their average level, with over low and over high performance being exponentially rare.)
+
+With these two assumptions, VarFA uses a similar encoder-decoder architecture
+as VAE, and VarFa can also be trained using the reparameterization trick
+efficiently based on a modified ELBO (details in chapter 4). After the training
+is complete, VarFA takes students' performance record and determines their
+latent skills during the encoder phase. This step is much more interpretable
+than the usual VAE and much more similar to the natural thinking process of
+humans. For instance, if a student performs well in math and physics, VarFA
+will assign a high competence factor for their quantitative reasoning skills.
+This is crucial for machine learning in education, as prediction is not the end
+goal, but the reflection and feedback to students.
+
+In the decoder phase, given students' latent skills, questions' difficulty and
+their correlations to the skills, VarFA is able to predict students'
+performance in a natural, interpretable way. Intuitively speaking, if a student
+is good at reading and writing, it is very likely for them to answer an easy
+question in the subject of literature. We can use VarFA to track the
+performance of students and predict their potential areas for improvement. On
+the other hand, VarFA can also be used to spot possible academic dishonesty. A
+well-trained VarFA model can detect students who suddenly perform well in a
+subject they have been struggling with. This interpretable generative model is
+a versatile and useful tool to use in an academic environments.
+
+VarFA marks the small but meaningful effort to transfer the power of machine
+learning into human learning. As machines learn faster and better, we should
+not forget our shared responsibility to prepare our future generations for this
+ever-changing world. Because the new science and technology require a longer
+study plan than ever, it is imperative to make sure that we use the
+advancements in AI to make sure that knowledge is widely accessible, and we are
+indeed making this world a better place.

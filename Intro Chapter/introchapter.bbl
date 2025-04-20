@@ -1,4 +1,4 @@
-\begin{thebibliography}{73}
+\begin{thebibliography}{74}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -518,5 +518,10 @@ Tim Miller.
 \newblock Explanation in artificial intelligence: Insights from the social
   sciences, 2018, 1706.07269.
 \newblock URL \url{https://arxiv.org/abs/1706.07269}.
+
+\bibitem[Doersch(2021)]{doersch2021tutorialvariationalautoencoders}
+Carl Doersch.
+\newblock Tutorial on variational autoencoders, 2021, 1606.05908.
+\newblock URL \url{https://arxiv.org/abs/1606.05908}.
 
 \end{thebibliography}

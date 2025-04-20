@@ -1,0 +1,270 @@
+\documentclass[11pt, letterpaper]{article}
+
+% --- PACKAGES ---
+\usepackage[margin=1in]{geometry} % Set page margins
+\usepackage{amsmath}             % For advanced math environments (align, equation, etc.)
+\usepackage{amssymb}             % For math symbols like \mathbb
+\usepackage{bm}                  % For bold math symbols (\boldsymbol)
+\usepackage{graphicx}            % If you need to include figures (not used here but good practice)
+\usepackage{hyperref}            % For clickable links (optional)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+% --- MACROS ---
+% Define commands for commonly used math notations
+\newcommand{\vx}{\boldsymbol{x}} % Bold vector x
+\newcommand{\vz}{\boldsymbol{z}} % Bold vector z
+\newcommand{\vepsilon}{\boldsymbol{\epsilon}} % Bold vector epsilon
+\newcommand{\vmu}{\boldsymbol{\mu}} % Bold vector mu
+\newcommand{\vsigma}{\boldsymbol{\sigma}} % Bold vector sigma (std dev)
+\newcommand{\vlogsigma}{\boldsymbol{\log \sigma^2}} % Bold vector log variance
+\newcommand{\mI}{\boldsymbol{I}} % Bold identity matrix
+\newcommand{\mSigma}{\boldsymbol{\Sigma}} % Bold Sigma matrix
+\newcommand{\E}{\mathbb{E}} % Expectation symbol
+\newcommand{\KL}[2]{\text{D}_{\text{KL}}\left(#1 \,||\, #2\right)} % KL divergence D_KL(q || p)
+\newcommand{\Ndist}{\mathcal{N}} % Normal distribution symbol
+\newcommand{\R}{\mathbb{R}} % Real numbers symbol
+
+% --- DOCUMENT START ---
+\begin{document}
+
+\title{A Detailed Explanation of Variational Autoencoders (VAEs)}
+\author{Generated Explanation}
+\date{\today}
+\maketitle
+
+\section{The Goal: Generative Modeling}
+
+The primary goal of a Variational Autoencoder (VAE) is to learn a generative model for some data $X = \{\vx^{(i)}\}_{i=1}^N$. We want to be able to generate new data points $\vx_{new}$ that look like they came from the same underlying distribution $p_{data}(\vx)$ as the training data.
+
+We approach this by introducing a latent variable $\vz$ (usually lower-dimensional than $\vx$). We assume that our data $\vx$ is generated from this latent variable $\vz$ via some process. This involves two distributions:
+
+\begin{itemize}
+    \item \textbf{Prior distribution over latent variables:} $p(\vz)$. This represents our belief about the structure of the latent space \emph{before} seeing any data. It's typically chosen to be simple, often a standard multivariate Gaussian:
+    \begin{equation}
+        p(\vz) = \Ndist(\vz; \boldsymbol{0}, \mI)
+    \end{equation}
+    where $\boldsymbol{0}$ is the zero vector and $\mI$ is the identity matrix. This means each component $z_j$ of the latent vector $\vz$ is independently drawn from a standard normal distribution $\Ndist(0, 1)$. The probability density function (PDF) for a $D_z$-dimensional latent space is:
+    \begin{equation}
+        p(\vz) = \prod_{j=1}^{D_z} \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{1}{2} z_j^2\right) = \frac{1}{(2\pi)^{D_z/2}} \exp\left(-\frac{1}{2} \vz^T \vz\right)
+    \end{equation}
+
+    \item \textbf{Likelihood (or Decoder) distribution:} $p_{\theta}(\vx|\vz)$. This describes the probability of generating data point $\vx$ given a specific latent variable $\vz$. This distribution is parameterized by $\theta$, typically the weights and biases of a neural network (the decoder). The form of this distribution depends on the type of data $\vx$ (e.g., Bernoulli for binary images, Gaussian for real-valued data). We'll detail this later.
+\end{itemize}
+
+\section{The Problem: Intractable Marginal Likelihood and Posterior}
+
+Our ultimate goal is to maximize the probability of observing our dataset $X$. Assuming the data points are i.i.d., we want to maximize the marginal likelihood of each data point $\vx$:
+\begin{equation}
+    p(\vx) = \int p_{\theta}(\vx|\vz) p(\vz) d\vz
+\end{equation}
+This integral is generally intractable because it involves integrating over all possible latent variables $\vz$, which is often a high-dimensional space.
+
+Furthermore, during learning and for some applications, we might need the true posterior distribution $p_{\theta}(\vz|\vx)$, which tells us the probability of the latent variables \emph{given} an observed data point $\vx$. Using Bayes' theorem:
+\begin{equation}
+    p_{\theta}(\vz|\vx) = \frac{p_{\theta}(\vx|\vz) p(\vz)}{p(\vx)} = \frac{p_{\theta}(\vx|\vz) p(\vz)}{\int p_{\theta}(\vx|\vz') p(\vz') d\vz'}
+\end{equation}
+This is also intractable because the denominator $p(\vx)$ is intractable.
+
+\section{The Solution: Variational Inference}
+
+Since we can't compute or optimize $p(\vx)$ or $p_{\theta}(\vz|\vx)$ directly, we introduce an \emph{approximate} posterior distribution $q_{\phi}(\vz|\vx)$. This distribution is designed to be tractable and is parameterized by $\phi$, typically the weights and biases of another neural network (the encoder). The goal is to make $q_{\phi}(\vz|\vx)$ as close as possible to the true posterior $p_{\theta}(\vz|\vx)$.
+
+A common choice for $q_{\phi}(\vz|\vx)$ is a multivariate Gaussian distribution with a diagonal covariance matrix:
+\begin{equation}
+    q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx)))
+\end{equation}
+Here:
+\begin{itemize}
+    \item $\vmu_{\phi}(\vx)$ is the mean vector.
+    \item $\vsigma^2_{\phi}(\vx)$ is the variance vector (diagonal elements of the covariance matrix).
+    \item The encoder network takes $\vx$ as input and outputs the parameters $\vmu_{\phi}(\vx)$ and $\vsigma^2_{\phi}(\vx)$ (or often $\log \vsigma^2_{\phi}(\vx)$ for numerical stability).
+\end{itemize}
+
+The \textbf{explicit formula} for the probability density function (PDF) of $q_{\phi}(\vz|\vx)$, assuming a $D_z$-dimensional latent space, is:
+\begin{align}
+    q_{\phi}(\vz|\vx) &= \prod_{j=1}^{D_z} \frac{1}{\sqrt{2\pi \sigma_{j, \phi}^2(\vx)}} \exp\left(-\frac{(z_j - \mu_{j, \phi}(\vx))^2}{2 \sigma_{j, \phi}^2(\vx)}\right) \\
+    &= \frac{1}{(2\pi)^{D_z/2} \prod_{j=1}^{D_z} \sigma_{j, \phi}(\vx)} \exp\left(-\frac{1}{2} \sum_{j=1}^{D_z} \frac{(z_j - \mu_{j, \phi}(\vx))^2}{\sigma_{j, \phi}^2(\vx)}\right)
+\end{align}
+In vector notation using the diagonal covariance matrix $\mSigma_{\phi}(\vx) = \text{diag}(\vsigma^2_{\phi}(\vx))$:
+\begin{equation}
+    q_{\phi}(\vz|\vx) = \frac{1}{(2\pi)^{D_z/2} |\mSigma_{\phi}(\vx)|^{1/2}} \exp\left(-\frac{1}{2} (\vz - \vmu_{\phi}(\vx))^T \mSigma_{\phi}(\vx)^{-1} (\vz - \vmu_{\phi}(\vx))\right)
+\end{equation}
+where $|\mSigma_{\phi}(\vx)|$ is the determinant of the covariance matrix, which simplifies to $\prod_{j=1}^{D_z} \sigma_{j, \phi}^2(\vx)$.
+
+\section{The Objective Function: The Evidence Lower Bound (ELBO)}
+
+We want to maximize the marginal log-likelihood $\log p(\vx)$. We can derive a lower bound on this quantity using our approximate posterior $q_{\phi}(\vz|\vx)$.
+
+Start with the definition of the Kullback-Leibler (KL) divergence between the approximate posterior and the true posterior:
+\begin{align}
+    \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} &= \int q_{\phi}(\vz|\vx) \log \frac{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} d\vz \\
+    &= \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vz|\vx) \right]
+\end{align}
+Now substitute $p_{\theta}(\vz|\vx) = \frac{p_{\theta}(\vx|\vz) p(\vz)}{p(\vx)}$:
+\begin{equation}
+    \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} = \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vx|\vz) - \log p(\vz) + \log p(\vx) \right]
+\end{equation}
+Since $\log p(\vx)$ does not depend on $\vz$, the expectation is just $\log p(\vx)$:
+\begin{equation}
+    \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} = \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right] - \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx)
+\end{equation}
+The first term is the KL divergence between the approximate posterior and the prior:
+\begin{equation}
+    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right]
+\end{equation}
+So we have:
+\begin{equation}
+    \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} = \KL{q_{\phi}(\vz|\vx)}{p(\vz)} - \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx)
+\end{equation}
+Rearranging for $\log p(\vx)$:
+\begin{equation}
+    \log p(\vx) = \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)} + \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}
+\end{equation}
+Since KL divergence is always non-negative ($\KL{q}{p} \ge 0$), we have:
+\begin{equation}
+    \log p(\vx) \ge \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)}
+\end{equation}
+This right-hand side is the \textbf{Evidence Lower Bound (ELBO)}, often denoted $\mathcal{L}(\theta, \phi; \vx)$:
+\begin{equation}
+    \mathcal{L}(\theta, \phi; \vx) = \underbrace{\E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right]}_{\text{Reconstruction Term}} - \underbrace{\KL{q_{\phi}(\vz|\vx)}{p(\vz)}}_{\substack{\text{KL Divergence /} \\ \text{Regularization Term}}}
+    \label{eq:elbo}
+\end{equation}
+Maximizing the ELBO with respect to parameters $\theta$ and $\phi$ serves two purposes:
+\begin{enumerate}
+    \item It pushes $\log p(\vx)$ higher (our original goal).
+    \item It minimizes the KL divergence between the approximate posterior $q_{\phi}(\vz|\vx)$ and the true posterior $p_{\theta}(\vz|\vx)$ (because $\log p(\vx)$ is fixed for a given $\vx$, and the ELBO is $\log p(\vx) - \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}$).
+\end{enumerate}
+
+\section{Expanding the ELBO Terms}
+
+Let's look at the two terms in the ELBO (Equation \ref{eq:elbo}) in more detail.
+
+\subsection{KL Divergence Term}
+This term measures how much the approximate posterior (learned by the encoder) deviates from the prior $p(\vz)$. It acts as a regularizer, encouraging the encodings to fill the space around the origin like a standard Gaussian.
+When $q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx)))$ and $p(\vz) = \Ndist(\vz; \mathbf{0}, \mI)$, this KL divergence has a convenient analytical solution:
+\begin{equation}
+    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \frac{1}{2} \sum_{j=1}^{D_z} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right)
+    \label{eq:kl_gaussian}
+\end{equation}
+\emph{Derivation sketch:} The general KL divergence between $Q = \Ndist(\vmu_Q, \mSigma_Q)$ and $P = \Ndist(\vmu_P, \mSigma_P)$ is $\frac{1}{2} \left( \text{Tr}(\mSigma_P^{-1} \mSigma_Q) + (\vmu_P - \vmu_Q)^T \mSigma_P^{-1} (\vmu_P - \vmu_Q) - D_z + \log \frac{|\mSigma_P|}{|\mSigma_Q|} \right)$. Plugging in $\vmu_Q = \vmu_{\phi}(\vx)$, $\mSigma_Q = \text{diag}(\vsigma^2_{\phi}(\vx))$, $\vmu_P = \mathbf{0}$, and $\mSigma_P = \mI$ leads to the simplified formula above.
+
+\subsection{Reconstruction Term}
+This term measures how well the decoder can reconstruct the original input $\vx$ given a latent code $\vz$ sampled from the encoder's distribution for that $\vx$. The exact form depends on the choice of $p_{\theta}(\vx|\vz)$.
+
+\subsubsection{Case 1: Binary Data (e.g., MNIST)}
+Assume each pixel $x_d$ (where $d$ indexes the dimension/pixel) is a Bernoulli random variable. The decoder network (parameterized by $\theta$) takes $\vz$ and outputs a vector $\boldsymbol{p}_{\theta}(\vz)$, where each element $p_{d, \theta}(\vz)$ is the probability that pixel $x_d$ is 1.
+\begin{equation}
+    p_{\theta}(\vx|\vz) = \prod_{d=1}^{D_x} p_{d, \theta}(\vz)^{x_d} (1 - p_{d, \theta}(\vz))^{1-x_d}
+\end{equation}
+where $D_x$ is the dimensionality of $\vx$.
+The log-likelihood is:
+\begin{equation}
+    \log p_{\theta}(\vx|\vz) = \sum_{d=1}^{D_x} \left[ x_d \log p_{d, \theta}(\vz) + (1 - x_d) \log(1 - p_{d, \theta}(\vz)) \right]
+\end{equation}
+This is the negative binary cross-entropy between the input $\vx$ and the reconstructed probabilities $\boldsymbol{p}_{\theta}(\vz)$. The reconstruction term becomes:
+\begin{equation}
+    \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \sum_{d=1}^{D_x} \left( x_d \log p_{d, \theta}(\vz) + (1 - x_d) \log(1 - p_{d, \theta}(\vz)) \right) \right]
+\end{equation}
+
+\subsubsection{Case 2: Real-valued Data (e.g., Natural Images)}
+Assume each dimension $x_d$ is Gaussian. The decoder network takes $\vz$ and outputs the mean of the Gaussian $\vmu_{\theta}(\vz)$. We often assume a fixed variance, say $\sigma^2 \mI$, for simplicity (e.g., $\sigma^2=1$), or the decoder could also output the variance. Assuming fixed variance $\sigma^2$:
+\begin{equation}
+    p_{\theta}(\vx|\vz) = \prod_{d=1}^{D_x} \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x_d - \mu_{d, \theta}(\vz))^2}{2 \sigma^2}\right)
+\end{equation}
+The log-likelihood is:
+\begin{align}
+    \log p_{\theta}(\vx|\vz) &= \sum_{d=1}^{D_x} \left[ -\frac{1}{2} \log(2\pi \sigma^2) - \frac{(x_d - \mu_{d, \theta}(\vz))^2}{2 \sigma^2} \right] \\
+    &= -\frac{D_x}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} \sum_{d=1}^{D_x} (x_d - \mu_{d, \theta}(\vz))^2 \\
+    &= -\frac{D_x}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2
+\end{align}
+This is proportional to the negative squared error between the input $\vx$ and the reconstructed mean $\vmu_{\theta}(\vz)$. The reconstruction term becomes:
+\begin{equation}
+    \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ -\frac{D_x}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2 \right]
+\end{equation}
+Since the constant term doesn't affect optimization w.r.t $\theta, \phi$, maximizing this term is equivalent to minimizing the expected squared error: $\E_{\vz \sim q_{\phi}(\vz|\vx)} [||\vx - \vmu_{\theta}(\vz)||^2]$.
+
+\section{The Reparameterization Trick}
+
+There's a problem with the reconstruction term $\E_{\vz \sim q_{\phi}(\vz|\vx)} [\dots]$. We need to compute its gradient with respect to $\phi$. However, the expectation is taken over a distribution $q_{\phi}$ whose parameters ($\vmu_{\phi}, \vsigma^2_{\phi}$) depend on $\phi$. Standard back propagation cannot handle gradients through the sampling process $\vz \sim q_{\phi}(\vz|\vx)$.
+
+The reparameterization trick solves this. For distributions like the Gaussian, we can rewrite the sampling process. Instead of sampling $\vz$ directly from $\Ndist(\vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx)))$, we:
+\begin{enumerate}
+    \item Sample a noise vector $\vepsilon$ from a fixed, simple distribution, typically a standard normal: $\vepsilon \sim \Ndist(\mathbf{0}, \mI)$.
+    \item Transform this noise using the parameters from the encoder:
+    \begin{equation}
+        \vz = \vmu_{\phi}(\vx) + \vsigma_{\phi}(\vx) \odot \vepsilon
+        \label{eq:reparam}
+    \end{equation}
+    where $\odot$ denotes element-wise multiplication, and $\vsigma_{\phi}(\vx)$ is the vector of standard deviations (square root of the variances $\vsigma^2_{\phi}(\vx)$). Note that the encoder usually outputs $\log \vsigma^2_{\phi}(\vx)$, so $\vsigma_{\phi}(\vx) = \exp(0.5 \times \log \vsigma^2_{\phi}(\vx))$.
+\end{enumerate}
+Now, $\vz$ still follows the desired distribution $q_{\phi}(\vz|\vx)$, but the stochasticity comes from $\vepsilon$, which is independent of $\phi$. The dependence on $\phi$ is now deterministic through $\vmu_{\phi}(\vx)$ and $\vsigma_{\phi}(\vx)$.
+
+We can rewrite the reconstruction term using this trick:
+\begin{equation}
+    \E_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] = \E_{\vepsilon \sim \Ndist(\mathbf{0}, \mI)} \left[ \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) + \vsigma_{\phi}(\vx) \odot \vepsilon) \right]
+\end{equation}
+In practice, we approximate this expectation using Monte Carlo sampling, typically with just one sample ($L=1$) of $\vepsilon$ per data point $\vx$ per training step:
+\begin{equation}
+    \log p_{\theta}(\vx|\vz^{(i, l)}) \quad \text{where} \quad \vz^{(i, l)} = \vmu_{\phi}(\vx^{(i)}) + \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(l)} \quad \text{and} \quad \vepsilon^{(l)} \sim \Ndist(\mathbf{0}, \mI)
+\end{equation}
+
+\section{The Full VAE Objective (for Training)}
+
+Combining everything, the objective function we want to maximize (or minimize its negative) for a single data point $\vx$, using the reparameterization trick (Eq. \ref{eq:reparam}) and the analytical KL divergence (Eq. \ref{eq:kl_gaussian}), is approximated as:
+\begin{equation}
+    \mathcal{L}(\theta, \phi; \vx) \approx \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) + \vsigma_{\phi}(\vx) \odot \vepsilon) - \frac{1}{2} \sum_{j=1}^{D_z} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right)
+    \label{eq:final_elbo_approx}
+\end{equation}
+where $\vepsilon \sim \Ndist(\mathbf{0}, \mI)$ is sampled once.
+
+We typically minimize the \emph{negative} ELBO averaged over a mini-batch of $M$ data points:
+\begin{align}
+    \text{Loss} &= -\frac{1}{M} \sum_{i=1}^M \mathcal{L}(\theta, \phi; \vx^{(i)}) \\
+    &\approx \frac{1}{M} \sum_{i=1}^M \left[ \underbrace{-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})}_{\text{Reconstruction Loss}} + \underbrace{\frac{1}{2} \sum_{j=1}^{D_z} \left( \mu_{j, \phi}^2(\vx^{(i)}) + \sigma_{j, \phi}^2(\vx^{(i)}) - \log(\sigma_{j, \phi}^2(\vx^{(i)})) - 1 \right)}_{\text{KL Loss}} \right]
+    \label{eq:final_loss}
+\end{align}
+where $\vz^{(i)} = \vmu_{\phi}(\vx^{(i)}) + \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(i)}$ with $\vepsilon^{(i)} \sim \Ndist(\mathbf{0}, \mI)$.
+
+The term $-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})$ is the reconstruction loss (e.g., binary cross-entropy or mean squared error, depending on the data type and choice of $p_{\theta}$).
+
+\section{Training Algorithm Summary}
+
+\begin{enumerate}
+    \item Initialize encoder parameters $\phi$ and decoder parameters $\theta$.
+    \item Repeat until convergence:
+    \begin{enumerate}
+        \item Sample a mini-batch of data $\{\vx^{(1)}, ..., \vx^{(M)}\}$.
+        \item For each $\vx^{(i)}$ in the mini-batch:
+        \begin{enumerate}
+            \item Pass $\vx^{(i)}$ through the encoder network to get $\vmu_{\phi}(\vx^{(i)})$ and $\log \vsigma^2_{\phi}(\vx^{(i)})$.
+            \item Calculate $\vsigma_{\phi}(\vx^{(i)}) = \exp(0.5 \times \log \vsigma^2_{\phi}(\vx^{(i)}))$.
+            \item Sample $\vepsilon^{(i)} \sim \Ndist(\mathbf{0}, \mI)$.
+            \item Compute the latent variable sample: $\vz^{(i)} = \vmu_{\phi}(\vx^{(i)}) + \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(i)}$.
+            \item Pass $\vz^{(i)}$ through the decoder network to get the parameters of $p_{\theta}(\vx|\vz^{(i)})$ (e.g., $\boldsymbol{p}_{\theta}(\vz^{(i)})$ for Bernoulli, or $\vmu_{\theta}(\vz^{(i)})$ for Gaussian).
+            \item Calculate the reconstruction loss term $-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})$.
+            \item Calculate the KL divergence term $\KL{q_{\phi}(\vz|\vx^{(i)})}{p(\vz)}$ using the analytical formula (Eq. \ref{eq:kl_gaussian}) with $\vmu_{\phi}(\vx^{(i)})$ and $\vsigma^2_{\phi}(\vx^{(i)})$.
+        \end{enumerate}
+        \item Compute the average loss over the mini-batch (Negative ELBO, Eq. \ref{eq:final_loss}).
+        \item Compute gradients of the loss with respect to $\phi$ and $\theta$ using backpropagation (enabled by the reparameterization trick).
+        \item Update $\phi$ and $\theta$ using an optimizer (e.g., Adam, SGD).
+    \end{enumerate}
+\end{enumerate}
+
+\section{Generating New Data}
+
+Once the VAE is trained, we can generate new data points $\vx_{new}$ that resemble the training data:
+\begin{enumerate}
+    \item Sample a latent vector $\vz_{new}$ from the prior distribution: $\vz_{new} \sim p(\vz) = \Ndist(\mathbf{0}, \mI)$.
+    \item Pass $\vz_{new}$ through the trained decoder network to obtain the parameters of $p_{\theta}(\vx|\vz_{new})$.
+    \item Sample a new data point $\vx_{new}$ from this distribution $p_{\theta}(\vx|\vz_{new})$. (For example, if $p_{\theta}$ is Gaussian with mean $\vmu_{\theta}(\vz_{new})$ and fixed variance $\sigma^2$, then $\vx_{new} \sim \Ndist(\vmu_{\theta}(\vz_{new}), \sigma^2\mI)$). Often, for image generation, people just use the mean output of the decoder (e.g., $\boldsymbol{p}_{\theta}(\vz_{new})$ or $\vmu_{\theta}(\vz_{new})$) directly as the generated sample, rather than sampling from the output distribution.
+\end{enumerate}
+
+This detailed breakdown covers the core mathematical concepts and formulas behind the Variational Autoencoder.
+
+% --- DOCUMENT END ---
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  19 APR 2025 01:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  20 APR 2025 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -556,24 +556,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (introchapter.aux)
 \openout1 = `introchapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
@@ -604,20 +604,20 @@ Package grfext Info: Graphics extension search list:
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 22.
  (introchapter.out) (introchapter.out)
 \@outlinefile=\write4
 \openout4 = `introchapter.out'.
 
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 28.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
  (C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (introchapter.toc)
@@ -633,17 +633,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [2]
 
 [3]
-<concentration_distance_hypercube.png, id=138, 714.7503pt x 671.3883pt>
+<concentration_distance_hypercube.png, id=143, 714.7503pt x 671.3883pt>
 File: concentration_distance_hypercube.png Graphic file (type png)
 <use concentration_distance_hypercube.png>
 Package pdftex.def Info: concentration_distance_hypercube.png  used on input line 150.
 (pdftex.def)             Requested size: 398.33858pt x 374.18208pt.
-<concentration_distance_hypershpere.png, id=140, 715.473pt x 671.3883pt>
+<concentration_distance_hypershpere.png, id=145, 715.473pt x 671.3883pt>
 File: concentration_distance_hypershpere.png Graphic file (type png)
 <use concentration_distance_hypershpere.png>
 Package pdftex.def Info: concentration_distance_hypershpere.png  used on input line 163.
 (pdftex.def)             Requested size: 398.33858pt x 373.79279pt.
-<RNA2015DRplot.png, id=141, 490.2315pt x 602.25pt>
+<RNA2015DRplot.png, id=146, 490.2315pt x 602.25pt>
 File: RNA2015DRplot.png Graphic file (type png)
 <use RNA2015DRplot.png>
 Package pdftex.def Info: RNA2015DRplot.png  used on input line 193.
@@ -657,7 +657,7 @@ Package pdftex.def Info: RNA2015DRplot.png  used on input line 193.
 [6 <./concentration_distance_hypershpere.png>]
 
 [7 <./RNA2015DRplot.png>]
-<color-wheels-RYB-RGB.jpg, id=190, 1070.8005pt x 1068.3915pt>
+<color-wheels-RYB-RGB.jpg, id=195, 1070.8005pt x 1068.3915pt>
 File: color-wheels-RYB-RGB.jpg Graphic file (type jpg)
 <use color-wheels-RYB-RGB.jpg>
 Package pdftex.def Info: color-wheels-RYB-RGB.jpg  used on input line 285.
@@ -667,12 +667,12 @@ Package pdftex.def Info: color-wheels-RYB-RGB.jpg  used on input line 285.
 [8 <./color-wheels-RYB-RGB.jpg>]
 
 [9]
-<isomap.jpg, id=221, 917.829pt x 433.62pt>
+<isomap.jpg, id=226, 917.829pt x 433.62pt>
 File: isomap.jpg Graphic file (type jpg)
 <use isomap.jpg>
 Package pdftex.def Info: isomap.jpg  used on input line 370.
 (pdftex.def)             Requested size: 398.33858pt x 188.1931pt.
-<LLE_failed.jpg, id=222, 757.02824pt x 549.252pt>
+<LLE_failed.jpg, id=227, 757.02824pt x 549.252pt>
 File: LLE_failed.jpg Graphic file (type jpg)
 <use LLE_failed.jpg>
 Package pdftex.def Info: LLE_failed.jpg  used on input line 388.
@@ -684,7 +684,7 @@ Package pdftex.def Info: LLE_failed.jpg  used on input line 388.
 [11 <./LLE_failed.jpg>]
 
 [12]
-<mnist_tsne.jpg, id=259, 1323.14325pt x 530.58224pt>
+<mnist_tsne.jpg, id=264, 1323.14325pt x 530.58224pt>
 File: mnist_tsne.jpg Graphic file (type jpg)
 <use mnist_tsne.jpg>
 Package pdftex.def Info: mnist_tsne.jpg  used on input line 492.
@@ -694,7 +694,7 @@ Package pdftex.def Info: mnist_tsne.jpg  used on input line 492.
 [13]
 
 [14 <./mnist_tsne.jpg>]
-<heavytail_tsne.jpg, id=289, 1229.19225pt x 485.4135pt>
+<heavytail_tsne.jpg, id=294, 1229.19225pt x 485.4135pt>
 File: heavytail_tsne.jpg Graphic file (type jpg)
 <use heavytail_tsne.jpg>
 Package pdftex.def Info: heavytail_tsne.jpg  used on input line 556.
@@ -702,25 +702,25 @@ Package pdftex.def Info: heavytail_tsne.jpg  used on input line 556.
 
 
 [15 <./heavytail_tsne.jpg>]
-<Image_segmentation.png, id=307, 1903.11pt x 1432.35126pt>
+<Image_segmentation.png, id=312, 1903.11pt x 1432.35126pt>
 File: Image_segmentation.png Graphic file (type png)
 <use Image_segmentation.png>
 Package pdftex.def Info: Image_segmentation.png  used on input line 606.
 (pdftex.def)             Requested size: 227.62204pt x 171.30647pt.
-<waymo.jpg, id=308, 11691.68pt x 8768.76pt>
+<waymo.jpg, id=313, 2168.1pt x 1626.075pt>
 File: waymo.jpg Graphic file (type jpg)
 <use waymo.jpg>
 Package pdftex.def Info: waymo.jpg  used on input line 624.
-(pdftex.def)             Requested size: 227.62204pt x 170.59541pt.
+(pdftex.def)             Requested size: 227.62204pt x 170.70569pt.
 
 
 [16]
-<moreimagesegmentation.png, id=319, 1245.453pt x 409.53pt>
+<moreimagesegmentation.png, id=324, 1245.453pt x 409.53pt>
 File: moreimagesegmentation.png Graphic file (type png)
 <use moreimagesegmentation.png>
 Package pdftex.def Info: moreimagesegmentation.png  used on input line 643.
 (pdftex.def)             Requested size: 398.33858pt x 130.97728pt.
-<Gene_regulatory_networks.jpg, id=334, 361.35pt x 204.88545pt>
+<Gene_regulatory_networks.jpg, id=339, 361.35pt x 204.88545pt>
 File: Gene_regulatory_networks.jpg Graphic file (type jpg)
 <use Gene_regulatory_networks.jpg>
 Package pdftex.def Info: Gene_regulatory_networks.jpg  used on input line 680.
@@ -730,7 +730,7 @@ Package pdftex.def Info: Gene_regulatory_networks.jpg  used on input line 680.
 [17 <./Image_segmentation.png>]
 
 [18 <./waymo.jpg> <./moreimagesegmentation.png>]
-<A_profile_HMM_modelling_a_multiple_sequence_alignment.png, id=371, 803.0pt x 422.57875pt>
+<A_profile_HMM_modelling_a_multiple_sequence_alignment.png, id=376, 803.0pt x 422.57875pt>
 File: A_profile_HMM_modelling_a_multiple_sequence_alignment.png Graphic file (type png)
 <use A_profile_HMM_modelling_a_multiple_sequence_alignment.png>
 Package pdftex.def Info: A_profile_HMM_modelling_a_multiple_sequence_alignment.png  used on input line 720.
@@ -740,12 +740,12 @@ Package pdftex.def Info: A_profile_HMM_modelling_a_multiple_sequence_alignment.p
 [19 <./Gene_regulatory_networks.jpg> <./A_profile_HMM_modelling_a_multiple_sequence_alignment.png>]
 
 [20]
-<casualmap.png, id=404, 1013.58675pt x 416.15475pt>
+<casualmap.png, id=409, 1013.58675pt x 416.15475pt>
 File: casualmap.png Graphic file (type png)
 <use casualmap.png>
 Package pdftex.def Info: casualmap.png  used on input line 791.
 (pdftex.def)             Requested size: 369.88582pt x 151.86664pt.
-<wrightpathanalysis.png, id=405, 958.17975pt x 670.9065pt>
+<wrightpathanalysis.png, id=410, 958.17975pt x 670.9065pt>
 File: wrightpathanalysis.png Graphic file (type png)
 <use wrightpathanalysis.png>
 Package pdftex.def Info: wrightpathanalysis.png  used on input line 805.
@@ -757,12 +757,12 @@ Package pdftex.def Info: wrightpathanalysis.png  used on input line 805.
 [22 <./wrightpathanalysis.png>]
 
 [23]
-<ICMBesag.png, id=467, 614.89725pt x 689.57625pt>
+<ICMBesag.png, id=472, 614.89725pt x 689.57625pt>
 File: ICMBesag.png Graphic file (type png)
 <use ICMBesag.png>
 Package pdftex.def Info: ICMBesag.png  used on input line 924.
 (pdftex.def)             Requested size: 341.43306pt x 382.90874pt.
-<beliefprop.png, id=474, 527.571pt x 411.33675pt>
+<beliefprop.png, id=479, 527.571pt x 411.33675pt>
 File: beliefprop.png Graphic file (type png)
 <use beliefprop.png>
 Package pdftex.def Info: beliefprop.png  used on input line 946.
@@ -772,12 +772,12 @@ Package pdftex.def Info: beliefprop.png  used on input line 946.
 [24 <./ICMBesag.png>]
 
 [25 <./beliefprop.png>]
-<BNstudent.png, id=503, 784.73175pt x 501.072pt>
+<BNstudent.png, id=508, 784.73175pt x 501.072pt>
 File: BNstudent.png Graphic file (type png)
 <use BNstudent.png>
 Package pdftex.def Info: BNstudent.png  used on input line 1004.
 (pdftex.def)             Requested size: 227.62204pt x 145.33774pt.
-<BNpatterns.png, id=509, 1000.33725pt x 514.3215pt>
+<BNpatterns.png, id=514, 1000.33725pt x 514.3215pt>
 File: BNpatterns.png Graphic file (type png)
 <use BNpatterns.png>
 Package pdftex.def Info: BNpatterns.png  used on input line 1020.
@@ -785,7 +785,7 @@ Package pdftex.def Info: BNpatterns.png  used on input line 1020.
 
 
 [26 <./BNstudent.png> <./BNpatterns.png>]
-<dsep.png, id=528, 1082.8455pt x 386.6445pt>
+<dsep.png, id=533, 1082.8455pt x 386.6445pt>
 File: dsep.png Graphic file (type png)
 <use dsep.png>
 Package pdftex.def Info: dsep.png  used on input line 1060.
@@ -793,7 +793,7 @@ Package pdftex.def Info: dsep.png  used on input line 1060.
 
 
 [27]
-<MRFexample.png, id=541, 971.42924pt x 540.21825pt>
+<MRFexample.png, id=546, 971.42924pt x 540.21825pt>
 File: MRFexample.png Graphic file (type png)
 <use MRFexample.png>
 Package pdftex.def Info: MRFexample.png  used on input line 1095.
@@ -801,7 +801,7 @@ Package pdftex.def Info: MRFexample.png  used on input line 1095.
 
 
 [28 <./dsep.png> <./MRFexample.png>]
-<MRFindep.png, id=557, 961.191pt x 474.573pt>
+<MRFindep.png, id=562, 961.191pt x 474.573pt>
 File: MRFindep.png Graphic file (type png)
 <use MRFindep.png>
 Package pdftex.def Info: MRFindep.png  used on input line 1134.
@@ -813,7 +813,7 @@ Package pdftex.def Info: MRFindep.png  used on input line 1134.
 [30 <./MRFindep.png>]
 
 [31]
-<VAEMNIST.png, id=606, 1124.2pt x 632.86438pt>
+<VAEMNIST.png, id=611, 1124.2pt x 632.86438pt>
 File: VAEMNIST.png Graphic file (type png)
 <use VAEMNIST.png>
 Package pdftex.def Info: VAEMNIST.png  used on input line 1289.
@@ -822,16 +822,28 @@ Package pdftex.def Info: VAEMNIST.png  used on input line 1289.
 
 [32 <./VAEMNIST.png>]
 
-[33])
+[33]
 
-[34] (introchapter.bbl
+[34]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39])
+
+[40] (introchapter.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 48--54
 \OT1/cmr/m/n/10 https://academic.oup.com/jrsssb/article-pdf/58/1/267/49098631/jrsssb[]58[]1[]267.pdf.
  []
 
 
 
-[35]
+[41]
 Underfull \hbox (badness 3439) in paragraph at lines 143--149
 []\OT1/cmr/m/n/10 Sam T. Roweis and Lawrence K. Saul.  Non-lin-ear Di-men-sion-al-ity Re-duc-
  []
@@ -848,7 +860,7 @@ Underfull \hbox (badness 7704) in paragraph at lines 143--149
 
 
 
-[36]
+[42]
 Underfull \hbox (badness 5260) in paragraph at lines 258--266
 []\OT1/cmr/m/n/10 Nina Heldring, Ash-ley Pike, San-dra An-der-s-son, Ja-son Matthews, Guo-jun
  []
@@ -865,7 +877,7 @@ Underfull \hbox (badness 5417) in paragraph at lines 258--266
 
 
 
-[37]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 362--368
 \OT1/cmr/m/n/10 https://academic.oup.com/genetics/article-pdf/3/4/367/35081662/genetics0367.pdf.
  []
@@ -892,28 +904,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--422
 
 
 
-[38])
+[44])
 
-[39] (introchapter.aux)
+[45] (introchapter.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `introchapter.out' has not changed.
-(rerunfilecheck)             Checksum: F1F68275ABBAB3A1499488974585FFEA;3339.
+(rerunfilecheck)             Checksum: 000431DB4F703F2FC86256CDA289E68E;3623.
  ) 
 Here is how much of TeX's memory you used:
- 24581 strings out of 473919
- 457709 string characters out of 5726953
- 1943908 words of memory out of 5000000
- 46815 multiletter control sequences out of 15000+600000
- 568297 words of font info for 78 fonts, out of 8000000 for 9000
+ 24676 strings out of 473919
+ 458892 string characters out of 5726953
+ 1956908 words of memory out of 5000000
+ 46849 multiletter control sequences out of 15000+600000
+ 570388 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,13n,90p,1100b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on introchapter.pdf (39 pages, 31935819 bytes).
+ 89i,21n,90p,1245b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on introchapter.pdf (45 pages, 11484401 bytes).
 PDF statistics:
- 849 PDF objects out of 1000 (max. 8388607)
- 209 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 973 PDF objects out of 1000 (max. 8388607)
+ 263 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 

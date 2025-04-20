@@ -1,0 +1,172 @@
+\documentclass[11pt, letterpaper]{article}
+
+% --- PACKAGES ---
+\usepackage[margin=1in]{geometry} % Set page margins
+\usepackage{amsmath}             % For advanced math environments (align, equation, etc.)
+\usepackage{amssymb}             % For math symbols like \mathbb
+\usepackage{bm}                  % For bold math symbols (\boldsymbol)
+\usepackage{graphicx}            % If you need to include figures
+\usepackage{hyperref}            % For clickable links (optional)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+% --- MACROS ---
+% Define commands for commonly used math notations based on the VarFA paper
+\newcommand{\vy}{\boldsymbol{y}} % Bold vector y (lowercase for data vector/matrix)
+\newcommand{\vnu}{\boldsymbol{\nu}} % Bold vector nu (student skill factors)
+\newcommand{\vtheta}{\boldsymbol{\theta}} % Bold vector theta (other unknown factors)
+\newcommand{\vphi}{\boldsymbol{\phi}} % Bold vector phi (variational parameters)
+\newcommand{\vpsi}{\boldsymbol{\psi}} % Bold vector psi (known factors - omitted later)
+\newcommand{\vc}{\boldsymbol{c}} % Bold vector c (general student factors in Eq 4)
+\newcommand{\vm}{\boldsymbol{m}} % Bold vector m (general question factors in Eq 4)
+\newcommand{\vmu}{\boldsymbol{\mu}} % Bold vector mu (general question bias in Eq 4)
+\newcommand{\vu}{\boldsymbol{u}} % Bold vector u (mean of variational q)
+\newcommand{\vv}{\boldsymbol{v}} % Bold vector v (variance of variational q)
+\newcommand{\vepsilon}{\boldsymbol{\epsilon}} % Bold vector epsilon (noise in reparam trick)
+
+\newcommand{\mY}{\boldsymbol{Y}} % Bold matrix Y (data matrix)
+\newcommand{\mI}{\boldsymbol{I}} % Bold identity matrix
+
+\newcommand{\E}{\mathbb{E}} % Expectation symbol
+\newcommand{\KL}[2]{\text{D}_{\text{KL}}\left(#1 \,||\, #2\right)} % KL divergence D_KL(q || p)
+\newcommand{\Ndist}{\mathcal{N}} % Normal distribution symbol
+\newcommand{\R}{\mathbb{R}} % Real numbers symbol
+\newcommand{\sigm}{\sigma} % Sigmoid function symbol
+
+\newcommand{\yij}{y_{ij}} % Scalar entry y_ij
+\newcommand{\nuij}{\nu_{i}} % Skill factor for student i
+\newcommand{\thetaj}{\theta_{j}} % Other factors for question j (as used in paper's ELBO)
+\newcommand{\qphi}{q_{\phi}} % Variational distribution q_phi
+\newcommand{\ptheta}{p_{\theta}} % Likelihood p_theta (general)
+\newcommand{\pthetaj}{p_{\theta_j}} % Likelihood p_theta_j (as used in paper's ELBO)
+\newcommand{\Omegaobs}{\Omega_{\text{obs}}} % Set of observed indices
+
+% --- DOCUMENT START ---
+\begin{document}
+
+\title{Detailed Derivations for VarFA: A Variational Factor Analysis Framework}
+\author{Based on Z.\ Wang, Y.\ Gu, A.\ S.\ Lan, and R.\ G.\ Baraniuk, arXiv:2005.13107v2}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+
+This document details the mathematical formulation of the VarFA framework, as proposed by Wang et al. (2020) in \href{https://arxiv.org/abs/2005.13107}{arXiv:2005.13107v2}. VarFA provides an efficient method for Bayesian inference in Factor Analysis (FA) models applied to learning analytics, specifically focusing on estimating student skill mastery levels ($\vnu$) while quantifying uncertainty. It uses variational inference (VI) to approximate the posterior distribution of student factors, enabling scalability beyond traditional Bayesian methods like MCMC.
+
+The framework aims to perform VI on the student factors ($\vnu$) and Maximum Likelihood Estimation (MLE) on other unknown model parameters ($\vtheta$).
+
+\section{Model Setup}
+
+\subsection{General Factor Analysis Formulation}
+The paper unifies several FA models for student modeling under the canonical formulation (Eq. 4 in the paper):
+\begin{equation}
+    \mathbb{P}(\yij=1) = \sigm(\vc_i^{\top}\vm_j + \mu_j)
+    \label{eq:fa_canonical}
+\end{equation}
+where $\yij$ is the binary answer of student $i$ to question $j$, $\sigm(\cdot)$ is the sigmoid function, $\vc_i$ represents student-specific factors, $\vm_j$ represents question-specific factors, and $\mu_j$ is a question-specific bias. The dimensions and interpretations depend on the specific FA model being instantiated.
+
+\subsection{Partitioning of Factors}
+For inference, the factors ($\vc_i, \vm_j, \mu_j$) are partitioned into three sets:
+\begin{itemize}
+    \item $\vnu$: The set of unknown student skill level factors to be estimated (e.g., $\vnu = \{\vnu_1, ..., \vnu_N\}$, where $\vnu_i$ might correspond to $\vc_i$ in some models). We are interested in the posterior distribution $p(\vnu | \mY)$.
+    \item $\vtheta$: The set of remaining unknown factors (e.g., question parameters like $\vm_j, \mu_j$). These will be estimated via MLE.
+    \item $\vpsi$: The set of known factors (e.g., fixed parameters, auxiliary information). This set is omitted in subsequent derivations as it doesn't require inference.
+\end{itemize}
+The notation $\thetaj$ is used later to represent the parameters associated with question $j$.
+
+\section{Variational Inference in VarFA}
+
+The core idea of VarFA is to approximate the intractable true posterior distribution of the student factors $p(\vnu | \mY, \vtheta)$ with a simpler, parametric variational distribution $q_{\phi}(\vnu | \mY)$. The paper assumes this distribution factorizes over students (Eq. 8):
+\begin{equation}
+    p(\vnu|\mY,\vtheta) \approx q_{\phi}(\vnu|\mY) = \prod_{i=1}^{N} q_{\phi}(\nuij | \vy_i)
+    \label{eq:variational_approx}
+\end{equation}
+where $\vphi$ are the learnable variational parameters, and $\vy_i$ represents all answer records for student $i$.
+
+A common choice, also adopted in the paper (Eq. 9), is a Gaussian distribution for each student's factors:
+\begin{equation}
+    q_{\phi}(\nuij | \vy_i) = \Ndist(\nuij; \vu_i, \text{diag}(\vv_i))
+    \label{eq:variational_gaussian}
+\end{equation}
+where the mean $\vu_i$ and the diagonal variances $\vv_i$ are output by a function (potentially a neural network) parameterized by $\vphi$, taking student $i$'s data $\vy_i$ as input: $[\vu_i^{\top}, \vv_i^{\top}]^{\top} = f_{\phi}(\vy_i)$.
+
+The prior distribution over student factors is typically chosen as a standard Gaussian:
+\begin{equation}
+    p(\nuij) = \Ndist(\nuij; \mathbf{0}, \mI)
+    \label{eq:prior}
+\end{equation}
+
+\section{Deriving the VarFA ELBO}
+
+Instead of directly maximizing the marginal log-likelihood $\log p(\mY | \vtheta)$, which is intractable, VarFA maximizes the Evidence Lower Bound (ELBO). Proposition 1 in the paper provides the ELBO derivation specific to the partially observed educational data setting:
+
+\emph{Proof Sketch (Following Paper's Proposition 1):}
+We start with the marginal log-likelihood of the observed data $\mY$, considering only the observed entries $(i,j) \in \Omegaobs$:
+\begin{align}
+    \log p(\mY | \vtheta) &= \log \prod_{(i,j) \in \Omegaobs} p_{\thetaj}(\yij) \\
+    &= \sum_{(i,j) \in \Omegaobs} \log p_{\thetaj}(\yij) \\
+    % Introduce the latent variable nu_i
+    &= \sum_{(i,j) \in \Omegaobs} \log \int p_{\thetaj}(\yij, \nuij) d\nuij \quad \text{(assuming } \yij \text{ depends only on } \nuij, \thetaj \text{)} \\
+    &= \sum_{(i,j) \in \Omegaobs} \log \int p_{\thetaj}(\yij | \nuij) p(\nuij) d\nuij \\
+    % Introduce the variational distribution q_phi
+    &= \sum_{(i,j) \in \Omegaobs} \log \int q_{\phi}(\nuij | \vy_i) \frac{p_{\thetaj}(\yij | \nuij) p(\nuij)}{q_{\phi}(\nuij | \vy_i)} d\nuij \\
+    % Apply Jensen's Inequality (log E[X] >= E[log X])
+    &\ge \sum_{(i,j) \in \Omegaobs} \int q_{\phi}(\nuij | \vy_i) \log \frac{p_{\thetaj}(\yij | \nuij) p(\nuij)}{q_{\phi}(\nuij | \vy_i)} d\nuij \\
+    &= \sum_{(i,j) \in \Omegaobs} \E_{\nuij \sim q_{\phi}(\nuij | \vy_i)} \left[ \log \frac{p_{\thetaj}(\yij | \nuij) p(\nuij)}{q_{\phi}(\nuij | \vy_i)} \right] \\
+    % Split the logarithm
+    &= \sum_{(i,j) \in \Omegaobs} \E_{\nuij \sim q_{\phi}(\nuij | \vy_i)} \left[ \log p_{\thetaj}(\yij | \nuij) + \log p(\nuij) - \log q_{\phi}(\nuij | \vy_i) \right] \\
+    % Rearrange into ELBO form
+    &= \sum_{(i,j) \in \Omegaobs} \left( \E_{\nuij \sim q_{\phi}(\nuij | \vy_i)} [\log p_{\thetaj}(\yij | \nuij)] - \E_{\nuij \sim q_{\phi}(\nuij | \vy_i)} [\log q_{\phi}(\nuij | \vy_i) - \log p(\nuij)] \right) \\
+    &= \sum_{(i,j) \in \Omegaobs} \left( \E_{\nuij \sim q_{\phi}(\nuij | \vy_i)} [\log p_{\thetaj}(\yij | \nuij)] - \KL{q_{\phi}(\nuij | \vy_i)}{p(\nuij)} \right)
+\end{align}
+Note: The paper's final ELBO form in Eq. (10) seems to slightly rearrange the terms compared to the standard ELBO derivation shown above, placing the KL divergence first with a negative sign. Let's write the final ELBO as presented in the paper (Eq. 10):
+\begin{equation}
+    \mathcal{L}_{\text{ELBO}}(\vphi, \vtheta) = \sum_{(i,j) \in \Omegaobs} \left( -\KL{q_{\phi}(\nuij | \vy_i)}{p(\nuij)} + \E_{\nuij \sim q_{\phi}(\nuij | \vy_i)} [\log p_{\thetaj}(\yij | \nuij)] \right)
+    \label{eq:elbo_varfa}
+\end{equation}
+This ELBO is a lower bound on the marginal log-likelihood of the observed data.
+
+\subsection{Explicit Terms}
+
+\begin{itemize}
+    \item \textbf{KL Divergence Term:} Assuming $q_{\phi}(\nuij | \vy_i) = \Ndist(\nuij; \vu_i, \text{diag}(\vv_i))$ and $p(\nuij) = \Ndist(\nuij; \mathbf{0}, \mI)$, the KL divergence has an analytical form:
+    \begin{equation}
+        \KL{q_{\phi}(\nuij | \vy_i)}{p(\nuij)} = \frac{1}{2} \sum_{k=1}^{D_{\nu}} \left( u_{ik}^2 + v_{ik} - \log(v_{ik}) - 1 \right)
+        \label{eq:kl_explicit}
+    \end{equation}
+    where $D_{\nu}$ is the dimensionality of $\nuij$, $u_{ik}$ is the $k$-th component of $\vu_i$, and $v_{ik}$ is the $k$-th component of $\vv_i$.
+
+    \item \textbf{Expected Log-Likelihood Term:} This term $\E_{\nuij \sim q_{\phi}(\nuij | \vy_i)} [\log p_{\thetaj}(\yij | \nuij)]$ depends on the specific FA model used (i.e., the form of $p_{\thetaj}(\yij | \nuij)$). For the canonical model in Eq. \ref{eq:fa_canonical}, $\log p_{\thetaj}(\yij | \nuij) = \yij \log \sigm(\cdot) + (1-\yij) \log(1-\sigm(\cdot))$, where $\sigm(\cdot)$ contains $\nuij$. The expectation is often approximated using Monte Carlo sampling, facilitated by the reparameterization trick.
+\end{itemize}
+
+\subsection{Reparameterization Trick}
+To compute gradients of the expectation term with respect to $\vphi$, the reparameterization trick is used. Sample $\vepsilon \sim \Ndist(\mathbf{0}, \mI)$ and compute $\nuij$ as:
+\begin{equation}
+    \nuij = \vu_i + \sqrt{\vv_i} \odot \vepsilon
+    \label{eq:reparam_trick}
+\end{equation}
+where $\odot$ is element-wise multiplication and $\sqrt{\vv_i}$ is the element-wise standard deviation. The expectation becomes $\E_{\vepsilon \sim \Ndist(\mathbf{0}, \mI)} [\log p_{\thetaj}(\yij | \vu_i + \sqrt{\vv_i} \odot \vepsilon)]$, which can be approximated by drawing samples of $\vepsilon$.
+
+\section{Optimization Objective}
+
+VarFA optimizes the ELBO (or minimizes its negative) jointly with respect to the variational parameters $\vphi$ and the other model parameters $\vtheta$. The objective function, including regularization on $\vtheta$, is (Eq. 11):
+\begin{equation}
+    \hat{\vtheta}, \hat{\vphi} = \text{argmin}_{\vtheta, \vphi} \left( -\mathcal{L}_{\text{ELBO}}(\vphi, \vtheta) + \lambda \mathcal{R}(\vtheta) \right)
+    \label{eq:optimization_obj}
+\end{equation}
+This optimization can be performed efficiently using stochastic gradient descent methods, thanks to the analytical KL term and the reparameterization trick for the expectation term.
+
+\section{Handling Missing Data}
+
+A key aspect highlighted in the paper is that the summations in the ELBO (Eq. \ref{eq:elbo_varfa}) are only over the observed entries $(i,j) \in \Omegaobs$. When the function $f_{\phi}(\vy_i)$ (used to compute the parameters of $q_{\phi}$) requires the full data vector $\vy_i$, the paper suggests using "zero imputation" for the missing entries as a practical workaround, following prior work in recommender systems.
+
+\section{Conclusion}
+
+VarFA adapts the variational inference framework to factor analysis models used in educational data mining. By approximating the posterior of student factors ($\vnu$) with a variational distribution $q_{\phi}$ and performing MLE for other parameters ($\vtheta$), it allows for efficient, scalable Bayesian inference. The ELBO objective is derived considering the sparse nature of observed data, and optimization leverages standard techniques like the reparameterization trick and analytical KL divergence, making the framework suitable for large-scale applications requiring uncertainty quantification.
+
+% --- DOCUMENT END ---
+\end{document}
