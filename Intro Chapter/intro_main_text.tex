@@ -1514,9 +1514,11 @@ Maximizing the ELBO with respect to parameters $\theta$ and $\phi$ serves two pu
 To making things mathematically explicit, let us take a look at the the formula
 of ELBO \eqref{eq:elbointro}. The KL divergence term measures how much the
 approximate posterior (learned by the encoder) deviates from the prior
-$p(\vz)$. Specifically, when $q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx),
-    \text{diag}(\vsigma^2_{\phi}(\vx)))$ and $p(\vz) = \Ndist(\vz; \mathbf{0},
-    \mI)$, this KL divergence has a convenient analytical solution:
+$p(\vz)$. Specifically, when
+\begin{align}
+    q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx))), \quad p(\vz) = \Ndist(\vz; \mathbf{0}, \mI)
+\end{align}
+this KL divergence has a convenient analytical solution:
 \begin{align}
     \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right)
     \label{eq:kl_gaussian}
