@@ -17,7 +17,7 @@ science, probability theory and probabilistic algorithms are of unique and
 paramount importance. With data comes uncertainty and noise, and with
 forecasting and prediction comes ambiguity. The nature of the tasks data
 science aims to tackle and the intrinsic problems stemming from all forms of
-data call for probabilistic approaches. It provides the mathematical language
+data call for probabilistic approaches. They provide the mathematical language
 and framework for us to navigate through randomness with deterministic
 confidence.
 
@@ -1680,9 +1680,12 @@ After going through VAE thoroughly, we can end the introduction of chapter 4
 with a short section highlighting the difference between VarFA and VAE. The
 mathematical deduction in the previous section, along with the high-level
 description provided in this section should prepare us well for the content in
-chapter 4.
+chapter 4. Generally speaking, VarFA can be applied in all scenarios where both
+dimension reduction and interoperability are necessary. In our case, we choose
+education as the main field of application because the necessity and advantage
+of interpretable models and dimension reduction are more or less self-evident.
 
-Generally, VarFA starts with two more interpretable assumptions compared to
+In our work, VarFA starts with two more interpretable assumptions compared to
 VAE:
 
 1. The students' overall performance follow a FA model.
@@ -1690,7 +1693,7 @@ VAE:
 2. The students' latent skills follow a multi-dimensional Gaussian distribution. (Like we mentioned previously, we assume everyone performs around their average level, with over low and over high performance being exponentially rare.)
 
 With these two assumptions, VarFA uses a similar encoder-decoder architecture
-as VAE, and VarFa can also be trained using the reparameterization trick
+as VAE, and VarFA can also be trained using the reparameterization trick
 efficiently based on a modified ELBO (details in chapter 4). After the training
 is complete, VarFA takes students' performance record and determines their
 latent skills during the encoder phase. This step is much more interpretable
