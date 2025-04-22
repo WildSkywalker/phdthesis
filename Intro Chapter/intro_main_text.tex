@@ -1209,7 +1209,7 @@ Local Lemma(LLL) we know today:
 \begin{lemma}[\cite{LLL1985}] \label{lem:LLL1985}
     Assuming the same conditions as lemma \ref{lem:LLL1975}, if we have $p \leq \frac{1}{2d}$. Assume
     \begin{align}
-        p < & \frac{(d-1)^{(d-1)}}{d^d}, \quad d>1 \nonumber \\
+        p < & \frac{(d-1)^{(d-1)}}{d^d}, \quad d>1; \nonumber \\
         p < & \frac{1}{2}, \quad d=1.
     \end{align}
     Then there is a nonzero probability that none of the events occurs.
@@ -1449,7 +1449,7 @@ This means we want to learn the relationship between the input data and the late
 Here, $\vmu_{\phi}(\vx)$ is the mean vector. $\vsigma^2_{\phi}(\vx)$ is the variance vector (diagonal elements of the covariance matrix).
 The encoder network takes $\vx$ as input and outputs the parameters $\vmu_{\phi}(\vx)$ and $\vsigma^2_{\phi}(\vx)$ (or often $\log \vsigma^2_{\phi}(\vx)$ for numerical stability). The explicit formula for the probability density function (PDF) of $q_{\phi}(\vz|\vx)$, assuming a $N$-dimensional latent space, is:
 \begin{align}
-    q_{\phi}(\vz|\vx) = \frac{1}{(2\pi)^{N/2} |\mSigma_{\phi}(\vx)|^{1/2}} \exp\left(-\frac{1}{2} (\vz - \vmu_{\phi}(\vx))^T \mSigma_{\phi}(\vx)^{-1} (\vz - \vmu_{\phi}(\vx))\right)
+    q_{\phi}(\vz|\vx) = \frac{1}{(2\pi)^{N/2} |\mSigma_{\phi}(\vx)|^{1/2}} \exp\left(-\frac{1}{2} (\vz - \vmu_{\phi}(\vx))^T \mSigma_{\phi}(\vx)^{-1} (\vz - \vmu_{\phi}(\vx))\right),
 \end{align}
 where $|\mSigma_{\phi}(\vx)|$ is the determinant of the covariance matrix $\mSigma_{\phi}(\vx)$, which simplifies to $\prod_{j=1}^{N} \sigma_{j, \phi}^2(\vx)$.
 
@@ -1469,40 +1469,40 @@ distance between our approximation $q_{\phi}(\vz|\vx)$ and
 $p_{\theta}(\vz|\vx)$ using KL-divergence. By definition
 \ref{def:KL_divergence}, we compute
 \begin{align}
-    \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} & = \int q_{\phi}(\vz|\vx) \log \frac{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} d\vz                   \\
-                                                & = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vz|\vx) \right]
+    \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} & = \int q_{\phi}(\vz|\vx) \log \frac{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} d\vz                    \\
+                                                & = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vz|\vx) \right].
 \end{align}
 Substitute $p_{\theta}(\vz|\vx) = \frac{p_{\theta}(\vx|\vz) p(\vz)}{p(\vx)}$:
 \begin{align}
-     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                      \\
-     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vx|\vz) - \log p(\vz) + \log p(\vx) \right]
+     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                       \\
+     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p_{\theta}(\vx|\vz) - \log p(\vz) + \log p(\vx) \right].
 \end{align}
 Since $\log p(\vx)$ does not depend on $\vz$, the expectation is just $\log p(\vx)$:
 \begin{align}
-     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                                                                     \\
-     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right] - \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx)
+     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                                                                      \\
+     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right] - \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx).
 \end{align}
 The first term is the KL divergence between the approximate posterior and the prior:
 \begin{align}
-    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right]
+    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right].
 \end{align}
 Substituting this back into the equation of $\KL{q_{\phi}(\vz|\vx)}{p(\vz)}$ gives:
 \begin{align}
-     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                \\
-     & \quad \quad = \KL{q_{\phi}(\vz|\vx)}{p(\vz)} - \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx)
+     & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                 \\
+     & \quad \quad = \KL{q_{\phi}(\vz|\vx)}{p(\vz)} - \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx).
 \end{align}
 Rearranging for $\log p(\vx)$:
 \begin{align}
-     & \log p(\vx) \nonumber                                                                                                                                                \\
-     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)} + \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}
+     & \log p(\vx) \nonumber                                                                                                                                                 \\
+     & \quad \quad = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)} + \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}.
 \end{align}
 Since KL divergence is always non-negative ($\KL{q}{p} \ge 0$), we have:
 \begin{align}
-    \log p(\vx) \ge \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)}
+    \log p(\vx) \ge \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] - \KL{q_{\phi}(\vz|\vx)}{p(\vz)}.
 \end{align}
 This right-hand side is the Evidence Lower Bound (ELBO), often denoted $\mathcal{L}(\theta, \phi; \vx)$:
 \begin{align}
-    \mathcal{L}(\theta, \phi; \vx) = \underbrace{\e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right]}_{\text{Reconstruction Term}} - \underbrace{\KL{q_{\phi}(\vz|\vx)}{p(\vz)}}_{\substack{\text{KL Divergence /} \\ \text{Regularization Term}}}
+    \mathcal{L}(\theta, \phi; \vx) = \underbrace{\e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right]}_{\text{Reconstruction Term}} - \underbrace{\KL{q_{\phi}(\vz|\vx)}{p(\vz)}}_{\substack{\text{KL Divergence /} \\ \text{Regularization Term}}}.
     \label{eq:elbointro}
 \end{align}
 Maximizing the ELBO with respect to parameters $\theta$ and $\phi$ serves two purposes:
@@ -1516,11 +1516,11 @@ of ELBO \eqref{eq:elbointro}. The KL divergence term measures how much the
 approximate posterior (learned by the encoder) deviates from the prior
 $p(\vz)$. Specifically, when
 \begin{align}
-    q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx))), \quad p(\vz) = \Ndist(\vz; \mathbf{0}, \mI)
+    q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx))), \quad p(\vz) = \Ndist(\vz; \mathbf{0}, \mI),
 \end{align}
 this KL divergence has a convenient analytical solution:
 \begin{align}
-    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right)
+    \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right).
     \label{eq:kl_gaussian}
 \end{align}
 To see this, the general KL divergence between $Q = \Ndist(\vmu_Q, \mSigma_Q)$ and $P = \Ndist(\vmu_P, \mSigma_P)$ is
@@ -1536,16 +1536,16 @@ by $\theta$) takes $\vz$ and outputs a vector $\boldsymbol{p}_{\theta}(\vz)$,
 where each element $p_{i, \theta}(\vz)$ is the probability that pixel $x_i$ is
 1.
 \begin{align} \label{eq:pzbernoulli}
-    p_{\theta}(\vx|\vz) = \prod_{i=1}^{N} p_{i, \theta}(\vz)^{x_i} (1 - p_{i, \theta}(\vz))^{1-x_i}
+    p_{\theta}(\vx|\vz) = \prod_{i=1}^{N} p_{i, \theta}(\vz)^{x_i} (1 - p_{i, \theta}(\vz))^{1-x_i},
 \end{align}
 where $N$ is the dimensionality of $\vx$.
 The log-likelihood is:
 \begin{align}
-    \log p_{\theta}(\vx|\vz) = \sum_{i=1}^{N} \left[ x_i \log p_{i, \theta}(\vz) + (1 - x_i) \log(1 - p_{i, \theta}(\vz)) \right]
+    \log p_{\theta}(\vx|\vz) = \sum_{i=1}^{N} \left[ x_i \log p_{i, \theta}(\vz) + (1 - x_i) \log(1 - p_{i, \theta}(\vz)) \right].
 \end{align}
 This is the negative binary cross-entropy between the input $\vx$ and the reconstructed probabilities $\boldsymbol{p}_{\theta}(\vz)$. The reconstruction term becomes:
 \begin{align}
-    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \sum_{i=1}^{N} \left( x_i \log p_{i, \theta}(\vz) + (1 - x_i) \log(1 - p_{i, \theta}(\vz)) \right) \right]
+    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \sum_{i=1}^{N} \left( x_i \log p_{i, \theta}(\vz) + (1 - x_i) \log(1 - p_{i, \theta}(\vz)) \right) \right].
 \end{align}
 
 For continuous data, we assume each dimension $x_i$ is Gaussian. The decoder
@@ -1554,17 +1554,17 @@ We often assume a fixed variance, say $\sigma^2 \mI$, for simplicity (e.g.,
 $\sigma^2=1$), or the decoder could also output the variance. Assuming fixed
 variance $\sigma^2$:
 \begin{align}
-    p_{\theta}(\vx|\vz) = \prod_{i=1}^{N} \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x_i - \mu_{i, \theta}(\vz))^2}{2 \sigma^2}\right)
+    p_{\theta}(\vx|\vz) = \prod_{i=1}^{N} \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x_i - \mu_{i, \theta}(\vz))^2}{2 \sigma^2}\right).
 \end{align}
 The log-likelihood is:
 \begin{align} \label{eq:pzcontinuous}
     \log p_{\theta}(\vx|\vz) & = \sum_{i=1}^{N} \left[ -\frac{1}{2} \log(2\pi \sigma^2) - \frac{(x_i - \mu_{i, \theta}(\vz))^2}{2 \sigma^2} \right] \\
                              & = -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^{N} (x_i - \mu_{i, \theta}(\vz))^2               \\
-                             & = -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2
+                             & = -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2.
 \end{align}
 This is proportional to the negative squared error between the input $\vx$ and the reconstructed mean $\vmu_{\theta}(\vz)$. The reconstruction term becomes:
 \begin{align}
-    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2 \right]
+    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ -\frac{N}{2} \log(2\pi \sigma^2) - \frac{1}{2\sigma^2} ||\vx - \vmu_{\theta}(\vz)||^2 \right].
 \end{align}
 Since the constant term doesn't affect optimization w.r.t $\theta, \phi$, maximizing this term is equivalent to minimizing the expected squared error: $\e_{\vz \sim q_{\phi}(\vz|\vx)} [||\vx - \vmu_{\theta}(\vz)||^2]$.
 
@@ -1597,16 +1597,16 @@ $\vsigma_{\phi}(\vx)$.
 We can rewrite the reconstruction term in \eqref{eq:elbointro} using this
 trick:
 \begin{align}
-    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] = \e_{\vepsilon \sim \Ndist(\mathbf{0}, \mI)} \left[ \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) + \vsigma_{\phi}(\vx) \odot \vepsilon) \right]
+    \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] = \e_{\vepsilon \sim \Ndist(\mathbf{0}, \mI)} \left[ \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) + \vsigma_{\phi}(\vx) \odot \vepsilon) \right].
 \end{align}
 In practice, we approximate this expectation using Monte Carlo sampling, typically with just one sample ($L=1$) of $\vepsilon$ per data point $\vx$ per training step:
 \begin{align}
-    \log p_{\theta}(\vx|\vz^{(i, l)}) \quad \text{where} \quad \vz^{(i, l)} = \vmu_{\phi}(\vx^{(i)}) +  \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(l)}  \quad \text{and} \quad \vepsilon^{(l)} \sim \Ndist(\mathbf{0}, \mI)
+    \log p_{\theta}(\vx|\vz^{(i, l)}) \quad \text{where} \quad \vz^{(i, l)} = \vmu_{\phi}(\vx^{(i)}) +  \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(l)}  \quad \text{and} \quad \vepsilon^{(l)} \sim \Ndist(\mathbf{0}, \mI).
 \end{align}
 Here we used superscript to distinguish sampled data points from general variables and coordinates. Combining everything, the objective function we want to maximize (or minimize its negative) for a single data point $\vx$, using the reparameterization trick \eqref{eq:reparam} and the analytical KL divergence \eqref{eq:kl_gaussian}, is approximated as:
 \begin{align}
-    \mathcal{L}(\theta, \phi; \vx) \approx \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) & +  \vsigma_{\phi}(\vx) \odot \vepsilon ) \nonumber                                                                           \\
-    -                                                                                 & \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right)
+    \mathcal{L}(\theta, \phi; \vx) \approx \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) & +  \vsigma_{\phi}(\vx) \odot \vepsilon ) \nonumber                                                                            \\
+    -                                                                                 & \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right),
     \label{eq:final_elbo_approx}
 \end{align}
 where $\vepsilon \sim \Ndist(\mathbf{0}, \mI)$ is sampled once.
@@ -1614,8 +1614,8 @@ where $\vepsilon \sim \Ndist(\mathbf{0}, \mI)$ is sampled once.
 We typically minimize the \emph{negative} ELBO averaged over a mini-batch of
 $M$ data points:
 \begin{align}
-    \text{Loss} & = -\frac{1}{M} \sum_{i=1}^M \mathcal{L}(\theta, \phi; \vx^{(i)})                                                                                                                                                                                                                                               \\
-                & \approx \frac{1}{M} \sum_{i=1}^M \left[ \underbrace{-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})}_{\text{Reconstruction Loss}} + \underbrace{\frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx^{(i)}) + \sigma_{j, \phi}^2(\vx^{(i)}) - \log(\sigma_{j, \phi}^2(\vx^{(i)})) - 1 \right)}_{\text{KL Loss}} \right]
+    \text{Loss} & = -\frac{1}{M} \sum_{i=1}^M \mathcal{L}(\theta, \phi; \vx^{(i)})                                                                                                                                                                                                                                                \\
+                & \approx \frac{1}{M} \sum_{i=1}^M \left[ \underbrace{-\log p_{\theta}(\vx^{(i)}|\vz^{(i)})}_{\text{Reconstruction Loss}} + \underbrace{\frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx^{(i)}) + \sigma_{j, \phi}^2(\vx^{(i)}) - \log(\sigma_{j, \phi}^2(\vx^{(i)})) - 1 \right)}_{\text{KL Loss}} \right],
     \label{eq:final_loss}
 \end{align}
 where $\vz^{(i)} = \vmu_{\phi}(\vx^{(i)}) +  \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(i)}$ with $\vepsilon^{(i)} \sim \Ndist(\mathbf{0}, \mI)$.
