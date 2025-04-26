@@ -1,0 +1,9 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}The Concept of Input and Output Kernels}{1}{section.1}%
+\contentsline {section}{\numberline {2}Setup and Notations}{3}{section.2}%
+\contentsline {section}{\numberline {3}Main Results}{4}{section.3}%
+\contentsline {section}{\numberline {4}The Generality of Conditions and Our Contributions}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Generality of Input and Output Kernels}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Our Contributions}{6}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Existence and Uniqueness of $\sigma ^*$}{6}{section.5}%
+\contentsline {section}{\numberline {6}Uniform Convergence of $F_{\rho , \mu _n}(x,\sigma )$}{10}{section.6}%
