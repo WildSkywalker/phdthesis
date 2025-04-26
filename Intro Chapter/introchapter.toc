@@ -1,16 +1,16 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Overview}{1}{section.1}%
-\contentsline {section}{\numberline {2}t-SNE and Dimension Reduction}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The Ubiquity and Challenge of High-Dimensional Data}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}A Brief History of Dimensionality Reduction}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {2}t-SNE and Dimension Reduction}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Ubiquity and Challenge of High-Dimensional Data}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}A Brief History of Dimensionality Reduction}{7}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}The Road to t-SNE}{12}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Markov Random Field and Probabilistic Graphical Models (PGM)}{16}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Dependency: An Unavoidable Problem}{16}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}PGM, a Short History}{20}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Bayesian Networks and Markov Random Fields}{25}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Bayesian Networks and Markov Random Fields}{24}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}The Necessity of Sampling and {Lov\'asz}\xspace Local Lemma}{30}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Factor Analysis and Variational Inference}{32}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Combining DR and PGM}{32}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Lineage of Factor Analysis}{33}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The Modern Toolkit: Variational Autoencoders}{34}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}The High-Level View of VarFA based on VAE}{39}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.3}The Modern Toolkit: Variational Autoencoders}{35}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The High-Level View of VarFA based on VAE}{40}{subsection.4.4}%

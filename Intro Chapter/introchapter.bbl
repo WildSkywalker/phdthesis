@@ -32,12 +32,6 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
 \newblock URL
   \url{https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf}.
 
-\bibitem[van~der Maaten and Hinton(2008)]{key}
-Laurens van~der Maaten and Geoffrey Hinton.
-\newblock Visualizing data using t-sne.
-\newblock {\em Journal of Machine Learning Research}, 9\penalty0 (2579-2605),
-  2008.
-
 \bibitem[Donoho(2000)]{Donoho_Dimensions}
 David Donoho.
 \newblock High-dimensional data analysis: The curses and blessings of
@@ -173,6 +167,12 @@ Antonio Auffinger and Daniel Fletcher.
 \newblock Equilibrium distributions for t-distributed stochastic neighbour
   embedding, 2023, 2304.03727.
 \newblock URL \url{https://arxiv.org/abs/2304.03727}.
+
+\bibitem[van~der Maaten and Hinton(2008)]{key}
+Laurens van~der Maaten and Geoffrey Hinton.
+\newblock Visualizing data using t-sne.
+\newblock {\em Journal of Machine Learning Research}, 9\penalty0 (2579-2605),
+  2008.
 
 \bibitem[Kobak et~al.(2020)Kobak, Linderman, Steinerberger, Kluger, and
   Berens]{Kobak_2020}

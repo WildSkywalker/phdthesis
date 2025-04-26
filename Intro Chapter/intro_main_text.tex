@@ -1,5 +1,35 @@
 \section{Overview} \label{intro_chap:sec:layout}
-As we venture further into the 21st century, our world is shaped, built, or
+This thesis is a collection of three different research projects I worked on
+during my Ph. D study at Northwestern University.
+
+The first project is a preprint about the equilibrium measure of generalized
+t-SNE, with details in chapter 2. We formulate the generalized form of input
+and output kernels and illustrate how our formulation maintains generality.
+Furthermore, we show that under certain general conditions, the input and
+output kernels of t-SNE can be changed while still proving the algorithm's
+convergence towards an equilibrium measure for the output as the sample size
+tends to infinity.
+
+The second project is a paper, published in AAAI 2023, regarding Lov\'asz Local
+Lemma (LLL) and its applications in learning combinatorial structures, with
+details in chapter 3. We developed a novel machine learning framework utilizing
+LLL that is able to efficiently output valid samples satisfying constraints and
+learn Markov Random Fields (MRF) for complex combinatorial problems such as
+K-SAT. We also provide the theoretical foundation of the algorithm, proving its
+correctness and estimating its expected running time.
+
+The third project is a paper, published in EDM 2020, about combining
+variational inference and factor analysis to create a more interpretable
+generative model, with details in chapter 4. We show that the new combination
+is efficient, accurate and more flexible when it comes to processing missing
+entries in the data set. Combining the strengths of both variational
+autoencoders and factor analysis, we demonstrate significant application value
+in fields requiring interpretable models, such as education.
+
+In summary, this thesis has an overarching theme in probabilistic algorithms
+and data science. The three pieces of work we present use different yet
+correlated methods to tackle problems arising in modern data analysis. Indeed,
+as we venture further into the 21st century, our world is shaped, built, or
 dare we say, defined by data (\cite{hey2009the}). From simple information like
 class rosters, to large scale datasets like the Human Genome Project, we are
 recording everything, with the realization that there are limitless values to
@@ -32,21 +62,6 @@ CNN(\cite{NIPS2012_c399862d}). And our stories have just begun. As of today,
 the development of Large Language Models (LLM), the closest ever creation of
 humans to Artificial General Intelligence (AGI) is essentially a probabilistic
 algorithm (\cite{NIPS2017_3f5ee243}).
-
-In this thesis, we will explore three different probabilistic algorithms. In
-chapter 2, we will study t-SNE, another famous and important dimension
-reduction algorithm developed by Hinton (\cite{key}). We will show that we are
-able to swap out the widely used input and output kernels and still achieve
-convergence and equilibrium measure in the asymptotic case. In chapter 3, we
-will transform a classic theorem, Lov\'asz Local Lemma, into a probabilistic
-algorithm that can learn difficult combinatorial structures. We will also
-provide the theoretical foundation of the algorithm, proving its correctness
-and giving an estimation of the running time expectation. In chapter 4, we will
-dive into another dimension reduction algorithm, Variational Factor Analysis
-(VarFA), and how we can combine the classic Variational AutoEncoder (VAE) with
-factor analysis to create a more interpretable generative model. All three
-algorithms represent a different yet extremely important aspect of data
-science, each with its own charm and characteristics.
 
 For the rest of this chapter, we will provide a brief introduction to the
 probabilistic algorithms we will discuss in this thesis. From basic concepts,
@@ -165,17 +180,17 @@ concentrated near the corners.
     \label{fig:concentration_distance_hypersphere}
 \end{figure}
 
-The above two plots reinforce the intuition behind the data mining problem we
-just brought up. Distance, one of the most fundamental and important feature
-that distinguishes data points, becomes less and less effective as the
-dimension of the data increases. It directly leads to the fact that purely
-distance-based algorithms will perform poorly with high-dimensional data sets.
-It is crucial to find ways to extract the information we need from high
-dimensions, then compress, analyze and visualize it in lower-dimensions. The
-concentration of distance is also one of the reasons that algorithms such as
-t-SNE are invented. As we will see in the coming sections, t-SNE encodes the
-neighborhood information using probability distributions, rather than plain
-Euclidean distance.
+The two plots reinforce the intuition behind the data mining problem we just
+brought up. Distance, one of the most fundamental and important feature that
+distinguishes data points, becomes less and less effective as the dimension of
+the data increases. It directly leads to the fact that purely distance-based
+algorithms will perform poorly with high-dimensional data sets. It is crucial
+to find ways to extract the information we need from high dimensions, then
+compress, analyze and visualize it in lower-dimensions. The concentration of
+distance is also one of the reasons that algorithms such as t-SNE are invented.
+As we will see in the coming sections, t-SNE encodes the neighborhood
+information using probability distributions, rather than plain Euclidean
+distance.
 
 The last example we would like to share is the RNA sequencing and many genome
 projects, where the curse of dimensionality manifests itself in real-world
