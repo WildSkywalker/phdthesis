@@ -1113,17 +1113,6 @@ We studied the asymptotic behavior and the equilibrium measures of the t-SNE alg
 5. \textbf{Empirical Validation through Simulation:} We performed extensive simulations across a diverse range of kernel combinations, providing strong empirical support for the validity and robustness of our theoretical findings.
 
 These advancements pave the way for more flexible and powerful applications of t-SNE in various domains. Future work may focus on designing novel kernels based on this framework, further optimizing the algorithm's performance and extending its capabilities.
-% Our contribution can be summarized as follows:
-
-% 1. We established a concrete form of the input and output kernels with minimal loss of generality. The formula we give to the kernels set the foundations for all the following computations.
-
-% 2. We provided specific conditions on the input and output kernels that guarantee the existence of the equilibrium measure $\mu^*$ and the convergence of the perplexity-controlled t-SNE algorithm. These conditions reveal insights on what properties the kernels should have for the algorithm to converge.
-
-% 3. We used novel methods to prove the existence and uniqueness of $\sigma^*$ that controls the perplexity. More importantly, under the new techniques, we relieve the condition of the probability measure $\mu_X$ that we draw sample from. This allows us to conduct convergence analysis on related quantities.
-
-% 4. We proved the existence of the equilibrium measure $\mu^*$ and showed that under the conditions we provided, the output of the generalized t-SNE algorithm converges to the equilibrium measure, greatly expanding the result in \cite{auffinger-tsne} to a much wider class of kernels.
-
-% 5. We conducted simulations on a variety combinations of kernerls to accompany our theoretical results.
 \section{Auxiliary lemmas}\label{tsne:sec:extra_proofs}
 Recall that $\mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}$ is the empirical
 measure of both the input and output. We just ignore the first or the second

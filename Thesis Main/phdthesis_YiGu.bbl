@@ -1,4 +1,4 @@
-\begin{thebibliography}{227}
+\begin{thebibliography}{229}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -1515,5 +1515,16 @@ Tim Miller.
 Carl Doersch.
 \newblock Tutorial on variational autoencoders, 2021, 1606.05908.
 \newblock URL \url{https://arxiv.org/abs/1606.05908}.
+
+\bibitem[Murray and Pickarski(2024)]{murray2024largedatalimitsscaling}
+Ryan Murray and Adam Pickarski.
+\newblock Large data limits and scaling laws for tsne, 2024, 2410.13063.
+\newblock URL \url{https://arxiv.org/abs/2410.13063}.
+
+\bibitem[Linderman and
+  Steinerberger(2017)]{linderman2017clusteringtsneprovably}
+George~C. Linderman and Stefan Steinerberger.
+\newblock Clustering with t-sne, provably, 2017, 1706.02582.
+\newblock URL \url{https://arxiv.org/abs/1706.02582}.
 
 \end{thebibliography}

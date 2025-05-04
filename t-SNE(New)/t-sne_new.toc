@@ -1,9 +1,16 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}The Concept of Input and Output Kernels}{1}{section.1}%
 \contentsline {section}{\numberline {2}Setup and Notations}{3}{section.2}%
-\contentsline {section}{\numberline {3}Main Results}{4}{section.3}%
-\contentsline {section}{\numberline {4}The Generality of Conditions and Our Contributions}{5}{section.4}%
-\contentsline {subsection}{\numberline {4.1}The Generality of Input and Output Kernels}{5}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Our Contributions}{6}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Existence and Uniqueness of $\sigma ^*$}{6}{section.5}%
-\contentsline {section}{\numberline {6}Uniform Convergence of $F_{\rho , \mu _n}(x,\sigma )$}{10}{section.6}%
+\contentsline {section}{\numberline {3}Main Results}{5}{section.3}%
+\contentsline {section}{\numberline {4}The Generality of Conditions}{5}{section.4}%
+\contentsline {section}{\numberline {5}Summary and Structure of Proofs}{6}{section.5}%
+\contentsline {section}{\numberline {6}Existence and Uniqueness of $\sigma ^*$}{7}{section.6}%
+\contentsline {section}{\numberline {7}Proofs of the Main Theorems}{11}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Uniform Convergence of $F_{\rho , \mu _n}(x,\sigma )$}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Existence of $\mu ^*$}{12}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Convergence Lemmas for $p_{ij}$}{13}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Lower Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{15}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Upper Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{19}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Auxiliary lemmas}{22}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Proof of theorem \ref {tsne:main_theorem_1}}{23}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Proof of theorem \ref {tsne:main_theorem_2}}{24}{subsection.7.8}%

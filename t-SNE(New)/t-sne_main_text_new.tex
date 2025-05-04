@@ -30,7 +30,7 @@ the output data points. We define the input and output kernels as follows:
     \end{align}
 \end{definition}
 \begin{definition} [Generalized Output Kernel] \label{def:output_kernel}
-    The output kernel $\ko(z,w):\mathbb{R}^s \times \mathbb{R}^s \to \mathbb{R}^+$ is a function of the output data points such that for any $x,y \in \mathbb{R}^s$,
+    The output kernel $\ko(z,w):\mathbb{R}^s \times \mathbb{R}^s \to \mathbb{R}^+$ is a function of the output data points such that for any $z,w \in \mathbb{R}^s$,
     \begin{align}
         \ko(z,w)=\ko(w,z).
     \end{align}
@@ -48,7 +48,7 @@ to distinguish it from the original algorithm.
 Clearly, not all choices of $\ki$ and $\ko$ will yield a valid generalized
 t-SNE algorithm, such as $\ki$ that diverges as $||x-y|| \to \infty$. To prove
 similar results as in \cite{auffinger-tsne}, we need to impose some conditions
-to both $\ki$ and $\ko$. The conditions should provide just enough constraints
+on both $\ki$ and $\ko$. The conditions should provide just enough constraints
 for the convergence to hold, while applying to a wide range of function
 choices. Towards this end, we use the following conditions for the rest of our
 work. We will provide a detailed discussion on the generality of these
@@ -72,7 +72,7 @@ conditions in section \ref{tsne:sec:generality_conditions}.
 \end{condition}
 Since the all probability masses are normalized, we can assume without loss of generality that $w(0)=0$ from now on.
 \begin{condition}[Output Kernel Conditions] \label{output_kernel_conditions}
-    The output kernel depends only on the distance between two output data points $y$ and $y'$. In particular, $\ko(y,y') = k (\norm{y-y'})$ and that:
+    The output kernel depends only on the distance between two output data points $y$ and $y'$. In particular, $\ko(y,y') = k (\norm{y-y'})$ and:
 
     1. $k: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is decreasing and bounded.
 
@@ -101,7 +101,11 @@ $\sigma_i$ satisfies that for each $i = 1, \dots, n$,
 \begin{align}
     -\sum_{j = 1, j \neq i}^n p_{j|i} \log p_{j|i} = \log \textbf{Perp} =: \log (n \rho).
 \end{align}
-$\textbf{Perp}$ is called the perplexity and $\rho \in (0,1)$ is a given constant. The purpose of $\sigma_i$ is to make sure that for each $i$, the probability distribution induced by $p_{j|i}$ has the same entropy across all $i$. Clearly, $p_{j|i}$ is not symmetric. We then define $p_{ii} = 0$ and for $1 \leq i \neq j \leq n$,
+$\textbf{Perp}$ is called the perplexity and $\rho \in (0,1)$ is a given constant. The purpose of $\sigma_i$ is to make sure that for each $i$, the probability distribution induced by $p_{j|i}$ has the same entropy across all $i$. Clearly, $p_{j|i}$ is not symmetric.
+\begin{remark}
+    For finite data set perplexity is usually set as a constant. Moreover, the scaling of perplexity with respect to $\log n$ is strictly necessary here. In \cite{murray2024largedatalimitsscaling}, it has been proved that if we let $\textbf{\normalfont Perp} = \log n^{\gamma} \rho$ for some constant parameter $\gamma$, we cannot prove convergence and the existence of equilibrium measures for neither $\gamma<1$ nor $\gamma >1$.
+\end{remark}
+We then define $p_{ii} = 0$ and for $1 \leq i \neq j \leq n$,
 \begin{align}
     p_{ij} = \frac{p_{j|i} + p_{i|j}}{2n} = \frac{1}{2n}\left(\frac{\ki(X_i,X_j,\sigma_i)}{\sum_{k \neq i} \ki(X_i,X_k,\sigma_i)}+\frac{\ki(X_i,X_j,\sigma_j)}{\sum_{k \neq j} \ki(X_j,X_k,\sigma_j)}\right).
 \end{align}
@@ -189,25 +193,24 @@ condition to $C^0$.
 
         4.$\exists M > 0$ s.t. $\forall t \geq 0, w'(t) \leq w(t)$, and $\sup \mathcal{K}_w > 0$.
     \end{condition}
-    We will not include proofs for lemmas assuming condition \ref{input_kernel_conditions_ext} and sub-Gaussian samples, because such generalization will not carry onto the main theorems (neither do the proofs in \cite{auffinger-tsne}). However, the proofs mentioned in the original paper and adaptable to this context are still invaluable because they demonstrate the significant efforts to provide the theoretical guarantees of t-SNE for a wider range of sample data.
+    We will not include proofs for lemmas assuming condition \ref{input_kernel_conditions_ext} and sub-Gaussian samples, because such generalization will not carry onto the main theorems. One could adapt the proofs we present assuming $\mu_X$ being sub-Gaussian and condition \ref{input_kernel_conditions_ext}. However, it remains unknown that whether both theorem \ref{tsne:main_theorem_1} and \ref{tsne:main_theorem_2} hold assuming a more general data distribution.
 \end{remark}
-\section{The Generality of Conditions and Our Contributions} \label{tsne:sec:generality_conditions}
-\subsection{The Generality of Input and Output Kernels}
-Since the main goal of our work is the generalize the theoretical guarantees of
+\section{The Generality of Conditions} \label{tsne:sec:generality_conditions}
+Since the main goal of our work is to generalize the theoretical guarantees of
 the t-SNE algorithm, it is important that we do not lose comprehensiveness when
 assuming a concrete form of both the input and output kernels. Therefore, both
 condition \ref{input_kernel_conditions} and \ref{output_kernel_conditions}
 warrant an explanation.
 
-For the formula of the input kernel in \eqref{def:input_kernel}, we start by
-realizing that $t$-SNE is about the relationship between all data points. The
-insights we gain from the algorithm should be translation and rotation
-invariant with respect to the coordinate system we choose. Hence, it is only
-reasonable to assume that the input kernel is a function of $\norm{x-x'}$ for
-each pair of input data points $x,x'$.
+For the formula of the input kernel in definition \ref{def:input_kernel}, we
+start by realizing that $t$-SNE is about the relationship between all data
+points. The insights we gain from the algorithm should be translation and
+rotation invariant with respect to the coordinate system we choose. Hence, it
+is only reasonable to assume that the input kernel is a function of
+$\norm{x-x'}$ for each pair of input data points $x,x'$.
 
 On the other hand, the weight we assign to each pair of data points is always
-positive due to nature of probability mass. We thus lose no generality by
+positive due to the nature of probability masses. We thus lose no generality by
 assuming the input kernel has an exponential form because obviously, the
 exponential function is a smooth bijection from $\mathbb{R}$ to $\mathbb{R}^+$.
 The same above can be said for the output kernel.
@@ -225,7 +228,7 @@ results just as in \cite{auffinger-tsne}.
 
 Combining all the above, we arrive at the form of the input kernel in
 \eqref{tsne:input_kernel}, by adding a general function $w$ to the product
-$\sigma \norm{x-x'}^{\theta}$. This gives us a kernel we can easily work
+$\sigma \norm{x-x'}^{\theta}$. This gives us a kernel we can easily work on,
 without losing any generality.
 
 Besides the form of the input kernel, we also want to make sure that the
@@ -245,17 +248,32 @@ let $w(t) = \log t$, we have $w'(t)+tw''(t) = 0$. Roughly speaking, this
 implies that the main theorems hold as long as the input kernel decays at
 polynomial rate or faster, which is a big step up than proving the convergence
 for Gaussian kernels alone.
-\subsection{Our Contributions}
-Given all the prior context, we are able to summarize our
-contributions as follows:
+\section{Summary and Structure of Proofs} \label{tsne:sec:summary_structure}
+Before we move onto mathematical details, we dedicate this short section to
+give a summary of our work and the structure of the proofs. Since t-SNE assigns
+a ``weight" to each pair of data points using Gaussian and $t$-distribution, we
+propose the concept of generalized kernels so that the generalized t-SNE can
+use a wide range of functions to define the weights, thus the subsequent
+probability distributions associated with the input and output data points. A
+natural question to ask is: under which conditions can we prove the convergence
+of the generalized t-SNE algorithm towards an equilibrium measure? Our work
+here answers the questions by providing a concrete formulation of the
+generalized kernels as well as rigorous proofs of the convergence towards the
+equilibrium measure.
 
-1. \textbf{A Foundation for Generalized Kernels:} We established a concrete, yet general, formulation for both input and output kernels, providing a solid foundation for subsequent theoretical analyses.
-
-2. \textbf{Guaranteed Convergence:} We identified specific conditions on these kernels that ensure the existence of an equilibrium measure, $\mu^*$, and guarantee the convergence of the perplexity-controlled t-SNE algorithm. These conditions provide crucial insights into the essential properties of kernels required for optimal algorithmic performance.
-
-3. \textbf{Relaxed Constraints and Novel Proofs:} Through the development of novel proof techniques, we demonstrated the existence and uniqueness of the perplexity-controlling parameter, $\sigma^*$, while simultaneously relaxing the constraints on the underlying probability measure, $\mu_X$. This significantly broadens the applicability of t-SNE and enables a more comprehensive convergence analysis.
-
-4. \textbf{Extended Convergence Analysis:} We rigorously proved the existence of the equilibrium measure, $\mu^*$, and demonstrated that, under the specified conditions, the output of the generalized t-SNE algorithm converges to this equilibrium. This result dramatically extends the convergence analysis in \cite{auffinger-tsne} to a significantly wider class of kernels.
+The generality of the kernel formulation as well as the conditions we impose
+are discussed in the previous section. For the proofs, we first establish the
+existence and uniqueness of $\sigma^*$ as the asymptotic limit of $\sigma_i$'s
+in section \ref{tsne:sec:existence_uniqueness}. Then we prove the uniform
+convergence of $\sigma^*$ in section \ref{tsne:sec:uniform_convergence}.
+$\sigma^*$ serves as the anchor point of all subsequent convergence results.
+With the existence and uniqueness of $\sigma^*$ as well as its convergence
+established, we are able to prove the convergence towards the equilibrium
+measure by proving inequalities from both sides, the details of which are
+discussed in section \ref{tsne:sec:lower_bound} and \ref{tsne:sec:upper_bound}.
+Finally the proofs are wrapped up in section \ref{tsne:sec:main_theorem_1} and
+\ref{tsne:sec:main_theorem_2}, where we show that the equilibrium measure also has
+compact support just as the input measure $\mu_X$.
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{sigma-star}}\label{tsne:sec:existence_uniqueness}
 In this section we establish the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$. Recall that $\sigma^*_{\rho,\mu}(x)$ is the unique solution of the equation
 \begin{align}
@@ -383,7 +401,7 @@ To tackle this proof, we need one additional lemma inspired by theorem 7 in \cit
     \begin{align}
         w = w(\sigma\norm{x-x'}^{\theta}), \quad w'=w'(\sigma\norm{x-x'}^{\theta}), \quad \exp(\cdot) = \exp(-w(\sigma\norm{x-x'}^{\theta})).
     \end{align}
-    Omit $d\mu(x')$ in the integration for cleaner writing, and we have
+    Omitting $d\mu(x')$ in the integration for cleaner writing, and we have
     \begin{align}
           & \frac{\partial}{\partial \sigma} F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                    \\
         = & -\int \frac{w'\norm{x-x'}^{\theta}\exp(\cdot)}{\int \exp(\cdot)} -\int \frac{w\exp(\cdot)'}{\int \exp(\cdot)} +
@@ -401,7 +419,7 @@ To tackle this proof, we need one additional lemma inspired by theorem 7 in \cit
          & (w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta}) \nonumber                                   \\
          & \qquad \qquad \qquad \qquad \qquad \qquad \cdot \left(\frac{1}{w(\sigma\norm{y-x'}^{\theta})}-\frac{1}{w(\sigma\norm{x-x'}^{\theta})}\right) \geq 0
     \end{align}
-    is true, then setting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta}$ in lemma \ref{miracle_lemma_ext} shows that (\ref{monotone_inequ}) holds. Let $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. In order for (\ref{monotone_condition}) to be true, we are left to show
+    is true, then setting $f(x) = \exp(\cdot)$, $h(x) = w \cdot \exp(\cdot)$ and $g(x) = w'\cdot \norm{x-x'}^{\theta}$ in lemma \ref{miracle_lemma_ext} shows that (\ref{monotone_inequ}) holds. Let $\norm{x-x'}^{\theta} > \norm{y-x'}^{\theta}$ without loss of generality. Then by monotonicity of $w$, we have $w(\sigma\norm{x-x'}^{\theta})>w(\sigma\norm{y-x'}^{\theta})$. For (\ref{monotone_condition}) to be true, we are left to show
     \begin{align}
         w'(\sigma\norm{x-x'}^{\theta})\norm{x-x'}^{\theta}-w'(\sigma\norm{y-x'}^{\theta})\norm{y-x'}^{\theta} \geq 0.
     \end{align}
@@ -423,4 +441,627 @@ We can now formally state and prove the main result of this section.
     The existence and uniqueness can be proven by combining \eqref{existence_uniqueness:limit_1}, \eqref{existence_uniqueness:limit_2}, lemma \ref{existence_uniqueness:existence_lemma} and lemma \ref{existence_uniqueness:uniqueness_lemma}. The smoothness of $\sigma^*_{\rho,\mu}(x)$ follows from the implicit function theorem.
 \end{proof}
 
-\section{Uniform Convergence of \texorpdfstring{$F_{\rho, \mu_n}(x,\sigma)$}{F}}\label{tsne:sec:uniform_convergence}
+\section{Proofs of the Main Theorems} \label{tsne:sec:proofs}
+From now on, we will assume both condition \ref{input_kernel_conditions} and
+condition \ref{output_kernel_conditions} throughout this section. We will also
+assume that the distribution $\mu_X$ that we draw samples from has $C^0$
+density with bounded density and gradient of density. The assumptions on the
+sample distribution $\mu_X$ are inherited directly from section
+\ref{tsne:sec:existence_uniqueness} to avoid lengthy theorem and lemma
+statements.
+\subsection{Uniform Convergence of \texorpdfstring{$F_{\rho, \mu_n}(x,\sigma)$}{F}} \label{tsne:sec:uniform_convergence}
+After proving the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$, we want to establish the convergence of this quantity. Recall that
+\begin{align}
+      & F_{\rho,\mu}(x,\sigma) \nonumber                                                                                                                                                                                                                    \\
+    = & \int \frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} \log\left(\frac{\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')}\right)d\mu(x') + \log \rho \nonumber \\
+    = & -\int \frac{w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta}))}{\int \exp(-w(\sigma\norm{x-x'}^{\theta})) d\mu(x')} d\mu(x') \nonumber                                                                                               \\
+      & \qquad \qquad \qquad \qquad - \log \left(\int \exp(-w(\sigma\norm{x-x'}^{\theta}))d\mu(x')\right)  + \log \rho. \nonumber
+\end{align}
+Before we state the main results of this section, we need to borrow one more lemma from \cite{auffinger-tsne}.
+\begin{lemma} \label{approx_lemma}
+    Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
+    1. $\mu$ is sub-Gaussian; \\
+    2. $h(x,x',\sigma)$ and $\nabla_x h(x,x',\sigma)$ are bounded for all $x,x'$ and all $\delta \in K_n$;\\
+    3. $h(x,x',\sigma) \to 0$ as $\sigma\norm{x-x'} \to \infty$.\\
+    Let $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$, and $\mu_n = (1/n)\sum_i \delta_{X_i}$. Then for any $\epsilon > 0$ with probability at least $1 - e^{-c\epsilon^2n}$ we have
+    \begin{align}
+        \sup_{\sigma^{-1} \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
+    \end{align}
+\end{lemma}
+The lemma assumes $\mu$ to be sub-Gaussian so it automatically covers the cases where $\mu$ has compact support with $C^0$ density. We have the following two propositions.
+\begin{proposition} \label{tsne:uniform_convergence_prop}
+    Let $\mu_X$ be a probability measure with compact support, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Then there exists a constant $\epsilon>0$, that almost surely in $X_1,\dots,X_n$,
+    \begin{align}
+        \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)\right| = O(n^{-\epsilon}).
+    \end{align}
+\end{proposition}
+\begin{proposition} \label{tsne:uniform_convergence_prop_2}
+    Suppose $\mu_X$ has compact support and $C^0$ density. Then almost surely, as $n \to \infty$,
+    \begin{align}
+        \sup_{i=1,\dots,n} \left|\sigma_{\mu_n}^*(X_i)-\sigma_{\mu}^*(X_i)\right| \to 0.
+    \end{align}
+    In particular,
+    \begin{align}
+        \left|\sigma_{\mu_n}^*(X_i)-\sigma_{\mu}^*(X_i)\right| = O\left(\left|F_{\mu_n}(X_i,\sigma)-F_{\mu}(X_i,\sigma)\right|\right).
+    \end{align}
+\end{proposition}
+The proof of proposition \ref{tsne:uniform_convergence_prop_2} follows directly from proposition \ref{tsne:uniform_convergence_prop} by applying the mean value theorem and a similar simple argument as in \cite{auffinger-tsne}. It suffices to show proposition \ref{tsne:uniform_convergence_prop}. To lighten up the notations, write:
+\begin{align} \label{tsne:uniform_convergence:notation}
+    F_{\mu_n}(x,\sigma) = & F_{\rho, \mu_n}(x,\sigma) \nonumber                                \\
+    f_{\sigma}(x,x') =    & \exp(-w(\sigma\norm{x-x'}^{\theta})),  \nonumber                   \\
+    g_{\sigma}(x,x') =    & w(\sigma\norm{x-x'}^{\theta})\exp(-w(\sigma\norm{x-x'}^{\theta})).
+\end{align}
+\begin{proof}[Proof of proposition \ref{tsne:uniform_convergence_prop}]
+    By \eqref{big_F_formula}, it is clear that in order to show the uniform convergence of $F_{\mu_n}(X_i,\sigma)$, we need to show the uniform convergence of the two terms in the expression.
+
+    For the first term, notice that for any real numbers $A,B,C,D$, we have:
+    \begin{align}
+        \left|\frac{A}{B}-\frac{C}{D}\right| = \left|\frac{AD-BC}{BD}\right| = \left|\frac{D(A-C)+C(D-B)}{BD}\right| \leq \left|\frac{A-C}{B}\right|+\left|\frac{C(D-B)}{BD} \right|.
+    \end{align}
+    This means:
+    \begin{align} \label{important_lemmas:triangle_inequality}
+         & \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}-\frac{\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu(x')}\right| \leq \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')-\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}\right| \nonumber \\
+         & \qquad \qquad + \left|\frac{\int g_{\sigma}(x,x')d\mu(x')(\int f_{\sigma}(x,x') d\mu_n(x')-\int f_{\sigma}(x,x') d\mu(x'))}{\int f_{\sigma}(x,x')d\mu(x')\int f_{\sigma}(x,x') d\mu_n(x')} \right|.
+    \end{align}
+    Since $\mu_X$ has compact support, $\norm{X_i-X_j}$ is bounded for all $i,j$, implying that all denominators in the above formulas are bounded from below if $\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]$. Using lemma \ref{approx_lemma} with $h = f_{\sigma}$ and $h = g_{\sigma}$, there exits a set $E$ with $\p(E) \leq 2e^{-c\epsilon^2n}$ such that on $E^c$,
+    \begin{align} \label{important_lemmas:approximation}
+         & \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]          \\ i = 1,\dots, n}} \left|\int f_{\sigma}(X_i,x')d\mu_n(x') - \int f_{\sigma}(X_i,x')d\mu(x') \right| \nonumber \\
+         & \qquad + \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left|\int g_{\sigma}(X_i,x')d\mu_n(x') - \int g_{\sigma}(X_i,x')d\mu(x') \right|\leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
+    \end{align}
+    This directly gives us
+    \begin{align} \label{important_lemmas:approximation_2}
+        \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left|\frac{\int g_{\sigma}(x,x') d\mu_n(x')}{\int f_{\sigma}(x,x') d\mu_n(x')}-\frac{\int g_{\sigma}(x,x') d\mu(x')}{\int f_{\sigma}(x,x') d\mu(x')}\right| \leq O(n^{-\epsilon'})
+    \end{align}
+    for some $\epsilon'>0$ if we let $\epsilon = n^{-\gamma}$ for some constant $\gamma>0$. On the other hand, using the elementary inequality $\log(1+x) \leq x$ for $x > 0$, we can derive similar bound for the second term in \eqref{big_F_formula}.
+    \begin{align} \label{important_lemmas:log_inequ}
+        \sup_{\substack{\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}] \\ i = 1,\dots, n}} \left| \log\left(\int f_{\sigma}(X_i,x') d\mu_n(x')\right)- \log\left(\int f_{\sigma}(X_i,x') d\mu(x')\right) \right| \leq O(n^{-\epsilon''})
+    \end{align}
+    for some $\epsilon''>0$. Combining \eqref{big_F_formula}, \eqref{important_lemmas:approximation_2} and \eqref{important_lemmas:log_inequ} proves the proposition.
+\end{proof}
+\subsection{Existence of \texorpdfstring{$\mu^*$}{mu-star}}
+The lemmas can be borrowed directly from \cite{auffinger-tsne} as they irrelevant to the generalized kernels.
+\begin{lemma}
+    Any sequence in $\tilde{\mathcal{P}}_X$ is tight.
+\end{lemma}
+\begin{lemma} \label{mu_star_lemma}
+    There exits $\mu^*$ such that
+    \begin{align}
+        I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)
+    \end{align}
+\end{lemma}
+\subsection{Convergence Lemmas for \texorpdfstring{$p_{ij}$}{pij}}\
+To further lighten up the notations, define(the original definitions of $f$ can be found in \eqref{tsne:uniform_convergence:notation})
+\begin{align} \label{tsne:convergence_lemmas:notation}
+    \sigma_n(x) = & \sigma_{\rho,\mu_n}^*(x), \nonumber                                                                                \\
+    \sigma(x)   = & \sigma_{\rho,\mu_X}^*(x), \nonumber                                                                                \\
+    f_n(x,x') =   & f_{\sigma_n}(x,x'), \nonumber                                                                                      \\
+    f(x,x')   =   & f_{\sigma}(x,x'), \nonumber                                                                                        \\
+    p'_n(x,x') =  & \frac{f_n(x,x')}{\int f_n(x,x')d\mu_n(x') - 1/n}, \quad p'(x,x') = \frac{f(x,x')}{\int f(x,x')d\mu(x')}, \nonumber \\
+    p_n(x,x') =   & \frac{1}{2}(p'_n(x,x')+p'_n(x',x)), \quad p(x,x') = \frac{1}{2}(p'(x,x')+p'(x',x)).
+\end{align}
+Note that $p_{j|i} = p'_n(X_i,X_j)/n$ and $p_{ij} = p_n(X_i,X_j)/n^2$, and for $\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]$ we have
+\begin{align} \label{tsne:important_bounds}
+    \int f(x,x')d\mu(x'), \quad \int f_n(x,x')d\mu_n(x') \geq C
+\end{align}
+for some constant $C>0$.
+\begin{lemma} \label{tsne:f_n_convergence_lemma}
+    Assume $\mu_X$ have compact support. As $n \to \infty$,
+    \begin{align}
+        \sup_{i,j} \left|f_n(X_i,X_j) - f(X_i,X_j)\right| = O(n^{-\epsilon})
+    \end{align}
+    for some $\epsilon>0$.
+\end{lemma}
+\begin{proof}
+    By definition and assume $\sigma(x) \geq \sigma_n(x)$ WLOG (or we can always compute the other way around), we have
+    \begin{align} \label{f_convergence:difference}
+        |f_n-f| = & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right|\exp(w(-\sigma(x)\norm{x-x}^{\theta})) \nonumber \\
+        \leq      & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right| \nonumber                                       \\
+        =         & \left|\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right|.
+    \end{align}
+    By condition \ref{input_kernel_conditions}, $w$ is twice differentiable. Since $\mu_X$ has compact support, $\norm{x-x'}$ is bounded, so is
+    $\exp(w'(\tilde{\sigma}(x)\norm{x-x'}^{\theta}))\norm{x-x'}^{\theta}$. By the simple limit $\lim_{x \to 0}(e^x-1)/x = 1$, the difference \eqref{f_convergence:difference} can be bounded as
+    \begin{align} \label{tsne:kw_bounds_1}
+        |f_n-f| = O(n^{-1/2} (\log n)^{\theta}).
+    \end{align}
+    The proof is thus finished.
+\end{proof}
+\begin{lemma} \label{tsne:integrand_lemma_2}
+    Let $\mu_X$ have compact support. There exists $\epsilon>0$ such that as $n \to \infty$,
+    \begin{align}
+        \sup_{i,j} \left|p'_n(X_i,X_j) - p'(X_i,X_j)\right| = & O(n^{-\epsilon}), \nonumber \\
+        \sup_{i,j} \left|p_n(X_i,X_j) - p(X_i,X_j)\right| =   & O(n^{-\epsilon}) \nonumber.
+    \end{align}
+\end{lemma}
+\begin{proof}
+
+    Once again, we omit $X_i$ and $X_j$ for lighter notations. Using the triangular
+    inequality, we have
+    \begin{align} \label{p_convergence:triangle_inequality}
+             & |p'_n - p'| = \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f}{\int f d \mu}\right| \nonumber                                                                                       \\
+        \leq & \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| + \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \nonumber                       \\
+             & \qquad \qquad \qquad \qquad \qquad \qquad \qquad + \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| + \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right|.
+    \end{align}
+    In order to get the convergence, we need to check the convergence of each term. Note that $f,f_n \leq 1$. Denote
+    The first can be bounded using \eqref{tsne:important_bounds}:
+    \begin{align} \label{p_convergence:first_term}
+        \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| \leq \frac{1}{n} \left|\frac{1}{\int f_n d\mu_n - 1/n} \cdot \frac{1}{\int f_n d\mu_n}\right|= O(n^{-1}).
+    \end{align}
+    Continue to the second term, we compute
+    \begin{align} \label{p_convergence:second_term}
+        \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \leq \frac{|f_n-f|}{|\int f_n d\mu_n||\int f d\mu_n|} = O(|f_n-f|) = O(n^{-1/2} (\log n)^{\theta})
+    \end{align}
+    by lemma \ref{tsne:f_n_convergence_lemma} and \eqref{tsne:important_bounds}.
+
+    For the third term we can use lemma \ref{approx_lemma} and repeat the procedure
+    that leads us to \eqref{important_lemmas:approximation_2}, which gives us
+    \begin{align} \label{p_convergence:third_term}
+        \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| \leq \frac{|\int f d \mu_n - \int f d \mu|}{|\int f d \mu||\int f d \mu_n|} = O(n^{-1/2} (\log n)^{\theta}),
+    \end{align}
+    which is also $O(n^{-\epsilon})$ based on the hypothesis of the lemma.
+
+    Finally, we have a similar inequality as the second term for the fourth term:
+    \begin{align} \label{p_convergence:fourth_term}
+        \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right| = O(|f_n-f|) = O(n^{-1/2} (\log n)^{\theta}).
+    \end{align}
+    The proof is finished by putting \eqref{p_convergence:triangle_inequality}, \eqref{p_convergence:first_term}, \eqref{p_convergence:second_term}, \eqref{p_convergence:third_term}, and \eqref{p_convergence:fourth_term} together.
+\end{proof}
+\begin{lemma} \label{tsne:plogp_convergence_lemma}
+    Assuming $\mu_X$ has compact support, then there exists $\epsilon>0$ such that as $n \to \infty$,
+    \begin{align}
+        \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)| = & O(n^{-\epsilon}). \nonumber
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Let $\epsilon_n = n^{-1/2} (\log n)^{\theta}$, where we inherit from \eqref{p_convergence:second_term}. We compute
+    \begin{align}
+        p_n \log p_n = & p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber           \\
+        =              & p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
+    \end{align}
+    The third term will apparently vanish. For the second term, recall that $p$ is bounded below because $\mu_X$ is compactly supported (which is essentially \eqref{tsne:important_bounds}). This means
+    \begin{align} \label{p_convergence:entropy_bound}
+        O(\epsilon_n)/p = O(\epsilon_n) = O(n^{-1/2} (\log n)^{\theta}) = O(n^{-\epsilon}),
+    \end{align}
+    as desired.
+\end{proof}
+\begin{lemma}
+    Assuming $\mu_X$ has compact support, then as $n \to \infty$,
+    \begin{align}
+        \sum_j p_{j|i} \log p_{j|i} + \log(\rho n) = o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Recall that $p_{j|i} = \frac{1}{n}p'_n(X_i,X_j)$. Therefore
+    \begin{align}
+        \sum_j p_{j|i} \log p_{j|i} = & \sum_{j \neq i} \frac{1}{n}p'_n(X_i,X_j) \log \left(\frac{1}{n}p'_n(X_i,X_j) \right ) + \log n + \log \rho \nonumber                                  \\
+        =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho + \log n \left(1 - \frac{1}{n}\sum_{j \neq i} p'_n(X_i,X_j)\right) \nonumber \\
+        =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho
+    \end{align}
+    because by definition $n - \sum_{j \neq i} p'_n(X_i,X_j) = 0$. We proceed to write the first summation as an integral over the measure $\mu_n$, with the difference being the diagonal terms.
+    \begin{align} \label{p_convergence:diagonal_term}
+          & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) - \int p'_n(X_i,x') \log p'_n(X_i,x') d\mu_n(x') \nonumber     \\
+        = & -\frac{1}{n}\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\log \left(\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\right).
+    \end{align}
+    Since $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. This finishes the proof.
+\end{proof}
+\subsection{Lower Bound for \texorpdfstring{$\inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y)$}{L(X,Y)}} \label{tsne:sec:lower_bound}
+We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
+\begin{lemma} \label{lower_bound_lemma_1}
+    There exists a set of points $y^*(X)$ such that
+    \begin{align}
+        \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y) = L_{n,\rho}(X,y^*).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Let $k \in \{1,\cdots, n\}$. We are going to show that
+    \begin{align}
+        \lim_{|y_k| \to \infty} L_{n,\rho}(X,y) = \infty.
+    \end{align}
+    By definition, $L$ is the relative entropy and
+    \begin{align}
+        L_{n,\rho}(X,y) = \sum_{i \neq j} p_{ij}\log \left(\frac{p_{ij}}{q_{ij}}\right) = \sum_{i \neq j} p_{ij}\log p_{ij} - \sum_{i \neq j} p_{ij}\log q_{ij}.
+    \end{align}
+    For $n$ given and fixed, it suffices to show that
+    \begin{align}
+        \sum_{i \neq j} p_{ij}\log (q_{ij}) = \sum_{i \neq j} p_{ij}\log \left(\frac{g(y_i,y_j)}{\sum_{m \neq l}g(y_m,y_l)}\right) \to -\infty.
+    \end{align}
+    Recall that $g(y,y')$ is bounded by condition \ref{output_kernel_conditions}. We have
+    \begin{align}
+             & -\sum_{i \neq j} p_{ij} \log \left(\sum_{m \neq l}g(y_m,y_l) \right) = -\log \left(\sum_{m \neq l}g(y_m,y_l) \right) \nonumber \\
+        \leq & -\sum_{i \neq j} p_{ij} \log \left(\sum_{m\neq k, l \neq k, m \neq l}g(y_m,y_l) \right) < \infty.
+    \end{align}
+    On the other hand, we have $g(y_i,y_k) = k (\norm{y_i-y_k}) \to 0$ as $|y_k| \to \infty$ because $\norm{y_i-y_k} \to \infty$ and $k$ satisfies
+    \begin{align}
+        \iint_{(0,\infty)^2} k(\norm{x-x'}) dxdx' < \infty.
+    \end{align}
+    This means
+    \begin{align}
+        \lim_{|y_k| \to \infty}\sum_{i \neq j} p_{ij} \log (g(y_i,y_j)) \to -\infty.
+    \end{align}
+    Hence, the minimum of the $L_{n,\rho}(X,y)$ is achieved on a bounded set, the lemma follows by the continuity of $L_{n,\rho}(X,y)$.
+\end{proof}
+\begin{lemma} \label{entropy_lemma_1}
+    As $n \to \infty$, we have
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x')d\mu d\mu - 2 \log n + o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    First recall that $p_{ij} = p_n(X_i,X_j)/n^2$. Therefore we have
+    \begin{align}
+          & \sum_{i \neq j}p_{ij} \log{ij} = \sum \frac{1}{n^2}p_n(X_i,X_j)\log\left(\frac{1}{n^2}p_n(X_i,X_j)\right) \nonumber           \\
+        = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n\sum_{i \neq j} \frac{1}{n^2} p_n(X_i,X_j) \nonumber \\
+        = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n,
+    \end{align}
+    because the second summation is just the sum of all probability mass. Now we get the $2 \log n$ term and we are left to deal with the first summation. We begin by showing that the diagonal terms do not matter in our estimation. Consider
+    \begin{align}
+          & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber                     \\
+        = & - \frac{1}{n^2}\sum_{t=1}^{n} \frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\log\left(\frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\right).
+    \end{align}
+    If we refer to the proof of lemma 14 in \cite{auffinger-tsne}, we can see that the difference of diagonal term vanishes and it does not depend on the specific $X_i$. Therefore, in our proof, when we sum over all the $X_i$ and normalize by dividing $n^2$, we reach the exact same conclusion. The diagonal term is $O(n^{-2})$ which vanishes as $n \to \infty$.
+
+    Then we apply lemma \ref{tsne:plogp_convergence_lemma} and since $d \mu_n
+        \times d \mu_n$ is a probability measure, we have
+    \begin{align}
+        \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') +o(1),
+    \end{align}
+    which immediately implies
+    \begin{align} \label{entropy_esti}
+        \sum_{i \neq j}p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') -2 \log n + o(1).
+    \end{align}
+    The proof will be finished if we are able to replace the measure in the last integral with $d \mu$. We verify that
+    \begin{align}
+        h(x,x',\sigma) :=  p(x,x')\log p(x,x')
+    \end{align}
+    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ has compact support with bounded density, automatically making it sub-Gaussian. Then it is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. Thus $p \to 0$ as $\norm{x-x}\sigma \to \infty$. It is also obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}\sigma \to \infty$. The rest of the conditions are also very easy to prove. We can finally conclude that
+    \begin{align}
+        \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') + o(1).
+    \end{align}
+    Combine this estimation with (\ref{entropy_esti}) and we can conclude
+    \begin{align}
+        \sum_{i \neq j}p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') - 2\log n + o(1),
+    \end{align}
+    as desired.
+\end{proof}
+Before we move on, we would like to take a small deviation and compute the
+partial derivative of the relative entropy. This is important because it will
+impact the property of the set $\tilde{\mathcal{P}}_X$.
+\begin{lemma} \label{derivative_lemma}
+    Let $X \in (\mathbb{R}^d)^n$ and $Y = (y_1,\dots,y_n)\in (\mathbb{R}^s)^n$ be the input and output of the t-SNE algorithm, then we have
+    \begin{align}
+        \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    By definition,
+    \begin{align}
+          & L_{n, \rho}(X,Y) = \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_ij}\right) \nonumber \\
+        = & \sum_{i \neq j} p_{ij} \log p_{ij} - \sum_{i \neq j} p_{ij} \log q_{ij}.
+    \end{align}
+    The first summation does not depend on $y_i$ and will vanish when taking the partial derivative. Moreover, we can further breakdown the second summation:
+    \begin{align}
+          & - \sum_{i \neq j} p_{ij} \log q_{ij} = - \sum_{i \neq j} p_{ij} \log g(y_i,y_j) + \sum_{i \neq j} p_{ij} \log \left(\sum_{k \neq l} g(y_k,y_l) \right)\nonumber \\
+        = & - \sum_{i \neq j} p_{ij} \log g(y_i,y_j) + \log \left(\sum_{k \neq l} g(y_k,y_l)\right).
+    \end{align}
+    Taking derivative of the last expression and note that only terms that contain $y_i$ remain. This means
+    \begin{align} \label{L_derivative}
+        \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = & \sum_{j \neq i, j = 1}^n \left(-p_{ij}\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} + \frac{1}{\sum_{k \neq l} g(y_k,y_l)} \frac{\partial}{\partial y_i} g(y_i,y_j)\right) \nonumber                            \\
+        =                                                & \sum_{j \neq i, j = 1}^n \left(-p_{ij}\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} + \frac{g(y_i,y_j)}{\sum_{k \neq l} g(y_k,y_l)} \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}\right) \nonumber \\
+        =                                                & -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}.
+    \end{align}
+\end{proof}
+We can easily do a sanity test by letting $g(y_i,y_j) = (1+\norm{y_i-y_j}^2)^{-1}$ and get formula (A.1) in \cite{auffinger-tsne}. The derivative in lemma \ref{derivative_lemma} explains why
+$\tilde{\mathcal{{P}}}_X$ has that specific form.
+\begin{lemma} \label{lower_bound_lemma_2}
+    Assume $\mu_X$ has compact support. The following holds:
+    \begin{align}
+        \liminf_{n \to \infty}\sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) \geq \iint p(x,x')\log \frac{p(x,x')}{q(y,y')} d\mu d\mu.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Just as in lemma \ref{derivative_lemma}, we first break down the summation:
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \sum_{i \neq j} p_{ij} \log p_{ij} - \sum_{i \neq j} p_{ij} \log q_{ij}.
+    \end{align}
+    The convergence of the first summation has been proved in lemma \ref{entropy_lemma_1}. We just need to deal with the second summation. Note that we now have
+    \begin{align}
+        \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}
+    \end{align}
+    if $y_i$ is involved. By the definition of $q_{ij}$, we have
+    \begin{align} \label{entropy_esti_2}
+          & -\sum_{i \neq j}p_{ij} \log(q_{ij}) \nonumber                                                                                             \\
+        = & \frac{1}{n^2}\sum_{i \neq j} p_n(X_i,X_j) \log g(y_i,y_j) + \log \left(\frac{1}{n^2}\sum_{i \neq j} g(y_i,y_j)\right) +2 \log n \nonumber \\
+        = & \iint p_n(x,x')g(y,y')d\mu_n d\mu_n + \log \left(\iint g(y,y')d\mu_n d\mu_n - \frac{1}{n}\right)+2\log n.
+    \end{align}
+    By Fatou's lemma and lemma \ref{tsne:integrand_lemma_2}, we have
+    \begin{align} \label{fatou_esti_1}
+        \liminf_{n \to \infty} p_n(x,x')\log g(y,y') d\mu_n d\mu_n \geq  \iint p(x,x')\log g(y,y') d\mu d\mu.
+    \end{align}
+    Similarly, using Fatou lemma again and we have
+    \begin{align} \label{fatou_esti_2}
+        \liminf_{n \to \infty} \iint g(y,y') d\mu_n d\mu_n - \frac{1}{n} \geq \iint g(y,y')d\mu d\mu.
+    \end{align}
+    The $1/n$ is the duplicated diagonal term in the empirical measure and will obviously vanish as we take $n \to \infty$. Moreover, because of condition \ref{output_kernel_conditions}, the integrals on the RHS of the last two inequalities converge. In addition, since $\log$ is a continuous and increasing function, (\ref{fatou_esti_2}) implies
+    \begin{align} \label{fatou_esti_3}
+        \liminf_{n \to \infty} \log \left(\iint g(y,y') d\mu_n d\mu_n - \frac{1}{n}\right) \geq \log \left(\iint g(y,y')d\mu d\mu \right).
+    \end{align}
+    The proof is finished by combining (\ref{entropy_esti_2}), (\ref{fatou_esti_1}), (\ref{fatou_esti_3}) and lemma \ref{entropy_lemma_1}. The $2 \log n$ cancelled out because of (\ref{entropy_esti}).
+\end{proof}
+\begin{proposition} \label{lower_bound_prop}
+    There exists a sub-sequence $n(k)$ such that
+    \begin{align}
+        \liminf_{k \to \infty} \inf_{Y \in (\mathbb{R}^s)^{n(k)}} L_{n(k),\rho}(X,Y) \geq I_{\rho}(\mu).
+    \end{align}
+\end{proposition}
+\begin{proof}
+    Let $y^*$ be given in the lemma and define
+    \begin{align}
+        \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}.
+    \end{align}
+    We can easily show that $\mu_n$ converges weakly to a measure $\mu$. By lemma \ref{appendix_lemma} in section \ref{tsne:sec:extra_proofs}, we know that the limiting measure $\mu \in \tilde{\mathcal{P}}_X$. The proof is complete by using lemma \ref{lower_bound_lemma_1} and lemma \ref{lower_bound_lemma_2}.
+\end{proof}
+\subsection{Upper Bound for \texorpdfstring{$\inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y)$}{L(X,Y)}} \label{tsne:sec:upper_bound}
+For convenience, define
+\begin{align}
+    q_n(y,y') = \frac{g(y,y')}{\iint g(y,y')d \mu_n(y) d \mu_n (y') - \frac{1}{n}k(0)}.
+\end{align}
+Here $k(0) = g(y,y)$ is the value of the output kernel when both inputs are equal. Since multiplying a constant to $g$ does not change anything, we can just treat $k(0)=1$ without loss of generality as everything is normalized.
+By lemma \ref{mu_star_lemma} there exists $\mu^*$ such that $I(\mu^*) = \inf_{\mu}I_{\rho}(\mu)$. Let $(X_1,Y_1), \dots, (X_n,Y_n)$ be i.i.d. random variables drawn from $\\mu^*$ and $\mu_n = \frac{1}{n} \sum_{i=1}^n \delta_{(X_i,Y_i)}$ their empirical measure. $\mu_n$ converges to $\mu^*$ weakly.
+\begin{lemma} \label{int_approx_lemma_2}
+    As $n \to \infty$, we have
+    \begin{align}
+        \sum_{i \neq j} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \iint p_n(x,x') \log \left(\frac{p_n(x,x')}{q_n(y,y')}\right) d\mu_n d\mu_n + o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    We begin with the familiar computation
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = & \frac{1}{n^2}\sum_{i \neq j}p_n(X_i,X_j) \log \left(\frac{p_n(X_i,X_j)}{q_n(X_i,X_j)}\right) \nonumber          \\
+        =                                                                & \iint p_n(x,x') \log \left(\frac{p_n(X_i,X_j)}{q_n(X_i,X_j)}\right) d \mu_n d \mu_n + \text{\normalfont Err}_n,
+    \end{align}
+    where
+    \begin{align}
+          & \text{\normalfont Err}_n \nonumber                                                                                                                                                                                                   \\
+        = & -\frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\left(\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\right)-\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right)\right) \nonumber \\
+        = & -\frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\right) \nonumber                                                                               \\
+          & \qquad \qquad \qquad + \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right).
+    \end{align}
+    By bounds in \eqref{tsne:important_bounds}, it is easy to see that the first summation in the error term is $o(1)$ and we can write
+    \begin{align}
+        \text{\normalfont Err}_n = o(1) + \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)}\log \left(\frac{1}{\frac{1}{n}\sum_{k \neq l}g(Y_k,Y_l)}\right).
+    \end{align}
+    For the second term, it is already clear that
+    \begin{align}
+        \frac{1}{n^2}\sum_{i=1}^n\frac{1}{\frac{1}{n}\sum_{k \neq i}f_n(X_i,X_k)} = o(1).
+    \end{align}
+    On the other hand, we have by Fatou's lemma:
+    \begin{align}
+        \liminf_{n \to \infty}\frac{1}{n^2} \sum_{k \neq l}g(Y_k,Y_l) = \liminf_{n \to \infty} \iint g(y,y') d\mu_n d\mu_n - \frac{1}{n} \geq \iint g(y,y') d\mu^* d\mu^* < \infty,
+    \end{align}
+    by condition \ref{output_kernel_conditions}. We can see that the second term in $\text{\normalfont Err}_n$ is also $o(1)$, which immediately implies $\text{\normalfont Err}_n = o(1)$ and completes the proof.
+\end{proof}
+The next lemma is needed to close up the lower bound part of the main theorem.
+\begin{lemma} \label{output_kernel_int_lemma}
+    As $n \to \infty$, we have
+    \begin{align}
+        \iint g(y,y')d\mu_n(y) d\mu_n(y) - \frac{1}{n} = \iint g(y,y')d\mu^* d\mu^* + o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Since $\mu_n \to \mu$ weakly, it is tight by Prokhorov's theorem. For arbitrary $\epsilon >0$, there exists a compact set $K$ such that for all $n$, $\mu^*(K^c),\mu_n(K^c) \leq \epsilon$. Since $g(y,y')$ is bounded, there exists a constant $C$ such that
+    \begin{align}
+          & \left|\iint g(y,y')d\mu_n(y) d\mu_n(y) - \iint g(y,y')d\mu^* d\mu^*\right| \nonumber            \\
+        = & \left|\iint g(y,y') \mathbbm{1}_{K \times K}(d\mu_n d\mu_n - d\mu^* d\mu^*)\right| + C\epsilon.
+    \end{align}
+    Define
+    \begin{align}
+        G_n(y) = \int g(y,y') \mathbbm{1}_K d\mu_n(y'), \qquad G(y) = \int g(y,y') \mathbbm{1}_K d\mu^*(y').
+    \end{align}
+    We now require the kernel $g$ to have bounded derivative, and we have the following claims:
+    \begin{claim} \label{claim_1}
+        $G_n(y)$ is uniformly equicontinuous on $K$.
+    \end{claim}
+    \begin{proof}[Proof of Claim]
+        By mean value theorem and condition \ref{output_kernel_conditions}, we get
+        \begin{align}
+                 & |G_n(y)-G_n(\tilde{y})| = \left|\int k(\norm{y-y'}) - k(\norm{\tilde{y}-y'}) \mathbbm{1}_K d\mu_n(y')\right| \nonumber                              \\
+            \leq & \int \norm{y-\tilde{y}}\left|\frac{k(\norm{y-y'}) - k(\norm{\tilde{y}-y'})}{\norm{(y-y')-(\tilde{y}-y')}} \right|\mathbbm{1}_K d\mu_n(y') \nonumber \\
+            =    & O(\norm{y-\tilde{y}}).
+        \end{align}
+    \end{proof}
+    \begin{claim} \label{claim_2}
+        $\sup_{y \in K}|G_n(y)-G(y)|=o(1)$.
+    \end{claim}
+    \begin{proof}[Proof of Claim]
+        Since $K$ is compact, it suffices to show that for each $y \in K$, there exists $\delta>0$ such that
+        \begin{align}
+            \sup_{\tilde{y}\in B(y,\delta)} |G_n(\tilde{y})-G(\tilde{y})| \leq \epsilon.
+        \end{align}
+        Towards this end, by triangular inequality,
+        \begin{align}
+            |G_n(\tilde{y})-G(\tilde{y})| \leq |G_n(\tilde{y})-G_n(y)|+|G_n(y)-G(y)|+|G(y)-G(\tilde{y})|.
+        \end{align}
+        By the previous claim, the first term on the RHS vanishes because of equicontinuity. The second term vanishes because of weak convergence and the boundedness of the integrand $g(y,y')$. Finally, the last term vanishes because we can prove the equicontinuity of $G$ using a similar argument like the claim \ref{claim_1}.
+    \end{proof}
+    By claim \ref{claim_2} we have
+    \begin{align}
+        \iint g(y,y') \mathbbm{1}_{K \times K} d\mu_n d\mu_n = \iint g(y,y') \mathbbm{1}_{K \times K} d\mu^* d\mu_n +o(1) = \int G(y) \mathbbm{1}_K d\mu_n(y)+o(1).
+    \end{align}
+    Since $G$ is bounded and continuous by condition \ref{output_kernel_conditions}, using weak convergence of $\mu_n$ and we have
+    \begin{align}
+        \int G(y) \mathbbm{1}_K d\mu_n(y) = \int G(y) \mathbbm{1}_K d\mu^*n(y) + o(1) = \iint g(y,y')d\mu^* d\mu^* + o(1),
+    \end{align}
+    as desired.
+\end{proof}
+\begin{lemma}
+    If $\mu^*$ has compact support in $Y$, then
+    \begin{align}
+        \iint p_n(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p_n(x,x') \log(g(y,y')) d\mu^* d\mu^* +o(1).
+    \end{align}
+\end{lemma}
+\begin{proof}
+    By compactness, $\norm{y-y'}$ is bounded from above and $g(y,y')$ does not decay to zero. In that case, by lemma \ref{tsne:integrand_lemma_2}, we can replace the $p_n$ in the integral by $p$:
+    \begin{align}
+        \iint p_n(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p(x,x') \log(g(y,y')) d\mu_n d\mu_n + o(1).
+    \end{align}
+    mimicking the proof of lemma \ref{entropy_lemma_1} we can show that
+    \begin{align}
+        \iint p(x,x') \log(g(y,y')) d\mu_n d\mu_n = \iint p(x,x') \log(g(y,y')) d\mu^* d\mu^* + o(1).
+    \end{align}
+    This finishes the proof.
+\end{proof}
+\begin{lemma}
+    If $\mu^*$ has compact support in $Y$, then
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \iint p(x,x') \log\left(\frac{p(x,x')}{q(y,y')}\right) d\mu^* d\mu^* +o(1)
+    \end{align}
+\end{lemma}
+\begin{proof}
+    This lemma can be proved by combining the last 3 lemmas and lemma \ref{entropy_lemma_1}.
+\end{proof}
+Using the previous lemma and we can immediately get
+\begin{proposition} \label{upper_bound_prop}
+    If $\mu^*$ has compact support in $Y$, then
+    \begin{align}
+        \limsup_{n \to \infty} \inf_{Y \in (\mathbb{R}^s)^n} L_{n,\rho}(X,Y) \leq I_{\rho}(\mu^*).
+    \end{align}
+\end{proposition}
+\subsection{Auxiliary lemmas}\label{tsne:sec:extra_proofs}
+This section contains lemmas that are necessary but are not a part of the flow
+in the proofs of convergence. Recall that $\mu_n = \frac{1}{n}\sum_{i=1}^n
+    \delta_{X_i,Y_i}$ is the empirical measure of both the input and output data
+points. We just ignore the first or the second part based on the integration
+variable because it is a probability measure. Let $Y = Y^* = (Y_1,\dots,Y_n)$
+be a minimizer of $L$. Recall from (\ref{L_derivative}) that
+\begin{align}
+    \frac{\partial L_{n, \rho}(X,Y)}{\partial y_i} = -\sum_{j=1, j \neq i}^n (p_{ij}-q_{ij}) \frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)} = 0.
+\end{align}
+\begin{lemma} \label{appendix_lemma}
+    Suppose that $\mu_X$ has either compact support and a $C^0$ density $f(x)$. Then for $\mu$-a.e. $x$ and $y$ we have
+    \begin{align}
+        \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = 0.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    Let $\alpha(x,y)$ be a test function. It suffices to show that
+    \begin{align}
+        \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = 0.
+    \end{align}
+    Recalling the definition of $p_n$ and $q_n$, we see from (\ref{L_derivative}) that for all $i$,
+    \begin{align}
+        \frac{1}{n^2}\sum_{j=1,j \neq i}^n (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0.
+    \end{align}
+    Multiply by $\alpha(X_i,Y_i)$ for each $i$ and the both sides are still zero. Afterwards, take the summation over $i$ and we get
+    \begin{align}
+          & \iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber                \\
+        = & \frac{1}{n^2}\sum_{1 \leq i,j \leq n} (p_n(X_i,X_j)-q_n(X_i,X_j)) \frac{\frac{\partial}{\partial Y_i}g(Y_i,Y_j)}{g(Y_i,Y_j)} = 0
+    \end{align}
+    if we require $k'(0) = 0$.
+    By lemma \ref{tsne:integrand_lemma_2} and lemma \ref{output_kernel_int_lemma}, we have
+    \begin{align}
+        p_n(X_i,X_j)-q_n(Y_i,Y_j) = p(X_i,X_j)-q(Y_i,Y_j) + o(1).
+    \end{align}
+    Since both $\alpha$ and $\frac{\frac{\partial}{\partial y_i}g(y_i,y_j)}{g(y_i,y_j)}$ are bounded based on our assumptions, we have
+    \begin{align}
+          & \iint \alpha(x,y)(p_n(x,x')-q_n(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
+        = & \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n + o(1).
+    \end{align}
+    By lemma \ref{appendix_lemma_1} and lemma \ref{appendix_lemma_2} below we have
+    \begin{align}
+          & \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n \nonumber \\
+        = & \iint \alpha(x,y)(p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1).
+    \end{align}
+    Since $\alpha$ is an arbitrary test function,
+    \begin{align}
+        \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = 0.
+    \end{align}
+\end{proof}
+\begin{lemma} \label{appendix_lemma_1}
+    The following holds as $n \to \infty$:
+    \begin{align}
+        \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
+    \end{align}
+\end{lemma}
+This lemma can be proved by mimicking lemma \ref{entropy_lemma_1}
+\begin{lemma} \label{appendix_lemma_2}
+    The following holds as $n \to \infty$:
+    \begin{align}
+        \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
+    \end{align}
+\end{lemma}
+This lemma can be proved by mimicking lemma \ref{int_approx_lemma_2}.
+\subsection{Proof of theorem \ref{tsne:main_theorem_1}} \label{tsne:sec:main_theorem_1}
+Write
+\begin{align}
+    d_{n,\rho}(X) = \inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y).
+\end{align}
+By proposition \ref{upper_bound_prop}, \ref{lower_bound_prop} and the fact that $\mu^* = \argmin_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$, there exists $\mu \in \tilde{\mathcal{P}}_X$ and a subsequence $n(k)$ such that
+\begin{align}
+    I_{\rho}(\mu^*) \geq \limsup_{n \to \infty} d_{n,\rho}(X) \geq \limsup_{n \to \infty} d_{n(k),\rho}(X) \geq I_{\rho}(\mu) \geq I_{\rho}(\mu^*).
+\end{align}
+Therefore the limit
+\begin{align}
+    \lim_{n \to \infty} d_{n(k),\rho}(X) = I_{\rho}(\mu) = I_{\rho}(\mu^*)
+\end{align}
+holds when we look at the sub-sequence $n(k)$ with the empirical measure $\mu$ converging to $\mu$ weakly. For the general limit, we can repeat the reasoning above by looking at any convergent sub-sequences of $d_{n,\rho}(X)$. We are able to find a sub-sequence inside each convergent sub-sequence and they all converges to $I_{\rho}(\mu^*)$. Therefore each convergent sub-sequence of $d_{n,\rho}(X)$ has the same limit and the theorem is proved. \qed
+\subsection{Proof of theorem \ref{tsne:main_theorem_2}}
+We need another lemma before proving this theorem.
+\begin{lemma} \label{home_stretch_lemma}
+    For every $\mu \in \tilde{\mathcal{P}}_X$, there exists a function $h_{\mu}(x)$ that does not depend on $y$ such that
+    \begin{align}
+        \int p(x,x') \log(1+\norm{y-y'})d\mu = h_{\mu(x)} - \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}.
+    \end{align}
+    Moreover, if $\mu_X$ has compact support, then $h_{\mu}$ is continuous on the support of $\mu_X$.
+\end{lemma}
+\begin{proof}
+    Recall from (\ref{derivative_lemma}), we have
+    \begin{align}
+        0 = & \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') \nonumber                                                               \\
+        =   & \int p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d \mu -  \frac{\int \frac{\partial}{\partial y}g(y,y')d\mu}{\iint g(y,y')d\mu d\mu} \nonumber \\
+        =   & \nabla_y \left(\int p(x,x') \log (g(y,y')^{-1}) d \mu -  \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}\right).
+    \end{align}
+    This means that there exists $h_{\mu}: \mathbb{R}^d \to \mathbb{R}$ such that
+    \begin{align}
+        h_{\mu(x)} = \int p(x,x') \log(g(y,y')^{-1})d\mu + \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}.
+    \end{align}
+    Since $h_{\mu(x)}$ does not change with $y$, it suffices to show that $\int p(x,x') \log(g(y,y')^{-1})d\mu$ is continuous in $x$. Let $\epsilon>0$ and suppose $x_n \to x$. Since $p$ is continuous, and $\mu_X$ has compact support, we have for some constant $C$,
+    \begin{align}
+        \iint \log(g(y,y')^{-1})d\mu d\mu \leq C \int p(x,x') \log(g(y,y')^{-1})d\mu < \infty.
+    \end{align}
+    In particular, for almost every $y$, $\int \log(g(y,y')^{-1})d\mu < \infty$. Since $p(x,x')$ is continuous and $\mu_X$ has compact support, $p(x,x')$ is uniformly continuous. Specifically, there exists $\delta = \delta(y,\mu)$ such that if $\norm{x_n-x} \leq \delta$,
+    \begin{align}
+        \sup_x |p_n(x,x')-p(x,x')| \leq \frac{\epsilon}{\log(g(y,y')^{-1})d\mu}.
+    \end{align}
+    This means
+    \begin{align}
+        \left|\int(p_n(x,x')-p(x,x')) \log(g(y,y')^{-1})d \mu\right| < \epsilon,
+    \end{align}
+    which is the definition of continuity. The proof is finished.
+\end{proof}
+\begin{proof}[Proof of Theorem \ref{tsne:main_theorem_2}] \label{tsne:sec:main_theorem_2}
+    We prove by contradiction. Define $D_n = \{\norm{y} \geq n\}$. If $\mu^*$ does not have compact support in $Y$ then $\mu(D_n)>0$ for all $n$. By lemma \ref{home_stretch_lemma}, there exists continuous $h(x)$ such that
+    \begin{align}
+        \int p(x,x') \log(g(y,y')^{-1})d\mu^* = h(x) -  \frac{\int g(y,y')d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
+    \end{align}
+    Multiply both sides by $\mathbbm{1}_{D_n(x,y)}/\mu^*(D_n)$ and integrate with respect to the other variable:
+    \begin{align}
+         & \iint p(x,x') \log(g(y,y')^{-1}) \frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* d\mu^* \nonumber                                                                                          \\
+         & \qquad \qquad \qquad= \int h(x)\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)}d\mu^* -  \frac{\iint g(y,y')\frac{\mathbbm{1}_{D_n(x,y)}}{\mu^*(D_n)} d\mu^* d\mu^*}{\iint g(y,y')d\mu^* d\mu^*}.
+    \end{align}
+    Since $h$ is continuous and $\mu_X$ has compact support, the first term of the RHS is bounded uniformly in $n$. Moreover, $g(y,y')$  is bounded so the second term is also bounded uniformly in $n$. It follows that the LHS is bounded uniformly in $n$. With this being said, because $p(x,x')>0$ and $\mu_X$ has compact support, there exists a constant $c$ such that $p(x,x') \geq c$ for all $x,x'$ in the support of $\mu_X$.
+
+    Meanwhile, since the output kernel $g(y,y') = k(\norm{y-y'})$ is integrable, it
+    has a decaying tail and there exists $C(n)$ such that $C(n) \to \infty$ and if
+    $\norm{x-x'} \geq n/2$, $g(y,y')^{-1}=k(\norm{y-y'})^{-1} \geq log (1+C(n))$.
+    We compute
+    \begin{align}
+             & \frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} d\mu^* d\mu^* \nonumber                                   \\
+        \geq & \frac{1}{\mu^*(D_n)} \iint p(x,x') \log(g(y,y')^{-1}) \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y-y'} \geq n/2}d\mu^* d\mu^* \nonumber \\
+        \geq & c \frac{\log(1+C(n))}{\mu^*(D_n)} \iint \mathbbm{1}_{\norm{y} \geq n} \mathbbm{1}_{\norm{y'} \leq n/2}d\mu^* d\mu^* \nonumber                 \\
+        =    & c\log(1+C(n)) \mu^*(\norm{Y'}\leq n/2).
+    \end{align}
+    Clearly,
+    \begin{align}
+        \lim_{n \to \infty} c\log(1+C(n)) \mu^*(\norm{Y'}\leq n/2) = \infty.
+    \end{align}
+    This contradicts with the boundedness. We must have that $\mu^*(D_n)=0$ for $n$ sufficiently large. That is, $\mu^*(\norm{Y} \geq n)=0$, so $\mu^*$ has compact support in $Y$.
+\end{proof}
