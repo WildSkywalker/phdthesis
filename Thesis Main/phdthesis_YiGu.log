@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  8 MAY 2025 00:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  8 MAY 2025 00:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2144,7 +2144,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 b
 ..etc.
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set 0.20888
+.\hbox(8.33331+2.33331)x455.30121, glue set 0.01982
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 m
 ..\OT1/cmr/m/n/12 p
@@ -2164,10 +2164,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 o
 ..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 h
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 k
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 2.44789 minus 1.04443
 ..\OT1/cmr/m/n/12 r
@@ -2194,7 +2195,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 d
 ..etc.
 .\glue(\baselineskip) 14.53342
 .\hbox(8.33331+2.33331)x455.30121, glue set - 0.38008
@@ -159224,7 +159224,7 @@ Here is how much of TeX's memory you used:
  1302 hyphenation exceptions out of 8191
  91i,20n,120p,1284b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm8.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm12.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (244 pages, 13242292 bytes).
+Output written on phdthesis_YiGu.pdf (244 pages, 13242280 bytes).
 PDF statistics:
  4303 PDF objects out of 5155 (max. 8388607)
  1028 named destinations out of 1200 (max. 500000)
