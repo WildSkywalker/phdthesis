@@ -606,17 +606,8 @@ sample distribution $\mu_X$ are inherited directly from section
 statements.
 \subsection{Convergence Lemmas for Input Kernels} \label{tsne:sec:input_kernel_convergence}
 The main difficulties of proving the convergence lemmas related to the input kernel is the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$, which we have already established in section \ref{tsne:sec:existence_uniqueness}. The rest of lemmas are similar, if not easier than the corresponding results in \cite{auffinger-tsne}. We will list the important lemmas here without proofs. The reader can easily adapt the proofs in \cite{auffinger-tsne} to our case.
-\begin{lemma} \label{approx_lemma}
-    Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
-    1. $\mu$ is sub-Gaussian; \\
-    2. $h(x,x',\sigma)$ and $\nabla_x h(x,x',\sigma)$ are bounded for all $x,x'$ and all $\delta \in K_n$;\\
-    3. $h(x,x',\sigma) \to 0$ as $\sigma\norm{x-x'} \to \infty$.\\
-    Let $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$, and $\mu_n = (1/n)\sum_i \delta_{X_i}$. Then for any $\epsilon > 0$ with probability at least $1 - e^{-c\epsilon^2n}$ we have
-    \begin{align}
-        \sup_{\sigma^{-1} \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
-    \end{align}
-\end{lemma}
-The lemma assumes $\mu$ to be sub-Gaussian so it automatically covers the cases where $\mu$ has compact support with $C^0$ density. The application of \ref{approx_lemma} can give us the two following important propositions about the uniform convergence of $F_{\mu_n}(x,\sigma)$ and $\sigma_{\mu_n}^*(x)$.
+
+First we have the two following important propositions about the uniform convergence of $F_{\mu_n}(x,\sigma)$ and $\sigma_{\mu_n}^*(x)$.
 \begin{proposition} \label{tsne:uniform_convergence_prop}
     Let $\mu_X$ be a probability measure with compact support, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Then there exists a constant $\epsilon>0$, that almost surely in $X_1,\dots,X_n$,
     \begin{align}
@@ -656,7 +647,7 @@ Note that $p_{j|i} = p'_n(X_i,X_j)/n$ and $p_{ij} = p_n(X_i,X_j)/n^2$, and for $
 \end{align}
 for some constant $C>0$.
 
-The next four lemmas cover the rest of convergence results for the input kernels, of which the proofs can be easily adapted from \cite{auffinger-tsne}. The proofs are omitted here for brevity.
+The next five lemmas cover the rest of convergence results for the input kernels. The reader can notice that the lemmas below are natural computations starting from the basic building blocks ($f_n$ and $f$) towards the entropy of $p_{ij}$ in the loss function $L_{n,\rho}(X,Y)$. Because of this, the proofs can be easily adapted from \cite{auffinger-tsne}. We omit them here for brevity.
 \begin{lemma} \label{tsne:f_n_convergence_lemma}
     Assume $\mu_X$ have compact support. As $n \to \infty$,
     \begin{align}
@@ -683,8 +674,14 @@ The next four lemmas cover the rest of convergence results for the input kernels
         \sum_j p_{j|i} \log p_{j|i} + \log(\rho n) = o(1).
     \end{align}
 \end{lemma}
+\begin{lemma} \label{entropy_lemma_1}
+    As $n \to \infty$, we have
+    \begin{align}
+        \sum_{i \neq j} p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x')d\mu d\mu - 2 \log n + o(1).
+    \end{align}
+\end{lemma}
 \subsection{Lower Bound for \texorpdfstring{$\inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y)$}{L(X,Y)}} \label{tsne:sec:lower_bound}
-We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
+We write $\ko(y,y') = g(y,y') = k(\norm{y-y'})$ from now on for simpler notations.
 \begin{lemma} \label{lower_bound_lemma_1}
     There exists a set of points $y^*(X)$ such that
     \begin{align}
@@ -718,49 +715,6 @@ We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
         \lim_{|y_k| \to \infty}\sum_{i \neq j} p_{ij} \log (g(y_i,y_j)) \to -\infty.
     \end{align}
     Hence, the minimum of the $L_{n,\rho}(X,y)$ is achieved on a bounded set, the lemma follows by the continuity of $L_{n,\rho}(X,y)$.
-\end{proof}
-\begin{lemma} \label{entropy_lemma_1}
-    As $n \to \infty$, we have
-    \begin{align}
-        \sum_{i \neq j} p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x')d\mu d\mu - 2 \log n + o(1).
-    \end{align}
-\end{lemma}
-\begin{proof}
-    First recall that $p_{ij} = p_n(X_i,X_j)/n^2$. Therefore we have
-    \begin{align}
-          & \sum_{i \neq j}p_{ij} \log{ij} = \sum \frac{1}{n^2}p_n(X_i,X_j)\log\left(\frac{1}{n^2}p_n(X_i,X_j)\right) \nonumber           \\
-        = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n\sum_{i \neq j} \frac{1}{n^2} p_n(X_i,X_j) \nonumber \\
-        = & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - 2 \log n,
-    \end{align}
-    because the second summation is just the sum of all probability mass. Now we get the $2 \log n$ term and we are left to deal with the first summation. We begin by showing that the diagonal terms do not matter in our estimation. Consider
-    \begin{align}
-          & \frac{1}{n^2} \sum_{i \neq j} p_n(X_i,X_j) \log (p_n(X_i,X_j)) - \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') \nonumber                     \\
-        = & - \frac{1}{n^2}\sum_{t=1}^{n} \frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\log\left(\frac{1}{\int f(X_t,x')d\mu_n(x') - \frac{1}{n}}\right).
-    \end{align}
-    If we refer to the proof of lemma 14 in \cite{auffinger-tsne}, we can see that the difference of diagonal term vanishes and it does not depend on the specific $X_i$. Therefore, in our proof, when we sum over all the $X_i$ and normalize by dividing $n^2$, we reach the exact same conclusion. The diagonal term is $O(n^{-2})$ which vanishes as $n \to \infty$.
-
-    Then we apply lemma \ref{tsne:plogp_convergence_lemma} and since $d \mu_n
-        \times d \mu_n$ is a probability measure, we have
-    \begin{align}
-        \iint p_n(x,x')\log p_n(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') +o(1),
-    \end{align}
-    which immediately implies
-    \begin{align} \label{entropy_esti}
-        \sum_{i \neq j}p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') -2 \log n + o(1).
-    \end{align}
-    The proof will be finished if we are able to replace the measure in the last integral with $d \mu$. We verify that
-    \begin{align}
-        h(x,x',\sigma) :=  p(x,x')\log p(x,x')
-    \end{align}
-    satisfies all the requirements in lemma \ref{approx_lemma}. First $\mu$ has compact support with bounded density, automatically making it sub-Gaussian. Then it is easy to verify that $h$ is $C^1$ for all $x,x'$ and $\sigma$. Moreover, by calculus we have $p(x,x') \in (0,1]$ and $\lim_{a \to 0} a \log a = 0$. Thus $p \to 0$ as $\norm{x-x}\sigma \to \infty$. It is also obvious that $h$ is bounded and $h \to 0$ as $\norm{x-x}\sigma \to \infty$. The rest of the conditions are also very easy to prove. We can finally conclude that
-    \begin{align}
-        \iint p(x,x')\log p(x,x') d\mu_n(x)d\mu_n(x') = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') + o(1).
-    \end{align}
-    Combine this estimation with (\ref{entropy_esti}) and we can conclude
-    \begin{align}
-        \sum_{i \neq j}p_{ij} \log p_{ij} = \iint p(x,x')\log p(x,x') d\mu(x)d\mu(x') - 2\log n + o(1),
-    \end{align}
-    as desired.
 \end{proof}
 Before we move on, we would like to take a small deviation and compute the
 partial derivative of the relative entropy. This is important because it will
@@ -802,7 +756,7 @@ $\tilde{\mathcal{{P}}}_X$ has that specific form.
     \begin{align}
         \sum_{i \neq j} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) = \sum_{i \neq j} p_{ij} \log p_{ij} - \sum_{i \neq j} p_{ij} \log q_{ij}.
     \end{align}
-    The convergence of the first summation has been proved in lemma \ref{entropy_lemma_1}. We just need to deal with the second summation. Note that we now have
+    The convergence of the first summation has been established in lemma \ref{entropy_lemma_1}. We just need to deal with the second summation. Note that we now have
     \begin{align}
         \mu_n = \frac{1}{n} \sum \delta_{X_i} \times \delta_{y_i}
     \end{align}
@@ -824,7 +778,7 @@ $\tilde{\mathcal{{P}}}_X$ has that specific form.
     \begin{align} \label{fatou_esti_3}
         \liminf_{n \to \infty} \log \left(\iint g(y,y') d\mu_n d\mu_n - \frac{1}{n}\right) \geq \log \left(\iint g(y,y')d\mu d\mu \right).
     \end{align}
-    The proof is finished by combining (\ref{entropy_esti_2}), (\ref{fatou_esti_1}), (\ref{fatou_esti_3}) and lemma \ref{entropy_lemma_1}. The $2 \log n$ cancelled out because of (\ref{entropy_esti}).
+    The proof is finished by combining (\ref{entropy_esti_2}), (\ref{fatou_esti_1}), (\ref{fatou_esti_3}) and lemma \ref{entropy_lemma_1}. The $2 \log n$ cancelled out because of lemma \ref{entropy_lemma_1}.
 \end{proof}
 \begin{proposition} \label{lower_bound_prop}
     There exists a sub-sequence $n(k)$ such that
@@ -956,7 +910,7 @@ The next lemma is needed to close up the lower bound part of the main theorem.
     \end{align}
 \end{lemma}
 \begin{proof}
-    This lemma can be proved by combining the last 3 lemmas and lemma \ref{entropy_lemma_1}.
+    This statement can be proved by combining the last 3 lemmas and lemma \ref{entropy_lemma_1}.
 \end{proof}
 Using the previous lemma and we can immediately get
 \begin{proposition} \label{upper_bound_prop}

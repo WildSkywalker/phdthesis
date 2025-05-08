@@ -1,0 +1,139 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Abstract}}{3}{chapter*.1}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Acknowledgements}}{4}{chapter*.3}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Dedication}}{8}{chapter*.5}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Table of Contents}}{9}{section*.6}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{12}{section*.7}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{14}{section*.8}%
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{20}{chapter.1}%
+\contentsline {section}{\tocsection {}{1.1}{Overview}}{20}{section.1.1}%
+\contentsline {section}{\tocsection {}{1.2}{t-SNE and Dimension Reduction}}{22}{section.1.2}%
+\contentsline {subsection}{\tocsubsection {}{1.2.1}{The Ubiquity and Challenge of High-Dimensional Data}}{22}{subsection.1.2.1}%
+\contentsline {subsection}{\tocsubsection {}{1.2.2}{A Brief History of Dimensionality Reduction}}{31}{subsection.1.2.2}%
+\contentsline {subsection}{\tocsubsection {}{1.2.3}{The Road to t-SNE}}{40}{subsection.1.2.3}%
+\contentsline {section}{\tocsection {}{1.3}{Markov Random Field and Probabilistic Graphical Models (PGM)}}{48}{section.1.3}%
+\contentsline {subsection}{\tocsubsection {}{1.3.1}{Dependency: An Unavoidable Problem}}{48}{subsection.1.3.1}%
+\contentsline {subsection}{\tocsubsection {}{1.3.2}{PGM, a Short History}}{56}{subsection.1.3.2}%
+\contentsline {subsection}{\tocsubsection {}{1.3.3}{Bayesian Networks and Markov Random Fields}}{66}{subsection.1.3.3}%
+\contentsline {subsection}{\tocsubsection {}{1.3.4}{The Necessity of Sampling and {Lov\'asz}\xspace Local Lemma}}{75}{subsection.1.3.4}%
+\contentsline {section}{\tocsection {}{1.4}{Factor Analysis and Variational Inference}}{78}{section.1.4}%
+\contentsline {subsection}{\tocsubsection {}{1.4.1}{Combining DR and PGM}}{78}{subsection.1.4.1}%
+\contentsline {subsection}{\tocsubsection {}{1.4.2}{Lineage of Factor Analysis}}{81}{subsection.1.4.2}%
+\contentsline {subsection}{\tocsubsection {}{1.4.3}{The Modern Toolkit: Variational Autoencoders}}{84}{subsection.1.4.3}%
+\contentsline {subsection}{\tocsubsection {}{1.4.4}{The High-Level View of VarFA based on VAE}}{94}{subsection.1.4.4}%
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Convergence of t-Distributed Stochastic Neighbor Embedding with Generalized Input and Output Kernels}}{97}{chapter.2}%
+\contentsline {section}{\tocsection {}{2.1}{The Concept of Input and Output Kernels}}{97}{section.2.1}%
+\contentsline {section}{\tocsection {}{2.2}{Setup and Notations}}{100}{section.2.2}%
+\contentsline {section}{\tocsection {}{2.3}{Main Results}}{104}{section.2.3}%
+\contentsline {section}{\tocsection {}{2.4}{The Generality of Conditions}}{105}{section.2.4}%
+\contentsline {section}{\tocsection {}{2.5}{Summary and Structure of Proofs}}{107}{section.2.5}%
+\contentsline {section}{\tocsection {}{2.6}{Existence and Uniqueness of $\TextOrMath {\textsigma }{\mathsigma }^*$}}{108}{section.2.6}%
+\contentsline {section}{\tocsection {}{2.7}{Proofs of the Main Theorems}}{116}{section.2.7}%
+\contentsline {subsection}{\tocsubsection {}{2.7.1}{Convergence Lemmas for Input Kernels}}{116}{subsection.2.7.1}%
+\contentsline {subsection}{\tocsubsection {}{2.7.2}{Lower Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}}{122}{subsection.2.7.2}%
+\contentsline {subsection}{\tocsubsection {}{2.7.3}{Upper Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}}{129}{subsection.2.7.3}%
+\contentsline {subsection}{\tocsubsection {}{2.7.4}{Auxiliary Lemmas}}{134}{subsection.2.7.4}%
+\contentsline {subsection}{\tocsubsection {}{2.7.5}{Proof of Theorem \ref {tsne:main_theorem_1}}}{136}{subsection.2.7.5}%
+\contentsline {subsection}{\tocsubsection {}{2.7.6}{Proof of Theorem \ref {tsne:main_theorem_2}}}{137}{subsection.2.7.6}%
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Learning Markov Random Fields for Combinatorial Structures via Sampling through Lov\'asz Local Lemma}}{141}{chapter.3}%
+\contentsline {section}{\tocsection {}{}{Overview}}{141}{section*.32}%
+\contentsline {section}{\tocsection {}{3.1}{Introduction}}{142}{section.3.1}%
+\contentsline {subsection}{\tocsubsection {}{3.1.1}{Related Work}}{144}{subsection.3.1.1}%
+\contentsline {section}{\tocsection {}{3.2}{Preliminaries}}{145}{section.3.2}%
+\contentsline {subsection}{\tocsubsection {}{3.2.1}{Markov Random Fields (MRF)}}{145}{subsection.3.2.1}%
+\contentsline {subsection}{\tocsubsection {}{3.2.2}{Constrained MRF}}{146}{subsection.3.2.2}%
+\contentsline {subsection}{\tocsubsection {}{3.2.3}{Learn Constrained MRF}}{146}{subsection.3.2.3}%
+\contentsline {subsection}{\tocsubsection {}{3.2.4}{Factor Potential in Single Variable Form}}{147}{subsection.3.2.4}%
+\contentsline {subsection}{\tocsubsection {}{3.2.5}{Extreme Condition}}{148}{subsection.3.2.5}%
+\contentsline {section}{\tocsection {}{3.3}{Sampling Through Lov\'asz Local Lemma}}{149}{section.3.3}%
+\contentsline {section}{\tocsection {}{3.4}{Neural Lov\'asz Sampler}}{151}{section.3.4}%
+\contentsline {subsection}{\tocsubsection {}{3.4.1}{\textsc {Nelson}\xspace : Neural Lov\'asz Sampler}}{151}{subsection.3.4.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Represent Constraints as CNF}}{151}{section*.33}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Initialization}}{153}{section*.34}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Check Constraint Satisfaction}}{153}{section*.35}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Extract Variables in Violated Clauses}}{154}{section*.36}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Resample}}{154}{section*.37}%
+\contentsline {subsection}{\tocsubsection {}{3.4.2}{Contrastive Divergence-based Learning}}{156}{subsection.3.4.2}%
+\contentsline {section}{\tocsection {}{3.5}{Experiments}}{156}{section.3.5}%
+\contentsline {subsection}{\tocsubsection {}{3.5.1}{Experimental Settings}}{156}{subsection.3.5.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Baselines}}{156}{section*.38}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Metrics}}{157}{section*.39}%
+\contentsline {subsection}{\tocsubsection {}{3.5.2}{Random $K$-SAT Solutions with Preference}}{158}{subsection.3.5.2}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Task Definition \& Dataset}}{158}{section*.40}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Sampler's Efficiency and Accuracy}}{158}{section*.42}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Abalation Study}}{161}{section*.46}%
+\contentsline {subsection}{\tocsubsection {}{3.5.3}{Sink-Free Orientation in Undirected Graphs}}{161}{subsection.3.5.3}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Learning Quality}}{161}{section*.48}%
+\contentsline {subsection}{\tocsubsection {}{3.5.4}{Learn Vehicle Delivery Routes}}{163}{subsection.3.5.4}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Task Definition \& Dataset}}{163}{section*.49}%
+\contentsline {section}{\tocsection {}{3.6}{Chapter Recap}}{163}{section.3.6}%
+\contentsline {section}{\tocsection {}{3.7}{Probability Distribution of Algorithm~\ref {alg:lll-sampler}}}{164}{section.3.7}%
+\contentsline {subsection}{\tocsubsection {}{3.7.1}{Definitions and Notations}}{164}{subsection.3.7.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Extra Notations related to Constrained MRF}}{166}{section*.52}%
+\contentsline {subsection}{\tocsubsection {}{3.7.2}{Ratio Property Lemma}}{168}{subsection.3.7.2}%
+\contentsline {subsection}{\tocsubsection {}{3.7.3}{Proof of Theorem~\ref {th:product-dist}}}{170}{subsection.3.7.3}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Summation of All Possible Sampling Records}}{171}{section*.53}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Sample Space Analysis At Termination}}{171}{section*.54}%
+\contentsline {subsection}{\tocsubsection {}{3.7.4}{Difference to the Original Proof}}{172}{subsection.3.7.4}%
+\contentsline {subsection}{\tocsubsection {}{3.7.5}{A Running Example in View of Markov Chain}}{172}{subsection.3.7.5}%
+\contentsline {section}{\tocsection {}{3.8}{Running Time Analysis of Algorithm~\ref {alg:lll-sampler}}}{175}{section.3.8}%
+\contentsline {subsection}{\tocsubsection {}{3.8.1}{Definitions and Notations}}{176}{subsection.3.8.1}%
+\contentsline {subsection}{\tocsubsection {}{3.8.2}{An Upper Bound on Expected Running Time}}{181}{subsection.3.8.2}%
+\contentsline {subsection}{\tocsubsection {}{3.8.3}{Difference to the Existing Proof}}{182}{subsection.3.8.3}%
+\contentsline {section}{\tocsection {}{3.9}{Constrained MRF Model}}{182}{section.3.9}%
+\contentsline {subsection}{\tocsubsection {}{3.9.1}{Single Variable Form of Constrained MRF}}{182}{subsection.3.9.1}%
+\contentsline {subsection}{\tocsubsection {}{3.9.2}{Gradient of $\log $-Partition Function $\nabla \log Z_\mathcal {C}(\TextOrMath {\texttheta }{\maththeta })$}}{183}{subsection.3.9.2}%
+\contentsline {section}{\tocsection {}{3.10}{Experiment Settings and Configurations}}{184}{section.3.10}%
+\contentsline {subsection}{\tocsubsection {}{3.10.1}{Implementation Details}}{184}{subsection.3.10.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Implementation of \textsc {Nelson}\xspace }}{184}{section*.56}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Initialization}}{185}{section*.57}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Check Constraint Satisfaction}}{185}{section*.58}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Extract Variables in Violated Clauses}}{185}{section*.59}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Resample}}{186}{section*.60}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Implementation of Algorithm~\ref {alg:main}}}{186}{section*.62}%
+\contentsline {subsection}{\tocsubsection {}{3.10.2}{Learn Random K-SAT Solutions with Preference}}{188}{subsection.3.10.2}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Task Definition}}{188}{section*.63}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Dataset}}{188}{section*.64}%
+\contentsline {subsection}{\tocsubsection {}{3.10.3}{Learn Sink-Free Orientation in Undirected Graphs}}{189}{subsection.3.10.3}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Notations}}{190}{section*.66}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Dataset}}{191}{section*.67}%
+\contentsline {subsection}{\tocsubsection {}{3.10.4}{Learn Vehicle Delivery Routes}}{192}{subsection.3.10.4}%
+\contentsline {subsection}{\tocsubsection {}{3.10.5}{Detailed Baselines Configuation}}{192}{subsection.3.10.5}%
+\contentsline {subsection}{\tocsubsection {}{3.10.6}{Detailed Definition of Evaluation Metrics}}{193}{subsection.3.10.6}%
+\contentsline {subsection}{\tocsubsection {}{3.10.7}{Hyper-parameter Settings}}{195}{subsection.3.10.7}%
+\contentsline {chapter}{\tocchapter {Chapter}{4}{VarFA: A Variational Factor Analysis Framework for Efficient Bayesian Learning Analytics}}{197}{chapter.4}%
+\contentsline {section}{\tocsection {}{}{Overview}}{197}{section*.69}%
+\contentsline {section}{\tocsection {}{4.1}{Introduction}}{198}{section.4.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Contributions}}{201}{section*.70}%
+\contentsline {section}{\tocsection {}{4.2}{Background and Related Work}}{202}{section.4.2}%
+\contentsline {subsection}{\tocsubsection {}{4.2.1}{Factor Analysis For Student Modeling}}{202}{subsection.4.2.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1.1}{A general formulation for FA models}}{204}{subsubsection.4.2.1.1}%
+\contentsline {subsection}{\tocsubsection {}{4.2.2}{Inference Methods for FA Models}}{206}{subsection.4.2.2}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.2.1}{Maximum Likelihood Estimation}}{207}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.2.2}{Maximum A Posteriori Estimation}}{207}{subsubsection.4.2.2.2}%
+\contentsline {section}{\tocsection {}{4.3}{V{\normalfont \textbf {ar}}FA: A Variational Inference Factor Analysis Framework}}{209}{section.4.3}%
+\contentsline {subsection}{\tocsubsection {}{4.3.1}{VarFA Details}}{209}{subsection.4.3.1}%
+\contentsline {subsection}{\tocsubsection {}{4.3.2}{Why is VarFA efficient?}}{212}{subsection.4.3.2}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{VarFA supports efficient stochastic optimization}}{212}{section*.71}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{VarFA supports amortized inference}}{213}{section*.72}%
+\contentsline {subsection}{\tocsubsection {}{4.3.3}{Dealing with missing entries}}{213}{subsection.4.3.3}%
+\contentsline {subsection}{\tocsubsection {}{4.3.4}{Remarks}}{215}{subsection.4.3.4}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Applicability of VarFA}}{215}{section*.74}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Relation to variational auto-encoders}}{215}{section*.75}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Relation to other efficient Bayesian factor analysis methods}}{215}{section*.76}%
+\contentsline {section}{\tocsection {}{4.4}{Experiments}}{215}{section.4.4}%
+\contentsline {subsection}{\tocsubsection {}{4.4.1}{Synthetic Data Experiments}}{217}{subsection.4.4.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.1.1}{Setup}}{217}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Data set generation}}{217}{section*.78}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Experimental settings}}{218}{section*.79}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Evaluation metrics}}{218}{section*.81}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.1.2}{Results}}{219}{subsubsection.4.4.1.2}%
+\contentsline {subsection}{\tocsubsection {}{4.4.2}{Real Data Experiments}}{219}{subsection.4.4.2}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.2.1}{Setup}}{219}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Data sets and pre-processing steps}}{220}{section*.84}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Experimental settings and evaluation metrics}}{221}{section*.85}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.2.2}{Results: Performance Comparison}}{221}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.2.3}{Results: Bayesian Inference With VarFA}}{222}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.2.4}{Results: Post-Processing for Improved Interpretability}}{224}{subsubsection.4.4.2.4}%
+\contentsline {section}{\tocsection {}{4.5}{Chapter Conclusion and Future Work}}{225}{section.4.5}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{228}{chapter*.89}%

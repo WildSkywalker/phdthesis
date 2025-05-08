@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex t-sne_arxiv"] 1746677728.64092 "t-sne_arxiv.aux" "t-sne_arxiv.bbl" "t-sne_arxiv" 1746677866.13503 0
+["bibtex t-sne_arxiv"] 1746732489.27202 "t-sne_arxiv.aux" "t-sne_arxiv.bbl" "t-sne_arxiv" 1746732766.01225 0
   "./citation.bib" 1746227619 3399 7b98160bf3e0d4a5b951230a6bdee7c5 ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne_arxiv.aux" 1746677865 8983 7c2e4de11938c647a2ed182f7b8d9833 "pdflatex"
+  "t-sne_arxiv.aux" 1746732765 8765 e24dec2f9f3d7e723cbe3be67272d741 "pdflatex"
   (generated)
   "t-sne_arxiv.bbl"
   "t-sne_arxiv.blg"
   (rewritten before read)
-["pdflatex"] 1746677864.31948 "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" "t-sne_arxiv.pdf" "t-sne_arxiv" 1746677866.13616 0
+["pdflatex"] 1746732764.34596 "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" "t-sne_arxiv.pdf" "t-sne_arxiv" 1746732766.01339 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743407234 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk" 1736703848 7284 c271b2921810af7a0bf064673a314b16 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0800.pk" 1736703849 9292 b6b542cafa8bcf55d2f4fddd5a2cf719 ""
@@ -218,11 +218,11 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044406800 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" 1746677863 74748 73c12d0adeac5b18b5be19b91948febb ""
-  "t-sne_arxiv.aux" 1746677865 8983 7c2e4de11938c647a2ed182f7b8d9833 "pdflatex"
-  "t-sne_arxiv.bbl" 1746677728 2987 9dc880800331d8e016afdad0105637b3 "bibtex t-sne_arxiv"
-  "t-sne_arxiv.out" 1746677865 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
-  "t-sne_arxiv.tex" 1746677863 74748 73c12d0adeac5b18b5be19b91948febb ""
+  "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" 1746732763 70917 77b11a49f3d854bd562f8b6c79bafa54 ""
+  "t-sne_arxiv.aux" 1746732765 8765 e24dec2f9f3d7e723cbe3be67272d741 "pdflatex"
+  "t-sne_arxiv.bbl" 1746732489 2987 9dc880800331d8e016afdad0105637b3 "bibtex t-sne_arxiv"
+  "t-sne_arxiv.out" 1746732765 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
+  "t-sne_arxiv.tex" 1746732763 70917 77b11a49f3d854bd562f8b6c79bafa54 ""
   (generated)
   "t-sne_arxiv.aux"
   "t-sne_arxiv.log"
