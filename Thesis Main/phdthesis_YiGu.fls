@@ -385,9 +385,6 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tf
 INPUT .\acknowledgements.tex
 INPUT .\acknowledgements.tex
 INPUT acknowledgements.tex
-INPUT .\preface.tex
-INPUT .\preface.tex
-INPUT preface.tex
 INPUT .\dedication.tex
 INPUT .\dedication.tex
 INPUT dedication.tex
@@ -440,51 +437,162 @@ OUTPUT introchap.aux
 INPUT .\introchap.tex
 INPUT .\introchap.tex
 INPUT introchap.tex
+INPUT ..\Intro Chapter\intro_main_text.tex
+INPUT ..\Intro Chapter\..\Intro Chapter\intro_main_text.tex
+INPUT ..\Intro Chapter\intro_main_text.tex
+INPUT ..\Intro Chapter\..\Intro Chapter\intro_main_text.tex
+INPUT ..\Intro Chapter\concentration_distance_hypercube.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypercube.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypercube.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypercube.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypercube.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypercube.png
+INPUT ..\Intro Chapter\concentration_distance_hypershpere.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypershpere.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypershpere.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypershpere.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypershpere.png
+INPUT ..\Intro Chapter\..\Intro Chapter\concentration_distance_hypershpere.png
+INPUT ..\Intro Chapter\RNA2015DRplot.png
+INPUT ..\Intro Chapter\..\Intro Chapter\RNA2015DRplot.png
+INPUT ..\Intro Chapter\..\Intro Chapter\RNA2015DRplot.png
+INPUT ..\Intro Chapter\..\Intro Chapter\RNA2015DRplot.png
+INPUT ..\Intro Chapter\..\Intro Chapter\RNA2015DRplot.png
+INPUT ..\Intro Chapter\..\Intro Chapter\RNA2015DRplot.png
+INPUT ..\Intro Chapter\color-wheels-RYB-RGB.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\color-wheels-RYB-RGB.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\color-wheels-RYB-RGB.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\color-wheels-RYB-RGB.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\color-wheels-RYB-RGB.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\color-wheels-RYB-RGB.jpg
+INPUT ..\Intro Chapter\isomap.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\isomap.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\isomap.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\isomap.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\isomap.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\isomap.jpg
+INPUT ..\Intro Chapter\LLE_failed.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\LLE_failed.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\LLE_failed.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\LLE_failed.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\LLE_failed.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\LLE_failed.jpg
+INPUT ..\Intro Chapter\mnist_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\mnist_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\mnist_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\mnist_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\mnist_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\mnist_tsne.jpg
+INPUT ..\Intro Chapter\heavytail_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\heavytail_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\heavytail_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\heavytail_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\heavytail_tsne.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\heavytail_tsne.jpg
+INPUT ..\Intro Chapter\Image_segmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\Image_segmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\Image_segmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\Image_segmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\Image_segmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\Image_segmentation.png
+INPUT ..\Intro Chapter\waymo.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\waymo.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\waymo.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\waymo.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\waymo.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\waymo.jpg
+INPUT ..\Intro Chapter\moreimagesegmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\moreimagesegmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\moreimagesegmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\moreimagesegmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\moreimagesegmentation.png
+INPUT ..\Intro Chapter\..\Intro Chapter\moreimagesegmentation.png
+INPUT ..\Intro Chapter\Gene_regulatory_networks.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\Gene_regulatory_networks.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\Gene_regulatory_networks.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\Gene_regulatory_networks.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\Gene_regulatory_networks.jpg
+INPUT ..\Intro Chapter\..\Intro Chapter\Gene_regulatory_networks.jpg
+INPUT ..\Intro Chapter\A_profile_HMM_modelling_a_multiple_sequence_alignment.png
+INPUT ..\Intro Chapter\..\Intro Chapter\A_profile_HMM_modelling_a_multiple_sequence_alignment.png
+INPUT ..\Intro Chapter\..\Intro Chapter\A_profile_HMM_modelling_a_multiple_sequence_alignment.png
+INPUT ..\Intro Chapter\..\Intro Chapter\A_profile_HMM_modelling_a_multiple_sequence_alignment.png
+INPUT ..\Intro Chapter\..\Intro Chapter\A_profile_HMM_modelling_a_multiple_sequence_alignment.png
+INPUT ..\Intro Chapter\..\Intro Chapter\A_profile_HMM_modelling_a_multiple_sequence_alignment.png
+INPUT ..\Intro Chapter\casualmap.png
+INPUT ..\Intro Chapter\..\Intro Chapter\casualmap.png
+INPUT ..\Intro Chapter\..\Intro Chapter\casualmap.png
+INPUT ..\Intro Chapter\..\Intro Chapter\casualmap.png
+INPUT ..\Intro Chapter\..\Intro Chapter\casualmap.png
+INPUT ..\Intro Chapter\..\Intro Chapter\casualmap.png
+INPUT ..\Intro Chapter\wrightpathanalysis.png
+INPUT ..\Intro Chapter\..\Intro Chapter\wrightpathanalysis.png
+INPUT ..\Intro Chapter\..\Intro Chapter\wrightpathanalysis.png
+INPUT ..\Intro Chapter\..\Intro Chapter\wrightpathanalysis.png
+INPUT ..\Intro Chapter\..\Intro Chapter\wrightpathanalysis.png
+INPUT ..\Intro Chapter\..\Intro Chapter\wrightpathanalysis.png
+INPUT ..\Intro Chapter\ICMBesag.png
+INPUT ..\Intro Chapter\..\Intro Chapter\ICMBesag.png
+INPUT ..\Intro Chapter\..\Intro Chapter\ICMBesag.png
+INPUT ..\Intro Chapter\..\Intro Chapter\ICMBesag.png
+INPUT ..\Intro Chapter\..\Intro Chapter\ICMBesag.png
+INPUT ..\Intro Chapter\..\Intro Chapter\ICMBesag.png
+INPUT ..\Intro Chapter\beliefprop.png
+INPUT ..\Intro Chapter\..\Intro Chapter\beliefprop.png
+INPUT ..\Intro Chapter\..\Intro Chapter\beliefprop.png
+INPUT ..\Intro Chapter\..\Intro Chapter\beliefprop.png
+INPUT ..\Intro Chapter\..\Intro Chapter\beliefprop.png
+INPUT ..\Intro Chapter\..\Intro Chapter\beliefprop.png
+INPUT ..\Intro Chapter\BNstudent.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNstudent.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNstudent.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNstudent.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNstudent.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNstudent.png
+INPUT ..\Intro Chapter\BNpatterns.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNpatterns.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNpatterns.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNpatterns.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNpatterns.png
+INPUT ..\Intro Chapter\..\Intro Chapter\BNpatterns.png
+INPUT ..\Intro Chapter\dsep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\dsep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\dsep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\dsep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\dsep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\dsep.png
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
+INPUT ..\Intro Chapter\MRFexample.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFexample.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFexample.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFexample.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFexample.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFexample.png
+INPUT ..\Intro Chapter\MRFindep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFindep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFindep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFindep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFindep.png
+INPUT ..\Intro Chapter\..\Intro Chapter\MRFindep.png
+INPUT ..\Intro Chapter\VAEMNIST.png
+INPUT ..\Intro Chapter\..\Intro Chapter\VAEMNIST.png
+INPUT ..\Intro Chapter\..\Intro Chapter\VAEMNIST.png
+INPUT ..\Intro Chapter\..\Intro Chapter\VAEMNIST.png
+INPUT ..\Intro Chapter\..\Intro Chapter\VAEMNIST.png
+INPUT ..\Intro Chapter\..\Intro Chapter\VAEMNIST.png
 INPUT .\chap1.tex
 INPUT .\chap1.tex
 OUTPUT chap1.aux
 INPUT .\chap1.tex
 INPUT .\chap1.tex
 INPUT chap1.tex
-INPUT ..\t-SNE\main paper\t-sne_main_text.tex
-INPUT ..\t-SNE\main paper\t-sne_main_text.tex
-INPUT ..\t-SNE\main paper\t-sne_main_text.tex
-INPUT ..\t-SNE\main paper\t-sne_main_text.tex
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
-INPUT ..\t-SNE\plots\default_kernel.png
-INPUT ..\t-SNE\plots\default_kernel.png
-INPUT ..\t-SNE\plots\default_kernel.png
-INPUT ..\t-SNE\plots\default_kernel.png
-INPUT ..\t-SNE\plots\default_kernel.png
-INPUT ..\t-SNE\plots\default_kernel.png
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT ..\t-SNE\plots\poly_input_kernel.png
-INPUT ..\t-SNE\plots\poly_input_kernel.png
-INPUT ..\t-SNE\plots\poly_input_kernel.png
-INPUT ..\t-SNE\plots\poly_input_kernel.png
-INPUT ..\t-SNE\plots\poly_input_kernel.png
-INPUT ..\t-SNE\plots\poly_input_kernel.png
-INPUT ..\t-SNE\plots\poly+exp_input.png
-INPUT ..\t-SNE\plots\poly+exp_input.png
-INPUT ..\t-SNE\plots\poly+exp_input.png
-INPUT ..\t-SNE\plots\poly+exp_input.png
-INPUT ..\t-SNE\plots\poly+exp_input.png
-INPUT ..\t-SNE\plots\poly+exp_input.png
-INPUT ..\t-SNE\plots\custom_in+out.png
-INPUT ..\t-SNE\plots\custom_in+out.png
-INPUT ..\t-SNE\plots\custom_in+out.png
-INPUT ..\t-SNE\plots\custom_in+out.png
-INPUT ..\t-SNE\plots\custom_in+out.png
-INPUT ..\t-SNE\plots\custom_in+out.png
+INPUT ..\t-SNE(New)\t-sne_main_text_new.tex
+INPUT ..\t-SNE(New)\..\t-SNE(New)\t-sne_main_text_new.tex
+INPUT ..\t-SNE(New)\t-sne_main_text_new.tex
+INPUT ..\t-SNE(New)\..\t-SNE(New)\t-sne_main_text_new.tex
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\tex\latex\bbm\ubbm.fd
@@ -648,6 +756,7 @@ INPUT .\sim_time.png
 INPUT .\sim_time.png
 INPUT .\sim_time.png
 INPUT .\sim_time.png
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT .\violin3.png
 INPUT .\violin3.png
 INPUT .\violin3.png
@@ -709,14 +818,14 @@ INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
+INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\nunic\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb

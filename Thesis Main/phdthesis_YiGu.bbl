@@ -3,16 +3,536 @@
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
 
+\bibitem[Stegle et~al.(2015)Stegle, Teichmann, and Marioni]{StegleRNA2015}
+Oliver Stegle, Sarah Teichmann, and John Marioni.
+\newblock Computational and analytical challenges in single-cell
+  transcriptomics.
+\newblock {\em Nature reviews. Genetics}, 16, 01 2015.
+
+\bibitem[Kobak et~al.(2020{\natexlab{a}})Kobak, Linderman, Steinerberger,
+  Kluger, and Berens]{Kobak_2020}
+Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
+  Berens.
+\newblock {\em Heavy-Tailed Kernels Reveal a Finer Cluster Structure in t-SNE
+  Visualisations}, page 124–139.
+\newblock Springer International Publishing, 2020{\natexlab{a}}.
+\newblock ISBN 9783030461508.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-030-46150-8_8}.
+
+\bibitem[Wright(1921{\natexlab{a}})]{10.1093/genetics/6.2.111}
+Sewall Wright.
+\newblock Systems of mating. i. the biometric relations between parent and
+  offspring.
+\newblock {\em Genetics}, 6\penalty0 (2):\penalty0 111--123, 03
+  1921{\natexlab{a}},
+  https://academic.oup.com/genetics/article-pdf/6/2/111/35397881/genetics0111.pdf.
+\newblock ISSN 1943-2631.
+\newblock URL \url{https://doi.org/10.1093/genetics/6.2.111}.
+
+\bibitem[Besag(1986)]{Besag1986}
+Julian Besag.
+\newblock On the statistical analysis of dirty pictures.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 48\penalty0 (3):\penalty0 259--279, 07 1986,
+  https://academic.oup.com/jrsssb/article-pdf/48/3/259/49097842/jrsssb\_48\_3\_259.pdf.
+\newblock ISSN 0035-9246.
+\newblock URL \url{https://doi.org/10.1111/j.2517-6161.1986.tb01412.x}.
+
+\bibitem[Kschischang et~al.(2001)Kschischang, Frey, and
+  Loeliger]{Kschischang2001}
+F.R. Kschischang, B.J. Frey, and H.-A. Loeliger.
+\newblock Factor graphs and the sum-product algorithm.
+\newblock {\em IEEE Transactions on Information Theory}, 47\penalty0
+  (2):\penalty0 498--519, 2001.
+
+\bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
+D.~Koller and N.~Friedman.
+\newblock {\em Probabilistic Graphical Models: Principles and Techniques}.
+\newblock Adaptive computation and machine learning. MIT Press, 2009.
+\newblock ISBN 9780262013192.
+\newblock URL \url{https://books.google.co.in/books?id=7dzpHCHzNQ4C}.
+
+\bibitem[Mak et~al.(2023)Mak, Han, and Yin]{VAE2023}
+Hugo Mak, Runze Han, and Hoover Yin.
+\newblock Application of variational autoencoder (vae) model and image
+  processing approaches in game design, 02 2023.
+
 \bibitem[Moser and Tardos(2010)]{DBLP:journals/jacm/MoserT10}
 Robin~A. Moser and G{\'{a}}bor Tardos.
 \newblock A constructive proof of the general lov{\'{a}}sz local lemma.
 \newblock {\em J. {ACM}}, 57\penalty0 (2):\penalty0 11:1--11:15, 2010.
+
+\bibitem[Hey et~al.(2009)Hey, Tansley, Tolle, and Gray]{hey2009the}
+Tony Hey, Stewart Tansley, Kristin Tolle, and Jim Gray.
+\newblock {\em The Fourth Paradigm: Data-Intensive Scientific Discovery}.
+\newblock Microsoft Research, October 2009.
+\newblock ISBN 978-0-9825442-0-4.
+\newblock URL
+  \url{https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery/}.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{NIPS2012_c399862d}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In F.~Pereira, C.J. Burges, L.~Bottou, and K.Q. Weinberger, editors,
+  {\em Advances in Neural Information Processing Systems}, volume~25. Curran
+  Associates, Inc., 2012.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{NIPS2017_3f5ee243}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N Gomez, \L~ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In I.~Guyon, U.~Von Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
+  S.~Vishwanathan, and R.~Garnett, editors, {\em Advances in Neural Information
+  Processing Systems}, volume~30. Curran Associates, Inc., 2017.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf}.
+
+\bibitem[Donoho(2000)]{Donoho_Dimensions}
+David Donoho.
+\newblock High-dimensional data analysis: The curses and blessings of
+  dimensionality.
+\newblock {\em AMS Math Challenges Lecture}, pages 1--32, 01 2000.
+
+\bibitem[Tibshirani(1996)]{lasso1996}
+Robert Tibshirani.
+\newblock Regression shrinkage and selection via the lasso.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 58\penalty0 (1):\penalty0 267--288, 1996,
+  https://academic.oup.com/jrsssb/article-pdf/58/1/267/49098631/jrsssb\_58\_1\_267.pdf.
+\newblock URL \url{https://doi.org/10.1111/j.2517-6161.1996.tb02080.x}.
+
+\bibitem[Chen and Donoho(1994)]{BPDN}
+Shaobing Chen and D.~Donoho.
+\newblock Basis pursuit.
+\newblock In {\em Proceedings of 1994 28th Asilomar Conference on Signals,
+  Systems and Computers}, volume~1, pages 41--44 vol.1, 1994.
+
+\bibitem[Fan and Lv(2010)]{variableselection2010}
+Jianqing Fan and Jinchi Lv.
+\newblock A selective overview of variable selection in high dimensional
+  feature space.
+\newblock {\em Statistica Sinica}, 20:\penalty0 101--148, 01 2010.
+
+\bibitem[Kingma and Welling(2014)]{kingma2013auto}
+Diederik~P. Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock In {\em {ICLR}}, 2014.
+
+\bibitem[Bellman(1961)]{Bellman1961adaptive}
+Richard Bellman.
+\newblock {\em Adaptive Control Processes: A Guided Tour}.
+\newblock Princeton University Press, 1961.
+\newblock ISBN 9780691079011.
+\newblock URL \url{http://www.jstor.org/stable/j.ctt183ph6v}.
+
+\bibitem[Hughes(1968)]{hughes1968}
+G.~Hughes.
+\newblock On the mean accuracy of statistical pattern recognizers.
+\newblock {\em IEEE Transactions on Information Theory}, 14\penalty0
+  (1):\penalty0 55--63, 1968.
+
+\bibitem[Kiselev et~al.(2019)Kiselev, Andrews, and Hemberg]{KiselevRNA2019}
+Vladimir Kiselev, Tallulah Andrews, and Martin Hemberg.
+\newblock Challenges in unsupervised clustering of single-cell rna-seq data.
+\newblock {\em Nature Reviews Genetics}, 20:\penalty0 1, 01 2019.
+
+\bibitem[Visscher et~al.(2017)Visscher, Wray, Zhang, Sklar, McCarthy, Brown,
+  and Yang]{Visscher2017}
+Peter Visscher, Naomi Wray, Qian Zhang, Pamela Sklar, Mark McCarthy, Matthew
+  Brown, and Jian Yang.
+\newblock 10 years of gwas discovery: Biology, function, and translation.
+\newblock {\em The American Journal of Human Genetics}, 101:\penalty0 5--22, 07
+  2017.
+
+\bibitem[Karl~Pearson(1901)]{Pearson1901PCA}
+F.R.S Karl~Pearson.
+\newblock Liii. on lines and planes of closest fit to systems of points in
+  space.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 2\penalty0 (11):\penalty0 559--572, 1901,
+  https://doi.org/10.1080/14786440109462720.
+\newblock URL \url{https://doi.org/10.1080/14786440109462720}.
+
+\bibitem[Hotelling(1933)]{Hotelling1933}
+Harold Hotelling.
+\newblock Analysis of a complex of statistical variables into principal
+  components.
+\newblock {\em J. Ed. Psych.}, 24:\penalty0 417--441, 1933.
+
+\bibitem[Torgerson(1952)]{Torgerson1952}
+W.~S. Torgerson.
+\newblock Multidimensional scaling: I. theory and method.
+\newblock {\em Psychometrika}, 17:\penalty0 401--419, 1952.
+
+\bibitem[Torgerson(1958)]{torgerson1958theory}
+W.S. Torgerson.
+\newblock {\em Theory and methods of scaling}.
+\newblock Wiley, 1958.
+\newblock URL \url{https://books.google.com/books?id=FWN-AAAAMAAJ}.
+
+\bibitem[Shepard(1962)]{Shepard_1962}
+Roger~N. Shepard.
+\newblock The analysis of proximities: Multidimensional scaling with an unknown
+  distance function. i. and ii.
+\newblock {\em Psychometrika}, 27\penalty0 (2):\penalty0 125–140, 1962.
+
+\bibitem[Kruskal(1964)]{Kruskal_1964}
+J.~B. Kruskal.
+\newblock Multidimensional scaling by optimizing goodness of fit to a nonmetric
+  hypothesis.
+\newblock {\em Psychometrika}, 29\penalty0 (1):\penalty0 1–27, 1964.
+
+\bibitem[Roweis and Saul(2000)]{Roweis2000}
+Sam~T. Roweis and Lawrence~K. Saul.
+\newblock {Nonlinear Dimensionality Reduction by Locally Linear Embedding}.
+\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000,
+  http://www.sciencemag.org/cgi/reprint/290/5500/2323.pdf.
+\newblock URL
+  \url{http://www.sciencemag.org/cgi/content/abstract/290/5500/2323}.
+
+\bibitem[Tenenbaum et~al.(2000)Tenenbaum, de~Silva, and
+  Langford]{tenenbaum_global_2000}
+Joshua~B. Tenenbaum, Vin de~Silva, and John~C. Langford.
+\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2319, 2000.
+
+\bibitem[Fredman and Tarjan(1984)]{Fredman1984fibonacci}
+M.L. Fredman and R.E. Tarjan.
+\newblock Fibonacci heaps and their uses in improved network optimization
+  algorithms.
+\newblock In {\em 25th Annual Symposium onFoundations of Computer Science,
+  1984.}, pages 338--346, 1984.
+
+\bibitem[Hinton and Roweis(2002)]{NIPS2002_6150ccc6}
+Geoffrey~E Hinton and Sam Roweis.
+\newblock Stochastic neighbor embedding.
+\newblock In S.~Becker, S.~Thrun, and K.~Obermayer, editors, {\em Advances in
+  Neural Information Processing Systems}, volume~15. MIT Press, 2002.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf}.
 
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
 \newblock Equilibrium distributions for t-distributed stochastic neighbour
   embedding, 2023, 2304.03727.
 \newblock URL \url{https://arxiv.org/abs/2304.03727}.
+
+\bibitem[van~der Maaten and Hinton(2008)]{key}
+Laurens van~der Maaten and Geoffrey Hinton.
+\newblock Visualizing data using t-sne.
+\newblock {\em Journal of Machine Learning Research}, 9\penalty0 (2579-2605),
+  2008.
+
+\bibitem[Weinkove(2024)]{weinkove2024flow}
+Ben Weinkove.
+\newblock Dimension reduction and the gradient flow of relative entropy, 2024,
+  2409.16963.
+\newblock URL \url{https://arxiv.org/abs/2409.16963}.
+
+\bibitem[Geman and Geman(1984)]{Geman1984}
+Stuart Geman and Donald Geman.
+\newblock Stochastic relaxation, gibbs distributions, and the bayesian
+  restoration of images.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  PAMI-6\penalty0 (6):\penalty0 721--741, 1984.
+
+\bibitem[Zhu et~al.(2023)Zhu, Mei, Qiao, Yan, Zhu, Chen, and
+  Kretzschmar]{zhu2023superpixeltransformersefficientsemantic}
+Alex~Zihao Zhu, Jieru Mei, Siyuan Qiao, Hang Yan, Yukun Zhu, Liang-Chieh Chen,
+  and Henrik Kretzschmar.
+\newblock Superpixel transformers for efficient semantic segmentation, 2023,
+  2309.16889.
+\newblock URL \url{https://arxiv.org/abs/2309.16889}.
+
+\bibitem[Boykov and Jolly(2001)]{Boykov2001}
+Y.Y. Boykov and M.-P. Jolly.
+\newblock Interactive graph cuts for optimal boundary and region segmentation
+  of objects in n-d images.
+\newblock In {\em Proceedings Eighth IEEE International Conference on Computer
+  Vision. ICCV 2001}, volume~1, pages 105--112 vol.1, 2001.
+
+\bibitem[Kolmogorov and Zabin(2004)]{Kolmogorov2004}
+V.~Kolmogorov and R.~Zabin.
+\newblock What energy functions can be minimized via graph cuts?
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  26\penalty0 (2):\penalty0 147--159, 2004.
+
+\bibitem[Boykov and Kolmogorov(2004)]{Boykov2004}
+Y.~Boykov and V.~Kolmogorov.
+\newblock An experimental comparison of min-cut/max- flow algorithms for energy
+  minimization in vision.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  26\penalty0 (9):\penalty0 1124--1137, 2004.
+
+\bibitem[Naville and Gautheret(2010)]{Naville2010}
+Magali Naville and Daniel Gautheret.
+\newblock Transcription attenuation in bacteria: theme and variations.
+\newblock {\em Briefings in Functional Genomics}, 9:\penalty0 178--189, 03
+  2010.
+
+\bibitem[Jacob and Monod(1961)]{JACOB1961318}
+François Jacob and Jacques Monod.
+\newblock Genetic regulatory mechanisms in the synthesis of proteins.
+\newblock {\em Journal of Molecular Biology}, 3\penalty0 (3):\penalty0
+  318--356, 1961.
+\newblock ISSN 0022-2836.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0022283661800727}.
+
+\bibitem[Frasor et~al.(2004)Frasor, Stossi, Danes, Komm, Lyttle, and
+  Katzenellenbogen]{10.1158/0008-5472.CAN-03-3326}
+Jonna Frasor, Fabio Stossi, Jeanne~M. Danes, Barry Komm, C.~Richard Lyttle, and
+  Benita~S. Katzenellenbogen.
+\newblock Selective estrogen receptor modulators: Discrimination of agonistic
+  versus antagonistic activities by gene expression profiling in breast cancer
+  cells.
+\newblock {\em Cancer Research}, 64\penalty0 (4):\penalty0 1522--1533, 02 2004,
+  https://aacrjournals.org/cancerres/article-pdf/64/4/1522/2523009/zch00404001522.pdf.
+\newblock ISSN 0008-5472.
+\newblock URL \url{https://doi.org/10.1158/0008-5472.CAN-03-3326}.
+
+\bibitem[Heldring et~al.(2007)Heldring, Pike, Andersson, Matthews, Cheng,
+  Hartman, Tujague, Str\"{o}m, Treuter, Warner, and
+  Gustafsson]{doi:10.1152/physrev.00026.2006}
+Nina Heldring, Ashley Pike, Sandra Andersson, Jason Matthews, Guojun Cheng,
+  Johan Hartman, Michel Tujague, Anders Str\"{o}m, Eckardt Treuter, Margaret
+  Warner, and Jan-\r{A}ke Gustafsson.
+\newblock Estrogen receptors: How do they signal and what are their targets.
+\newblock {\em Physiological Reviews}, 87\penalty0 (3):\penalty0 905--931,
+  2007, https://doi.org/10.1152/physrev.00026.2006.
+\newblock URL \url{https://doi.org/10.1152/physrev.00026.2006}.
+\newblock PMID: 17615392.
+
+\bibitem[Friedman et~al.(2000)Friedman, Linial, Nachman, and
+  Pe'er]{doi:10.1089/106652700750050961}
+Nir Friedman, Michal Linial, Iftach Nachman, and Dana Pe'er.
+\newblock Using bayesian networks to analyze expression data.
+\newblock {\em Journal of Computational Biology}, 7\penalty0 (3-4):\penalty0
+  601--620, 2000, https://doi.org/10.1089/106652700750050961.
+\newblock URL \url{https://doi.org/10.1089/106652700750050961}.
+\newblock PMID: 11108481.
+
+\bibitem[Sachs et~al.(2005)Sachs, Perez, Pe'er, Lauffenburger, and
+  Nolan]{Sachs2005}
+Karen Sachs, Omar Perez, Dana Pe'er, Douglas Lauffenburger, and Garry Nolan.
+\newblock Causal protein-signaling networks derived from multiparameter
+  single-cell data.
+\newblock {\em Science (New York, N.Y.)}, 308:\penalty0 523--9, 05 2005.
+
+\bibitem[Krogh(1994-01-31)]{Krogh1994HMM}
+A~Krogh.
+\newblock Hidden markov models in computational biology. applications to
+  protein modeling.
+\newblock {\em Journal of molecular biology.}, 235\penalty0 (5), 1994-01-31.
+\newblock ISSN 0022-2836.
+
+\bibitem[Durbin et~al.(1998)Durbin, Eddy, Krogh, and
+  Mitchison]{Durbin_Eddy_Krogh_Mitchison_1998}
+Richard Durbin, Sean~R. Eddy, Anders Krogh, and Graeme Mitchison.
+\newblock {\em Biological Sequence Analysis: Probabilistic Models of Proteins
+  and Nucleic Acids}.
+\newblock Cambridge University Press, 1998.
+
+\bibitem[Schrijver(2003)]{Schrijver2003}
+Alexander Schrijver.
+\newblock {\em Combinatorial Optimization: Polyhedra and Efficiency}, volume~B.
+\newblock Springer Science and Business Media, 01 2003.
+
+\bibitem[LIGHTNER(1991)]{lightner1991brief}
+JAMES~E. LIGHTNER.
+\newblock A brief look at the history of probability and statistics.
+\newblock {\em The Mathematics Teacher}, 84\penalty0 (8):\penalty0 623--630,
+  1991.
+\newblock ISSN 00255769.
+\newblock URL \url{http://www.jstor.org/stable/27967334}.
+
+\bibitem[Euler(1736)]{Euler1736}
+Leonhard Euler.
+\newblock Solutio problematis ad geometriam situs pertinentis.
+\newblock {\em Commentarii Academiae Scientiarum Imperialis Petropolitanae},
+  8:\penalty0 128--140, 1736.
+
+\bibitem[Ising(1925)]{Ising1925BeitragZT}
+Ernst Ising.
+\newblock Beitrag zur theorie des ferromagnetismus.
+\newblock {\em Zeitschrift f{\"u}r Physik}, 31:\penalty0 253--258, 1925.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:122157319}.
+
+\bibitem[Onsager(1944)]{PhysRev.65.117}
+Lars Onsager.
+\newblock Crystal statistics. i. a two-dimensional model with an order-disorder
+  transition.
+\newblock {\em Phys. Rev.}, 65:\penalty0 117--149, Feb 1944.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.65.117}.
+
+\bibitem[Wright(1921{\natexlab{b}})]{Wright1921CorrelationAndCausation}
+Sewall Wright.
+\newblock Correlation and causation.
+\newblock {\em Journal of agricultural research}, 20\penalty0 (7):\penalty0
+  557--585, 1921{\natexlab{b}}.
+
+\bibitem[Wright(1934)]{Wright1934}
+Sewall Wright.
+\newblock The method of path coefficients.
+\newblock {\em The Annals of Mathematical Statistics}, 5\penalty0 (3):\penalty0
+  161--215, 1934.
+\newblock ISSN 00034851, 21688990.
+\newblock URL \url{http://www.jstor.org/stable/2957502}.
+
+\bibitem[Wright(1920)]{Wright1920TheRI}
+Sewall Wright.
+\newblock The relative importance of heredity and environment in determining
+  the piebald pattern of guinea-pigs.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 6 6:\penalty0 320--32, 1920.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:12577660}.
+
+\bibitem[Wright(1918)]{10.1093/genetics/3.4.367}
+Sewall Wright.
+\newblock On the nature of size factors.
+\newblock {\em Genetics}, 3\penalty0 (4):\penalty0 367--374, 07 1918,
+  https://academic.oup.com/genetics/article-pdf/3/4/367/35081662/genetics0367.pdf.
+\newblock ISSN 1943-2631.
+\newblock URL \url{https://doi.org/10.1093/genetics/3.4.367}.
+
+\bibitem[Duncan(1975)]{Duncan1975}
+Otis~Dudley Duncan.
+\newblock {\em Introduction to Structural Equation Models}.
+\newblock Academic Press, 1975.
+
+\bibitem[Bollen(1989)]{Bollen89}
+Kenneth~A. Bollen.
+\newblock {\em Structural Equations with Latent Variables}.
+\newblock Wiley, 1989.
+\newblock ISBN 9781118619179.
+
+\bibitem[Pearl(1988)]{10.5555/534975}
+Judea Pearl.
+\newblock {\em Probabilistic Reasoning in Intelligent Systems: Networks of
+  Plausible Inference}.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1988.
+\newblock ISBN 1558604790.
+
+\bibitem[Sahami et~al.(1998)Sahami, Dumais, Heckerman, and Horvitz]{Sahami1998}
+Mehran Sahami, Susan Dumais, David Heckerman, and Eric Horvitz.
+\newblock A bayesian approach to filtering junk e-mail.
+\newblock {\em AAAI'98 Workshop on Learning for Text Categorization}, 62, 06
+  1998.
+
+\bibitem[Shenoy and Shenoy(2003)]{BNRisk2003}
+Catherine Shenoy and Prakash Shenoy.
+\newblock {\em Bayesian Network Models of Portfolio Risk and Return}, pages
+  87--.
+\newblock The MIT Press, 06 2003.
+
+\bibitem[Gemela(2001)]{Gemela2001}
+Jozef Gemela.
+\newblock Financial analysis using bayesian networks.
+\newblock {\em Applied Stochastic Models in Business and Industry},
+  17:\penalty0 57 -- 67, 02 2001.
+
+\bibitem[Besag(1974)]{Besag1974}
+Julian Besag.
+\newblock Spatial interaction and the statistical analysis of lattice systems.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 36\penalty0 (2):\penalty0 192--225, 1 1974,
+  https://academic.oup.com/jrsssb/article-pdf/36/2/192/49096627/jrsssb\_36\_2\_192.pdf.
+\newblock ISSN 0035-9246.
+\newblock URL \url{https://doi.org/10.1111/j.2517-6161.1974.tb00999.x}.
+
+\bibitem[Jordan et~al.(1999)Jordan, Ghahramani, Jaakkola, and Saul]{Jordan1999}
+Michael Jordan, Zoubin Ghahramani, Tommi Jaakkola, and Lawrence Saul.
+\newblock An introduction to variational methods for graphical models.
+\newblock {\em Machine Learning}, 37:\penalty0 183--233, 01 1999.
+
+\bibitem[Gelfand and and(1990)]{Gelfand01061990}
+Alan~E. Gelfand and Adrian F. M.~Smith and.
+\newblock Sampling-based approaches to calculating marginal densities.
+\newblock {\em Journal of the American Statistical Association}, 85\penalty0
+  (410):\penalty0 398--409, 1990,
+  https://www.tandfonline.com/doi/pdf/10.1080/01621459.1990.10476213.
+\newblock URL
+  \url{https://www.tandfonline.com/doi/abs/10.1080/01621459.1990.10476213}.
+
+\bibitem[Erdős and László(1974)]{LLL1975}
+Paul Erdős and Lovász László.
+\newblock Problems and results on 3-chromatic hypergraphs and some related
+  questions.
+\newblock {\em Coll Math Soc J Bolyai}, 10, 01 1974.
+
+\bibitem[Shearer(1985)]{LLL1985}
+James~B Shearer.
+\newblock On a problem of spencer.
+\newblock {\em Combinatorica}, 5\penalty0 (3):\penalty0 241–245, July 1985.
+\newblock ISSN 0209-9683.
+\newblock URL \url{https://doi.org/10.1007/BF02579368}.
+
+\bibitem[Spencer(1977)]{SPENCER197769}
+Joel Spencer.
+\newblock Asymptotic lower bounds for ramsey functions.
+\newblock {\em Discrete Mathematics}, 20:\penalty0 69--76, 1977.
+\newblock ISSN 0012-365X.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/0012365X77900449}.
+
+\bibitem[Moser and Tardos(2009)]{moser2009constructiveproofgenerallovasz}
+Robin~A. Moser and Gábor Tardos.
+\newblock A constructive proof of the general lovasz local lemma, 2009,
+  0903.0544.
+\newblock URL \url{https://arxiv.org/abs/0903.0544}.
+
+\bibitem[Spearman(1904)]{Spearman_1904}
+C.~Spearman.
+\newblock General intelligence, objectively determined and measured.
+\newblock {\em The American Journal of Psychology}, 15\penalty0 (2):\penalty0
+  201--292, 1904.
+\newblock ISSN 00029556.
+\newblock URL \url{http://www.jstor.org/stable/1412107}.
+
+\bibitem[Thurstone(1947)]{thurstone1947multiple}
+L.L. Thurstone.
+\newblock {\em Multiple-factor Analysis: A Development and Expansion of The
+  Vectors of the Mind}.
+\newblock University of Chicago Committee on Publications in Biology and
+  Medicine. Publications. University of Chicago Press, 1947.
+\newblock ISBN 9780608111896.
+\newblock URL \url{https://books.google.com/books?id=c0wAAAAAMAAJ}.
+
+\bibitem[Jöreskog(1967)]{Jöreskog_1967}
+K.~G. Jöreskog.
+\newblock Some contributions to maximum likelihood factor analysis.
+\newblock {\em Psychometrika}, 32\penalty0 (4):\penalty0 443–482, 1967.
+
+\bibitem[Jöreskog(1969)]{Jöreskog_1969}
+Karl Jöreskog.
+\newblock A general approach to confirmatory factor analysis.
+\newblock {\em Psychometrika}, 34:\penalty0 183--202, 02 1969.
+
+\bibitem[Doshi-Velez and Kim(2017)]{doshivelez2017}
+Finale Doshi-Velez and Been Kim.
+\newblock Towards a rigorous science of interpretable machine learning, 2017,
+  1702.08608.
+\newblock URL \url{https://arxiv.org/abs/1702.08608}.
+
+\bibitem[Miller(2018)]{miller2018}
+Tim Miller.
+\newblock Explanation in artificial intelligence: Insights from the social
+  sciences, 2018, 1706.07269.
+\newblock URL \url{https://arxiv.org/abs/1706.07269}.
+
+\bibitem[Doersch(2021)]{doersch2021tutorialvariationalautoencoders}
+Carl Doersch.
+\newblock Tutorial on variational autoencoders, 2021, 1606.05908.
+\newblock URL \url{https://arxiv.org/abs/1606.05908}.
+
+\bibitem[Murray and Pickarski(2024)]{murray2024largedatalimitsscaling}
+Ryan Murray and Adam Pickarski.
+\newblock Large data limits and scaling laws for tsne, 2024, 2410.13063.
+\newblock URL \url{https://arxiv.org/abs/2410.13063}.
 
 \bibitem[Liu et~al.(2009)Liu, Ngo, and Huy]{liu2000inequ}
 Wenjun Liu, Quoc Ngo, and Vu~Huy.
@@ -37,11 +557,6 @@ Ian~J. Goodfellow, Jean Pouget{-}Abadie, Mehdi Mirza, Bing Xu, David
   Warde{-}Farley, Sherjil Ozair, Aaron~C. Courville, and Yoshua Bengio.
 \newblock Generative adversarial nets.
 \newblock In {\em {NIPS}}, pages 2672--2680, 2014.
-
-\bibitem[Kingma and Welling(2014)]{kingma2013auto}
-Diederik~P. Kingma and Max Welling.
-\newblock Auto-encoding variational bayes.
-\newblock In {\em {ICLR}}, 2014.
 
 \bibitem[Germain et~al.(2015)Germain, Gregor, Murray, and
   Larochelle]{Germain2015MADEMA}
@@ -940,25 +1455,13 @@ Pavlin~G. Poličar and Blaž Zupan.
   t-sne, 2024, 2403.19040.
 \newblock URL \url{https://arxiv.org/abs/2403.19040}.
 
-\bibitem[van~der Maaten and Hinton(2008)]{key}
-Laurens van~der Maaten and Geoffrey Hinton.
-\newblock Visualizing data using t-sne.
-\newblock {\em Journal of Machine Learning Research}, 9\penalty0 (2579-2605),
-  2008.
-
 \bibitem[Boucheron et~al.(2013)Boucheron, Lugosi, and Massart]{concentration}
 Stéphane Boucheron, Gábor Lugosi, and Pascal Massart.
 \newblock {\em Concentration Inequalities: A Nonasymptotic Theory of
   Independence}.
 \newblock Oxford University Press, 2013.
 
-\bibitem[Weinkove(2024)]{weinkove2024flow}
-Ben Weinkove.
-\newblock Dimension reduction and the gradient flow of relative entropy, 2024,
-  2409.16963.
-\newblock URL \url{https://arxiv.org/abs/2409.16963}.
-
-\bibitem[Kobak et~al.(2020{\natexlab{a}})Kobak, Linderman, Steinerberger,
+\bibitem[Kobak et~al.(2020{\natexlab{b}})Kobak, Linderman, Steinerberger,
   Kluger, and Berens]{10.1007/978-3-030-46150-8_8}
 Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
   Berens.
@@ -966,7 +1469,7 @@ Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
   visualisations.
 \newblock In Ulf Brefeld, Elisa Fromont, Andreas Hotho, Arno Knobbe, Marloes
   Maathuis, and C{\'e}line Robardet, editors, {\em Machine Learning and
-  Knowledge Discovery in Databases}, pages 124--139, Cham, 2020{\natexlab{a}}.
+  Knowledge Discovery in Databases}, pages 124--139, Cham, 2020{\natexlab{b}}.
   Springer International Publishing.
 \newblock ISBN 978-3-030-46150-8.
 
@@ -1003,454 +1506,11 @@ Durk~P Kingma, Tim Salimans, Rafal Jozefowicz, Xi~Chen, Ilya Sutskever, and Max
 \newblock In {\em Proc. Advances in Neural Information Processing Systems},
   pages 4743--4751, 2016.
 
-\bibitem[Hey et~al.(2009)Hey, Tansley, Tolle, and Gray]{hey2009the}
-Tony Hey, Stewart Tansley, Kristin Tolle, and Jim Gray.
-\newblock {\em The Fourth Paradigm: Data-Intensive Scientific Discovery}.
-\newblock Microsoft Research, October 2009.
-\newblock ISBN 978-0-9825442-0-4.
-\newblock URL
-  \url{https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery/}.
-
-\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
-  Hinton]{NIPS2012_c399862d}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
-\newblock Imagenet classification with deep convolutional neural networks.
-\newblock In F.~Pereira, C.J. Burges, L.~Bottou, and K.Q. Weinberger, editors,
-  {\em Advances in Neural Information Processing Systems}, volume~25. Curran
-  Associates, Inc., 2012.
-\newblock URL
-  \url{https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}.
-
-\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
-  Kaiser, and Polosukhin]{NIPS2017_3f5ee243}
-Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
-  Aidan~N Gomez, \L~ukasz Kaiser, and Illia Polosukhin.
-\newblock Attention is all you need.
-\newblock In I.~Guyon, U.~Von Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
-  S.~Vishwanathan, and R.~Garnett, editors, {\em Advances in Neural Information
-  Processing Systems}, volume~30. Curran Associates, Inc., 2017.
-\newblock URL
-  \url{https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf}.
-
-\bibitem[Donoho(2000)]{Donoho_Dimensions}
-David Donoho.
-\newblock High-dimensional data analysis: The curses and blessings of
-  dimensionality.
-\newblock {\em AMS Math Challenges Lecture}, pages 1--32, 01 2000.
-
-\bibitem[Tibshirani(1996)]{lasso1996}
-Robert Tibshirani.
-\newblock Regression shrinkage and selection via the lasso.
-\newblock {\em Journal of the Royal Statistical Society: Series B
-  (Methodological)}, 58\penalty0 (1):\penalty0 267--288, 1996,
-  https://academic.oup.com/jrsssb/article-pdf/58/1/267/49098631/jrsssb\_58\_1\_267.pdf.
-\newblock URL \url{https://doi.org/10.1111/j.2517-6161.1996.tb02080.x}.
-
-\bibitem[Chen and Donoho(1994)]{BPDN}
-Shaobing Chen and D.~Donoho.
-\newblock Basis pursuit.
-\newblock In {\em Proceedings of 1994 28th Asilomar Conference on Signals,
-  Systems and Computers}, volume~1, pages 41--44 vol.1, 1994.
-
-\bibitem[Fan and Lv(2010)]{variableselection2010}
-Jianqing Fan and Jinchi Lv.
-\newblock A selective overview of variable selection in high dimensional
-  feature space.
-\newblock {\em Statistica Sinica}, 20:\penalty0 101--148, 01 2010.
-
-\bibitem[Bellman(1961)]{Bellman1961adaptive}
-Richard Bellman.
-\newblock {\em Adaptive Control Processes: A Guided Tour}.
-\newblock Princeton University Press, 1961.
-\newblock ISBN 9780691079011.
-\newblock URL \url{http://www.jstor.org/stable/j.ctt183ph6v}.
-
-\bibitem[Hughes(1968)]{Hughes1968}
-G.~Hughes.
-\newblock On the mean accuracy of statistical pattern recognizers.
-\newblock {\em IEEE Transactions on Information Theory}, 14\penalty0
-  (1):\penalty0 55--63, 1968.
-
-\bibitem[Karl~Pearson(1901)]{Pearson1901PCA}
-F.R.S Karl~Pearson.
-\newblock Liii. on lines and planes of closest fit to systems of points in
-  space.
-\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
-  Journal of Science}, 2\penalty0 (11):\penalty0 559--572, 1901,
-  https://doi.org/10.1080/14786440109462720.
-\newblock URL \url{https://doi.org/10.1080/14786440109462720}.
-
-\bibitem[Hotelling(1933)]{Hotelling1933}
-Harold Hotelling.
-\newblock Analysis of a complex of statistical variables into principal
-  components.
-\newblock {\em J. Ed. Psych.}, 24:\penalty0 417--441, 1933.
-
-\bibitem[Torgerson(1952)]{Torgerson1952}
-W.~S. Torgerson.
-\newblock Multidimensional scaling: I. theory and method.
-\newblock {\em Psychometrika}, 17:\penalty0 401--419, 1952.
-
-\bibitem[Torgerson(1958)]{torgerson1958theory}
-W.S. Torgerson.
-\newblock {\em Theory and methods of scaling}.
-\newblock Wiley, 1958.
-\newblock URL \url{https://books.google.com/books?id=FWN-AAAAMAAJ}.
-
-\bibitem[Shepard(1962)]{Shepard_1962}
-Roger~N. Shepard.
-\newblock The analysis of proximities: Multidimensional scaling with an unknown
-  distance function. i. and ii.
-\newblock {\em Psychometrika}, 27\penalty0 (2):\penalty0 125–140, 1962.
-
-\bibitem[Kruskal(1964)]{Kruskal_1964}
-J.~B. Kruskal.
-\newblock Multidimensional scaling by optimizing goodness of fit to a nonmetric
-  hypothesis.
-\newblock {\em Psychometrika}, 29\penalty0 (1):\penalty0 1–27, 1964.
-
-\bibitem[Roweis and Saul(2000)]{Roweis2000}
-Sam~T. Roweis and Lawrence~K. Saul.
-\newblock {Nonlinear Dimensionality Reduction by Locally Linear Embedding}.
-\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000,
-  http://www.sciencemag.org/cgi/reprint/290/5500/2323.pdf.
-\newblock URL
-  \url{http://www.sciencemag.org/cgi/content/abstract/290/5500/2323}.
-
-\bibitem[Tenenbaum et~al.(2000)Tenenbaum, de~Silva, and
-  Langford]{tenenbaum_global_2000}
-Joshua~B. Tenenbaum, Vin de~Silva, and John~C. Langford.
-\newblock A global geometric framework for nonlinear dimensionality reduction.
-\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2319, 2000.
-
-\bibitem[Hinton and Roweis(2002)]{NIPS2002_6150ccc6}
-Geoffrey~E Hinton and Sam Roweis.
-\newblock Stochastic neighbor embedding.
-\newblock In S.~Becker, S.~Thrun, and K.~Obermayer, editors, {\em Advances in
-  Neural Information Processing Systems}, volume~15. MIT Press, 2002.
-\newblock URL
-  \url{https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf}.
-
-\bibitem[Fredman and Tarjan(1984)]{Fredman1984fibonacci}
-M.L. Fredman and R.E. Tarjan.
-\newblock Fibonacci heaps and their uses in improved network optimization
-  algorithms.
-\newblock In {\em 25th Annual Symposium onFoundations of Computer Science,
-  1984.}, pages 338--346, 1984.
-
-\bibitem[Kobak et~al.(2020{\natexlab{b}})Kobak, Linderman, Steinerberger,
-  Kluger, and Berens]{Kobak_2020}
-Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
-  Berens.
-\newblock {\em Heavy-Tailed Kernels Reveal a Finer Cluster Structure in t-SNE
-  Visualisations}, page 124–139.
-\newblock Springer International Publishing, 2020{\natexlab{b}}.
-\newblock ISBN 9783030461508.
-\newblock URL \url{http://dx.doi.org/10.1007/978-3-030-46150-8_8}.
-
-\bibitem[Stegle et~al.(2015)Stegle, Teichmann, and Marioni]{StegleRNA2015}
-Oliver Stegle, Sarah Teichmann, and John Marioni.
-\newblock Computational and analytical challenges in single-cell
-  transcriptomics.
-\newblock {\em Nature reviews. Genetics}, 16, 01 2015.
-
-\bibitem[Kiselev et~al.(2019)Kiselev, Andrews, and Hemberg]{KiselevRNA2019}
-Vladimir Kiselev, Tallulah Andrews, and Martin Hemberg.
-\newblock Challenges in unsupervised clustering of single-cell rna-seq data.
-\newblock {\em Nature Reviews Genetics}, 20:\penalty0 1, 01 2019.
-
-\bibitem[Visscher et~al.(2017)Visscher, Wray, Zhang, Sklar, McCarthy, Brown,
-  and Yang]{Visscher2017}
-Peter Visscher, Naomi Wray, Qian Zhang, Pamela Sklar, Mark McCarthy, Matthew
-  Brown, and Jian Yang.
-\newblock 10 years of gwas discovery: Biology, function, and translation.
-\newblock {\em The American Journal of Human Genetics}, 101:\penalty0 5--22, 07
-  2017.
-
 \bibitem[McInnes et~al.(2020)McInnes, Healy, and Melville]{mcinnes2020umap}
 Leland McInnes, John Healy, and James Melville.
 \newblock Umap: Uniform manifold approximation and projection for dimension
   reduction, 2020, 1802.03426.
 \newblock URL \url{https://arxiv.org/abs/1802.03426}.
-
-\bibitem[Geman and Geman(1984)]{Geman1984}
-Stuart Geman and Donald Geman.
-\newblock Stochastic relaxation, gibbs distributions, and the bayesian
-  restoration of images.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  PAMI-6\penalty0 (6):\penalty0 721--741, 1984.
-
-\bibitem[Zhu et~al.(2023)Zhu, Mei, Qiao, Yan, Zhu, Chen, and
-  Kretzschmar]{zhu2023superpixeltransformersefficientsemantic}
-Alex~Zihao Zhu, Jieru Mei, Siyuan Qiao, Hang Yan, Yukun Zhu, Liang-Chieh Chen,
-  and Henrik Kretzschmar.
-\newblock Superpixel transformers for efficient semantic segmentation, 2023,
-  2309.16889.
-\newblock URL \url{https://arxiv.org/abs/2309.16889}.
-
-\bibitem[Boykov and Jolly(2001)]{Boykov2001}
-Y.Y. Boykov and M.-P. Jolly.
-\newblock Interactive graph cuts for optimal boundary and region segmentation
-  of objects in n-d images.
-\newblock In {\em Proceedings Eighth IEEE International Conference on Computer
-  Vision. ICCV 2001}, volume~1, pages 105--112 vol.1, 2001.
-
-\bibitem[Kolmogorov and Zabin(2004)]{Kolmogorov2004}
-V.~Kolmogorov and R.~Zabin.
-\newblock What energy functions can be minimized via graph cuts?
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  26\penalty0 (2):\penalty0 147--159, 2004.
-
-\bibitem[Boykov and Kolmogorov(2004)]{Boykov2004}
-Y.~Boykov and V.~Kolmogorov.
-\newblock An experimental comparison of min-cut/max- flow algorithms for energy
-  minimization in vision.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  26\penalty0 (9):\penalty0 1124--1137, 2004.
-
-\bibitem[Naville and Gautheret(2010)]{Naville2010}
-Magali Naville and Daniel Gautheret.
-\newblock Transcription attenuation in bacteria: theme and variations.
-\newblock {\em Briefings in Functional Genomics}, 9:\penalty0 178--189, 03
-  2010.
-
-\bibitem[Jacob and Monod(1961)]{JACOB1961318}
-François Jacob and Jacques Monod.
-\newblock Genetic regulatory mechanisms in the synthesis of proteins.
-\newblock {\em Journal of Molecular Biology}, 3\penalty0 (3):\penalty0
-  318--356, 1961.
-\newblock ISSN 0022-2836.
-\newblock URL
-  \url{https://www.sciencedirect.com/science/article/pii/S0022283661800727}.
-
-\bibitem[Frasor et~al.(2004)Frasor, Stossi, Danes, Komm, Lyttle, and
-  Katzenellenbogen]{10.1158/0008-5472.CAN-03-3326}
-Jonna Frasor, Fabio Stossi, Jeanne~M. Danes, Barry Komm, C.~Richard Lyttle, and
-  Benita~S. Katzenellenbogen.
-\newblock Selective estrogen receptor modulators: Discrimination of agonistic
-  versus antagonistic activities by gene expression profiling in breast cancer
-  cells.
-\newblock {\em Cancer Research}, 64\penalty0 (4):\penalty0 1522--1533, 02 2004,
-  https://aacrjournals.org/cancerres/article-pdf/64/4/1522/2523009/zch00404001522.pdf.
-\newblock ISSN 0008-5472.
-\newblock URL \url{https://doi.org/10.1158/0008-5472.CAN-03-3326}.
-
-\bibitem[Heldring et~al.(2007)Heldring, Pike, Andersson, Matthews, Cheng,
-  Hartman, Tujague, Str\"{o}m, Treuter, Warner, and
-  Gustafsson]{doi:10.1152/physrev.00026.2006}
-Nina Heldring, Ashley Pike, Sandra Andersson, Jason Matthews, Guojun Cheng,
-  Johan Hartman, Michel Tujague, Anders Str\"{o}m, Eckardt Treuter, Margaret
-  Warner, and Jan-\r{A}ke Gustafsson.
-\newblock Estrogen receptors: How do they signal and what are their targets.
-\newblock {\em Physiological Reviews}, 87\penalty0 (3):\penalty0 905--931,
-  2007, https://doi.org/10.1152/physrev.00026.2006.
-\newblock URL \url{https://doi.org/10.1152/physrev.00026.2006}.
-\newblock PMID: 17615392.
-
-\bibitem[Friedman et~al.(2000)Friedman, Linial, Nachman, and
-  Pe'er]{doi:10.1089/106652700750050961}
-Nir Friedman, Michal Linial, Iftach Nachman, and Dana Pe'er.
-\newblock Using bayesian networks to analyze expression data.
-\newblock {\em Journal of Computational Biology}, 7\penalty0 (3-4):\penalty0
-  601--620, 2000, https://doi.org/10.1089/106652700750050961.
-\newblock URL \url{https://doi.org/10.1089/106652700750050961}.
-\newblock PMID: 11108481.
-
-\bibitem[Sachs et~al.(2005)Sachs, Perez, Pe'er, Lauffenburger, and
-  Nolan]{Sachs2005}
-Karen Sachs, Omar Perez, Dana Pe'er, Douglas Lauffenburger, and Garry Nolan.
-\newblock Causal protein-signaling networks derived from multiparameter
-  single-cell data.
-\newblock {\em Science (New York, N.Y.)}, 308:\penalty0 523--9, 05 2005.
-
-\bibitem[Krogh(1994-01-31)]{Krogh1994HMM}
-A~Krogh.
-\newblock Hidden markov models in computational biology. applications to
-  protein modeling.
-\newblock {\em Journal of molecular biology.}, 235\penalty0 (5), 1994-01-31.
-\newblock ISSN 0022-2836.
-
-\bibitem[Durbin et~al.(1998)Durbin, Eddy, Krogh, and
-  Mitchison]{Durbin_Eddy_Krogh_Mitchison_1998}
-Richard Durbin, Sean~R. Eddy, Anders Krogh, and Graeme Mitchison.
-\newblock {\em Biological Sequence Analysis: Probabilistic Models of Proteins
-  and Nucleic Acids}.
-\newblock Cambridge University Press, 1998.
-
-\bibitem[Schrijver(2003)]{Schrijver2003}
-Alexander Schrijver.
-\newblock {\em Combinatorial Optimization: Polyhedra and Efficiency}, volume~B.
-\newblock Springer Science and Business Media, 01 2003.
-
-\bibitem[LIGHTNER(1991)]{lightner1991brief}
-JAMES~E. LIGHTNER.
-\newblock A brief look at the history of probability and statistics.
-\newblock {\em The Mathematics Teacher}, 84\penalty0 (8):\penalty0 623--630,
-  1991.
-\newblock ISSN 00255769.
-\newblock URL \url{http://www.jstor.org/stable/27967334}.
-
-\bibitem[Euler(1736)]{Euler1736}
-Leonhard Euler.
-\newblock Solutio problematis ad geometriam situs pertinentis.
-\newblock {\em Commentarii Academiae Scientiarum Imperialis Petropolitanae},
-  8:\penalty0 128--140, 1736.
-
-\bibitem[Ising(1925)]{Ising1925BeitragZT}
-Ernst Ising.
-\newblock Beitrag zur theorie des ferromagnetismus.
-\newblock {\em Zeitschrift f{\"u}r Physik}, 31:\penalty0 253--258, 1925.
-\newblock URL \url{https://api.semanticscholar.org/CorpusID:122157319}.
-
-\bibitem[Onsager(1944)]{PhysRev.65.117}
-Lars Onsager.
-\newblock Crystal statistics. i. a two-dimensional model with an order-disorder
-  transition.
-\newblock {\em Phys. Rev.}, 65:\penalty0 117--149, Feb 1944.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.65.117}.
-
-\bibitem[Wright(1921{\natexlab{a}})]{Wright1921CorrelationAndCausation}
-Sewall Wright.
-\newblock Correlation and causation.
-\newblock {\em Journal of agricultural research}, 20\penalty0 (7):\penalty0
-  557--585, 1921{\natexlab{a}}.
-
-\bibitem[Wright(1934)]{Wright1934}
-Sewall Wright.
-\newblock The method of path coefficients.
-\newblock {\em The Annals of Mathematical Statistics}, 5\penalty0 (3):\penalty0
-  161--215, 1934.
-\newblock ISSN 00034851, 21688990.
-\newblock URL \url{http://www.jstor.org/stable/2957502}.
-
-\bibitem[Wright(1920)]{Wright1920TheRI}
-Sewall Wright.
-\newblock The relative importance of heredity and environment in determining
-  the piebald pattern of guinea-pigs.
-\newblock {\em Proceedings of the National Academy of Sciences of the United
-  States of America}, 6 6:\penalty0 320--32, 1920.
-\newblock URL \url{https://api.semanticscholar.org/CorpusID:12577660}.
-
-\bibitem[Wright(1921{\natexlab{b}})]{10.1093/genetics/6.2.111}
-Sewall Wright.
-\newblock Systems of mating. i. the biometric relations between parent and
-  offspring.
-\newblock {\em Genetics}, 6\penalty0 (2):\penalty0 111--123, 03
-  1921{\natexlab{b}},
-  https://academic.oup.com/genetics/article-pdf/6/2/111/35397881/genetics0111.pdf.
-\newblock ISSN 1943-2631.
-\newblock URL \url{https://doi.org/10.1093/genetics/6.2.111}.
-
-\bibitem[Wright(1918)]{10.1093/genetics/3.4.367}
-Sewall Wright.
-\newblock On the nature of size factors.
-\newblock {\em Genetics}, 3\penalty0 (4):\penalty0 367--374, 07 1918,
-  https://academic.oup.com/genetics/article-pdf/3/4/367/35081662/genetics0367.pdf.
-\newblock ISSN 1943-2631.
-\newblock URL \url{https://doi.org/10.1093/genetics/3.4.367}.
-
-\bibitem[Duncan(1975)]{Duncan1975}
-Otis~Dudley Duncan.
-\newblock {\em Introduction to Structural Equation Models}.
-\newblock Academic Press, 1975.
-
-\bibitem[Bollen(1989)]{Bollen89}
-Kenneth~A. Bollen.
-\newblock {\em Structural Equations with Latent Variables}.
-\newblock Wiley, 1989.
-\newblock ISBN 9781118619179.
-
-\bibitem[Pearl(1988)]{10.5555/534975}
-Judea Pearl.
-\newblock {\em Probabilistic Reasoning in Intelligent Systems: Networks of
-  Plausible Inference}.
-\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1988.
-\newblock ISBN 1558604790.
-
-\bibitem[Sahami et~al.(1998)Sahami, Dumais, Heckerman, and Horvitz]{Sahami1998}
-Mehran Sahami, Susan Dumais, David Heckerman, and Eric Horvitz.
-\newblock A bayesian approach to filtering junk e-mail.
-\newblock {\em AAAI'98 Workshop on Learning for Text Categorization}, 62, 06
-  1998.
-
-\bibitem[Shenoy and Shenoy(2003)]{BNRisk2003}
-Catherine Shenoy and Prakash Shenoy.
-\newblock {\em Bayesian Network Models of Portfolio Risk and Return}, pages
-  87--.
-\newblock The MIT Press, 06 2003.
-
-\bibitem[Gemela(2001)]{Gemela2001}
-Jozef Gemela.
-\newblock Financial analysis using bayesian networks.
-\newblock {\em Applied Stochastic Models in Business and Industry},
-  17:\penalty0 57 -- 67, 02 2001.
-
-\bibitem[Besag(1974)]{Besag1974}
-Julian Besag.
-\newblock Spatial interaction and the statistical analysis of lattice systems.
-\newblock {\em Journal of the Royal Statistical Society: Series B
-  (Methodological)}, 36\penalty0 (2):\penalty0 192--225, 1 1974,
-  https://academic.oup.com/jrsssb/article-pdf/36/2/192/49096627/jrsssb\_36\_2\_192.pdf.
-\newblock ISSN 0035-9246.
-\newblock URL \url{https://doi.org/10.1111/j.2517-6161.1974.tb00999.x}.
-
-\bibitem[Besag(1986)]{Besag1986}
-Julian Besag.
-\newblock On the statistical analysis of dirty pictures.
-\newblock {\em Journal of the Royal Statistical Society: Series B
-  (Methodological)}, 48\penalty0 (3):\penalty0 259--279, 07 1986,
-  https://academic.oup.com/jrsssb/article-pdf/48/3/259/49097842/jrsssb\_48\_3\_259.pdf.
-\newblock ISSN 0035-9246.
-\newblock URL \url{https://doi.org/10.1111/j.2517-6161.1986.tb01412.x}.
-
-\bibitem[Kschischang et~al.(2001)Kschischang, Frey, and
-  Loeliger]{Kschischang2001}
-F.R. Kschischang, B.J. Frey, and H.-A. Loeliger.
-\newblock Factor graphs and the sum-product algorithm.
-\newblock {\em IEEE Transactions on Information Theory}, 47\penalty0
-  (2):\penalty0 498--519, 2001.
-
-\bibitem[Jordan et~al.(1999)Jordan, Ghahramani, Jaakkola, and Saul]{Jordan1999}
-Michael Jordan, Zoubin Ghahramani, Tommi Jaakkola, and Lawrence Saul.
-\newblock An introduction to variational methods for graphical models.
-\newblock {\em Machine Learning}, 37:\penalty0 183--233, 01 1999.
-
-\bibitem[Gelfand and and(1990)]{Gelfand01061990}
-Alan~E. Gelfand and Adrian F. M.~Smith and.
-\newblock Sampling-based approaches to calculating marginal densities.
-\newblock {\em Journal of the American Statistical Association}, 85\penalty0
-  (410):\penalty0 398--409, 1990,
-  https://www.tandfonline.com/doi/pdf/10.1080/01621459.1990.10476213.
-\newblock URL
-  \url{https://www.tandfonline.com/doi/abs/10.1080/01621459.1990.10476213}.
-
-\bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
-D.~Koller and N.~Friedman.
-\newblock {\em Probabilistic Graphical Models: Principles and Techniques}.
-\newblock Adaptive computation and machine learning. MIT Press, 2009.
-\newblock ISBN 9780262013192.
-\newblock URL \url{https://books.google.co.in/books?id=7dzpHCHzNQ4C}.
-
-\bibitem[Erdős and László(1974)]{LLL1975}
-Paul Erdős and Lovász László.
-\newblock Problems and results on 3-chromatic hypergraphs and some related
-  questions.
-\newblock {\em Coll Math Soc J Bolyai}, 10, 01 1974.
-
-\bibitem[Shearer(1985)]{LLL1985}
-James~B Shearer.
-\newblock On a problem of spencer.
-\newblock {\em Combinatorica}, 5\penalty0 (3):\penalty0 241–245, July 1985.
-\newblock ISSN 0209-9683.
-\newblock URL \url{https://doi.org/10.1007/BF02579368}.
-
-\bibitem[Spencer(1977)]{SPENCER197769}
-Joel Spencer.
-\newblock Asymptotic lower bounds for ramsey functions.
-\newblock {\em Discrete Mathematics}, 20:\penalty0 69--76, 1977.
-\newblock ISSN 0012-365X.
-\newblock URL
-  \url{https://www.sciencedirect.com/science/article/pii/0012365X77900449}.
 
 \bibitem[Beck(1991)]{https://doi.org/10.1002/rsa.3240020402}
 József Beck.
@@ -1460,66 +1520,6 @@ József Beck.
   https://onlinelibrary.wiley.com/doi/pdf/10.1002/rsa.3240020402.
 \newblock URL
   \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.3240020402}.
-
-\bibitem[Moser and Tardos(2009)]{moser2009constructiveproofgenerallovasz}
-Robin~A. Moser and Gábor Tardos.
-\newblock A constructive proof of the general lovasz local lemma, 2009,
-  0903.0544.
-\newblock URL \url{https://arxiv.org/abs/0903.0544}.
-
-\bibitem[Mak et~al.(2023)Mak, Han, and Yin]{VAE2023}
-Hugo Mak, Runze Han, and Hoover Yin.
-\newblock Application of variational autoencoder (vae) model and image
-  processing approaches in game design, 02 2023.
-
-\bibitem[Spearman(1904)]{Spearman_1904}
-C.~Spearman.
-\newblock General intelligence, objectively determined and measured.
-\newblock {\em The American Journal of Psychology}, 15\penalty0 (2):\penalty0
-  201--292, 1904.
-\newblock ISSN 00029556.
-\newblock URL \url{http://www.jstor.org/stable/1412107}.
-
-\bibitem[Thurstone(1947)]{thurstone1947multiple}
-L.L. Thurstone.
-\newblock {\em Multiple-factor Analysis: A Development and Expansion of The
-  Vectors of the Mind}.
-\newblock University of Chicago Committee on Publications in Biology and
-  Medicine. Publications. University of Chicago Press, 1947.
-\newblock ISBN 9780608111896.
-\newblock URL \url{https://books.google.com/books?id=c0wAAAAAMAAJ}.
-
-\bibitem[Jöreskog(1967)]{Jöreskog_1967}
-K.~G. Jöreskog.
-\newblock Some contributions to maximum likelihood factor analysis.
-\newblock {\em Psychometrika}, 32\penalty0 (4):\penalty0 443–482, 1967.
-
-\bibitem[Jöreskog(1969)]{Jöreskog_1969}
-Karl Jöreskog.
-\newblock A general approach to confirmatory factor analysis.
-\newblock {\em Psychometrika}, 34:\penalty0 183--202, 02 1969.
-
-\bibitem[Doshi-Velez and Kim(2017)]{doshivelez2017}
-Finale Doshi-Velez and Been Kim.
-\newblock Towards a rigorous science of interpretable machine learning, 2017,
-  1702.08608.
-\newblock URL \url{https://arxiv.org/abs/1702.08608}.
-
-\bibitem[Miller(2018)]{miller2018}
-Tim Miller.
-\newblock Explanation in artificial intelligence: Insights from the social
-  sciences, 2018, 1706.07269.
-\newblock URL \url{https://arxiv.org/abs/1706.07269}.
-
-\bibitem[Doersch(2021)]{doersch2021tutorialvariationalautoencoders}
-Carl Doersch.
-\newblock Tutorial on variational autoencoders, 2021, 1606.05908.
-\newblock URL \url{https://arxiv.org/abs/1606.05908}.
-
-\bibitem[Murray and Pickarski(2024)]{murray2024largedatalimitsscaling}
-Ryan Murray and Adam Pickarski.
-\newblock Large data limits and scaling laws for tsne, 2024, 2410.13063.
-\newblock URL \url{https://arxiv.org/abs/2410.13063}.
 
 \bibitem[Linderman and
   Steinerberger(2017)]{linderman2017clusteringtsneprovably}

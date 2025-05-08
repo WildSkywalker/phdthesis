@@ -1,3 +1,158 @@
+\documentclass[10pt]{article}
+
+\usepackage{mathrsfs}
+
+%\usepackage{amssymb,amsthm,amsmath,amssymb,latexsym,amsfonts,txfonts, pxfonts,wasysym,stmaryrd}
+\textheight=230mm \textwidth=140mm
+\topmargin=-1.5cm
+\oddsidemargin=1.2cm
+\evensidemargin=1.2cm
+\setlength\parindent{0pt}
+\parskip=7pt
+%\setcounter{page}{1}
+%\setlength{\baselineskip}{24pt} \baselineskip=24pt
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage[authoryear,square]{natbib}
+%\usepackage{vector}
+
+\definecolor{gblue}{RGB}{66,133,244}
+\definecolor{gred}{RGB}{234, 67, 53}
+\definecolor{ggreen}{RGB}{52, 168, 83}
+\definecolor{gyellow}{RGB}{251, 188, 5}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=gblue,
+    filecolor=gyellow,      
+    urlcolor=gred,
+    citecolor=ggreen,
+    % bookmarks=true,
+}
+
+
+\font\tencmmib=cmmib10 \skewchar\tencmmib '60
+\newfam\cmmibfam
+\textfont\cmmibfam=\tencmmib
+\def\Ph{\mathchar'4010}
+\def\Ps{\mathchar'4011}
+\font\tensmc=cmcsc10
+\def\smc{\tensmc}
+\def\srm{\sevenrm }
+\font\tenmsb=msbm10
+\font\eightmsb=msbm10 scaled 1100
+\def\Bbb#1{\hbox{\tenmsb#1}}
+\def\Bbbb#1{\hbox{\eightmsb#1}}
+\def\bbox{\quad\hbox{\vrule \vbox{\hrule \vskip2pt \hbox{\hskip2pt
+\vbox{\hsize=1pt}\hskip2pt} \vskip2pt\hrule}\vrule}}
+\def\lessim{\ \lower4pt\hbox{$
+\buildrel{\displaystyle <}\over\sim$}\ }
+\def\gessim{\ \lower4pt\hbox{$\buildrel{\displaystyle >}
+\over\sim$}\ }
+\def\n{\noindent}
+\def\P{{\cal P}}
+\def\si{\bar{\sigma}}
+\def\E{{\cal E}}
+\def\LL{{\cal L}}
+\def\FF{{\cal F}}
+\def\SS{{\cal S}}
+\def\C{{\cal C}}
+\def\D{{\cal D}}
+\def\H{{\cal H}}
+\def\X{{\cal X}}
+\def\Y{{\cal Y}}
+\def\A{{\cal A}}
+\def\B{{\cal B}}
+\def\O{{\cal O}}
+\def\M{{\cal M}}
+\def\I{{\cal I}}
+\def\eps{{\varepsilon}}
+\def\ch{{\mbox{\rm ch}\hspace{0.4mm}}}
+\def\sh{{\mbox{sh}}}
+\def\th{{\mbox{th}}}
+\def\Av{{\mbox{\rm{Av}}}}
+\def\n{\noindent}
+\def\bbe{\vskip .15pc\hangindent=.5pc\hangafter=1}
+\def\goin{\to\infty}
+\def\qed{\hfill\break\rightline{$\bbox$}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\newcommand{\e}{\mathbb{E}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\nlra}{\nleftrightarrow}
+\newcommand{\bet}{\begin{theorem}}
+\newcommand{\ent}{\end{theorem}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\g}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\gy}[1]{\textbf{\color{gred}[Yi: #1]}}
+\newcommand{\olsi}[1]{\,\overline{\!{#1}}}
+\newcommand\y{\cellcolor{blue!20}}
+\newcommand\x{\cellcolor{red!20}}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newtheorem{lemma}{\bf Lemma}
+\newtheorem{claim}{\bf Claim}
+\newtheorem{definition}{\bf Definition}
+\newtheorem{theorem}{\bf Theorem}
+\newtheorem*{theorem*}{\bf Theorem}
+\newtheorem*{remark*}{\bf Remark}
+\newtheorem{corollary}{\bf Corollary}
+\newtheorem{remark}{\bf Remark}
+\newtheorem{example}{\bf Example}
+\newtheorem{exercise}{\bf Exercise}
+\newtheorem{proposition}{\bf Proposition}
+\newtheorem{question}{\bf Question}
+\newtheorem{condition}{\bf Condition}
+\newtheorem{acknowledgements}{\bf Acknowledgements}
+
+\newenvironment{Proof of lemma}{\noindent{\bf Proof of Lemma}}{\hfill$\Box$\newline}
+\newenvironment{Proof of claim}{\noindent{\bf Proof of claim}}{\hfill$\Box$\newline}
+\newenvironment{Proof of theorem}{\noindent{\bf Proof of Theorem}}{\hfill\scriptsize{$\Box$}\newline}
+\newenvironment{Proof of theorems}{\noindent{\bf Proof of Theorems}}{\hfill$\Box$\newline}
+\newenvironment{Proof of proposition}{\noindent{\bf Proof of Proposition}}{\hfill$\Box$\newline}
+\newenvironment{Proof of propositions}{\noindent{\bf Proof of Propositions}}{\hfill$\Box$\newline}
+\newenvironment{Proof of exercise}{\noindent{\it Proof of Exercise:}}{\hfill$\Box$}
+\newenvironment{Acknowledgements}{\noindent{\bf Acknowledgements}}
+
+% To print out the paper version, please comment out the next three lines.
+\definecolor{dimmedwhite}{rgb}{0.85,0.85,0.85}
+% \pagecolor{dimmedwhite}
+% \color{dimmedwhite}
+
+
+\numberwithin{equation}{section}
+\author{Yi Gu\footnote{Department of Mathematics, Northwestern University. Yi.Gu@u.northwestern.edu}}
+\newcommand{\ki}{\mathbf{Ker}_{\mathbf{I}}}
+\newcommand{\ko}{\mathbf{Ker}_{\mathbf{O}}}
+
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+
+\title{Equilibrium Distribution for t-Distributed Stochastic Neighbor Embedding with Generalized Kernels}
+\maketitle
+
+\begin{abstract}
+    t-distributed stochastic neighbor embedding (t-SNE) is a well-known algorithm for visualizing high-dimensional data by finding low-dimensional representations (\cite{key}). In this paper, we study the convergence of t-SNE with generalized kernels and extend the results of \cite{auffinger-tsne}. Our work starts by giving a concrete formulation of generalized input and output kernels. Then we prove that under certain conditions, the t-SNE algorithm converges to an equilibrium distribution for a wide range of input and output kernels.
+\end{abstract}
+
 \section{The Concept of Input and Output Kernels} \label{sec_intro}
 t-distributed stochastic neighbor embedding (t-SNE) is a powerful technique for
 visualizing high-dimensional data in a low-dimensional space, developed in 2008
@@ -450,7 +605,7 @@ sample distribution $\mu_X$ are inherited directly from section
 \ref{tsne:sec:existence_uniqueness} to avoid lengthy theorem and lemma
 statements.
 \subsection{Convergence Lemmas for Input Kernels} \label{tsne:sec:input_kernel_convergence}
-The main difficulties of proving the convergence lemmas related to the input kernel is the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$, which we have already established in section \ref{tsne:sec:existence_uniqueness}. The rest of lemmas are similar, if not easier than the corresponding results in \cite{auffinger-tsne}. We will list the important lemmas here without all proofs. The reader can easily adapt the proofs in \cite{auffinger-tsne} to our case.
+The main difficulties of proving the convergence lemmas related to the input kernel is the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$, which we have already established in section \ref{tsne:sec:existence_uniqueness}. The rest of lemmas are similar, if not easier than the corresponding results in \cite{auffinger-tsne}. We will list the important lemmas here without proofs. The reader can easily adapt the proofs in \cite{auffinger-tsne} to our case.
 \begin{lemma} \label{approx_lemma}
     Let $\delta>0$ be constant, $K_n = [\delta,\sqrt{n}]$ and $h: \mathbb{R}^d \times \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}$. Suppose the following hold: \\
     1. $\mu$ is sub-Gaussian; \\
@@ -461,7 +616,7 @@ The main difficulties of proving the convergence lemmas related to the input ker
         \sup_{\sigma^{-1} \in K_n,x} \left|\int h(x,x',\sigma)d\mu_n(x) - \int h(x,x',\sigma)d\mu(x')\right| \leq \epsilon + O\left(\sqrt{\frac{\log n}{n}}\right).
     \end{align}
 \end{lemma}
-The lemma assumes $\mu$ to be sub-Gaussian so it automatically covers the cases where $\mu$ has compact support with $C^0$ density. Using lemma \ref{approx_lemma} can give us the two following important propositions about the uniform convergence of $F_{\mu_n}(x,\sigma)$ and $\sigma_{\mu_n}^*(x)$.
+The lemma assumes $\mu$ to be sub-Gaussian so it automatically covers the cases where $\mu$ has compact support with $C^0$ density. The application of \ref{approx_lemma} can give us the two following important propositions about the uniform convergence of $F_{\mu_n}(x,\sigma)$ and $\sigma_{\mu_n}^*(x)$.
 \begin{proposition} \label{tsne:uniform_convergence_prop}
     Let $\mu_X$ be a probability measure with compact support, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Then there exists a constant $\epsilon>0$, that almost surely in $X_1,\dots,X_n$,
     \begin{align}
@@ -500,6 +655,8 @@ Note that $p_{j|i} = p'_n(X_i,X_j)/n$ and $p_{ij} = p_n(X_i,X_j)/n^2$, and for $
     \int f(x,x')d\mu(x'), \quad \int f_n(x,x')d\mu_n(x') \geq C
 \end{align}
 for some constant $C>0$.
+
+The next four lemmas cover the rest of convergence results for the input kernels, of which the proofs can be easily adapted from \cite{auffinger-tsne}. The proofs are omitted here for brevity.
 \begin{lemma} \label{tsne:f_n_convergence_lemma}
     Assume $\mu_X$ have compact support. As $n \to \infty$,
     \begin{align}
@@ -507,20 +664,6 @@ for some constant $C>0$.
     \end{align}
     for some $\epsilon>0$.
 \end{lemma}
-\begin{proof}
-    By definition and assume $\sigma(x) \geq \sigma_n(x)$ WLOG (or we can always compute the other way around), we have
-    \begin{align} \label{f_convergence:difference}
-        |f_n-f| = & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right|\exp(w(-\sigma(x)\norm{x-x}^{\theta})) \nonumber \\
-        \leq      & \left|\exp(w(\sigma(x)\norm{x-x}^{\theta})-w(\sigma_n(x)\norm{x-x}^{\theta}))-1\right| \nonumber                                       \\
-        =         & \left|\exp(w'(\tilde{\sigma}(x)\norm{x-x}^{\theta})(\sigma(x)-\sigma_n(x)\norm{x-x}^{\theta}))-1\right|.
-    \end{align}
-    By condition \ref{input_kernel_conditions}, $w$ is twice differentiable. Since $\mu_X$ has compact support, $\norm{x-x'}$ is bounded, so is
-    $\exp(w'(\tilde{\sigma}(x)\norm{x-x'}^{\theta}))\norm{x-x'}^{\theta}$. By the simple limit $\lim_{x \to 0}(e^x-1)/x = 1$, the difference \eqref{f_convergence:difference} can be bounded as
-    \begin{align} \label{tsne:kw_bounds_1}
-        |f_n-f| = O(n^{-1/2} (\log n)^{\theta}).
-    \end{align}
-    The proof is thus finished.
-\end{proof}
 \begin{lemma} \label{tsne:integrand_lemma_2}
     Let $\mu_X$ have compact support. There exists $\epsilon>0$ such that as $n \to \infty$,
     \begin{align}
@@ -528,76 +671,18 @@ for some constant $C>0$.
         \sup_{i,j} \left|p_n(X_i,X_j) - p(X_i,X_j)\right| =   & O(n^{-\epsilon}) \nonumber.
     \end{align}
 \end{lemma}
-\begin{proof}
-
-    Once again, we omit $X_i$ and $X_j$ for lighter notations. Using the triangular
-    inequality, we have
-    \begin{align} \label{p_convergence:triangle_inequality}
-             & |p'_n - p'| = \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f}{\int f d \mu}\right| \nonumber                                                                                       \\
-        \leq & \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| + \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \nonumber                       \\
-             & \qquad \qquad \qquad \qquad \qquad \qquad \qquad + \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| + \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right|.
-    \end{align}
-    In order to get the convergence, we need to check the convergence of each term. Note that $f,f_n \leq 1$. Denote
-    The first can be bounded using \eqref{tsne:important_bounds}:
-    \begin{align} \label{p_convergence:first_term}
-        \left|\frac{f_n}{\int f_n d\mu_n - 1/n} - \frac{f_n}{\int f_n d \mu_n}\right| \leq \frac{1}{n} \left|\frac{1}{\int f_n d\mu_n - 1/n} \cdot \frac{1}{\int f_n d\mu_n}\right|= O(n^{-1}).
-    \end{align}
-    Continue to the second term, we compute
-    \begin{align} \label{p_convergence:second_term}
-        \left|\frac{f_n}{\int f_n d\mu_n} - \frac{f_n}{\int f d \mu_n}\right| \leq \frac{|f_n-f|}{|\int f_n d\mu_n||\int f d\mu_n|} = O(|f_n-f|) = O(n^{-1/2} (\log n)^{\theta})
-    \end{align}
-    by lemma \ref{tsne:f_n_convergence_lemma} and \eqref{tsne:important_bounds}.
-
-    For the third term we can apply lemma \ref{approx_lemma}, which gives us
-    \begin{align} \label{p_convergence:third_term}
-        \left|\frac{f_n}{\int f d\mu_n} - \frac{f_n}{\int f d \mu}\right| \leq \frac{|\int f d \mu_n - \int f d \mu|}{|\int f d \mu||\int f d \mu_n|} = O(n^{-1/2} (\log n)^{\theta}),
-    \end{align}
-    which is also $O(n^{-\epsilon})$ based on the hypothesis of the lemma.
-
-    Finally, we have a similar inequality as the second term for the fourth term:
-    \begin{align} \label{p_convergence:fourth_term}
-        \left|\frac{f_n}{\int f d\mu} - \frac{f}{\int f d \mu}\right| = O(|f_n-f|) = O(n^{-1/2} (\log n)^{\theta}).
-    \end{align}
-    The proof is finished by putting \eqref{p_convergence:triangle_inequality}, \eqref{p_convergence:first_term}, \eqref{p_convergence:second_term}, \eqref{p_convergence:third_term}, and \eqref{p_convergence:fourth_term} together.
-\end{proof}
 \begin{lemma} \label{tsne:plogp_convergence_lemma}
     Assuming $\mu_X$ has compact support, then there exists $\epsilon>0$ such that as $n \to \infty$,
     \begin{align}
         \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)| = & O(n^{-\epsilon}). \nonumber
     \end{align}
 \end{lemma}
-\begin{proof}
-    Let $\epsilon_n = n^{-1/2} (\log n)^{\theta}$, where we inherit from \eqref{p_convergence:second_term}. We compute
-    \begin{align}
-        p_n \log p_n = & p \log p + p \log \left(\frac{p_n}{p}\right) + (p_n-p)\log p_n \nonumber           \\
-        =              & p \log p + p \log \left(\frac{p+ O(\epsilon_n)}{p}\right) + O(\epsilon_n)\log p_n.
-    \end{align}
-    The third term will apparently vanish. For the second term, recall that $p$ is bounded below because $\mu_X$ is compactly supported (which is essentially \eqref{tsne:important_bounds}). This means
-    \begin{align} \label{p_convergence:entropy_bound}
-        O(\epsilon_n)/p = O(\epsilon_n) = O(n^{-1/2} (\log n)^{\theta}) = O(n^{-\epsilon}),
-    \end{align}
-    as desired.
-\end{proof}
 \begin{lemma}
     Assuming $\mu_X$ has compact support, then as $n \to \infty$,
     \begin{align}
         \sum_j p_{j|i} \log p_{j|i} + \log(\rho n) = o(1).
     \end{align}
 \end{lemma}
-\begin{proof}
-    Recall that $p_{j|i} = \frac{1}{n}p'_n(X_i,X_j)$. Therefore
-    \begin{align}
-        \sum_j p_{j|i} \log p_{j|i} = & \sum_{j \neq i} \frac{1}{n}p'_n(X_i,X_j) \log \left(\frac{1}{n}p'_n(X_i,X_j) \right ) + \log n + \log \rho \nonumber                                  \\
-        =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho + \log n \left(1 - \frac{1}{n}\sum_{j \neq i} p'_n(X_i,X_j)\right) \nonumber \\
-        =                             & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) + \log \rho
-    \end{align}
-    because by definition $n - \sum_{j \neq i} p'_n(X_i,X_j) = 0$. We proceed to write the first summation as an integral over the measure $\mu_n$, with the difference being the diagonal terms.
-    \begin{align} \label{p_convergence:diagonal_term}
-          & \frac{1}{n} \sum_{j \neq i} p'_n(X_i,X_j) \log p'_n(X_i,X_j) - \int p'_n(X_i,x') \log p'_n(X_i,x') d\mu_n(x') \nonumber     \\
-        = & -\frac{1}{n}\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\log \left(\frac{1}{\int f(X_i,x')d\mu_n(x')-\frac{1}{n}}\right).
-    \end{align}
-    Since $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. This finishes the proof.
-\end{proof}
 \subsection{Lower Bound for \texorpdfstring{$\inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y)$}{L(X,Y)}} \label{tsne:sec:lower_bound}
 We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
 \begin{lemma} \label{lower_bound_lemma_1}
@@ -1020,3 +1105,9 @@ We need another lemma before proving this theorem.
     \end{align}
     This contradicts with the boundedness. We must have that $\mu^*(D_n)=0$ for $n$ sufficiently large. That is, $\mu^*(\norm{Y} \geq n)=0$, so $\mu^*$ has compact support in $Y$.
 \end{proof}
+\bibliographystyle{hunsrtnat}
+\setcitestyle{numbers}
+\nocite{*}
+\bibliography{citation}
+
+\end{document}

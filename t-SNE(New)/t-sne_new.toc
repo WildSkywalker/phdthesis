@@ -6,11 +6,9 @@
 \contentsline {section}{\numberline {5}Summary and Structure of Proofs}{6}{section.5}%
 \contentsline {section}{\numberline {6}Existence and Uniqueness of $\sigma ^*$}{7}{section.6}%
 \contentsline {section}{\numberline {7}Proofs of the Main Theorems}{11}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Uniform Convergence of $F_{\rho , \mu _n}(x,\sigma )$}{11}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Existence of $\mu ^*$}{12}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Convergence Lemmas for $p_{ij}$}{13}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Lower Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{15}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Upper Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{19}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Auxiliary lemmas}{22}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Proof of theorem \ref {tsne:main_theorem_1}}{23}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Proof of theorem \ref {tsne:main_theorem_2}}{24}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.1}Convergence Lemmas for Input Kernels}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Lower Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{14}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Upper Bound for $\inf _{Y \in (\mathbb {R}^s)^n}L_{n,\rho }(X,Y)$}{18}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Auxiliary Lemmas}{20}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Proof of Theorem \ref {tsne:main_theorem_1}}{22}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Proof of Theorem \ref {tsne:main_theorem_2}}{22}{subsection.7.6}%

@@ -1,31 +1,228 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{15}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{20}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\tocsection {}{1.1}{Overview}}{20}{section.1.1}\protected@file@percent }
+\newlabel{intro_chap:sec:layout}{{1.1}{20}{Overview}{section.1.1}{}}
+\citation{hey2009the}
+\citation{NIPS2012_c399862d}
+\citation{NIPS2012_c399862d}
+\citation{NIPS2017_3f5ee243}
+\citation{Donoho_Dimensions}
+\@writefile{toc}{\contentsline {section}{\tocsection {}{1.2}{t-SNE and Dimension Reduction}}{22}{section.1.2}\protected@file@percent }
+\newlabel{intro_chap:sec:tsne}{{1.2}{22}{t-SNE and Dimension Reduction}{section.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.2.1}{The Ubiquity and Challenge of High-Dimensional Data}}{22}{subsection.1.2.1}\protected@file@percent }
+\newlabel{intro_chap:sec:tsne:ubiquity}{{1.2.1}{22}{The Ubiquity and Challenge of High-Dimensional Data}{subsection.1.2.1}{}}
+\citation{lasso1996}
+\citation{BPDN}
+\citation{variableselection2010}
+\citation{kingma2013auto}
+\citation{Bellman1961adaptive}
+\citation{hughes1968}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces The distribution of distance from points uniformly sampled in unit cubes of different dimensions. The vertical red lines indicate the average distance between points. It is clear that as the dimensionality grows, the distribution of distance becomes more concentrated.}}{27}{figure.caption.9}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:concentration_distance_hypercube}{{1.1}{27}{The distribution of distance from points uniformly sampled in unit cubes of different dimensions. The vertical red lines indicate the average distance between points. It is clear that as the dimensionality grows, the distribution of distance becomes more concentrated}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces The distribution of distance from points uniformly sampled in unit spheres of different dimensions. The vertical red lines indicate the average distance between points. It is clear that as the dimensionality grows, the distribution of distance concentrates towards the length of radius.}}{28}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:concentration_distance_hypersphere}{{1.2}{28}{The distribution of distance from points uniformly sampled in unit spheres of different dimensions. The vertical red lines indicate the average distance between points. It is clear that as the dimensionality grows, the distribution of distance concentrates towards the length of radius}{figure.caption.10}{}}
+\citation{StegleRNA2015}
+\citation{StegleRNA2015}
+\citation{StegleRNA2015}
+\citation{KiselevRNA2019}
+\citation{Visscher2017}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Part of data processing pipelines introduced in \cite  {StegleRNA2015}, with dimension reduction (PCA) being one of the key steps (covariance matrix and visualization).}}{30}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:RNA2015DRplot}{{1.3}{30}{Part of data processing pipelines introduced in \cite {StegleRNA2015}, with dimension reduction (PCA) being one of the key steps (covariance matrix and visualization)}{figure.caption.11}{}}
+\citation{Pearson1901PCA}
+\citation{Hotelling1933}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.2.2}{A Brief History of Dimensionality Reduction}}{31}{subsection.1.2.2}\protected@file@percent }
+\newlabel{intro_chap:sec:tsne:DR}{{1.2.2}{31}{A Brief History of Dimensionality Reduction}{subsection.1.2.2}{}}
+\citation{Torgerson1952}
+\citation{torgerson1958theory}
+\citation{Shepard_1962}
+\citation{Kruskal_1964}
+\newlabel{strain_def}{{1.4}{33}{A Brief History of Dimensionality Reduction}{equation.1.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces The famous 2-dimensional color wheel, created by MDS. It effectively and intuitively captured the similarity and discrepancies between different colors on the spectrum of visible light.}}{33}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:color_wheel}{{1.4}{33}{The famous 2-dimensional color wheel, created by MDS. It effectively and intuitively captured the similarity and discrepancies between different colors on the spectrum of visible light}{figure.caption.12}{}}
+\citation{Roweis2000}
+\citation{Roweis2000}
+\citation{tenenbaum_global_2000}
+\citation{Fredman1984fibonacci}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces The input Swiss roll (left) and the output of Isomap (right). The Isomap successfully captures the nature of the manifold and ``unrolls" the Swiss roll.}}{37}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:isomap_swissroll}{{1.5}{37}{The input Swiss roll (left) and the output of Isomap (right). The Isomap successfully captures the nature of the manifold and ``unrolls" the Swiss roll}{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces A failed LLE output based on the same Swiss roll input in figure \ref {fig:isomap_swissroll}. The algorithm tries to search for neighbors in a overly broad area, causing the result to be distorted.}}{38}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:lle_swissroll_failed}{{1.6}{38}{A failed LLE output based on the same Swiss roll input in figure \ref {fig:isomap_swissroll}. The algorithm tries to search for neighbors in a overly broad area, causing the result to be distorted}{figure.caption.14}{}}
+\citation{NIPS2002_6150ccc6}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.2.3}{The Road to t-SNE}}{40}{subsection.1.2.3}\protected@file@percent }
+\newlabel{intro_chap:sec:tsne:preintro}{{1.2.3}{40}{The Road to t-SNE}{subsection.1.2.3}{}}
+\newlabel{def:KL_divergence}{{1}{40}{}{definition.1}{}}
+\citation{auffinger-tsne}
+\newlabel{SNE_input_kernel}{{1.11}{41}{The Road to t-SNE}{equation.1.11}{}}
+\newlabel{SNE_input_entropy}{{1.12}{41}{The Road to t-SNE}{equation.1.12}{}}
+\citation{key}
+\newlabel{SNE_output_kernel}{{1.13}{42}{The Road to t-SNE}{equation.1.13}{}}
+\newlabel{SNE_loss_function}{{1.14}{42}{The Road to t-SNE}{equation.1.14}{}}
+\newlabel{tSNE_output_kernel}{{1.15}{43}{The Road to t-SNE}{equation.1.15}{}}
+\citation{auffinger-tsne}
+\citation{auffinger-tsne}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces A sample of the MNIST dataset (left) and the output of t-SNE (right). t-SNE successfully grouped the handwriting with different digits together, with some minor imperfections (there are two clusters for the digit 0).}}{44}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:mnist_tsne}{{1.7}{44}{A sample of the MNIST dataset (left) and the output of t-SNE (right). t-SNE successfully grouped the handwriting with different digits together, with some minor imperfections (there are two clusters for the digit 0)}{figure.caption.15}{}}
+\newlabel{thm:auffinger-tsne_1.1}{{1}{44}{Theorem 1.1, \cite {auffinger-tsne}}{theorem.1}{}}
+\citation{auffinger-tsne}
+\newlabel{thm:auffinger-tsne_1.2}{{2}{45}{Theorem 1.2, \cite {auffinger-tsne}}{theorem.2}{}}
+\citation{auffinger-tsne}
+\citation{Kobak_2020}
+\citation{Kobak_2020}
+\citation{Kobak_2020}
+\citation{weinkove2024flow}
+\newlabel{t_dist_density}{{1.19}{47}{The Road to t-SNE}{equation.1.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces The running result of different SNE algorithms in \cite  {Kobak_2020}, with (A) being the light-tail t-SNE, (B) the normal t-SNE and (C) the heavy-tailed t-SNE. Heavy tailed variants are producing tighter and finer clusters, while the light-tail version produces results similar to the original SNE. ($t$-distribution will converge to Gaussian if $\alpha  \to \infty $.)}}{47}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:heavytail_tsne}{{1.8}{47}{The running result of different SNE algorithms in \cite {Kobak_2020}, with (A) being the light-tail t-SNE, (B) the normal t-SNE and (C) the heavy-tailed t-SNE. Heavy tailed variants are producing tighter and finer clusters, while the light-tail version produces results similar to the original SNE. ($t$-distribution will converge to Gaussian if $\alpha \to \infty $.)}{figure.caption.16}{}}
+\citation{Geman1984}
+\@writefile{toc}{\contentsline {section}{\tocsection {}{1.3}{Markov Random Field and Probabilistic Graphical Models (PGM)}}{48}{section.1.3}\protected@file@percent }
+\newlabel{intro_chap:sec:MRF}{{1.3}{48}{Markov Random Field and Probabilistic Graphical Models (PGM)}{section.1.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.3.1}{Dependency: An Unavoidable Problem}}{48}{subsection.1.3.1}\protected@file@percent }
+\newlabel{intro_chap:sec:MRF:intro}{{1.3.1}{48}{Dependency: An Unavoidable Problem}{subsection.1.3.1}{}}
+\citation{zhu2023superpixeltransformersefficientsemantic}
+\citation{Boykov2001}
+\citation{Kolmogorov2004}
+\citation{Boykov2004}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces A simple example of image segmentation, by B Palac, from Wikimedia Commons. Different objects like the bus, the road and the buildings in the background can be detected and identified by algorithms. This technology is widely used in critical fields like self-driving cars.}}{50}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:image_segmentation}{{1.9}{50}{A simple example of image segmentation, by B Palac, from Wikimedia Commons. Different objects like the bus, the road and the buildings in the background can be detected and identified by algorithms. This technology is widely used in critical fields like self-driving cars}{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces A Waymo self-driving taxi, operating in downtown San Francisco, by Dllu, from Wikimedia Commons. One can easily spot the giant central hub for sensors on the top of the car, as well as many other additional cameras and radars the taxi relies on to deliver a smooth transportation experience. Waymo uses a mixture of technologies, with computer vision and image segmentation being one of the key component of its smooth operation.}}{51}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:waymo}{{1.10}{51}{A Waymo self-driving taxi, operating in downtown San Francisco, by Dllu, from Wikimedia Commons. One can easily spot the giant central hub for sensors on the top of the car, as well as many other additional cameras and radars the taxi relies on to deliver a smooth transportation experience. Waymo uses a mixture of technologies, with computer vision and image segmentation being one of the key component of its smooth operation}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces A medical image segmentation that identifies the tumor, by EmmaWiki2020 from Wikimedia Commons, and a 3D image(s) of Heritage Tabo Gompa by Nevil Zaveri from Flickr. To see the 3D image on the right, focus on the center line of the image pair. A third image will appear, the stereo one.}}{51}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:more_image_segmentation}{{1.11}{51}{A medical image segmentation that identifies the tumor, by EmmaWiki2020 from Wikimedia Commons, and a 3D image(s) of Heritage Tabo Gompa by Nevil Zaveri from Flickr. To see the 3D image on the right, focus on the center line of the image pair. A third image will appear, the stereo one}{figure.caption.19}{}}
+\citation{Naville2010}
+\citation{JACOB1961318}
+\citation{10.1158/0008-5472.CAN-03-3326}
+\citation{doi:10.1152/physrev.00026.2006}
+\citation{doi:10.1089/106652700750050961}
+\citation{Sachs2005}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces An example of GRN, by Min Oh, Jaegyoon Ahn, and Youngmi Yoon, from Wikimedia Commons. Graph structure is crucial in visualizing complex relationships between genes and different types of cancers.}}{53}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:gene_regulatory_networks}{{1.12}{53}{An example of GRN, by Min Oh, Jaegyoon Ahn, and Youngmi Yoon, from Wikimedia Commons. Graph structure is crucial in visualizing complex relationships between genes and different types of cancers}{figure.caption.20}{}}
+\citation{Krogh1994HMM}
+\citation{Durbin_Eddy_Krogh_Mitchison_1998}
+\citation{Schrijver2003}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces A illustration about HMM modeling multiple sequence alignment, by EMBL-EBI Train Online, from Wikimedia Commons.}}{55}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:HMM_modeling}{{1.13}{55}{A illustration about HMM modeling multiple sequence alignment, by EMBL-EBI Train Online, from Wikimedia Commons}{figure.caption.21}{}}
+\citation{lightner1991brief}
+\citation{Euler1736}
+\citation{Ising1925BeitragZT}
+\citation{PhysRev.65.117}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.3.2}{PGM, a Short History}}{56}{subsection.1.3.2}\protected@file@percent }
+\newlabel{intro_chap:sec:MRF:sec:PGM_history}{{1.3.2}{56}{PGM, a Short History}{subsection.1.3.2}{}}
+\citation{Wright1921CorrelationAndCausation}
+\citation{Wright1934}
+\citation{10.1093/genetics/6.2.111}
+\citation{10.1093/genetics/6.2.111}
+\citation{Wright1920TheRI}
+\citation{10.1093/genetics/6.2.111}
+\citation{10.1093/genetics/3.4.367}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces An intuitive example of path diagrams with edge weights (contributing factors). The daily activities of a person depend on the transportation and food choices, which further depend on the weather, mood and how hungry the person is. Using the diagram, we can conduct analysis such as estimating the impact of weather on the person's daily activities.}}{58}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:casualmap}{{1.14}{58}{An intuitive example of path diagrams with edge weights (contributing factors). The daily activities of a person depend on the transportation and food choices, which further depend on the weather, mood and how hungry the person is. Using the diagram, we can conduct analysis such as estimating the impact of weather on the person's daily activities}{figure.caption.22}{}}
+\citation{Duncan1975}
+\citation{Bollen89}
+\citation{10.5555/534975}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.15}{\ignorespaces A path analysis diagram from \cite  {10.1093/genetics/6.2.111}. Wright used this diagram to visualize and analyze the relations between two mated individuals and their progeny.}}{59}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:wrightpathanalysis}{{1.15}{59}{A path analysis diagram from \cite {10.1093/genetics/6.2.111}. Wright used this diagram to visualize and analyze the relations between two mated individuals and their progeny}{figure.caption.23}{}}
+\citation{Sahami1998}
+\citation{BNRisk2003}
+\citation{Gemela2001}
+\citation{Besag1974}
+\newlabel{def:MRF}{{2}{62}{}{definition.2}{}}
+\citation{Geman1984}
+\citation{Besag1986}
+\citation{Besag1986}
+\citation{Kschischang2001}
+\citation{Kschischang2001}
+\citation{Kschischang2001}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Besag used MRF to develop the Iterated Condition Modes (ICM) algorithm that is able to restore dirty images. The figure is from his work in 1986 \cite  {Besag1986}. As we can see, ICM performs much better than the old maximum-likelihood classifier.}}{64}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:ICMBesag}{{1.16}{64}{Besag used MRF to develop the Iterated Condition Modes (ICM) algorithm that is able to restore dirty images. The figure is from his work in 1986 \cite {Besag1986}. As we can see, ICM performs much better than the old maximum-likelihood classifier}{figure.caption.24}{}}
+\citation{Jordan1999}
+\citation{Gelfand01061990}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces The diagram illustrating belief propagation in \cite  {Kschischang2001}. Belief propagation is a powerful model built upon BN and MRF that are broadly used in information theory and other related fields.}}{65}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:beliefprop}{{1.17}{65}{The diagram illustrating belief propagation in \cite {Kschischang2001}. Belief propagation is a powerful model built upon BN and MRF that are broadly used in information theory and other related fields}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.3.3}{Bayesian Networks and Markov Random Fields}}{66}{subsection.1.3.3}\protected@file@percent }
+\newlabel{intro_chap:sec:MRF:sec:BN_MRF}{{1.3.3}{66}{Bayesian Networks and Markov Random Fields}{subsection.1.3.3}{}}
+\citation{koller2009probabilistic}
+\citation{koller2009probabilistic}
+\citation{koller2009probabilistic}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.18}{\ignorespaces Figure 3.3 from \cite  {koller2009probabilistic}, a simple BN that models the letter graph and SAT scores of students.}}{67}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:BNstudent}{{1.18}{67}{Figure 3.3 from \cite {koller2009probabilistic}, a simple BN that models the letter graph and SAT scores of students}{figure.caption.26}{}}
+\citation{koller2009probabilistic}
+\citation{koller2009probabilistic}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.19}{\ignorespaces Figure 3.5 from \cite  {koller2009probabilistic} that shows common connecting patterns in BN.}}{68}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:BNpatterns}{{1.19}{68}{Figure 3.5 from \cite {koller2009probabilistic} that shows common connecting patterns in BN}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.20}{\ignorespaces A pair BNs illustrating the concept of d-separation.}}{70}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:dsep}{{1.20}{70}{A pair BNs illustrating the concept of d-separation}{figure.caption.28}{}}
+\citation{koller2009probabilistic}
+\citation{koller2009probabilistic}
+\citation{koller2009probabilistic}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.21}{\ignorespaces Two MRFs with different edges (and thus cliques) from figure 4.4, \cite  {koller2009probabilistic}.}}{72}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:MRFexample}{{1.21}{72}{Two MRFs with different edges (and thus cliques) from figure 4.4, \cite {koller2009probabilistic}}{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.22}{\ignorespaces An MRF with two indicated independent clusters. The nodes with darker grey in the middle are observed, causing the clusters on the left and right to be independent.}}{74}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:MRFindep}{{1.22}{74}{An MRF with two indicated independent clusters. The nodes with darker grey in the middle are observed, causing the clusters on the left and right to be independent}{figure.caption.30}{}}
+\citation{koller2009probabilistic}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.3.4}{The Necessity of Sampling and {Lov\'asz}\xspace  Local Lemma}}{75}{subsection.1.3.4}\protected@file@percent }
+\newlabel{intro_chap:sec:MRF:sec:sampling}{{1.3.4}{75}{The Necessity of Sampling and \lovasz Local Lemma}{subsection.1.3.4}{}}
+\citation{LLL1975}
+\citation{LLL1985}
+\newlabel{lem:LLL1975}{{1}{76}{\cite {LLL1975}}{lemma.1}{}}
+\newlabel{lem:LLL1985}{{2}{76}{\cite {LLL1985}}{lemma.2}{}}
+\citation{SPENCER197769}
+\citation{moser2009constructiveproofgenerallovasz}
+\@writefile{toc}{\contentsline {section}{\tocsection {}{1.4}{Factor Analysis and Variational Inference}}{78}{section.1.4}\protected@file@percent }
+\newlabel{intro_chap:sec:FA_VI}{{1.4}{78}{Factor Analysis and Variational Inference}{section.1.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.4.1}{Combining DR and PGM}}{78}{subsection.1.4.1}\protected@file@percent }
+\citation{VAE2023}
+\citation{VAE2023}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.23}{\ignorespaces The original handwritten digits from MNIST (top row) and VAE-generated digits (bottom row), from \cite  {VAE2023}. Though some outputs are not entirely natural, all are recognizable and there is no mixing of two different digits.}}{79}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:VAEMNIST}{{1.23}{79}{The original handwritten digits from MNIST (top row) and VAE-generated digits (bottom row), from \cite {VAE2023}. Though some outputs are not entirely natural, all are recognizable and there is no mixing of two different digits}{figure.caption.31}{}}
+\citation{Spearman_1904}
+\citation{thurstone1947multiple}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.4.2}{Lineage of Factor Analysis}}{81}{subsection.1.4.2}\protected@file@percent }
+\citation{thurstone1947multiple}
+\newlabel{eq:FA}{{1.41}{82}{Lineage of Factor Analysis}{equation.1.41}{}}
+\citation{Jöreskog_1967}
+\citation{Jöreskog_1969}
+\citation{doshivelez2017}
+\citation{miller2018}
+\citation{kingma2013auto}
+\citation{doersch2021tutorialvariationalautoencoders}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.4.3}{The Modern Toolkit: Variational Autoencoders}}{84}{subsection.1.4.3}\protected@file@percent }
+\newlabel{intro_chap:sec:VarFA:sec:VAE}{{1.4.3}{84}{The Modern Toolkit: Variational Autoencoders}{subsection.1.4.3}{}}
+\newlabel{eq:elbointro}{{1.55}{88}{The Modern Toolkit: Variational Autoencoders}{equation.1.55}{}}
+\newlabel{eq:kl_gaussian}{{1.57}{89}{The Modern Toolkit: Variational Autoencoders}{equation.1.57}{}}
+\newlabel{eq:pzbernoulli}{{1.59}{89}{The Modern Toolkit: Variational Autoencoders}{equation.1.59}{}}
+\newlabel{eq:pzcontinuous}{{1.63}{90}{The Modern Toolkit: Variational Autoencoders}{equation.1.63}{}}
+\citation{kingma2013auto}
+\newlabel{eq:reparam}{{1.67}{91}{The Modern Toolkit: Variational Autoencoders}{equation.1.67}{}}
+\newlabel{eq:final_elbo_approx}{{1.70}{92}{The Modern Toolkit: Variational Autoencoders}{equation.1.70}{}}
+\newlabel{eq:final_loss}{{1.72}{92}{The Modern Toolkit: Variational Autoencoders}{equation.1.72}{}}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.4.4}{The High-Level View of VarFA based on VAE}}{94}{subsection.1.4.4}\protected@file@percent }
 \@setckpt{introchap}{
-\setcounter{page}{16}
-\setcounter{equation}{0}
-\setcounter{enumi}{0}
-\setcounter{enumii}{0}
-\setcounter{enumiii}{0}
+\setcounter{page}{97}
+\setcounter{equation}{72}
+\setcounter{enumi}{3}
+\setcounter{enumii}{5}
+\setcounter{enumiii}{7}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{0}
+\setcounter{footnote}{1}
 \setcounter{mpfootnote}{0}
 \setcounter{parentequation}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{1}
-\setcounter{section}{0}
-\setcounter{subsection}{0}
+\setcounter{section}{4}
+\setcounter{subsection}{4}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{23}
 \setcounter{table}{0}
-\setcounter{section@level}{0}
-\setcounter{Item}{0}
-\setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{8}
+\setcounter{section@level}{2}
+\setcounter{Item}{17}
+\setcounter{Hfootnote}{1}
+\setcounter{bookmark@seq@number}{11}
 \setcounter{scheme}{0}
 \setcounter{float@type}{8}
 \setcounter{algorithm}{0}
@@ -36,7 +233,7 @@
 \setcounter{ALG@blocknr}{10}
 \setcounter{ALG@storecount}{0}
 \setcounter{ALG@tmpcounter}{0}
-\setcounter{caption@flags}{0}
+\setcounter{caption@flags}{2}
 \setcounter{continuedfloat}{0}
 \setcounter{NAT@ctr}{0}
 \setcounter{tabularnote}{0}
@@ -44,12 +241,12 @@
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
 \setcounter{condition}{0}
-\setcounter{lemma}{0}
+\setcounter{lemma}{3}
 \setcounter{claim}{0}
-\setcounter{definition}{0}
-\setcounter{theorem}{0}
+\setcounter{definition}{6}
+\setcounter{theorem}{4}
 \setcounter{corollary}{0}
-\setcounter{remark}{0}
+\setcounter{remark}{1}
 \setcounter{example}{0}
 \setcounter{exercise}{0}
 \setcounter{proposition}{0}
