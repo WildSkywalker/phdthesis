@@ -137,7 +137,7 @@
 
 
 \numberwithin{equation}{section}
-\author{Yi Gu\footnote{Department of Mathematics, Northwestern University. Yi.Gu@u.northwestern.edu}}
+\author{Yi Gu}
 \newcommand{\ki}{\mathbf{Ker}_{\mathbf{I}}}
 \newcommand{\ko}{\mathbf{Ker}_{\mathbf{O}}}
 
@@ -643,9 +643,9 @@ To further simplify up the notations, define
 \end{align}
 Note that $p_{j|i} = p'_n(X_i,X_j)/n$ and $p_{ij} = p_n(X_i,X_j)/n^2$, and for $\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]$ we have
 \begin{align} \label{tsne:important_bounds}
-    \int f(x,x')d\mu(x'), \quad \int f_n(x,x')d\mu_n(x') \geq C
+    \int f(x,x')d\mu(x'), \quad \int f_n(x,x')d\mu_n(x') \geq M
 \end{align}
-for some constant $C>0$.
+for some constant $M>0$.
 
 The next five lemmas cover the rest of convergence results for the input kernels. The reader can notice that the lemmas below are natural computations starting from the basic building blocks ($f_n$ and $f$) towards the entropy of $p_{ij}$ in the loss function $L_{n,\rho}(X,Y)$. Because of this, the proofs can be easily adapted from \cite{auffinger-tsne}. We omit them here for brevity.
 \begin{lemma} \label{tsne:f_n_convergence_lemma}
@@ -975,14 +975,13 @@ be a minimizer of $L$. Recall from (\ref{L_derivative}) that
         \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
     \end{align}
 \end{lemma}
-This lemma can be proved by mimicking lemma \ref{entropy_lemma_1}
 \begin{lemma} \label{appendix_lemma_2}
     The following holds as $n \to \infty$:
     \begin{align}
         \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu_n d\mu_n = \iint \alpha(x,y)q(y,y') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu d\mu + o(1)
     \end{align}
 \end{lemma}
-This lemma can be proved by mimicking lemma \ref{int_approx_lemma_2}.
+Both lemmas above can be proved via a similar strategy in the proof of lemma \ref{int_approx_lemma_2} by analyzing the diagonal terms.
 \subsection{Proof of Theorem \ref{tsne:main_theorem_1}} \label{tsne:sec:main_theorem_1}
 Write
 \begin{align}
@@ -1007,10 +1006,9 @@ We need another lemma before proving this theorem.
     Moreover, if $\mu_X$ has compact support, then $h_{\mu}$ is continuous on the support of $\mu_X$.
 \end{lemma}
 \begin{proof}
-    Recall from (\ref{derivative_lemma}), we have
+    Recall from lemma \ref{derivative_lemma} and lemma \ref{appendix_lemma}, we have
     \begin{align}
-        0 = & \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') \nonumber                                                               \\
-        =   & \int p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d \mu -  \frac{\int \frac{\partial}{\partial y}g(y,y')d\mu}{\iint g(y,y')d\mu d\mu} \nonumber \\
+        0 = & \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') = \int p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d \mu -  \frac{\int \frac{\partial}{\partial y}g(y,y')d\mu}{\iint g(y,y')d\mu d\mu} \nonumber \\
         =   & \nabla_y \left(\int p(x,x') \log (g(y,y')^{-1}) d \mu -  \frac{\int g(y,y')d\mu}{\iint g(y,y')d\mu d\mu}\right).
     \end{align}
     This means that there exists $h_{\mu}: \mathbb{R}^d \to \mathbb{R}$ such that

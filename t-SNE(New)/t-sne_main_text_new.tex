@@ -497,9 +497,9 @@ To further simplify up the notations, define
 \end{align}
 Note that $p_{j|i} = p'_n(X_i,X_j)/n$ and $p_{ij} = p_n(X_i,X_j)/n^2$, and for $\sigma^{-1} \in [\delta^{\theta},n^{\theta/2}]$ we have
 \begin{align} \label{tsne:important_bounds}
-    \int f(x,x')d\mu(x'), \quad \int f_n(x,x')d\mu_n(x') \geq C
+    \int f(x,x')d\mu(x'), \quad \int f_n(x,x')d\mu_n(x') \geq M
 \end{align}
-for some constant $C>0$.
+for some constant $M>0$.
 \begin{lemma} \label{tsne:f_n_convergence_lemma}
     Assume $\mu_X$ have compact support. As $n \to \infty$,
     \begin{align}
@@ -599,7 +599,7 @@ for some constant $C>0$.
     Since $\mu_X$ has compact support, then the above diagonal term is $O(n^{-1})$. This finishes the proof.
 \end{proof}
 \subsection{Lower Bound for \texorpdfstring{$\inf_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y)$}{L(X,Y)}} \label{tsne:sec:lower_bound}
-We write $g(y,y') = \ko(y,y')$ from now on for simpler notations.
+We write $\ko(y,y') = g(y,y') = k(\norm{y-y'})$ from now on for simpler notations.
 \begin{lemma} \label{lower_bound_lemma_1}
     There exists a set of points $y^*(X)$ such that
     \begin{align}
@@ -968,7 +968,7 @@ We need another lemma before proving this theorem.
     Moreover, if $\mu_X$ has compact support, then $h_{\mu}$ is continuous on the support of $\mu_X$.
 \end{lemma}
 \begin{proof}
-    Recall from (\ref{derivative_lemma}), we have
+    Recall from lemma \ref{derivative_lemma} and lemma \ref{appendix_lemma}, we have
     \begin{align}
         0 = & \int (p(x,x')-q(y,y')) \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d\mu(x',y') \nonumber                                                               \\
         =   & \int p(x,x') \frac{\frac{\partial}{\partial y}g(y,y')}{g(y,y')} d \mu -  \frac{\int \frac{\partial}{\partial y}g(y,y')d\mu}{\iint g(y,y')d\mu d\mu} \nonumber \\

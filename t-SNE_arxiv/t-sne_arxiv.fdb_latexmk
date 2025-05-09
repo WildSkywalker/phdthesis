@@ -1,16 +1,14 @@
 # Fdb version 4
-["bibtex t-sne_arxiv"] 1746732489.27202 "t-sne_arxiv.aux" "t-sne_arxiv.bbl" "t-sne_arxiv" 1746732766.01225 0
+["bibtex t-sne_arxiv"] 1746744198.18253 "t-sne_arxiv.aux" "t-sne_arxiv.bbl" "t-sne_arxiv" 1746798506.45589 0
   "./citation.bib" 1746227619 3399 7b98160bf3e0d4a5b951230a6bdee7c5 ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne_arxiv.aux" 1746732765 8765 e24dec2f9f3d7e723cbe3be67272d741 "pdflatex"
+  "t-sne_arxiv.aux" 1746798505 8765 ea782ed91ff35c5c6ac26d60a5ba52af "pdflatex"
   (generated)
   "t-sne_arxiv.bbl"
   "t-sne_arxiv.blg"
   (rewritten before read)
-["pdflatex"] 1746732764.34596 "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" "t-sne_arxiv.pdf" "t-sne_arxiv" 1746732766.01339 0
+["pdflatex"] 1746798504.78589 "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" "t-sne_arxiv.pdf" "t-sne_arxiv" 1746798506.45702 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743407234 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
-  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk" 1736703848 7284 c271b2921810af7a0bf064673a314b16 ""
-  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0800.pk" 1736703849 9292 b6b542cafa8bcf55d2f4fddd5a2cf719 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm10.pk" 1665680432 6984 cf1a156611e3b3d56cd70c3e1029dcfa ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm7.pk" 1678788026 4860 8e23f95e00911d2896a2a33c2ee94dda ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/bbm/bbm10.tfm" 1665680429 560 39fd35b5e4a6aca3672660cc548ba860 ""
@@ -20,8 +18,6 @@
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626411456 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1626411457 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1719449342 24264068 455c439cbc2cfb213e96f614f9433854 ""
-  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0600.tfm" 993062506 1456 d21918d95ca20f07aa266303b9a0a14c ""
-  "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0800.tfm" 993062506 1444 e35ead393df86aae37b5564284d9aa05 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233955454 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -218,11 +214,11 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044406800 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" 1746732763 70917 77b11a49f3d854bd562f8b6c79bafa54 ""
-  "t-sne_arxiv.aux" 1746732765 8765 e24dec2f9f3d7e723cbe3be67272d741 "pdflatex"
-  "t-sne_arxiv.bbl" 1746732489 2987 9dc880800331d8e016afdad0105637b3 "bibtex t-sne_arxiv"
-  "t-sne_arxiv.out" 1746732765 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
-  "t-sne_arxiv.tex" 1746732763 70917 77b11a49f3d854bd562f8b6c79bafa54 ""
+  "e:/NU Staff/Thesis - GIT/t-SNE_arxiv/t-sne_arxiv.tex" 1746798504 70775 6a2a26b518895a5ee9fec43cb4e500fd ""
+  "t-sne_arxiv.aux" 1746798505 8765 ea782ed91ff35c5c6ac26d60a5ba52af "pdflatex"
+  "t-sne_arxiv.bbl" 1746744198 2987 9dc880800331d8e016afdad0105637b3 "bibtex t-sne_arxiv"
+  "t-sne_arxiv.out" 1746798505 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
+  "t-sne_arxiv.tex" 1746798504 70775 6a2a26b518895a5ee9fec43cb4e500fd ""
   (generated)
   "t-sne_arxiv.aux"
   "t-sne_arxiv.log"

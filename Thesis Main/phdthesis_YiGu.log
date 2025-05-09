@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  8 MAY 2025 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  9 MAY 2025 08:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2144,7 +2144,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 b
 ..etc.
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set 0.69833
+.\hbox(8.33331+2.33331)x455.30121, glue set 0.7243
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 m
 ..\OT1/cmr/m/n/12 p
@@ -2197,22 +2197,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 l
 ..etc.
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set 0.47482
+.\hbox(8.33331+2.33331)x455.30121, glue set 0.26273
+..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 o
+..\kern-0.32639
 ..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 h
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 g
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 c
 ..\OT1/cmr/m/n/12 e
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 p
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 b
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 d
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 n
+..\kern-0.32639
+..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 2.44789 minus 1.04443
 ..\OT1/cmr/m/n/12 b
@@ -2236,18 +2246,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 n
 ..\OT1/cmr/m/n/12 d
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 w
-..\kern-0.32639
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 s
 ..\OT1/cmr/m/n/12 .
 ..\glue 5.22217 plus 5.87494 minus 0.43518
-..\OT1/cmr/m/n/12 H
-..\OT1/cmr/m/n/12 e
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 u
 ..etc.
 .\glue(\baselineskip) 14.53342
 .\hbox(8.33331+2.33331)x455.30121, glue set - 0.23628
@@ -2518,7 +2518,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set - 0.354
+.\hbox(8.33331+2.33331)x455.30121, glue set 0.5619
 ..\hbox(0.0+0.0)x18.0
 ..\OT1/cmr/m/n/12 W
 ..\OT1/cmr/m/n/12 i
@@ -2541,8 +2541,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 b
 ..\kern0.32639
 ..\OT1/cmr/m/n/12 e
-..\discretionary
-...\OT1/cmr/m/n/12 -
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 n
 ..\OT1/cmr/m/n/12 g
@@ -2570,10 +2568,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 h
+..\glue 3.91663 plus 1.95831 minus 1.30554
 ..etc.
-.\penalty 30000
+.\penalty 20000
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set 167.4292fil
+.\hbox(8.33331+2.33331)x455.30121, glue set 137.07535fil
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 p
+..\kern0.32639
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 n
@@ -2584,8 +2589,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\kern0.32639
 ..\OT1/cmr/m/n/12 e
 ..\OT1/cmr/m/n/12 o
-..\discretionary
-...\OT1/cmr/m/n/12 -
 ..\OT1/cmr/m/n/12 p
 ..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 e
@@ -2620,11 +2623,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 u
 ..\OT1/cmr/m/n/12 p
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
 ..etc.
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
@@ -3118,7 +3116,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..etc.
 .\penalty 10000
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set - 0.23407
+.\hbox(8.33331+2.33331)x455.30121, glue set 0.19196
 ..\OT1/cmr/m/n/12 w
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 o
@@ -3164,10 +3162,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 e
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 w
-..\kern-0.32639
-..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 s
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..etc.
 .\glue(\baselineskip) 14.53342
@@ -3652,7 +3650,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 m
 ..etc.
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set 0.05708
+.\hbox(8.33331+2.33331)x455.30121, glue set - 0.84145
 ..\OT1/cmr/m/n/12 w
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 t
@@ -3669,43 +3667,47 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 e
 ..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 l
+..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 r
 ..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 p
+..\kern0.32639
 ..\OT1/cmr/m/n/12 o
-..\kern-0.32639
-..\OT1/cmr/m/n/12 w
-..\OT1/cmr/m/n/12 n
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 s
 ..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 f
-..\OT1/cmr/m/n/12 u
+..\OT1/cmr/m/n/12 n
+..\kern-0.32639
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 l
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 c
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 n
+..\kern-0.32639
 ..\OT1/cmr/m/n/12 v
 ..\kern-0.32639
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 .
-..\glue 5.22217 plus 5.87494 minus 0.43518
-..\OT1/cmr/m/n/12 T
-..\OT1/cmr/m/n/12 h
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 y
-..\kern-0.97916
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 c
 ..etc.
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set - 0.36906
+.\hbox(8.33331+2.33331)x455.30121, glue set 0.2194
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 e
@@ -3752,14 +3754,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 d
 ..\OT1/cmr/m/n/12 n
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 s
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
 ..etc.
 .\penalty 10000
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set 292.8265fil
+.\hbox(8.33331+2.33331)x455.30121, glue set 250.3964fil
+..\OT1/cmr/m/n/12 b
+..\kern0.32639
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 k
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 d
+..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 e
 ..\OT1/cmr/m/n/12 g
@@ -3958,7 +3965,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 p
 ..etc.
 .\glue(\baselineskip) 14.53342
-.\hbox(8.33331+2.33331)x455.30121, glue set - 0.03711
+.\hbox(8.33331+2.33331)x455.30121, glue set 0.265
 ..\OT1/cmr/m/n/12 p
 ..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 a
@@ -80039,8 +80046,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 [137]
 Underfull \vbox (badness 10000) has occurred while \output is active
 \vbox(578.15999+0.0)x455.30121
-.\glue(\topskip) 1.0
-.\hbox(9.0+3.0)x455.30121, glue set 259.23367fil
+.\glue(\topskip) 1.66669
+.\hbox(8.33331+2.33331)x455.30121, glue set 154.13754fil
 ..\hbox(8.19998+0.0)x64.37306
 ...\glue 18.0
 ...\glue 0.0
@@ -80070,14 +80077,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 o
 ..\OT1/cmr/m/n/12 m
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 (
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 a
+..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{lemma.16}
 ..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
 ..\OT1/cmr/m/n/12 1
 ..\OT1/cmr/m/n/12 6
 ..\pdfcolorstack 0 pop
 ..\pdfendlink
-..\OT1/cmr/m/n/12 )
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 d
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 a
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\pdfstartlink(*+*)x* attr{/Border[0 0 0]/H/I/C[1 0 0]} action goto name{lemma.22}
+..\pdfcolorstack 0 push {0.25882 0.52158 0.95686 rg 0.25882 0.52158 0.95686 RG}
+..\OT1/cmr/m/n/12 2
+..\OT1/cmr/m/n/12 2
+..\pdfcolorstack 0 pop
+..\pdfendlink
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 2.44789 minus 1.04443
 ..\OT1/cmr/m/n/12 w
@@ -80085,19 +80113,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 e
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 h
-..\OT1/cmr/m/n/12 a
-..\kern-0.32639
-..\OT1/cmr/m/n/12 v
-..\kern-0.32639
-..\OT1/cmr/m/n/12 e
-..\penalty 10000
-..\glue(\parfillskip) 0.0 plus 1.0fil
-..\glue(\rightskip) 0.0
+..etc.
 .\penalty 10000
 .\glue(\abovedisplayskip) 15.87595
 .\glue -7.3
 .\glue 1.0
-.\glue(\baselineskip) 7.84613
+.\glue(\baselineskip) 8.51282
 .\hbox(20.65392+11.23141)x455.30121, display
 ..\glue(\tabskip) 82.56938
 ..\hbox(20.65392+11.23141)x18.34702
@@ -91627,12 +91648,12 @@ Package epstopdf Info: Source file: <exp/sampling.randkcnf.uniform.time.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf exp/sampling.randkcnf.uniform.time.eps>
 (epstopdf)             \includegraphics on input line 710.
 Package epstopdf Info: Output file is already uptodate.
-<exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf, id=2225, 236.885pt x 223.83624pt>
+<exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf, id=2226, 236.885pt x 223.83624pt>
 File: exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf>
 Package pdftex.def Info: exp/sampling.randkcnf.uniform.time-eps-converted-to.pdf  used on input line 710.
 (pdftex.def)             Requested size: 223.10008pt x 210.81595pt.
-<exp/sampling.randkcnf.valid.pdf, id=2226, 247.38046pt x 226.19882pt>
+<exp/sampling.randkcnf.valid.pdf, id=2227, 247.38046pt x 226.19882pt>
 File: exp/sampling.randkcnf.valid.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.valid.pdf>
 Package pdftex.def Info: exp/sampling.randkcnf.valid.pdf  used on input line 711.
@@ -91640,17 +91661,17 @@ Package pdftex.def Info: exp/sampling.randkcnf.valid.pdf  used on input line 711
 
 
 pdfTeX warning: pdflatex (file ./exp/sampling.randkcnf.weighted-crop.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<exp/sampling.randkcnf.weighted-crop.pdf, id=2227, 275.0275pt x 231.86626pt>
+<exp/sampling.randkcnf.weighted-crop.pdf, id=2228, 275.0275pt x 231.86626pt>
 File: exp/sampling.randkcnf.weighted-crop.pdf Graphic file (type pdf)
 <use exp/sampling.randkcnf.weighted-crop.pdf>
 Package pdftex.def Info: exp/sampling.randkcnf.weighted-crop.pdf  used on input line 719.
 (pdftex.def)             Requested size: 241.30908pt x 203.445pt.
-<exp/valid.randkcnf.weighted.pdf, id=2228, 265.89696pt x 104.34848pt>
+<exp/valid.randkcnf.weighted.pdf, id=2229, 265.89696pt x 104.34848pt>
 File: exp/valid.randkcnf.weighted.pdf Graphic file (type pdf)
 <use exp/valid.randkcnf.weighted.pdf>
 Package pdftex.def Info: exp/valid.randkcnf.weighted.pdf  used on input line 723.
 (pdftex.def)             Requested size: 211.85336pt x 83.14133pt.
-<exp/resample.randkcnf.weighted.pdf, id=2229, 240.03473pt x 142.94302pt>
+<exp/resample.randkcnf.weighted.pdf, id=2230, 240.03473pt x 142.94302pt>
 File: exp/resample.randkcnf.weighted.pdf Graphic file (type pdf)
 <use exp/resample.randkcnf.weighted.pdf>
 Package pdftex.def Info: exp/resample.randkcnf.weighted.pdf  used on input line 724.
@@ -92494,12 +92515,12 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 [161]
 
 [162]
-<exp/vehicle.resamples.pdf, id=2448, 295.34734pt x 197.7789pt>
+<exp/vehicle.resamples.pdf, id=2449, 295.34734pt x 197.7789pt>
 File: exp/vehicle.resamples.pdf Graphic file (type pdf)
 <use exp/vehicle.resamples.pdf>
 Package pdftex.def Info: exp/vehicle.resamples.pdf  used on input line 829.
 (pdftex.def)             Requested size: 225.37187pt x 150.9201pt.
-<exp/vehicle.time.pdf, id=2449, 294.8221pt x 199.11227pt>
+<exp/vehicle.time.pdf, id=2450, 294.8221pt x 199.11227pt>
 File: exp/vehicle.time.pdf Graphic file (type pdf)
 <use exp/vehicle.time.pdf>
 Package pdftex.def Info: exp/vehicle.time.pdf  used on input line 830.
@@ -111398,7 +111419,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 
 
 [185]
-<figs/learn-pipeline-crop.pdf, id=2796, 1002.74625pt x 281.05pt>
+<figs/learn-pipeline-crop.pdf, id=2797, 1002.74625pt x 281.05pt>
 File: figs/learn-pipeline-crop.pdf Graphic file (type pdf)
 <use figs/learn-pipeline-crop.pdf>
 Package pdftex.def Info: figs/learn-pipeline-crop.pdf  used on input line 1475.
@@ -121290,42 +121311,42 @@ Underfull \vbox (badness 1776) has occurred while \output is active
 
 
 [194]
-<exp/randkcnf_5_500_500_0001.uniform.pdf, id=2971, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_500_500_0001.uniform.pdf, id=2972, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_500_500_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_500_500_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_500_500_0001.uniform.pdf  used on input line 1727.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_700_700_0001.uniform.pdf, id=2972, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_700_700_0001.uniform.pdf, id=2973, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_700_700_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_700_700_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_700_700_0001.uniform.pdf  used on input line 1728.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1000_1000_0001.uniform.pdf, id=2973, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1000_1000_0001.uniform.pdf, id=2974, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1000_1000_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1000_1000_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.uniform.pdf  used on input line 1729.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1500_1500_0001.uniform.pdf, id=2974, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1500_1500_0001.uniform.pdf, id=2975, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1500_1500_0001.uniform.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1500_1500_0001.uniform.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.uniform.pdf  used on input line 1730.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_500_500_0001.weighted.pdf, id=2975, 295.61443pt x 203.00784pt>
+<exp/randkcnf_5_500_500_0001.weighted.pdf, id=2976, 295.61443pt x 203.00784pt>
 File: exp/randkcnf_5_500_500_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_500_500_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_500_500_0001.weighted.pdf  used on input line 1734.
 (pdftex.def)             Requested size: 111.54657pt x 76.60168pt.
-<exp/randkcnf_5_700_700_0001.weighted.pdf, id=2976, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_700_700_0001.weighted.pdf, id=2977, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_700_700_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_700_700_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_700_700_0001.weighted.pdf  used on input line 1735.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1000_1000_0001.weighted.pdf, id=2977, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1000_1000_0001.weighted.pdf, id=2978, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1000_1000_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1000_1000_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1000_1000_0001.weighted.pdf  used on input line 1736.
 (pdftex.def)             Requested size: 111.54657pt x 76.81732pt.
-<exp/randkcnf_5_1500_1500_0001.weighted.pdf, id=2978, 295.61443pt x 203.57933pt>
+<exp/randkcnf_5_1500_1500_0001.weighted.pdf, id=2979, 295.61443pt x 203.57933pt>
 File: exp/randkcnf_5_1500_1500_0001.weighted.pdf Graphic file (type pdf)
 <use exp/randkcnf_5_1500_1500_0001.weighted.pdf>
 Package pdftex.def Info: exp/randkcnf_5_1500_1500_0001.weighted.pdf  used on input line 1737.
@@ -135008,17 +135029,17 @@ Underfull \vbox (badness 1253) has occurred while \output is active
 
 
 [213]
-<sim_acc.png, id=3610, 566.115pt x 349.305pt>
+<sim_acc.png, id=3611, 566.115pt x 349.305pt>
 File: sim_acc.png Graphic file (type png)
 <use sim_acc.png>
 Package pdftex.def Info: sim_acc.png  used on input line 421.
 (pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
-<sim_auc.png, id=3611, 566.115pt x 349.305pt>
+<sim_auc.png, id=3612, 566.115pt x 349.305pt>
 File: sim_auc.png Graphic file (type png)
 <use sim_auc.png>
 Package pdftex.def Info: sim_auc.png  used on input line 423.
 (pdftex.def)             Requested size: 182.11769pt x 112.36617pt.
-<sim_f1.png, id=3612, 566.115pt x 349.305pt>
+<sim_f1.png, id=3613, 566.115pt x 349.305pt>
 File: sim_f1.png Graphic file (type png)
 <use sim_f1.png>
 Package pdftex.def Info: sim_f1.png  used on input line 425.
@@ -135853,7 +135874,7 @@ Underfull \vbox (badness 2435) has occurred while \output is active
 
 
 [214 <./sim_acc.png> <./sim_auc.png> <./sim_f1.png>]
-<sim_time.png, id=3646, 565.11125pt x 349.305pt>
+<sim_time.png, id=3647, 565.11125pt x 349.305pt>
 File: sim_time.png Graphic file (type png)
 <use sim_time.png>
 Package pdftex.def Info: sim_time.png  used on input line 504.
@@ -137100,17 +137121,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 [217 <./sim_time.png>]
 
 [218]
-<violin3.png, id=3690, 493.845pt x 349.305pt>
+<violin3.png, id=3691, 493.845pt x 349.305pt>
 File: violin3.png Graphic file (type png)
 <use violin3.png>
 Package pdftex.def Info: violin3.png  used on input line 638.
 (pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
-<violin4.png, id=3691, 493.845pt x 349.305pt>
+<violin4.png, id=3692, 493.845pt x 349.305pt>
 File: violin4.png Graphic file (type png)
 <use violin4.png>
 Package pdftex.def Info: violin4.png  used on input line 644.
 (pdftex.def)             Requested size: 141.14226pt x 99.83011pt.
-<violin7.png, id=3692, 493.845pt x 349.305pt>
+<violin7.png, id=3693, 493.845pt x 349.305pt>
 File: violin7.png Graphic file (type png)
 <use violin7.png>
 Package pdftex.def Info: violin7.png  used on input line 650.
@@ -143118,7 +143139,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 [224]
 
 [225]
-<student_skill.png, id=3780, 638.385pt x 277.035pt>
+<student_skill.png, id=3781, 638.385pt x 277.035pt>
 File: student_skill.png Graphic file (type png)
 <use student_skill.png>
 Package pdftex.def Info: student_skill.png  used on input line 826.
@@ -159224,9 +159245,9 @@ Here is how much of TeX's memory you used:
  1302 hyphenation exceptions out of 8191
  91i,20n,120p,1284b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm8.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm12.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (244 pages, 13242235 bytes).
+Output written on phdthesis_YiGu.pdf (244 pages, 13242533 bytes).
 PDF statistics:
- 4303 PDF objects out of 5155 (max. 8388607)
+ 4304 PDF objects out of 5155 (max. 8388607)
  1028 named destinations out of 1200 (max. 500000)
  560 words of extra memory for PDF output out of 10000 (max. 10000000)
 
