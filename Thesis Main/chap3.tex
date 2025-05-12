@@ -107,7 +107,7 @@ machine learning, e.g., deep neural networks (DNNs), to design the variational
 distribution that closely approximates the true posterior. Thus, we also regard
 our work as a first step in applying DNNs to FA models for student modeling,
 achieving efficient Bayesian inference (enabled by DNNs) without losing
-interpretability (brough by FA models).
+interpretability (brought by FA models).
 %
 We demonstrate the efficacy of our framework on both synthetic and real data
 sets, showcasing that VarFA substantially accelerates classic Bayesian
@@ -201,7 +201,7 @@ reformulation as follows to recover AFM: $\kappa=K/2$ is the total number of
 skill tags in the data; $\rvc$ represents the unknown skill information
 including skill difficulty and learning rate; $\rvm_{ij}$ summarizes known
 auxiliary information for the $i$-th student and $j$-th question; $\mu_i$
-represents the unknown $i$-th student's skill mastery level. Tthe other FA
+represents the unknown $i$-th student's skill mastery level. The other FA
 models can be cast into Eq.~\ref{eq:sparfa} in a similar fashion. Note that, if
 the observed data $\mY$ is not binary but rather continuous or categorical, we
 can simply use a Gaussian or categorical distribution for the observed data and
@@ -573,7 +573,7 @@ quantification with roughly the \textit{same} computation complexity of
 computing point estimates and \textit{without} compromising prediction
 performance.
 \begin{table}[t!]
-    \caption{Student answer prediction erformance comapring VarFA to SPARFA-M on Assistment, Algebra and Bridge data sets. $\uparrow$ and $\downarrow$ denote higher and lower is better, respectively. VarFA performs better than SPARFA-M on all three data sets and evaluation metrics most of the time. Additionally, VarFA's run time is very close to SPARFA-M.}
+    \caption{Student answer prediction performance comparing VarFA to SPARFA-M on Assistment, Algebra and Bridge data sets. $\uparrow$ and $\downarrow$ denote higher and lower is better, respectively. VarFA performs better than SPARFA-M on all three data sets and evaluation metrics most of the time. Additionally, VarFA's run time is very close to SPARFA-M.}
     % %\vspace{5pt}
     \centering
     \begin{subtable}{\linewidth}\centering

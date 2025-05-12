@@ -24,8 +24,7 @@ Sewall Wright.
 \newblock Systems of mating. i. the biometric relations between parent and
   offspring.
 \newblock {\em Genetics}, 6\penalty0 (2):\penalty0 111--123, 03
-  1921{\natexlab{a}},
-  https://academic.oup.com/genetics/article-pdf/6/2/111/35397881/genetics0111.pdf.
+  1921{\natexlab{a}}.
 \newblock ISSN 1943-2631.
 \newblock URL \url{https://doi.org/10.1093/genetics/6.2.111}.
 
@@ -33,20 +32,19 @@ Sewall Wright.
 Julian Besag.
 \newblock On the statistical analysis of dirty pictures.
 \newblock {\em Journal of the Royal Statistical Society: Series B
-  (Methodological)}, 48\penalty0 (3):\penalty0 259--279, 07 1986,
-  https://academic.oup.com/jrsssb/article-pdf/48/3/259/49097842/jrsssb\_48\_3\_259.pdf.
+  (Methodological)}, 48\penalty0 (3):\penalty0 259--279, 07 1986.
 \newblock ISSN 0035-9246.
 \newblock URL \url{https://doi.org/10.1111/j.2517-6161.1986.tb01412.x}.
 
 \bibitem[Kschischang et~al.(2001)Kschischang, Frey, and
   Loeliger]{Kschischang2001}
-F.R. Kschischang, B.J. Frey, and H.-A. Loeliger.
+Frank~R. Kschischang, Brendan~J. Frey, and Hans-Andrea Loeliger.
 \newblock Factor graphs and the sum-product algorithm.
 \newblock {\em IEEE Transactions on Information Theory}, 47\penalty0
   (2):\penalty0 498--519, 2001.
 
 \bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
-D.~Koller and N.~Friedman.
+Daphne Koller and Nir Friedman.
 \newblock {\em Probabilistic Graphical Models: Principles and Techniques}.
 \newblock Adaptive computation and machine learning. MIT Press, 2009.
 \newblock ISBN 9780262013192.
@@ -101,12 +99,11 @@ David Donoho.
 Robert Tibshirani.
 \newblock Regression shrinkage and selection via the lasso.
 \newblock {\em Journal of the Royal Statistical Society: Series B
-  (Methodological)}, 58\penalty0 (1):\penalty0 267--288, 1996,
-  https://academic.oup.com/jrsssb/article-pdf/58/1/267/49098631/jrsssb\_58\_1\_267.pdf.
+  (Methodological)}, 58\penalty0 (1):\penalty0 267--288, 1996.
 \newblock URL \url{https://doi.org/10.1111/j.2517-6161.1996.tb02080.x}.
 
 \bibitem[Chen and Donoho(1994)]{BPDN}
-Shaobing Chen and D.~Donoho.
+Shaobing Chen and David. Donoho.
 \newblock Basis pursuit.
 \newblock In {\em Proceedings of 1994 28th Asilomar Conference on Signals,
   Systems and Computers}, volume~1, pages 41--44 vol.1, 1994.
@@ -130,7 +127,7 @@ Richard Bellman.
 \newblock URL \url{http://www.jstor.org/stable/j.ctt183ph6v}.
 
 \bibitem[Hughes(1968)]{hughes1968}
-G.~Hughes.
+Gordon Hughes.
 \newblock On the mean accuracy of statistical pattern recognizers.
 \newblock {\em IEEE Transactions on Information Theory}, 14\penalty0
   (1):\penalty0 55--63, 1968.
@@ -153,8 +150,7 @@ F.R.S Karl~Pearson.
 \newblock Liii. on lines and planes of closest fit to systems of points in
   space.
 \newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
-  Journal of Science}, 2\penalty0 (11):\penalty0 559--572, 1901,
-  https://doi.org/10.1080/14786440109462720.
+  Journal of Science}, 2\penalty0 (11):\penalty0 559--572, 1901.
 \newblock URL \url{https://doi.org/10.1080/14786440109462720}.
 
 \bibitem[Hotelling(1933)]{Hotelling1933}
@@ -164,12 +160,12 @@ Harold Hotelling.
 \newblock {\em J. Ed. Psych.}, 24:\penalty0 417--441, 1933.
 
 \bibitem[Torgerson(1952)]{Torgerson1952}
-W.~S. Torgerson.
+Warren~S. Torgerson.
 \newblock Multidimensional scaling: I. theory and method.
 \newblock {\em Psychometrika}, 17:\penalty0 401--419, 1952.
 
 \bibitem[Torgerson(1958)]{torgerson1958theory}
-W.S. Torgerson.
+Warren~S. Torgerson.
 \newblock {\em Theory and methods of scaling}.
 \newblock Wiley, 1958.
 \newblock URL \url{https://books.google.com/books?id=FWN-AAAAMAAJ}.
@@ -181,7 +177,7 @@ Roger~N. Shepard.
 \newblock {\em Psychometrika}, 27\penalty0 (2):\penalty0 125–140, 1962.
 
 \bibitem[Kruskal(1964)]{Kruskal_1964}
-J.~B. Kruskal.
+Joseph~B. Kruskal.
 \newblock Multidimensional scaling by optimizing goodness of fit to a nonmetric
   hypothesis.
 \newblock {\em Psychometrika}, 29\penalty0 (1):\penalty0 1–27, 1964.
@@ -189,8 +185,7 @@ J.~B. Kruskal.
 \bibitem[Roweis and Saul(2000)]{Roweis2000}
 Sam~T. Roweis and Lawrence~K. Saul.
 \newblock {Nonlinear Dimensionality Reduction by Locally Linear Embedding}.
-\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000,
-  http://www.sciencemag.org/cgi/reprint/290/5500/2323.pdf.
+\newblock {\em Science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000.
 \newblock URL
   \url{http://www.sciencemag.org/cgi/content/abstract/290/5500/2323}.
 
@@ -201,7 +196,7 @@ Joshua~B. Tenenbaum, Vin de~Silva, and John~C. Langford.
 \newblock {\em Science}, 290\penalty0 (5500):\penalty0 2319, 2000.
 
 \bibitem[Fredman and Tarjan(1984)]{Fredman1984fibonacci}
-M.L. Fredman and R.E. Tarjan.
+Michael~L. Fredman and Robert~E. Tarjan.
 \newblock Fibonacci heaps and their uses in improved network optimization
   algorithms.
 \newblock In {\em 25th Annual Symposium onFoundations of Computer Science,
@@ -217,7 +212,7 @@ Geoffrey~E Hinton and Sam Roweis.
 
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
-\newblock Equilibrium distributions for t-distributed stochastic neighbour
+\newblock Equilibrium distributions for t-distributed stochastic neighbors
   embedding, 2023, 2304.03727.
 \newblock URL \url{https://arxiv.org/abs/2304.03727}.
 
@@ -249,20 +244,20 @@ Alex~Zihao Zhu, Jieru Mei, Siyuan Qiao, Hang Yan, Yukun Zhu, Liang-Chieh Chen,
 \newblock URL \url{https://arxiv.org/abs/2309.16889}.
 
 \bibitem[Boykov and Jolly(2001)]{Boykov2001}
-Y.Y. Boykov and M.-P. Jolly.
+Yuri~Y. Boykov and Marie-Pierre Jolly.
 \newblock Interactive graph cuts for optimal boundary and region segmentation
   of objects in n-d images.
 \newblock In {\em Proceedings Eighth IEEE International Conference on Computer
   Vision. ICCV 2001}, volume~1, pages 105--112 vol.1, 2001.
 
 \bibitem[Kolmogorov and Zabin(2004)]{Kolmogorov2004}
-V.~Kolmogorov and R.~Zabin.
+Vladimir Kolmogorov and Ramin Zabin.
 \newblock What energy functions can be minimized via graph cuts?
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   26\penalty0 (2):\penalty0 147--159, 2004.
 
 \bibitem[Boykov and Kolmogorov(2004)]{Boykov2004}
-Y.~Boykov and V.~Kolmogorov.
+Yuri~Y. Boykov and Vladimir Kolmogorov.
 \newblock An experimental comparison of min-cut/max- flow algorithms for energy
   minimization in vision.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
@@ -290,8 +285,7 @@ Jonna Frasor, Fabio Stossi, Jeanne~M. Danes, Barry Komm, C.~Richard Lyttle, and
 \newblock Selective estrogen receptor modulators: Discrimination of agonistic
   versus antagonistic activities by gene expression profiling in breast cancer
   cells.
-\newblock {\em Cancer Research}, 64\penalty0 (4):\penalty0 1522--1533, 02 2004,
-  https://aacrjournals.org/cancerres/article-pdf/64/4/1522/2523009/zch00404001522.pdf.
+\newblock {\em Cancer Research}, 64\penalty0 (4):\penalty0 1522--1533, 02 2004.
 \newblock ISSN 0008-5472.
 \newblock URL \url{https://doi.org/10.1158/0008-5472.CAN-03-3326}.
 
@@ -303,7 +297,7 @@ Nina Heldring, Ashley Pike, Sandra Andersson, Jason Matthews, Guojun Cheng,
   Warner, and Jan-\r{A}ke Gustafsson.
 \newblock Estrogen receptors: How do they signal and what are their targets.
 \newblock {\em Physiological Reviews}, 87\penalty0 (3):\penalty0 905--931,
-  2007, https://doi.org/10.1152/physrev.00026.2006.
+  2007.
 \newblock URL \url{https://doi.org/10.1152/physrev.00026.2006}.
 \newblock PMID: 17615392.
 
@@ -312,7 +306,7 @@ Nina Heldring, Ashley Pike, Sandra Andersson, Jason Matthews, Guojun Cheng,
 Nir Friedman, Michal Linial, Iftach Nachman, and Dana Pe'er.
 \newblock Using bayesian networks to analyze expression data.
 \newblock {\em Journal of Computational Biology}, 7\penalty0 (3-4):\penalty0
-  601--620, 2000, https://doi.org/10.1089/106652700750050961.
+  601--620, 2000.
 \newblock URL \url{https://doi.org/10.1089/106652700750050961}.
 \newblock PMID: 11108481.
 
@@ -323,8 +317,10 @@ Karen Sachs, Omar Perez, Dana Pe'er, Douglas Lauffenburger, and Garry Nolan.
   single-cell data.
 \newblock {\em Science (New York, N.Y.)}, 308:\penalty0 523--9, 05 2005.
 
-\bibitem[Krogh(1994-01-31)]{Krogh1994HMM}
-A~Krogh.
+\bibitem[Krogh et~al.(1994-01-31)Krogh, Brown, Mian, Sj{\"o}lander, and
+  Haussler]{Krogh1994HMM}
+Anders Krogh, Michael Brown, I~Saira Mian, Kimmen Sj{\"o}lander, and David
+  Haussler.
 \newblock Hidden markov models in computational biology. applications to
   protein modeling.
 \newblock {\em Journal of molecular biology.}, 235\penalty0 (5), 1994-01-31.
@@ -342,8 +338,8 @@ Alexander Schrijver.
 \newblock {\em Combinatorial Optimization: Polyhedra and Efficiency}, volume~B.
 \newblock Springer Science and Business Media, 01 2003.
 
-\bibitem[LIGHTNER(1991)]{lightner1991brief}
-JAMES~E. LIGHTNER.
+\bibitem[Lightner(1991)]{lightner1991brief}
+James~E. Lightner.
 \newblock A brief look at the history of probability and statistics.
 \newblock {\em The Mathematics Teacher}, 84\penalty0 (8):\penalty0 623--630,
   1991.
@@ -394,8 +390,7 @@ Sewall Wright.
 \bibitem[Wright(1918)]{10.1093/genetics/3.4.367}
 Sewall Wright.
 \newblock On the nature of size factors.
-\newblock {\em Genetics}, 3\penalty0 (4):\penalty0 367--374, 07 1918,
-  https://academic.oup.com/genetics/article-pdf/3/4/367/35081662/genetics0367.pdf.
+\newblock {\em Genetics}, 3\penalty0 (4):\penalty0 367--374, 07 1918.
 \newblock ISSN 1943-2631.
 \newblock URL \url{https://doi.org/10.1093/genetics/3.4.367}.
 
@@ -439,8 +434,7 @@ Jozef Gemela.
 Julian Besag.
 \newblock Spatial interaction and the statistical analysis of lattice systems.
 \newblock {\em Journal of the Royal Statistical Society: Series B
-  (Methodological)}, 36\penalty0 (2):\penalty0 192--225, 1 1974,
-  https://academic.oup.com/jrsssb/article-pdf/36/2/192/49096627/jrsssb\_36\_2\_192.pdf.
+  (Methodological)}, 36\penalty0 (2):\penalty0 192--225, 1 1974.
 \newblock ISSN 0035-9246.
 \newblock URL \url{https://doi.org/10.1111/j.2517-6161.1974.tb00999.x}.
 
@@ -453,10 +447,7 @@ Michael Jordan, Zoubin Ghahramani, Tommi Jaakkola, and Lawrence Saul.
 Alan~E. Gelfand and Adrian F. M.~Smith and.
 \newblock Sampling-based approaches to calculating marginal densities.
 \newblock {\em Journal of the American Statistical Association}, 85\penalty0
-  (410):\penalty0 398--409, 1990,
-  https://www.tandfonline.com/doi/pdf/10.1080/01621459.1990.10476213.
-\newblock URL
-  \url{https://www.tandfonline.com/doi/abs/10.1080/01621459.1990.10476213}.
+  (410):\penalty0 398--409, 1990.
 
 \bibitem[Erdős and László(1974)]{LLL1975}
 Paul Erdős and Lovász László.
@@ -486,7 +477,7 @@ Robin~A. Moser and Gábor Tardos.
 \newblock URL \url{https://arxiv.org/abs/0903.0544}.
 
 \bibitem[Spearman(1904)]{Spearman_1904}
-C.~Spearman.
+Charles Spearman.
 \newblock General intelligence, objectively determined and measured.
 \newblock {\em The American Journal of Psychology}, 15\penalty0 (2):\penalty0
   201--292, 1904.
@@ -494,7 +485,7 @@ C.~Spearman.
 \newblock URL \url{http://www.jstor.org/stable/1412107}.
 
 \bibitem[Thurstone(1947)]{thurstone1947multiple}
-L.L. Thurstone.
+Louis~Leon Thurstone.
 \newblock {\em Multiple-factor Analysis: A Development and Expansion of The
   Vectors of the Mind}.
 \newblock University of Chicago Committee on Publications in Biology and
@@ -503,12 +494,12 @@ L.L. Thurstone.
 \newblock URL \url{https://books.google.com/books?id=c0wAAAAAMAAJ}.
 
 \bibitem[Jöreskog(1967)]{Jöreskog_1967}
-K.~G. Jöreskog.
+Karl~Gustav Jöreskog.
 \newblock Some contributions to maximum likelihood factor analysis.
 \newblock {\em Psychometrika}, 32\penalty0 (4):\penalty0 443–482, 1967.
 
 \bibitem[Jöreskog(1969)]{Jöreskog_1969}
-Karl Jöreskog.
+Karl~Gustav Jöreskog.
 \newblock A general approach to confirmatory factor analysis.
 \newblock {\em Psychometrika}, 34:\penalty0 183--202, 02 1969.
 
@@ -618,7 +609,7 @@ Martin~J. Wainwright and Michael~I. Jordan.
 
 \bibitem[Braunstein et~al.(2005)Braunstein, M{\'e}zard, and
   Zecchina]{Braunstein2005SurveyPA}
-A.~Braunstein, M.~M{\'e}zard, and R.~Zecchina.
+Alfredo Braunstein, Marc M{\'e}zard, and Riccardo Zecchina.
 \newblock Survey propagation: an algorithm for satisfiability.
 \newblock {\em Random Struct. Algorithms}, 27:\penalty0 201--226, 2005.
 
@@ -759,7 +750,7 @@ Radford~M Neal.
   Canada, 1993.
 
 \bibitem[Dagum and Chavez(1993)]{DBLP:journals/pami/DagumC93}
-Paul Dagum and R.~Martin Chavez.
+Paul Dagum and Ramon~Martin Chavez.
 \newblock Approximating probabilistic inference in bayesian belief networks.
 \newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 15\penalty0
   (3):\penalty0 246--255, 1993.
@@ -968,7 +959,6 @@ Sabine Graf and Kinshuk.
 \newblock {\em Personalized Learning Systems}, pages 2594--2596.
 \newblock Springer US, Boston, MA, 2012.
 \newblock ISBN 978-1-4419-1428-6.
-\newblock URL \url{https://doi.org/10.1007/978-1-4419-1428-6_152}.
 
 \bibitem[Anderson et~al.(1995)Anderson, Corbett, Koedinger, and
   Pelletier]{anderson1995cognitive}
@@ -1215,7 +1205,7 @@ Shengjia Zhao, Jiaming Song, and Stefano Ermon.
   volume~33, pages 5885--5892, Feb. 2019.
 
 \bibitem[Mathieu et~al.(2019)Mathieu, Rainforth, Siddharth, and Teh]{dd}
-Emile Mathieu, Tom Rainforth, N~Siddharth, and Yee~Whye Teh.
+Emile Mathieu, Tom Rainforth, Narayanaswamy Siddharth, and Yee~Whye Teh.
 \newblock Disentangling disentanglement in variational autoencoders.
 \newblock In {\em Proc. {I}nternational {C}onference on {M}achine {L}earning},
   pages 4402--4412, Jun 2019.
@@ -1338,8 +1328,8 @@ Zoubin Ghahramani and Matthew~J Beal.
 \newblock In {\em Proc. Advances in Neural Information Processing Systems},
   pages 449--455, 2000.
 
-\bibitem[Zhao and Philip(2009)]{zhao2009note}
-Jian-hua Zhao and LH~Philip.
+\bibitem[Zhao and Yu(2009)]{zhao2009note}
+Jian-hua Zhao and Philip Yu.
 \newblock A note on variational bayesian factor analysis.
 \newblock {\em Neural Networks}, 22\penalty0 (7):\penalty0 988--997, 2009.
 
@@ -1372,14 +1362,16 @@ Neil~T. Heffernan and Cristina Heffernan.
 
 \bibitem[Stamper et~al.(2010{\natexlab{a}})Stamper, Niculescu-Mizil, Ritter,
   Gordon, and Koedinger]{Algebra}
-J.~Stamper, A.~Niculescu-Mizil, S.~Ritter, G.J. Gordon, and K.R. Koedinger.
+John Stamper, Alexandru Niculescu-Mizil, S.~Ritter, G.J. Gordon, and Kenneth~R.
+  Koedinger.
 \newblock Algebra i 2006-2007.
 \newblock {\em Development data set from {KDD} Cup 2010 {E}ducational {D}ata
   {M}ining {C}hallenge}, 2010{\natexlab{a}}.
 
 \bibitem[Stamper et~al.(2010{\natexlab{b}})Stamper, Niculescu-Mizil, Ritter,
   Gordon, and Koedinger]{bridge}
-J.~Stamper, A.~Niculescu-Mizil, S.~Ritter, G.J. Gordon, and K.R. Koedinger.
+John Stamper, Alexandru Niculescu-Mizil, S.~Ritter, G.J. Gordon, and Kenneth~R.
+  Koedinger.
 \newblock Bridge to algebra 2006-2007.
 \newblock {\em Development data set from {KDD} {C}up 2010 {E}ducational {D}ata
   {M}ining {C}hallenge}, 2010{\natexlab{b}}.
@@ -1478,8 +1470,8 @@ Nan Jiang, Yi~Gu, and Yexiang Xue.
 \newblock Learning markov random fields for combinatorial structures with
   sampling through lov\'asz local lemma, 2022.
 
-\bibitem[Yang et~al.(2019)Yang, Studer, Baker, Hefferenan, and Lan]{lan-loop}
-T.~Yang, C.~Studer, R.~Baker, N.~Hefferenan, and A.~S. Lan.
+\bibitem[Yang et~al.(2019)Yang, Baker, Studer, Heffernan, and Lan]{lan-loop}
+Tsung-Yen Yang, Ryan Baker, Christoph Studer, Neil Heffernan, and Andrew Lan.
 \newblock Active learning for student affect detection.
 \newblock In {\em Proc. Educational Data Mining}, 2019.
 
@@ -1516,10 +1508,7 @@ Leland McInnes, John Healy, and James Melville.
 József Beck.
 \newblock An algorithmic approach to the lovász local lemma. i.
 \newblock {\em Random Structures \& Algorithms}, 2\penalty0 (4):\penalty0
-  343--365, 1991,
-  https://onlinelibrary.wiley.com/doi/pdf/10.1002/rsa.3240020402.
-\newblock URL
-  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.3240020402}.
+  343--365, 1991.
 
 \bibitem[Linderman and
   Steinerberger(2017)]{linderman2017clusteringtsneprovably}
