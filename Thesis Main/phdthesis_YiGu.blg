@@ -16,16 +16,16 @@ Reallocating 'field_info' (item size: 4) to 10859 items.
 Database file #1: citation.bib
 You've used 229 entries,
             2647 wiz_defined-function locations,
-            1963 strings with 46726 characters,
-and the built_in function-call counts, 98975 in all, are:
-= -- 8692
+            1960 strings with 46483 characters,
+and the built_in function-call counts, 98933 in all, are:
+= -- 8683
 > -- 4606
 < -- 225
 + -- 1798
 - -- 1335
-* -- 7196
-:= -- 14819
-add.period$ -- 789
+* -- 7190
+:= -- 14810
+add.period$ -- 786
 call.type$ -- 229
 change.case$ -- 432
 chr.to.int$ -- 224
@@ -33,13 +33,13 @@ cite$ -- 229
 duplicate$ -- 5358
 empty$ -- 9207
 format.name$ -- 1693
-if$ -- 21962
+if$ -- 21953
 int.to.chr$ -- 6
 int.to.str$ -- 230
 missing$ -- 234
-newline$ -- 1203
+newline$ -- 1200
 num.names$ -- 701
-pop$ -- 2193
+pop$ -- 2196
 preamble$ -- 1
 purify$ -- 229
 quote$ -- 0
@@ -54,4 +54,4 @@ type$ -- 1528
 warning$ -- 0
 while$ -- 799
 width$ -- 0
-write$ -- 3123
+write$ -- 3117

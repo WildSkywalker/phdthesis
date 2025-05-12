@@ -75,8 +75,6 @@ Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock In F.~Pereira, C.J. Burges, L.~Bottou, and K.Q. Weinberger, editors,
   {\em Advances in Neural Information Processing Systems}, volume~25. Curran
   Associates, Inc., 2012.
-\newblock URL
-  \url{https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}.
 
 \bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
   Kaiser, and Polosukhin]{NIPS2017_3f5ee243}
@@ -151,7 +149,6 @@ F.R.S Karl~Pearson.
   space.
 \newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
   Journal of Science}, 2\penalty0 (11):\penalty0 559--572, 1901.
-\newblock URL \url{https://doi.org/10.1080/14786440109462720}.
 
 \bibitem[Hotelling(1933)]{Hotelling1933}
 Harold Hotelling.
@@ -207,8 +204,6 @@ Geoffrey~E Hinton and Sam Roweis.
 \newblock Stochastic neighbor embedding.
 \newblock In S.~Becker, S.~Thrun, and K.~Obermayer, editors, {\em Advances in
   Neural Information Processing Systems}, volume~15. MIT Press, 2002.
-\newblock URL
-  \url{https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf}.
 
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
