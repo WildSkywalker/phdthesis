@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex introchapter"] 1745634176.55526 "introchapter.aux" "introchapter.bbl" "introchapter" 1747019905.29871 0
+["bibtex introchapter"] 1745634176.55526 "introchapter.aux" "introchapter.bbl" "introchapter" 1747073528.66329 0
   "./citation.bib" 1745120090 83324 a980cf6da936a2ac53436597657684ed ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "introchapter.aux" 1747019904 27246 f03113034bcfe31856978d79620252d5 "pdflatex"
+  "introchapter.aux" 1747073527 27246 f03113034bcfe31856978d79620252d5 "pdflatex"
   (generated)
   "introchapter.bbl"
   "introchapter.blg"
   (rewritten before read)
-["pdflatex"] 1747019899.83813 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1747019905.29985 0
+["pdflatex"] 1747073524.24184 "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" "introchapter.pdf" "introchapter" 1747073528.66444 0
   "A_profile_HMM_modelling_a_multiple_sequence_alignment.png" 1744354421 209977 b9400d6741209ce131e6ec61338c5cba ""
   "BNpatterns.png" 1744583726 90044 2b457978e3f96f4da7a6ab8bd9c891c9 ""
   "BNstudent.png" 1744582077 80487 1213a6ff3100b029be7509e1f49a773c ""
@@ -220,14 +220,14 @@
   "concentration_distance_hypershpere.png" 1744157123 120724 99191f3153d91d250a91338d40322e63 ""
   "dsep.png" 1744590235 57120 0008caea2bd8af31b035e17c3f68a454 ""
   "e:/NU Staff/Thesis - GIT/Intro Chapter/introchapter.tex" 1745535247 1195 42ef459073adaab5bec48977edb2e44f ""
-  "guyipreammath.tex" 1747019898 4391 22bc6300dfc5aa3dc9ca6f291f5bff88 ""
+  "guyipreammath.tex" 1747073523 4383 07e4f5a4bbba815e001ff5890b1bea94 ""
   "heavytail_tsne.jpg" 1744082358 295298 2f810197b361c0391683a5b2d6648525 ""
   "intro_main_text.tex" 1747019799 127386 d934bb8744b04d2278e391e476360b47 ""
-  "introchapter.aux" 1747019904 27246 f03113034bcfe31856978d79620252d5 "pdflatex"
+  "introchapter.aux" 1747073527 27246 f03113034bcfe31856978d79620252d5 "pdflatex"
   "introchapter.bbl" 1745634176 23003 a6cd5bcd54560fad87df10c7d40b895c "bibtex introchapter"
-  "introchapter.out" 1747019904 3623 000431db4f703f2fc86256cda289e68e "pdflatex"
+  "introchapter.out" 1747073527 3623 000431db4f703f2fc86256cda289e68e "pdflatex"
   "introchapter.tex" 1745535247 1195 42ef459073adaab5bec48977edb2e44f ""
-  "introchapter.toc" 1747019904 1526 41b4f6cf5204a5091fa4a67a2b1c3dc6 "pdflatex"
+  "introchapter.toc" 1747073527 1526 41b4f6cf5204a5091fa4a67a2b1c3dc6 "pdflatex"
   "isomap.jpg" 1744002491 321008 6e6c0fe897c8c4f2a42f748ec86c8bfa ""
   "mnist_tsne.jpg" 1744075016 265242 8ee2e0649a54606a2fd898b287751931 ""
   "moreimagesegmentation.png" 1744341107 1406623 94c2f58bceca379db781d2d00f10c98b ""
