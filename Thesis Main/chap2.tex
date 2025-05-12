@@ -1536,11 +1536,11 @@ obtaining valid solutions is easy.
 \begin{figure}[t]
     \centering
     \begin{tikzpicture}[xscale=0.15, yscale=0.15, inner sep=2pt, >=stealth]
-        \draw (0,10)  node[circle,thick,draw] (v1) {$v_1$};
-        \draw (10,20) node[circle,thick,draw] (v2) {$v_2$};
-        \draw (10,0)  node[circle,thick,draw] (v3) {$v_3$};
-        \draw (22,-5) node[thick] (v4) {\textbf{(a)} An undirected graph $G$ with its adjacency matrix $A$};
-        \draw (20,10) node[circle,thick,draw] (v4) {$v_4$};
+        \draw (-5,10)  node[circle,thick,draw] (v1) {$v_1$};
+        \draw (5,20) node[circle,thick,draw] (v2) {$v_2$};
+        \draw (5,0)  node[circle,thick,draw] (v3) {$v_3$};
+        \draw (17,-5) node[thick] (v4) {\textbf{(a)} An undirected graph $G$ with its adjacency matrix $A$};
+        \draw (15,10) node[circle,thick,draw] (v4) {$v_4$};
         \draw (36,10)  node (v5) {$A=\begin{bNiceMatrix}[
                         %   first-row,code-for-first-row=\normalsize,
                         %   first-col,code-for-first-col=\normalsize,
@@ -1556,19 +1556,19 @@ obtaining valid solutions is easy.
         \draw[-,thick] (v2) -- (v3);
         \draw[-,thick] (v4) -- (v2);
         \draw[-,thick] (v3) -- (v4);
-        \draw (4,16)  node[text width = 6mm] () {$e_1$};
-        \draw (4,4)   node[text width = 6mm] () {$e_2$};
-        \draw (13,10) node[text width = 6mm] () {$e_3$};
-        \draw (18,16) node[text width = 6mm] () {$e_4$};
-        \draw (18,4)  node[text width = 6mm] () {$e_5$};
+        \draw (-1,16)  node[text width = 6mm] () {$e_1$};
+        \draw (-1,4)   node[text width = 6mm] () {$e_2$};
+        \draw (8,10) node[text width = 6mm] () {$e_3$};
+        \draw (13,16) node[text width = 6mm] () {$e_4$};
+        \draw (13,4)  node[text width = 6mm] () {$e_5$};
     \end{tikzpicture}
     \hfill
     \begin{tikzpicture}[xscale=0.15, yscale=0.15, inner sep=2pt, >=stealth]
-        \draw (0,10)  node[circle,thick,draw] (v1) {$v_1$};
-        \draw (10,20) node[circle,thick,draw] (v2) {$v_2$};
-        \draw (10,0)  node[circle,thick,draw] (v3) {$v_3$};
-        \draw (22,-5) node[thick] (v4) {\textbf{(b)} An orientation of the edges and the orientation matrix $x$};
-        \draw (20,10) node[circle,thick,draw] (v4) {$v_4$};
+        \draw (-5,10)  node[circle,thick,draw] (v1) {$v_1$};
+        \draw (5,20) node[circle,thick,draw] (v2) {$v_2$};
+        \draw (5,0)  node[circle,thick,draw] (v3) {$v_3$};
+        \draw (17,-5) node[thick] (v4) {\textbf{(b)} An orientation of the edges and the orientation matrix $x$};
+        \draw (15,10) node[circle,thick,draw] (v4) {$v_4$};
         \draw (36,10)  node (v5) {$x=\begin{bNiceMatrix}[
                         %   first-row,code-for-first-row=\normalsize,
                         %   first-col,code-for-first-col=\normalsize,
@@ -1584,11 +1584,11 @@ obtaining valid solutions is easy.
         \draw[->,thick] (v2) -- (v3);
         \draw[->,thick] (v4) -- (v2);
         \draw[->,thick] (v3) -- (v4);
-        \draw (4,16)  node[text width = 6mm] () {$e_1$};
-        \draw (4,4)   node[text width = 6mm] () {$e_2$};
-        \draw (13,10) node[text width = 6mm] () {$e_3$};
-        \draw (18,16) node[text width = 6mm] () {$e_4$};
-        \draw (18,4)  node[text width = 6mm] () {$e_5$};
+        \draw (-1,16)  node[text width = 6mm] () {$e_1$};
+        \draw (-1,4)   node[text width = 6mm] () {$e_2$};
+        \draw (8,10) node[text width = 6mm] () {$e_3$};
+        \draw (13,16) node[text width = 6mm] () {$e_4$};
+        \draw (13,4)  node[text width = 6mm] () {$e_5$};
     \end{tikzpicture}
     \caption{{\textbf{(a)} An un-directed graph $G(V,E)$ where the vertices are $V=\{v_1,v_2,v_3,v_4\}$ and the un-directed edges are $E=\{e_1=(v_1,v_2),e_2=(v_1,v_3),e_3=(v_2,v_3),e_4=(v_2,v_4),e_5=(v_3,v_4)\}$. \textbf{(b)} A possible sink-free orientation of the edges in the graph and its matrix representation $x$, where every vertex has at least one outgoing edge. }}
     \label{fig:sinkfreeex}

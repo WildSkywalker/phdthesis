@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  12 MAY 2025 00:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  12 MAY 2025 00:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -114226,11 +114226,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\glue 0.0
 ...\glue(\parskip) 0.0
 ...\glue(\parskip) 0.0
-...\hbox(124.14787+0.0)x455.30121, glue set 81.0866fil
+...\hbox(124.14787+0.0)x455.30121, glue set 79.63351fil
 ....\glue(\leftskip) 0.0 plus 1.0fil
 ....\hbox(0.0+0.0)x0.0
-....\hbox(124.14787+0.0)x293.12802
-.....\glue 52.67378
+....\hbox(124.14787+0.0)x296.0342
+.....\glue 74.01248
 .....\hbox(0.0+0.0)x0.0, shifted -29.33868
 ......\pdfliteral{q }
 ......\pdfliteral{0 G }
@@ -114239,7 +114239,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\hbox(0.0+0.0)x0.0
 .......\pdfliteral{q }
 .......\glue 0.0
-.......\pdfliteral{0.0 42.51846 m }
+.......\pdfliteral{-21.25923 42.51846 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -114247,19 +114247,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{9.02072 42.51846 m }
-.........\pdfliteral{9.02072 47.50053 4.98206 51.5392 0.0 51.5392 c }
-.........\pdfliteral{-4.98206 51.5392 -9.02072 47.50053 -9.02072 42.51846 c }
-.........\pdfliteral{-9.02072 37.53639 -4.98206 33.49774 0.0 33.49774 c }
-.........\pdfliteral{4.98206 33.49774 9.02072 37.53639 9.02072 42.51846 c }
+.........\pdfliteral{-12.2385 42.51846 m }
+.........\pdfliteral{-12.2385 47.50053 -16.27716 51.5392 -21.25923 51.5392 c }
+.........\pdfliteral{-26.2413 51.5392 -30.27997 47.50053 -30.27997 42.51846 c }
+.........\pdfliteral{-30.27997 37.53639 -26.2413 33.49774 -21.25923 33.49774 c }
+.........\pdfliteral{-16.27716 33.49774 -12.2385 37.53639 -12.2385 42.51846 c }
 .........\pdfliteral{h }
-.........\pdfliteral{0.0 42.51846 m }
+.........\pdfliteral{-21.25923 42.51846 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue -5.21527
+..........\glue -26.55396
 ..........\hbox(0.0+0.0)x0.0, shifted -40.99403
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -114282,7 +114282,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{42.51846 85.03696 m }
+.......\pdfliteral{21.25923 85.03696 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -114290,19 +114290,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{51.5392 85.03696 m }
-.........\pdfliteral{51.5392 90.01903 47.50053 94.0577 42.51846 94.0577 c }
-.........\pdfliteral{37.53639 94.0577 33.49774 90.01903 33.49774 85.03696 c }
-.........\pdfliteral{33.49774 80.05489 37.53639 76.01622 42.51846 76.01622 c }
-.........\pdfliteral{47.50053 76.01622 51.5392 80.05489 51.5392 85.03696 c }
+.........\pdfliteral{30.27997 85.03696 m }
+.........\pdfliteral{30.27997 90.01903 26.2413 94.0577 21.25923 94.0577 c }
+.........\pdfliteral{16.27716 94.0577 12.2385 90.01903 12.2385 85.03696 c }
+.........\pdfliteral{12.2385 80.05489 16.27716 76.01622 21.25923 76.01622 c }
+.........\pdfliteral{26.2413 76.01622 30.27997 80.05489 30.27997 85.03696 c }
 .........\pdfliteral{h }
-.........\pdfliteral{42.51846 85.03696 m }
+.........\pdfliteral{21.25923 85.03696 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue 37.4621
+..........\glue 16.12341
 ..........\hbox(0.0+0.0)x0.0, shifted -83.67142
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -114325,7 +114325,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{42.51846 0.0 m }
+.......\pdfliteral{21.25923 0.0 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -114333,19 +114333,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{51.5392 0.0 m }
-.........\pdfliteral{51.5392 4.98206 47.50053 9.02072 42.51846 9.02072 c }
-.........\pdfliteral{37.53639 9.02072 33.49774 4.98206 33.49774 0.0 c }
-.........\pdfliteral{33.49774 -4.98206 37.53639 -9.02072 42.51846 -9.02072 c }
-.........\pdfliteral{47.50053 -9.02072 51.5392 -4.98206 51.5392 0.0 c }
+.........\pdfliteral{30.27997 0.0 m }
+.........\pdfliteral{30.27997 4.98206 26.2413 9.02072 21.25923 9.02072 c }
+.........\pdfliteral{16.27716 9.02072 12.2385 4.98206 12.2385 0.0 c }
+.........\pdfliteral{12.2385 -4.98206 16.27716 -9.02072 21.25923 -9.02072 c }
+.........\pdfliteral{26.2413 -9.02072 30.27997 -4.98206 30.27997 0.0 c }
 .........\pdfliteral{h }
-.........\pdfliteral{42.51846 0.0 m }
+.........\pdfliteral{21.25923 0.0 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue 37.4621
+..........\glue 16.12341
 ..........\hbox(0.0+0.0)x0.0, shifted 1.68333
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -114368,7 +114368,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{93.54065 -21.25923 m }
+.......\pdfliteral{72.2814 -21.25923 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -114384,7 +114384,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue -50.67378
+..........\glue -72.01248
 ..........\hbox(0.0+0.0)x0.0, shifted 24.33868
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -114453,7 +114453,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{85.03696 42.51846 m }
+.......\pdfliteral{63.77773 42.51846 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -114461,19 +114461,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{94.0577 42.51846 m }
-.........\pdfliteral{94.0577 47.50053 90.01903 51.5392 85.03696 51.5392 c }
-.........\pdfliteral{80.05489 51.5392 76.01622 47.50053 76.01622 42.51846 c }
-.........\pdfliteral{76.01622 37.53639 80.05489 33.49774 85.03696 33.49774 c }
-.........\pdfliteral{90.01903 33.49774 94.0577 37.53639 94.0577 42.51846 c }
+.........\pdfliteral{72.79845 42.51846 m }
+.........\pdfliteral{72.79845 47.50053 68.75978 51.5392 63.77773 51.5392 c }
+.........\pdfliteral{58.79565 51.5392 54.75699 47.50053 54.75699 42.51846 c }
+.........\pdfliteral{54.75699 37.53639 58.79565 33.49774 63.77773 33.49774 c }
+.........\pdfliteral{68.75978 33.49774 72.79845 37.53639 72.79845 42.51846 c }
 .........\pdfliteral{h }
-.........\pdfliteral{85.03696 42.51846 m }
+.........\pdfliteral{63.77773 42.51846 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue 80.13948
+..........\glue 58.8008
 ..........\hbox(0.0+0.0)x0.0, shifted -40.99403
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -116176,24 +116176,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .......\glue 0.0
 .......\pdfliteral{q }
 .......\pdfliteral{0.79701 w }
-.......\pdfliteral{6.6602 49.17717 m }
-.......\pdfliteral{35.85732 78.37431 l }
+.......\pdfliteral{-14.59825 49.17717 m }
+.......\pdfliteral{14.59868 78.37431 l }
 .......\pdfliteral{S }
 .......\glue 0.0
 .......\pdfliteral{Q }
 .......\glue 0.0
 .......\pdfliteral{q }
 .......\pdfliteral{0.79701 w }
-.......\pdfliteral{6.65991 35.85703 m }
-.......\pdfliteral{35.85703 6.65991 l }
+.......\pdfliteral{-14.59868 35.85703 m }
+.......\pdfliteral{14.59839 6.66005 l }
 .......\pdfliteral{S }
 .......\glue 0.0
 .......\pdfliteral{Q }
 .......\glue 0.0
 .......\pdfliteral{q }
 .......\pdfliteral{0.79701 w }
-.......\pdfliteral{42.51712 75.6157 m }
-.......\pdfliteral{42.51712 9.41881 l }
+.......\pdfliteral{21.25848 75.6157 m }
+.......\pdfliteral{21.25862 9.41896 l }
 .......\pdfliteral{S }
 .......\glue 0.0
 .......\pdfliteral{Q }
@@ -116207,7 +116207,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\hbox(124.14787+0.0)x455.30121, glue set 68.85596fil
 ....\glue(\leftskip) 0.0 plus 1.0fil
 ....\hbox(124.14787+0.0)x317.5893
-.....\glue 64.90442
+.....\glue 86.24312
 .....\hbox(0.0+0.0)x0.0, shifted -29.33868
 ......\pdfliteral{q }
 ......\pdfliteral{0 G }
@@ -116216,7 +116216,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\hbox(0.0+0.0)x0.0
 .......\pdfliteral{q }
 .......\glue 0.0
-.......\pdfliteral{0.0 42.51846 m }
+.......\pdfliteral{-21.25923 42.51846 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -116224,19 +116224,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{9.02072 42.51846 m }
-.........\pdfliteral{9.02072 47.50053 4.98206 51.5392 0.0 51.5392 c }
-.........\pdfliteral{-4.98206 51.5392 -9.02072 47.50053 -9.02072 42.51846 c }
-.........\pdfliteral{-9.02072 37.53639 -4.98206 33.49774 0.0 33.49774 c }
-.........\pdfliteral{4.98206 33.49774 9.02072 37.53639 9.02072 42.51846 c }
+.........\pdfliteral{-12.2385 42.51846 m }
+.........\pdfliteral{-12.2385 47.50053 -16.27716 51.5392 -21.25923 51.5392 c }
+.........\pdfliteral{-26.2413 51.5392 -30.27997 47.50053 -30.27997 42.51846 c }
+.........\pdfliteral{-30.27997 37.53639 -26.2413 33.49774 -21.25923 33.49774 c }
+.........\pdfliteral{-16.27716 33.49774 -12.2385 37.53639 -12.2385 42.51846 c }
 .........\pdfliteral{h }
-.........\pdfliteral{0.0 42.51846 m }
+.........\pdfliteral{-21.25923 42.51846 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue -5.21527
+..........\glue -26.55396
 ..........\hbox(0.0+0.0)x0.0, shifted -40.99403
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -116259,7 +116259,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{42.51846 85.03696 m }
+.......\pdfliteral{21.25923 85.03696 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -116267,19 +116267,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{51.5392 85.03696 m }
-.........\pdfliteral{51.5392 90.01903 47.50053 94.0577 42.51846 94.0577 c }
-.........\pdfliteral{37.53639 94.0577 33.49774 90.01903 33.49774 85.03696 c }
-.........\pdfliteral{33.49774 80.05489 37.53639 76.01622 42.51846 76.01622 c }
-.........\pdfliteral{47.50053 76.01622 51.5392 80.05489 51.5392 85.03696 c }
+.........\pdfliteral{30.27997 85.03696 m }
+.........\pdfliteral{30.27997 90.01903 26.2413 94.0577 21.25923 94.0577 c }
+.........\pdfliteral{16.27716 94.0577 12.2385 90.01903 12.2385 85.03696 c }
+.........\pdfliteral{12.2385 80.05489 16.27716 76.01622 21.25923 76.01622 c }
+.........\pdfliteral{26.2413 76.01622 30.27997 80.05489 30.27997 85.03696 c }
 .........\pdfliteral{h }
-.........\pdfliteral{42.51846 85.03696 m }
+.........\pdfliteral{21.25923 85.03696 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue 37.4621
+..........\glue 16.12341
 ..........\hbox(0.0+0.0)x0.0, shifted -83.67142
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -116302,7 +116302,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{42.51846 0.0 m }
+.......\pdfliteral{21.25923 0.0 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -116310,19 +116310,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{51.5392 0.0 m }
-.........\pdfliteral{51.5392 4.98206 47.50053 9.02072 42.51846 9.02072 c }
-.........\pdfliteral{37.53639 9.02072 33.49774 4.98206 33.49774 0.0 c }
-.........\pdfliteral{33.49774 -4.98206 37.53639 -9.02072 42.51846 -9.02072 c }
-.........\pdfliteral{47.50053 -9.02072 51.5392 -4.98206 51.5392 0.0 c }
+.........\pdfliteral{30.27997 0.0 m }
+.........\pdfliteral{30.27997 4.98206 26.2413 9.02072 21.25923 9.02072 c }
+.........\pdfliteral{16.27716 9.02072 12.2385 4.98206 12.2385 0.0 c }
+.........\pdfliteral{12.2385 -4.98206 16.27716 -9.02072 21.25923 -9.02072 c }
+.........\pdfliteral{26.2413 -9.02072 30.27997 -4.98206 30.27997 0.0 c }
 .........\pdfliteral{h }
-.........\pdfliteral{42.51846 0.0 m }
+.........\pdfliteral{21.25923 0.0 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue 37.4621
+..........\glue 16.12341
 ..........\hbox(0.0+0.0)x0.0, shifted 1.68333
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -116345,7 +116345,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{93.54065 -21.25923 m }
+.......\pdfliteral{72.2814 -21.25923 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -116361,7 +116361,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue -62.90442
+..........\glue -84.24312
 ..........\hbox(0.0+0.0)x0.0, shifted 24.33868
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -116430,7 +116430,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\glue 0.0
 .........\pdfliteral{Q }
 .......\glue 0.0
-.......\pdfliteral{85.03696 42.51846 m }
+.......\pdfliteral{63.77773 42.51846 m }
 .......\pdfliteral{S }
 .......\hbox(0.0+0.0)x0.0
 ........\hbox(0.0+0.0)x0.0
@@ -116438,19 +116438,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .........\pdfliteral{0.79701 w }
 .........\pdfliteral{q }
 .........\pdfliteral{0.79701 w }
-.........\pdfliteral{94.0577 42.51846 m }
-.........\pdfliteral{94.0577 47.50053 90.01903 51.5392 85.03696 51.5392 c }
-.........\pdfliteral{80.05489 51.5392 76.01622 47.50053 76.01622 42.51846 c }
-.........\pdfliteral{76.01622 37.53639 80.05489 33.49774 85.03696 33.49774 c }
-.........\pdfliteral{90.01903 33.49774 94.0577 37.53639 94.0577 42.51846 c }
+.........\pdfliteral{72.79845 42.51846 m }
+.........\pdfliteral{72.79845 47.50053 68.75978 51.5392 63.77773 51.5392 c }
+.........\pdfliteral{58.79565 51.5392 54.75699 47.50053 54.75699 42.51846 c }
+.........\pdfliteral{54.75699 37.53639 58.79565 33.49774 63.77773 33.49774 c }
+.........\pdfliteral{68.75978 33.49774 72.79845 37.53639 72.79845 42.51846 c }
 .........\pdfliteral{h }
-.........\pdfliteral{85.03696 42.51846 m }
+.........\pdfliteral{63.77773 42.51846 m }
 .........\pdfliteral{S }
 .........\glue 0.0
 .........\pdfliteral{Q }
 .........\pdfliteral{q }
 .........\hbox(0.0+0.0)x0.0
-..........\glue 80.13948
+..........\glue 58.8008
 ..........\hbox(0.0+0.0)x0.0, shifted -40.99403
 ...........\pdfliteral{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral{q }
@@ -118158,11 +118158,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .......\glue 0.0
 .......\glue 0.0
 .......\glue 0.0
-.......\pdfliteral{6.6602 49.17717 m }
-.......\pdfliteral{34.02571 76.54271 l }
+.......\pdfliteral{-14.59825 49.17717 m }
+.......\pdfliteral{12.76709 76.54271 l }
 .......\pdfliteral{S }
 .......\pdfliteral{q }
-.......\pdfliteral{0.7071 0.7071 -0.7071 0.7071 34.02571 76.54271 cm }
+.......\pdfliteral{0.7071 0.7071 -0.7071 0.7071 12.76709 76.54271 cm }
 .......\pdfliteral{q 2.59026 0.0 m -1.55415 2.0722 l 0.0 0.0 l -1.55415 -2.0722 l f Q  }
 .......\pdfliteral{Q }
 .......\glue 0.0
@@ -118170,8 +118170,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .......\glue 0.0
 .......\pdfliteral{q }
 .......\pdfliteral{0.79701 w }
-.......\pdfliteral{6.65991 35.85703 m }
-.......\pdfliteral{34.02542 8.49152 l }
+.......\pdfliteral{-14.59868 35.85703 m }
+.......\pdfliteral{12.7668 8.49165 l }
 .......\pdfliteral{S }
 .......\pdfliteral{q }
 .......etc.
@@ -156181,15 +156181,15 @@ Package rerunfilecheck Info: File `phdthesis_YiGu.out' has not changed.
 (rerunfilecheck)             Checksum: 51F0EA59C3D420A2F405679B3545F193;8895.
  ) 
 Here is how much of TeX's memory you used:
- 37413 strings out of 473919
- 738754 string characters out of 5726953
+ 37414 strings out of 473919
+ 738775 string characters out of 5726953
  2029908 words of memory out of 5000000
- 58456 multiletter control sequences out of 15000+600000
+ 58457 multiletter control sequences out of 15000+600000
  579160 words of font info for 111 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  91i,20n,120p,1284b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm8.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm12.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (243 pages, 13238341 bytes).
+Output written on phdthesis_YiGu.pdf (243 pages, 13238447 bytes).
 PDF statistics:
  4294 PDF objects out of 4296 (max. 8388607)
  1027 named destinations out of 1200 (max. 500000)
