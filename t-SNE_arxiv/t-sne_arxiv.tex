@@ -146,24 +146,26 @@
 
 \begin{document}
 
-
 \title{Equilibrium Distribution for t-Distributed Stochastic Neighbor Embedding with Generalized Kernels}
 \maketitle
 
 \begin{abstract}
-    t-distributed stochastic neighbor embedding (t-SNE) is a well-known algorithm for visualizing high-dimensional data by finding low-dimensional representations (\cite{key}). In this paper, we study the convergence of t-SNE with generalized kernels and extend the results of \cite{auffinger-tsne}. Our work starts by giving a concrete formulation of generalized input and output kernels. Then we prove that under certain conditions, the t-SNE algorithm converges to an equilibrium distribution for a wide range of input and output kernels.
+    T-distributed stochastic neighbor embedding (t-SNE) is a well-known algorithm for visualizing high-dimensional data by finding low-dimensional representations (\cite{key}). In this paper, we study the convergence of t-SNE with generalized kernels and extend the results of \cite{auffinger-tsne}. Our work starts by giving a concrete formulation of generalized input and output kernels. Then we prove that under certain conditions, the t-SNE algorithm converges to an equilibrium distribution for a wide range of input and output kernels as the number of data points diverges.
 \end{abstract}
 
 \section{The Concept of Input and Output Kernels} \label{sec_intro}
 t-distributed stochastic neighbor embedding (t-SNE) is a powerful technique for
 visualizing high-dimensional data in a low-dimensional space, developed in 2008
 by Laurens van der Maaten and Geoffrey Hinton (\cite{key}). Despite its wide
-application, the theoretical aspects and mathematical rigor of t-SNE have
-rarely been discussed thoroughly. Recently, Auffinger and Fletcher proved that
-if data is sampled independently from a compact probability measure $\mu_X$,
-then the output of t-SNE converges to an equilibrium measure that is also
-compact (\cite{auffinger-tsne}). This is one of the very first results that
-rigorously establishes the theoretical guarantees of t-SNE.
+application (in biology for example \cite{LindermanGeorgeC.2019Fitf}, \cite{10.1093/bioinformatics/btp035}), the
+theoretical aspects and mathematical rigor of t-SNE have rarely been discussed
+thoroughly. Recently, Auffinger and Fletcher proved that if data is sampled
+independently from a compact probability measure $\mu_X$, then the output of
+t-SNE converges to an equilibrium measure that is also compact as the number of
+data points diverges(\cite{auffinger-tsne}). This, together with
+\cite{arora2018analysistsnealgorithmdata} and
+\cite{linderman2017clusteringtsneprovably}, are some of the very first results
+that rigorously establishes the theoretical guarantees of t-SNE.
 
 We aim to generalize the results from \cite{auffinger-tsne}. In the original
 version of the t-SNE algorithm, for each pair of input or output data points, a
@@ -242,8 +244,8 @@ Since the all probability masses are normalized, we can assume without loss of g
     4. $k'(0) = 0$.
 \end{condition}
 
-\section{Setup and Notations} \label{tsne:sec:setup}
-After defining the input and output kernels, we are able to provide an
+\subsection*{Setup and Notations} \label{tsne:sec:setup}
+In this subsection, we provide an
 introduction to the generalized t-SNE algorithm incorporating the new
 terminology. Recall that the input of the generalized t-SNE consists of vectors
 $X_1, \cdots, X_n \in \mathbb{R}^d$, with the purpose of finding vectors $Y_1,
@@ -253,7 +255,7 @@ masses:
 \begin{align}
     p_{j|i} = \frac{\ki(X_i,X_j,\sigma_i)}{\sum_{k \neq i} \ki(X_i,X_k,\sigma_i)}.
 \end{align}
-$\sigma_i$ satisfies that for each $i = 1, \dots, n$,
+Each $\sigma_i$ satisfies that for each $i = 1, \dots, n$,
 \begin{align}
     -\sum_{j = 1, j \neq i}^n p_{j|i} \log p_{j|i} = \log \textbf{Perp} =: \log (n \rho).
 \end{align}
@@ -330,7 +332,7 @@ condition to $C^0$.
     Under the same assumptions of theorem \ref{tsne:main_theorem_1}, $\mu^*$ has compact support.
 \end{theorem}
 \begin{remark}
-    In \cite{auffinger-tsne}, a lot of the lemmas are proved under the assumption that the sample distribution $\mu_X$ is sub-Gaussian. This can also be done for our work, if we replace condition \ref{input_kernel_conditions} with the following condition \ref{input_kernel_conditions_ext}:
+    In \cite{auffinger-tsne}, several lemmas are proved under the assumption that the sample distribution $\mu_X$ is sub-Gaussian. This can also be done for our work, if we replace condition \ref{input_kernel_conditions} with the following condition \ref{input_kernel_conditions_ext}:
     \begin{condition}[Alternative Input Kernel Conditions] \label{input_kernel_conditions_ext}
         Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be some fixed function. The input kernel has the form of $\ki(x,x,\sigma) = \exp(-w(\sigma\norm{x-x'}^{\theta}))$. Here, $\sigma$ is used to control entropy (thus perplexity) and $\theta>0$ is a fixed constant. Define
         \begin{align} \label{tsne:kw_def}
@@ -428,8 +430,8 @@ established, we are able to prove the convergence towards the equilibrium
 measure by proving inequalities from both sides, the details of which are
 discussed in section \ref{tsne:sec:lower_bound} and \ref{tsne:sec:upper_bound}.
 Finally the proofs are wrapped up in section \ref{tsne:sec:main_theorem_1} and
-\ref{tsne:sec:main_theorem_2}, where we show that the equilibrium measure also has
-compact support just as the input measure $\mu_X$.
+\ref{tsne:sec:main_theorem_2}, where we show that the equilibrium measure also
+has compact support just as the input measure $\mu_X$.
 \section{Existence and Uniqueness of \texorpdfstring{$\sigma^*$}{sigma-star}}\label{tsne:sec:existence_uniqueness}
 In this section we establish the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$. Recall that $\sigma^*_{\rho,\mu}(x)$ is the unique solution of the equation
 \begin{align}
@@ -606,9 +608,15 @@ sample distribution $\mu_X$ are inherited directly from section
 \ref{tsne:sec:existence_uniqueness} to avoid lengthy theorem and lemma
 statements.
 \subsection{Convergence Lemmas for Input Kernels} \label{tsne:sec:input_kernel_convergence}
-The main difficulties of proving the convergence lemmas related to the input kernel is the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$, which we have already established in section \ref{tsne:sec:existence_uniqueness}. The rest of lemmas are similar, if not easier than the corresponding results in \cite{auffinger-tsne}. We will list the important lemmas here without proofs. The reader can easily adapt the proofs in \cite{auffinger-tsne} to our case.
+The main difficulties of proving the convergence lemmas related to the input
+kernel is the existence and uniqueness of $\sigma^*_{\rho,\mu}(x)$, which we
+have already established in section \ref{tsne:sec:existence_uniqueness}. The
+rest of lemmas are similar, if not easier than the corresponding results in
+\cite{auffinger-tsne}. We will list the important lemmas here without proofs.
+The reader can easily adapt the proofs in \cite{auffinger-tsne} to our case.
 
-First we have the two following important propositions about the uniform convergence of $F_{\mu_n}(x,\sigma)$ and $\sigma_{\mu_n}^*(x)$.
+First we have the two following important propositions about the uniform
+convergence of $F_{\mu_n}(x,\sigma)$ and $\sigma_{\mu_n}^*(x)$.
 \begin{proposition} \label{tsne:uniform_convergence_prop}
     Let $\mu_X$ be a probability measure with compact support, and $X_1,\dots,X_n$ be i.i.d. random variables drawn from $\mu$. $\mu_n = (1/n)\sum_i \delta_{X_i}$ is the empirical measure. Then there exists a constant $\epsilon>0$, that almost surely in $X_1,\dots,X_n$,
     \begin{align}
@@ -626,9 +634,6 @@ First we have the two following important propositions about the uniform converg
     \end{align}
 \end{proposition}
 Next two lemmas can be borrowed directly from \cite{auffinger-tsne} as they irrelevant to the generalized kernels.
-\begin{lemma}
-    Any sequence in $\tilde{\mathcal{P}}_X$ is tight.
-\end{lemma}
 \begin{lemma} \label{mu_star_lemma}
     There exits $\mu^*$ such that
     \begin{align}
@@ -637,8 +642,8 @@ Next two lemmas can be borrowed directly from \cite{auffinger-tsne} as they irre
 \end{lemma}
 To further simplify up the notations, define
 \begin{align} \label{tsne:convergence_lemmas:notation}
-    \sigma_n(x) = &\sigma_{\rho,\mu_n}^*(x), \sigma(x) = \sigma_{\rho,\mu_X}^*(x), \nonumber  \\
-    f(x,x') = &f_{\sigma}(x,x') =: \exp(-w(\sigma\norm{x-x'}^{\theta})), f_n(x,x') =  f_{\sigma_n}(x,x'), \nonumber \\
+    \sigma_n(x) = & \sigma_{\rho,\mu_n}^*(x), \sigma(x) = \sigma_{\rho,\mu_X}^*(x), \nonumber                                          \\
+    f(x,x') =     & f_{\sigma}(x,x') =: \exp(-w(\sigma\norm{x-x'}^{\theta})), f_n(x,x') =  f_{\sigma_n}(x,x'), \nonumber               \\
     p'_n(x,x') =  & \frac{f_n(x,x')}{\int f_n(x,x')d\mu_n(x') - 1/n}, \quad p'(x,x') = \frac{f(x,x')}{\int f(x,x')d\mu(x')}, \nonumber \\
     p_n(x,x') =   & \frac{1}{2}(p'_n(x,x')+p'_n(x',x)), \quad p(x,x') = \frac{1}{2}(p'(x,x')+p'(x',x)).
 \end{align}
@@ -648,31 +653,14 @@ Note that $p_{j|i} = p'_n(X_i,X_j)/n$ and $p_{ij} = p_n(X_i,X_j)/n^2$, and for $
 \end{align}
 for some constant $M>0$.
 
-The next five lemmas cover the rest of convergence results for the input kernels. The reader can notice that the lemmas below are natural computations starting from the basic building blocks ($f_n$ and $f$) towards the entropy of $p_{ij}$ in the loss function $L_{n,\rho}(X,Y)$. Because of this, the proofs can be easily adapted from \cite{auffinger-tsne}. We omit them here for brevity.
-\begin{lemma} \label{tsne:f_n_convergence_lemma}
-    Assume $\mu_X$ have compact support. As $n \to \infty$,
-    \begin{align}
-        \sup_{i,j} \left|f_n(X_i,X_j) - f(X_i,X_j)\right| = O(n^{-\epsilon})
-    \end{align}
-    for some $\epsilon>0$.
-\end{lemma}
+The next few lemmas cover the rest of convergence results for the input
+kernels. The proofs can be easily adapted from \cite{auffinger-tsne}. We omit them here for
+brevity.
 \begin{lemma} \label{tsne:integrand_lemma_2}
     Let $\mu_X$ have compact support. There exists $\epsilon>0$ such that as $n \to \infty$,
     \begin{align}
         \sup_{i,j} \left|p'_n(X_i,X_j) - p'(X_i,X_j)\right| = & O(n^{-\epsilon}), \nonumber \\
         \sup_{i,j} \left|p_n(X_i,X_j) - p(X_i,X_j)\right| =   & O(n^{-\epsilon}) \nonumber.
-    \end{align}
-\end{lemma}
-\begin{lemma} \label{tsne:plogp_convergence_lemma}
-    Assuming $\mu_X$ has compact support, then there exists $\epsilon>0$ such that as $n \to \infty$,
-    \begin{align}
-        \sup_{i,j}|p_n(X_i,X_j)\log p_n(X_i,X_j) - p(X_i,X_j)\log p(X_i,X_j)| = & O(n^{-\epsilon}). \nonumber
-    \end{align}
-\end{lemma}
-\begin{lemma}
-    Assuming $\mu_X$ has compact support, then as $n \to \infty$,
-    \begin{align}
-        \sum_j p_{j|i} \log p_{j|i} + \log(\rho n) = o(1).
     \end{align}
 \end{lemma}
 \begin{lemma} \label{entropy_lemma_1}

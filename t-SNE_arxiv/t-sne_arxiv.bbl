@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{13}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -14,6 +14,36 @@ Antonio Auffinger and Daniel Fletcher.
 \newblock Equilibrium distributions for t-distributed stochastic neighbour
   embedding, 2023, 2304.03727.
 \newblock URL \url{https://arxiv.org/abs/2304.03727}.
+
+\bibitem[Linderman et~al.(2019)Linderman, Rachh, Hoskins, Steinerberger, and
+  Kluger]{LindermanGeorgeC.2019Fitf}
+George~C. Linderman, Manas Rachh, Jeremy~G. Hoskins, Stefan Steinerberger, and
+  Yuval Kluger.
+\newblock Fast interpolation-based t-sne for improved visualization of
+  single-cell rna-seq data.
+\newblock {\em Nature methods}, 16\penalty0 (3):\penalty0 243--245, 2019.
+\newblock ISSN 1548-7091.
+
+\bibitem[Wallach and Lilien(2009)]{10.1093/bioinformatics/btp035}
+Izhar Wallach and Ryan Lilien.
+\newblock The protein–small-molecule database, a non-redundant structural
+  resource for the analysis of protein-ligand binding.
+\newblock {\em Bioinformatics}, 25\penalty0 (5):\penalty0 615--620, 01 2009.
+\newblock ISSN 1367-4803.
+\newblock URL \url{https://doi.org/10.1093/bioinformatics/btp035}.
+
+\bibitem[Arora et~al.(2018)Arora, Hu, and
+  Kothari]{arora2018analysistsnealgorithmdata}
+Sanjeev Arora, Wei Hu, and Pravesh~K. Kothari.
+\newblock An analysis of the t-sne algorithm for data visualization, 2018,
+  1803.01768.
+\newblock URL \url{https://arxiv.org/abs/1803.01768}.
+
+\bibitem[Linderman and
+  Steinerberger(2017)]{linderman2017clusteringtsneprovably}
+George~C. Linderman and Stefan Steinerberger.
+\newblock Clustering with t-sne, provably, 2017, 1706.02582.
+\newblock URL \url{https://arxiv.org/abs/1706.02582}.
 
 \bibitem[Murray and Pickarski(2024)]{murray2024largedatalimitsscaling}
 Ryan Murray and Adam Pickarski.
@@ -60,11 +90,5 @@ Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
   Knowledge Discovery in Databases}, pages 124--139, Cham, 2020. Springer
   International Publishing.
 \newblock ISBN 978-3-030-46150-8.
-
-\bibitem[Linderman and
-  Steinerberger(2017)]{linderman2017clusteringtsneprovably}
-George~C. Linderman and Stefan Steinerberger.
-\newblock Clustering with t-sne, provably, 2017, 1706.02582.
-\newblock URL \url{https://arxiv.org/abs/1706.02582}.
 
 \end{thebibliography}

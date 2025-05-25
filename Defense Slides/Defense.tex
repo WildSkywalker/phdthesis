@@ -367,7 +367,7 @@ Since the all probability masses are normalized, we can assume without loss of g
 \begin{frame}
   \frametitle{Main results}
   \begin{theorem} \label{tsne:main_theorem_1}
-    Assume $\mu_X$ has a continuous density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be i.i.d random variables with probability measure $\mu_X$. If condition \ref{input_kernel_conditions} and condition \ref{output_kernel_conditions} hold, then for any $\rho \in (0,1)$,
+    Assume $\mu_X$ has a continuous density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be i.i.d random variables with probability measure $\mu_X$. If both input and output condition hold, then for any $\rho \in (0,1)$,
     \begin{align}
         \lim_{n \to \infty} \inf_Y L_{n,\rho}(X,Y) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu).
     \end{align}
@@ -379,16 +379,34 @@ Since the all probability masses are normalized, we can assume without loss of g
 \end{frame}
 
 \begin{frame}
+  \frametitle{Discussion on generality and insights}
+  Are the conditions we impose on input and output kernels general enough?
+
+  \vspace{1em}
+  \begin{itemize}
+  \item [$\bullet$] t-SNE is about the relationship between the data points.No generality loss by assuming the kernels are functions of the distance.
+  \item [$\bullet$] Kernels are always non-negative. No generality loss by inserting exponential functions in input kernels for it being a smooth bijection.
+  \item [$\bullet$] $\sigma$ is only used to control entropy (and in our case it does).
+  \item [$\bullet$] Integrability is the bare minimum.
+  \item [$\bullet$] The rest is only about decaying speed.
+  %Mention heavy tail tsne and crowding problems fo SNE. Say that the boundedness for output kernel is not only necessary for the proof but also intuitively makes sense. The output kernel cannot decay too fast.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{Interpretation}
+  \begin{itemize}
+  \item  Recall that in input
+  \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Structure of proofs}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Structure of proofs}
+% \end{frame}
 
-\begin{frame}
-  \frametitle{Existence and Uniqueness of $\sigma^*$}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Existence and Uniqueness of $\sigma^*$}
+% \end{frame}
 
 \begin{frame}
   \frametitle{The problems of dependence}
