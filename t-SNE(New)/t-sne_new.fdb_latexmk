@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex t-sne_new"] 1746677306.60672 "t-sne_new.aux" "t-sne_new.bbl" "t-sne_new" 1746798604.23034 0
+["bibtex t-sne_new"] 1746677306.60672 "t-sne_new.aux" "t-sne_new.bbl" "t-sne_new" 1748247312.32179 0
   "./citation.bib" 1746227619 3399 7b98160bf3e0d4a5b951230a6bdee7c5 ""
   "./hunsrtnat.bst" 1719449607 25558 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne_new.aux" 1746798603 9891 f439b2ece751b96252c6e1c475cf64b8 "pdflatex"
+  "t-sne_new.aux" 1748247311 9891 f439b2ece751b96252c6e1c475cf64b8 "pdflatex"
   (generated)
   "t-sne_new.bbl"
   "t-sne_new.blg"
   (rewritten before read)
-["pdflatex"] 1746798602.46186 "e:/NU Staff/Thesis - GIT/t-SNE(New)/t-sne_new.tex" "t-sne_new.pdf" "t-sne_new" 1746798604.23142 0
-  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743407234 180946 f0ffdc2a32419f50d692a237fbdf02f8 ""
+["pdflatex"] 1748247310.47096 "e:/NU Staff/Thesis - GIT/t-SNE(New)/t-sne_new.tex" "t-sne_new.pdf" "t-sne_new" 1748247312.32295 0
+  "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747189646 181125 c7fcaa1fcd3d3b81a40f886c68206bae ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk" 1736703848 7284 c271b2921810af7a0bf064673a314b16 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0800.pk" 1736703849 9292 b6b542cafa8bcf55d2f4fddd5a2cf719 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm10.pk" 1665680432 6984 cf1a156611e3b3d56cd70c3e1029dcfa ""
@@ -220,12 +220,12 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "e:/NU Staff/Thesis - GIT/t-SNE(New)/t-sne_new.tex" 1746396536 1192 d62e168ea74b467257cea6ee6c827a29 ""
   "guyipreammath.tex" 1736703843 4317 0020b92a0aad7cd7538b2aaa924cd9fe ""
-  "t-sne_main_text_new.tex" 1746798601 74965 ed92ba9786ff4b96ed0343330817e451 ""
-  "t-sne_new.aux" 1746798603 9891 f439b2ece751b96252c6e1c475cf64b8 "pdflatex"
+  "t-sne_main_text_new.tex" 1748247309 74944 660c5bf6c43298d5b9f510a5dc19c27f ""
+  "t-sne_new.aux" 1748247311 9891 f439b2ece751b96252c6e1c475cf64b8 "pdflatex"
   "t-sne_new.bbl" 1746677306 2987 9dc880800331d8e016afdad0105637b3 "bibtex t-sne_new"
-  "t-sne_new.out" 1746798603 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
+  "t-sne_new.out" 1748247311 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
   "t-sne_new.tex" 1746396536 1192 d62e168ea74b467257cea6ee6c827a29 ""
-  "t-sne_new.toc" 1746798603 1288 4ac0d3244585790c2fe21b6f0cb2ada0 "pdflatex"
+  "t-sne_new.toc" 1748247311 1288 4ac0d3244585790c2fe21b6f0cb2ada0 "pdflatex"
   (generated)
   "t-sne_new.aux"
   "t-sne_new.log"
