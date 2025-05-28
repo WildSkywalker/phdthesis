@@ -5,3 +5,6 @@
 \beamer@slide {output_kernel_conditions}{15}
 \beamer@slide {tsne:main_theorem_1}{16}
 \beamer@slide {tsne:main_theorem_2}{16}
+\beamer@slide {def:MRF}{20}
+\beamer@slide {eq:mrf}{25}
+\beamer@slide {eq:constr_mrf}{25}

@@ -136,9 +136,9 @@ Probabilistic inference based on hashing and randomization obtains
 probabilistic guarantees for marginal queries and sampling via querying
 optimization oracles subject to randomized constraints
 \citep{Gomes2006Sampling,Ermon13Wish,DBLP:conf/sat/AchlioptasT17,Chakraborty2013scalable}. \section{Preliminaries} \label{sec:prelim}
-\subsection{Markov Random Fields (MRF)} represent a Boltzmann distribution of the discrete variables
-$X=\{X_i\}_{i=1}^n$ over a Boolean hypercube $\mathcal{X}=\{0, 1\}^n$. For
-$x\in\mathcal{X}$, we have:
+\subsection{Markov Random Fields (MRF)}Markov Random Fields (MRF) represent a Boltzmann distribution of the discrete
+variables $X=\{X_i\}_{i=1}^n$ over a Boolean hypercube $\mathcal{X}=\{0,
+    1\}^n$. For $x\in\mathcal{X}$, we have:
 \begin{equation} \label{eq:mrf}
     P_{\theta}(X=x)=\frac{\exp \left(\phi_\theta(x)\right)}{Z(\theta)}.%
 \end{equation}
@@ -157,7 +157,7 @@ We also use $\var(\phi_{\theta, j})$ to represent the domain of $\phi_{\theta,
 %
 $\theta$ are the parameters to learn.
 
-\subsection{Constrained MRF} is the MRF model subject to a set of hard constraints
+\subsection{Constrained MRF} Constrained MRF is the MRF model subject to a set of hard constraints
 $\mathcal{C}=\{c_j\}_{j=1}^L$.
 %
 Here, each constraint $c_j$ limits the value assignments of a subset of

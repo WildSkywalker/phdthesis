@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  26 MAY 2025 03:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.26)  27 MAY 2025 21:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -84637,12 +84637,47 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 13.20004
-.\hbox(9.0+3.0)x455.30121, glue set - 0.03908
+.\hbox(9.0+3.0)x455.30121, glue set 0.29907
+..\OT1/cmr/m/n/12 M
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 k
+..\kern-0.32639
+..\OT1/cmr/m/n/12 o
+..\kern-0.32639
+..\OT1/cmr/m/n/12 v
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 R
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 n
+..\discretionary
+...\OT1/cmr/m/n/12 -
+..\OT1/cmr/m/n/12 d
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 m
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 F
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 d
+..\OT1/cmr/m/n/12 s
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 (
+..\OT1/cmr/m/n/12 M
+..\OT1/cmr/m/n/12 R
+..\OT1/cmr/m/n/12 F
+..\OT1/cmr/m/n/12 )
+..\glue 3.91663 plus 1.95634 minus 1.30684
 ..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 e
 ..\OT1/cmr/m/n/12 p
+..\discretionary
+...\OT1/cmr/m/n/12 -
 ..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 e
+..\discretionary
+...\OT1/cmr/m/n/12 -
 ..\OT1/cmr/m/n/12 s
 ..\OT1/cmr/m/n/12 e
 ..\OT1/cmr/m/n/12 n
@@ -84656,93 +84691,70 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 z
-..\OT1/cmr/m/n/12 m
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 n
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 d
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 b
-..\OT1/cmr/m/n/12 u
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 f
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 h
-..\OT1/cmr/m/n/12 e
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 d
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 t
 ..etc.
-.\penalty 10050
+.\penalty 20050
 .\glue(\baselineskip) 13.20004
-.\hbox(9.0+3.0)x455.30121, glue set 225.60464fil
-..\OT1/cmr/m/n/12 h
-..\kern-0.32639
-..\OT1/cmr/m/n/12 y
-..\OT1/cmr/m/n/12 p
-..\kern0.32639
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 u
+.\hbox(9.0+3.0)x455.30121, glue set 46.22122fil
+..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 b
-..\kern0.32639
+..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 s
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\mathon
-..\OMS/cmsy/m/n/12 X
-..\kern1.75713
+..\OML/cmm/m/it/12 X
+..\kern0.9434
 ..\glue(\thickmuskip) 3.33328 plus 3.33328
 ..\OT1/cmr/m/n/12 =
 ..\penalty 500
 ..\glue(\thickmuskip) 3.33328 plus 3.33328
 ..\OMS/cmsy/m/n/12 f
-..\OT1/cmr/m/n/12 0
-..\OML/cmm/m/it/12 ;
-..\glue(\thinmuskip) 1.99997
-..\OT1/cmr/m/n/12 1
+..\OML/cmm/m/it/12 X
+..\hbox(5.2887+0.0)x3.39395, shifted 1.79999
+...\OML/cmm/m/it/8 i
 ..\OMS/cmsy/m/n/12 g
-..\hbox(3.44444+0.0)x5.65747, shifted -4.3547
-...\OML/cmm/m/it/8 n
+..\vbox(10.76575+0.0)x14.25522, shifted 2.9666
+...\hbox(3.44444+0.0)x5.65747
+....\OML/cmm/m/it/8 n
+...\kern2.03261
+...\hbox(5.2887+0.0)x14.25522
+....\OML/cmm/m/it/8 i
+....\OT1/cmr/m/n/8 =
+....\OT1/cmr/m/n/8 1
 ..\mathoff
-..\OT1/cmr/m/n/12 .
-..\glue 5.22217 plus 5.87494 minus 0.43518
-..\OT1/cmr/m/n/12 F
-..\kern-0.97916
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 r
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\mathon
-..\OML/cmm/m/it/12 x
-..\glue(\thickmuskip) 3.33328 plus 3.33328
-..\OMS/cmsy/m/n/12 2
-..\penalty 500
-..\glue(\thickmuskip) 3.33328 plus 3.33328
-..\OMS/cmsy/m/n/12 X
-..\kern1.75713
-..\mathoff
-..\OT1/cmr/m/n/12 ,
-..\glue 3.91663 plus 2.44789 minus 1.04443
-..\OT1/cmr/m/n/12 w
+..\OT1/cmr/m/n/12 o
+..\kern-0.32639
+..\OT1/cmr/m/n/12 v
 ..\kern-0.32639
 ..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 r
 ..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 B
+..\OT1/cmr/m/n/12 o
+..\kern0.32639
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 n
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 h
+..\kern-0.32639
+..\OT1/cmr/m/n/12 y
+..\discretionary
+...\OT1/cmr/m/n/12 -
+..\OT1/cmr/m/n/12 p
+..\kern0.32639
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 r
+..\discretionary
+...\OT1/cmr/m/n/12 -
+..\OT1/cmr/m/n/12 c
+..\OT1/cmr/m/n/12 u
+..\OT1/cmr/m/n/12 b
 ..etc.
 .\penalty 10000
 .etc.
@@ -84788,7 +84800,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 15.37868
-.\hbox(9.82137+4.52216)x455.30121, glue set - 0.91217
+.\hbox(9.82137+4.52216)x455.30121, glue set 0.42079
+..\OT1/cmr/m/n/12 C
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 d
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 M
+..\OT1/cmr/m/n/12 R
+..\OT1/cmr/m/n/12 F
+..\glue 3.91663 plus 1.95634 minus 1.30684
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 s
 ..\glue 3.91663 plus 1.95831 minus 1.30554
@@ -84823,154 +84851,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 s
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 f
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 h
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 d
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 r
 ..etc.
 .\penalty 10000
 .\glue(\baselineskip) 11.67789
-.\hbox(9.0+3.35555)x455.30121, glue set - 0.85835
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 m
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 s
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 h
+.\hbox(9.0+3.35555)x455.30121, glue set - 0.45108
+..\OT1/cmr/m/n/12 H
 ..\OT1/cmr/m/n/12 e
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 v
-..\kern-0.65277
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 u
-..\OT1/cmr/m/n/12 e
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 g
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 m
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 n
-..\kern-0.32639
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 s
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 f
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 a
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 u
-..\OT1/cmr/m/n/12 b
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 f
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 v
-..\kern-0.65277
-..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 r
-..etc.
-.\glue(\baselineskip) 13.51118
-.\hbox(8.33331+3.35555)x455.30121, glue set - 0.86238
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 g
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 m
 ..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 n
-..\kern-0.32639
-..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\mathon
-..\OML/cmm/m/it/12 x
-..\mathoff
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 ^^L (ligature fi)
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 h
-..\OT1/cmr/m/n/12 e
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 n
-..\kern-0.32639
-..\OT1/cmr/m/n/12 t
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\mathon
-..\OML/cmm/m/it/12 c
-..\hbox(5.2887+1.55556)x4.39859, shifted 1.79999
-...\OML/cmm/m/it/8 j
-..\mathoff
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 d
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..etc.
-.\glue(\baselineskip) 10.54443
-.\hbox(11.30006+5.05563)x455.30121, glue set - 0.70605
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 d
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 m
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 v
-..\kern-0.65277
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 b
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 s
 ..\OT1/cmr/m/n/12 ,
 ..\glue 3.91663 plus 2.44789 minus 1.04443
-..\OT1/cmr/m/n/12 b
-..\OT1/cmr/m/n/12 u
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 c
+..\kern-0.32639
+..\OT1/cmr/m/n/12 h
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 c
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 n
+..\kern-0.32639
 ..\OT1/cmr/m/n/12 t
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\mathon
@@ -84979,71 +84885,44 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ...\OML/cmm/m/it/8 j
 ..\mathoff
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
 ..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 y
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 d
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 p
-..\kern0.32639
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 d
-..\OT1/cmr/m/n/12 s
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 v
-..\kern-0.65277
-..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 r
 ..\OT1/cmr/m/n/12 i
-..etc.
-.\glue(\baselineskip) 11.14441
-.\hbox(9.0+3.0)x455.30121, glue set - 0.58722
-..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 s
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 t
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 e
 ..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 d
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 c
+..\OT1/cmr/m/n/12 v
+..\kern-0.65277
 ..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 r
-..\glue 3.91663 plus 1.95831 minus 1.30554
-..\OT1/cmr/m/n/12 f
+..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 u
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 c
-..\OT1/cmr/m/n/12 t
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 o
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 .
-..\glue 5.22217 plus 5.87494 minus 0.43518
-..\OT1/cmr/m/n/12 C
-..\OT1/cmr/m/n/12 l
 ..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 a
-..\OT1/cmr/m/n/12 r
-..\OT1/cmr/m/n/12 l
-..\OT1/cmr/m/n/12 y
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 s
+..etc.
+.\glue(\baselineskip) 12.8445
+.\hbox(9.0+3.35555)x455.30121, glue set 0.1574
+..\OT1/cmr/m/n/12 W
 ..\kern-0.97916
-..\OT1/cmr/m/n/12 ,
-..\glue 3.91663 plus 2.44789 minus 1.04443
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 w
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\mathon
-..\OML/cmm/m/it/12 C
-..\kern0.86179
+..\OML/cmm/m/it/12 c
+..\hbox(5.2887+1.55556)x4.39859, shifted 1.79999
+...\OML/cmm/m/it/8 j
 ..\OT1/cmr/m/n/12 (
 ..\OML/cmm/m/it/12 x
 ..\OT1/cmr/m/n/12 )
@@ -85054,10 +84933,185 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 1
 ..\mathoff
 ..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 f
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 h
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 g
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 n
+..\kern-0.32639
+..\OT1/cmr/m/n/12 t
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\mathon
+..\OML/cmm/m/it/12 x
+..\mathoff
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 i
+..etc.
+.\glue(\baselineskip) 12.8445
+.\hbox(9.0+3.35555)x455.30121, glue set - 0.3442
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 h
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 t
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\mathon
+..\OML/cmm/m/it/12 x
+..\mathoff
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 s
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 n
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 g
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 m
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 n
+..\kern-0.32639
+..\OT1/cmr/m/n/12 t
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 o
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 l
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 d
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 m
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 v
+..\kern-0.65277
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 b
+..\OT1/cmr/m/n/12 l
+..\OT1/cmr/m/n/12 e
+..etc.
+.\glue(\baselineskip) 10.54443
+.\hbox(11.30006+5.05563)x455.30121, glue set - 0.99178
+..\OT1/cmr/m/n/12 W
+..\kern-0.97916
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 d
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\mathon
+..\OML/cmm/m/it/12 C
+..\kern0.86179
+..\OT1/cmr/m/n/12 (
+..\OML/cmm/m/it/12 x
+..\OT1/cmr/m/n/12 )
+..\glue(\thickmuskip) 3.33328 plus 3.33328
+..\OT1/cmr/m/n/12 =
+..\penalty 500
+..\glue(\thickmuskip) 3.33328 plus 3.33328
+..\hbox(0.0+12.00015)x11.33336, shifted -9.00008
+...\OMX/cmex/m/n/12 Q
+..\vbox(14.80014+1.55556)x15.25986, shifted 3.50008
+...\hbox(5.46666+0.0)x6.28064
+....\OML/cmm/m/it/8 L
+...\kern4.04478
+...\hbox(5.2887+1.55556)x15.25986
+....\OML/cmm/m/it/8 j
+....\kern0.46106
+....\OT1/cmr/m/n/8 =
+....\OT1/cmr/m/n/8 1
+..\glue(\thinmuskip) 1.99997
+..\OML/cmm/m/it/12 c
+..\hbox(5.2887+1.55556)x4.39859, shifted 1.79999
+...\OML/cmm/m/it/8 j
+..\OT1/cmr/m/n/12 (
+..\OML/cmm/m/it/12 x
+..\OT1/cmr/m/n/12 )
+..\mathoff
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 s
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 h
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 d
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 c
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 r
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 f
+..\OT1/cmr/m/n/12 u
 ..etc.
 .\penalty 50
-.\glue(\baselineskip) 13.86673
-.\hbox(8.33331+0.0)x455.30121, glue set 326.25671fil
+.\glue(\baselineskip) 11.8111
+.\hbox(8.33331+0.0)x455.30121, glue set 172.00691fil
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 e
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 ^^L (ligature fi)
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 d
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 a
+..\OT1/cmr/m/n/12 n
+..\OT1/cmr/m/n/12 d
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\mathon
+..\OT1/cmr/m/n/12 0
+..\mathoff
+..\glue 3.91663 plus 1.95831 minus 1.30554
+..\OT1/cmr/m/n/12 o
+..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 h
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 r
+..\OT1/cmr/m/n/12 w
+..\OT1/cmr/m/n/12 i
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 e
+..\OT1/cmr/m/n/12 .
+..\glue 5.22217 plus 5.87494 minus 0.43518
 ..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 h
 ..\OT1/cmr/m/n/12 e
@@ -85076,14 +85130,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\glue 3.91663 plus 1.95831 minus 1.30554
 ..\OT1/cmr/m/n/12 M
 ..\OT1/cmr/m/n/12 R
-..\OT1/cmr/m/n/12 F
-..\glue 3.91663 plus 1.95634 minus 1.30684
-..\OT1/cmr/m/n/12 i
-..\OT1/cmr/m/n/12 s
-..\OT1/cmr/m/n/12 :
-..\penalty 10000
-..\glue(\parfillskip) 0.0 plus 1.0fil
-..\glue(\rightskip) 0.0
+..etc.
 .\penalty 10000
 .\glue(\abovedisplayskip) 15.87595
 .\glue(\baselineskip) 8.08195
@@ -155160,7 +155207,7 @@ Here is how much of TeX's memory you used:
  1302 hyphenation exceptions out of 8191
  91i,20n,120p,1284b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm8.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm12.pk> <C:\Users\nunic\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/nunic/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (243 pages, 13237013 bytes).
+Output written on phdthesis_YiGu.pdf (243 pages, 13237029 bytes).
 PDF statistics:
  4290 PDF objects out of 4296 (max. 8388607)
  1027 named destinations out of 1200 (max. 500000)

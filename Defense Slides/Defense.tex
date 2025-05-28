@@ -407,11 +407,107 @@ Since the all probability masses are normalized, we can assume without loss of g
   \frametitle{Probabilistic Graphical Models}
   Probabilistic graphic models (PGMs) are a class of statistical models that use graphs to represent the dependencies among random variables.
 
+  Example: genetic expression:
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=9cm]{Gene_regulatory_networks.jpg}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
+  %Mention BN and say that we are focusing on Markov Random Fields (MRFs) in this thesis.
   \frametitle{Markov Random Fields}
+  Let $[n] = \{1,2,\dots,n\}$ and $\mathcal{X} = (X_t)_{t \in [n]}$ be a finite
+dimension random vector with each $X_t$ taking values in a finite set
+$\mathcal{S}_t = \{1,2,\dots,m_t\}$. Suppose $[n]$ is the set of vertices of a
+graph. For each $t$, denote $\mathcal{N}_t$ the set of vertices $s$ such that
+$s$ is adjacent to $t$ in the graph.
+
+\begin{definition} \label{def:MRF}
+    The process $(X_t)_{t \in [n]}$ is said to be a Markov random field if
+
+    (i) for each tuple $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$, the joint probability satisfies
+    \begin{align}
+        P(X_1 = x_1, X_2 = x_2, \dots, X_n = x_n) >0;
+    \end{align}
+
+    (ii) for each $t$ and $x$,
+    \begin{align}
+        \p \{X_t = x_t | X_s = x_s, s \neq t\} = \p \{X_t = x_t | X_s = x_s, s \in \mathcal{N}_t \}.
+    \end{align}
+\end{definition}
+%We can see that the definition of MRF resembles much of the discrete-time Markov chain.
+%Instead of the sequential Markov property, MRF has its own Markov property induced by
+%the graph topology.
 \end{frame}
 
+\begin{frame}
+  \frametitle{Gibbs distributions}
+  A subset of vertices $A \subset [n]$ is
+said to be complete (or a clique) if each pair of vertices is connected with an
+edge in the graph.
+\begin{definition}
+    Let $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$ be an arbitrary tuple from the joint distribution, and $\mathcal{C}$ the collection of all complete vertex subsets. A probability distribution $Q$ is called a Gibbs distribution (or Gibbs random field) if it can be written in the form
+    \begin{align}
+        Q(x) = \prod_{A \in \mathcal{C}} V_A(x),
+    \end{align}
+    where $V_A(x)$ is a positive function that depends only on $x_i$'s with $i \in A$.
+\end{definition}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hammersley-Clifford theorem}
+  It is clear that each process $(X_t)_{t \in [n]}$ has a corresponding Gibbs distribution based on the dependencies. Now we can state the powerful Hammersley-Clifford theorem:
+\begin{theorem}[Hammersley-Clifford theorem]
+    Let $Q$ be a probability distribution on $\prod_{i=1}^n \mathcal{S}_i$. Then $Q$ is a Gibbs distribution if and only if it is a Markov random field with respect to the same graph structure.
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Alternative formulation of MRFs}
+  Example:
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{MRFexample.png}
+\end{figure}
+In the two graphs above, the factor of the value assignments are
+\begin{align}
+    \tilde{p}(a,b,c,d) &= \phi(a,b)\phi(b,c)\phi(c,d)\phi(a,d), \nonumber \\
+    \tilde{p}(a,b,c,d) &= \phi(a,b,d)\phi(b,c,d).
+\end{align}
+where $\phi$ can be any positive functions defined by the user.
+\begin{align}
+    p(a,b,c,d) = \frac{1}{Z}\tilde{p}(a,b,c,d), \quad Z = \sum_{(a,b,c,d)} \tilde{p}(a,b,c,d).
+\end{align}
+\end{frame}
+
+\begin{frame} \frametitle{Alternative formulation of MRFs (cont.)}
+  \begin{definition}[Alternative Definition of MRF]
+    Let $X_1,\dots,X_n$ be random variables. A Markov Random Field (MRF) is the joint probability distribution of $(X_i)_{i \in [n]}$ over an undirected graph $G=(V:=[n],E)$ with each vertex $i$ representing the random variable $X_i$. In addition, the joint probability $p$ has the form
+    \begin{align}
+        p(x_1,\dots,x_n) = \frac{1}{Z} \prod_{C \in \mathcal{C}} \phi_C(x_C),
+    \end{align}
+    where $\mathcal{C}$ is the collection of all cliques(complete subgraphs) in $G$, each factor $\phi_C$ is a non-negative function, and
+    \begin{align}
+        Z = \sum_{x_1,\dots,x_n} \prod_{C \in \mathcal{C}} \phi_C(x_C)
+    \end{align}
+    is the normalizing partition function.
+\end{definition}
+\end{frame}
+
+\begin{frame} \frametitle{Exponential family and constrained MRFs}
+  We can define MRF as a Boltzmann distribution of the discrete
+variables $X=\{X_i\}_{i=1}^n$ over a Boolean hypercube $\mathcal{X}=\{0,
+    1\}^n$. For $x\in\mathcal{X}$, we have:
+\begin{equation} \label{eq:mrf}
+    P_{\theta}(X=x)=\frac{\exp \left(\phi_\theta(x)\right)}{Z(\theta)}.%
+\end{equation}
+Here, $Z(\theta)=\sum_{x'\in \mathcal{X}} \exp\left(\phi_\theta(x')\right)$ is the partition function. $\phi_\theta(x)=\sum_{j=1}^m \phi_{\theta,j}(x_{j})$ is the potential function. Each $\phi_{\theta,j}$ is a \textit{factor potential}, which maps a value assignment over a subset of variables $X_j \subseteq X$ to a real number. For a set of hard constraints
+$\mathcal{C}=\{c_j\}_{j=1}^L$. Define the constrained MRF as
+\begin{equation} \label{eq:constr_mrf}
+    P_{\theta}(X=x|\mathcal{C})=\frac{\exp \left(\phi_\theta(x)\right)C(x)}{Z_\mathcal{C}(\theta)},
+\end{equation}
+where $C(x) = \prod_{j=1}^L c_j(x)$ is the indicator function.
+\end{frame}
 \end{document}
 

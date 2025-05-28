@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1748319949.46814 "e:/NU Staff/Thesis - GIT/Defense Slides/Defense.tex" "Defense.pdf" "Defense" 1748319952.57339 0
+["pdflatex"] 1748398224.67405 "e:/NU Staff/Thesis - GIT/Defense Slides/Defense.tex" "Defense.pdf" "Defense" 1748398226.69794 0
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747189646 181125 c7fcaa1fcd3d3b81a40f886c68206bae ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1626411455 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nunic/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1626411456 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -260,12 +260,14 @@
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nunic/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "Defense.aux" 1748319952 4075 c2f378fa91be7af6c3f3a5ca94a90b9d "pdflatex"
-  "Defense.nav" 1748319952 2039 5a4196ea47006e239fc20568aaec1af6 "pdflatex"
-  "Defense.out" 1748319951 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Defense.tex" 1748319948 17306 edd6e08c63435d4374094b2f73fa8e0a ""
+  "Defense.aux" 1748398226 4998 78787ad986d3d794ea25fdeb4db69fab "pdflatex"
+  "Defense.nav" 1748398226 2504 f282411faecc54988344dd4ba00e9875 "pdflatex"
+  "Defense.out" 1748398225 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Defense.tex" 1748398224 21680 a5a1edd4e7723b4dac4d7629bbebb8ed ""
+  "Gene_regulatory_networks.jpg" 1744346313 654851 d5662a58eb6b35606cdde945b1b53367 ""
+  "MRFexample.png" 1744595955 99575 d392ee2161f602e79041edebdbda5f39 ""
   "concentration_distance_hypercube.png" 1744157114 146022 d04e4611576f0cf5cc5a8bd70184b9ed ""
-  "e:/NU Staff/Thesis - GIT/Defense Slides/Defense.tex" 1748319948 17306 edd6e08c63435d4374094b2f73fa8e0a ""
+  "e:/NU Staff/Thesis - GIT/Defense Slides/Defense.tex" 1748398224 21680 a5a1edd4e7723b4dac4d7629bbebb8ed ""
   (generated)
   "Defense.aux"
   "Defense.log"
