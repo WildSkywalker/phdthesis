@@ -8,3 +8,6 @@
 \beamer@slide {def:MRF}{20}
 \beamer@slide {eq:mrf}{25}
 \beamer@slide {eq:constr_mrf}{25}
+\beamer@slide {eq:gradient}{27}
+\beamer@slide {th:product-dist}{30}
+\beamer@slide {eq:FA}{35}

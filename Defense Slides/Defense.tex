@@ -21,6 +21,10 @@
 
 %\setbeamercovered{transparent}
 
+\usepackage{algorithm}
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
 \usepackage{xspace}
 \usepackage{xcolor}
 \usepackage{tikz}
@@ -120,6 +124,7 @@
 \newcommand{\lovasz}{{Lov\'asz}\xspace}
 \newcommand{\ki}{\mathbf{Ker}_{\mathbf{I}}}
 \newcommand{\ko}{\mathbf{Ker}_{\mathbf{O}}}
+\newcommand{\var}{\mathtt{var}}
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 
 \newcommand{\Pp}{\mathcal{P}}
@@ -284,45 +289,45 @@
 
   \begin{resizealign}
     F_{\rho,\mu}(x,\sigma) = \int \frac{\ki(x,x',\sigma)}{\int \ki(x,x',\sigma)d\mu(x')} \log \left(\frac{\ki(x,x',\sigma)}{\int \ki(x,x',\sigma)d\mu(x')}\right) d\mu(x') + \log \rho.
-\end{resizealign}
+  \end{resizealign}
 
-$\sigma^*_{\rho,\mu} : \mathbb{R}^d \to \mathbb{R}$ the unique solution of the equation
-\begin{align}
+  $\sigma^*_{\rho,\mu} : \mathbb{R}^d \to \mathbb{R}$ the unique solution of the equation
+  \begin{align}
     F_{\rho,\mu}(x,\sigma) = 0.
-\end{align}
-$\sigma_i$ serves the anchor point of distributions induced by the input data. $\sigma^*_{\rho,\mu}$ is its asymptotic limit.
+  \end{align}
+  $\sigma_i$ serves the anchor point of distributions induced by the input data. $\sigma^*_{\rho,\mu}$ is its asymptotic limit.
 \end{frame}
 
 \begin{frame}
   \frametitle{Some extra notations (cont.)}
-\textbf{Continuous version of induced probability distributions:}
+  \textbf{Continuous version of induced probability distributions:}
 
-\vspace{1em}
-$\psi: \mathbb{R}^d \to \mathbb{R}$ be a given function and $p_{\psi}: \mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$ be defined by
-\begin{align}
+  \vspace{1em}
+  $\psi: \mathbb{R}^d \to \mathbb{R}$ be a given function and $p_{\psi}: \mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$ be defined by
+  \begin{align}
     p_{\psi}(x,x') = \frac{1}{2}\left( \frac{\ki(x,x',\psi(x))}{\int \ki(x,x',\psi(x))d\mu(x')} + \frac{\ki(x,x',\psi(x'))}{\int \ki(x,x',\psi(x'))d\mu(x)}\right).
-\end{align}
+  \end{align}
 
-$q: \mathbb{R}^s \times \mathbb{R}^s \to \mathbb{R}$ be given by
-\begin{align}
+  $q: \mathbb{R}^s \times \mathbb{R}^s \to \mathbb{R}$ be given by
+  \begin{align}
     q(y,y') = \frac{\ko(y,y')}{\iint \ko(y,y')d\mu(y) d\mu(y')}.
-\end{align}
+  \end{align}
 \end{frame}
 
 \begin{frame}
   \frametitle{Some extra notations (cont.)}
-\textbf{Continuous version of the loss function:}
-\begin{align}
+  \textbf{Continuous version of the loss function:}
+  \begin{align}
     I_{\rho}(\mu) = \iint p_{\sigma^*_{\rho,\mu}}(x,x') \log\left(\frac{p_{\sigma^*_{\rho,\mu}}(x,x')}{q(y,y')}\right) d\mu(x,y) d\mu(x',y').
-\end{align}
-Recall $\mu_X \in \mathcal{M}(\mathbb{R}^d)$ is an arbitrary given probability measure. We set $\mathcal{P}_X$ to be the set of probability measures on $\mathbb{R}^d \times \mathbb{R}^s$ whose marginal coincides with $\mu_X$. Formally speaking,
-\begin{align}
+  \end{align}
+  Recall $\mu_X \in \mathcal{M}(\mathbb{R}^d)$ is an arbitrary given probability measure. We set $\mathcal{P}_X$ to be the set of probability measures on $\mathbb{R}^d \times \mathbb{R}^s$ whose marginal coincides with $\mu_X$. Formally speaking,
+  \begin{align}
     \mathcal{P}_X := \{\mu \in \mathcal{M}(\mathbb{R}^d \times \mathbb{R}^s): \text{the $\mathbb{R}^d$ marginal of $\mu$ is $\mu_X$}\}.
-\end{align}
-Lastly, define
-\begin{resizealign}
+  \end{align}
+  Lastly, define
+  \begin{resizealign}
     \tilde{\mathcal{P}}_X := \left\{ \mu \in \mathcal{P}_X: \int (p_{\sigma^*_{\rho,\mu}}(x,x')-q(y,y'))\frac{\frac{\partial}{\partial y}\ko{(y,y')}}{\ko{(y,y')}} d\mu(x',y') = 0,\mu(x,y)\text{-a.e.}\right\}.
-\end{resizealign}
+  \end{resizealign}
 \end{frame}
 
 \begin{frame}
@@ -330,7 +335,7 @@ Lastly, define
   \begin{condition}[Input Kernel Conditions] \label{input_kernel_conditions}
     Let $w: \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be a fixed function. The input kernel has the form of
     \begin{align} \label{tsne:input_kernel}
-        \ki(x,x',\sigma) = \exp(-w(\sigma\norm{x-x'}^{\theta}))
+      \ki(x,x',\sigma) = \exp(-w(\sigma\norm{x-x'}^{\theta}))
     \end{align}
     Here, $\theta>0$ is a fixed constant. $w$ satisfies:
 
@@ -340,28 +345,28 @@ Lastly, define
 
     3. The following integral converges:
     \begin{align}
-        \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty.
+      \int_0^{\infty} t^{d-1} w(t^{\theta}) \exp(-w(t^{\theta}))dt < \infty.
     \end{align}
-\end{condition}
-Since the all probability masses are normalized, we can assume without loss of generality that $w(0)=0$ from now on.
+  \end{condition}
+  Since the all probability masses are normalized, we can assume without loss of generality that $w(0)=0$ from now on.
 \end{frame}
 
 \begin{frame}
   \frametitle{Conditions for kernels}
-\begin{condition}[Output Kernel Conditions] \label{output_kernel_conditions}
+  \begin{condition}[Output Kernel Conditions] \label{output_kernel_conditions}
     The output kernel depends only on the distance between two output data points $y$ and $y'$. In particular, $\ko(y,y') = k (\norm{y-y'})$ and:
 
     1. $k: \mathbb{R}_{\geq 0} \to \mathbb{R}^+$ is decreasing and bounded.
 
     2. $\ko$ satisfies
     \begin{align}
-        \iint_{(0,\infty)^2} \ko(y,y') dy dy' < \infty.
+      \iint_{(0,\infty)^2} \ko(y,y') dy dy' < \infty.
     \end{align}
 
     3. $k$ has bounded derivative.
 
     4. $k'(0) = 0$.
-\end{condition}
+  \end{condition}
 \end{frame}
 
 \begin{frame}
@@ -369,13 +374,13 @@ Since the all probability masses are normalized, we can assume without loss of g
   \begin{theorem} \label{tsne:main_theorem_1}
     Assume $\mu_X$ has a continuous density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be i.i.d random variables with probability measure $\mu_X$. If both input and output condition hold, then for any $\rho \in (0,1)$,
     \begin{align}
-        \lim_{n \to \infty} \inf_Y L_{n,\rho}(X,Y) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu).
+      \lim_{n \to \infty} \inf_Y L_{n,\rho}(X,Y) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu).
     \end{align}
     Moreover, there exist a measure $\mu^*$ and a sub-sequence $\{n_k\}$ such that $\mu_{n_k} \to \mu^*$ weakly and $I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$.
-\end{theorem}
-\begin{theorem} \label{tsne:main_theorem_2}
+  \end{theorem}
+  \begin{theorem} \label{tsne:main_theorem_2}
     Under the same assumptions of theorem \ref{tsne:main_theorem_1}, $\mu^*$ has compact support.
-\end{theorem}
+  \end{theorem}
 \end{frame}
 
 \begin{frame}
@@ -384,22 +389,21 @@ Since the all probability masses are normalized, we can assume without loss of g
 
   \vspace{1em}
   \begin{itemize}
-  \item [$\bullet$] t-SNE is about the relationship between the data points.No generality loss by assuming the kernels are functions of the distance.
-  \item [$\bullet$] Kernels are always non-negative. No generality loss by inserting exponential functions in input kernels for it being a smooth bijection.
-  \item [$\bullet$] $\sigma$ is only used to control entropy (and in our case it does).
-  \item [$\bullet$] Integrability is the bare minimum.
-  \item [$\bullet$] The rest is only about decaying speed.
-  %Mention heavy tail tsne and crowding problems fo SNE. Say that the boundedness for output kernel is not only necessary for the proof but also intuitively makes sense. The output kernel cannot decay too fast.
+    \item [$\bullet$] t-SNE is about the relationship between the data points.No generality loss by assuming the kernels are functions of the distance.
+    \item [$\bullet$] Kernels are always non-negative. No generality loss by inserting exponential functions in input kernels for it being a smooth bijection.
+    \item [$\bullet$] $\sigma$ is only used to control entropy (and in our case it does).
+    \item [$\bullet$] Integrability is the bare minimum.
+    \item [$\bullet$] The rest is only about decaying speed.
+          %Mention heavy tail tsne and crowding problems fo SNE. Say that the boundedness for output kernel is not only necessary for the proof but also intuitively makes sense. The output kernel cannot decay too fast.
   \end{itemize}
 \end{frame}
-
 
 \begin{frame}
   \frametitle{The problems of dependence}
   Textbooks start with independence, real problems strand because of dependence.
-    \begin{itemize}
-  \item [$\bullet$] Weather, genetic expression, finance, etc.
-  \item [$\bullet$] For math itself, too many theorems cannot be extended beyond Gaussian or i.i.d. settings.
+  \begin{itemize}
+    \item [$\bullet$] Weather, genetic expression, finance, etc.
+    \item [$\bullet$] For math itself, too many theorems cannot be extended beyond Gaussian or i.i.d. settings.
   \end{itemize}
 \end{frame}
 
@@ -408,7 +412,7 @@ Since the all probability masses are normalized, we can assume without loss of g
   Probabilistic graphic models (PGMs) are a class of statistical models that use graphs to represent the dependencies among random variables.
 
   Example: genetic expression:
-    \begin{figure}[ht]
+  \begin{figure}[ht]
     \centering
     \includegraphics[width=9cm]{Gene_regulatory_networks.jpg}
   \end{figure}
@@ -418,49 +422,49 @@ Since the all probability masses are normalized, we can assume without loss of g
   %Mention BN and say that we are focusing on Markov Random Fields (MRFs) in this thesis.
   \frametitle{Markov Random Fields}
   Let $[n] = \{1,2,\dots,n\}$ and $\mathcal{X} = (X_t)_{t \in [n]}$ be a finite
-dimension random vector with each $X_t$ taking values in a finite set
-$\mathcal{S}_t = \{1,2,\dots,m_t\}$. Suppose $[n]$ is the set of vertices of a
-graph. For each $t$, denote $\mathcal{N}_t$ the set of vertices $s$ such that
-$s$ is adjacent to $t$ in the graph.
+  dimension random vector with each $X_t$ taking values in a finite set
+  $\mathcal{S}_t = \{1,2,\dots,m_t\}$. Suppose $[n]$ is the set of vertices of a
+  graph. For each $t$, denote $\mathcal{N}_t$ the set of vertices $s$ such that
+  $s$ is adjacent to $t$ in the graph.
 
-\begin{definition} \label{def:MRF}
+  \begin{definition} \label{def:MRF}
     The process $(X_t)_{t \in [n]}$ is said to be a Markov random field if
 
     (i) for each tuple $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$, the joint probability satisfies
     \begin{align}
-        P(X_1 = x_1, X_2 = x_2, \dots, X_n = x_n) >0;
+      P(X_1 = x_1, X_2 = x_2, \dots, X_n = x_n) >0;
     \end{align}
 
     (ii) for each $t$ and $x$,
     \begin{align}
-        \p \{X_t = x_t | X_s = x_s, s \neq t\} = \p \{X_t = x_t | X_s = x_s, s \in \mathcal{N}_t \}.
+      \p \{X_t = x_t | X_s = x_s, s \neq t\} = \p \{X_t = x_t | X_s = x_s, s \in \mathcal{N}_t \}.
     \end{align}
-\end{definition}
-%We can see that the definition of MRF resembles much of the discrete-time Markov chain.
-%Instead of the sequential Markov property, MRF has its own Markov property induced by
-%the graph topology.
+  \end{definition}
+  %We can see that the definition of MRF resembles much of the discrete-time Markov chain.
+  %Instead of the sequential Markov property, MRF has its own Markov property induced by
+  %the graph topology.
 \end{frame}
 
 \begin{frame}
   \frametitle{Gibbs distributions}
   A subset of vertices $A \subset [n]$ is
-said to be complete (or a clique) if each pair of vertices is connected with an
-edge in the graph.
-\begin{definition}
+  said to be complete (or a clique) if each pair of vertices is connected with an
+  edge in the graph.
+  \begin{definition}
     Let $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$ be an arbitrary tuple from the joint distribution, and $\mathcal{C}$ the collection of all complete vertex subsets. A probability distribution $Q$ is called a Gibbs distribution (or Gibbs random field) if it can be written in the form
     \begin{align}
-        Q(x) = \prod_{A \in \mathcal{C}} V_A(x),
+      Q(x) = \prod_{A \in \mathcal{C}} V_A(x),
     \end{align}
     where $V_A(x)$ is a positive function that depends only on $x_i$'s with $i \in A$.
-\end{definition}
+  \end{definition}
 \end{frame}
 
 \begin{frame}
   \frametitle{Hammersley-Clifford theorem}
   It is clear that each process $(X_t)_{t \in [n]}$ has a corresponding Gibbs distribution based on the dependencies. Now we can state the powerful Hammersley-Clifford theorem:
-\begin{theorem}[Hammersley-Clifford theorem]
+  \begin{theorem}[Hammersley-Clifford theorem]
     Let $Q$ be a probability distribution on $\prod_{i=1}^n \mathcal{S}_i$. Then $Q$ is a Gibbs distribution if and only if it is a Markov random field with respect to the same graph structure.
-\end{theorem}
+  \end{theorem}
 \end{frame}
 
 \begin{frame}
@@ -469,45 +473,166 @@ edge in the graph.
   \begin{figure}[ht]
     \centering
     \includegraphics[width=6cm]{MRFexample.png}
-\end{figure}
-In the two graphs above, the factor of the value assignments are
-\begin{align}
-    \tilde{p}(a,b,c,d) &= \phi(a,b)\phi(b,c)\phi(c,d)\phi(a,d), \nonumber \\
-    \tilde{p}(a,b,c,d) &= \phi(a,b,d)\phi(b,c,d).
-\end{align}
-where $\phi$ can be any positive functions defined by the user.
-\begin{align}
+  \end{figure}
+  In the two graphs above, the factor of the value assignments are
+  \begin{align}
+    \tilde{p}(a,b,c,d) & = \phi(a,b)\phi(b,c)\phi(c,d)\phi(a,d), \nonumber \\
+    \tilde{p}(a,b,c,d) & = \phi(a,b,d)\phi(b,c,d).
+  \end{align}
+  where $\phi$ can be any positive functions defined by the user.
+  \begin{align}
     p(a,b,c,d) = \frac{1}{Z}\tilde{p}(a,b,c,d), \quad Z = \sum_{(a,b,c,d)} \tilde{p}(a,b,c,d).
-\end{align}
+  \end{align}
 \end{frame}
 
 \begin{frame} \frametitle{Alternative formulation of MRFs (cont.)}
   \begin{definition}[Alternative Definition of MRF]
     Let $X_1,\dots,X_n$ be random variables. A Markov Random Field (MRF) is the joint probability distribution of $(X_i)_{i \in [n]}$ over an undirected graph $G=(V:=[n],E)$ with each vertex $i$ representing the random variable $X_i$. In addition, the joint probability $p$ has the form
     \begin{align}
-        p(x_1,\dots,x_n) = \frac{1}{Z} \prod_{C \in \mathcal{C}} \phi_C(x_C),
+      p(x_1,\dots,x_n) = \frac{1}{Z} \prod_{C \in \mathcal{C}} \phi_C(x_C),
     \end{align}
     where $\mathcal{C}$ is the collection of all cliques(complete subgraphs) in $G$, each factor $\phi_C$ is a non-negative function, and
     \begin{align}
-        Z = \sum_{x_1,\dots,x_n} \prod_{C \in \mathcal{C}} \phi_C(x_C)
+      Z = \sum_{x_1,\dots,x_n} \prod_{C \in \mathcal{C}} \phi_C(x_C)
     \end{align}
     is the normalizing partition function.
-\end{definition}
+  \end{definition}
 \end{frame}
 
 \begin{frame} \frametitle{Exponential family and constrained MRFs}
   We can define MRF as a Boltzmann distribution of the discrete
-variables $X=\{X_i\}_{i=1}^n$ over a Boolean hypercube $\mathcal{X}=\{0,
+  variables $X=\{X_i\}_{i=1}^n$ over a Boolean hypercube $\mathcal{X}=\{0,
     1\}^n$. For $x\in\mathcal{X}$, we have:
-\begin{equation} \label{eq:mrf}
+  \begin{equation} \label{eq:mrf}
     P_{\theta}(X=x)=\frac{\exp \left(\phi_\theta(x)\right)}{Z(\theta)}.%
-\end{equation}
-Here, $Z(\theta)=\sum_{x'\in \mathcal{X}} \exp\left(\phi_\theta(x')\right)$ is the partition function. $\phi_\theta(x)=\sum_{j=1}^m \phi_{\theta,j}(x_{j})$ is the potential function. Each $\phi_{\theta,j}$ is a \textit{factor potential}, which maps a value assignment over a subset of variables $X_j \subseteq X$ to a real number. For a set of hard constraints
-$\mathcal{C}=\{c_j\}_{j=1}^L$. Define the constrained MRF as
-\begin{equation} \label{eq:constr_mrf}
+  \end{equation}
+  Here, $Z(\theta)=\sum_{x'\in \mathcal{X}} \exp\left(\phi_\theta(x')\right)$ is the partition function. $\phi_\theta(x)=\sum_{j=1}^m \phi_{\theta,j}(x_{j})$ is the potential function. Each $\phi_{\theta,j}$ is a \textit{factor potential}, which maps a value assignment over a subset of variables $X_j \subseteq X$ to a real number. For a set of hard constraints
+  $\mathcal{C}=\{c_j\}_{j=1}^L$. Define the constrained MRF as
+  \begin{equation} \label{eq:constr_mrf}
     P_{\theta}(X=x|\mathcal{C})=\frac{\exp \left(\phi_\theta(x)\right)C(x)}{Z_\mathcal{C}(\theta)},
-\end{equation}
-where $C(x) = \prod_{j=1}^L c_j(x)$ is the indicator function.
+  \end{equation}
+  where $C(x) = \prod_{j=1}^L c_j(x)$ is the indicator function.
+\end{frame}
+
+\begin{frame}
+  \frametitle{The context of machine learning problems}
+  MRF can be used to represent constraint-satisfaction problems where each vertex represents a constraint and an edge is drawn if two constraints share at least one variable.
+  \begin{definition}[Extremal Condition]
+    A set of constraints $\mathcal{C}$ is called extremal if and only if for each pair of constraints $c_i ,c_j \in \mathcal{C}$, (i) either their domain variables do not intersect, i.e., ${\var(c_i)} \cap {\var(c_j)} = \emptyset$.  (ii) or for all $x\in \mathcal{X}$, $c_i(x)=1$ or $c_j(x)=1$.
+  \end{definition}
+  The extremal condition represents a wide class of constraints. For constraints that can fail simultaneously, we can choose a smaller data space to make the setup more concise and achieve extremal conditions.
+\end{frame}
+
+\begin{frame}
+  \frametitle{The context of machine learning problems (cont.)}
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{MRFContext.png}
+  \end{figure}
+  The computation of negative log-likelihood's gradient is computationally intractable because of the partition function $Z(\theta)$ and corresponding conditional distribution.
+  \begin{equation}
+    \begin{aligned}\label{eq:gradient}
+      \nabla\ell_{\mathcal{C}} & (\theta)=-\frac{1}{N}\sum_{k=1}^N\nabla \phi_{\theta}(x^k)+ \nabla\log Z_{\mathcal{C}}(\theta)                                                                           \\
+                               & =-\mathbb{E}_{{x}\sim \mathcal{D}}\left(\nabla\phi_{\theta}({x})\right)+\mathbb{E}_{\tilde{x}\sim P_{\theta}(x|\mathcal{C})}\left(\nabla\phi_{\theta}(\tilde{x})\right).
+    \end{aligned}
+  \end{equation}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sampling methods and \lovasz Local Lemma}
+  In order to compute the term $\mathbb{E}_{\tilde{x}\sim P_{\theta}(x|\mathcal{C})}\left(\nabla\phi_{\theta}(\tilde{x})\right)$ using Monte Carlo sampling, we need to sample from the distribution $P_{\theta}(x|\mathcal{C})$.
+  \begin{lemma}[Original \lovasz Local Lemma (1975)]
+    Let $A_1,\dots,A_k$ be a sequence of events such that each event occurs with probability at most $p$ and such that each event if independent of all the other events except for at most $d$ of them. Assume
+    \begin{align}
+      4pd \leq 1.
+    \end{align}
+    Then there is a nonzero probability that none of the events occurs.
+  \end{lemma}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sampling algorithm using \lovasz Local Lemma}
+  % \begin{algorithm}
+  % \caption{Sampling Through Lov\'asz Local Lemma.}
+  \begin{algorithmic}[t]
+    \Require{
+    Random variables $X=\{X_{i}\}_{i=1}^n$; Constraints $\mathcal{C}=\{c_j\}_{j=1}^L$; Initial parameters of the constrained MRF $\theta$.}
+    %
+    \\
+    \State $x_i\sim\frac{\exp(\theta_i x_i)}{\sum_{x_i\in \{0,1\}}\exp(\theta_ix_i)}$, for $1\leq i\leq n$. \Comment{initialize}
+    \While{$C(x)=0$}
+    \State Find all violated constraints $S\subseteq \mathcal{C}$ in $x$.
+    \State {$x_k{\sim}\frac{\exp(\theta_k x_k)}{\underset{{x_k\in \{0,1\}}}{\sum}\exp(\theta_k x_k)}, \text{for } x_k \in \var(S)$.}\Comment{resample}
+    \EndWhile \\
+    \Return  A valid sample $x$ drawn from $P_{\theta}(X=x|\mathcal{C})$.
+  \end{algorithmic}
+  % \end{algorithm}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Theoretical guarantees of the sampling algorithm}
+  The sampling output follows the exact conditional distribution.
+  \begin{theorem}[Probability Distribution] \label{th:product-dist}
+    Given  random variables $X=\{X_{i}\}_{i=1}^n$, constraints $\mathcal{C}=\{c_j\}_{j=1}^L$ that satisfy the extremal condition, and the parameters of the constrained MRF in the single variable form  $\theta$. Upon termination, the sampling algorithm outputs an assignment $x$ that is randomly drawn from the constrained MRF distribution: $x\sim P_\theta(X=x | \mathcal{C})$.
+  \end{theorem}
+\end{frame}
+
+\begin{frame}
+  Let $T_i$ be the total number of samplings that are related to the $i$-th constraint $c_i$ (meaning the resampling changes variables related to $c_i$). Our work gave a new, correct proof of the following lemma and theorem.
+  \frametitle{Running time estimation}
+  \begin{lemma}[Guo, 2017 and Gu et al., 2023] Let $q_{\emptyset}$ be a non-zero probability of all the constraints are satisfied. Let $q_{\{c_j\}}$ denote the probability that only constraint $c_j$ is broken and the rest all hold. If $q_\emptyset>0$, then
+    $\e(T_i) ={q_{\{c_j\}}}/{q_\emptyset}$.
+  \end{lemma}
+  \begin{theorem}[Guo, 2017 and Gu et al., 2023]Under extremal condition,
+    the total number of re-samplings throughout the algorithm is then $\frac{1}{q_{\emptyset}}\sum_{j=1}^L q_{\{c_j\}}$.
+  \end{theorem}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Selected experimental results: random K-SAT}
+  Our ML framework based on LLL and MRF outputs 100\% valid samples with unprecedented efficiency. The strength resides in the underlying probabilistic graphical model and the sampling algorithm.
+  \begin{figure}[ht]
+    \begin{minipage}{.48\linewidth}
+      \centering
+      \includegraphics[width=1\linewidth]{sampling.randkcnf.weighted-crop.pdf}
+    \end{minipage}%
+    \begin{minipage}{.41\linewidth}
+      \raggedleft
+      \includegraphics[width=0.99\linewidth]{valid.randkcnf.weighted.pdf}\\
+      \includegraphics[width=0.89\linewidth]{resample.randkcnf.weighted.pdf}
+    \end{minipage}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The concept of latent dimensions}
+  Actual dimensions (all pixel data) vs latent dimension (which digit to draw):
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=10cm]{VAEMNIST.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Autoencoder: combining PGMs and dimensionality reduction}
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=12cm]{variational-autoencoder-neural-network.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{VarFA: Variational Factor Analysis}
+  Assume there are $p$ rounds of observations for $n$ individuals.
+  FA assumes that the collective behavior of the individuals can be explained by
+  $k$ common factors, and $k < p$. Mathematically speaking,
+  \begin{align} \label{eq:FA}
+    x_{i,m} - \mu_i = \sum_{j=1}^k l_{i,j}f_{j,m} + \epsilon_{i,m}.
+  \end{align}
+  Here, $x_{i,m}$ is the $i$-th observation of the $m$-th individual, $\mu_i$ is the mean of the $i$-th observation, $l_{i,j}$ is the loading of the $j$-th factor on the $i$-th observation, $f_{j,m}$ is the $j$-th factor score for the $m$-th individual and $\epsilon_{i,m}$ is the error term, usually with zero mean and finite variance.
+
+  \vspace{1em}
+  Combining factor analysis with deep neural network gives us interpretable generative models.
 \end{frame}
 \end{document}
 
