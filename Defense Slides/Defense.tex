@@ -38,9 +38,11 @@
 \usepackage{mathrsfs}
 %\usepackage{caption}
 %\usepackage{subcaption}
+\usepackage{subfig}
 \usepackage{color}
 \usepackage{environ}
 \usepackage{mathtools}
+\usepackage{wrapfig}
 
 \AtBeginSubsection[]{
 
@@ -145,6 +147,8 @@
   \noindent\resizebox{\textwidth}{!}{\usebox2}%
 }
 
+\graphicspath{ {/} }
+
 \title{Ph.D. Thesis Defense}
 \subtitle{Generalized t-SNE and Beyond: Probabilistic Methods for Dimensionality Reduction, Combinatorial Optimization, and Machine Learning}
 \author[Yi Gu]{Yi Gu \texorpdfstring{\\}{} Advisor: Antonio Auffinger}
@@ -200,6 +204,26 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Lineage of dimensionality reduction}
+  \begin{itemize}
+    \item The concept of dimenssionality reduction starts around the beginning of 20th century, with the work of Pearson on Principal Component Analysis (PCA) in 1901.
+    \item PCA assumes linearity, subsequent algorithms such as Multidimensional Scaling (MDS) and Isomap are developed to address such challenges.
+  \end{itemize}
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=10cm]{isomap.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lineage of dimensionality reduction (cont.)}
+  \begin{itemize}
+    \item t-SNE is revolutionary because almost all algorithms prior to its creation were directly distance based.
+    \item Distance based algorithms preserve geometric distance, but probabilistic algorithms preserve the probability of neighborhood relationships. (Even Isomap needs distance first to build the neighborhood graph.)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{Overview of t-SNE}
   t-distributed Stochastic Neighbor Embedding (t-SNE) is an algorithm that find a low-dimensional representation of high-dimensional data.
 
@@ -213,6 +237,23 @@
   \vspace{1em}
   Overall idea: KL-divergence (relative entropy) can be used to measure the difference between two distributions. t-SNE construct two distributions from both input and initial output data points, then minimize the KL-divergence by adjusting the output.
   %We cannot directly compare two collections of points in different dimensions, so we construct two distributions as a bridge.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algorithm setup}
+  \begin{itemize}
+    \item [$\bullet$] \textbf{Input}: $X_1, \cdots, X_n \in \mathbb{R}^d$ $\Longrightarrow$ $p_{ij}$.
+    \item [$\bullet$] \textbf{Output}: $Y_1, \cdots, Y_n \in \mathbb{R}^s$ $\Longrightarrow$ $q_{ij}$.
+    \item [$\bullet$] \textbf{Variables Involved}: $p_{ij}$ are fixed. $q_{ij}$ can be changed and is a function of $Y_i$ and $Y_j$.
+    \item [$\bullet$] \textbf{Loss Function (Goal)}: minimize the KL-divergence:
+          \begin{align}
+            L_{n,\rho}(X,Y) = \sum_{1 \leq i \neq j \leq n} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right).
+          \end{align}
+    \item [$\bullet$] \textbf{End Result}:
+          \begin{align}
+            Y^* = \argmin_{Y \in (\mathbb{R}^s)^n}L_n(X,Y).
+          \end{align}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -244,12 +285,13 @@
   %Say that we will get to the meaning of $\sigma_i$ right after.
   For output kernels:
   \begin{align}
-    q_{ij} = \frac{\ko(Yi,Yj)}{\sum_{k \neq l}\ko(Y_k,Y_l)}.
+    q_{ij} = \frac{\ko(Y_i,Y_j)}{\sum_{k \neq l}\ko(Y_k,Y_l)}.
   \end{align}
-  Original t-SNE can be recovered by letting
+  If we let
   \begin{align}
-    \ki(x,y,\sigma)=\exp\left(-\frac{||x-y||^2}{2\sigma^2}\right), \quad \ko(z,w)=\frac{1}{1+||z-w||^2}.
+    \ki(x,y,\sigma)=\exp\left(-\frac{||x-y||^2}{2\sigma^2}\right), \quad \ko(z,w)=\frac{1}{1+||z-w||^2},
   \end{align}
+  we get the original t-SNE.
 \end{frame}
 
 \begin{frame}
@@ -266,22 +308,6 @@
   %If a point is far away from others, than all other points do not make much difference and thus information gets compressed and lost. Perplexity is created to prevent that.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Algorithm setup}
-  \begin{itemize}
-    \item [$\bullet$] \textbf{Input}: $X_1, \cdots, X_n \in \mathbb{R}^d$ $\Longrightarrow$ $p_{ij}$.
-    \item [$\bullet$] \textbf{Output}: $Y_1, \cdots, Y_n \in \mathbb{R}^s$ $\Longrightarrow$ $q_{ij}$.
-    \item [$\bullet$] \textbf{Variables Involved}: $p_{ij}$ are fixed. $q_{ij}$ can be changed and is a function of $Y_i$ and $Y_j$.
-    \item [$\bullet$] \textbf{Loss Function (Goal)}: minimize the KL-divergence:
-          \begin{align}
-            L_{n,\rho}(X,Y) = \sum_{1 \leq i \neq j \leq n} p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right).
-          \end{align}
-    \item [$\bullet$] \textbf{End Result}:
-          \begin{align}
-            Y^* = \argmin_{Y \in (\mathbb{R}^s)^n}L_n(X,Y).
-          \end{align}
-  \end{itemize}
-\end{frame}
 
 \begin{frame}
   \frametitle{Some extra notations}
@@ -370,17 +396,21 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Main results}
-  \begin{theorem} \label{tsne:main_theorem_1}
-    Assume $\mu_X$ has a continuous density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be i.i.d random variables with probability measure $\mu_X$. If both input and output condition hold, then for any $\rho \in (0,1)$,
-    \begin{align}
-      \lim_{n \to \infty} \inf_Y L_{n,\rho}(X,Y) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu).
-    \end{align}
-    Moreover, there exist a measure $\mu^*$ and a sub-sequence $\{n_k\}$ such that $\mu_{n_k} \to \mu^*$ weakly and $I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$.
-  \end{theorem}
-  \begin{theorem} \label{tsne:main_theorem_2}
-    Under the same assumptions of theorem \ref{tsne:main_theorem_1}, $\mu^*$ has compact support.
-  \end{theorem}
+  \frametitle{Example of generalized kernels}
+  The below input kernels satisfies the input kernel conditions:
+\begin{itemize}
+      \item Original $t$-SNE kernels;
+    \item Polynomial input kernel $\ki(x_i,x_j,\sigma_i) = (\sigma_i
+              \norm{x_i-x_j}^{10}+1)^{-1}$ ;
+    \item Mixed input kernel $\ki(x_i,x_j,\sigma_i) = (\sigma_i \norm{x_i-x_j}+1)^{-10} +
+              \exp(-\sigma_i\norm{x_i-x_j})$;
+\end{itemize}
+The below output kernels satisfies the output kernel conditions:
+\begin{itemize}
+  \item Original $t$-SNE output kernel $\ko(y,y') = \frac{1}{1+\norm{y-y'}^2}$;
+  \item Original SNE output kernel $\ko(y,y') = \exp(-\norm{y-y'})$;
+  \item Anything in between and many more.
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -397,6 +427,46 @@
           %Mention heavy tail tsne and crowding problems fo SNE. Say that the boundedness for output kernel is not only necessary for the proof but also intuitively makes sense. The output kernel cannot decay too fast.
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Main results}
+  \begin{theorem}[Gu, 2025] \label{tsne:main_theorem_1}
+    Assume $\mu_X$ has a continuous density $f(x)$ and compact support. Let $X_i \in \mathbb{R}^d$ be i.i.d random variables with probability measure $\mu_X$. If both input and output condition hold, then for any $\rho \in (0,1)$,
+    \begin{align}
+      \lim_{n \to \infty} \inf_Y L_{n,\rho}(X,Y) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu).
+    \end{align}
+    Moreover, there exist a measure $\mu^*$ and a sub-sequence $\{n_k\}$ such that $\mu_{n_k} \to \mu^*$ weakly and $I_{\rho}(\mu^*) = \inf_{\mu \in \tilde{\mathcal{P}}_X} I_{\rho}(\mu)$.
+  \end{theorem}
+  \begin{theorem}[Gu, 2025] \label{tsne:main_theorem_2}
+    Under the same assumptions of theorem \ref{tsne:main_theorem_1}, $\mu^*$ has compact support.
+  \end{theorem}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Some simulation results}
+  Using cuztomized kernels and run t-SNE.
+  \begin{wrapfigure}{r}{0.95\textwidth}
+    \centering
+    \subfloat[\centering Original $t$-SNE]{{\includegraphics[width=2.4cm]{default_kernel.png} }}%
+    \qquad
+    \subfloat[\centering Polynomial Input Kernel]{{\includegraphics[width=2.4cm]{poly_input_kernel.png} }} \\
+    \subfloat[\centering Mixed]{{\includegraphics[width=2.4cm]{poly+exp_input.png} }}%
+    \qquad
+    \subfloat[\centering Custom In\&Out]{{\includegraphics[width=2.4cm]{custom_in+out.png} }}
+\end{wrapfigure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Some simulation results (cont.)}
+  Heavy tail t-SNE: changing the decaying speed of the output kernel. $\alpha$ is the parameter that contrails the decaying speed. Higher the $\alpha$, slower the decay.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=10cm]{heavytail_tsne.jpg}
+    \label{fig:heavytail_tsne}
+\end{figure}
+\end{frame}
+
+
 
 \begin{frame}
   \frametitle{The problems of dependence}
@@ -451,9 +521,9 @@
   said to be complete (or a clique) if each pair of vertices is connected with an
   edge in the graph.
   \begin{definition}
-    Let $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$ be an arbitrary tuple from the joint distribution, and $\mathcal{C}$ the collection of all complete vertex subsets. A probability distribution $Q$ is called a Gibbs distribution (or Gibbs random field) if it can be written in the form
+    Let $x = (x_1,x_2,\dots,x_n) \in \prod_{i=1}^n \mathcal{S}_i$ be an arbitrary tuple from the joint distribution, and $\mathcal{C}$ the collection of all complete vertex subsets. A probability distribution $p$ is called a Gibbs distribution (or Gibbs random field) if it can be written in the form
     \begin{align}
-      Q(x) = \prod_{A \in \mathcal{C}} V_A(x),
+      p(x) = \prod_{A \in \mathcal{C}} V_A(x),
     \end{align}
     where $V_A(x)$ is a positive function that depends only on $x_i$'s with $i \in A$.
   \end{definition}
@@ -463,7 +533,7 @@
   \frametitle{Hammersley-Clifford theorem}
   It is clear that each process $(X_t)_{t \in [n]}$ has a corresponding Gibbs distribution based on the dependencies. Now we can state the powerful Hammersley-Clifford theorem:
   \begin{theorem}[Hammersley-Clifford theorem]
-    Let $Q$ be a probability distribution on $\prod_{i=1}^n \mathcal{S}_i$. Then $Q$ is a Gibbs distribution if and only if it is a Markov random field with respect to the same graph structure.
+    Let $p$ be a probability distribution on $\prod_{i=1}^n \mathcal{S}_i$. Then $p$ is a Gibbs distribution if and only if it is a Markov random field with respect to the same graph structure.
   \end{theorem}
 \end{frame}
 
@@ -572,7 +642,7 @@
 \begin{frame}
   \frametitle{Theoretical guarantees of the sampling algorithm}
   The sampling output follows the exact conditional distribution.
-  \begin{theorem}[Probability Distribution] \label{th:product-dist}
+  \begin{theorem}[Probability Distribution, Gu et al., 2023] \label{th:product-dist}
     Given  random variables $X=\{X_{i}\}_{i=1}^n$, constraints $\mathcal{C}=\{c_j\}_{j=1}^L$ that satisfy the extremal condition, and the parameters of the constrained MRF in the single variable form  $\theta$. Upon termination, the sampling algorithm outputs an assignment $x$ that is randomly drawn from the constrained MRF distribution: $x\sim P_\theta(X=x | \mathcal{C})$.
   \end{theorem}
 \end{frame}

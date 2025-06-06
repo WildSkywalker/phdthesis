@@ -363,6 +363,15 @@ INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1ptm.fd
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption-beamer.sto
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption-beamer.sto
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption-beamer.sto
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\environ\environ.sty
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\environ\environ.sty
@@ -374,6 +383,8 @@ INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\Defense.aux
@@ -483,13 +494,20 @@ INPUT .\concentration_distance_hypershpere.png
 INPUT .\concentration_distance_hypershpere.png
 INPUT .\concentration_distance_hypershpere.png
 INPUT .\concentration_distance_hypershpere.png
+INPUT .\isomap.jpg
+INPUT .\isomap.jpg
+INPUT .\isomap.jpg
+INPUT .\isomap.jpg
+INPUT .\isomap.jpg
+INPUT .\isomap.jpg
+INPUT .\isomap.jpg
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx6.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
@@ -505,6 +523,51 @@ INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.v
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT .\default_kernel.png
+INPUT .\default_kernel.png
+INPUT .\default_kernel.png
+INPUT .\default_kernel.png
+INPUT .\default_kernel.png
+INPUT .\default_kernel.png
+INPUT .\default_kernel.png
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr9.tfm
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi9.tfm
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx9.tfm
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Yi Gu\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT .\poly_input_kernel.png
+INPUT .\poly_input_kernel.png
+INPUT .\poly_input_kernel.png
+INPUT .\poly_input_kernel.png
+INPUT .\poly_input_kernel.png
+INPUT .\poly_input_kernel.png
+INPUT .\poly_input_kernel.png
+INPUT .\poly+exp_input.png
+INPUT .\poly+exp_input.png
+INPUT .\poly+exp_input.png
+INPUT .\poly+exp_input.png
+INPUT .\poly+exp_input.png
+INPUT .\poly+exp_input.png
+INPUT .\poly+exp_input.png
+INPUT .\custom_in+out.png
+INPUT .\custom_in+out.png
+INPUT .\custom_in+out.png
+INPUT .\custom_in+out.png
+INPUT .\custom_in+out.png
+INPUT .\custom_in+out.png
+INPUT .\custom_in+out.png
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT .\heavytail_tsne.jpg
+INPUT .\heavytail_tsne.jpg
+INPUT .\heavytail_tsne.jpg
+INPUT .\heavytail_tsne.jpg
+INPUT .\heavytail_tsne.jpg
+INPUT .\heavytail_tsne.jpg
+INPUT .\heavytail_tsne.jpg
 INPUT .\Gene_regulatory_networks.jpg
 INPUT .\Gene_regulatory_networks.jpg
 INPUT .\Gene_regulatory_networks.jpg
@@ -583,6 +646,8 @@ INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.p
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
+INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\Yi Gu\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
