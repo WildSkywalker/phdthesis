@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex t-sne_new"] 1749226399.75453 "t-sne_new.aux" "t-sne_new.bbl" "t-sne_new" 1749226401.01042 0
+["bibtex t-sne_new"] 1749226399.75453 "t-sne_new.aux" "t-sne_new.bbl" "t-sne_new" 1749272949.76122 0
   "./citation.bib" 1748622056 3399 7b98160bf3e0d4a5b951230a6bdee7c5 ""
   "./hunsrtnat.bst" 1748622056 26925 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne_new.aux" 1749226400 9929 24a2e48d65cdcd163fa4beb03de24291 "pdflatex"
+  "t-sne_new.aux" 1749272949 9929 24a2e48d65cdcd163fa4beb03de24291 "pdflatex"
   (generated)
   "t-sne_new.bbl"
   "t-sne_new.blg"
   (rewritten before read)
-["pdflatex"] 1749226399.93271 "d:/phdthesis/t-SNE(New)/t-sne_new.tex" "t-sne_new.pdf" "t-sne_new" 1749226401.01079 0
+["pdflatex"] 1749272948.61199 "d:/phdthesis/t-SNE(New)/t-sne_new.tex" "t-sne_new.pdf" "t-sne_new" 1749272949.76159 0
   "C:/Users/Yi Gu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1749099208 112894 c07ca61c5c91ee5fb9391a05244b69c1 ""
   "C:/Users/Yi Gu/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk" 1749226398 7284 90de5cb27a05da94cc85b550a659e392 ""
   "C:/Users/Yi Gu/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0800.pk" 1749226399 9292 6bca03faf17491c43f9c2ee83a6b9313 ""
@@ -220,12 +220,12 @@
   "C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "d:/phdthesis/t-SNE(New)/t-sne_new.tex" 1748622056 1192 d62e168ea74b467257cea6ee6c827a29 ""
   "guyipreammath.tex" 1748622056 4317 0020b92a0aad7cd7538b2aaa924cd9fe ""
-  "t-sne_main_text_new.tex" 1749226396 74946 c08f65e9d77104120c2fbd426b764e7d ""
-  "t-sne_new.aux" 1749226400 9929 24a2e48d65cdcd163fa4beb03de24291 "pdflatex"
+  "t-sne_main_text_new.tex" 1749272948 74953 b6d245ade2b62f6f9b96484503d42062 ""
+  "t-sne_new.aux" 1749272949 9929 24a2e48d65cdcd163fa4beb03de24291 "pdflatex"
   "t-sne_new.bbl" 1749226399 2987 9dc880800331d8e016afdad0105637b3 "bibtex t-sne_new"
-  "t-sne_new.out" 1749226400 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
+  "t-sne_new.out" 1749272949 1343 f90488a7e1d108348393472a2f2939b7 "pdflatex"
   "t-sne_new.tex" 1748622056 1192 d62e168ea74b467257cea6ee6c827a29 ""
-  "t-sne_new.toc" 1749226400 1288 4ac0d3244585790c2fe21b6f0cb2ada0 "pdflatex"
+  "t-sne_new.toc" 1749272949 1288 4ac0d3244585790c2fe21b6f0cb2ada0 "pdflatex"
   (generated)
   "t-sne_new.aux"
   "t-sne_new.log"

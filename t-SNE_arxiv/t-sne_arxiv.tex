@@ -281,7 +281,7 @@ The goal of the generalized t-SNE is to find $Y$ that minimizes the relative ent
 \end{align}
 More precisely, the output of t-SNE $Y^*$ is defined as
 \begin{align}
-    Y^* = \argmin_{Y \in (\mathbb{R}^s)^n}L_n(X,Y).
+    Y^* = \argmin_{Y \in (\mathbb{R}^s)^n}L_{n,\rho}(X,Y).
 \end{align}
 In the expression of $L_n(X,Y)$, all $p_{ij}$ are given and $q_{ij}$ is a function of $Y_i$ and $Y_j$. Therefore, $Y^*$ can be found simply by using gradient descent. This completes the description of the algorithm itself. Now we introduce necessary notations for convergence and asymptotic analysis. Let $\mathcal{M}(\mathbb{R}^d)$ be the space of Borel probability measures on $\mathbb{R}^d$ and $\mu_X \in \mathcal{M}(\mathbb{R}^d)$ be a probability measure. Suppose all input $X = (X_1,\cdots,X_n)$ are i.i.d. random variables with probability measure $\mu_X$. Meanwhile, let $Y^* = (Y_1,\cdots,Y_n)$ be the output of the t-SNE algorithm. Consider the following empirical measure:
 \begin{align}

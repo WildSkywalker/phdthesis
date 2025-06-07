@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.30)  6 JUN 2025 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.30)  7 JUN 2025 00:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -57080,9 +57080,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 13.86673
-.\hbox(9.0+3.0)x455.30121, glue set - 0.21625
+.\hbox(9.0+3.0)x455.30121, glue set 0.22585
 ..\hbox(0.0+0.0)x18.0
-..\OT1/cmr/m/n/12 t
+..\OT1/cmr/m/n/12 T
 ..\OT1/cmr/m/n/12 -
 ..\discretionary
 ..\OT1/cmr/m/n/12 d
@@ -57141,7 +57141,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..etc.
 .\penalty 20000
 .\glue(\baselineskip) 13.86673
-.\hbox(8.33331+2.33331)x455.30121, glue set 0.17313
+.\hbox(8.33331+2.33331)x455.30121, glue set - 0.52115
+..\OT1/cmr/m/n/12 s
+..\OT1/cmr/m/n/12 u
+..\discretionary
+...\OT1/cmr/m/n/12 -
 ..\OT1/cmr/m/n/12 a
 ..\OT1/cmr/m/n/12 l
 ..\discretionary
@@ -57191,9 +57195,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ..\OT1/cmr/m/n/12 d
 ..\OT1/cmr/m/n/12 i
 ..\OT1/cmr/m/n/12 m
-..\OT1/cmr/m/n/12 e
-..\OT1/cmr/m/n/12 n
-..\OT1/cmr/m/n/12 s
 ..etc.
 .\glue(\baselineskip) 13.86673
 .\hbox(9.0+3.0)x455.30121, glue set 0.4099
@@ -59306,17 +59307,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 .\glue 1.0
 .\glue(\baselineskip) 13.0268
 .\hbox(16.13994+13.53331)x455.30121, display
-..\glue(\tabskip) 167.23145
-..\hbox(16.13994+13.53331)x120.8383
+..\glue(\tabskip) 163.87447
+..\hbox(16.13994+13.53331)x127.55228
 ...\glue 0.0 plus 1.0fil
 ...\hbox(16.13994+8.06009)x0.0
 ....\vbox(16.63994+7.56009)x0.0, shifted 0.5
 .....\kern -1.0
 .....\hbox(17.63994+7.56009)x0.0
 ......\rule(17.63994+7.56009)x0.0
-...\hbox(9.0+13.53331)x120.8383
+...\hbox(9.0+13.53331)x127.55228
 ....\mathon
-....\hbox(9.0+13.53331)x120.8383
+....\hbox(9.0+13.53331)x127.55228
 .....\OML/cmm/m/it/12 Y
 .....\kern2.61108
 .....\hbox(3.72223+0.0)x4.75006, shifted -4.9547
@@ -59352,8 +59353,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ......\kern1.2
 .....\glue(\thinmuskip) 1.99997
 .....\OML/cmm/m/it/12 L
-.....\hbox(3.44444+0.0)x5.65747, shifted 1.79999
+.....\hbox(3.44444+1.55556)x12.37144, shifted 1.79999
 ......\OML/cmm/m/it/8 n
+......\OML/cmm/m/it/8 ;
+......\OML/cmm/m/it/8 ^^Z
 .....\OT1/cmr/m/n/12 (
 .....\OML/cmm/m/it/12 X
 .....\kern0.9434
@@ -59372,10 +59375,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 ....\hbox(0.0+0.0)x0.0
 ....\mathoff
 ...\glue 0.0 plus 1.0fil
-..\glue(\tabskip) 167.23145
-..\hbox(16.13994+13.53331)x0.00002
-...\kern -167.23145
-...\kern -288.06975
+..\glue(\tabskip) 163.87447
+..\hbox(16.13994+13.53331)x0.0
+...\kern -163.87447
+...\kern -291.42674
 ...\hbox(16.13994+8.06009)x0.0, glue set - 30.02747fil
 ....\hbox(16.13994+8.06009)x30.02747
 .....\hbox(16.13994+8.06009)x0.0
@@ -155194,13 +155197,13 @@ Package rerunfilecheck Info: File `phdthesis_YiGu.out' has not changed.
 Here is how much of TeX's memory you used:
  37525 strings out of 469923
  741477 string characters out of 5469134
- 1135889 words of memory out of 5000000
+ 1135887 words of memory out of 5000000
  62546 multiletter control sequences out of 15000+600000
  647916 words of font info for 115 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  91i,20n,120p,1272b,1267s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Yi Gu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\Yi Gu\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm/dpi720\cmbcsc10.pk> <C:\Users\Yi Gu\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm8.pk> <C:\Users\Yi Gu\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm12.pk> <C:\Users\Yi Gu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmi1200.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phdthesis_YiGu.pdf (243 pages, 13224504 bytes).
+Output written on phdthesis_YiGu.pdf (243 pages, 13224518 bytes).
 PDF statistics:
  4290 PDF objects out of 4296 (max. 8388607)
  1027 named destinations out of 1200 (max. 500000)

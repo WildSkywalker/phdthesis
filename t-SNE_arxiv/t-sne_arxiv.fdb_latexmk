@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex t-sne_arxiv"] 1748631824.72007 "t-sne_arxiv.aux" "t-sne_arxiv.bbl" "t-sne_arxiv" 1749260046.54424 0
+["bibtex t-sne_arxiv"] 1748631824.72007 "t-sne_arxiv.aux" "t-sne_arxiv.bbl" "t-sne_arxiv" 1749272660.04889 0
   "./citation.bib" 1748622056 4996 c282c57d3046dd8797171ef853083984 ""
   "./hunsrtnat.bst" 1748622056 26925 7ae5a245e3eb20a8381d469943b0de9c ""
-  "t-sne_arxiv.aux" 1749260046 9030 9f151eb9187022555b429093d6b32fee "pdflatex"
+  "t-sne_arxiv.aux" 1749272659 9030 9f151eb9187022555b429093d6b32fee "pdflatex"
   (generated)
   "t-sne_arxiv.bbl"
   "t-sne_arxiv.blg"
   (rewritten before read)
-["pdflatex"] 1749260044.71579 "d:/phdthesis/t-SNE_arxiv/t-sne_arxiv.tex" "t-sne_arxiv.pdf" "t-sne_arxiv" 1749260046.54464 0
+["pdflatex"] 1749272658.95907 "d:/phdthesis/t-SNE_arxiv/t-sne_arxiv.tex" "t-sne_arxiv.pdf" "t-sne_arxiv" 1749272660.04924 0
   "C:/Users/Yi Gu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1749099208 112894 c07ca61c5c91ee5fb9391a05244b69c1 ""
   "C:/Users/Yi Gu/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm10.pk" 1748631824 6984 842390b14ffc5f266f87fe0f3169d2ff ""
   "C:/Users/Yi Gu/AppData/Local/MiKTeX/fonts/pk/ljfour/public/bbm/dpi600/bbm7.pk" 1748631823 4860 9e2277e578bba7e63b7d0ba957545d1d ""
@@ -214,11 +214,11 @@
   "C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/Yi Gu/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "d:/phdthesis/t-SNE_arxiv/t-sne_arxiv.tex" 1749260044 70046 0f3222e6087e9b061ecfdb6707f6458c ""
-  "t-sne_arxiv.aux" 1749260046 9030 9f151eb9187022555b429093d6b32fee "pdflatex"
+  "d:/phdthesis/t-SNE_arxiv/t-sne_arxiv.tex" 1749272658 70053 cb9ca69579c526eb86a255035d0552fb ""
+  "t-sne_arxiv.aux" 1749272659 9030 9f151eb9187022555b429093d6b32fee "pdflatex"
   "t-sne_arxiv.bbl" 1748631824 4099 81d8f3bf41d83498769057df85a2a579 "bibtex t-sne_arxiv"
-  "t-sne_arxiv.out" 1749260046 1199 a4c2b31120d64516c0bc9b66a1c96ead "pdflatex"
-  "t-sne_arxiv.tex" 1749260044 70046 0f3222e6087e9b061ecfdb6707f6458c ""
+  "t-sne_arxiv.out" 1749272659 1199 a4c2b31120d64516c0bc9b66a1c96ead "pdflatex"
+  "t-sne_arxiv.tex" 1749272658 70053 cb9ca69579c526eb86a255035d0552fb ""
   (generated)
   "t-sne_arxiv.aux"
   "t-sne_arxiv.log"
