@@ -5,12 +5,12 @@ during my Ph.D. study at Northwestern University.
 The first project is a preprint about the equilibrium measure of generalized
 t-SNE, with details in chapter 2. We formulate the generalized form of input
 and output kernels and illustrate how our formulation maintains generality.
-Furthermore, we show that under certain general conditions, the input and
-output kernels of t-SNE can be changed while still proving the algorithm's
-convergence towards an equilibrium measure for the output as the sample size
-tends to infinity.
+Furthermore, under general conditions on the input and output kernels,
+we prove convergence of the optimal values and subsequential convergence,
+after translation, of the empirical measures of approximate minimizers
+as the sample size tends to infinity.
 
-The second project is a paper, published in AAAI 2023, regarding Lov\'asz Local
+The second project is a paper, published in AAAI 2023, regarding the Lov\'asz Local
 Lemma (LLL) and its applications in learning combinatorial structures, with
 details in chapter 3. We developed a novel machine learning framework utilizing
 LLL that is able to efficiently output valid samples satisfying constraints and
@@ -38,7 +38,7 @@ picture, as the extent to which we can unlock this value is fundamentally
 constrained by our mathematical understanding. Indeed, for decades have we
 collected visual data such as satellite imagery and medical scans, but the
 studies and utilization of them remained primarily manual. In 2012, the success
-of ImageNet(\cite{NIPS2012_c399862d}), along with Convolution Neural Network
+of ImageNet (\cite{NIPS2012_c399862d}), along with Convolutional Neural Network
 (CNN), made automated analysis of visual data possible. It was moments like
 this that revealed to us there is so much to be seen and discovered with data.
 
@@ -55,10 +55,10 @@ Take the example of CNN we just mentioned. The success of CNN is seen by many
 as the watershed moment in the history of mathematics and computer science.
 Though the advancements in semiconductor industry and hardware engineering
 should never be overlooked, the birth of CNN is the result of a series of
-brilliant developments in probability since Kholmogorov. The applications of
-concepts like softmax layers, maximum log-likelihood estimation, etc all have a
+brilliant developments in probability since Kolmogorov. The applications of
+concepts like softmax layers, maximum log-likelihood estimation, etc. all have a
 deep root in probability theory and constitute the core mechanism of
-CNN(\cite{NIPS2012_c399862d}). And our stories have just begun. As of today,
+CNN (\cite{NIPS2012_c399862d}). And our stories have just begun. As of today,
 the development of Large Language Models (LLM), the closest ever creation of
 humans to Artificial General Intelligence (AGI) is essentially a probabilistic
 algorithm (\cite{NIPS2017_3f5ee243}).
@@ -68,7 +68,7 @@ probabilistic algorithms we will discuss in this thesis. From basic concepts,
 to history, and related progress. It is very exciting to see all the
 mathematical concepts our predecessors have developed, and have been passionate
 about, are being turned into new technologies that impact and steer the modern
-world. And may this thesis provides an insignificant, yet meaningful addition
+world. And may this thesis provide an insignificant, yet meaningful addition
 to this great painting of our future.
 
 \section{t-SNE and Dimension Reduction} \label{intro_chap:sec:tsne}
@@ -80,17 +80,17 @@ class roster is already beyond what we can natively visualize (if we want to
 represent each student as a point). On the other hand, each image can be seen
 as a high-dimensional vector and the dimensionalities increase rapidly while
 the resolution we are able to capture advances with technology. The number of
-variables scale in a breakneck pace as we are more capable of capturing
+variables scales at a breakneck pace as we are more capable of capturing
 detail-rich data as well as automating the process (\cite{Donoho_Dimensions}).
 As stated in the last section, this process gives us practically unlimited
-potentials. The objects and processes we would like to study were recorded with
-utmost details, unlike the past when vital bits of information could be lost
+potential. The objects and processes we would like to study were recorded with
+utmost detail, unlike the past when vital bits of information could be lost
 forever. However, this also brings caveats and new mathematical challenges.
 
 One of the most important and hardest challenges is the noise that comes with
 data. Apart from noise caused by engineering factors, the growth of
 dimensionality also brings noise because many dimensions may be irrelevant for
-the problems one want to solve. The extra dimensions themselves become the
+the problems one wants to solve. The extra dimensions themselves become the
 ``noise". In 1996, Robert Tibshirani discovered the famous Least Absolute
 Shrinkage and Selection Operator (LASSO) for the purpose of variable selection
 (\cite{lasso1996}). Consider a sample consisting of $N$ cases, each with
@@ -103,18 +103,18 @@ with constraint
 \begin{align}
     \sum_{j=1}^p |\beta_j| \leq t.
 \end{align}
-LASSO marks the early realization and effort mathematicians and scientists were trying to mitigate the overwhelming information brought by high dimensional data. LASSO was also closely related to Basis Pursuit Denoising (BPDN), introduced in 1994 (\cite{BPDN}). BPDN is a well known NP-hard problem. Before the age of big data comes, mathematicians had been thinking about extracting useful signals from noise/spurious correlations. After the dawn of 21st century and the explosive growth of computer science, problems like BPDN and LASSO become even more important after we add computational cost to the equation (\cite{variableselection2010}).
+LASSO marks the early realization and effort mathematicians and scientists were trying to mitigate the overwhelming information brought by high dimensional data. LASSO was also closely related to Basis Pursuit Denoising (BPDN), introduced in 1994 (\cite{BPDN}). BPDN is a well known NP-hard problem. Before the age of big data came, mathematicians had been thinking about extracting useful signals from noise/spurious correlations. After the dawn of the 21st century and the explosive growth of computer science, problems like BPDN and LASSO become even more important after we add computational cost to the equation (\cite{variableselection2010}).
 
 Apart from feature and variable selection, people also seek to ``compress" the
-data, creating a mathematical summary of the essence. t-SNE is one of such
-examples. Instead of making a selection, t-SNE aims to find a low-dimensional
-representation of the data and taking the entire data set into account. Another
+data, creating a mathematical summary of the essence. t-SNE is one such
+example. Instead of making a selection, t-SNE aims to find a low-dimensional
+representation of the data and take the entire data set into account. Another
 good example is the Variational Auto Encoder (\cite{kingma2013auto}), a
 generative model that is able to scale well with large data sets using a
 low-dimensional ``latent space". We will discuss VAE and our related work on
 this topic in chapter 4.
 
-In the face of large amount of high dimensional data, digesting it ``as is'' is
+In the face of a large amount of high dimensional data, digesting it ``as is'' is
 more often than not impossible. The above examples show us that we either make
 a selection, or we perform compression, which are the two most common
 approaches in terms of getting what we need from the data. We would like to
@@ -122,12 +122,12 @@ discuss this further because high-dimensional data is not only mathematically
 and computationally hard to deal with, but also tends to mask the insights we
 are looking for. This is somehow a paradoxical nature of high-dimensionality.
 Faithful recording of data assures us the information and values we seek are
-within the data sets and within in our reach. But the form and scaling of the
-high-dimensional data also buries the light we are after. This is the so-called
+within the data sets and within our reach. But the form and scaling of the
+high-dimensional data also bury the light we are after. This is the so-called
 ``curse of dimensionality".
 
 The term ``curse of dimensionality" was first coined by Richard Bellman in 1961
-(\cite{Bellman1961adaptive}). It refers to various phenomena that appears when
+(\cite{Bellman1961adaptive}). It refers to various phenomena that appear when
 analyzing data in high-dimensional space that do not occur when dimensionality
 is low. Qualitatively speaking, the ``curse'' usually means that as
 dimensionality increases, the exponential increase of volume makes the same
@@ -136,20 +136,20 @@ amount of data sparse and harder to work with.
 To understand this concept, let us first look at the famous example of
 hypercube vs hypersphere. Consider a hypercube with edge length $2r$ in
 $d$-dimensional Euclidean space and its inscribed sphere with radius $r$.
-Denote $\Gamma$ the gamma function and $C_d$, $S_d$ the volume of the hypercube
+Denote by $\Gamma$ the gamma function and by $C_d$, $S_d$ the volumes of the hypercube
 and hypersphere respectively. Then we have
 \begin{align}
     \lim_{d \to \infty} \frac{S_d}{C_d} = \lim_{d \to \infty} \frac{\pi^{d/2}}{d2^{d-1}\Gamma(d/2)} = 0.
 \end{align}
-This means that our low-dimensional intuition fails. The volume of hypercubes are mostly ``concentrated" in the corners and the inscribed sphere's volume becomes negligible. If we want to analyze the data related to the hypercube, a data set that is uniformly distributed in the hypercube will become an increasingly small part of the whole space. In general, as we increase the dimension of our sample space, any finite data set will occupy a vanishingly small part of it. On the other hand, to maintain the roughly same density, one needs to accumulate exponentially more data points to compensate for the increase in dimensions.
+This means that our low-dimensional intuition fails. The volume of hypercubes is mostly ``concentrated" in the corners and the inscribed sphere's volume becomes negligible. If we want to analyze the data related to the hypercube, a data set that is uniformly distributed in the hypercube will become an increasingly small part of the whole space. In general, as we increase the dimension of our sample space, any finite data set will occupy a vanishingly small part of it. On the other hand, to maintain roughly the same density, one needs to accumulate exponentially more data points to compensate for the increase in dimensions.
 
-Such fact also induces a data mining problem, where it is unrealistic to gather
-enough amount of data points to guarantee the separability of data generated by
+Such a fact also induces a data mining problem, where it is unrealistic to gather
+enough data points to guarantee the separability of data generated by
 two different distributions. It is a well known fact in machine learning that
 too many features with inadequate data points will lead to overfitting. This
 discovery is not new, either. In 1968, Hughes showed that adding more features
 past certain points without providing more data points will cause worse
-classification performance (\cite{hughes1968}). Later it becomes known as the
+classification performance (\cite{hughes1968}). Later it became known as the
 famous Hughes phenomenon. Adding features is not a free lunch and the results
 could be detrimental.
 
@@ -168,7 +168,7 @@ seen more intuitively from the two collections of plots below.
 \end{figure}
 
 For the second plot, we replace the unit cube with the unit sphere as our
-sample space. On the top of distance concentration, we can see that most points
+sample space. On top of distance concentration, we can see that most points
 are located towards the surface of the hypersphere, rather than the interior.
 This aligns with our intuition that the volume of the hypersphere is mostly
 concentrated near the surface, and the volume of a hypercube is mostly
@@ -181,8 +181,8 @@ concentrated near the corners.
 \end{figure}
 
 The two plots reinforce the intuition behind the data mining problem we just
-brought up. Distance, one of the most fundamental and important feature that
-distinguishes data points, becomes less and less effective as the dimension of
+brought up. Distance, one of the most fundamental and important features that
+distinguish data points, becomes less and less effective as the dimension of
 the data increases. It directly leads to the fact that purely distance-based
 algorithms will perform poorly with high-dimensional data sets. It is crucial
 to find ways to extract the information we need from high dimensions, then
@@ -200,7 +200,7 @@ level. Such rich information can exist simultaneously within a single
 biological sample because life itself is tremendously complex. From a data
 science point of view, all these genes/transcripts are features and each acts
 as a dimension so the dimensionality is extremely high. For humans, that number
-is somewhere roughly between $10^4$ to $10^5$. For Genome sequencing that
+is somewhere roughly between $10^4$ and $10^5$. For Genome sequencing that
 number can be even larger, ranging from $10^6$ to $10^7$.
 
 \begin{figure}[ht]
@@ -215,20 +215,20 @@ This causes all kinds of problems we mentioned about high-dimensional data
 hand, Euclidean distance becomes less meaningful. The Euclidean distance
 between two patients (data points) may not contain any useful implications for
 their similarities in genetic traits or tendencies for a specific disease. The
-occurrence of spurious correlations are much higher, that people often finds
-significant correlations between features(genes) and outcomes(disease status)
+occurrence of spurious correlations are much higher, that people often find
+significant correlations between features (genes) and outcomes (disease status)
 that are purely coincidental and not biologically meaningful. On the other
 hand, Hughes phenomenon is prevalent in model training because it is nearly
 impossible to gather enough data so that the sample size is significantly
 larger than the number of features. This results in massive overfitting and
-poor predictions for critical problems such as tumor types classification. At
+poor predictions for critical problems such as tumor type classification. At
 the same time, genetic sequences are absolute nightmares for hypothesis testing
 due to their sheer complexity, making false positives much more prone to
 happen.
 
 For these very reasons, dimension reduction really shines through the field of
 biology and bioinformatics. Most algorithms introduced in the next section are
-still widely used today, from the old classic PCA, to methods created in 21st
+still widely used today, from the old classic PCA, to methods created in the 21st
 century such as t-SNE. Dimension reduction is a crucial toolset that makes
 continuing research and analysis of genetic data possible, with its impact and
 usage expanding well beyond the field of biology to almost all scientific
@@ -243,32 +243,32 @@ information we seek becomes apparent. Now we are almost a quarter into the 21st
 century, the development of technology resonates with the need for dimension
 reduction, and puts our mathematical legacy to the test.
 \subsection{A Brief History of Dimensionality Reduction} \label{intro_chap:sec:tsne:DR}
-The theory of dimension reduction can be traced back to the beginning of 20th
+The theory of dimension reduction can be traced back to the beginning of the 20th
 century. In 1901, Karl Pearson introduced the geometric idea of finding lines
-and planes of best fit to data points, later known as the famous Principle
-Component Analysis (PCA)(\cite{Pearson1901PCA}). This technique was also
+and planes of best fit to data points, later known as the famous Principal
+Component Analysis (PCA) (\cite{Pearson1901PCA}). This technique was also
 independently discovered by Harold Hotelling in 1933 (\cite{Hotelling1933}).
 The idea behind PCA is mainly linear algebra. It first centers the data set at
 zero and then tries to find the largest eigenvalue of the covariance matrix.
 The corresponding eigenvector marks the direction of the most variance in the
-data, making it the biggest principle component. Then this component gets
+data, making it the biggest principal component. Then this component gets
 subtracted and the algorithm repeats to find the next largest eigenvalue. The
-algorithm can stop at any number of principle component. The corresponding
+algorithm can stop at any number of principal components. The corresponding
 eigenvalues and eigenvectors will then be used to construct a subspace with
 lower dimensions that represents the original data.
 
 Intuitively speaking, PCA tries to fit a high-dimensional ellipsoid to the data
-set. Each axis of the ellipsoid represents one principle component. The larger
+set. Each axis of the ellipsoid represents one principal component. The larger
 the eigenvalue, the longer the corresponding axis of the ellipsoid. PCA is
 simple and elegant, so much so that it is still widely used today, but its
 shortcomings are also apparent. PCA assumes linearity as what it does is
-primarily finding a new coordinate system where the axes, a.k.a. the principle
+primarily finding a new coordinate system where the axes, a.k.a. the principal
 components, are linear combinations of the original variables. The mapping from
 the original high-dimensional space to the lower-dimensional subspace defined
-by principle components is an orthogonal linear transformation. This means that
+by principal components is an orthogonal linear transformation. This means that
 by analyzing the covariance matrix, PCA can mostly only capture linear
 dependencies. This approach will fail if the intrinsic structure of the data is
-non-linear. For example, PCA is likely to give two principle components if
+non-linear. For example, PCA is likely to give two principal components if
 asked to analyze a circle, a typical 1-dimensional manifold in 2-dimensional
 Euclidean space. It is unable to see that the points on a circle are all part
 of a 1-dimensional space. Similar results with Swiss roll, PCA will very likely
@@ -294,7 +294,7 @@ minimize the loss function, which is also called strain:
 \begin{align} \label{strain_def}
     \text{Strain}(x_1,\dots,x_n) = \left(\frac{\sum_{i,j}(b_{ij}-x^T_i x_j)^2}{\sum_{i,j}b^2_{i,j}}\right).
 \end{align}
-Here, $x_i$'s are vectors in $N$-dimensional space that we are trying to find, and $b_{ij}$ are the entries from the Gram matrix that can be computed using the input data. Compared to PCA, MDS no longer assumes linear relationships between data points, and is more intuitive as the distance between points is often a good reflection of their similarity. One of the most famous applications of MDS is the color wheel. One might never hear about MDS, but they must have used the color wheel at some point of their lives.
+Here, $x_i$'s are vectors in $N$-dimensional space that we are trying to find, and $b_{ij}$ are the entries from the Gram matrix that can be computed using the input data. Compared to PCA, MDS no longer assumes linear relationships between data points, and is more intuitive as the distance between points is often a good reflection of their similarity. One of the most famous applications of MDS is the color wheel. One might never hear about MDS, but they must have used the color wheel at some point in their lives.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=6cm]{color-wheels-RYB-RGB.jpg}
@@ -311,7 +311,7 @@ is one of the major reasons that it is still widely used today, especially when
 there is a lack of good distance metrics or quantitative data, such as market
 research. However, MDS is not without drawbacks. The axes of the output do not
 have inherent meanings from the original data set and sometimes it is not
-possible to find a solution with low enough stress values (the stain in the
+possible to find a solution with low enough stress values (the strain in the
 classical MDS). More importantly, MDS is not computationally efficient. Though
 modern algorithms like t-SNE and UMAP share some of the disadvantages with the
 MDS family, they often outperform MDS by a fair margin. Nevertheless, the
@@ -321,7 +321,7 @@ one of the most important algorithms in the field of dimension reduction.
 Fast forwarding to the millennium, the rapid advancement of computer science
 and applied mathematics created increasingly stronger needs to study data of
 nonlinear nature. Scientists had been striving to create new tools and
-algorithms that can handle the emerging complex data sets.Though mentioned in
+algorithms that can handle the emerging complex data sets. Though mentioned in
 earlier works, many regarded the work of Roweis and Saul in 2000 as the pillar
 of manifold learning (\cite{Roweis2000}). Unlike PCA, which tries to project a
 collection of high dimensional vectors onto a linear subspace, manifold
@@ -335,13 +335,13 @@ familiar with SNE and t-SNE may notice the resemblance between the algorithms
 and how they draw inspiration from each other. Given original data points $X_i
     \in \mathbb{R}^D$, the goal of LLE is to find a set of points $Y_i \in
     \mathbb{R}^d$ usually with $D >> d$ such that $Y_i$'s form a good
-representation(embedding) of $X_i$'s. This is done in two steps. First, LLE
+representation (embedding) of $X_i$'s. This is done in two steps. First, LLE
 looks at each point $X_i$ and tries to find the closest approximation of $X_i$
 using the linear combination of other points. i.e., for each $i$, LLE computes
 \begin{align}
     \norm{X_i - \sum_{j} W_{ij}X_j}^2,
 \end{align}
-where $W_{ij}$ are the weight we assigned to each $X_j$. $W_{ij}$ is nonzero when $X_j$ is within a certain distance of $X_i$, or when $X_j$ is considered a ``neighbor". This distance is a hyperparameter set by the user. Summing up through all $i$'s gives us the reconstruction error:
+where $W_{ij}$ are the weights we assigned to each $X_j$. $W_{ij}$ is nonzero when $X_j$ is within a certain distance of $X_i$, or when $X_j$ is considered a ``neighbor". This distance is a hyperparameter set by the user. Summing up through all $i$'s gives us the reconstruction error:
 \begin{align}
     E(W) := \sum_{i=1}^N \norm{X_i - \sum_{j} W_{ij}X_j}^2.
 \end{align}
@@ -349,19 +349,19 @@ While LLE aims to minimize $E(W)$, it is also subject to the restriction
 \begin{align}
     \sum_{j} W_{ij} = 1.
 \end{align}
-This ensures that $W$ is not affected by rotation and translation. The first step is finished when LLE successfully finds the weight that minimizes $E(W)$. This is a typical constraint least square problem so we are able to find the global minimum. Now the weight $W_{ij}$'s are fixed and the second step begins. LLE now tries to find output $Y_i$'s that minimize the following cost function:
+This ensures that $W$ is not affected by rotation and translation. The first step is finished when LLE successfully finds the weight that minimizes $E(W)$. This is a typical constrained least squares problem so we are able to find the global minimum. Now the weights $W_{ij}$'s are fixed and the second step begins. LLE now tries to find output $Y_i$'s that minimize the following cost function:
 \begin{align}
     C(Y) := \sum_{i=1}^N \norm{Y_i - \sum_{j} W_{ij}Y_j}^2.
 \end{align}
-The algorithm terminates when the minima of $C(Y)$ is found. Directly from the same paper (\cite{Roweis2000}), we know that finding the minimum of $C(Y)$ is equivalent to solving a sparse eigenvalue problem and we are able to find the global minimum. This is one of the most appealing mathematical properties of LLE, that both of its core steps yield globally optimal solutions. However, nothing is perfect and LLE does come with its own shortcomings. Let us discuss that after we introduce another NLDR algorithm that was created around the same time, and is just as famous and important: Isomap.
+The algorithm terminates when the minimum of $C(Y)$ is found. Directly from the same paper (\cite{Roweis2000}), we know that finding the minimum of $C(Y)$ is equivalent to solving a sparse eigenvalue problem and we are able to find the global minimum. This is one of the most appealing mathematical properties of LLE, that both of its core steps yield globally optimal solutions. However, nothing is perfect and LLE does come with its own shortcomings. Let us discuss that after we introduce another NLDR algorithm that was created around the same time, and is just as famous and important: Isomap.
 
 Isomap was first introduced in around 2000 (\cite{tenenbaum_global_2000}). It
 is a modern generalization of MDS. Instead of using the Euclidean distance,
-Isomap generates the so called geodesic distance between each pair data points
-then apply MDS to get the low-dimensional output. We start with our
+Isomap generates the so called geodesic distance between each pair of data points
+then applies MDS to get the low-dimensional output. We start with our
 high-dimensional input $X_i \in \mathbb{R}^D$. The first step of Isomap is to
 find the neighbors of each $X_i$. This can be achieved by either considering a
-ball with radius $\epsilon$ around $X_i$ and see which points are inside the
+ball with radius $\epsilon$ around $X_i$ and seeing which points are inside the
 ball, or by using the $k$ nearest neighbors. Both $\epsilon$ and $k$ are
 hyperparameters set by the user.
 
@@ -401,14 +401,14 @@ Isomap tries to summarize.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=10cm]{LLE_failed.jpg}
-    \caption{A failed LLE output based on the same Swiss roll input in figure \ref{fig:isomap_swissroll}. The algorithm tries to search for neighbors in a overly broad area, causing the result to be distorted.}%
+    \caption{A failed LLE output based on the same Swiss roll input in figure \ref{fig:isomap_swissroll}. The algorithm tries to search for neighbors in an overly broad area, causing the result to be distorted.}%
     \label{fig:lle_swissroll_failed}
 \end{figure}
 Nevertheless, Isomap is not perfect, either. As we already mentioned earlier in this section, MDS is a computationally expensive algorithm. On top of that, given a graph $G = (V,E)$, the Dijkstra algorithm has a time complexity of $O(|E| + |V| \log |V|)$, where $|E|$ and $|V|$ are the number of edges and vertices in the graph respectively (\cite{Fredman1984fibonacci}). For dense graphs, $|E|$ will scale quadratically with $|V|$. By combining two computationally intense algorithms, Isomap is inevitably slow and becomes a bad choice for large and dense data sets.
 
 Moreover, Isomap is very sensitive to the choice of hyperparameters and
 outliers. If the number of neighbors or the ball radius is too small, Isomap
-will sometimes produce a disconnected graph, prevents the algorithm from
+will sometimes produce a disconnected graph, preventing the algorithm from
 generating a global structure. But if the hyperparameters are too large, the
 algorithm might include ``short-circuit" edges that connect points across gaps
 or folds in the manifold that are close in the ambient Euclidean space, such as
@@ -452,7 +452,7 @@ divergence.
     \begin{align}
         D_{KL}(P||Q) = \int p(x) \log\left(\frac{p(x)}{q(x)}\right) dx.
     \end{align}
-    In particular, if $P$ and $Q$ are discrete probability measures(distributions) defined on the same sample space $\mathcal{X}$, then the KL divergence is defined as:
+    In particular, if $P$ and $Q$ are discrete probability measures (distributions) defined on the same sample space $\mathcal{X}$, then the KL divergence is defined as:
     \begin{align}
         D_{KL}(P||Q) = \sum_{x \in \mathcal{X}} p(x) \log\left(\frac{p(x)}{q(x)}\right).
     \end{align}
@@ -466,20 +466,20 @@ point $X_i$: for each $j \neq i$, let
 \end{align}
 $\sigma_i$ is a hyperparameter that is set by the user or by computation. We restrict that for each $i$, the induced probability distribution has the same entropy for all $i$. This means for some constant $\rho$, we have
 \begin{align} \label{SNE_input_entropy}
-    \sum_{j \neq i} p_{j|i} \log\left(p_{j|i}\right) = \log(N\rho),
+    -\sum_{j \neq i} p_{j|i} \log\left(p_{j|i}\right) = \log(N\rho),
 \end{align}
 where $N$ is the number of data points. The quantity $N\rho := \text{Perp}$ is called perplexity. This is a very clever design and it serves as a ``slide bar" for each $X_i$. For example, the majority of the data points are located inside a ball with radius 1 and there is one data point that is more than 1000 units away. Then from that point's perspective, the rest of the data points are roughly "equally" distant from itself. The induced probability distribution will be very close to a discrete uniform distribution. A lot of information is lost during this process. By introducing perplexity, we allow each induced probability distribution to zoom in and out so that they are "observing" the rest from the data set on the same scale. Later we will see that this setting is not only backed up by clear intuition, but also plays an important role in proving the convergence to equilibrium measure in chapter 2, as well as in the prior work by Auffinger and Fletcher (\cite{auffinger-tsne}).
 
 Let $Y_i$ be the low-dimensional output of SNE. We can define a similar
 probability mass function:
 \begin{align} \label{SNE_output_kernel}
-    q_{i|j} = \frac{\exp(-\norm{Y_i - Y_j}^2)}{\sum_{k \neq i}\exp(-\norm{Y_i - Y_k}^2)}.
+    q_{j|i} = \frac{\exp(-\norm{Y_i - Y_j}^2)}{\sum_{k \neq i}\exp(-\norm{Y_i - Y_k}^2)}.
 \end{align}
 Next, SNE will then try to minimize the KL divergence between the two (collections of) distributions, i.e.:
 \begin{align} \label{SNE_loss_function}
     L = \sum_{i=1}^N D_{KL}(P_i||Q_i) = \sum_{i=1}^N \sum_{j \neq i} p_{j|i} \log\left(\frac{p_{j|i}}{q_{j|i}}\right).
 \end{align}
-Since the input $X_i$'s are given and fixed, the loss function $L$ is a function of the output points $Y_i$'s. The minimum can be found using gradient descent. Different from LLE, SNE is not guaranteed to find a global minimum.
+Since the input $X_i$'s are given and fixed, the loss function $L$ is a function of the output points $Y_i$'s. We seek a minimum using gradient descent. Different from LLE, SNE is not guaranteed to find a global minimum.
 
 Though the formulation of SNE resembles LLE, the invention of SNE was still a
 refreshing evolution. From plain distance, to geodesic distance from
@@ -489,53 +489,56 @@ of data. But people soon discovered that SNE has its own problems. Since the
 output distribution decays exponentially and it does not have a slide bar like
 perplexity, SNE is not able to distinguish clusters that are not in close
 proximity. This is the well-known ``crowding problem" of SNE, and it directly
-inspired the birth the subsequent t-SNE algorithm (\cite{key}).
+inspired the birth of the subsequent t-SNE algorithm (\cite{key}).
 
 The t-SNE algorithm shares the same procedure as SNE. However, instead of using
 the Gaussian function in the output schema, t-SNE uses the much slower decaying
-student's t-distribution with 1 degree of freedom, i.e.,
+Student's t-distribution with 1 degree of freedom, i.e.,
 \begin{align} \label{tSNE_output_kernel}
-    q_{ij} = \frac{(1 + \norm{Y_i - Y_j}^2)^{-1}}{\sum_{k \neq i}(1 + \norm{Y_i - Y_k}^2)^{-1}}.
+    q_{ij} = \frac{(1 + \norm{Y_i - Y_j}^2)^{-1}}{\sum_{k \neq \ell}(1 + \norm{Y_k - Y_\ell}^2)^{-1}}.
 \end{align}
 That is also where the letter ``t" in the name comes from. The t-distribution greatly mitigates the crowding problem, and it is able to perform very well across different data sets. Also, t-SNE defines the input probability mass $p_{ij}$ as
 \begin{align}
-    p_{ij} = \frac{p_{j|i}+p_{i|j}}{2n},
+    p_{ij} = \frac{p_{j|i}+p_{i|j}}{2N},
 \end{align}
-which makes the input probability masses symmetric. One of the greatest and most well-known showcase of t-SNE is its implementation on the MNIST data set. The Modified National Institute of Standards and Technology (MNIST) is a large database consisting of handwritten digits. It is one of the mostly commonly used public data set for machine learning and computer vision. Started with USPS database that records handwritten zip codes, today's MNIST contains 60000 training images and 10000 testing images and serves as a benchmark for many machine learning algorithms. t-SNE is able to effectively capture the structure of data and clearly cluster different digits into separate groups. This algorithm is one of the greatest achievements in the field of dimension reduction and unsupervised learning in the 21st century.
+which makes the input probability masses symmetric. One of the greatest and most well-known showcases of t-SNE is its implementation on the MNIST data set. The Modified National Institute of Standards and Technology (MNIST) is a large database consisting of handwritten digits. It is one of the most commonly used public data sets for machine learning and computer vision. Starting with the USPS database that records handwritten zip codes, today's MNIST contains 60000 training images and 10000 testing images and serves as a benchmark for many machine learning algorithms. t-SNE is able to effectively capture the structure of data and clearly cluster different digits into separate groups. This algorithm is one of the greatest achievements in the field of dimension reduction and unsupervised learning in the 21st century.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=14cm]{mnist_tsne.jpg}
     \caption{A sample of the MNIST dataset (left) and the output of t-SNE (right). t-SNE successfully grouped the handwriting with different digits together, with some minor imperfections (there are two clusters for the digit 0).}%
     \label{fig:mnist_tsne}
 \end{figure}
-Unfortunately, we need to repeat the same statement again: nothing is perfect. t-SNE is also a computationally expensive algorithm. If the data set is large and complex, it is advised to pre-process the data set using lightweight dimension reductions such as PCA. Meanwhile, though with better flexibility and overall performance, t-SNE inherits the same drawback from LLE: poor performance at preserving global structures. The distance between two clusters are often meaningless. We only know that the corresponding original data points do not belong to the same group, but little information can be extracted by the distance between the resulting low-dimensional clusters. t-SNE is also non-deterministic by nature: ending results might vary slightly for the same data set and hyperparameters. While the general cluster structures might be similar, the exact positions and orientations can vary, which can be sometimes confusing.
+Unfortunately, we need to repeat the same statement again: nothing is perfect. t-SNE is also a computationally expensive algorithm. If the data set is large and complex, it is advised to pre-process the data set using lightweight dimension reductions such as PCA. Meanwhile, though with better flexibility and overall performance, t-SNE inherits the same drawback from LLE: poor performance at preserving global structures. The distance between two clusters is often meaningless. We only know that the corresponding original data points do not belong to the same group, but little information can be extracted by the distance between the resulting low-dimensional clusters. t-SNE is also non-deterministic by nature: ending results might vary slightly for the same data set and hyperparameters. While the general cluster structures might be similar, the exact positions and orientations can vary, which can be sometimes confusing.
 
-Such traits of t-SNE inspired some discussion regarding the mathematical nature
-of the algorithm. First, if t-SNE is non-deterministic, can we say something
-about its convergence and asymptotic behavior? Will the output of t-SNE
-converge to a certain equilibrium measure as we increase the number of samples
-to infinity? The answer is yes. We have the following results from
-\cite{auffinger-tsne}:
+These traits of t-SNE motivate the study of its large-sample behavior.
+Auffinger and Fletcher \cite{auffinger-tsne} study this problem
+through equilibrium measures. For the standard Gaussian input and Cauchy
+output kernels, the results in chapter 2 give the following formulation.
 
-\begin{theorem} [Theorem 1.1, \cite{auffinger-tsne}] \label{thm:auffinger-tsne_1.1}
-    Assume all input data points of t-SNE are drawn independent from a probability measure $\mu_X$. $\mu_X$ has a $C^1$ density function $f(x)$ and compact support. Denote $X$, $Y$ the input and output data set, $n$ the number of data points, $\rho$ the perplexity, and $L_{n,\rho}(X,Y)$ the loss function (KL-divergence) of t-SNE.
+\begin{theorem}[Special case of Theorem~\ref{tsne:main_theorem_1}] \label{thm:auffinger-tsne_1.1}
+    Assume the input points are drawn independently with common law $\mu_X$ on $\mathbb{R}^d$, where $d>2$, and $\mu_X$ has a $C^1$ density and compact support. Let the output points lie in $\mathbb{R}^2$. Fix the relative perplexity $\rho\in(0,1)$, so that $\mathrm{Perp}=n\rho$, and write $L_{n,\rho}(X,Y)$ for the t-SNE loss. We consider sufficiently large $n$ that $1<n\rho<n-1$.
 
-    Then for any $\rho \in (0,1)$ given, there exists a function $I_{\rho}$ and a
-    set of measures $\mathcal{P}_{\mu_X}$, such that
+    Let $\mathcal{P}_{\mu_X}$ be the probability measures with input marginal $\mu_X$, and let $I_\rho$ be the continuum functional defined in chapter 2. Almost surely,
     \begin{align}
-        \lim_{n \to \infty} \inf_{Y} L_{n,\rho}(X,Y) = \inf_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu).
+        \lim_{n \to \infty} \inf_{Y} L_{n,\rho}(X,Y) = \min_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu).
     \end{align}
 \end{theorem}
-If we write
+Let $\varepsilon_n\downarrow0$ be positive, and choose configurations $Y^{(n)}$ with
+\begin{align*}
+    L_{n,\rho}(X,Y^{(n)})\leq\inf_Y L_{n,\rho}(X,Y)+\varepsilon_n.
+\end{align*}
+Write
 \begin{align}
-    \mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{X_i,Y_i}
+    \mu_n = \frac{1}{n}\sum_{i=1}^n \delta_{(X_i,Y_i^{(n)})}
 \end{align}
-as the empirical measure of the input and output data set, then the following theorem also holds:
-\begin{theorem}[Theorem 1.2, \cite{auffinger-tsne}] \label{thm:auffinger-tsne_1.2}
-    Assume the same conditions as in theorem \ref{thm:auffinger-tsne_1.1}. Then there exists a measure $\mu^*$ and a sub-sequence $\{n_k\}$ such that $\mu_{n_k}$ converges weakly to $\mu^*$, and $\mu^* = \inf_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu)$. Moreover, $\mu^*$ has compact support.
+for the empirical measure of the input and output data. Then:
+\begin{theorem}[Special case of Theorems~\ref{tsne:main_theorem_1} and~\ref{tsne:main_theorem_2}] \label{thm:auffinger-tsne_1.2}
+    Under the same assumptions, almost surely there are translations of the output coordinates making $(\mu_n)$ tight. Every weak subsequential limit $\mu^*$ of these translated measures has compact support and satisfies $I_{\rho}(\mu^*) = \min_{\mu \in \mathcal{P}_{\mu_X}} I_{\rho}(\mu)$.
 \end{theorem}
-The formulation of the theorems are slightly different from the original paper and some technical details are omitted due to the introductory nature of this chapter. The above two theorems send a strong message about the theoretical guarantee of t-SNE. If the input data is drawn independently from the same distribution, t-SNE is able to output a global minimum equilibrium measure (here measure means the distribution of the output data set) as we increase the sample size to infinity, with compact support. These are the first rigorous mathematical results about this algorithm after it has been used for so many years. And it leads to the next question, the question we are able to address in chapter 2.
-
+These statements concern variational optima and approximate minimizers. They
+do not assert convergence of a particular gradient-descent run to a global
+minimizer or uniqueness of the limiting measure. This leads to the question
+we address in chapter 2.
 For the output distributions, using the Gaussian is not necessary as the
 successful execution of the algorithm does not rely on the specific properties
 of Gaussian functions. The two theorems above further verify this observation.
@@ -545,25 +548,23 @@ normalizing weights that produce the input and output distributions. For input,
 the kernel is the Gaussian function and for the output, the kernel is the
 function $f(x) = (1 + x^2)^{-1}$. It is natural to ask:
 
-\textbf{``Is the student t-distribution not the only kernel that might give us the same theoretical guarantees? If no, then what is the class of output kernels that will give us the same results in \cite{auffinger-tsne}? Even more generally speaking, if we swap out both input and output kernels, what conditions do we need for the same theorems to be true?"}
+\textbf{``Is the Student t-distribution not the only kernel that might give us the same theoretical guarantees? If no, then what is the class of output kernels that will give us the same results in \cite{auffinger-tsne}? Even more generally speaking, if we swap out both input and output kernels, what conditions do we need for the same theorems to be true?"}
 
 These are the exact questions we are able to answer with rigorous proofs in
-chapter 2. Besides that, people are already swapping out output kernels in
-practice. Note that in the formula of KL-divergence, for the term
-$p_{ij}\log(p_{ij}/q_{ij})$ reaches its minimum zero when $p_{ij} = q_{ij}$.
-This means if we manually increase $p_{ij}$, the gradient descent process will
-tend to increase $q_{ij}$ as well. This is achieved by putting the output
-points $Y_i$ and $Y_j$ closer together, as the output kernel $f(x) = (1 +
-    x^2)^{-1}$ is monotone decreasing. Therefore, in application people often
+chapter 2. Related modifications are already used in practice. The full
+KL divergence $\sum_{i\ne j}p_{ij}\log(p_{ij}/q_{ij})$ is nonnegative and
+vanishes when the two probability arrays agree. Increasing the weight
+$p_{ij}$ strengthens the attractive contribution for that pair in the
+gradient. In applications, people often
 replace $p_{ij}$ with its multiple $kp_{ij}$ for some constant $k > 1$. This is
 called the early exaggeration, one of the frequently used techniques. Using
 early exaggeration will result in closer clusters, improving visualization
 results.
 
 Another known modification of the t-SNE algorithm is the heavy-tailed t-SNE.
-Recall that the density function of the t-distribution is given by
+Recall that the density function of the t-distribution satisfies
 \begin{align} \label{t_dist_density}
-    f(x) = \left(1+\frac{x^2}{\alpha}\right)^{-\frac{\alpha+1}{2}},
+    f(x) \propto \left(1+\frac{x^2}{\alpha}\right)^{-\frac{\alpha+1}{2}},
 \end{align}
 where $\alpha$ is the degree of freedom. Decreasing $\alpha$ will reduce its decaying speed and make it more ``heavy-tailed". This will make $q_{ij}$ relatively larger and the output clusters will be compact. It is also shown in \cite{Kobak_2020} that heavy-tailed t-SNE tends to produce finer clusters, such as sub-clusters of the same digit in the MNIST data set.
 \begin{figure}[ht]
@@ -572,7 +573,7 @@ where $\alpha$ is the degree of freedom. Decreasing $\alpha$ will reduce its dec
     \caption{The running result of different SNE algorithms in \cite{Kobak_2020}, with (A) being the light-tail t-SNE, (B) the normal t-SNE and (C) the heavy-tailed t-SNE. Heavy tailed variants are producing tighter and finer clusters, while the light-tail version produces results similar to the original SNE. ($t$-distribution will converge to Gaussian if $\alpha \to \infty$.)}%
     \label{fig:heavytail_tsne}
 \end{figure}
-Both early exaggeration and heavy-tailed t-SNE can be seen as manipulations of the output kernel. t-SNE works effectively under the modification and produces promising results, besides different characteristics researchers hope to see. Besides exploring different conditions for the convergence to hold and the equilibrium measure to exist, it is also an interesting problem to see how exactly the output changes with the modification of the output kernel. Some insightful results can be found in \cite{weinkove2024flow}.
+Early exaggeration modifies the input affinities, while heavy-tailed t-SNE modifies the output kernel. t-SNE works effectively under the modification and produces promising results, besides different characteristics researchers hope to see. Besides exploring different conditions for the convergence to hold and the equilibrium measure to exist, it is also an interesting problem to see how exactly the output changes with the modification of the output kernel. Some insightful results can be found in \cite{weinkove2024flow}.
 
 It is fascinating to see the rigorous mathematical theory behind widely used
 algorithms like t-SNE, which are often used to produce qualitative rather than
@@ -586,7 +587,7 @@ chapter 2.
 We have seen how the theory of dimension reduction has come a long way for the
 purpose of addressing the challenges from high-dimensional data. Now we turn to
 another, likely more fundamental problem that probability, statistics and data
-science need to face: dependency. Though most of probability textbook starts
+science need to face: dependency. Though most probability textbooks start
 with the concept of independence and theorems assuming it, dependencies are
 probably one of the oldest and most prevalent challenges we have had to tackle
 ever since the concept of probability was born. How farmers might change their
@@ -595,7 +596,7 @@ cards in hand; how traders design their investment strategies based on the
 stock market. All these decisions are based on dependencies and uncertainty.
 Probabilistic dependency has been with us since the beginning of our time. Even
 to this day, people might still care about the fate of Schrodinger's cat,
-``condition on" the mysterious nature of quantum superposition.
+``conditional on" the mysterious nature of quantum superposition.
 
 The explosive advancement of computer science and modern industry not only
 brings high-dimensional data, but also exponentially more complicated
@@ -623,29 +624,29 @@ they deployed to encode the information.
     \label{fig:image_segmentation}
 \end{figure}
 
-This paper is one of the most famous and important paper in the field of
+This paper is one of the most famous and important papers in the field of
 computer vision and pattern analysis. It utilizes a lot of important tools and
 concepts like Bayesian inference, Gibbs sampling, and Markov random field, some
 of which will be introduced more systematically in the next several sections.
 The paper also draws inspiration from statistical physics and today the
 intersection between statistical physics, math, and computer science has
-developed into a even larger and more captivating field. It is easy to write a
+developed into an even larger and more captivating field. It is easy to write a
 couple of books just based on the keywords from this single paper so we will
-not go into too much nuances. Rather, let us talk about some of the real-life
+not go into too many nuances. Rather, let us talk about some of the real-life
 impact this discovery brought.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{waymo.jpg}
-    \caption{A Waymo self-driving taxi, operating in downtown San Francisco, by Dllu, from Wikimedia Commons. One can easily spot the giant central hub for sensors on the top of the car, as well as many other additional cameras and radars the taxi relies on to deliver a smooth transportation experience. Waymo uses a mixture of technologies, with computer vision and image segmentation being one of the key component of its smooth operation.}%
+    \caption{A Waymo self-driving taxi, operating in downtown San Francisco, by Dllu, from Wikimedia Commons. One can easily spot the giant central hub for sensors on the top of the car, as well as many other additional cameras and radars the taxi relies on to deliver a smooth transportation experience. Waymo uses a mixture of technologies, with computer vision and image segmentation being one of the key components of its smooth operation.}%
     \label{fig:waymo}
 \end{figure}
 
-One of the major application of image segmentation is self-driving cars. In
+One of the major applications of image segmentation is self-driving cars. In
 order to identify various objects on the road and navigate through
 ever-changing traffic, self-driving cars need to have cameras and computer
 vision technologies to detect and identify objects. This is the aspect that
-cameras can be much more useful than radars (while radars are better handling
+cameras can be much more useful than radars (while radars are better at handling
 positional and distance information). In 2025, we already have commercialized
 self-driving taxi services by Waymo in several major cities like San Francisco,
 Los Angeles, and Phoenix, with some known for its notoriously difficult traffic
@@ -660,17 +661,17 @@ Geman in 1984 (\cite{zhu2023superpixeltransformersefficientsemantic}).
     \label{fig:more_image_segmentation}
 \end{figure}
 
-Another well-known and important follow-up is the Graph Cuts, emerging in early
+Another well-known and important follow-up is the Graph Cuts, emerging in the early
 2000s (\cite{Boykov2001}, \cite{Kolmogorov2004}, \cite{Boykov2004}). This new
-image segmentation algorithm was solid step up from Geman and Geman's work and
+image segmentation algorithm was a solid step up from Geman and Geman's work and
 it profoundly influenced the world. Due to its massive improvement in
-computational efficiency and overall perforamnce, it is widely used in many
+computational efficiency and overall performance, it is widely used in many
 areas like medical imaging. MRI and CT are able to identify organs, lesions and
 tissues with the help of segmentation and it is safe to say these devices saved
 countless lives. Graph Cuts also contributed to the development of stereo
 vision, which allows the depth of images to be recovered by using two or more
 cameras, similar to how our eyes work. The narratives and stories above can all
-be traced back to 1984, where the dependencies problems were effectively
+be traced back to 1984, where the dependency problems were effectively
 modelled and addressed. Vision is the most common sense we use to perceive the
 world. It contains great obstacles just as it contains great values.
 
@@ -682,7 +683,7 @@ expression of others such as the lac Operon and the trp Operon in E. coli
 (\cite{Naville2010}, \cite{JACOB1961318}). For humans a well known genetic
 piece is the Estrogen Receptor (ER$\alpha$). ER$\alpha$ plays a vital role in
 the development and function of many tissues, particularly in the female
-reproduction system, but also in bone, brain and cardiovascular health.
+reproductive system, but also in bone, brain and cardiovascular health.
 ER$\alpha$ affects our body primarily by interacting and binding with other DNA
 sequences, which ultimately leads to changes in cell behavior. Particularly,
 ER$\alpha$ dysregulation is a key driver in the majority of breast cancers
@@ -719,7 +720,7 @@ decipher the functional grammar within a single sequence (\cite{Krogh1994HMM},
 tool in genetic research like GRN but with a different focus. One key concept
 HMM has that is not present in GRN is called the hidden states. Generally
 speaking, the observed gene sequence is just the tip of the iceberg. There are
-so many actives and biochemical reactions that happen before a segment of gene
+so many activities and biochemical reactions that happen before a segment of gene
 is formed and observed. To give an instance, for eukaryotic genes we have
 concepts of exon and intron. Exons are the coding regions that are present in
 the final mRNA transcript, while introns are the non-coding regions that get
@@ -733,14 +734,14 @@ ultimately, to different observed sequences.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=10cm]{A_profile_HMM_modelling_a_multiple_sequence_alignment.png}
-    \caption{A illustration about HMM modeling multiple sequence alignment, by EMBL-EBI Train Online, from Wikimedia Commons.}%
+    \caption{An illustration about HMM modeling multiple sequence alignment, by EMBL-EBI Train Online, from Wikimedia Commons.}%
     \label{fig:HMM_modeling}
 \end{figure}
 
 Contrary to GRNs, whose goal is often the network structure itself, HMMs are
 used for classification and alignment, such as calculating the probability that
-a given sequence was generated by a particular collections of hidden states. We
-call this the emission probabilities. If we see a coding regions with a certain
+a given sequence was generated by a particular collection of hidden states. We
+call this the emission probabilities. If we see a coding region with a certain
 sequence of nucleotide A, C, G, T or some types of amino acids, we are likely
 able to predict the likelihood of obtaining a specific observable symbol. HMM
 reveals and decodes the mechanism behind gene formation, allowing us to
@@ -752,20 +753,19 @@ because dependencies encode relations. It is relations that define the world we
 live in, not isolated objects. All the applications in those examples benefit
 from properly modelled dependencies. And all those dependencies are transcribed
 in graph structures. Indeed, probabilistic graphical models are specifically
-designed to address the dependencies problems, and there have been so many
+designed to address the dependency problems, and there have been so many
 successful advancements and applications of PGMs. As we venture deeper into the
 finer structure of this universe, both on micro and macro scales, PGMs have
 become even more important than ever before.
 
 \begin{remark}
-    Though PGMs are the specialized tool to solve dependency problems, we should also be aware that they are not the only tools. As vast as the theories and applications of PGMs have come to be, they are a small part of a much larger overarching theme, combinatorial optimization (CO). This term can refer to any problems that aim to find an optimal object from a finite set of objects (\cite{Schrijver2003}), often comes with a set of constraints as well. Probabilistic dependency is only one kind of constraints and PGMs are only one type of tools that record such constraints. The field of CO is extremely diverse and rich. We can start with basic examples like the traveling salesman problem all the way to the major unsolved problems such as P=NP. It is easy to go too deep into the rabbit hole. Therefore, it would be appropriate to acknowledge the wider picture while focusing on PGMs in this section.
+    Though PGMs are the specialized tool to solve dependency problems, we should also be aware that they are not the only tools. As vast as the theories and applications of PGMs have come to be, they are a small part of a much larger overarching theme, combinatorial optimization (CO). This term can refer to any problems that aim to find an optimal object from a finite set of objects (\cite{Schrijver2003}), often comes with a set of constraints as well. Probabilistic dependency is only one kind of constraint and PGMs are only one type of tool that record such constraints. The field of CO is extremely diverse and rich. We can start with basic examples like the traveling salesman problem all the way to the major unsolved problems such as P=NP. It is easy to go too deep into the rabbit hole. Therefore, it would be appropriate to acknowledge the wider picture while focusing on PGMs in this section.
 \end{remark}
 \subsection{PGM, a Short History} \label{intro_chap:sec:MRF:sec:PGM_history}
 Both graph theory and probability have a long history. Though the foundation of
 modern probability is widely regarded as the work by Kolmogorov, probability
 theory, in general, can date back to the 16th century
-(\cite{lightner1991brief}). Graph theory is often believed to be the brain
-child of Euler (\cite{Euler1736}). The basic ingredients of PGM have existed
+(\cite{lightner1991brief}). Graph theory is often believed to be the brainchild of Euler (\cite{Euler1736}). The basic ingredients of PGM have existed
 long before PGM itself was created. Therefore, the history of PGM can be
 roughly divided into three parts: the early conceptual seeds (from probability
 and graph theory), the emergence of mainstream models (Bayesian networks and
@@ -776,16 +776,16 @@ Prior to the 1980s, there was not a definitive concept of PGM that was widely
 acknowledged and used among the research community. However, the practices that
 used graphs to represent probabilistic models started to emerge in the first
 half of the 20th century. In 1925, Ernst Ising used the lattice graph in his
-Ph. D thesis to represent the the magnetic dipole moments of atomic ``spins"
+Ph. D thesis to represent the magnetic dipole moments of atomic ``spins"
 (\cite{Ising1925BeitragZT}). Later this idea was generalized by Lars Onsager in
 1944 (\cite{PhysRev.65.117}) and then evolved into the famous Ising model we
 know today in statistical physics. Formally speaking, let $\Lambda$ be the
-lattice graph(site) and we use positive integers to denote its vertices. For
-each vertex(site) $k$, there is a discrete variable $\sigma_k$ such that
+lattice graph (site) and we use positive integers to denote its vertices. For
+each vertex (site) $k$, there is a discrete variable $\sigma_k$ such that
 $\sigma_k \in \{-1,1\}$, representing the site's spin. We call the collection
 of all spins $\sigma := \{\sigma_k\}_{k \in \Lambda}$ the spin configuration.
-For any two adjacent sites(vertices) $i,j \in \Lambda$, there is an interaction
-$J_{ij}$. Finally, let $\mu$ be the magnet moment and $h_j$ be the external
+For any two adjacent sites (vertices) $i,j \in \Lambda$, there is an interaction
+$J_{ij}$. Finally, let $\mu$ be the magnetic moment and $h_j$ be the external
 magnetic field interacting with $j$. The Ising model is defined by the
 following random function called the Hamiltonian:
 \begin{align}
@@ -808,10 +808,10 @@ direct causal influences.
     \label{fig:casualmap}
 \end{figure}
 
-With the help of directed graphs, complicated chain of influence can be
+With the help of directed graphs, complicated chains of influence can be
 decomposed and quantitatively studied. The correlation/causation between two
-variables are measured by the sum of all paths that connect them and the
-contribution of a path is determined via the product of all its edge weight.
+variables is measured by the sum of all paths that connect them and the
+contribution of a path is determined via the product of all its edge weights.
 This simple but effective framework allows us to estimate the magnitude of
 direct and indirect effects within the causal model.
 
@@ -827,15 +827,15 @@ extensively to study inheritance. Some of his famous work included the piebald
 patterns of Guinea-Pigs and factor analysis for offspring phenotype
 (\cite{Wright1920TheRI}, \cite{10.1093/genetics/6.2.111}). In fact, Wright had
 already started using the concept of path analysis in 1918 before he formally
-defined the term (\cite{10.1093/genetics/3.4.367}). It is safe to say the his
+defined the term (\cite{10.1093/genetics/3.4.367}). It is safe to say that his
 biological research inspired the creation of this important mathematical model,
 yet another great victory for the interdisciplinary research between math and
 biology!
 
-It is also worth noting that the Wright's work has profoundly influenced the
+It is also worth noting that Wright's work has profoundly influenced the
 field of PGM and computer science. Path analysis is considered a direct
-precursor to modern Structural Equation Modeling (SEM). In 1960s and 1970s,
-social scientist used path analysis and created a set of tools that are still
+precursor to modern Structural Equation Modeling (SEM). In the 1960s and 1970s,
+social scientists used path analysis and created a set of tools that are still
 widely used today in social science, psychology and economics
 (\cite{Duncan1975}, \cite{Bollen89}).
 
@@ -851,11 +851,11 @@ variables and $p(x_1,\dots, x_n)$ their joint density function. We have
 \begin{align}
     p(x_1,\dots, x_n) = p(x_1)p(x_2|x_1)\cdots p(x_n|x_1,\dots,x_{n-1}).
 \end{align}
-BN uses the decomposition, but based on the graph structure. So compared to path analysis, the computation of weight in BN produces actual probability. This greatly increase the information density of the same framework. Using BNs, we are able to effectively navigate through complex dependency relationships and compute the probability of events from evidence.
+BN uses the decomposition, but based on the graph structure. So compared to path analysis, the computation of weight in BN produces actual probability. This greatly increases the information density of the same framework. Using BNs, we are able to effectively navigate through complex dependency relationships and compute the probability of events from evidence.
 
 BNs have been widely used in various fields. Besides biology and medical
 research, BNs are also used in software engineering and finance. One of the
-most well-known application of BNs is the email spam filter
+most well-known applications of BNs is the email spam filter
 (\cite{Sahami1998}). The early version of email spam filters had very simple
 structures. It looked at the overall probability of an email being potential
 spam and conditional probability when certain words are present. Intuitively it
@@ -875,7 +875,7 @@ In our daily lives, such questions can be easy. ``What if I got a flat tire?"
 ``Prepare a tire repair kit in your trunk.'' Financial market and related risks
 have much more intertwined underlying causes. Such needs directly overlap with
 the specialty of BNs, making it the ideal tool for risk assessment and
-management til this day.
+management till this day.
 
 Now let us turn our attention to Markov Random Field (MRF). While Bayesian
 networks are very effective in representing direct dependencies and causal
@@ -896,8 +896,7 @@ We will not go into the details of the proof, but it would be beneficial to
 state the theorem and compare the notion of MRF with a traditional Markov
 Chain.
 
-Let $[n] = \{1,2,\dots,n\}$ and $\mathcal{X} = (X_t)_{t \in [n]}$ be a finite
-dimension random vector with each $X_t$ taking values in a finite set
+Let $[n] = \{1,2,\dots,n\}$ and $\mathcal{X} = (X_t)_{t \in [n]}$ be a finite-dimensional random vector with each $X_t$ taking values in a finite set
 $\mathcal{S}_t = \{1,2,\dots,m_t\}$. Suppose $[n]$ is the set of vertices of a
 graph. For each $t$, denote $\mathcal{N}_t$ the set of vertices $s$ such that
 $s$ is adjacent to $t$ in the graph.
@@ -937,7 +936,7 @@ Besag's paper is a major cornerstone in statistics and fields dealing with spati
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{ICMBesag.png}
-    \caption{Besag used MRF to develop the Iterated Condition Modes (ICM) algorithm that is able to restore dirty images. The figure is from his work in 1986 \cite{Besag1986}. As we can see, ICM performs much better than the old maximum-likelihood classifier.}%
+    \caption{Besag used MRF to develop the Iterated Conditional Modes (ICM) algorithm that is able to restore dirty images. The figure is from his work in 1986 \cite{Besag1986}. As we can see, ICM performs much better than the old maximum-likelihood classifier.}%
     \label{fig:ICMBesag}
 \end{figure}
 
@@ -970,13 +969,13 @@ learning was also gradually shifting the fashion of the field. Instead of
 relying on expert knowledge, people began to use ML algorithms to learn the
 unknown parameters or the graph structures from complex data, building the
 navigation chart amidst the black sea of chaos. The effectiveness of PGMs,
-combined with the strong generative power of ML, expand the potentials of PGMs
+combined with the strong generative power of ML, expands the potential of PGMs
 even further. It is exciting to see what this field will bring us for the rest
 of this century.
 \subsection{Bayesian Networks and Markov Random Fields} \label{intro_chap:sec:MRF:sec:BN_MRF}
 As we mentioned in section \ref{intro_chap:sec:MRF:sec:PGM_history}, Bayesian
 networks and Markov random fields represent the two main types of PGMs,
-reflecting to choice of directed or undirected graph. In chapter 3, we will
+reflecting the choice of directed or undirected graph. In chapter 3, we will
 provide a self-contained walkthrough on how machine learning algorithms can be
 used to learn the graph structure. Towards that end, in this chapter, we will
 dedicate some space to introduce the two main PGMs themselves, as well as the
@@ -985,7 +984,7 @@ background and how chapter 3 weaves different topics together to create a new
 algorithm.
 
 Let us start with Bayesian network. Let $p(x_1,\dots,x_n)$ be any probability
-density function. Recall that we can decompose $p$ using a chain of condition
+density function. Recall that we can decompose $p$ using a chain of conditional
 probability:
 \begin{align}
     p(x_1,\dots,x_n) = p(x_1)p(x_2|x_1)\cdots p(x_n|x_1,\dots,x_{n-1}).
@@ -994,8 +993,8 @@ probability:
 Such decomposition is often computationally intractable. For BN, we modify such
 decomposition that each $x_i$ only depends on a small subset of ancestor
 variables $x_{A_i}$. For example, whether one takes the walk or bus depends on
-tomorrow's weather, and the weather depends a series of complicated natural
-factors. It would be an overkill if we model the choices of transportation on
+tomorrow's weather, and the weather depends on a series of complicated natural
+factors. It would be overkill if we model the choices of transportation on
 all these factors. Instead, we just let the weather be the only ancestor
 variable of the transportation choices and weather itself depends on the
 natural factors such as temperature, wind direction, etc. Bearing the intuition
@@ -1017,7 +1016,7 @@ Let us take a look at a simple example from \cite{koller2009probabilistic}.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{BNstudent.png}
-    \caption{Figure 3.3 from \cite{koller2009probabilistic}, a simple BN that models the letter graph and SAT scores of students.}%
+    \caption{Figure 3.3 from \cite{koller2009probabilistic}, a simple BN that models the letter grade and SAT scores of students.}%
     \label{fig:BNstudent}
 \end{figure}
 
@@ -1028,7 +1027,7 @@ upwards through the ancestry:
 \begin{align}
     p(d,i,g,s,l) = p(s|i) \cdot p(l|g) p(g |i,d)p(i)p(d).
 \end{align}
-The reason that the example is well constructed is that not only it provides an easy-to-follow computation example, but also provides the three main patterns of conditional dependence in BN, based on whether the ancestor or intermediate node is observed or not. For three random variables $X,Y,Z$, we write $X \bot Y |Z$ if $X$ and $Y$ are independent condition on $Z$. We also use arrows to denote the local graph structure. For example, $X \to Y$ means there is a directed edge from $X$ to $Y$. The three common patterns are as follows.
+The reason that the example is well constructed is that not only does it provide an easy-to-follow computation example, but it also provides the three main patterns of conditional dependence in BN, based on whether the ancestor or intermediate node is observed or not. For three random variables $X,Y,Z$, we write $X \bot Y |Z$ if $X$ and $Y$ are independent conditional on $Z$. We also use arrows to denote the local graph structure. For example, $X \to Y$ means there is a directed edge from $X$ to $Y$. The three common patterns are as follows.
 
 \begin{figure}[ht]
     \centering
@@ -1053,19 +1052,19 @@ by the definition of conditional independence.
 (iii) Evidential and causal effects, representing (a) and (b) in figure \ref{fig:BNpatterns}. Clearly for unobserved $Z$ we have $X$ and $Y$ are not independent. However, if the intermediate node $Z$ is observed, then $X \bot Y |Z$. This means that everything it takes to determine the final state is provided, so the root in the network no longer plays a role in the outcome of its children. This is also clear in figure \ref{fig:BNstudent}. If the exam result is released, then the letter grade of a student will depend solely on the score, not on the smartness of the student.
 
 The three patterns can be used to define another important concept called
-d-separation. As we just see, dependency can be passed through paths on the
-graph via a series of 3-node patterns given observed data. If there are no such
+d-separation. As we just saw, dependency can be passed through paths on the
+graph via a series of 3-node patterns given observed data. If there is no such
 way to connect two clusters of nodes, then they are essentially conditionally
 independent, revealing insights of the data we are trying to analyze.
 
 \begin{definition}[d-separation]
-    Let $\mathcal{X}$, $\mathcal{Y}$ and $\mathcal{O}$ be three sets of nodes in a Bayesian network $G$. We say that $\mathcal{X}$ and $\mathcal{Y}$ are d-separated given $\mathcal{O}$ (The letter $\mathcal{O}$ stands for observed) if $\mathcal{X}$ and $\mathcal{Y}$ are not connected by an active path. An undirected path in $G$ (meaning one can go against the arrows) is called active given observed nodes $\mathcal{O}$ if for every sequence of consecutive three nodes $X,Y,Z$ on the path satisfies one of the following conditions:
+    Let $\mathcal{X}$, $\mathcal{Y}$ and $\mathcal{O}$ be three sets of nodes in a Bayesian network $G$. We say that $\mathcal{X}$ and $\mathcal{Y}$ are d-separated given $\mathcal{O}$ (The letter $\mathcal{O}$ stands for observed) if $\mathcal{X}$ and $\mathcal{Y}$ are not connected by an active path. An undirected path in $G$ (meaning one can go against the arrows) is called active given observed nodes $\mathcal{O}$ if every sequence of three consecutive nodes $X,Y,Z$ on the path satisfies one of the following conditions:
 
     (i) $X \leftarrow Y \leftarrow Z$, $Y \notin \mathcal{O}$;
 
     (ii) $X \to Y \to Z$, $Y \notin \mathcal{O}$;
 
-    (iii) $X \to Y \leftarrow Z$, $Y \in \mathcal{O}$.
+    (iii) $X \to Y \leftarrow Z$, $Y \in \mathcal{O}$ or $Y$ has a descendant in $\mathcal{O}$;
 
     (iv) $X \leftarrow Y \to Z$, $Y \notin \mathcal{O}$.
 \end{definition}
@@ -1073,25 +1072,25 @@ independent, revealing insights of the data we are trying to analyze.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=13cm]{dsep.png}
-    \caption{A pair BNs illustrating the concept of d-separation.}%
+    \caption{A pair of BNs illustrating the concept of d-separation.}%
     \label{fig:dsep}
 \end{figure}
 
 In figure \ref{fig:dsep}, we mark the observed nodes with a darker gray color.
-It is easy to check that node $A$ and $F$ are d-separated given $B$ and $C$ on
+It is easy to check that nodes $A$ and $F$ are d-separated given $B$ and $C$ on
 the left, while $B$ and $C$ are not d-separated given $A$ and $F$ on the right
-($B \to D \to F \to E \to C$ is an active path). We then proceed to define
+($B \to D \to F \leftarrow E \leftarrow C$ is an active path). We then proceed to define
 \begin{align}
     \mathcal{I}(G) = \{(\mathcal{X},\mathcal{Y},\mathcal{Z}) | \text{$\mathcal{X},\mathcal{Y}$ are d-separated by $\mathcal{Z}$}\}.
 \end{align}
-This definition is where the power of graph theory starts to manifest. Recall that graph theory studies quantities about graphs that remain unchanged under various transformation and mapping, such as coloring and characteristic polynomial. The quantity $\mathcal{I}(G)$ is also one of such quantities tied to Bayesian network that helps identify different Bayesian networks with similar underlying structures. If we define two BNs $G$ and $G'$ as I-equivalent if $\mathcal{I}(G) = \mathcal{I}(G')$, then the following theorem holds
+This definition is where the power of graph theory starts to manifest. Recall that graph theory studies quantities about graphs that remain unchanged under various transformations and mappings, such as coloring and characteristic polynomial. The quantity $\mathcal{I}(G)$ is also one of such quantities tied to Bayesian network that helps identify different Bayesian networks with similar underlying structures. If we define two BNs $G$ and $G'$ as I-equivalent if $\mathcal{I}(G) = \mathcal{I}(G')$, then the following theorem holds
 
 \begin{theorem}[Theorem 3.9, \cite{koller2009probabilistic}]
-    Two Bayesian networks $G$ and $G'$ are I-equivalent if and only if there exists a sequence of network
+    Two Bayesian networks $G$ and $G'$ are I-equivalent if and only if there exists a sequence of networks
     \begin{align}
         G = G_1, \dots, G_k = G'
     \end{align}
-    such that the only difference between $G_i$ and $G_{i+1}$, $1 \leq i \leq k=1$ is a single reversal of a covered edge.
+    such that the only difference between $G_i$ and $G_{i+1}$, $1 \leq i \leq k-1$ is a single reversal of a covered edge.
 \end{theorem}
 
 This theorem, combined with an algorithm that can find $\mathcal{I}(G)$ and
@@ -1102,8 +1101,8 @@ stop here to prevent ourselves from deviating too far. Now we will turn our
 attention to MRF.
 
 Unlike BNs, the definition of an MRF does not derive strictly from
-decomposition of conditional probability. Rather, it assigns a factor(weight)
-to each clique(complete subgraph) in the graph.
+decomposition of conditional probability. Rather, it assigns a factor (weight)
+to each clique (complete subgraph) in the graph.
 
 \begin{figure}[ht]
     \centering
@@ -1119,7 +1118,7 @@ factor of the value assignment as
 \begin{align}
     \tilde{p}(a,b,c,d) = \phi(a,b)\phi(b,c)\phi(c,d)\phi(a,d),
 \end{align}
-where $\phi$ can be any positive functions defined by the user. Normalizing the factor will give us the joint probability distribution of the MRF:
+where $\phi$ can be any positive function defined by the user. Normalizing the factor will give us the joint probability distribution of the MRF:
 \begin{align}
     p(a,b,c,d) = \frac{1}{Z}\tilde{p}(a,b,c,d),
 \end{align}
@@ -1137,7 +1136,7 @@ Now we can give an alternative and equivalent definition based on the graph stru
     \begin{align}
         p(x_1,\dots,x_n) = \frac{1}{Z} \prod_{C \in \mathcal{C}} \phi_C(x_C),
     \end{align}
-    where $\mathcal{C}$ is the collection of all cliques(complete subgraphs) in $G$, each factor $\phi_C$ is a non-negative function, and
+    where $\mathcal{C}$ is the collection of all cliques (complete subgraphs) in $G$, each factor $\phi_C$ is a non-negative function, and
     \begin{align}
         Z = \sum_{x_1,\dots,x_n} \prod_{C \in \mathcal{C}} \phi_C(x_C)
     \end{align}
@@ -1177,9 +1176,9 @@ drawback of MRF is the computation of $Z$. To compute the partition function
 $Z$, one might need to sum over an exponential number of possible value
 assignments. This summation is generally NP-hard. Moreover, since every BN is
 required to be acyclic and directed, it is very easy to generate data using the
-hierarchy of dependencies relations. Since MRF, in contrast, is undirected and
+hierarchy of dependency relations. Since MRF, in contrast, is undirected and
 thus has no ``starting points" or ancestors, it is often much harder to
-generate data from a MRF.
+generate data from an MRF.
 
 Since our work in chapter 3 mainly deals with intractable computations, we will
 dedicate some space to discuss sampling and \lovasz Local Lemma in the next
@@ -1199,20 +1198,20 @@ are trying to analyze. It often comes in the form of constraints, or a series
 of ``bad events". For the machine learning algorithm to effectively learn the
 PGM model, we need to make sure the samples we generate are from the actual
 conditional distributions from the data. Therefore when we are trying to
-sampling with constraints, it is important for us to know the (approximate)
-answers of the following two questions:
+sample with constraints, it is important for us to know the (approximate)
+answers to the following two questions:
 
 (i) Given a set of constraints, do the samples satisfying all conditions exist?
 
-(ii) If yes, how do we sample from the distribution effectively without spending exponential time or stuck in an finite loop. (Meeting one constraint will fail another. Sometimes constant adjustment without proper strategy will indefinitely prolong the sampling process.)
+(ii) If yes, how do we sample from the distribution effectively without spending exponential time or getting stuck in an infinite loop? (Meeting one constraint will fail another. Sometimes constant adjustment without proper strategy will indefinitely prolong the sampling process.)
 
 Though there is no one-size-fits-all answer to the two questions, there are
 some general principles that can be applied to a wide range of problems. One of
-the most famous and widely used principle is \lovasz Local Lemma (LLL),
+the most famous and widely used principles is \lovasz Local Lemma (LLL),
 discovered and proved by Erd\"os and \lovasz in 1975.
 
 \begin{lemma}[\cite{LLL1975}] \label{lem:LLL1975}
-    Let $A_1,\dots,A_k$ be a sequence of events such that each event occurs with probability at most $p$ and such that each event if independent of all the other events except for at most $d$ of them. Assume
+    Let $A_1,\dots,A_k$ be a sequence of events such that each event occurs with probability at most $p$ and such that each event is independent of all the other events except for at most $d$ of them. Assume
     \begin{align}
         4pd \leq 1.
     \end{align}
@@ -1220,7 +1219,7 @@ discovered and proved by Erd\"os and \lovasz in 1975.
 \end{lemma}
 
 Shearer improved the results in 1985 and the updated lemma becomes the \lovasz
-Local Lemma(LLL) we know today:
+Local Lemma (LLL) we know today:
 \begin{lemma}[\cite{LLL1985}] \label{lem:LLL1985}
     Assuming the same conditions as lemma \ref{lem:LLL1975}, if we have $p \leq \frac{1}{2d}$. Assume
     \begin{align}
@@ -1230,12 +1229,12 @@ Local Lemma(LLL) we know today:
     Then there is a nonzero probability that none of the events occurs.
 \end{lemma}
 
-Both lemma \ref{lem:LLL1975} and \ref{lem:LLL1985} answered the first existence
+Both lemmas \ref{lem:LLL1975} and \ref{lem:LLL1985} answered the first existence
 problem. However, there is a lot of room for improvement. All the bad events
 have a common upper bound $p$, which reduces the applicability of the lemmas.
 Spencer in 1977 proved the asymmetric version of the lemma. To state this
-result, we need to the concept of dependency graphs, which are extensively used
-in chapter 3. To put in simple terms, a dependency graph is a graph with nodes
+result, we need the concept of dependency graphs, which are extensively used
+in chapter 3. To put it in simple terms, a dependency graph is a graph with nodes
 representing a set of events such that mutually independent events are not
 adjacent, otherwise connected via an edge. With that being said, we have the
 following statement.
@@ -1252,10 +1251,10 @@ following statement.
 \end{lemma}
 
 As we can see, the asymmetric LLL has a stronger result, even with a positive
-lower bound. However, the improved existence does not lead to a actionable
+lower bound. However, the improved existence does not lead to an actionable
 algorithm that helps us sample from the distribution. All proofs of the three
 lemmas above are non-constructive. In order to put this powerful mathematical
-fact into practice, there has been many attempts seeking for constructive
+fact into practice, there have been many attempts seeking constructive
 proofs or better, an algorithmic version of LLL. To name a few, Beck in 1991
 gave an algorithmic proof of LLL under polynomial time, one of the early
 milestones that turned LLL into an effective sampling technique. The most
@@ -1277,14 +1276,14 @@ In previous sections \ref{intro_chap:sec:tsne} and \ref{intro_chap:sec:MRF}, we
 have discussed the importance and difficulties of problems in probability and
 data science that arise from high dimensionality and dependencies. To solve
 these two problems, scientists created dimension reduction and probabilistic
-graphic models to tackle them respectively. For our work in chapter 4, the
+graphical models to tackle them respectively. For our work in chapter 4, the
 algorithm we develop involves both dimension reduction and probabilistic
-graphic models. The framework we invented is called Variational inference
+graphical models. The framework we invented is called Variational inference
 Factor Analysis (VarFA). It is self-explanatory that this toolkit combines
 variational inference with factor analysis.
 
 From the dimension reduction perspective, the variational inference part draws
-inspiration of classical Variational AutoEncoder (VAE), which utilizes the
+inspiration from classical Variational AutoEncoder (VAE), which utilizes the
 so-called ``latent dimensions" to generate output similar to the input data
 set. To understand latent dimensions, let us take a look at some real-life
 examples, such as modeling in games. For large games (such as games with vast
@@ -1295,7 +1294,7 @@ developers want to generate a set of objects that are similar to the in-game
 object they have already created, but different. If we see input image $X$ as
 high-dimensional data with pixel information, then we want to find a
 probabilistic algorithm that can compute the probability $p(X)$, where $p$
-refers to the probability of how likely this collection of pixel can be seen as
+refers to the probability of how likely this collection of pixels can be seen as
 similar objects created manually by developers. If $p$ is high, we take the
 image and a new in-game object is generated.
 
@@ -1306,11 +1305,11 @@ image and a new in-game object is generated.
     \label{fig:VAEMNIST}
 \end{figure}
 
-But the task is not as easy as it seems. If we use brutal force approaches, we
+But the task is not as easy as it seems. If we use brute force approaches, we
 can end up with an NPC with body of a human and head of a bus, if the pool of
-hand-drawn objects contain both humans and buses. This will create a lot of
+hand-drawn objects contains both humans and buses. This will create a lot of
 trouble. However, if the model is designed to assign a category to each of the
-objects, such as human, vehicles, plants, etc, then it will know not to mix
+objects, such as human, vehicles, plants, etc., then it will know not to mix
 things up when generating objects. The vector (human, vehicles, plants,
 $\dots$) is the latent dimension we are talking about. In practice, latent
 dimensions usually do not have meaningful labels, and they do not need to. Just
@@ -1319,12 +1318,12 @@ samples and make sure the output is consistent with the
 categorization/representing clusters.
 
 As for PGM viewpoint, the architecture of VarFA can be represented as a neural
-network (directed graph), where each layers of input determines the
+network (directed graph), where each layer of input determines the
 values/distributions of the next layers. The training process of the model is
 essentially learning the parameters on the graph. This firmly places VarFA in
 the PGM family. Indeed, as we can see in chapter 4, we model the
 performance/grades of students based on latent skill levels. How well a student
-perform on a specific test question can be a combination of related skills.
+performs on a specific test question can be a combination of related skills.
 VarFA establishes the dependency structures between competence and exam scores,
 not just predicting them.
 
@@ -1342,7 +1341,7 @@ same fashion as the other algorithms we introduced earlier. Therefore, it would
 be beneficial to give a short rundown of this approach before we move onto the
 next section.
 
-FA was widely considered to be the brain child of Charles Spearman
+FA was widely considered to be the brainchild of Charles Spearman
 (\cite{Spearman_1904}), the famous statistician and psychologist known for the
 famous ``Spearman Correlation''. In his famous paper, he conducted a series of
 experiments on the performance of students in different school subjects and
@@ -1353,9 +1352,9 @@ students, or colloquially speaking, ``smart kids can learn any subject quickly
 and easily''. What he proposed was the so-called single-factor model,
 associating students' performance with a single variable called ``general
 mental ability''. Coincidentally, VarFA also focuses its application in
-education and the modelling of students' performance. It is no doubt that
+education and the modelling of students' performance. There is no doubt that
 education is more than vital to the entire human society, and that is precisely
-why we continue to go back to such topic, more so in the era of machine
+why we continue to go back to such a topic, more so in the era of machine
 learning and AI.
 
 After Spearman's idea, various researchers tried to expand the model to
@@ -1382,7 +1381,7 @@ multiplication:
 \end{align}
 
 More details about factor analysis will be given in chapter 4. In this
-introductory chapter, it is more important to address te unaddressed statement
+introductory chapter, it is more important to address the unaddressed statement
 at the beginning of this section: why is factor analysis different from other
 dimension reduction techniques, though it seems very basic, only using linear
 combinations and independent noise? The answer lies not in the mathematical
@@ -1391,18 +1390,18 @@ formulation, but rather the philosophy of usage. \textbf{FA is the quantitative
 
 To explain this answer, let us point out that FA can be divided into two
 categories: Exploratory Factor Analysis (EFA) and Confirmatory Factor Analysis
-(CFA). EFA is created in 1930s and largely contributed by Thurstone
+(CFA). EFA is created in the 1930s and largely contributed by Thurstone
 (\cite{thurstone1947multiple}). In EFA, the user does not specify the structure
 of observations and is required to determine the number of factors. Afterwards,
 the user needs to choose a rotation method to make the factors more
 interpretable. Unlike PCA, EFA's goal is to help researchers interpret the
 latent factors, whereas PCA stops after giving the data points in lower
-dimensions. EFA aims to generate intuitions.Though closely related to PCA, the
-mind set behind EFA was already different even in early 20th century.
+dimensions. EFA aims to generate intuitions. Though closely related to PCA, the
+mindset behind EFA was already different even in the early 20th century.
 
 This unique philosophy of EFA was extended further when CFA was created in
-1960s by Jöreskog (\cite{Jöreskog_1967}, \cite{Jöreskog_1969}). The user now
-needs to specify the structure of the model, from the number of factors and the
+the 1960s by Jöreskog (\cite{Jöreskog_1967}, \cite{Jöreskog_1969}). The user now
+needs to specify the structure of the model, from the number of factors to the
 loadings for each of them. CFA was created to provide a statistically sound
 procedure to verify what might be considered ``a good guess from experienced
 researchers''. To use this model, researchers are required to think carefully
@@ -1443,17 +1442,17 @@ such as the famous tutorial by Carl Doersch
 \cite{doersch2021tutorialvariationalautoencoders}.)
 
 Given a data point $\vx$ in high dimension, VAE assumes that $\vx$ is
-determined by a fewer number of latent variables, denoted as a lower
+determined by a smaller number of latent variables, denoted as a lower
 dimensional vector $\vz$. Using conditional probability decomposition, we can
 write
 \begin{align}
-    p(\vx|\vz) = \int p(\vx|\vz)p(\vz)d\vz \equiv \int p_{\theta}(\vx|\vz)p(\vz)d\vz,
+    p(\vx) = \int p(\vx|\vz)p(\vz)d\vz \equiv \int p_{\theta}(\vx|\vz)p(\vz)d\vz,
 \end{align}
 where $\theta$ is the hyperparameter VAE is trying to learn. The exact formulation is given in \eqref{eq:pzbernoulli} and \eqref{eq:pzcontinuous}. The true bold claim here is not that data itself depends on latent variables, but the assumption that $p(z)$ is (often) a multi-dimensional random variable with i.i.d., standard normal entries. Bold as it might be, the assumption itself is in fact pretty well-grounded. For instance, your performance at a certain sport is determined by a series of factors such as your endurance and strength. It would be normal that both your strength and endurance follow a Gaussian-like distribution. Your endurance might fluctuate around your ``average'' level and performing significantly above or below your average is getting exponentially rare. Since all Gaussian distributions are the result of a simple affine transformation of the standard normal distribution, we might as well assume that the latent variables are i.i.d. standard normal from the very beginning. Furthermore, $p_{\theta}$ is also mostly set to be a Gaussian distribution if the target data is continuous following the same logic.
 
 After giving $p(z)$ a distribution, determining the parameters for
 $p_{\theta}(x|z)$ directly is not feasible. That is the primal motivation for
-the encoder-decoder architecture. By Bayes formula, we can write
+the encoder-decoder architecture. By Bayes' formula, we can write
 \begin{align}
     p_{\theta}(\vz|\vx) = \frac{p_{\theta}(\vx|\vz) p(\vz)}{p(\vx)} = \frac{p_{\theta}(\vx|\vz) p(\vz)}{\int p_{\theta}(\vx|\vz') p(\vz') d\vz'}.
 \end{align}
@@ -1462,7 +1461,7 @@ This means we want to learn the relationship between the input data and the late
     q_{\phi}(\vz|\vx) = \Ndist(\vz; \vmu_{\phi}(\vx), \text{diag}(\vsigma^2_{\phi}(\vx))).
 \end{align}
 Here, $\vmu_{\phi}(\vx)$ is the mean vector. $\vsigma^2_{\phi}(\vx)$ is the variance vector (diagonal elements of the covariance matrix).
-The encoder network takes $\vx$ as input and outputs the parameters $\vmu_{\phi}(\vx)$ and $\vsigma^2_{\phi}(\vx)$ (or often $\log \vsigma^2_{\phi}(\vx)$ for numerical stability). The explicit formula for the probability density function (PDF) of $q_{\phi}(\vz|\vx)$, assuming a $N$-dimensional latent space, is:
+The encoder network takes $\vx$ as input and outputs the parameters $\vmu_{\phi}(\vx)$ and $\vsigma^2_{\phi}(\vx)$ (or often $\log \vsigma^2_{\phi}(\vx)$ for numerical stability). The explicit formula for the probability density function (PDF) of $q_{\phi}(\vz|\vx)$, assuming an $N$-dimensional latent space, is:
 \begin{align}
     q_{\phi}(\vz|\vx) = \frac{1}{(2\pi)^{N/2} |\mSigma_{\phi}(\vx)|^{1/2}} \exp\left(-\frac{1}{2} (\vz - \vmu_{\phi}(\vx))^T \mSigma_{\phi}(\vx)^{-1} (\vz - \vmu_{\phi}(\vx))\right),
 \end{align}
@@ -1501,7 +1500,7 @@ The first term is the KL divergence between the approximate posterior and the pr
 \begin{align}
     \KL{q_{\phi}(\vz|\vx)}{p(\vz)} = \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log q_{\phi}(\vz|\vx) - \log p(\vz) \right].
 \end{align}
-Substituting this back into the equation of $\KL{q_{\phi}(\vz|\vx)}{p(\vz)}$ gives:
+Substituting this back into the equation for $\KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}$ gives:
 \begin{align}
      & \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)} \nonumber                                                                                 \\
      & \quad \quad = \KL{q_{\phi}(\vz|\vx)}{p(\vz)} - \e_{\vz \sim q_{\phi}(\vz|\vx)} \left[ \log p_{\theta}(\vx|\vz) \right] + \log p(\vx).
@@ -1524,9 +1523,9 @@ Maximizing the ELBO with respect to parameters $\theta$ and $\phi$ serves two pu
 
 1. It pushes $\log p(\vx)$ higher (our original goal).
 
-2. It minimizes the KL divergence between the approximate posterior $q_{\phi}(\vz|\vx)$ and the true posterior $p_{\theta}(\vz|\vx)$ (because $\log p(\vx)$ is fixed for a given $\vx$, and the ELBO is $\log p(\vx) - \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}$).
+2. For fixed $\theta$, it minimizes the KL divergence between the approximate posterior $q_{\phi}(\vz|\vx)$ and the true posterior $p_{\theta}(\vz|\vx)$ (because $\log p(\vx)$ is fixed for given $\vx$ and $\theta$, and the ELBO is $\log p(\vx) - \KL{q_{\phi}(\vz|\vx)}{p_{\theta}(\vz|\vx)}$).
 
-To making things mathematically explicit, let us take a look at the the formula
+To make things mathematically explicit, let us take a look at the formula
 of ELBO \eqref{eq:elbointro}. The KL divergence term measures how much the
 approximate posterior (learned by the encoder) deviates from the prior
 $p(\vz)$. Specifically, when
@@ -1618,7 +1617,7 @@ In practice, we approximate this expectation using Monte Carlo sampling, typical
 \begin{align}
     \log p_{\theta}(\vx|\vz^{(i, l)}) \quad \text{where} \quad \vz^{(i, l)} = \vmu_{\phi}(\vx^{(i)}) +  \vsigma_{\phi}(\vx^{(i)}) \odot \vepsilon^{(l)}  \quad \text{and} \quad \vepsilon^{(l)} \sim \Ndist(\mathbf{0}, \mI).
 \end{align}
-Here we used superscript to distinguish sampled data points from general variables and coordinates. Combining everything, the objective function we want to maximize (or minimize its negative) for a single data point $\vx$, using the reparameterization trick \eqref{eq:reparam} and the analytical KL divergence \eqref{eq:kl_gaussian}, is approximated as:
+Here we used superscripts to distinguish sampled data points from general variables and coordinates. Combining everything, the objective function we want to maximize (or minimize its negative) for a single data point $\vx$, using the reparameterization trick \eqref{eq:reparam} and the analytical KL divergence \eqref{eq:kl_gaussian}, is approximated as:
 \begin{align}
     \mathcal{L}(\theta, \phi; \vx) \approx \log p_{\theta}(\vx|\vz = \vmu_{\phi}(\vx) & +  \vsigma_{\phi}(\vx) \odot \vepsilon ) \nonumber                                                                            \\
     -                                                                                 & \frac{1}{2} \sum_{j=1}^{N} \left( \mu_{j, \phi}^2(\vx) + \sigma_{j, \phi}^2(\vx) - \log(\sigma_{j, \phi}^2(\vx)) - 1 \right),
@@ -1698,21 +1697,21 @@ with a short section highlighting the difference between VarFA and VAE. The
 mathematical deduction in the previous section, along with the high-level
 description provided in this section should prepare us well for the content in
 chapter 4. Generally speaking, VarFA can be applied in all scenarios where both
-dimension reduction and interoperability are necessary. In our case, we choose
+dimension reduction and interpretability are necessary. In our case, we choose
 education as the main field of application because the necessity and advantage
 of interpretable models and dimension reduction are more or less self-evident.
 
 In our work, VarFA starts with two more interpretable assumptions compared to
 VAE:
 
-1. The students' overall performance follow a FA model.
+1. The students' overall performance follows an FA model.
 
-2. The students' latent skills follow a multi-dimensional Gaussian distribution. (Like we mentioned previously, we assume everyone performs around their average level, with over low and over high performance being exponentially rare.)
+2. The students' latent skills follow a multi-dimensional Gaussian distribution. (Like we mentioned previously, we assume everyone performs around their average level, with overly low and overly high performance being exponentially rare.)
 
 With these two assumptions, VarFA uses a similar encoder-decoder architecture
 as VAE, and VarFA can also be trained using the reparameterization trick
 efficiently based on a modified ELBO (details in chapter 4). After the training
-is complete, VarFA takes students' performance record and determines their
+is complete, VarFA takes students' performance records and determines their
 latent skills during the encoder phase. This step is much more interpretable
 than the usual VAE and much more similar to the natural thinking process of
 humans. For instance, if a student performs well in math and physics, VarFA

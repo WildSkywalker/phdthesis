@@ -1,4 +1,4 @@
-\begin{thebibliography}{229}
+\begin{thebibliography}{234}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -196,7 +196,7 @@ Joshua~B. Tenenbaum, Vin de~Silva, and John~C. Langford.
 Michael~L. Fredman and Robert~E. Tarjan.
 \newblock Fibonacci heaps and their uses in improved network optimization
   algorithms.
-\newblock In {\em 25th Annual Symposium onFoundations of Computer Science,
+\newblock In {\em 25th Annual Symposium on Foundations of Computer Science,
   1984.}, pages 338--346, 1984.
 
 \bibitem[Hinton and Roweis(2002)]{NIPS2002_6150ccc6}
@@ -207,15 +207,15 @@ Geoffrey~E Hinton and Sam Roweis.
 
 \bibitem[Auffinger and Fletcher(2023)]{auffinger-tsne}
 Antonio Auffinger and Daniel Fletcher.
-\newblock Equilibrium distributions for t-distributed stochastic neighbors
+\newblock Equilibrium distributions for t-distributed stochastic neighbour
   embedding, 2023, 2304.03727.
 \newblock URL \url{https://arxiv.org/abs/2304.03727}.
 
 \bibitem[van~der Maaten and Hinton(2008)]{key}
 Laurens van~der Maaten and Geoffrey Hinton.
 \newblock Visualizing data using t-sne.
-\newblock {\em Journal of Machine Learning Research}, 9\penalty0 (2579-2605),
-  2008.
+\newblock {\em Journal of Machine Learning Research}, 9\penalty0 (86):\penalty0
+  2579--2605, 2008.
 
 \bibitem[Weinkove(2024)]{weinkove2024flow}
 Ben Weinkove.
@@ -253,7 +253,7 @@ Vladimir Kolmogorov and Ramin Zabin.
 
 \bibitem[Boykov and Kolmogorov(2004)]{Boykov2004}
 Yuri~Y. Boykov and Vladimir Kolmogorov.
-\newblock An experimental comparison of min-cut/max- flow algorithms for energy
+\newblock An experimental comparison of min-cut/max-flow algorithms for energy
   minimization in vision.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   26\penalty0 (9):\penalty0 1124--1137, 2004.
@@ -438,14 +438,14 @@ Michael Jordan, Zoubin Ghahramani, Tommi Jaakkola, and Lawrence Saul.
 \newblock An introduction to variational methods for graphical models.
 \newblock {\em Machine Learning}, 37:\penalty0 183--233, 01 1999.
 
-\bibitem[Gelfand and and(1990)]{Gelfand01061990}
-Alan~E. Gelfand and Adrian F. M.~Smith and.
+\bibitem[Gelfand and Smith(1990)]{Gelfand01061990}
+Alan~E. Gelfand and Adrian F.~M. Smith.
 \newblock Sampling-based approaches to calculating marginal densities.
 \newblock {\em Journal of the American Statistical Association}, 85\penalty0
   (410):\penalty0 398--409, 1990.
 
-\bibitem[Erdős and László(1974)]{LLL1975}
-Paul Erdős and Lovász László.
+\bibitem[Erdős and Lovász(1974)]{LLL1975}
+Paul Erdős and László Lovász.
 \newblock Problems and results on 3-chromatic hypergraphs and some related
   questions.
 \newblock {\em Coll Math Soc J Bolyai}, 10, 01 1974.
@@ -515,15 +515,71 @@ Carl Doersch.
 \newblock Tutorial on variational autoencoders, 2021, 1606.05908.
 \newblock URL \url{https://arxiv.org/abs/1606.05908}.
 
+\bibitem[Linderman et~al.(2019)Linderman, Rachh, Hoskins, Steinerberger, and
+  Kluger]{LindermanGeorgeC.2019Fitf}
+George~C. Linderman, Manas Rachh, Jeremy~G. Hoskins, Stefan Steinerberger, and
+  Yuval Kluger.
+\newblock Fast interpolation-based t-sne for improved visualization of
+  single-cell rna-seq data.
+\newblock {\em Nature methods}, 16\penalty0 (3):\penalty0 243--245, 2019.
+\newblock ISSN 1548-7091.
+
+\bibitem[Wallach and Lilien(2009)]{10.1093/bioinformatics/btp035}
+Izhar Wallach and Ryan Lilien.
+\newblock The protein–small-molecule database, a non-redundant structural
+  resource for the analysis of protein-ligand binding.
+\newblock {\em Bioinformatics}, 25\penalty0 (5):\penalty0 615--620, 01 2009.
+\newblock ISSN 1367-4803.
+\newblock URL \url{https://doi.org/10.1093/bioinformatics/btp035}.
+
+\bibitem[Arora et~al.(2018)Arora, Hu, and
+  Kothari]{arora2018analysistsnealgorithmdata}
+Sanjeev Arora, Wei Hu, and Pravesh~K. Kothari.
+\newblock An analysis of the t-sne algorithm for data visualization, 2018,
+  1803.01768.
+\newblock URL \url{https://arxiv.org/abs/1803.01768}.
+
+\bibitem[Linderman and
+  Steinerberger(2017)]{linderman2017clusteringtsneprovably}
+George~C. Linderman and Stefan Steinerberger.
+\newblock Clustering with t-sne, provably, 2017, 1706.02582.
+\newblock URL \url{https://arxiv.org/abs/1706.02582}.
+
 \bibitem[Murray and Pickarski(2024)]{murray2024largedatalimitsscaling}
 Ryan Murray and Adam Pickarski.
 \newblock Large data limits and scaling laws for tsne, 2024, 2410.13063.
 \newblock URL \url{https://arxiv.org/abs/2410.13063}.
 
-\bibitem[Liu et~al.(2009)Liu, Ngo, and Huy]{liu2000inequ}
-Wenjun Liu, Quoc Ngo, and Vu~Huy.
+\bibitem[Liu et~al.(2009)Liu, Ng{\^o}, and Huy]{liu2000inequ}
+Wenjun Liu, Qu{\fontencoding{T1}\fontfamily{lmr}\selectfont\'{\^o}}c-Anh
+  Ng{\^o}, and Vu~Nhat Huy.
 \newblock Several interesting integral inequalities.
-\newblock {\em Journal of Mathematical Inequalities}, 3, 06 2009.
+\newblock {\em Journal of Mathematical Inequalities}, 3\penalty0 (2):\penalty0
+  201--212, 06 2009.
+
+\bibitem[LeCun et~al.()LeCun, Cortes, and Burges]{lecun-mnist}
+Yann LeCun, Corinna Cortes, and Christopher J.~C. Burges.
+\newblock The {MNIST} database of handwritten digits.
+\newblock URL \url{https://yann.lecun.org/exdb/mnist/}.
+\newblock Accessed September 2026.
+
+\bibitem[Xiao et~al.(2017)Xiao, Rasul, and Vollgraf]{xiao2017fashion}
+Han Xiao, Kashif Rasul, and Roland Vollgraf.
+\newblock {Fashion-MNIST}: A novel image dataset for benchmarking machine
+  learning algorithms, 2017, 1708.07747.
+\newblock URL \url{https://arxiv.org/abs/1708.07747}.
+
+\bibitem[Kobak et~al.(2020{\natexlab{b}})Kobak, Linderman, Steinerberger,
+  Kluger, and Berens]{10.1007/978-3-030-46150-8_8}
+Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
+  Berens.
+\newblock Heavy-tailed kernels reveal a finer cluster structure in t-sne
+  visualisations.
+\newblock In Ulf Brefeld, Elisa Fromont, Andreas Hotho, Arno Knobbe, Marloes
+  Maathuis, and C{\'e}line Robardet, editors, {\em Machine Learning and
+  Knowledge Discovery in Databases}, pages 124--139, Cham, 2020{\natexlab{b}}.
+  Springer International Publishing.
+\newblock ISBN 978-3-030-46150-8.
 
 \bibitem[Hinton(2002)]{DBLP:journals/neco/Hinton02}
 Geoffrey~E. Hinton.
@@ -756,9 +812,9 @@ Hong Ge, Kai Xu, and Zoubin Ghahramani.
 \newblock In {\em {AISTATS}}, volume~84, pages 1682--1690. PMLR, 09--11 Apr
   2018.
 
-\bibitem[Ihler et~al.(2005)Ihler, Fisher~III, and
+\bibitem[Ihler et~al.(2005)Ihler, Fisher, and
   Willsky]{DBLP:journals/jmlr/IhlerFW05}
-Alexander~T. Ihler, John~W. Fisher~III, and Alan~S. Willsky.
+Alexander~T. Ihler, John~W. Fisher, III, and Alan~S. Willsky.
 \newblock Loopy belief propagation: Convergence and effects of message errors.
 \newblock {\em J. Mach. Learn. Res.}, 6:\penalty0 905--936, 2005.
 
@@ -1024,7 +1080,7 @@ Hao Cen, Kenneth Koedinger, and Brian Junker.
 
 \bibitem[Pavlik et~al.(2009)Pavlik, Cen, and Koedinger]{PFA}
 Philip~I. Pavlik, Hao Cen, and Kenneth~R. Koedinger.
-\newblock Performance factors analysis --a new alternative to knowledge
+\newblock Performance factors analysis -- a new alternative to knowledge
   tracing.
 \newblock In {\em Proc. {A}rtificial {I}ntelligence in {E}ducation}, page
   531–538, NLD, 2009. IOS Press.
@@ -1127,7 +1183,7 @@ Zachary~A Pardos, Neil~T Heffernan, Brigham Anderson, Cristina~L Heffernan, and
   Worcester~Public Schools.
 \newblock Using fine-grained skill models to fit student performance with
   bayesian networks.
-\newblock {\em Handbook of Dducational Data Mining}, 417, 2010.
+\newblock {\em Handbook of Educational Data Mining}, 417, 2010.
 
 \bibitem[Merkle(2011)]{merkle2011comparison}
 Edgar~C Merkle.
@@ -1171,7 +1227,7 @@ Robert~J Mislevy.
 \bibitem[Bishop(2006)]{bishop2006pattern}
 Christopher~M Bishop.
 \newblock {\em Pattern recognition and machine learning}.
-\newblock springer, 2006.
+\newblock Springer, 2006.
 
 \bibitem[MacKay and Mac~Kay(2003)]{mackay2003information}
 David~JC MacKay and David~JC Mac~Kay.
@@ -1448,18 +1504,6 @@ Stéphane Boucheron, Gábor Lugosi, and Pascal Massart.
   Independence}.
 \newblock Oxford University Press, 2013.
 
-\bibitem[Kobak et~al.(2020{\natexlab{b}})Kobak, Linderman, Steinerberger,
-  Kluger, and Berens]{10.1007/978-3-030-46150-8_8}
-Dmitry Kobak, George Linderman, Stefan Steinerberger, Yuval Kluger, and Philipp
-  Berens.
-\newblock Heavy-tailed kernels reveal a finer cluster structure in t-sne
-  visualisations.
-\newblock In Ulf Brefeld, Elisa Fromont, Andreas Hotho, Arno Knobbe, Marloes
-  Maathuis, and C{\'e}line Robardet, editors, {\em Machine Learning and
-  Knowledge Discovery in Databases}, pages 124--139, Cham, 2020{\natexlab{b}}.
-  Springer International Publishing.
-\newblock ISBN 978-3-030-46150-8.
-
 \bibitem[Jiang et~al.(2022)Jiang, Gu, and Xue]{nanyiye2022}
 Nan Jiang, Yi~Gu, and Yexiang Xue.
 \newblock Learning markov random fields for combinatorial structures with
@@ -1504,11 +1548,5 @@ József Beck.
 \newblock An algorithmic approach to the lovász local lemma. i.
 \newblock {\em Random Structures \& Algorithms}, 2\penalty0 (4):\penalty0
   343--365, 1991.
-
-\bibitem[Linderman and
-  Steinerberger(2017)]{linderman2017clusteringtsneprovably}
-George~C. Linderman and Stefan Steinerberger.
-\newblock Clustering with t-sne, provably, 2017, 1706.02582.
-\newblock URL \url{https://arxiv.org/abs/1706.02582}.
 
 \end{thebibliography}

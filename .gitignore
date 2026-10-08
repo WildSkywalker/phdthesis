@@ -1,1 +1,5 @@
 .vscode/settings.json
+
+# Local thesis backups and editing records
+/local-backups/
+/work/2026-10-08-thesis-update/
